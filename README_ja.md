@@ -2,24 +2,27 @@
 
 Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的な閉包過程から、時間・空間・物質・重力・宇宙論的構造がどのように立ち上がりうるかを探る理論的枠組みです。
 
+このリポジトリは、初回 arXiv 投稿のためのソース公開・研究背景提示を目的として、arXiv ID の確定前に先行公開しています。arXiv ID は投稿承認後に追記します。
+
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 
 ## 論文
 
-- VED Vol.1 — Foundations: Minimal Axiom, Causal Logs, Time and Space  
+- [VED Vol.1 — Foundations: Minimal Axiom, Causal Logs, Time and Space](paper/vol1/main.pdf)  
   arXiv ID は未確定
-- VED Vol.2 — Closure Geometry and the Standard Model  
+- [VED Vol.2 — Closure Geometry and the Standard Model](paper/vol2/main.pdf)  
   arXiv ID は未確定
-- VED Vol.3 — Gravity, Black Holes, and Cosmology  
+- [VED Vol.3 — Gravity, Black Holes, and Cosmology](paper/vol3/main.pdf)  
   arXiv ID は未確定
-- VED Vol.4 — Differential Horizon, Observation, and Limits  
+- [VED Vol.4 — Differential Horizon, Observation, and Limits](paper/vol4/main.pdf)  
   arXiv ID は未確定
-- IFGT — Information Field Geometry Theory  
-  arXiv ID は未確定
+
+投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
+補助的な IFGT 資料は [`Information-Field-Geometry-Theory/`](Information-Field-Geometry-Theory/) に含めています。
 
 ## 現在の位置づけ
 
-このリポジトリは、初回 arXiv 投稿のためのソース公開・研究背景提示を目的として、arXiv ID の確定前に先行公開しています。arXiv ID は投稿承認後に追記します。Vol.1 は現在の投稿対象、Vol.2-Vol.4 は連動する補助巻であり、定量的な導出にはなお未解決部分があります。
+Vol.1 は現在の投稿対象、Vol.2-Vol.4 は連動する補助巻であり、定量的な導出にはなお未解決部分があります。
 
 ## 概念的な概要
 

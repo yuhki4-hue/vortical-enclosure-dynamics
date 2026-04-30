@@ -2,24 +2,27 @@
 
 Vortical Enclosure Dynamics (VED) is a theoretical framework that explores how time, space, matter, gravity, and cosmological structure may emerge from causal log dynamics and non-closed closure processes.
 
+This repository is being made public first to provide source availability and project context for the initial arXiv submission. arXiv identifiers will be added after submission approval.
+
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 
 ## Papers
 
-- VED Vol.1 — Foundations: Minimal Axiom, Causal Logs, Time and Space  
+- [VED Vol.1 — Foundations: Minimal Axiom, Causal Logs, Time and Space](paper/vol1/main.pdf)  
   arXiv identifier pending
-- VED Vol.2 — Closure Geometry and the Standard Model  
+- [VED Vol.2 — Closure Geometry and the Standard Model](paper/vol2/main.pdf)  
   arXiv identifier pending
-- VED Vol.3 — Gravity, Black Holes, and Cosmology  
+- [VED Vol.3 — Gravity, Black Holes, and Cosmology](paper/vol3/main.pdf)  
   arXiv identifier pending
-- VED Vol.4 — Differential Horizon, Observation, and Limits  
+- [VED Vol.4 — Differential Horizon, Observation, and Limits](paper/vol4/main.pdf)  
   arXiv identifier pending
-- IFGT — Information Field Geometry Theory  
-  arXiv identifier pending
+
+Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
+The companion IFGT materials are included in [`Information-Field-Geometry-Theory/`](Information-Field-Geometry-Theory/).
 
 ## Current Status
 
-This repository is being made public first to provide source availability and project context for the initial arXiv submission. arXiv identifiers will be added after submission approval. Vol.1 is the current submission focus; Vol.2-Vol.4 remain companion volumes, and several quantitative derivations remain open.
+Vol.1 is the current submission focus; Vol.2-Vol.4 remain companion volumes, and several quantitative derivations remain open.
 
 ## Conceptual Overview
 
