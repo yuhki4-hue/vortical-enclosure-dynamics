@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="'Times New Roman', 'Liberation Serif', 'Noto Serif CJK JP', serif">
+  <defs>
+    <style>
+      .title { font-size: 18px; fill: #111; font-weight: 500; }
+      .node-box { fill: #ffffff; stroke: #333; stroke-width: 1.5; }
+      .node-text { font-size: 15px; fill: #111; text-anchor: middle; }
+      .arrow-line { stroke: #333; stroke-width: 2; fill: none; }
+      .region-label { font-size: 15px; fill: #222; text-anchor: middle; font-weight: 500; }
+      .region-sub { font-size: 12px; fill: #666; text-anchor: middle; font-style: italic; }
+      .c-axis-label { font-size: 13px; fill: #444; font-style: italic; }
+      .i-label { font-size: 13px; fill: #555; text-anchor: middle; }
+      .note { font-size: 13px; fill: #333; text-anchor: middle; font-style: italic; }
+      .ifgt-band { fill: #ff7f0e; opacity: 0.10; stroke: #ff7f0e; stroke-width: 1; stroke-opacity: 0.3; }
+      .ved-band { fill: #2ca02c; opacity: 0.12; stroke: #2ca02c; stroke-width: 1; stroke-opacity: 0.35; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#333"/>
+    </marker>
+    <marker id="caxisarrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L7,4 L0,8 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <rect width="960" height="460" fill="#fafafa"/>
+  <text x="480.0" y="35" text-anchor="middle" class="title">図1. 同一の生成過程の二つの側面</text>
+  <rect x="95" y="85" width="625" height="195" class="ifgt-band" rx="8"/>
+  <rect x="720" y="85" width="145" height="195" class="ved-band" rx="8"/>
+  <line x1="217.0" y1="140" x2="287.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <line x1="427.0" y1="140" x2="487.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <line x1="627.0" y1="140" x2="717.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <rect x="85.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
+  <text x="150" y="145" class="node-text">差分</text>
+  <rect x="295.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
+  <text x="360" y="145" class="node-text">勾配</text>
+  <rect x="495.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
+  <text x="560" y="145" class="node-text">流れ</text>
+  <rect x="725.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
+  <text x="790" y="145" class="node-text">閉包</text>
+  <text x="407.5" y="250" class="region-label">IFGT 領域</text>
+  <text x="407.5" y="276" class="region-sub">（準閉包 / 未閉包の持続）</text>
+  <text x="792.5" y="250" class="region-label">VED 領域</text>
+  <text x="792.5" y="276" class="region-sub">（閉包）</text>
+  <line x1="95" y1="320" x2="865" y2="320" stroke="#333" stroke-width="1.2" marker-end="url(#caxisarrow)"/>
+  <text x="85" y="325" class="c-axis-label" text-anchor="end">C ≈ 0</text>
+  <text x="881" y="325" class="c-axis-label" text-anchor="start">C → 1</text>
+  <text x="480.0" y="340" class="c-axis-label" text-anchor="middle"><tspan font-style="italic">C</tspan></text>
+  <line x1="720" y1="315" x2="720" y2="325" stroke="#666" stroke-width="1.2"/>
+  <text x="150" y="368" class="i-label">↑ <tspan font-style="italic">I 高</tspan></text>
+  <text x="460.0" y="368" class="i-label"><tspan font-style="italic">I 減少</tspan></text>
+  <text x="790" y="368" class="i-label">↓ <tspan font-style="italic">I 低</tspan></text>
+  <text x="480.0" y="435" class="note">IFGTは閉包へ向かう過程全体における「閉じきれなかった側」を記述する。</text>
+</svg>

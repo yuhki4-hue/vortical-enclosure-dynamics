@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c4dff" stop-opacity="0.1"/>
+      <stop offset="40%" stop-color="#7c4dff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#e040fb" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#7c4dff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7c4dff" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="horizonGlowYellow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="60%" stop-color="#ffcc02" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#ffcc02" stop-opacity="0.5"/>
+      <stop offset="93%" stop-color="#ffcc02" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffcc02" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="purpleLineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e040fb" stop-opacity="0.9"/>
+      <stop offset="82%" stop-color="#e040fb" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e040fb" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="yellowLineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffcc02" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ffcc02" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffcc02" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="whiteGlowRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="75%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="edgeGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="70%" stop-color="#ffcc02" stop-opacity="0"/>
+      <stop offset="83%" stop-color="#ffcc02" stop-opacity="0.6"/>
+      <stop offset="92%" stop-color="#ffcc02" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffcc02" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <radialGradient id="lightGlow" cx="87%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe57f" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#ffcc02" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffcc02" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="zeroCenter" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#1a1a4e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a0a20" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <filter id="turbulence">
+      <feTurbulence type="turbulence" baseFrequency="0.02 0.08" numOctaves="3" seed="5" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <filter id="topFade">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#90caf9" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+
+    <marker id="arrowWhite" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#b0d8e8"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4fc3f7"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ffcc02"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ce93d8"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef9a9a"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#81c784"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="1000" fill="#0a0a1a"/>
+
+  <!-- ===== Spacetime Generation Domain (下部) ===== -->
+  <rect x="0" y="480" width="800" height="520" fill="#071a2e"/>
+  <rect x="0" y="480" width="800" height="520" fill="url(#grid)" opacity="0.4"/>
+  <!-- 格子開始点から下矢印＋ラベル -->
+  <line x1="200" y1="480" x2="200" y2="550" stroke="#4fc3f7" stroke-width="1.5" marker-end="url(#arrowBlue)" opacity="0.6"/>
+  <text x="200" y="568" text-anchor="middle" fill="#4fc3f7" font-size="12" letter-spacing="2" opacity="0.7">SPACETIME GENERATION DOMAIN</text>
+  <text x="200" y="584" text-anchor="middle" fill="#4fc3f7" font-size="9" opacity="0.5">observation · conservation laws · physics</text>
+
+  <!-- ===== 0領域（上部・収束形状） ===== -->
+  <polygon points="400,15 30,265 770,265" fill="#0d0d2e" opacity="0.95"/>
+  <polygon points="400,15 30,265 770,265" fill="url(#zeroCenter)"/>
+
+  <!-- 霧状効果 -->
+  <ellipse cx="400" cy="80" rx="80" ry="40" fill="#3d3d8a" opacity="0.15" filter="url(#topFade)"/>
+  <ellipse cx="400" cy="120" rx="130" ry="50" fill="#3d3d8a" opacity="0.1" filter="url(#topFade)"/>
+  <ellipse cx="400" cy="160" rx="170" ry="55" fill="#5c5caa" opacity="0.12" filter="url(#topFade)"/>
+
+  <!-- 収束点線 -->
+  <line x1="400" y1="25" x2="200" y2="240" stroke="#6060aa" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.4"/>
+  <line x1="400" y1="25" x2="400" y2="240" stroke="#6060aa" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.4"/>
+  <line x1="400" y1="25" x2="600" y2="240" stroke="#6060aa" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.4"/>
+  <circle cx="400" cy="25" r="4" fill="#9090cc" opacity="0.6"/>
+  <text x="400" y="14" text-anchor="middle" fill="#8080bb" font-size="9" opacity="0.6">same point</text>
+
+  <!-- 0領域テキスト -->
+  <text x="400" y="95" text-anchor="middle" fill="#9090dd" font-size="15" font-style="italic" letter-spacing="1">Ungenerated Domain (0-Region)</text>
+  <text x="400" y="118" text-anchor="middle" fill="#7070aa" font-size="11">no difference · no space · no time</text>
+  <text x="400" y="140" text-anchor="middle" fill="#6060aa" font-size="10" font-style="italic">any approach converges to the same point</text>
+  <text x="400" y="162" text-anchor="middle" fill="#5555aa" font-size="10" opacity="0.8">≈ approximate Hilbert-space representation</text>
+
+  <!-- 雲下辺縁取り光彩 -->
+  <line x1="30" y1="265" x2="770" y2="265" stroke="url(#edgeGlow)" stroke-width="3" opacity="0.7"/>
+  <line x1="30" y1="265" x2="770" y2="265" stroke="url(#edgeGlow)" stroke-width="10" opacity="0.2" filter="url(#topFade)"/>
+
+  <!-- ===== 差の地平線（遷移帯） ===== -->
+  <rect x="0" y="268" width="800" height="70" fill="url(#horizonGlow)" filter="url(#turbulence)"/>
+  <rect x="0" y="272" width="800" height="62" fill="url(#horizonGlow)" opacity="0.6" filter="url(#turbulence)"/>
+  <rect x="0" y="268" width="800" height="70" fill="url(#horizonGlowYellow)" opacity="0.15"/>
+  <rect x="580" y="275" width="220" height="60" fill="url(#lightGlow)"/>
+
+  <!-- 地平線ライン：紫（右端フェードアウト） -->
+  <path d="M 0,303 Q 100,296 200,305 Q 300,314 400,303 Q 500,292 600,301"
+        fill="none" stroke="url(#purpleLineGrad)" stroke-width="2.5"/>
+  <!-- 地平線ライン：黄色（左端フェードイン） -->
+  <path d="M 600,301 Q 700,310 800,303"
+        fill="none" stroke="url(#yellowLineGrad)" stroke-width="2.5" opacity="0.9"/>
+  <!-- 白い光（右寄り） -->
+  <path d="M 0,303 Q 100,296 200,305 Q 300,314 400,303 Q 500,292 600,301 Q 700,310 800,303"
+        fill="none" stroke="url(#whiteGlowRight)" stroke-width="2"/>
+
+  <!-- 遷移帯ラベル -->
+  <rect x="270" y="288" width="260" height="30" rx="4" fill="#0a0a1a" opacity="0.7"/>
+  <text x="400" y="308" text-anchor="middle" fill="#e040fb" font-size="13" letter-spacing="2">DIFFERENTIAL HORIZON</text>
+  <text x="400" y="323" text-anchor="middle" fill="#ce93d8" font-size="10" letter-spacing="1">transition band · fluctuating · inhomogeneous</text>
+
+  <text x="110" y="308" text-anchor="middle" fill="#ffffff" font-size="10" font-style="italic">Difference emerges here.</text>
+  <text x="690" y="308" text-anchor="middle" fill="#3e2723" font-size="10" font-style="italic">gravitational deformation</text>
+
+  <!-- ===== 接近経路（左右軸） ===== -->
+  <!-- 左軸：量子（白寄り） -->
+  <line x1="60" y1="480" x2="60" y2="340" stroke="#b0d8e8" stroke-width="1.5" marker-end="url(#arrowWhite)" opacity="0.8"/>
+  <text x="60" y="510" text-anchor="middle" fill="#b0d8e8" font-size="11" letter-spacing="1">Scale ↓</text>
+  <text x="60" y="525" text-anchor="middle" fill="#b0d8e8" font-size="10" opacity="0.7">Spatial Convergence</text>
+  <text x="60" y="540" text-anchor="middle" fill="#b0d8e8" font-size="9" opacity="0.5">(Quantum)</text>
+  <text x="70" y="345" text-anchor="start" fill="#b0d8e8" font-size="9" opacity="0.6">Planck scale</text>
+
+  <!-- 右軸：相対論（黄色） -->
+  <line x1="755" y1="480" x2="755" y2="340" stroke="#ffcc02" stroke-width="1.5" marker-end="url(#arrowYellow)" opacity="0.8"/>
+  <text x="755" y="515" text-anchor="middle" fill="#ffcc02" font-size="11" letter-spacing="1">Velocity ↑</text>
+  <text x="740" y="530" text-anchor="middle" fill="#ffcc02" font-size="10" opacity="0.7">Temporal Convergence</text>
+  <text x="755" y="545" text-anchor="middle" fill="#ffcc02" font-size="9" opacity="0.5">(Relativity)</text>
+  <text x="725" y="348" text-anchor="middle" fill="#ffe57f" font-size="9" opacity="0.6">speed of light</text>
+
+  <text x="400" y="358" text-anchor="middle" fill="#b0bec5" font-size="11" font-style="italic" opacity="0.8">Different trajectories, same boundary.</text>
+
+  <!-- ===== 発散矢印 ===== -->
+  <text x="170" y="390" text-anchor="middle" fill="#ce93d8" font-size="11" font-style="italic">Divergence ↑</text>
+  <line x1="170" y1="460" x2="170" y2="350" stroke="#ce93d8" stroke-width="1" stroke-dasharray="4,4" marker-end="url(#arrowPurple)" opacity="0.6"/>
+
+  <!-- ===== String Theory ===== -->
+  <rect x="480" y="390" width="240" height="44" rx="6" fill="#1a1a3e" stroke="#7986cb" stroke-width="1" opacity="0.9"/>
+  <text x="600" y="408" text-anchor="middle" fill="#9fa8da" font-size="11" letter-spacing="1">String Theory</text>
+  <text x="600" y="424" text-anchor="middle" fill="#7986cb" font-size="9" font-style="italic">Asymptotic Consistency Limit</text>
+  <line x1="600" y1="390" x2="582" y2="355" stroke="#7986cb" stroke-width="1" stroke-dasharray="3,4" marker-end="url(#arrowPurple)" opacity="0.5"/>
+  <ellipse cx="555" cy="348" rx="38" ry="10" fill="none" stroke="#7986cb" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- ===== Gravity / Black Holes ===== -->
+  <rect x="480" y="460" width="240" height="44" rx="6" fill="#1a0a0a" stroke="#ef9a9a" stroke-width="1" opacity="0.9"/>
+  <text x="600" y="478" text-anchor="middle" fill="#ef9a9a" font-size="11" letter-spacing="1">Gravity / Black Holes</text>
+  <text x="600" y="494" text-anchor="middle" fill="#e57373" font-size="9" font-style="italic">Boundary Contact · Divergence Signal</text>
+  <line x1="580" y1="460" x2="530" y2="338" stroke="#ef9a9a" stroke-width="1.2" marker-end="url(#arrowRed)" opacity="0.6"/>
+
+  <!-- ===== Renormalization ===== -->
+  <rect x="270" y="390" width="190" height="100" rx="6" fill="#0e1a0e" stroke="#81c784" stroke-width="1" opacity="0.9"/>
+  <text x="365" y="415" text-anchor="middle" fill="#a5d6a7" font-size="11" letter-spacing="1">Renormalization</text>
+  <text x="365" y="433" text-anchor="middle" fill="#81c784" font-size="9" font-style="italic">signal conversion</text>
+  <line x1="332" y1="448" x2="332" y2="350" stroke="#81c784" stroke-width="1" stroke-dasharray="3,4" marker-end="url(#arrowGreen)" opacity="0.5"/>
+  <text x="317" y="400" text-anchor="end" fill="#81c784" font-size="9" opacity="0.7">signal</text>
+  <text x="365" y="465" text-anchor="middle" fill="#66bb6a" font-size="9" opacity="0.8">transforms horizon contact</text>
+  <text x="365" y="480" text-anchor="middle" fill="#66bb6a" font-size="9" opacity="0.8">→ effective description</text>
+
+  <!-- ===== メインキャプション ===== -->
+  <rect x="80" y="620" width="640" height="50" rx="4" fill="#0a0a1a" stroke="#e040fb" stroke-width="1" opacity="0.8"/>
+  <text x="400" y="641" text-anchor="middle" fill="#f3e5f5" font-size="13" font-style="italic" letter-spacing="1">"Approaching the differential horizon</text>
+  <text x="400" y="660" text-anchor="middle" fill="#e040fb" font-size="13" font-style="italic" letter-spacing="1">produces divergence."</text>
+
+  <!-- ===== サブ命題（表紙版：2行） ===== -->
+  <text x="400" y="708" text-anchor="middle" fill="#546e7a" font-size="11" opacity="0.8">Physics operates within the differential horizon.</text>
+  <text x="400" y="728" text-anchor="middle" fill="#546e7a" font-size="11" opacity="0.8">Renormalization converts horizon contact into effective description.</text>
+
+  <!-- ===== タイトル ===== -->
+  <text x="400" y="790" text-anchor="middle" fill="#b0bec5" font-size="11" font-family="'Palatino Linotype', Palatino, 'Book Antiqua', serif" letter-spacing="4" opacity="0.6">VED Vol.4</text>
+  <text x="400" y="812" text-anchor="middle" fill="#eceff1" font-size="18" letter-spacing="4">THE DIFFERENTIAL HORIZON MAP</text>
+  <text x="400" y="830" text-anchor="middle" fill="#78909c" font-size="10" font-style="italic" opacity="0.7">A map of generation, not existence</text>
+
+  <text x="400" y="870" text-anchor="middle" fill="#546e7a" font-size="10" font-style="italic" opacity="0.6">"Divergence is not a failure — it is the equation touching the differential horizon."</text>
+
+</svg>

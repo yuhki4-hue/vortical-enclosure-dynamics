@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Georgia, 'Times New Roman', serif">
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       COLUMN HEADERS
+       ═══════════════════════════════════════════════════ -->
+  <text x="120" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Closure Geometry</text>
+  <text x="420" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Particle Class</text>
+  <text x="750" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Mass Hierarchy</text>
+
+  <line x1="40"  y1="38" x2="210" y2="38" stroke="#eee" stroke-width="0.7"/>
+  <line x1="310" y1="38" x2="530" y2="38" stroke="#eee" stroke-width="0.7"/>
+  <line x1="640" y1="38" x2="870" y2="38" stroke="#eee" stroke-width="0.7"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 1 — Non-degenerate / baryon-like / small Δ
+       y-center: 103
+       ═══════════════════════════════════════════════════ -->
+
+  <polygon points="120,65 80,140 160,140" fill="#dde8f5" stroke="none"/>
+  <line x1="120" y1="65"  x2="80"  y2="140" stroke="#3a6ea5" stroke-width="1.5"/>
+  <line x1="120" y1="65"  x2="160" y2="140" stroke="#3a6ea5" stroke-width="1.5"/>
+  <line x1="80"  y1="140" x2="160" y2="140" stroke="#3a6ea5" stroke-width="1.5"/>
+  <circle cx="120" cy="65"  r="3.5" fill="#2c5282"/>
+  <circle cx="80"  cy="140" r="3.5" fill="#2c5282"/>
+  <circle cx="160" cy="140" r="3.5" fill="#2c5282"/>
+  <text x="120" y="160" text-anchor="middle" font-size="10.5" fill="#2c5282" font-weight="bold">Non-degenerate</text>
+  <text x="120" y="175" text-anchor="middle" font-size="10"   fill="#666">3 d.o.f.</text>
+
+  <!-- Arrow row 1 -->
+  <line x1="195" y1="103" x2="308" y2="103" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="306,100 314,103 306,106" fill="#ccc"/>
+
+  <!-- Particle class row 1 -->
+  <text x="420" y="99"  text-anchor="middle" font-size="12"   fill="#2c5282" font-style="italic">baryon-like structure</text>
+  <text x="420" y="116" text-anchor="middle" font-size="10.5" fill="#888">associated with SU(3)</text>
+
+  <!-- Arrow row 1 → mass -->
+  <line x1="528" y1="103" x2="635" y2="103" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="633,100 641,103 633,106" fill="#ccc"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 2 — Degenerate / lepton-like / intermediate Δ
+       y-center: 236
+       ═══════════════════════════════════════════════════ -->
+
+  <polygon points="120,240 80,244 160,244" fill="#f5e8d0" stroke="none"/>
+  <line x1="120" y1="240" x2="80"  y2="244" stroke="#a06020" stroke-width="1.5"/>
+  <line x1="120" y1="240" x2="160" y2="244" stroke="#a06020" stroke-width="1.5"/>
+  <line x1="80"  y1="244" x2="160" y2="244" stroke="#a06020" stroke-width="1.5"/>
+  <circle cx="120" cy="240" r="3.5" fill="#a06020"/>
+  <circle cx="80"  cy="244" r="3.5" fill="#a06020"/>
+  <circle cx="160" cy="244" r="3.5" fill="#a06020"/>
+  <text x="120" y="263" text-anchor="middle" font-size="10.5" fill="#a06020" font-weight="bold">Degenerate</text>
+  <text x="120" y="278" text-anchor="middle" font-size="10"   fill="#666">2 d.o.f.</text>
+
+  <!-- Arrow row 2 -->
+  <line x1="195" y1="236" x2="308" y2="236" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="306,233 314,236 306,239" fill="#ccc"/>
+
+  <!-- Particle class row 2 -->
+  <text x="420" y="232" text-anchor="middle" font-size="12"   fill="#a06020" font-style="italic">lepton-like structure</text>
+  <text x="420" y="249" text-anchor="middle" font-size="10.5" fill="#888">associated with SU(2)</text>
+
+  <!-- Arrow row 2 → mass -->
+  <line x1="528" y1="236" x2="635" y2="236" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="633,233 641,236 633,239" fill="#ccc"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 3 — Extreme / neutrino-like / large Δ
+       y-center: 340
+       ═══════════════════════════════════════════════════ -->
+
+  <line x1="90" y1="340" x2="150" y2="340" stroke="#aaa" stroke-width="1.3"/>
+  <circle cx="120" cy="340" r="4.5" fill="#888"/>
+  <text x="120" y="362" text-anchor="middle" font-size="10.5" fill="#888" font-weight="bold">Extreme</text>
+  <text x="120" y="377" text-anchor="middle" font-size="10"   fill="#666">1 d.o.f.</text>
+
+  <!-- Arrow row 3 -->
+  <line x1="195" y1="340" x2="308" y2="340" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="306,337 314,340 306,343" fill="#ccc"/>
+
+  <!-- Particle class row 3 -->
+  <text x="420" y="336" text-anchor="middle" font-size="12"   fill="#888" font-style="italic">neutrino-like structure</text>
+  <text x="420" y="353" text-anchor="middle" font-size="10.5" fill="#aaa">minimal structure</text>
+
+  <!-- Arrow row 3 → mass -->
+  <line x1="528" y1="340" x2="635" y2="340" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="633,337 641,340 633,343" fill="#ccc"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       MASS HIERARCHY — right column
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Vertical mass axis: stronger -->
+  <line x1="660" y1="58" x2="660" y2="370" stroke="#999" stroke-width="1.4"/>
+  <polygon points="657,63 660,53 663,63" fill="#999"/>
+
+  <!-- Axis label: larger -->
+  <text x="660" y="46" text-anchor="middle" font-size="12" fill="#777" font-style="italic">mass</text>
+
+  <!-- upper / lower hint -->
+  <text x="644" y="75"  text-anchor="middle" font-size="9.5" fill="#bbb">larger</text>
+  <text x="660" y="385" text-anchor="middle" font-size="9.5" fill="#bbb">smaller</text>
+
+  <!-- Tick row 1 -->
+  <line x1="656" y1="103" x2="664" y2="103" stroke="#3a6ea5" stroke-width="1.3"/>
+  <text x="678" y="98"  font-size="10.5" fill="#2c5282">small &#x394;</text>
+  <text x="678" y="113" font-size="10.5" fill="#2c5282">large mass</text>
+
+  <!-- Tick row 2 -->
+  <line x1="656" y1="236" x2="664" y2="236" stroke="#a06020" stroke-width="1.3"/>
+  <text x="678" y="231" font-size="10.5" fill="#a06020">intermediate &#x394;</text>
+  <text x="678" y="246" font-size="10.5" fill="#a06020">intermediate mass</text>
+
+  <!-- Tick row 3 -->
+  <line x1="656" y1="340" x2="664" y2="340" stroke="#888" stroke-width="1.3"/>
+  <text x="678" y="335" font-size="10.5" fill="#888">large &#x394;</text>
+  <text x="678" y="350" font-size="10.5" fill="#888">small mass</text>
+
+  <!-- Formula: mid-axis position -->
+  <text x="760" y="293" text-anchor="middle" font-size="12" fill="#555" font-style="italic">m &#x221d; 1/&#x394;&#xB2;</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       FIGURE LABEL
+       ═══════════════════════════════════════════════════ -->
+  <line x1="40" y1="408" x2="860" y2="408" stroke="#e0e0e0" stroke-width="0.7"/>
+</svg>

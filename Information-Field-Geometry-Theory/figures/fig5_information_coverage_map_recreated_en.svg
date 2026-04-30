@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1080" font-family="'Times New Roman','Noto Sans','Arial',sans-serif">
+  <defs>
+    <linearGradient id="infoRegion" x1="0" x2="1">
+      <stop offset="0%" stop-color="#edf5ff"/>
+      <stop offset="100%" stop-color="#dcecff"/>
+    </linearGradient>
+    <linearGradient id="physRegion" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eaf8dc"/>
+      <stop offset="100%" stop-color="#edf9e8"/>
+    </linearGradient>
+    <linearGradient id="barShannon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="35%" stop-color="#b7d3ff"/>
+      <stop offset="80%" stop-color="#2f7cf0"/>
+      <stop offset="100%" stop-color="#2f7cf0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barAfford" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eef9df"/>
+      <stop offset="50%" stop-color="#a8db72"/>
+      <stop offset="100%" stop-color="#63b82f"/>
+    </linearGradient>
+    <linearGradient id="barCommon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ff8c22" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#ff8c22" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#ff8c22" stop-opacity="0.65"/>
+      <stop offset="80%" stop-color="#ff8c22" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff8c22" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barPhysical" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f4d6f4"/>
+      <stop offset="100%" stop-color="#a73cc1"/>
+    </linearGradient>
+    <linearGradient id="barIFGT" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fde7e5"/>
+      <stop offset="100%" stop-color="#ffb9b4"/>
+    </linearGradient>
+    <filter id="commonBlur" x="-15%" y="-80%" width="130%" height="260%">
+      <feGaussianBlur stdDeviation="14 8"/>
+    </filter>
+    <marker id="arrowRight" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#111"/>
+    </marker>
+    <marker id="arrowLeft" markerWidth="14" markerHeight="14" refX="2" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M14,0 L0,7 L14,14 Z" fill="#111"/>
+    </marker>
+    <style>
+      .title{font-size:34px;font-weight:700;fill:#111}
+      .subtitle{font-size:26px;font-weight:500;fill:#111}
+      .regionTitle{font-size:26px;font-weight:700}
+      .axisLabel{font-size:24px;font-weight:700;fill:#111}
+      .small{font-size:18px;fill:#111}
+      .blue{fill:#06459c}
+      .green{fill:#17701e}
+      .orange{fill:#f26310}
+      .purple{fill:#651282}
+      .red{fill:#e00000}
+      .leftLabel{font-size:24px;font-weight:700}
+      .leftSub{font-size:20px;font-weight:700}
+      .desc{font-size:20px;fill:#111}
+      .descSmall{font-size:19px;fill:#111}
+      .formula{font-size:27px;font-weight:700}
+      .formulaSub{font-size:20px;font-weight:600}
+      .caption{font-size:21px;fill:#111}
+    </style>
+  </defs>
+
+  <rect width="1760" height="1080" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="880" y="47" text-anchor="middle" class="title">Fig.5 Coverage of Information Concepts Across Fields</text>
+  <text x="880" y="94" text-anchor="middle" class="subtitle">&#8212; Which range of &#8220;information&#8221; does each field refine? &#8212;</text>
+
+  <!-- domain bands: axis spans x=94..1490, desc zone x=1230..1740 -->
+  <!-- info region covers left ~64% of axis, phys covers right ~36% -->
+  <rect x="94"   y="114" width="920" height="58" fill="url(#infoRegion)"/>
+  <rect x="1014" y="114" width="476" height="58" fill="url(#physRegion)"/>
+  <text x="554"  y="152" text-anchor="middle" class="regionTitle blue">Information Domain (unclosed / generative)</text>
+  <text x="1252" y="152" text-anchor="middle" class="regionTitle green">Physical Domain (structure / constraint)</text>
+
+  <!-- C level labels above axis -->
+  <text x="139"  y="204" text-anchor="middle" class="small">Low (open differences dominate)</text>
+  <text x="640"  y="204" text-anchor="middle" class="small">Middle (quasi-closure: information acts)</text>
+  <text x="1170" y="204" text-anchor="middle" class="small">High (structure dominates)</text>
+
+  <!-- main axis -->
+  <line x1="94" y1="240" x2="1490" y2="240" stroke="#111" stroke-width="4"
+        marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)"/>
+  <text x="100" y="278" text-anchor="middle" class="axisLabel">0</text>
+  <text x="1505" y="252" class="axisLabel">C (closure degree)</text>
+
+  <!-- tick lines at 0, C_mid, C_high, C_max -->
+  <line x1="113"  y1="170" x2="113"  y2="281" stroke="#888" stroke-dasharray="4,4"/>
+  <line x1="440"  y1="170" x2="440"  y2="281" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="640"  y1="240" x2="640"  y2="282" stroke="#111" stroke-dasharray="7,5" stroke-width="2"/>
+  <line x1="1014" y1="170" x2="1014" y2="281" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="1470" y1="170" x2="1470" y2="281" stroke="#999" stroke-dasharray="4,4"/>
+
+  <!-- C labels below axis -->
+  <text x="113"  y="310" text-anchor="middle" class="formula blue">C &#8776; 0</text>
+  <text x="113"  y="343" text-anchor="middle" class="formulaSub blue">(differences remain open)</text>
+  <text x="640"  y="310" text-anchor="middle" class="formula blue">C<tspan baseline-shift="sub" font-size="18">mid</tspan></text>
+  <text x="640"  y="343" text-anchor="middle" class="formulaSub blue">(quasi-closure forms)</text>
+  <text x="1014" y="310" text-anchor="middle" class="formula green">C<tspan baseline-shift="sub" font-size="18">high</tspan></text>
+  <text x="1014" y="343" text-anchor="middle" class="formulaSub green">(strongly constrained structure)</text>
+  <text x="1470" y="310" text-anchor="middle" class="formula green">C<tspan baseline-shift="sub" font-size="18">max</tspan></text>
+  <text x="1470" y="343" text-anchor="middle" class="formulaSub green">(complete closure: unobservable)</text>
+
+  <!-- left labels (bars start at x=370, so labels fit in 36..365) -->
+  <text x="36" y="405" class="leftLabel blue">Information Science (Shannon)</text>
+  <text x="54" y="434" class="leftSub   blue">(transmissible information)</text>
+
+  <text x="36" y="498" class="leftLabel green">Affordance (Gibson)</text>
+  <text x="54" y="527" class="leftSub   green">(information in relation)</text>
+
+  <text x="36" y="591" class="leftLabel orange">Common-sense Information</text>
+  <text x="54" y="620" class="leftSub   orange">(information as lived experience)</text>
+
+  <text x="36" y="685" class="leftLabel purple">Physical Information</text>
+  <text x="54" y="714" class="leftSub   purple">(observable information)</text>
+
+  <text x="36" y="771" class="leftLabel red">IFGT</text>
+  <text x="36" y="797" class="leftSub   red">(scope of this theory)</text>
+  <text x="36" y="820" class="leftSub   red">(dynamics of unclosed</text>
+  <text x="36" y="843" class="leftSub   red"> differences)</text>
+
+  <!-- bars -->
+  <rect x="380" y="378" width="680" height="62" rx="8" fill="url(#barShannon)"  stroke="#06459c" stroke-width="2"/>
+  <rect x="340" y="471" width="620" height="62" rx="8" fill="url(#barAfford)"   stroke="#17701e" stroke-width="2"/>
+  <ellipse cx="710" cy="602" rx="420" ry="54" fill="url(#barCommon)" filter="url(#commonBlur)" opacity="0.9"/>
+  <ellipse cx="680" cy="596" rx="400" ry="36" fill="#ff8c22" opacity="0.22"/>
+  <ellipse cx="740" cy="610" rx="375" ry="34" fill="#ff8c22" opacity="0.18"/>
+  <rect x="800" y="658" width="380" height="62" rx="8" fill="url(#barPhysical)" stroke="#651282" stroke-width="2"/>
+  <rect x="340" y="755" width="820" height="62" rx="8" fill="url(#barIFGT)"     stroke="#e00000" stroke-width="2"/>
+  <text x="750" y="795" text-anchor="middle" class="leftLabel red">Integrates the whole range (the unclosed domain as a whole)</text>
+
+  <!-- vertical guide lines through bar section -->
+  <line x1="1014" y1="376" x2="1014" y2="825" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="1180" y1="376" x2="1180" y2="825" stroke="#999" stroke-dasharray="4,4"/>
+
+  <!-- right-side descriptions (start x=1200, safe within 1760) -->
+  <text x="1200" y="405" class="desc">Mainly handles transmissible differences.</text>
+  <text x="1200" y="433" class="desc">Meaning and weight are discarded.</text>
+
+  <text x="1200" y="497" class="desc">Information arises in the relation</text>
+  <text x="1200" y="525" class="desc">between agent and environment.</text>
+
+  <text x="1200" y="591" class="desc">A broad range including meaning,</text>
+  <text x="1200" y="619" class="desc">weight, and persistence.</text>
+
+  <text x="1200" y="686" class="desc">Information as observable and</text>
+  <text x="1200" y="714" class="desc">operable physical states.</text>
+
+  <text x="1200" y="778"  class="descSmall">Differences partially close, quasi-closure</text>
+  <text x="1200" y="804"  class="descSmall">forms structure, and new differences</text>
+  <text x="1200" y="830"  class="descSmall">arise inside that structure.</text>
+
+  <!-- caption box -->
+  <rect x="80" y="884" width="1600" height="172" rx="10" fill="#ffffff" stroke="#999" stroke-width="2"/>
+  <text x="148" y="922"  class="caption">The horizontal axis represents closure degree C. The left side is the domain of open differences;</text>
+  <text x="148" y="950"  class="caption">the right side is the domain of physically constrained structure.</text>
+  <text x="148" y="990"  class="caption">Each field refines a different range of this continuum. Each is valid, but each observes a different region.</text>
+  <text x="148" y="1032" class="caption">IFGT attempts to describe the whole continuum as the dynamics of unclosed differences.</text>
+</svg>

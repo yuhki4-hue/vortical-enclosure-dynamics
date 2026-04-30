@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" font-family="Georgia, 'Times New Roman', serif">
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="#ffffff"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       BOXES — 7 nodes, evenly spaced
+       x centers: 60, 175, 290, 405, 520, 635, 775
+       box width: 100, height: 48
+       y center: 90
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Box 1: C_ij -->
+  <rect x="10" y="66" width="100" height="48" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+  <text x="60" y="87" text-anchor="middle" font-size="13" fill="#222" font-style="italic">C</text>
+  <text x="72" y="91" text-anchor="middle" font-size="9" fill="#222" font-style="italic">ij</text>
+  <text x="60" y="106" text-anchor="middle" font-size="9.5" fill="#666">causal log</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="112" y1="90" x2="138" y2="90" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="136,87 144,90 136,93" fill="#aaa"/>
+
+  <!-- Box 2: Flow J -->
+  <rect x="145" y="66" width="100" height="48" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+  <text x="195" y="87" text-anchor="middle" font-size="13" fill="#222" font-style="italic">J</text>
+  <text x="195" y="106" text-anchor="middle" font-size="9.5" fill="#666">flow</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="247" y1="90" x2="273" y2="90" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="271,87 279,90 271,93" fill="#aaa"/>
+
+  <!-- Box 3: Vorticity ω -->
+  <rect x="280" y="66" width="100" height="48" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+  <text x="330" y="88" text-anchor="middle" font-size="14" fill="#222" font-style="italic">&#x3C9;</text>
+  <text x="330" y="106" text-anchor="middle" font-size="9.5" fill="#666">vorticity</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="382" y1="90" x2="408" y2="90" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="406,87 414,90 406,93" fill="#aaa"/>
+
+  <!-- Box 4: Closure Density L -->
+  <rect x="415" y="66" width="100" height="48" rx="3" fill="#f0f4fa" stroke="#3a6ea5" stroke-width="1.4"/>
+  <text x="465" y="87" text-anchor="middle" font-size="13" fill="#2c5282" font-style="italic">L</text>
+  <text x="465" y="106" text-anchor="middle" font-size="9.5" fill="#3a6ea5">closure density</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="517" y1="90" x2="543" y2="90" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="541,87 549,90 541,93" fill="#aaa"/>
+
+  <!-- Box 5: Metric g_μν -->
+  <rect x="550" y="66" width="100" height="48" rx="3" fill="#f0f4fa" stroke="#3a6ea5" stroke-width="1.4"/>
+  <text x="600" y="87" text-anchor="middle" font-size="13" fill="#2c5282" font-style="italic">g</text>
+  <text x="612" y="91" text-anchor="middle" font-size="9" fill="#2c5282" font-style="italic">&#x3BC;&#x3BD;</text>
+  <text x="600" y="106" text-anchor="middle" font-size="9.5" fill="#3a6ea5">metric</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="652" y1="90" x2="672" y2="90" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="670,87 678,90 670,93" fill="#aaa"/>
+
+  <!-- Box 6: Einstein Equation — double border -->
+  <rect x="679" y="62" width="112" height="56" rx="3" fill="#f0f4fa" stroke="#3a6ea5" stroke-width="2.5"/>
+  <rect x="683" y="66" width="104" height="48" rx="2" fill="none" stroke="#3a6ea5" stroke-width="0.8"/>
+  <text x="735" y="85" text-anchor="middle" font-size="9.5" fill="#2c5282">Einstein</text>
+  <text x="735" y="100" text-anchor="middle" font-size="9.5" fill="#2c5282">equation</text>
+  <text x="735" y="112" text-anchor="middle" font-size="8.5" fill="#3a6ea5">fixed-point structure</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="793" y1="90" x2="813" y2="90" stroke="#555" stroke-width="1.4"/>
+  <polygon points="811,87 819,90 811,93" fill="#555"/>
+
+  <!-- Box 7: Gravity — bold final -->
+  <rect x="820" y="66" width="72" height="48" rx="3" fill="#2c5282" stroke="#2c5282" stroke-width="1.5"/>
+  <text x="856" y="93" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Gravity</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       TOP LABEL: Difference
+       ═══════════════════════════════════════════════════ -->
+  <text x="60" y="50" text-anchor="middle" font-size="10" fill="#555" font-style="italic">Difference</text>
+  <line x1="60" y1="54" x2="60" y2="63" stroke="#aaa" stroke-width="1.1"/>
+  <polygon points="57,62 60,68 63,62" fill="#aaa"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       BOTTOM ANNOTATIONS
+       ═══════════════════════════════════════════════════ -->
+  <!-- Brace / label under L → g_μν -->
+  <line x1="415" y1="125" x2="652" y2="125" stroke="#ccc" stroke-width="0.7" stroke-dasharray="3,2"/>
+  <text x="533" y="139" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">w</text>
+  <text x="541" y="143" text-anchor="middle" font-size="7" fill="#aaa" font-style="italic">ab</text>
+  <text x="560" y="139" text-anchor="middle" font-size="9" fill="#aaa">= &#x2212;log S</text>
+  <text x="601" y="143" text-anchor="middle" font-size="7" fill="#aaa" font-style="italic">ab</text>
+  <text x="618" y="139" text-anchor="middle" font-size="9" fill="#aaa">+ &#x3B5; L</text>
+  <text x="641" y="143" text-anchor="middle" font-size="7" fill="#aaa" font-style="italic">ab</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       FIGURE LABEL
+       ═══════════════════════════════════════════════════ -->
+  <line x1="40" y1="168" x2="860" y2="168" stroke="#e0e0e0" stroke-width="0.7"/>
+  <text x="450" y="182" text-anchor="middle" font-size="10" fill="#888" font-style="italic">
+    Figure 1. Emergence of gravity from closure density.
+  </text>
+  <text x="450" y="196" text-anchor="middle" font-size="10" fill="#888" font-style="italic">
+    Closure density modifies the metric, and the Einstein equation emerges as the linear form of the corresponding fixed-point structure.
+  </text>
+
+</svg>

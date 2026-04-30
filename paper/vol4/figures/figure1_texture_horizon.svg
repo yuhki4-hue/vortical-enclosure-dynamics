@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="Georgia, serif">
+
+  <rect width="900" height="620" fill="#0d0d0d"/>
+
+  <defs>
+    <linearGradient id="horizonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="30%" stop-color="#3d1a5e"/>
+      <stop offset="60%" stop-color="#7b2fa0"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="microGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+    <linearGradient id="renormGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f3460"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="macroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#1a3a2a"/>
+    </linearGradient>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+    </marker>
+    <filter id="blur1" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="blur2" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="4.5"/>
+    </filter>
+    <filter id="blur3" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="450" y="30" text-anchor="middle" font-size="15" fill="#ddd" font-weight="bold">Texture Formation Across the Differential Horizon</text>
+  <text x="450" y="46" text-anchor="middle" font-size="11" fill="#888" font-style="italic">テクスチャ生成と差の地平線</text>
+
+  <!-- 左領域：未生成 -->
+  <rect x="0" y="62" width="220" height="400" fill="#111111"/>
+  <circle cx="40" cy="120" r="1.2" fill="#333" opacity="0.4"/>
+  <circle cx="80" cy="180" r="0.8" fill="#333" opacity="0.3"/>
+  <circle cx="55" cy="250" r="1.0" fill="#333" opacity="0.3"/>
+  <circle cx="110" cy="140" r="0.6" fill="#333" opacity="0.2"/>
+  <circle cx="150" cy="320" r="1.0" fill="#333" opacity="0.3"/>
+  <circle cx="90" cy="380" r="0.8" fill="#333" opacity="0.2"/>
+  <circle cx="170" cy="200" r="0.7" fill="#333" opacity="0.3"/>
+  <circle cx="130" cy="290" r="1.1" fill="#333" opacity="0.2"/>
+  <circle cx="60" cy="350" r="0.9" fill="#333" opacity="0.3"/>
+  <circle cx="190" cy="410" r="0.6" fill="#333" opacity="0.2"/>
+  <text x="110" y="88" text-anchor="middle" font-size="13" fill="#555" font-style="italic">Un-generated</text>
+  <text x="110" y="104" text-anchor="middle" font-size="11" fill="#444">0-Region</text>
+  <text x="110" y="440" text-anchor="middle" font-size="11" fill="#444">差なし</text>
+  <text x="110" y="455" text-anchor="middle" font-size="11" fill="#444">テクスチャなし</text>
+  <text x="110" y="470" text-anchor="middle" font-size="11" fill="#444">記述不能</text>
+
+  <!-- 地平線帯 -->
+  <path d="M215,62 Q225,120 220,180 Q218,240 223,300 Q222,360 215,420 Q210,445 220,462 L255,462 Q262,445 258,420 Q255,360 260,300 Q263,240 258,180 Q255,120 260,62 Z"
+        fill="url(#horizonGrad)" opacity="0.95"/>
+  <path d="M220,62 Q225,120 220,180 Q218,240 223,300 Q220,360 218,462"
+        stroke="#9b4fd4" stroke-width="1.5" fill="none" opacity="0.8" stroke-dasharray="4,3"/>
+  <path d="M258,62 Q255,120 260,180 Q263,240 258,300 Q260,360 255,462"
+        stroke="#c084fc" stroke-width="1.0" fill="none" opacity="0.6" stroke-dasharray="3,4"/>
+  <text x="238" y="88" text-anchor="middle" font-size="10" fill="#c084fc" font-weight="bold">Differential</text>
+  <text x="238" y="101" text-anchor="middle" font-size="10" fill="#c084fc" font-weight="bold">Horizon</text>
+  <text x="238" y="115" text-anchor="middle" font-size="9" fill="#9b4fd4" font-style="italic">Transition Band</text>
+  <text x="238" y="428" text-anchor="middle" font-size="9" fill="#9b4fd4">breakdown of</text>
+  <text x="238" y="441" text-anchor="middle" font-size="9" fill="#9b4fd4">texture</text>
+
+  <!-- first emergence of difference（地平線右直後） -->
+  <text x="268" y="148" text-anchor="start" font-size="8.5" fill="#c084fc" opacity="0.85" font-style="italic">first emergence</text>
+  <text x="268" y="159" text-anchor="start" font-size="8.5" fill="#c084fc" opacity="0.85" font-style="italic">of difference</text>
+
+  <!-- 地平線直後の半形成ゾーン（粗い点・乱れた波） -->
+  <g opacity="0.45">
+    <circle cx="272" cy="372" r="3.8" fill="#4a90d9"/>
+    <circle cx="282" cy="356" r="2.5" fill="#6ab0f5"/>
+    <circle cx="293" cy="418" r="4.2" fill="#4a90d9"/>
+    <circle cx="304" cy="382" r="2.0" fill="#5a9fd9"/>
+    <circle cx="314" cy="402" r="3.2" fill="#4a90d9"/>
+    <circle cx="322" cy="362" r="2.8" fill="#6ab0f5"/>
+    <circle cx="330" cy="432" r="3.5" fill="#4a90d9"/>
+  </g>
+  <g stroke="#4ecb71" stroke-width="1.1" fill="none" opacity="0.25">
+    <path d="M265,92 Q273,83 282,97 Q290,110 300,89 Q310,70 320,102 Q328,120 335,94"/>
+    <path d="M265,118 Q273,107 282,124 Q290,138 300,115 Q310,97 320,130 Q328,145 335,120"/>
+  </g>
+
+  <!-- 下層：ミクロ -->
+  <rect x="335" y="342" width="550" height="120" fill="url(#microGrad)" rx="2"/>
+  <!-- 左端フェードイン（半形成ゾーンとの馴染み） -->
+  <rect x="335" y="342" width="30" height="120" fill="#1a1a2e" opacity="0.55" rx="2"/>
+  <!-- 半形成ゾーン境界に薄い点を追加 -->
+  <g opacity="0.35">
+    <circle cx="337" cy="368" r="1.4" fill="#4a90d9"/>
+    <circle cx="341" cy="385" r="1.0" fill="#6ab0f5"/>
+    <circle cx="344" cy="358" r="1.6" fill="#4a90d9"/>
+    <circle cx="348" cy="402" r="1.2" fill="#5a9fd9"/>
+    <circle cx="338" cy="418" r="1.0" fill="#4a90d9"/>
+    <circle cx="345" cy="432" r="1.3" fill="#6ab0f5"/>
+    <circle cx="350" cy="372" r="1.1" fill="#4a90d9"/>
+  </g>
+  <g opacity="0.8">
+    <circle cx="355" cy="368" r="1.8" fill="#4a90d9"/><circle cx="370" cy="382" r="1.2" fill="#6ab0f5"/>
+    <circle cx="385" cy="362" r="2.0" fill="#4a90d9"/><circle cx="400" cy="394" r="1.5" fill="#3a7bc8"/>
+    <circle cx="415" cy="372" r="1.8" fill="#6ab0f5"/><circle cx="430" cy="357" r="1.2" fill="#4a90d9"/>
+    <circle cx="445" cy="388" r="2.2" fill="#5a9fd9"/><circle cx="460" cy="370" r="1.6" fill="#4a90d9"/>
+    <circle cx="475" cy="397" r="1.4" fill="#6ab0f5"/><circle cx="490" cy="364" r="1.9" fill="#4a90d9"/>
+    <circle cx="505" cy="382" r="1.3" fill="#3a7bc8"/><circle cx="520" cy="360" r="2.0" fill="#6ab0f5"/>
+    <circle cx="535" cy="394" r="1.7" fill="#4a90d9"/><circle cx="550" cy="372" r="1.5" fill="#5a9fd9"/>
+    <circle cx="565" cy="362" r="1.8" fill="#4a90d9"/><circle cx="580" cy="390" r="1.2" fill="#6ab0f5"/>
+    <circle cx="595" cy="374" r="2.1" fill="#4a90d9"/><circle cx="610" cy="357" r="1.6" fill="#3a7bc8"/>
+    <circle cx="625" cy="387" r="1.4" fill="#6ab0f5"/><circle cx="640" cy="370" r="1.9" fill="#4a90d9"/>
+    <circle cx="655" cy="395" r="1.3" fill="#5a9fd9"/><circle cx="670" cy="362" r="2.0" fill="#4a90d9"/>
+    <circle cx="685" cy="380" r="1.7" fill="#6ab0f5"/><circle cx="700" cy="367" r="1.5" fill="#4a90d9"/>
+    <circle cx="715" cy="392" r="1.8" fill="#3a7bc8"/><circle cx="730" cy="372" r="1.2" fill="#6ab0f5"/>
+    <circle cx="745" cy="360" r="2.2" fill="#4a90d9"/><circle cx="760" cy="387" r="1.6" fill="#5a9fd9"/>
+    <circle cx="775" cy="370" r="1.4" fill="#4a90d9"/><circle cx="790" cy="395" r="1.9" fill="#6ab0f5"/>
+    <circle cx="805" cy="364" r="1.7" fill="#4a90d9"/><circle cx="820" cy="382" r="1.3" fill="#3a7bc8"/>
+    <circle cx="835" cy="357" r="2.0" fill="#6ab0f5"/><circle cx="850" cy="390" r="1.5" fill="#4a90d9"/>
+    <circle cx="865" cy="374" r="1.8" fill="#5a9fd9"/><circle cx="878" cy="362" r="1.2" fill="#4a90d9"/>
+    <circle cx="352" cy="414" r="1.5" fill="#4a90d9"/><circle cx="368" cy="428" r="1.8" fill="#6ab0f5"/>
+    <circle cx="384" cy="410" r="1.2" fill="#4a90d9"/><circle cx="400" cy="435" r="2.0" fill="#3a7bc8"/>
+    <circle cx="416" cy="417" r="1.6" fill="#6ab0f5"/><circle cx="432" cy="402" r="1.4" fill="#4a90d9"/>
+    <circle cx="448" cy="430" r="1.9" fill="#5a9fd9"/><circle cx="464" cy="412" r="1.3" fill="#4a90d9"/>
+    <circle cx="480" cy="438" r="1.7" fill="#6ab0f5"/><circle cx="496" cy="410" r="2.0" fill="#4a90d9"/>
+    <circle cx="512" cy="425" r="1.5" fill="#3a7bc8"/><circle cx="528" cy="405" r="1.8" fill="#6ab0f5"/>
+    <circle cx="544" cy="436" r="1.2" fill="#4a90d9"/><circle cx="560" cy="416" r="2.1" fill="#5a9fd9"/>
+    <circle cx="576" cy="406" r="1.6" fill="#4a90d9"/><circle cx="592" cy="432" r="1.4" fill="#6ab0f5"/>
+    <circle cx="608" cy="414" r="1.9" fill="#4a90d9"/><circle cx="624" cy="402" r="1.7" fill="#3a7bc8"/>
+    <circle cx="640" cy="429" r="1.3" fill="#6ab0f5"/><circle cx="656" cy="412" r="2.0" fill="#4a90d9"/>
+    <circle cx="672" cy="436" r="1.5" fill="#5a9fd9"/><circle cx="688" cy="406" r="1.8" fill="#4a90d9"/>
+    <circle cx="704" cy="422" r="1.2" fill="#6ab0f5"/><circle cx="720" cy="410" r="2.2" fill="#4a90d9"/>
+    <circle cx="736" cy="434" r="1.6" fill="#3a7bc8"/><circle cx="752" cy="416" r="1.4" fill="#6ab0f5"/>
+    <circle cx="768" cy="404" r="1.9" fill="#4a90d9"/><circle cx="784" cy="429" r="1.7" fill="#5a9fd9"/>
+    <circle cx="800" cy="412" r="1.3" fill="#4a90d9"/><circle cx="816" cy="436" r="2.0" fill="#6ab0f5"/>
+    <circle cx="832" cy="409" r="1.5" fill="#4a90d9"/><circle cx="848" cy="424" r="1.8" fill="#3a7bc8"/>
+    <circle cx="864" cy="402" r="1.2" fill="#6ab0f5"/><circle cx="878" cy="432" r="2.1" fill="#4a90d9"/>
+  </g>
+  <text x="612" y="474" text-anchor="middle" font-size="11" fill="#6ab0f5">micro structure　／　fluctuation</text>
+
+  <!-- 中層：繰り込み -->
+  <rect x="335" y="212" width="550" height="125" fill="url(#renormGrad)" rx="2"/>
+  <!-- 楕円群（coarse-graining中の流れ感） -->
+  <g opacity="0.52">
+    <ellipse cx="375" cy="248" rx="10" ry="4.5" fill="#4a90d9"/>
+    <ellipse cx="382" cy="256" rx="14" ry="3.5" fill="#5a9fd9" opacity="0.45"/>
+    <ellipse cx="432" cy="244" rx="8"  ry="4.0" fill="#4a90d9"/>
+    <ellipse cx="440" cy="252" rx="12" ry="3.0" fill="#5a9fd9" opacity="0.4"/>
+    <ellipse cx="492" cy="260" rx="11" ry="4.5" fill="#4a90d9" opacity="0.5"/>
+    <ellipse cx="500" cy="268" rx="16" ry="3.0" fill="#5a9fd9" opacity="0.35"/>
+    <ellipse cx="550" cy="246" rx="9"  ry="4.0" fill="#4a90d9"/>
+    <ellipse cx="558" cy="254" rx="13" ry="3.5" fill="#5a9fd9" opacity="0.4"/>
+    <ellipse cx="610" cy="256" rx="10" ry="4.5" fill="#4a90d9" opacity="0.5"/>
+    <ellipse cx="618" cy="264" rx="15" ry="3.0" fill="#5a9fd9" opacity="0.35"/>
+    <ellipse cx="668" cy="244" rx="8"  ry="4.0" fill="#4a90d9"/>
+    <ellipse cx="676" cy="252" rx="12" ry="3.5" fill="#5a9fd9" opacity="0.4"/>
+    <ellipse cx="726" cy="258" rx="11" ry="4.5" fill="#4a90d9" opacity="0.5"/>
+    <ellipse cx="734" cy="266" rx="14" ry="3.0" fill="#5a9fd9" opacity="0.38"/>
+    <ellipse cx="784" cy="246" rx="9"  ry="4.0" fill="#4a90d9"/>
+    <ellipse cx="792" cy="254" rx="13" ry="3.5" fill="#5a9fd9" opacity="0.4"/>
+    <ellipse cx="844" cy="254" rx="10" ry="4.5" fill="#4a90d9" opacity="0.5"/>
+    <ellipse cx="852" cy="262" rx="15" ry="3.0" fill="#5a9fd9" opacity="0.35"/>
+  </g>
+  <!-- ぼやけ楕円群（blur1: 軽いぼやけ） -->
+  <g filter="url(#blur1)" opacity="0.38">
+    <ellipse cx="360" cy="252" rx="18" ry="6" fill="#4a90d9"/>
+    <ellipse cx="415" cy="266" rx="22" ry="5" fill="#5a9fd9"/>
+    <ellipse cx="468" cy="250" rx="16" ry="6" fill="#4a90d9"/>
+    <ellipse cx="525" cy="270" rx="20" ry="5" fill="#5a9fd9"/>
+    <ellipse cx="582" cy="254" rx="18" ry="6" fill="#4a90d9"/>
+    <ellipse cx="638" cy="268" rx="22" ry="5" fill="#5a9fd9"/>
+    <ellipse cx="694" cy="252" rx="16" ry="6" fill="#4a90d9"/>
+    <ellipse cx="750" cy="266" rx="20" ry="5" fill="#5a9fd9"/>
+    <ellipse cx="806" cy="250" rx="18" ry="6" fill="#4a90d9"/>
+    <ellipse cx="860" cy="268" rx="22" ry="5" fill="#5a9fd9"/>
+  </g>
+  <!-- ぼやけ楕円群（blur2: 中程度のぼやけ） -->
+  <g filter="url(#blur2)" opacity="0.22">
+    <ellipse cx="390" cy="258" rx="26" ry="8" fill="#6ab0f5"/>
+    <ellipse cx="490" cy="244" rx="30" ry="7" fill="#4a90d9"/>
+    <ellipse cx="590" cy="262" rx="28" ry="8" fill="#6ab0f5"/>
+    <ellipse cx="690" cy="248" rx="26" ry="7" fill="#4a90d9"/>
+    <ellipse cx="790" cy="260" rx="30" ry="8" fill="#6ab0f5"/>
+    <ellipse cx="870" cy="250" rx="24" ry="7" fill="#4a90d9"/>
+  </g>
+  <!-- ぼやけ楕円群（blur3: 強いぼやけ・空気感） -->
+  <g filter="url(#blur3)" opacity="0.12">
+    <ellipse cx="450" cy="260" rx="50" ry="14" fill="#4a90d9"/>
+    <ellipse cx="620" cy="248" rx="55" ry="14" fill="#6ab0f5"/>
+    <ellipse cx="790" cy="262" rx="50" ry="14" fill="#4a90d9"/>
+  </g>
+  <!-- 圧縮矢印 -->
+  <g stroke="#4ecb71" stroke-width="1.5" opacity="0.7">
+    <line x1="430" y1="342" x2="430" y2="220"/>
+    <polygon points="430,212 425,224 435,224" fill="#4ecb71"/>
+    <line x1="570" y1="342" x2="570" y2="220"/>
+    <polygon points="570,212 565,224 575,224" fill="#4ecb71"/>
+    <line x1="710" y1="342" x2="710" y2="220"/>
+    <polygon points="710,212 705,224 715,224" fill="#4ecb71"/>
+    <line x1="848" y1="342" x2="848" y2="220"/>
+    <polygon points="848,212 843,224 853,224" fill="#4ecb71"/>
+  </g>
+  <text x="612" y="292" text-anchor="middle" font-size="12" fill="#4ecb71" font-weight="bold">renormalization</text>
+  <text x="612" y="308" text-anchor="middle" font-size="11" fill="#3aab5a">coarse-graining　／　compression</text>
+
+  <!-- 上層：マクロ -->
+  <rect x="335" y="62" width="550" height="145" fill="url(#macroGrad)" rx="2"/>
+  <g stroke="#4ecb71" stroke-width="1.8" fill="none" opacity="0.75">
+    <path d="M340,96 Q355,108 375,91 Q395,76 410,90 Q445,102 480,90 Q515,78 550,90 Q585,102 620,90 Q655,78 690,90 Q725,102 760,90 Q795,78 830,90 Q860,82 880,88"/>
+    <path d="M340,116 Q355,128 375,110 Q395,94 410,108 Q445,120 480,108 Q515,96 550,108 Q585,120 620,108 Q655,96 690,108 Q725,120 760,108 Q795,96 830,108 Q860,100 880,106"/>
+    <path d="M340,133 Q355,146 375,128 Q395,113 410,126 Q445,138 480,126 Q515,114 550,126 Q585,138 620,126 Q655,114 690,126 Q725,138 760,126 Q795,114 830,126 Q860,118 880,124"/>
+    <path d="M340,150 Q355,162 375,145 Q395,131 410,144 Q445,156 480,144 Q515,132 550,144 Q585,156 620,144 Q655,132 690,144 Q725,156 760,144 Q795,132 830,144 Q860,136 880,142"/>
+    <path d="M340,168 Q355,180 375,163 Q395,148 410,162 Q445,174 480,162 Q515,150 550,162 Q585,174 620,162 Q655,150 690,162 Q725,174 760,162 Q795,150 830,162 Q860,154 880,160"/>
+    <path d="M340,186 Q355,198 375,181 Q395,166 410,180 Q445,192 480,180 Q515,168 550,180 Q585,192 620,180 Q655,168 690,180 Q725,192 760,180 Q795,168 830,180 Q860,172 880,178"/>
+  </g>
+  <!-- マクロラベル（2行） -->
+  <text x="612" y="192" text-anchor="middle" font-size="12" fill="#a8e6cf" font-weight="bold">texture</text>
+  <text x="612" y="207" text-anchor="middle" font-size="11" fill="#7dcfb0">symmetry　／　conserved quantities</text>
+
+  <!-- 発散矢印（2本） -->
+  <!-- micro層 → 地平線 -->
+  <path d="M440,412 Q375,408 270,402" stroke="#ff6b6b" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)" opacity="0.9"/>
+  <!-- renorm層 → 地平線（点線） -->
+  <path d="M410,268 Q352,264 270,282" stroke="#ff6b6b" stroke-width="1.8" fill="none" marker-end="url(#arrowRed)" opacity="0.65" stroke-dasharray="5,3"/>
+  <text x="308" y="435" text-anchor="middle" font-size="12" fill="#ff6b6b" font-weight="bold">divergence</text>
+
+  <!-- 縦軸 -->
+  <text x="18" y="140" text-anchor="middle" font-size="11" fill="#a8e6cf" transform="rotate(-90, 18, 140)">macro</text>
+  <text x="18" y="278" text-anchor="middle" font-size="11" fill="#4ecb71" transform="rotate(-90, 18, 278)">renorm.</text>
+  <text x="18" y="408" text-anchor="middle" font-size="11" fill="#6ab0f5" transform="rotate(-90, 18, 408)">micro</text>
+  <line x1="28" y1="62" x2="28" y2="462" stroke="#333" stroke-width="1" opacity="0.5"/>
+  <line x1="28" y1="212" x2="60" y2="212" stroke="#333" stroke-width="1" opacity="0.5"/>
+  <line x1="28" y1="342" x2="60" y2="342" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+  <!-- 横軸ラベル -->
+  <text x="110" y="488" text-anchor="middle" font-size="11" fill="#555">Un-generated Domain</text>
+  <text x="238" y="488" text-anchor="middle" font-size="10" fill="#9b4fd4">Differential Horizon</text>
+  <text x="612" y="488" text-anchor="middle" font-size="11" fill="#4ecb71">Generated / Textured Domain</text>
+  <line x1="30" y1="492" x2="885" y2="492" stroke="#444" stroke-width="1.5"/>
+  <polygon points="885,489 880,492 885,495" fill="#444"/>
+
+  <!-- キー対応関係 -->
+  <rect x="270" y="318" width="215" height="36" fill="#0d0d0d" rx="4" opacity="0.88" stroke="#333" stroke-width="1"/>
+  <text x="378" y="332" text-anchor="middle" font-size="9" fill="#777" font-style="italic">divergence = boundary contact</text>
+  <text x="378" y="347" text-anchor="middle" font-size="9" fill="#777" font-style="italic">renormalization = texture extraction</text>
+
+  <!-- キャプション -->
+  <text x="450" y="556" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">Across the differential horizon, un-generated indeterminacy does not appear directly as physical structure.</text>
+  <text x="450" y="571" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">What becomes physically accessible is only the compressed texture extracted through renormalization.</text>
+  <text x="450" y="586" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">Divergence marks the breakdown of this texture near boundary contact,</text>
+  <text x="450" y="601" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">while symmetry and conserved quantities emerge as stable macro-textures of integrated relations.</text>
+
+</svg>

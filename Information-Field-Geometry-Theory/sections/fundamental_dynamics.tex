@@ -1,0 +1,60 @@
+\section{Fundamental Dynamics}
+\label{sec:fundamental_dynamics}
+
+IFGT is a theory that describes motion within a quasi-closure, which appears as a fluctuation of difference that does not fully close. A quasi-closure is not separated from physical structure but interacts with it within the same generative process. Through this mutual interference, the informational quantities evolve in time.
+
+This section defines the basic variables of the information field and introduces their evolution equations.
+
+\subsection{Definition of basic variables}
+\label{subsec:basic_variables}
+
+\paragraph{Information density $I$.}
+The information density $I$ is the density of traces left behind when differences fail to dissipate---the accumulation of persisting history. As stated in the previous section, $I$ is related to VED's closure degree $C$ by $I = f(1 - C)$.
+
+\paragraph{Information flow $J$.}
+The information flow $J$ is a vector quantity representing the direction and manner in which difference propagates. It describes the paths and distributions of change within a quasi-closure.
+
+\paragraph{Information potential $\Phi$.}
+The information potential $\Phi$ is a scalar quantity representing the strength with which the information flow is constrained and biased toward specific paths. It acts as interference with fluctuations and restricts the degrees of freedom of difference chains. The relation between $\Phi$ and $C$ is given by $\Phi = -\alpha C + \Phi_0$, where $\alpha$ is the constraint coupling constant and $\Phi_0$ is an arbitrary constant (which vanishes under the gradient and thus does not contribute to the dynamics).
+
+\paragraph{Informational time $\tau$.}
+The informational time $\tau$ is defined as the progression accumulating through the mutual interference between difference and physical structure. It is not an externally given parameter but is generated endogenously from the interaction between difference chains and structural constraints (see~§\ref{subsec:time}).
+
+\paragraph{Generation term $\sigma$.}
+The generation term $\sigma$ is the quantity representing the mismatch between the current difference chain and the existing informational trace structure. Such mismatch arises when the compatibility between structure and flow breaks down, inducing the generation of new differences and changes in the information density. The concrete construction of $\sigma$ is developed in Section~\ref{sec:unified_equation}.
+
+\subsection{Basic equation}
+\label{subsec:basic_equation}
+
+The time evolution of the information density is determined by transport via the information flow and by the generation term:
+\begin{equation}
+\frac{\partial I}{\partial \tau} + \nabla \cdot J = \sigma.
+\label{eq:basic}
+\end{equation}
+
+The first term on the left represents the time change of information density, and the second term represents the transport effect due to the divergence of the information flow. The right-hand side $\sigma$ represents the difference generation due to mismatch.
+
+\subsection{Construction of the information flow}
+\label{subsec:info_flow}
+
+The information flow is specified by the gradient of trace density and by the information potential:
+\begin{align}
+J &= -D \nabla I + \mu F_I, \label{eq:J}\\
+F_I &= -\nabla \Phi = \alpha \nabla C. \label{eq:F_I}
+\end{align}
+
+Here $D$ is the diffusion coefficient, $\mu$ the potential response coefficient, and $\alpha$ the constraint coupling constant. The first term represents a diffusive flow that resolves the non-uniformity of trace density; the second term represents a flow following the potential gradient.
+
+The $F_I$ given by \eqref{eq:F_I} acts as a \emph{constraint force} drawing the information flow toward specific paths through the gradient of the closure degree. In regions where $\nabla C$ is large (the boundaries of closure), strong constraint is exerted and the flow is drawn in.
+
+\paragraph{Terminology.}
+The structure expressed by \eqref{eq:F_I}---``the gradient of the closure degree draws in the flow''---could, by analogy with existing physics, be called \emph{information gravity}. This is a useful designation that aids intuitive understanding: if $\nabla C$ is read as $\nabla \Phi_{\mathrm{grav}}$, then it plays formally the same role as the potential gradient in Newtonian gravity.
+
+However, this paper does not identify $F_I$ with gravity in the usual sense (a force arising from the curvature of spacetime). We treat it solely as a potential gradient that geometrically constrains the degrees of freedom of difference chains. In what follows, we therefore prioritize descriptive clarity and unify the terminology as ``\emph{constraint potential gradient}'' or ``\emph{information-geometric force}.'' The designation \emph{information gravity} may be used for intuitive explanation or as a bridge to other domains, but within the internal description of the theory we adopt the vocabulary of information geometry.
+
+\subsection{Quasi-closure and circulatory structure}
+\label{subsec:circulatory_structure}
+
+When the bias of informational traces grows stronger, the fluctuations of the difference chain become fixed along specific paths, and the degrees of freedom of flow decrease. However, since complete closure is not attained, the flow does not stop; instead, it forms a circulatory structure.
+
+This circulation strengthens local constraints and draws in surrounding flow. As a consequence, this structure can be described as possessing \emph{inertial properties}. The mass-like quantity in IFGT is characterized by the local depth of $C$ (closure strength) and is understood as the degree of update resistance.

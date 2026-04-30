@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" font-family="'Times New Roman','Georgia','Palatino','serif'">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,5 L0,10 Z" fill="#111"/>
+    </marker>
+    <style>
+      .title{font-size:30px;font-weight:700;fill:#000}
+      .subtitle{font-size:24px;fill:#000}
+      .flow{fill:none;stroke:#777;stroke-width:2.1;stroke-dasharray:8 9}
+      .time{stroke:#111;stroke-width:2.4;marker-end:url(#arrow)}
+      .guide{stroke:#111;stroke-width:2;stroke-dasharray:8 8}
+      .window{fill:#f7fbff;stroke:#111;stroke-width:4}
+      .windowTop{stroke:#000;stroke-width:8;stroke-linecap:round}
+      .windowFlow{fill:none;stroke:#8a949e;stroke-width:2;stroke-dasharray:8 8;opacity:.9}
+      .slice{fill:#eef5ff;stroke:#4a6fa8;stroke-width:1.6}
+      .sliceFlow{fill:none;stroke:#0b3f91;stroke-width:3;stroke-dasharray:8 6}
+      .boxRecord{fill:#fff9ed;stroke:#8c6f20;stroke-width:1.8}
+      .boxLaw{fill:#f5fbef;stroke:#5f7f3a;stroke-width:1.8}
+      .arrowLine{stroke:#111;stroke-width:4;marker-end:url(#arrow)}
+      .labelMain{font-size:30px;font-weight:700;fill:#000;text-anchor:middle}
+      .labelSub{font-size:21px;fill:#000;text-anchor:middle}
+      .caption{font-size:24px;fill:#000;text-anchor:middle}
+      .captionBox{fill:#fff;stroke:#42639d;stroke-width:1.6}
+      .icon{fill:none;stroke:#111;stroke-width:3}
+      .dots{font-size:42px;fill:#000}
+    </style>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="768" y="34" class="title" text-anchor="middle">Fig.4   Flow, Observation, Record, and Law</text>
+  <text x="768" y="76" class="subtitle" text-anchor="middle">Flow (unclosed differences)</text>
+  <text x="768" y="108" class="subtitle" text-anchor="middle">— a continuous generative process along time —</text>
+
+  <!-- Dots left / right -->
+  <text x="25"  y="236" class="dots">…</text>
+  <text x="1480" y="236" class="dots">…</text>
+
+  <!-- Flow wave lines -->
+  <path d="M78 172 C220 110, 300 210, 430 158 S650 110, 780 158 S990 205, 1115 158 S1290 130, 1435 160" class="flow" marker-end="url(#arrow)"/>
+  <path d="M78 215 C220 153, 300 253, 430 201 S650 153, 780 201 S990 248, 1115 201 S1290 173, 1435 203" class="flow" marker-end="url(#arrow)"/>
+  <path d="M78 258 C220 196, 300 296, 430 244 S650 196, 780 244 S990 291, 1115 244 S1290 216, 1435 246" class="flow" marker-end="url(#arrow)"/>
+  <path d="M78 301 C220 239, 300 339, 430 287 S650 239, 780 287 S990 334, 1115 287 S1290 259, 1435 289" class="flow" marker-end="url(#arrow)"/>
+
+  <!-- Time axis -->
+  <line x1="55" y1="376" x2="1425" y2="376" class="time"/>
+  <text x="1453" y="386" font-size="28" font-weight="700" fill="#000">time</text>
+
+  <!-- Guide lines (dashed vertical) -->
+  <line x1="270" y1="318" x2="270" y2="452" class="guide"/>
+  <line x1="585" y1="318" x2="585" y2="452" class="guide"/>
+
+  <!-- Observation window (trapezoid) -->
+  <path d="M270 452 L585 452 L515 692 L340 692 Z" class="window"/>
+  <line x1="270" y1="452" x2="585" y2="452" class="windowTop"/>
+
+  <!-- Flow inside window -->
+  <path d="M302 535 C360 507, 410 555, 470 530 S540 508, 568 527" class="windowFlow"/>
+  <path d="M302 572 C360 544, 410 592, 470 567 S540 545, 560 564" class="windowFlow"/>
+  <path d="M318 607 C360 579, 410 627, 470 602 S545 580, 540 599" class="windowFlow"/>
+  <path d="M320 636 C360 608, 410 656, 470 631 S545 609, 535 638" class="windowFlow"/>
+
+  <!-- Observation label -->
+  <text x="428" y="738" class="labelMain">Observation</text>
+  <text x="428" y="768" class="labelSub">(a window capturing</text>
+  <text x="428" y="793" class="labelSub">part of the flow)</text>
+
+  <!-- Arrow: Observation → Slice -->
+  <line x1="610" y1="568" x2="675" y2="568" class="arrowLine"/>
+
+  <!-- Slice box -->
+  <rect x="700" y="446" width="130" height="250" class="slice"/>
+  <path d="M710 515 C740 495, 775 535, 820 512" class="sliceFlow"/>
+  <path d="M710 560 C740 540, 775 580, 820 557" class="sliceFlow"/>
+  <path d="M710 605 C740 585, 775 625, 820 602" class="sliceFlow"/>
+  <path d="M710 650 C740 630, 775 670, 820 647" class="sliceFlow"/>
+
+  <!-- Cross-section label -->
+  <text x="765" y="738" class="labelMain">Cross-section</text>
+  <text x="765" y="768" class="labelSub">a slice of the flow</text>
+  <text x="765" y="793" class="labelSub">cut from the window</text>
+
+  <!-- Arrow: Slice → Record -->
+  <line x1="860" y1="568" x2="925" y2="568" class="arrowLine"/>
+
+  <!-- Record box -->
+  <rect x="950" y="463" width="200" height="235" rx="12" class="boxRecord"/>
+  <!-- image icon -->
+  <rect x="988" y="500" width="116" height="95" class="icon"/>
+  <rect x="1000" y="512" width="92"  height="72" class="icon"/>
+  <path d="M1000 580 L1038 540 L1065 568 L1088 545 L1092 582" class="icon"/>
+  <circle cx="1072" cy="530" r="10" class="icon"/>
+
+  <!-- Record label -->
+  <text x="1050" y="648" class="labelMain">Record</text>
+  <text x="1050" y="678" class="labelSub">(still image)</text>
+  <text x="1050" y="730" class="labelSub">fix and preserve</text>
+  <text x="1050" y="755" class="labelSub">the cross-section</text>
+  <text x="1050" y="780" class="labelSub">as a snapshot</text>
+
+  <!-- Arrow: Record → Law -->
+  <line x1="1185" y1="568" x2="1240" y2="568" class="arrowLine"/>
+
+  <!-- Law box -->
+  <rect x="1265" y="463" width="205" height="235" rx="12" class="boxLaw"/>
+  <!-- scatter plot icon -->
+  <line x1="1295" y1="610" x2="1435" y2="610" class="icon"/>
+  <line x1="1295" y1="610" x2="1295" y2="500" class="icon"/>
+  <circle cx="1318" cy="590" r="4" fill="#000"/>
+  <circle cx="1348" cy="552" r="4" fill="#000"/>
+  <circle cx="1370" cy="570" r="4" fill="#000"/>
+  <circle cx="1392" cy="520" r="4" fill="#000"/>
+  <circle cx="1422" cy="540" r="4" fill="#000"/>
+  <path d="M1310 596 C1345 560, 1375 552, 1432 512" class="icon" stroke-dasharray="8 6"/>
+
+  <!-- Law label -->
+  <text x="1368" y="648" class="labelMain">Law</text>
+  <text x="1368" y="678" class="labelSub">(extracting invariants)</text>
+  <text x="1368" y="730" class="labelSub">identify relations</text>
+  <text x="1368" y="755" class="labelSub">recurring across records</text>
+  <text x="1368" y="780" class="labelSub">(invariants)</text>
+  <text x="1368" y="805" class="labelSub">= description of law</text>
+
+  <!-- Caption box -->
+  <rect x="130" y="878" width="1276" height="118" rx="10" class="captionBox"/>
+  <text x="768" y="922" class="caption">The flow is momentarily cut out by an observation window, captured as a cross-section,</text>
+  <text x="768" y="952" class="caption">and fixed as a record. From the collective set of records, invariants (laws) are extracted.</text>
+</svg>

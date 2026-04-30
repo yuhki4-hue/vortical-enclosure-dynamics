@@ -1,0 +1,96 @@
+\section{Flow and Vorticity}
+\label{sec:flow}
+
+\subsection{Log-Flow}
+
+The antisymmetric component of $C_{ij}$ defines the \textbf{log-flow}:
+
+\begin{equation}
+  J_{ij} = C_{ij} - C_{ji} = 2A_{ij}.
+  \label{eq:flow}
+\end{equation}
+
+$J_{ij}$ represents the net directional transfer of causal influence.
+It satisfies $J_{ij} = -J_{ji}$ by construction.
+Motion arises from asymmetry: where $J_{ij} = 0$, no net transfer occurs;
+where $J_{ij} \neq 0$, directed propagation occurs.
+
+\subsection{The Continuity Equation}
+
+In the coarse-grained limit, $J_{ij}$ becomes a vector field $\mathbf{J}(x)$.
+The evolution of log density $\rho$ satisfies:
+
+\begin{keybox}
+\begin{equation}
+  \partial_t\rho + \nabla \cdot \mathbf{J} = \sigma,
+  \label{eq:continuity}
+\end{equation}
+\end{keybox}
+
+\noindent
+where $\sigma \geq 0$ is the \textbf{log-generation rate}.
+$\sigma$ is not an external source term.
+It is the rate at which the system fails to remain closed:
+wherever structure is incomplete, new logs are generated.
+
+This is not a conservation law. The condition $\sigma = 0$
+holds only in the classical fixed-point regime (\cref{sec:phase}).
+Conservation is a property of a phase, not a fundamental principle.
+
+\begin{keybox}
+\begin{equation}
+  \sigma > 0
+  \;\Longleftrightarrow\;
+  \text{time is being generated.}
+  \label{eq:sigma_time}
+\end{equation}
+\end{keybox}
+
+\subsection{Helmholtz Decomposition}
+
+The flow field admits a Helmholtz decomposition:
+
+\[
+  \mathbf{J} = \mathbf{J}_{\text{rot}} + \mathbf{J}_{\text{pot}},
+\]
+
+where $\nabla \cdot \mathbf{J}_{\text{rot}} = 0$
+and $\nabla \times \mathbf{J}_{\text{pot}} = 0$.
+The solenoidal component $\mathbf{J}_{\text{rot}}$ carries vorticity
+and is responsible for the formation of stable structure.
+The irrotational component $\mathbf{J}_{\text{pot}}$ carries the divergence
+associated with the log-generation rate $\sigma$.
+
+\subsection{Vorticity and Closure Density}
+
+Define the \textbf{vorticity} of the log-flow:
+
+\begin{equation}
+  \omega = \nabla \times \mathbf{J}.
+  \label{eq:vorticity}
+\end{equation}
+
+Vorticity measures local circulation.
+When $\omega = 0$, flows are irrotational and no stable structures form.
+When $\omega \neq 0$, circulation exists and flow lines can close on themselves.
+
+The local intensity of vortical structure defines the \textbf{closure density}:
+
+\begin{equation}
+  L \sim |\omega|.
+  \label{eq:closure_density}
+\end{equation}
+
+$L$ is the source of both particle structure (Vol.~2) and
+gravitational effects (Vol.~3).
+
+\subsection{The Generative Chain}
+
+The complete chain from asymmetry to structure is:
+
+\[
+  C_{ij}
+  \;\xrightarrow{J = C - C^T}\; J
+  \;\xrightarrow{\omega = \nabla\times J}\; \omega
+  \;\xrightarrow{L \sim |\omega|}\; L.
+\]

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Vortical Enclosure Dynamics"
+message: "If you use or discuss this framework before arXiv identifiers are available, please cite this repository."
+type: dataset
+authors:
+  - family-names: "Endoh"
+    given-names: "Yuhki"
+license: "CC-BY-4.0"

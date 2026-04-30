@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 395" width="900" height="395" font-family="Georgia, 'Times New Roman', serif">
+
+  <!-- Background -->
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       PANEL 1 — Classical Phase (left)
+       x: 20–310
+       ═══════════════════════════════════════════════════ -->
+
+  <rect x="20" y="20" width="270" height="300" rx="3" fill="#f7f7f7" stroke="#bbb" stroke-width="1.0"/>
+
+  <!-- Stable regular grid -->
+  <g stroke="#ccc" stroke-width="0.6">
+    <line x1="45"  y1="85"  x2="278" y2="85"/>
+    <line x1="45"  y1="125" x2="278" y2="125"/>
+    <line x1="45"  y1="165" x2="278" y2="165"/>
+    <line x1="45"  y1="205" x2="278" y2="205"/>
+    <line x1="45"  y1="245" x2="278" y2="245"/>
+    <line x1="65"  y1="72"  x2="65"  y2="262"/>
+    <line x1="110" y1="72"  x2="110" y2="262"/>
+    <line x1="155" y1="72"  x2="155" y2="262"/>
+    <line x1="200" y1="72"  x2="200" y2="262"/>
+    <line x1="245" y1="72"  x2="245" y2="262"/>
+  </g>
+
+  <!-- Panel title -->
+  <text x="155" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Classical Phase</text>
+  <text x="155" y="61" text-anchor="middle" font-size="10" fill="#777">Exterior&#x2002;(r &gt; r&#x209B;)</text>
+
+  <!-- Properties -->
+  <text x="155" y="288" text-anchor="middle" font-size="10.5" fill="#444" font-style="italic">&#x3C3; &#x2248; 0</text>
+  <text x="155" y="304" text-anchor="middle" font-size="10"   fill="#666">metric stable</text>
+  <text x="155" y="318" text-anchor="middle" font-size="10"   fill="#555">Einstein equation valid</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       ARROW 1→2
+       ═══════════════════════════════════════════════════ -->
+  <line x1="292" y1="170" x2="318" y2="170" stroke="#888" stroke-width="1.3"/>
+  <polygon points="316,167 324,170 316,173" fill="#888"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       PANEL 2 — Transition Region (center, main)
+       x: 325–575
+       ═══════════════════════════════════════════════════ -->
+
+  <rect x="325" y="20" width="250" height="300" rx="3" fill="#f5f0ea" stroke="#a06020" stroke-width="1.4"/>
+
+  <!-- Distorting grid — progressively warped left to right -->
+  <g stroke="#c8a87a" stroke-width="0.65">
+    <!-- Horizontal: increasingly wavy -->
+    <path d="M 348,85  Q 390,82  430,88  Q 470,94  510,84  Q 540,78  560,87" fill="none"/>
+    <path d="M 348,125 Q 388,120 428,130 Q 468,140 510,124 Q 542,114 560,128" fill="none"/>
+    <path d="M 348,165 Q 390,158 430,170 Q 470,182 510,162 Q 543,150 560,168" fill="none"/>
+    <path d="M 348,205 Q 390,196 430,210 Q 470,222 510,202 Q 543,190 560,208" fill="none"/>
+    <path d="M 348,245 Q 390,237 430,250 Q 470,262 510,242 Q 543,230 560,248" fill="none"/>
+    <!-- Vertical: slightly tilted -->
+    <line x1="373" y1="73" x2="370" y2="258"/>
+    <line x1="415" y1="73" x2="418" y2="258"/>
+    <line x1="458" y1="73" x2="455" y2="258"/>
+    <line x1="500" y1="73" x2="504" y2="258"/>
+    <line x1="543" y1="73" x2="548" y2="258"/>
+  </g>
+
+  <!-- σ rising indicator: arrow pointing up-right -->
+  <line x1="380" y1="185" x2="530" y2="148" stroke="#a06020" stroke-width="1.3" stroke-dasharray="4,2"/>
+  <polygon points="524,144 534,146 528,155" fill="#a06020"/>
+  <text x="440" y="178" text-anchor="middle" font-size="9.5" fill="#a06020" font-style="italic">&#x3C3; increasing</text>
+
+  <!-- r_s marker -->
+  <text x="560" y="36" text-anchor="middle" font-size="10" fill="#7a4a10" font-style="italic" font-weight="bold">r = r&#x209B;</text>
+  <line x1="560" y1="40" x2="560" y2="312" stroke="#a06020" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+  <!-- Panel title -->
+  <text x="450" y="46" text-anchor="middle" font-size="12" fill="#7a4a10" font-weight="bold">Gravity Condensation Phase</text>
+  <text x="450" y="61" text-anchor="middle" font-size="10" fill="#a06020">r &#x2192; r&#x209B;</text>
+
+  <!-- Properties -->
+  <text x="450" y="288" text-anchor="middle" font-size="10.5" fill="#a06020" font-style="italic">&#x3C3; rising</text>
+  <text x="450" y="304" text-anchor="middle" font-size="10"   fill="#7a4a10">closure condensing</text>
+  <text x="450" y="318" text-anchor="middle" font-size="10"   fill="#7a4a10">path cost diverges</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       ARROW 2→3
+       ═══════════════════════════════════════════════════ -->
+  <line x1="577" y1="170" x2="603" y2="170" stroke="#888" stroke-width="1.3"/>
+  <polygon points="601,167 609,170 601,173" fill="#888"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       PANEL 3 — Non-Equilibrium Phase (right)
+       x: 610–880
+       ═══════════════════════════════════════════════════ -->
+
+  <rect x="610" y="20" width="270" height="300" rx="3" fill="#f0ebe4" stroke="#bbb" stroke-width="1.0"/>
+
+  <!-- Irregular / generative grid — warped toward vortex (745,165) -->
+  <g stroke="#c0a080" stroke-width="0.6">
+    <path d="M 635,88  Q 680,84  720,96  Q 745,108 768,96  Q 810,84  855,88" fill="none"/>
+    <path d="M 635,130 Q 678,124 718,140 Q 745,152 772,140 Q 812,124 855,130" fill="none"/>
+    <path d="M 635,172 Q 676,164 716,176 Q 745,186 774,176 Q 814,164 855,172" fill="none"/>
+    <path d="M 635,214 Q 678,208 718,198 Q 745,190 772,198 Q 812,208 855,214" fill="none"/>
+    <path d="M 635,256 Q 680,252 720,242 Q 745,234 768,242 Q 810,252 855,256" fill="none"/>
+    <!-- Vertical lines: pulled inward toward x=745 -->
+    <path d="M 660,74  Q 668,120 700,148 Q 720,162 658,262" fill="none"/>
+    <path d="M 703,74  Q 710,118 722,148 Q 735,162 703,262" fill="none"/>
+    <path d="M 745,74  Q 745,118 745,148 Q 745,162 745,262" fill="none"/>
+    <path d="M 788,74  Q 780,118 768,148 Q 755,162 788,262" fill="none"/>
+    <path d="M 831,74  Q 822,120 790,148 Q 770,162 832,262" fill="none"/>
+  </g>
+
+  <!-- Vortex / generation indicator -->
+  <circle cx="745" cy="165" r="24" fill="none" stroke="#888" stroke-width="1.1" stroke-dasharray="3,2"/>
+  <path d="M 745,141 A 24,24 0 1,1 721,165" fill="none" stroke="#777" stroke-width="1.4"/>
+  <polygon points="718,162 721,173 729,165" fill="#777"/>
+  <text x="745" y="170" text-anchor="middle" font-size="9" fill="#666" font-style="italic">&#x3C3; &gt; 0</text>
+
+  <!-- Panel title -->
+  <text x="745" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Non-Equilibrium Phase</text>
+  <text x="745" y="61" text-anchor="middle" font-size="10" fill="#777">Interior&#x2002;(r &lt; r&#x209B;)</text>
+
+  <!-- Properties -->
+  <text x="745" y="288" text-anchor="middle" font-size="10.5" fill="#555" font-style="italic">&#x3C3; &gt; 0</text>
+  <text x="745" y="304" text-anchor="middle" font-size="10"   fill="#666">generation active</text>
+  <text x="745" y="318" text-anchor="middle" font-size="10"   fill="#555">no singularity</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       BOTTOM NOTE — cosmology connection
+       ═══════════════════════════════════════════════════ -->
+  <text x="745" y="336" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">same phase as early universe</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       FIGURE LABEL
+       ═══════════════════════════════════════════════════ -->
+  <line x1="40" y1="348" x2="860" y2="348" stroke="#e0e0e0" stroke-width="0.7"/>
+  <text x="450" y="360" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Figure 2. Phase transition across the horizon.</text>
+  <text x="450" y="375" text-anchor="middle" font-size="10" fill="#888" font-style="italic">The classical closure phase (&#x3C3;&#x2248;0) becomes unstable near the horizon, leading to a non-equilibrium phase (&#x3C3;&gt;0) inside.</text>
+
+</svg>

@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\geometry{
+  top=25mm, bottom=25mm,
+  left=28mm, right=28mm
+}
+
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+% ── Theorem environments ───────────────────────────────────────────────
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+% ── Title ─────────────────────────────────────────────────────────────
+\title{
+  \large Vortical Enclosure Dynamics, Vol.\ 3\\[0.4em]
+  \LARGE \textbf{From Closure Density to Gravity and Cosmology}\\[0.6em]
+  \normalsize Independent Research --- 2026
+}
+
+\author{Yuhki Endoh}
+
+\date{April 30, 2026}
+
+% ══════════════════════════════════════════════════════════════════════
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ── Main body ─────────────────────────────────────────────────────────
+\input{sections/introduction}
+\input{sections/gravity_distance}
+\input{sections/closure_density}
+\input{sections/einstein_equation}
+\input{sections/schwarzschild}
+\input{sections/black_hole}
+\input{sections/cosmology}
+\input{sections/synthesis}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% ── References ────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+% ── Appendix ──────────────────────────────────────────────────────────
+\appendix
+\input{sections/appendix_notation}
+
+\end{document}

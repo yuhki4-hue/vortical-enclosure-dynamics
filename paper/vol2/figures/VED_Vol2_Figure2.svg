@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Georgia, 'Times New Roman', serif">
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       COLUMN HEADERS
+       ═══════════════════════════════════════════════════ -->
+  <text x="120" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Closure Regime</text>
+  <text x="440" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Invariant Transformation</text>
+  <text x="770" y="30" text-anchor="middle" font-size="11" fill="#888" letter-spacing="0.8">Symmetry</text>
+
+  <line x1="40"  y1="38" x2="220" y2="38" stroke="#eee" stroke-width="0.7"/>
+  <line x1="290" y1="38" x2="590" y2="38" stroke="#eee" stroke-width="0.7"/>
+  <line x1="660" y1="38" x2="870" y2="38" stroke="#eee" stroke-width="0.7"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 1 — Non-degenerate / unitary mixing / SU(3)
+       y-center: 105
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Geometry -->
+  <polygon points="120,62 80,138 160,138" fill="#dde8f5" stroke="none"/>
+  <line x1="120" y1="62"  x2="80"  y2="138" stroke="#3a6ea5" stroke-width="1.5"/>
+  <line x1="120" y1="62"  x2="160" y2="138" stroke="#3a6ea5" stroke-width="1.5"/>
+  <line x1="80"  y1="138" x2="160" y2="138" stroke="#3a6ea5" stroke-width="1.5"/>
+  <circle cx="120" cy="62"  r="3.5" fill="#2c5282"/>
+  <circle cx="80"  cy="138" r="3.5" fill="#2c5282"/>
+  <circle cx="160" cy="138" r="3.5" fill="#2c5282"/>
+  <text x="120" y="158" text-anchor="middle" font-size="10.5" fill="#2c5282" font-weight="bold">Non-degenerate</text>
+  <text x="120" y="173" text-anchor="middle" font-size="10"   fill="#666">3 d.o.f.</text>
+
+  <!-- Arrow -->
+  <line x1="196" y1="105" x2="288" y2="105" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="286,102 294,105 286,108" fill="#ccc"/>
+
+  <!-- Transformation -->
+  <text x="440" y="88"  text-anchor="middle" font-size="11.5" fill="#2c5282" font-style="italic">&#x3C8; &#x2192; U&#x3C8;</text>
+  <text x="440" y="107" text-anchor="middle" font-size="10.5" fill="#3a6ea5" font-style="italic">U&#x2020;U = 1,  det U = 1</text>
+  <text x="440" y="126" text-anchor="middle" font-size="10"   fill="#888">preserves inner products</text>
+  <text x="440" y="141" text-anchor="middle" font-size="10"   fill="#888">preserves closure condition</text>
+
+  <!-- Arrow -->
+  <line x1="592" y1="105" x2="648" y2="105" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="646,102 654,105 646,108" fill="#ccc"/>
+
+  <!-- Symmetry -->
+  <text x="770" y="97"  text-anchor="middle" font-size="22" fill="#2c5282" font-weight="bold" font-style="italic">SU(3)</text>
+  <text x="770" y="118" text-anchor="middle" font-size="10" fill="#888">non-degenerate closure</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 2 — Degenerate / two-state mixing / SU(2)
+       y-center: 236
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Geometry -->
+  <polygon points="120,244 80,248 160,248" fill="#f5e8d0" stroke="none"/>
+  <line x1="120" y1="244" x2="80"  y2="248" stroke="#a06020" stroke-width="1.5"/>
+  <line x1="120" y1="244" x2="160" y2="248" stroke="#a06020" stroke-width="1.5"/>
+  <line x1="80"  y1="248" x2="160" y2="248" stroke="#a06020" stroke-width="1.5"/>
+  <circle cx="120" cy="244" r="3.5" fill="#a06020"/>
+  <circle cx="80"  cy="248" r="3.5" fill="#a06020"/>
+  <circle cx="160" cy="248" r="3.5" fill="#a06020"/>
+  <text x="120" y="268" text-anchor="middle" font-size="10.5" fill="#a06020" font-weight="bold">Degenerate</text>
+  <text x="120" y="283" text-anchor="middle" font-size="10"   fill="#666">2 d.o.f.</text>
+
+  <!-- Arrow -->
+  <line x1="196" y1="236" x2="288" y2="236" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="286,233 294,236 286,239" fill="#ccc"/>
+
+  <!-- Transformation -->
+  <!-- Matrix notation: (|L>, |R>)^T → U (...) -->
+  <text x="440" y="220" text-anchor="middle" font-size="11" fill="#a06020" font-style="italic">(|L&#x27E9;, |R&#x27E9;)&#x1D40;  &#x2192;  U (|L&#x27E9;, |R&#x27E9;)&#x1D40;</text>
+  <text x="440" y="245" text-anchor="middle" font-size="10" fill="#888">two-state mixing</text>
+  <text x="440" y="260" text-anchor="middle" font-size="10" fill="#888">reduced closure preserved</text>
+
+  <!-- Arrow -->
+  <line x1="592" y1="236" x2="648" y2="236" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="646,233 654,236 646,239" fill="#ccc"/>
+
+  <!-- Symmetry -->
+  <text x="770" y="228" text-anchor="middle" font-size="22" fill="#a06020" font-weight="bold" font-style="italic">SU(2)</text>
+  <text x="770" y="249" text-anchor="middle" font-size="10" fill="#888">degenerate closure</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       ROW 3 — Global phase / phase invariance / U(1)
+       y-center: 345
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Geometry: small vector with phase arc -->
+  <!-- Central dot -->
+  <circle cx="120" cy="345" r="3.5" fill="#888"/>
+  <!-- Three short vectors from center at 0°, 120°, 240° -->
+  <line x1="120" y1="345" x2="152" y2="345" stroke="#999" stroke-width="1.2"/>
+  <polygon points="149,342 156,345 149,348" fill="#999"/>
+  <line x1="120" y1="345" x2="104" y2="317" stroke="#999" stroke-width="1.2"/>
+  <polygon points="103,321 101,313 109,318" fill="#999"/>
+  <line x1="120" y1="345" x2="104" y2="373" stroke="#999" stroke-width="1.2"/>
+  <polygon points="109,372 101,377 103,369" fill="#999"/>
+  <!-- Phase arc -->
+  <path d="M 148,331 A 22,22 0 0,1 148,359" fill="none" stroke="#aaa" stroke-width="1.0" stroke-dasharray="3,2"/>
+  <text x="158" y="350" font-size="9.5" fill="#aaa" font-style="italic">&#x3B8;</text>
+
+  <text x="120" y="393" text-anchor="middle" font-size="10.5" fill="#888" font-weight="bold">Global phase</text>
+  <text x="120" y="406" text-anchor="middle" font-size="10"   fill="#666">redundancy</text>
+
+  <!-- Arrow -->
+  <line x1="196" y1="345" x2="288" y2="345" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="286,342 294,345 286,348" fill="#ccc"/>
+
+  <!-- Transformation -->
+  <text x="440" y="333" text-anchor="middle" font-size="11.5" fill="#666" font-style="italic">e&#x1D456; &#x2192; exp(i&#x3B8;) e&#x1D456;</text>
+  <text x="440" y="355" text-anchor="middle" font-size="10"   fill="#888">global phase shift</text>
+  <text x="440" y="370" text-anchor="middle" font-size="10"   fill="#888">relative structure unchanged</text>
+
+  <!-- Arrow -->
+  <line x1="592" y1="345" x2="648" y2="345" stroke="#ccc" stroke-width="1.1"/>
+  <polygon points="646,342 654,345 646,348" fill="#ccc"/>
+
+  <!-- Symmetry -->
+  <text x="770" y="337" text-anchor="middle" font-size="22" fill="#777" font-weight="bold" font-style="italic">U(1)</text>
+  <text x="770" y="358" text-anchor="middle" font-size="10" fill="#888">phase invariance</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       FIGURE LABEL
+       ═══════════════════════════════════════════════════ -->
+  <line x1="40" y1="408" x2="860" y2="408" stroke="#e0e0e0" stroke-width="0.7"/>
+</svg>

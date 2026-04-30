@@ -1,0 +1,96 @@
+\section{Distance and the Emergence of Space}
+\label{sec:space}
+
+\subsection{Decomposition of $C_{ij}$}
+
+The causal log matrix is generically asymmetric.
+We decompose it into symmetric and antisymmetric parts:
+
+\begin{equation}
+  S_{ij} = \tfrac{1}{2}(C_{ij} + C_{ji}),
+  \qquad
+  A_{ij} = \tfrac{1}{2}(C_{ij} - C_{ji}).
+  \label{eq:decomp}
+\end{equation}
+
+$S_{ij}$ encodes mutual connectivity (the spatial component);
+$A_{ij}$ encodes directed flow (the temporal and causal component).
+Time and space are not independently postulated;
+they arise as two aspects of the same object $C_{ij}$.
+
+\subsection{Spatial Distance}
+
+For a path $\gamma: i \to j$ through the network,
+define its \textbf{propagation strength}:
+
+\[
+  \tilde{S}_{ij}
+  = \max_{\gamma: i \to j} \prod_{(ab)\in\gamma} S_{ab}.
+\]
+
+The \textbf{distance} between nodes is:
+
+\begin{keybox}
+\begin{equation}
+  d_{ij} = -\log\,\tilde{S}_{ij}
+  = \min_{\gamma: i \to j} \sum_{(ab)\in\gamma} (-\log S_{ab}).
+  \label{eq:distance}
+\end{equation}
+\end{keybox}
+
+\noindent
+This is a shortest-path problem on a weighted network.
+The logarithm converts products to sums and ensures that distance accumulates
+additively along paths.
+
+\begin{proposition}
+$d_{ij}$ satisfies non-negativity and the triangle inequality,
+inherited from the path structure of the network.
+\end{proposition}
+
+\begin{keybox}
+\textit{Distance is resistance to influence propagation.
+Space is not a background arena; it is a measure of how difficult
+information finds it to propagate between nodes.}
+\end{keybox}
+
+\subsection{Coarse-Graining and the Metric Tensor}
+
+In a coarse-grained limit, grouping nodes into spatial blocks and averaging
+produces a smooth effective distance:
+
+\[
+  d(x, y)^2 \approx g_{\mu\nu}(x)\,(x^\mu - y^\mu)(x^\nu - y^\nu).
+\]
+
+\begin{keybox}
+\begin{equation}
+  g_{\mu\nu} = \text{effective description of } d_{ij}
+  \text{ under coarse-graining.}
+  \label{eq:metric}
+\end{equation}
+\end{keybox}
+
+\noindent
+The metric tensor $g_{\mu\nu}$ is not a fundamental field.
+It is the coarse-grained approximation of the log-distance structure.
+No coordinate system is assumed; coordinates label coarse-grained blocks.
+
+\subsection{Time and Space Unified}
+
+The two emergent structures can be summarized as:
+
+\begin{keybox}
+\begin{align}
+  \frac{d\tau_i}{dt} &= \rho_i
+  \quad &&\text{(time: quantity of logs)}
+  \label{eq:time_summary}\\[4pt]
+  d_{ij} &= -\log\,\tilde{S}_{ij}
+  \quad &&\text{(space: structure of logs)}
+  \label{eq:space_summary}
+\end{align}
+\end{keybox}
+
+\noindent
+Time and space originate from different aspects of the same
+underlying object $C_{ij}$.

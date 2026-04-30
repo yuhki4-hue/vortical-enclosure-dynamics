@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="920" height="620" font-family="Georgia, serif">
+
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#777"/>
+    </marker>
+    <marker id="arr-light" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#bbb"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="620" fill="#fafaf8"/>
+
+  <!-- Title + axiom -->
+  <text x="460" y="34" text-anchor="middle" font-size="14.5" fill="#111" letter-spacing="2" font-style="italic">Vortical Enclosure Dynamics — Generative Chain</text>
+  <text x="460" y="52" text-anchor="middle" font-size="9.5" fill="#999" font-style="italic">axiom: 差がある (there is difference)</text>
+
+  <!-- ===== C box ===== -->
+  <rect x="28" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
+  <text x="84" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">C</text>
+  <text x="84" y="115" text-anchor="middle" font-size="9" fill="#555">causal log</text>
+  <circle cx="55" cy="138" r="3" fill="#555"/>
+  <circle cx="76" cy="131" r="3" fill="#555"/>
+  <circle cx="100" cy="138" r="3" fill="#555"/>
+  <circle cx="66" cy="152" r="3" fill="#555"/>
+  <circle cx="91" cy="152" r="3" fill="#555"/>
+  <line x1="55" y1="138" x2="76" y2="131" stroke="#777" stroke-width="1"/>
+  <line x1="76" y1="131" x2="100" y2="138" stroke="#777" stroke-width="1"/>
+  <line x1="55" y1="138" x2="66" y2="152" stroke="#777" stroke-width="1"/>
+  <line x1="100" y1="138" x2="91" y2="152" stroke="#777" stroke-width="1"/>
+  <line x1="66" y1="152" x2="91" y2="152" stroke="#777" stroke-width="1"/>
+  <line x1="76" y1="131" x2="91" y2="152" stroke="#bbb" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+  <!-- C→J arrow: label BELOW the arrow, centered between boxes -->
+  <line x1="142" y1="118" x2="166" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="154" y="134" text-anchor="middle" font-size="8" fill="#888">asym.</text>
+
+  <!-- ===== J box ===== -->
+  <rect x="168" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
+  <text x="224" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">J</text>
+  <text x="224" y="115" text-anchor="middle" font-size="9" fill="#555">log-flow</text>
+  <line x1="183" y1="132" x2="252" y2="132" stroke="#777" stroke-width="1.1"/>
+  <line x1="183" y1="143" x2="252" y2="143" stroke="#777" stroke-width="1.1"/>
+  <line x1="183" y1="154" x2="252" y2="154" stroke="#777" stroke-width="1.1"/>
+  <polygon points="250,128 259,132 250,136" fill="#777"/>
+  <polygon points="250,139 259,143 250,147" fill="#777"/>
+  <polygon points="250,150 259,154 250,158" fill="#777"/>
+
+  <!-- J→ω arrow: label BELOW -->
+  <line x1="282" y1="118" x2="306" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="294" y="134" text-anchor="middle" font-size="8" fill="#888">curl</text>
+
+  <!-- ===== ω box ===== -->
+  <rect x="308" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
+  <text x="364" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">ω</text>
+  <text x="364" y="115" text-anchor="middle" font-size="9" fill="#555">vorticity</text>
+  <path d="M370,128 a16,16 0 1,1 -16,16" fill="none" stroke="#777" stroke-width="1.3"/>
+  <path d="M348,148 l6,-8 l6,8" fill="none" stroke="#777" stroke-width="1.3"/>
+
+  <!-- ω→L arrow: label BELOW -->
+  <line x1="422" y1="118" x2="446" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="434" y="134" text-anchor="middle" font-size="8" fill="#888">density</text>
+
+  <!-- ===== L box ===== -->
+  <rect x="448" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
+  <text x="504" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">L</text>
+  <text x="504" y="115" text-anchor="middle" font-size="9" fill="#555">closure density</text>
+  <polygon points="476,160 492,132 508,160" fill="none" stroke="#777" stroke-width="1.2"/>
+  <polygon points="492,160 508,132 524,160" fill="none" stroke="#777" stroke-width="1.2"/>
+  <polygon points="484,146 500,132 516,146" fill="#ddd" stroke="#aaa" stroke-width="0.9"/>
+
+  <!-- L→g arrow: label BELOW -->
+  <line x1="562" y1="118" x2="624" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="593" y="134" text-anchor="middle" font-size="8" fill="#888">coarse-grain</text>
+
+  <!-- ===== g box ===== -->
+  <rect x="626" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
+  <text x="682" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">g</text>
+  <text x="682" y="115" text-anchor="middle" font-size="9" fill="#555">metric / geometry</text>
+  <path d="M643,132 Q682,127 721,132" fill="none" stroke="#888" stroke-width="1"/>
+  <path d="M643,144 Q682,152 721,144" fill="none" stroke="#888" stroke-width="1"/>
+  <path d="M643,156 Q682,166 721,156" fill="none" stroke="#888" stroke-width="1"/>
+  <path d="M659,127 Q655,146 659,161" fill="none" stroke="#bbb" stroke-width="0.9"/>
+  <path d="M682,126 Q676,146 682,162" fill="none" stroke="#bbb" stroke-width="0.9"/>
+  <path d="M705,127 Q700,146 705,161" fill="none" stroke="#bbb" stroke-width="0.9"/>
+
+  <!-- g→BH arrow -->
+
+  <!-- g→BH diagonal arrow -->
+  <line x1="738" y1="166" x2="760" y2="258" stroke="#ccc" stroke-width="1.1" stroke-dasharray="4,3" marker-end="url(#arr-light)"/>
+  <text x="762" y="216" text-anchor="start" font-size="8" fill="#bbb">breakdown</text>
+  <!-- ===== EQUATION ROW ===== -->
+  <rect x="158" y="178" width="604" height="20" rx="3" fill="#efefeb"/>
+  <text x="460" y="192" text-anchor="middle" font-size="11" fill="#444" font-style="italic">C = 1 − exp(−λρH),   ρ = Σ C,   dτ/dt = ρ</text>
+
+  <!-- ===== DE-EMPHASIZED EXTENSIONS BELOW THE MAIN CHAIN ===== -->
+  <g opacity="0.18">
+  <!-- ===== BRANCH ARROWS down ===== -->
+  <!-- L → Particles (diagonal) -->
+  <line x1="504" y1="166" x2="504" y2="208" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <line x1="504" y1="208" x2="248" y2="256" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-gray)"/>
+  <text x="340" y="228" text-anchor="middle" font-size="8" fill="#aaa">closure → particle</text>
+
+  <!-- g → Gravity -->
+  <line x1="682" y1="166" x2="682" y2="256" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-gray)"/>
+  <text x="668" y="212" text-anchor="end" font-size="8" fill="#aaa">fixed-point eq.</text>
+
+  <!-- ===== PARTICLES box ===== -->
+  <rect x="78" y="258" width="174" height="132" rx="4" fill="#fafaf8" stroke="#444" stroke-width="1.2"/>
+  <text x="165" y="282" text-anchor="middle" font-size="12.5" fill="#111" font-weight="bold" letter-spacing="1">PARTICLES</text>
+  <text x="165" y="298" text-anchor="middle" font-size="8.5" fill="#666">triangular closure attractors</text>
+  <polygon points="128,352 165,312 202,352" fill="none" stroke="#666" stroke-width="1.5"/>
+  <text x="166" y="344" text-anchor="middle" font-size="8.5" fill="#aaa" font-style="italic">m ∝ 1/Δ²</text>
+  <text x="112" y="366" text-anchor="middle" font-size="8" fill="#888">SU(3)</text>
+  <text x="165" y="374" text-anchor="middle" font-size="8" fill="#888">SU(2)</text>
+  <text x="218" y="366" text-anchor="middle" font-size="8" fill="#888">U(1)</text>
+
+  <!-- ===== GRAVITY box ===== -->
+  <rect x="556" y="258" width="174" height="132" rx="4" fill="#fafaf8" stroke="#444" stroke-width="1.2"/>
+  <text x="643" y="282" text-anchor="middle" font-size="12.5" fill="#111" font-weight="bold" letter-spacing="1">GRAVITY</text>
+  <text x="643" y="298" text-anchor="middle" font-size="8.5" fill="#666">vorticity-driven geometry</text>
+  <path d="M574,324 Q643,314 712,324" fill="none" stroke="#888" stroke-width="1.1"/>
+  <path d="M574,340 Q643,356 712,340" fill="none" stroke="#888" stroke-width="1.1"/>
+  <path d="M574,356 Q643,376 712,356" fill="none" stroke="#888" stroke-width="1.1"/>
+  <text x="643" y="374" text-anchor="middle" font-size="8.5" fill="#aaa" font-style="italic">∇²Ψ ∝ L,   G = f(κ_B, ε, λ)</text>
+
+  <!-- ===== BLACK HOLE box ===== -->
+  <rect x="756" y="258" width="140" height="132" rx="4" fill="#fafaf8" stroke="#ccc" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="826" y="282" text-anchor="middle" font-size="11" fill="#888" font-weight="bold">BLACK HOLE</text>
+  <text x="826" y="298" text-anchor="middle" font-size="8.5" fill="#bbb">fixed-point breakdown</text>
+  <text x="826" y="312" text-anchor="middle" font-size="8.5" fill="#bbb">σ &gt; 0 reignites</text>
+  <text x="826" y="326" text-anchor="middle" font-size="8.5" fill="#bbb">L → L_max (forbidden)</text>
+
+  <!-- Particles + Gravity → Cosmology -->
+  <line x1="252" y1="324" x2="352" y2="458" stroke="#999" stroke-width="1.1" stroke-dasharray="4,3" marker-end="url(#arr-gray)"/>
+  <line x1="556" y1="324" x2="460" y2="458" stroke="#999" stroke-width="1.1" stroke-dasharray="4,3" marker-end="url(#arr-gray)"/>
+
+  <!-- ===== COSMOLOGY box ===== -->
+  <rect x="308" y="460" width="304" height="130" rx="4" fill="#fafaf8" stroke="#333" stroke-width="1.5"/>
+  <text x="460" y="484" text-anchor="middle" font-size="12.5" fill="#111" font-weight="bold" letter-spacing="1">COSMOLOGY</text>
+  <text x="460" y="500" text-anchor="middle" font-size="8.5" fill="#666">sustained log-generation  σ &gt; 0</text>
+  <circle cx="388" cy="526" r="2.5" fill="#777"/>
+  <circle cx="420" cy="519" r="2.5" fill="#777"/>
+  <circle cx="460" cy="516" r="2.5" fill="#777"/>
+  <circle cx="500" cy="519" r="2.5" fill="#777"/>
+  <circle cx="532" cy="526" r="2.5" fill="#777"/>
+  <circle cx="366" cy="542" r="2" fill="#bbb"/>
+  <circle cx="404" cy="536" r="2" fill="#bbb"/>
+  <circle cx="460" cy="534" r="2" fill="#bbb"/>
+  <circle cx="516" cy="536" r="2" fill="#bbb"/>
+  <circle cx="554" cy="542" r="2" fill="#bbb"/>
+  <text x="460" y="574" text-anchor="middle" font-size="8.5" fill="#aaa" font-style="italic">dρ/dτ + 3γρ² = σ(ρ)   ·   BH interior ↔ early universe</text>
+  </g>
+
+</svg>

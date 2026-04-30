@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{braket}
+
+\geometry{
+  top=25mm, bottom=25mm,
+  left=28mm, right=28mm
+}
+
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+% ── Theorem environments ───────────────────────────────────────────────
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+% ── Title ─────────────────────────────────────────────────────────────
+\title{
+  \large Vortical Enclosure Dynamics, Vol.\ 2\\[0.4em]
+  \LARGE \textbf{From Closure Geometry to the Standard Model}\\[0.6em]
+  \normalsize Independent Research --- 2026
+}
+
+\author{Yuhki Endoh}
+
+\date{April 30, 2026}
+
+% ══════════════════════════════════════════════════════════════════════
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ── Main body ─────────────────────────────────────────────────────────
+\input{sections/introduction}
+\input{sections/closure_energy}
+\input{sections/triangular_closure}
+\input{sections/symmetry_geometry}
+\input{sections/particle_classification}
+\input{sections/generation_structure}
+\input{sections/electric_charge}
+\input{sections/weak_interaction}
+\input{sections/higgs_mechanism}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% ── References ────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+% ── Appendix ──────────────────────────────────────────────────────────
+\appendix
+\input{sections/appendix_notation}
+
+\end{document}

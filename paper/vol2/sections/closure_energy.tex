@@ -1,0 +1,108 @@
+\section{Closure Energy and Structural Foundations}
+\label{sec:closure_energy}
+
+\subsection{From Causal Logs to Structure}
+
+Vol.~1 established that the causal log $C_{ij}$ serves as the fundamental
+variable from which both time and space emerge:
+\begin{equation}
+  \frac{d\tau_i}{dt} = \rho_i \qquad \text{(time)},
+\end{equation}
+\begin{equation}
+  d_{ij} = -\log \tilde{S}_{ij} \qquad \text{(space)},
+\end{equation}
+with the decomposition
+\begin{equation}
+  S_{ij} = \tfrac{1}{2}(C_{ij}+C_{ji}), \qquad
+  A_{ij} = \tfrac{1}{2}(C_{ij}-C_{ji}).
+\end{equation}
+Spatial and causal structure are already encoded within the same object.
+The question addressed in this volume is not how structure is generated, but:
+\begin{equation}
+  \boxed{\text{What configurations of this structure can persist?}}
+\end{equation}
+
+\subsection{Minimal Condition for Structural Persistence}
+
+Consider the simplest configurations.
+Two nodes define only a relation (a line); three nodes allow a loop.
+A loop is the minimal condition under which a structure can reference
+itself and maintain internal consistency.
+\begin{equation}
+  \boxed{\text{Closure first becomes possible at three nodes.}}
+\end{equation}
+Two-node systems cannot stabilize independently, as no enclosed relation exists.
+Three-node systems introduce the first possibility of self-sustaining structure.
+
+\subsection{Internal Representation from Logs}
+
+Each node $i$ carries an effective internal vector $\vec{e}_i$,
+defined entirely from $C_{ij}$:
+\begin{equation}
+  \langle \vec{e}_i, \vec{e}_k \rangle
+  = \sum_{j,\ell} A_{ij} A_{k\ell} \cdot S_{ij} S_{k\ell} \cdot \tilde{S}_{j\ell}.
+\end{equation}
+No external embedding space is assumed.
+Direction, distance, and relative orientation arise from internal
+consistency conditions of the log network.
+\begin{equation}
+  \boxed{\text{Geometry is induced from relational structure, not presupposed.}}
+\end{equation}
+
+\subsection{Triangular Closure Measure}
+
+For a triplet $(i,j,k)$, define the triangular closure strength:
+\begin{equation}
+  \phi_{ijk}
+  = \exp\!\left(-\eta\,\bigl|\vec{e}_i+\vec{e}_j+\vec{e}_k\bigr|^2\right)
+  \cdot \frac{1}{2}
+  \left|(\vec{e}_i-\vec{e}_k)\times(\vec{e}_j-\vec{e}_k)\right|.
+\end{equation}
+The first factor measures closure consistency (how close the vector sum is to zero);
+the second measures non-degeneracy (whether the triangle has area).
+Total closure strength over a set $A$:
+\begin{equation}
+  \Phi(A) = \sum_{i<j<k \in A} \phi_{ijk}.
+\end{equation}
+For $n=2$, $\Phi = 0$; area and closure emerge first at $n=3$.
+
+\subsection{Closure Energy Functional}
+
+To determine which structures persist, define the closure energy:
+\begin{equation}
+  \label{eq:closure_energy}
+  \boxed{
+    E(A)
+    = \alpha \left|\sum_{i\in A}\vec{e}_i\right|^2
+    - \beta\,\Phi(A)
+    + \gamma|A|
+    + B(L(A))
+  }
+\end{equation}
+The terms have the following roles:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Term & Interpretation \\
+\midrule
+$\alpha|\sum\vec{e}_i|^2$ & penalty for incomplete closure \\
+$-\beta\,\Phi(A)$ & reward for triangular closure \\
+$\gamma|A|$ & structural cost \\
+$B(L(A))$ & barrier preventing complete closure \\
+\bottomrule
+\end{tabular}
+\end{center}
+The final term encodes the prohibition of perfect closure inherited from Vol.~1.
+
+\subsection{Particles as Stable Configurations}
+
+Structures evolve under this energy functional.
+Stable configurations correspond to local minima:
+\begin{equation}
+  \boxed{\text{A particle corresponds to a local minimum of } E(A).}
+\end{equation}
+Particles appear as persistent configurations of the underlying structure,
+not as fundamental entities assumed from the outset.
+\begin{equation}
+  \boxed{\text{Particles are stable attractors of closure geometry.}}
+\end{equation}

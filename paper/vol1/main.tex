@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+\geometry{margin=1in}
+\setstretch{1.15}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={VED Volume I},
+  pdfauthor={Yuhki Endoh}
+}
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+
+\newenvironment{keybox}
+  {\begin{framed}\noindent}
+  {\end{framed}}
+
+\title{
+  \large Vortical Enclosure Dynamics, Vol.\ 1\\[0.4em]
+  \LARGE \textbf{Foundations}\\[0.6em]
+  \normalsize Independent Research --- 2026
+}
+\author{Yuhki Endoh}
+\date{April 30, 2026}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage
+
+\input{sections/introduction}
+\input{sections/minimal_axiom}
+\input{sections/causal_logs_time}
+\input{sections/space}
+\input{sections/flow_vorticity}
+\input{sections/closure}
+\input{sections/phase_structure}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\appendix
+\input{sections/appendix_notation}
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+
+\end{document}

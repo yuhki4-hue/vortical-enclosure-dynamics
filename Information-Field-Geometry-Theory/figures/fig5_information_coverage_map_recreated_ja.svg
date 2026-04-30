@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" font-family="'Noto Sans CJK JP','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif">
+  <defs>
+    <linearGradient id="infoRegion" x1="0" x2="1">
+      <stop offset="0%" stop-color="#edf5ff"/>
+      <stop offset="100%" stop-color="#dcecff"/>
+    </linearGradient>
+    <linearGradient id="physRegion" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eaf8dc"/>
+      <stop offset="100%" stop-color="#edf9e8"/>
+    </linearGradient>
+    <linearGradient id="barShannon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="35%" stop-color="#b7d3ff"/>
+      <stop offset="80%" stop-color="#2f7cf0"/>
+      <stop offset="100%" stop-color="#2f7cf0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barAfford" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eef9df"/>
+      <stop offset="50%" stop-color="#a8db72"/>
+      <stop offset="100%" stop-color="#63b82f"/>
+    </linearGradient>
+    <linearGradient id="barCommon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ff8c22" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#ff8c22" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#ff8c22" stop-opacity="0.65"/>
+      <stop offset="80%" stop-color="#ff8c22" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff8c22" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barPhysical" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f4d6f4"/>
+      <stop offset="100%" stop-color="#a73cc1"/>
+    </linearGradient>
+    <linearGradient id="barIFGT" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fde7e5"/>
+      <stop offset="100%" stop-color="#ffb9b4"/>
+    </linearGradient>
+    <filter id="commonBlur" x="-15%" y="-80%" width="130%" height="260%">
+      <feGaussianBlur stdDeviation="14 8"/>
+    </filter>
+    <marker id="arrowRight" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#111"/>
+    </marker>
+    <marker id="arrowLeft" markerWidth="14" markerHeight="14" refX="2" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M14,0 L0,7 L14,14 Z" fill="#111"/>
+    </marker>
+    <style>
+      .title{font-size:34px;font-weight:700;fill:#111}
+      .subtitle{font-size:26px;font-weight:500;fill:#111}
+      .regionTitle{font-size:26px;font-weight:700}
+      .axisLabel{font-size:24px;font-weight:700;fill:#111}
+      .small{font-size:18px;fill:#111}
+      .blue{fill:#06459c}
+      .green{fill:#17701e}
+      .orange{fill:#f26310}
+      .purple{fill:#651282}
+      .red{fill:#e00000}
+      .leftLabel{font-size:24px;font-weight:700}
+      .leftSub{font-size:20px;font-weight:700}
+      .desc{font-size:20px;fill:#111}
+      .descSmall{font-size:19px;fill:#111}
+      .formula{font-size:27px;font-weight:700}
+      .formulaSub{font-size:20px;font-weight:600}
+      .caption{font-size:22px;fill:#111}
+    </style>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#ffffff"/>
+
+  <text x="768" y="47" text-anchor="middle" class="title">図5.情報概念の分布と分野ごとのカバレッジ</text>
+  <text x="768" y="94" text-anchor="middle" class="subtitle">— どの分野の「情報」がどの範囲を精緻化しているのか —</text>
+
+  <rect x="82" y="114" width="940" height="58" fill="url(#infoRegion)"/>
+  <rect x="1022" y="114" width="378" height="58" fill="url(#physRegion)"/>
+  <text x="552" y="152" text-anchor="middle" class="regionTitle blue">情報領域（未閉・生成の領域）</text>
+  <text x="1211" y="152" text-anchor="middle" class="regionTitle green">物理領域（構造・拘束の領域）</text>
+
+  <text x="139" y="204" text-anchor="middle" class="small">低い（開いた差分が支配的）</text>
+  <text x="628" y="204" text-anchor="middle" class="small">中間（準閉包：情報が働く領域）</text>
+  <text x="1161" y="204" text-anchor="middle" class="small">高い（構造が支配的）</text>
+
+  <line x1="94" y1="240" x2="1390" y2="240" stroke="#111" stroke-width="4" marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)"/>
+  <text x="100" y="278" text-anchor="middle" class="axisLabel">0</text>
+  <text x="1410" y="252" class="axisLabel">C（閉包度）</text>
+
+  <line x1="113" y1="170" x2="113" y2="281" stroke="#888" stroke-dasharray="4,4"/>
+  <line x1="412" y1="170" x2="412" y2="281" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="612" y1="240" x2="612" y2="282" stroke="#111" stroke-dasharray="7,5" stroke-width="2"/>
+  <line x1="986" y1="170" x2="986" y2="281" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="1368" y1="170" x2="1368" y2="281" stroke="#999" stroke-dasharray="4,4"/>
+
+  <text x="113" y="310" text-anchor="middle" class="formula blue">C ≈ 0</text>
+  <text x="113" y="343" text-anchor="middle" class="formulaSub blue">（差分が開いている）</text>
+  <text x="612" y="310" text-anchor="middle" class="formula blue">C<tspan baseline-shift="sub" font-size="18">mid</tspan></text>
+  <text x="612" y="343" text-anchor="middle" class="formulaSub blue">（準閉包が形成される領域）</text>
+  <text x="986" y="310" text-anchor="middle" class="formula green">C<tspan baseline-shift="sub" font-size="18">high</tspan></text>
+  <text x="986" y="343" text-anchor="middle" class="formulaSub green">（構造が強く拘束された領域）</text>
+  <text x="1368" y="310" text-anchor="middle" class="formula green">C<tspan baseline-shift="sub" font-size="18">max</tspan></text>
+  <text x="1368" y="343" text-anchor="middle" class="formulaSub green">（完全閉包：観測不能）</text>
+
+  <text x="36" y="405" class="leftLabel blue">情報科学（Shannon 系）</text>
+  <text x="54" y="434" class="leftSub blue">（伝送可能な情報）</text>
+  <text x="36" y="498" class="leftLabel green">アフォーダンス（Gibson）</text>
+  <text x="54" y="527" class="leftSub green">（関係の中の情報）</text>
+  <text x="36" y="591" class="leftLabel orange">一般通念の情報</text>
+  <text x="54" y="620" class="leftSub orange">（実感としての情報）</text>
+  <text x="36" y="685" class="leftLabel purple">情報物理（It from Bit）</text>
+  <text x="54" y="714" class="leftSub purple">（観測可能な情報）</text>
+  <text x="36" y="781" class="leftLabel red">IFGT（本理論の対象）</text>
+  <text x="54" y="810" class="leftSub red">（閉じきらない差分の力学）</text>
+
+  <rect x="370" y="378" width="680" height="62" rx="8" fill="url(#barShannon)" stroke="#06459c" stroke-width="2"/>
+  <rect x="320" y="471" width="625" height="62" rx="8" fill="url(#barAfford)" stroke="#17701e" stroke-width="2"/>
+  <ellipse cx="650" cy="602" rx="415" ry="54" fill="url(#barCommon)" filter="url(#commonBlur)" opacity="0.9"/>
+  <ellipse cx="620" cy="596" rx="390" ry="36" fill="#ff8c22" opacity="0.22"/>
+  <ellipse cx="690" cy="610" rx="365" ry="34" fill="#ff8c22" opacity="0.18"/>
+  <rect x="724" y="658" width="385" height="62" rx="8" fill="url(#barPhysical)" stroke="#651282" stroke-width="2"/>
+  <rect x="310" y="752" width="775" height="62" rx="8" fill="url(#barIFGT)" stroke="#e00000" stroke-width="2"/>
+  <text x="698" y="792" text-anchor="middle" class="leftLabel red">全体を統合的に扱う（閉じきらない領域全体）</text>
+
+  <line x1="986" y1="376" x2="986" y2="818" stroke="#999" stroke-dasharray="4,4"/>
+  <line x1="1124" y1="376" x2="1124" y2="818" stroke="#999" stroke-dasharray="4,4"/>
+
+  <text x="1153" y="405" class="desc">主に伝送可能な差分を扱う。</text>
+  <text x="1153" y="436" class="desc">意味や重みは切り捨てる。</text>
+  <text x="1153" y="497" class="desc">主体と環境の関係の中に宿る情報。</text>
+  <text x="1153" y="528" class="desc">重みが変動し、文脈依存で働く。</text>
+  <text x="1153" y="591" class="desc">意味・重み・持続性を含む広い領域。</text>
+  <text x="1153" y="622" class="desc">境界が曖昧で、文脈に依存する。</text>
+  <text x="1153" y="686" class="desc">観測・操作可能な状態としての情報。</text>
+  <text x="1153" y="717" class="desc">エネルギーや物理量と結びつく。</text>
+  <text x="1153" y="781" class="descSmall">差分が部分的に閉じ、準閉包が構造を生み、</text>
+  <text x="1153" y="812" class="descSmall">その内部で新たな差分が生成される力学。</text>
+
+  <rect x="103" y="861" width="1267" height="134" rx="10" fill="#ffffff" stroke="#999" stroke-width="2"/>
+  <text x="170" y="901" class="caption">横軸は閉包度 C を表す。左は開いた差分の領域、右は物理的に拘束された構造の領域である。</text>
+  <text x="170" y="935" class="caption">各分野の「情報」は、この連続体の異なる範囲を精緻化したものであり、いずれも正しいが、見ている範囲が異なる。</text>
+  <text x="170" y="970" class="caption">IFGTは、この全体を「閉じきらない差分の力学」として統合的に記述する試みである。</text>
+</svg>

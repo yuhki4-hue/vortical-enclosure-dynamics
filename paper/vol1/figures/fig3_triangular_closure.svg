@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Georgia, serif">
+
+  <rect width="820" height="480" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" font-size="14" fill="#111" letter-spacing="1.5" font-style="italic">Triangular Closure and the Emergence of the Standard Model</text>
+  <text x="410" y="52" text-anchor="middle" font-size="9.5" fill="#888" font-style="italic">particle = closure attractor   ·   symmetry group = closure geometry</text>
+
+  <!-- ===== COLUMN HEADERS ===== -->
+  <text x="175" y="82" text-anchor="middle" font-size="10" fill="#444" font-weight="bold" letter-spacing="0.5">non-degenerate</text>
+  <text x="420" y="82" text-anchor="middle" font-size="10" fill="#666" font-weight="bold" letter-spacing="0.5">degenerate</text>
+  <text x="640" y="82" text-anchor="middle" font-size="10" fill="#999" font-weight="bold" letter-spacing="0.5">extreme degenerate</text>
+
+  <!-- ===== NON-DEGENERATE TRIANGLE (left) ===== -->
+  <!-- filled triangle -->
+  <polygon points="175,120 90,270 260,270" fill="#e0e0dc" stroke="#333" stroke-width="1.8"/>
+  <!-- nodes -->
+  <circle cx="175" cy="120" r="5" fill="#222"/>
+  <circle cx="90" cy="270" r="5" fill="#222"/>
+  <circle cx="260" cy="270" r="5" fill="#222"/>
+  <!-- phase flux labels on edges -->
+  <text x="104" y="198" text-anchor="middle" font-size="7.5" fill="#777" font-style="italic">phase flux</text>
+  <text x="104" y="208" text-anchor="middle" font-size="7.5" fill="#777" font-style="italic">+2/3, −1/3</text>
+  <!-- label inside -->
+  <text x="175" y="212" text-anchor="middle" font-size="8" fill="#666">closure</text>
+  <text x="175" y="224" text-anchor="middle" font-size="8" fill="#666">attractor</text>
+  <!-- U(1) circle around -->
+  <circle cx="175" cy="215" r="105" fill="none" stroke="#aaa" stroke-width="0.9" stroke-dasharray="5,4"/>
+  <text x="175" y="95" text-anchor="middle" font-size="8" fill="#aaa" font-style="italic">U(1)  global phase</text>
+
+  <!-- annotations below left triangle -->
+  <text x="175" y="332" text-anchor="middle" font-size="10" fill="#222" font-weight="bold">baryon / quark</text>
+  <text x="175" y="347" text-anchor="middle" font-size="9" fill="#444" font-style="italic">SU(3)</text>
+  <text x="175" y="362" text-anchor="middle" font-size="8" fill="#777">3-component phase mixing</text>
+  <text x="175" y="376" text-anchor="middle" font-size="8" fill="#999">Δ small → m large</text>
+
+  <!-- ===== DEGENERATE TRIANGLE (middle) ===== -->
+  <!-- collapsed triangle — narrow -->
+  <polygon points="420,262 370,270 470,270" fill="#eeeeea" stroke="#666" stroke-width="1.4"/>
+  <!-- nodes -->
+  <circle cx="420" cy="262" r="4.5" fill="#555"/>
+  <circle cx="370" cy="270" r="4.5" fill="#555"/>
+  <circle cx="470" cy="270" r="4.5" fill="#555"/>
+  <!-- L/R branch labels -->
+  <text x="352" y="267" text-anchor="middle" font-size="8.5" fill="#777" font-style="italic">|L⟩</text>
+  <text x="490" y="267" text-anchor="middle" font-size="8.5" fill="#777" font-style="italic">|R⟩</text>
+  <!-- label inside -->
+  <text x="420" y="242" text-anchor="middle" font-size="7.5" fill="#999" font-style="italic">mixing of</text>
+  <text x="420" y="253" text-anchor="middle" font-size="7.5" fill="#999" font-style="italic">degenerate branches</text>
+
+  <!-- annotations below middle triangle -->
+  <text x="420" y="332" text-anchor="middle" font-size="10" fill="#444" font-weight="bold">lepton</text>
+  <text x="420" y="347" text-anchor="middle" font-size="9" fill="#666" font-style="italic">SU(2)</text>
+  <text x="420" y="362" text-anchor="middle" font-size="8" fill="#888">2-state L/R mixing</text>
+  <text x="420" y="376" text-anchor="middle" font-size="8" fill="#aaa">Δ large → m small</text>
+
+  <!-- ===== EXTREME DEGENERATE (right) ===== -->
+  <!-- single point -->
+  <circle cx="640" cy="262" r="6" fill="none" stroke="#bbb" stroke-width="1.1" stroke-dasharray="3,3"/>
+  <circle cx="640" cy="262" r="2.5" fill="#bbb"/>
+  <!-- label -->
+  <text x="640" y="294" text-anchor="middle" font-size="8" fill="#aaa">extreme degenerate</text>
+
+  <!-- annotations below right -->
+  <text x="640" y="332" text-anchor="middle" font-size="10" fill="#888" font-weight="bold">neutrino</text>
+  <text x="640" y="347" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">near-zero closure</text>
+  <text x="640" y="362" text-anchor="middle" font-size="8" fill="#bbb">minimal effective closure</text>
+
+  <!-- ===== ARROWS showing degeneration ===== -->
+  <line x1="285" y1="265" x2="338" y2="265" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="336,261 346,265 336,269" fill="#aaa"/>
+  <text x="318" y="257" text-anchor="middle" font-size="7.5" fill="#bbb" font-style="italic">collapse</text>
+
+  <line x1="500" y1="265" x2="580" y2="265" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="578,261 588,265 578,269" fill="#ccc"/>
+  <text x="540" y="257" text-anchor="middle" font-size="7.5" fill="#ccc" font-style="italic">collapse</text>
+
+  <!-- ===== BOTTOM: mass formula ===== -->
+  <rect x="270" y="408" width="280" height="44" rx="3" fill="#efefeb"/>
+  <text x="410" y="426" text-anchor="middle" font-size="11" fill="#333" font-style="italic">m  ∝  1 / Δ²</text>
+  <text x="410" y="443" text-anchor="middle" font-size="8.5" fill="#888" font-style="italic">Δ = L_max − L_k   (barrier distance)</text>
+
+  <!-- ===== GROUP SUMMARY (top right) ===== -->
+  <rect x="680" y="90" width="126" height="72" rx="3" fill="none" stroke="#ccc" stroke-width="0.9" stroke-dasharray="4,3"/>
+  <text x="743" y="108" text-anchor="middle" font-size="8.5" fill="#888" font-weight="bold">gauge groups</text>
+  <text x="743" y="123" text-anchor="middle" font-size="8" fill="#aaa">SU(3) · non-degen.</text>
+  <text x="743" y="136" text-anchor="middle" font-size="8" fill="#aaa">SU(2) · degenerate</text>
+  <text x="743" y="149" text-anchor="middle" font-size="8" fill="#aaa">U(1)  · global phase</text>
+
+</svg>

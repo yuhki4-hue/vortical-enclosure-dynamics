@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+
+%% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+%% Page geometry
+\geometry{
+  top=25mm,
+  bottom=25mm,
+  left=30mm,
+  right=30mm
+}
+
+%% Spacing
+\onehalfspacing
+
+%% Hyperref setup
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!50!black,
+  urlcolor=blue!60!black
+}
+
+%% Custom commands
+\renewcommand{\DH}{\textit{Differential Horizon}}
+\newcommand{\DHP}{\textit{Differential Horizon Principle}}
+\newcommand{\VED}{\textsc{ved}}
+\newcommand{\ungenerated}{\textit{un-generated}}
+\newcommand{\generated}{\textit{generated}}
+\newcommand{\bcontact}{\textit{boundary contact}}
+
+%% Figure path
+\graphicspath{{figures/}}
+
+%%-----------------------------------------------------------
+\begin{document}
+%%-----------------------------------------------------------
+
+\title{
+  \large Vortical Enclosure Dynamics, Vol.\ 4\\[0.4em]
+  \LARGE \textbf{The Differential Horizon: Divergence, Renormalization, and the Boundary of Generation}\\[0.6em]
+  \normalsize Independent Research --- 2026
+}
+
+\author{Yuhki Endoh}
+
+\date{April 30, 2026}
+
+\maketitle
+
+%%--- Abstract
+\input{sections/abstract}
+
+%%--- Table of Contents (optional, remove for submission)
+\tableofcontents
+\newpage
+
+%%--- Sections
+\input{sections/introduction}
+\input{sections/renormalization_clue}
+\input{sections/past_description}
+\input{sections/ungenerated_limit}
+\input{sections/differential_horizon}
+\input{sections/two_modes_convergence}
+\input{sections/divergence_redefinition}
+\input{sections/renormalization_reinterpretation}
+\input{sections/theory_replacement}
+\input{sections/unresolved_unification}
+\input{sections/dh_principle}
+\input{sections/ved_position}
+\input{sections/conclusion}
+
+%%--- Repository-level map figure
+\clearpage
+\section*{Differential Horizon Map}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{../../figures/differential_horizon_map.pdf}
+  \caption{Differential Horizon map.}
+  \label{fig:differential_horizon_map}
+\end{figure}
+
+%%--- Bibliography
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+%%-----------------------------------------------------------
+\end{document}
+%%-----------------------------------------------------------

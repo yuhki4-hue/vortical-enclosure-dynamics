@@ -1,0 +1,98 @@
+\section{Closure Density and Geometry}
+\label{sec:closure_density}
+
+\subsection{The Quantity Called Closure Density}
+
+Section~\ref{sec:gravity_distance} introduced $L_{ab}$ as the additional
+contribution to the path cost:
+\begin{equation}
+  \boxed{L_{ab} = \sum_k \phi_{abk}.}
+\end{equation}
+This represents the total contribution of triangular closures containing
+the edge $(a,b)$.
+Each triangle contributes to structural congestion,
+and the sum measures how densely that edge is embedded in closure structure.
+Intuitively, regions with many triangles are structurally dense;
+regions with few triangles are structurally sparse.
+\begin{equation}
+  \boxed{\text{Closure density = density of structure.}}
+\end{equation}
+This interpretation follows directly from Vol.~2,
+where triangular closure was identified as the minimal persistent structure.
+
+\subsection{Why It Distorts Distance}
+
+The modified edge cost was $w_{ab} = -\log S_{ab} + \epsilon L_{ab}$.
+The first term favors highly permeable paths;
+the second penalizes structurally congested regions.
+Thus, large closure density increases traversal cost.
+\begin{equation}
+  \boxed{\text{Closure density effectively stretches distance.}}
+\end{equation}
+This reproduces the qualitative behavior associated with gravity:
+dense regions become harder to traverse,
+propagation paths bend around them,
+and effective geometry is distorted.
+Unlike general relativity, however, curvature is not introduced as a fundamental
+geometric postulate. It emerges from the modification of path selection.
+
+\subsection{Tensorization}
+
+Closure density is directional.
+An edge contributes differently depending on orientation.
+To describe this, define a coarse-grained tensor over a region $U$:
+\begin{equation}
+  L_{\mu\nu}(x)
+  = \left\langle L_{ab}\,\hat{e}^{(ab)}_\mu \hat{e}^{(ab)}_\nu \right\rangle_U,
+\end{equation}
+where $\hat{e}^{(ab)}_\mu$ is the direction vector determined internally
+from the distance structure. No external embedding space is assumed.
+\begin{equation}
+  \boxed{L_{\mu\nu} = \text{closure tensor.}}
+\end{equation}
+This tensor encodes directional structural congestion and therefore determines
+anisotropic modifications of distance.
+
+\subsection{Relation to the Metric}
+
+The modification of distance can be absorbed into an effective metric:
+\begin{equation}
+  \label{eq:metric_closure}
+  g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu},
+\end{equation}
+where $g^{(0)}_{\mu\nu}$ is the background metric derived in Vol.~1,
+$L_{\mu\nu}$ is the closure tensor,
+and $\alpha_G$ is a structural coupling constant.
+\begin{equation}
+  \boxed{\text{The metric is determined by closure density.}}
+\end{equation}
+This is structurally analogous to the statement that matter curves spacetime,
+but no matter field has been introduced.
+Geometry is determined entirely by closure structure.
+
+\subsection{$G$ as an Effective Coupling}
+
+The coefficient $\alpha_G$ plays the role of gravitational coupling:
+\begin{equation}
+  \boxed{G_{\text{eff}} \sim \alpha_G.}
+\end{equation}
+This constant is not fundamental.
+It arises as an effective parameter of coarse-grained closure structure.
+At microscopic scales, different particle closures may contribute differently;
+at macroscopic scales, coarse-graining averages these contributions.
+This produces an approximately universal gravitational coupling.
+\begin{equation}
+  \boxed{\text{The universality of } G \text{ emerges dynamically.}}
+\end{equation}
+
+\subsection{Summary}
+
+Closure density has been identified as the source of gravitational distortion.
+\begin{equation}
+  \boxed{\text{Gravity = closure density.}}
+\end{equation}
+The modification of distance induces an effective metric,
+and spacetime geometry emerges from coarse-grained closure structure.
+\begin{equation}
+  \boxed{\text{Spacetime emerges as coarse-grained closure geometry.}}
+\end{equation}

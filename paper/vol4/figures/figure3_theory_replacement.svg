@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" width="900" height="660" font-family="Georgia, serif">
+
+  <rect width="900" height="660" fill="#0d0d0d"/>
+
+  <defs>
+    <!-- 地平線グラデーション -->
+    <linearGradient id="hGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="20%" stop-color="#3d1a5e"/>
+      <stop offset="50%" stop-color="#7b2fa0"/>
+      <stop offset="80%" stop-color="#3d1a5e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <!-- 左背景 -->
+    <linearGradient id="leftBG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#001428"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <!-- 右背景 -->
+    <linearGradient id="rightBG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#1a0800"/>
+    </linearGradient>
+    <!-- ノードグロー（青） -->
+    <filter id="glowBlue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- ノードグロー（橙） -->
+    <filter id="glowOrange" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- ブラー弱 -->
+    <filter id="blurWk" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <!-- ブラー強 -->
+    <filter id="blurSt" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <!-- BH吸い込み -->
+    <filter id="blurBH" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4a90d9" opacity="0.7"/>
+    </marker>
+    <marker id="arrO" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e8a045" opacity="0.7"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9b4fd4" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="450" y="28" text-anchor="middle" font-size="15" fill="#ddd" font-weight="bold">Theoretical Re-placement Across the Differential Horizon</text>
+  <text x="450" y="44" text-anchor="middle" font-size="11" fill="#888" font-style="italic">差の地平線における理論の再配置</text>
+
+  <!-- 背景ゾーン -->
+  <rect x="0" y="54" width="440" height="490" fill="url(#leftBG)"/>
+  <rect x="460" y="54" width="440" height="490" fill="url(#rightBG)"/>
+
+  <!-- ========== 地平線帯（横向き・下部） ========== -->
+  <path d="M0,528 Q225,522 450,525 Q675,522 900,528 L900,552 Q675,546 450,550 Q225,546 0,552 Z"
+        fill="url(#hGrad)" opacity="0.95"/>
+  <!-- 揺らぎ線 -->
+  <path d="M0,528 Q225,522 450,525 Q675,522 900,528"
+        stroke="#9b4fd4" stroke-width="1.5" fill="none" opacity="0.8" stroke-dasharray="6,4"/>
+  <path d="M0,552 Q225,546 450,550 Q675,546 900,552"
+        stroke="#c084fc" stroke-width="1.0" fill="none" opacity="0.6" stroke-dasharray="4,5"/>
+
+  <!-- 地平線ラベル -->
+  <text x="450" y="544" text-anchor="middle" font-size="11" fill="#c084fc" font-weight="bold">Differential Horizon　／　Transition Band</text>
+
+  <!-- ========== 縦軸（距離軸） ========== -->
+  <line x1="450" y1="58" x2="450" y2="525" stroke="#333" stroke-width="1" opacity="0.5" stroke-dasharray="3,4"/>
+  <text x="456" y="72" font-size="9" fill="#555" font-style="italic">↑ far from horizon</text>
+  <text x="456" y="518" font-size="9" fill="#9b4fd4" font-style="italic">↓ boundary contact</text>
+
+  <!-- 横軸ラベル -->
+  <text x="60" y="572" font-size="10" fill="#4a90d9">Spatial Convergence　　Scale ↓</text>
+  <text x="840" y="572" text-anchor="end" font-size="10" fill="#e8a045">Temporal Convergence　　Velocity ↑</text>
+
+  <!-- ========== 接近矢印（左・スケール縮小） ========== -->
+  <path d="M200,180 Q220,320 240,510" stroke="#4a90d9" stroke-width="1.5" fill="none" marker-end="url(#arrB)" opacity="0.4" stroke-dasharray="4,4"/>
+
+  <!-- ========== 接近矢印（右・速度増大） ========== -->
+  <path d="M700,180 Q680,320 660,510" stroke="#e8a045" stroke-width="1.5" fill="none" marker-end="url(#arrO)" opacity="0.4" stroke-dasharray="4,4"/>
+
+  <!-- ========== 各理論ノード ========== -->
+
+  <!-- 1. Classical Physics（上部中央・安定） -->
+  <circle cx="450" cy="110" r="22" fill="#1a2a1a" stroke="#4ecb71" stroke-width="1.5" opacity="0.9"/>
+  <text x="450" y="107" text-anchor="middle" font-size="9" fill="#a8e6cf" font-weight="bold">Classical</text>
+  <text x="450" y="119" text-anchor="middle" font-size="9" fill="#a8e6cf" font-weight="bold">Physics</text>
+  <text x="450" y="143" text-anchor="middle" font-size="8" fill="#4ecb71" opacity="0.7" font-style="italic">stable texture</text>
+
+  <!-- 2. Quantum Mechanics（左中・揺らぎ入口） -->
+  <circle cx="240" cy="220" r="18" fill="#0a1a2e" stroke="#4a90d9" stroke-width="1.5" opacity="0.9"/>
+  <text x="240" y="217" text-anchor="middle" font-size="9" fill="#6ab0f5" font-weight="bold">Quantum</text>
+  <text x="240" y="229" text-anchor="middle" font-size="9" fill="#6ab0f5" font-weight="bold">Mechanics</text>
+  <text x="240" y="248" text-anchor="middle" font-size="8" fill="#4a90d9" opacity="0.7" font-style="italic">fluctuation onset</text>
+
+  <!-- 3. Special Relativity（右中・時間圧縮入口） -->
+  <circle cx="660" cy="220" r="18" fill="#2a1000" stroke="#e8a045" stroke-width="1.5" opacity="0.9"/>
+  <text x="660" y="217" text-anchor="middle" font-size="9" fill="#f0c080" font-weight="bold">Special</text>
+  <text x="660" y="229" text-anchor="middle" font-size="9" fill="#f0c080" font-weight="bold">Relativity</text>
+  <text x="660" y="248" text-anchor="middle" font-size="8" fill="#e8a045" opacity="0.7" font-style="italic">time compression onset</text>
+
+  <!-- 4. QFT（左下寄り・発散顕在） -->
+  <g filter="url(#blurWk)">
+    <circle cx="195" cy="360" r="20" fill="#0a1428" stroke="#4a90d9" stroke-width="1.8" opacity="0.85"/>
+  </g>
+  <text x="195" y="356" text-anchor="middle" font-size="9" fill="#6ab0f5" font-weight="bold">Quantum Field</text>
+  <text x="195" y="368" text-anchor="middle" font-size="9" fill="#6ab0f5" font-weight="bold">Theory</text>
+  <!-- QFT揺らぎエフェクト -->
+  <g opacity="0.35">
+    <circle cx="175" cy="348" r="2.5" fill="#4a90d9"/>
+    <circle cx="215" cy="352" r="2.0" fill="#6ab0f5"/>
+    <circle cx="182" cy="372" r="2.2" fill="#4a90d9"/>
+    <circle cx="210" cy="368" r="1.8" fill="#6ab0f5"/>
+    <circle cx="168" cy="362" r="2.0" fill="#4a90d9"/>
+    <circle cx="222" cy="360" r="2.5" fill="#6ab0f5"/>
+  </g>
+  <text x="195" y="392" text-anchor="middle" font-size="8" fill="#4a90d9" opacity="0.7" font-style="italic">divergence / renorm.</text>
+
+  <!-- 5. General Relativity（右下寄り・歪み） -->
+  <g filter="url(#blurWk)">
+    <ellipse cx="705" cy="360" rx="24" ry="18" fill="#1a0800" stroke="#e8a045" stroke-width="1.8" opacity="0.85" transform="rotate(-8, 705, 360)"/>
+  </g>
+  <text x="705" y="356" text-anchor="middle" font-size="9" fill="#f0c080" font-weight="bold">General</text>
+  <text x="705" y="368" text-anchor="middle" font-size="9" fill="#f0c080" font-weight="bold">Relativity</text>
+  <!-- GR格子歪みエフェクト -->
+  <g stroke="#e8a045" stroke-width="0.7" opacity="0.25" fill="none">
+    <path d="M680,342 Q692,348 705,342 Q718,336 730,342"/>
+    <path d="M678,356 Q692,364 705,356 Q718,348 732,356"/>
+    <path d="M680,370 Q692,378 705,370 Q718,362 730,370"/>
+  </g>
+  <text x="705" y="392" text-anchor="middle" font-size="8" fill="#e8a045" opacity="0.7" font-style="italic">singularity / spacetime curvature</text>
+
+  <!-- 6. String Theory（中央下手前・整合性探索） -->
+  <circle cx="450" cy="430" r="19" fill="#1a0a2a" stroke="#9b4fd4" stroke-width="1.5" opacity="0.88"/>
+  <text x="450" y="426" text-anchor="middle" font-size="9" fill="#c084fc" font-weight="bold">String</text>
+  <text x="450" y="438" text-anchor="middle" font-size="9" fill="#c084fc" font-weight="bold">Theory</text>
+  <text x="450" y="460" text-anchor="middle" font-size="8" fill="#9b4fd4" opacity="0.75" font-style="italic">coherence near horizon</text>
+
+  <!-- 7. Quantum Gravity（中央・地平線手前・未解決） -->
+  <g filter="url(#blurWk)" opacity="0.7">
+    <circle cx="450" cy="508" r="16" fill="#0d0d1a" stroke="#ff6b6b" stroke-width="1.2" stroke-dasharray="4,3"/>
+  </g>
+  <text x="450" y="504" text-anchor="middle" font-size="9" fill="#ff9999" font-weight="bold">Quantum</text>
+  <text x="450" y="516" text-anchor="middle" font-size="9" fill="#ff9999" font-weight="bold">Gravity</text>
+  <text x="560" y="510" font-size="8" fill="#ff6b6b" opacity="0.7" font-style="italic">← unresolved</text>
+
+  <!-- 8. Black Hole（右端・接触領域） -->
+  <g filter="url(#blurSt)">
+    <circle cx="800" cy="480" r="18" fill="#0a0000" stroke="#e8a045" stroke-width="2.0" opacity="0.6"/>
+  </g>
+  <circle cx="800" cy="480" r="8" fill="#050000" opacity="0.95"/>
+  <!-- 吸い込みエフェクト -->
+  <g filter="url(#blurBH)" opacity="0.15">
+    <circle cx="800" cy="480" r="30" fill="#e8a045"/>
+  </g>
+  <text x="800" y="510" text-anchor="middle" font-size="9" fill="#f0c080" font-weight="bold">Black Hole</text>
+  <text x="800" y="522" text-anchor="middle" font-size="8" fill="#e8a045" opacity="0.7" font-style="italic">boundary contact</text>
+
+  <!-- ========== 接続線（理論間の接近経路） ========== -->
+  <!-- Classical → QM -->
+  <line x1="432" y1="128" x2="256" y2="206" stroke="#4a90d9" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,4"/>
+  <!-- Classical → SR -->
+  <line x1="468" y1="128" x2="644" y2="206" stroke="#e8a045" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,4"/>
+  <!-- QM → QFT -->
+  <line x1="228" y1="236" x2="200" y2="340" stroke="#4a90d9" stroke-width="0.8" opacity="0.35" stroke-dasharray="3,4"/>
+  <!-- SR → GR -->
+  <line x1="672" y1="236" x2="700" y2="342" stroke="#e8a045" stroke-width="0.8" opacity="0.35" stroke-dasharray="3,4"/>
+  <!-- QFT → QG -->
+  <line x1="210" y1="376" x2="436" y2="498" stroke="#4a90d9" stroke-width="0.8" opacity="0.25" stroke-dasharray="3,4"/>
+  <!-- GR → BH -->
+  <line x1="726" y1="372" x2="786" y2="466" stroke="#e8a045" stroke-width="0.8" opacity="0.25" stroke-dasharray="3,4"/>
+  <!-- GR → QG -->
+  <line x1="686" y1="374" x2="464" y2="500" stroke="#e8a045" stroke-width="0.8" opacity="0.2" stroke-dasharray="3,4"/>
+  <!-- String → QG -->
+  <line x1="450" y1="449" x2="450" y2="490" stroke="#9b4fd4" stroke-width="0.8" opacity="0.3" stroke-dasharray="2,3"/>
+
+  <!-- ========== キーメッセージ ========== -->
+  <text x="450" y="590" text-anchor="middle" font-size="13" fill="#ccc" font-weight="bold" font-style="italic">Different theories, same boundary.</text>
+
+  <!-- ========== 図注 ========== -->
+  <text x="450" y="614" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Theories are not classified by their objects, but by their mode of approach to the differential horizon.</text>
+  <text x="450" y="629" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Spatial convergence (left) proceeds through scale reduction; temporal convergence (right) through velocity and curvature.</text>
+  <text x="450" y="644" text-anchor="middle" font-size="10" fill="#888" font-style="italic">String theory seeks coherence near the boundary; quantum gravity marks the unresolved contact point.</text>
+
+</svg>

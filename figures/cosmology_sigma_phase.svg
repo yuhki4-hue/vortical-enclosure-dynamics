@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" font-family="Georgia, serif">
+
+  <defs>
+    <marker id="axarr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="520" fill="#fafaf8"/>
+
+  <!-- Title -->
+  <text x="390" y="34" text-anchor="middle" font-size="14" fill="#111" letter-spacing="1.5" font-style="italic">Log-generation Phase Diagram</text>
+  <text x="390" y="54" text-anchor="middle" font-size="11" fill="#444" font-style="italic">Phase Structure of σ(ρ) in VED   ·   σ(ρ) = ξρ(1 − ρ/ρ_max)</text>
+
+  <!-- ===== SHADED REGIONS ===== -->
+  <!-- active phase (σ > 0): light gray band under curve -->
+  <!-- early universe region (left, low ρ) -->
+  <rect x="90" y="80" width="60" height="310" fill="#e8e8e4" opacity="0.5"/>
+  <!-- early universe active region -->
+  <rect x="150" y="80" width="88" height="310" fill="#dcdcd6" opacity="0.45"/>
+  <!-- classical-active region (middle, near fixed point) -->
+  <rect x="238" y="80" width="204" height="310" fill="#f0f0ec" opacity="0.6"/>
+  <!-- saturated region (right, high ρ) -->
+  <rect x="540" y="80" width="140" height="310" fill="#e8e8e4" opacity="0.5"/>
+
+  <!-- ===== AXES ===== -->
+  <!-- x axis -->
+  <line x1="90" y1="390" x2="700" y2="390" stroke="#333" stroke-width="1.5" marker-end="url(#axarr)"/>
+  <!-- y axis -->
+  <line x1="90" y1="390" x2="90" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#axarr)"/>
+
+  <!-- axis labels -->
+  <text x="706" y="394" text-anchor="start" font-size="13" fill="#333" font-style="italic">ρ</text>
+  <text x="78" y="70" text-anchor="middle" font-size="13" fill="#333" font-style="italic">σ</text>
+  <text x="390" y="420" text-anchor="middle" font-size="9" fill="#777">log density</text>
+  <text x="30" y="240" text-anchor="middle" font-size="9" fill="#777" transform="rotate(-90,30,240)">log generation rate</text>
+
+  <!-- ===== SIGMA CURVE (parabola: peak at ρ=340, σ=270) ===== -->
+  <!-- σ(ρ) = 0 at ρ=90 and ρ=680, peak at ρ=385,σ=120 (in svg coords, y inverted) -->
+  <path d="M90,390 Q200,105 385,110 Q560,115 680,390"
+        fill="none" stroke="#222" stroke-width="2"/>
+
+  <!-- 3γρ² line (dilution term, upward parabola) -->
+  <path d="M90,390 Q300,340 540,200 Q620,155 680,120"
+        fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- intersection = fixed point ρ* -->
+  <!-- curves intersect around x=442 -->
+  <circle cx="442" cy="222" r="5" fill="#222"/>
+
+  <!-- ===== KEY POINTS ON X AXIS ===== -->
+  <!-- ρ=0 tick -->
+  <line x1="90" y1="388" x2="90" y2="392" stroke="#555" stroke-width="1.2"/>
+  <text x="90" y="406" text-anchor="middle" font-size="9" fill="#555">0</text>
+
+  <!-- ρ* tick -->
+  <line x1="442" y1="388" x2="442" y2="392" stroke="#555" stroke-width="1.2"/>
+  <text x="442" y="406" text-anchor="middle" font-size="9" fill="#555" font-style="italic">ρ*</text>
+  <!-- vertical guide line to fixed point -->
+  <line x1="442" y1="392" x2="442" y2="222" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- ρ_max tick -->
+  <line x1="680" y1="388" x2="680" y2="392" stroke="#555" stroke-width="1.2"/>
+  <text x="680" y="406" text-anchor="middle" font-size="9" fill="#555" font-style="italic">ρ_max</text>
+
+  <!-- σ=0 label on y axis -->
+  <text x="78" y="394" text-anchor="end" font-size="9" fill="#555">0</text>
+
+  <!-- ===== REGION LABELS ===== -->
+
+  <!-- subcritical (leftmost, before curve rises) -->
+  <text x="91" y="96" text-anchor="start" font-size="9" fill="#666" font-weight="bold">subcritical</text>
+  <text x="91" y="108" text-anchor="start" font-size="8" fill="#888">σ ≈ 0</text>
+  <text x="91" y="119" text-anchor="start" font-size="8" fill="#888">no time / no structure</text>
+
+  <!-- early universe (low ρ, σ>0 rising) -->
+  <text x="163" y="200" text-anchor="middle" font-size="9" fill="#444" font-weight="bold">early universe</text>
+  <text x="150" y="213" text-anchor="middle" font-size="8" fill="#666">σ &gt; 0</text>
+  <text x="148" y="225" text-anchor="middle" font-size="8" fill="#666">exp. growth of ρ</text>
+
+  <!-- classical-active (middle, near fixed point) -->
+  <text x="340" y="96" text-anchor="middle" font-size="9" fill="#444" font-weight="bold">active phase</text>
+  <text x="340" y="108" text-anchor="middle" font-size="8" fill="#666">σ &gt; 0  ·  time generation</text>
+
+  <!-- fixed point annotation -->
+  <text x="448" y="182" text-anchor="start" font-size="9" fill="#222" font-weight="bold">fixed point</text>
+  <text x="448" y="194" text-anchor="start" font-size="8" fill="#555">de Sitter (σ = 3γρ²)</text>
+  <text x="448" y="206" text-anchor="start" font-size="8" fill="#555">classical laws valid</text>
+
+  <!-- classical-active label below fixed point -->
+  <text x="370" y="320" text-anchor="middle" font-size="9" fill="#555" font-style="italic">classical-active phase</text>
+  <text x="370" y="333" text-anchor="middle" font-size="8" fill="#888" font-style="italic">GR, SM effective laws</text>
+
+  <!-- BH interior (right, saturated) -->
+  <text x="610" y="200" text-anchor="middle" font-size="9" fill="#444" font-weight="bold">BH interior</text>
+  <text x="625" y="213" text-anchor="middle" font-size="8" fill="#666">non-equilibrium closure</text>
+  <text x="625" y="225" text-anchor="middle" font-size="8" fill="#666">σ &gt; 0  (L growing)</text>
+
+  <!-- core limit label -->
+  <text x="680" y="340" text-anchor="middle" font-size="7.5" fill="#aaa" font-style="italic">core limit:</text>
+  <text x="680" y="351" text-anchor="middle" font-size="7.5" fill="#aaa" font-style="italic">σ → 0</text>
+  <text x="692" y="362" text-anchor="middle" font-size="7.5" fill="#aaa" font-style="italic">L → L_max</text>
+  <!-- saturated label -->
+  <text x="610" y="96" text-anchor="middle" font-size="9" fill="#666" font-weight="bold">saturated</text>
+  <text x="610" y="108" text-anchor="middle" font-size="8" fill="#888">fixed-point breakdown</text>
+
+  <!-- ===== SAME PHASE BRACE / ANNOTATION ===== -->
+  <!-- bracket connecting early universe and BH -->
+  <path d="M165,240 Q165,265 250,270 Q390,275 530,270 Q610,265 610,240"
+        fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="377" y="290" text-anchor="middle" font-size="8.5" fill="#888" font-style="italic">same phase — different scale</text>
+
+  <!-- ===== DILUTION CURVE LABEL ===== -->
+  <text x="578" y="138" text-anchor="start" font-size="8" fill="#999" font-style="italic">3γρ²</text>
+  <text x="578" y="149" text-anchor="start" font-size="8" fill="#999" font-style="italic">(dilution)</text>
+
+  <!-- ===== EQUATION (bottom) ===== -->
+  <rect x="180" y="440" width="420" height="36" rx="3" fill="#efefeb"/>
+  <text x="390" y="456" text-anchor="middle" font-size="10" fill="#444" font-style="italic">dρ/dτ + 3γρ² = σ(ρ)   ·   H ∼ ρ</text>
+  <text x="390" y="470" text-anchor="middle" font-size="9" fill="#888" font-style="italic">VED cosmological equation (τ-time)</text>
+
+</svg>
