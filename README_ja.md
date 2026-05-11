@@ -57,13 +57,23 @@ notes/                             作業ノートと補足資料
 
 ## 推奨読書順
 
+一般読者向け:
+
 1. VED Vol.1 — Foundations
 2. VED Vol.3 — Gravity and Cosmology
 3. IFGT — Information and Observation
 4. VED Vol.4 — The Differential Horizon
 5. VED Vol.2 — Closure Geometry and the Standard Model
 
-Vol.2 は、基礎概念と初期巻で導入される構造的前提への依存が最も強いため、あえて後ろに置いています。Vol.4 は IFGT の後に置いています。どちらも、生成された記述における観測的・情報的構造を扱うためです。
+物理背景のある読者向け:
+
+1. VED Vol.1 — Foundations
+2. VED Vol.3 — Gravity and Cosmology
+3. VED Vol.4 — The Differential Horizon
+4. IFGT — Information and Observation
+5. VED Vol.2 — Closure Geometry and the Standard Model
+
+Vol.2 は、基礎概念と初期巻で導入される構造的前提への依存が最も強いため、あえて後ろに置いています。一般読者には、情報流・勾配・準閉包を比較的具体的に導入する IFGT を Vol.4 の前に読む順序が向いています。一方、物理背景のある読者には、Differential Horizon の枠組みを先に読むことで、IFGT が観測境界の手前側の運動を記述していることが見えやすくなります。
 
 ## 公開モデル
 

@@ -78,16 +78,29 @@ notes/                             working notes and supplementary material
 
 ## Suggested Reading Order
 
+For general readers:
+
 1. VED Vol.1 — Foundations
 2. VED Vol.3 — Gravity and Cosmology
 3. IFGT — Information and Observation
 4. VED Vol.4 — The Differential Horizon
 5. VED Vol.2 — Closure Geometry and the Standard Model
 
+For readers with a physics background:
+
+1. VED Vol.1 — Foundations
+2. VED Vol.3 — Gravity and Cosmology
+3. VED Vol.4 — The Differential Horizon
+4. IFGT — Information and Observation
+5. VED Vol.2 — Closure Geometry and the Standard Model
+
 Vol.2 is intentionally placed later because it depends most heavily on the
 conceptual foundation and on the structural assumptions introduced in the
-earlier volumes. Vol.4 is placed after IFGT because both address the
-observational and informational structure of generated description.
+earlier volumes. General readers may find IFGT useful before Vol.4 because it
+introduces information flow, gradients, and quasi-closure in a more concrete
+form. Readers with a physics background may prefer Vol.4 before IFGT, since the
+Differential Horizon framework clarifies why IFGT describes motion on the
+generated side of an observational boundary.
 
 ## Publication Model
 
