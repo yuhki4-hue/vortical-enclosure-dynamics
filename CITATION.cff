@@ -1,8 +1,27 @@
 cff-version: 1.2.0
 title: "Vortical Enclosure Dynamics"
-message: "If you use or discuss this framework before arXiv identifiers are available, please cite this repository."
-type: dataset
+message: "If you use or discuss this framework before arXiv identifiers are available, please cite this repository using the DOI below."
+type: software
 authors:
   - family-names: "Endoh"
     given-names: "Yuhki"
 license: "CC-BY-4.0"
+version: "v2.0"
+date-released: "2026-05-11"
+doi: "10.5281/zenodo.20115368"
+repository-code: "https://github.com/yuhki4-hue/vortical-enclosure-dynamics"
+url: "https://zenodo.org/records/20115368"
+abstract: >
+  Vortical Enclosure Dynamics (VED) is a theoretical framework
+  proposing a generative order in which difference gives rise to
+  gradient, motion, and spacetime. This release (v2.0) corresponds
+  to the second edition of Vol.4, substantially revised in May 2026,
+  introducing registered difference, trace formation, and local
+  Differential Horizons as the core descriptive framework.
+keywords:
+  - theoretical physics
+  - Differential Horizon
+  - renormalization
+  - divergence
+  - generative framework
+  - spacetime emergence
