@@ -14,21 +14,27 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
   arXiv ID は未確定
 - [VED Vol.3 — Gravity, Black Holes, and Cosmology](paper/vol3/main.pdf)  
   arXiv ID は未確定
-- [VED Vol.4 — Differential Horizon, Observation, and Limits](paper/vol4/main.pdf)  
+- [VED Vol.4 — The Differential Horizon: Divergence, Renormalization, and the Boundary of Generation](paper/vol4/main.pdf)  
+  arXiv ID は未確定  
+  2026年5月に大幅改訂。registered difference、trace formation、local Differential Horizons を中核的な記述枠組みとして導入しました。Divergence は boundary signal として、renormalization は boundary contact の finite re-expression として読み替えられます。動的バリア（§13）は Differential Horizon Principle の最小形として再解釈されています。
+- [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv ID は未確定
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
-補助的な IFGT 資料は [`Information-Field-Geometry-Theory/`](Information-Field-Geometry-Theory/) に含めています。
 
 ## 現在の位置づけ
 
-Vol.1 は現在の投稿対象、Vol.2-Vol.4 は連動する補助巻であり、定量的な導出にはなお未解決部分があります。
+すべての巻は、このリポジトリ内でプレプリントとして公開されています。arXiv 投稿は `gr-qc` および `physics.gen-ph` の endorsement 待ちです。その間、GitHub を暫定的な主要引用元として扱います。
+
+Vol.4 は 2026年5月に構造的な大改訂を行い、観測と記述の枠組みを全章にわたって深めました。この改訂では、registered difference、descriptive window、pastified texture、boundary signal、local horizon-form、open generative framework という統一語彙が 14 セクション全体を貫く形で導入されています。
+
+Vol.1–Vol.3 には、定量的導出に関してなお未解決の部分があります。
 
 ## 概念的な概要
 
-VED は、差異から勾配、流れ、渦、閉包が生まれ、そこから有効な物理構造が立ち上がるという生成順序を提案します。この見方では、時間は因果ログの蓄積、空間は因果関係の構造、物質や幾何は安定した閉包現象として扱われ、初めから与えられた前提とは見なされません。
+VED は、差異から勾配、流れ、渦、閉包が生まれ、そこから有効な物理構造が立ち上がるという生成順序を提案します。この見方では、時間は因果ログの蓄積の効果、空間は因果関係によって誘導される構造、物質や幾何は安定化した閉包現象として扱われ、初めから与えられた前提とは見なされません。
 
-この枠組みは、完成済みの物理理論というより、構造的な研究プログラムとして読むことを意図しています。詳細な方程式、強い主張、方法論的立場、未解決問題は `docs/` に分け、ここでは入口ページとして必要な情報に絞っています。
+この枠組みは、完成済みの物理理論というより、構造的な研究プログラムとして読むことを意図しています。詳細な方程式、強い主張、方法論的立場、未解決問題は [`docs/`](docs/) に分け、ここでは入口ページとして必要な情報に絞っています。
 
 関連ドキュメント:
 
@@ -43,9 +49,10 @@ VED は、差異から勾配、流れ、渦、閉包が生まれ、そこから�
 ```txt
 docs/                              解説文書、方法論、主張整理、未解決問題
 figures/                           図表・概念図
-paper/                             Vol.1-Vol.4 の LaTeX ソースと論文用図版
+paper/                             Vol.1–Vol.4 の LaTeX ソースと論文用図版
 Information-Field-Geometry-Theory/ IFGT のソース、図版、PDF
 arXiv_pdf/                         投稿用 PDF コピー
+notes/                             作業ノートと補足資料
 ```
 
 ## 推奨読書順
@@ -53,10 +60,10 @@ arXiv_pdf/                         投稿用 PDF コピー
 1. VED Vol.1 — Foundations
 2. VED Vol.3 — Gravity and Cosmology
 3. IFGT — Information and Observation
-4. VED Vol.4 — Differential Horizon
+4. VED Vol.4 — The Differential Horizon
 5. VED Vol.2 — Closure Geometry and the Standard Model
 
-Vol.2 は、基礎概念への依存が最も強いため、あえて後ろに置いています。
+Vol.2 は、基礎概念と初期巻で導入される構造的前提への依存が最も強いため、あえて後ろに置いています。Vol.4 は IFGT の後に置いています。どちらも、生成された記述における観測的・情報的構造を扱うためです。
 
 ## 公開モデル
 
