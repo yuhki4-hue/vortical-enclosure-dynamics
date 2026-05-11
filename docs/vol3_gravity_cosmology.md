@@ -406,7 +406,7 @@ $$\boxed{\sigma > 0}$$
 
 Log generation resumes and the fixed-point structure breaks down: $\partial_t C \neq 0$. This implies that geometry is no longer static.
 
-$$\boxed{\text{Time begins to be generated again.}}$$
+$$\boxed{\text{The generative time structure becomes dynamically active again.}}$$
 
 The interior therefore corresponds to a non-equilibrium regime of closure.
 
@@ -422,15 +422,15 @@ Geometry becomes dynamically generated rather than static.
 
 ---
 
-### 5.5 The Singularity Does Not Exist
+### 5.5 The Singularity as a Closure Limit
 
-General relativity predicts a singularity at the center. VED prohibits perfect closure. From Vol.1:
+General relativity predicts a singularity at the center. VED reads this region as the limit of gravitational closure. In the effective notation of Vol.1:
 
 $$B(L) = -\kappa_B \log\!\left(1 - \frac{L}{L_{\max}}\right) \to \infty \qquad (L \to L_{\max})$$
 
-$$\boxed{\text{Perfect closure is dynamically forbidden.}}$$
+$$\boxed{\text{Perfect closure is not an ordinary attainable state.}}$$
 
-Therefore, the center is not a singularity but an unreachable limit.
+Therefore, the center is not treated as an ordinary object of infinite density, but as an asymptotic closure limit.
 
 ---
 

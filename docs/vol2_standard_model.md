@@ -106,9 +106,10 @@ Each term has a structural role:
 | $\alpha\|\sum\vec{e}_i\|^2$ | penalty for incomplete closure |
 | $-\beta\,\Phi(A)$ | reward for triangular closure |
 | $\gamma|A|$ | structural cost |
-| $B(L(A))$ | barrier preventing complete closure |
+| $B(L(A))$ | effective non-closure resistance near the complete-closure limit |
 
-The final term encodes the **prohibition of perfect closure** inherited from Vol.1.
+The final term is a phenomenological encoding of the non-closure constraint
+inherited from Vol.1.
 
 ---
 
@@ -372,7 +373,7 @@ Three distinct regimes can be identified:
 
 **Non-degenerate triangular closure** — finite area, three independent directions, maximal internal coupling.
 
-$$\boxed{\text{Non-degenerate closure represents the most structurally complete configuration.}}$$
+$$\boxed{\text{Non-degenerate closure represents the maximally articulated configuration within the triangular regime.}}$$
 
 **Degenerate triangular closure** — area approaches zero, one direction collapses, two effective degrees of freedom remain.
 

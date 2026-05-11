@@ -16,7 +16,7 @@ The starting point is not a Lagrangian, not a metric, not a symmetry group. It i
 
 This is not a metaphor. It is a structural claim: a world with no internal asymmetry has no gradients, no flows, no dynamics, no observability. The existence of difference is the minimal condition for anything to happen at all.
 
-From this axiom, VED constructs everything else through a sequence of well-defined steps. Each step introduces no new assumptions — only the consequences of what came before.
+From this axiom, VED constructs everything else through a sequence of well-defined steps. Each step is intended to introduce no independent physical primitives, but to develop the consequences of what came before.
 
 -----
 
@@ -75,7 +75,7 @@ $S_{ij}$ encodes spatial proximity; $A_{ij}$ encodes causal direction. Distance 
 
 $$d_{ij} = -\log \tilde{S}_{ij}$$
 
-where $\tilde{S}*{ij}$ is the maximum-path strength — the best available channel for influence to propagate from $i$ to $j$. The metric tensor $g*{\mu\nu}$ is the coarse-grained limit of this structure. It is not a primitive field. It is an effective description.
+where $\tilde{S}_{ij}$ is the maximum-path strength — the best available channel for influence to propagate from $i$ to $j$. The metric tensor $g_{\mu\nu}$ is the coarse-grained limit of this structure. It is not a primitive field. It is an effective description.
 
 -----
 
@@ -97,15 +97,19 @@ The symmetry groups of these closure types are not assumed. They are derived:
 - **SU(2)**: the group mixing the two branches of degenerate closure (left/right)
 - **U(1)**: global phase redundancy
 
-$$\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1) ;\longleftarrow; \text{closure geometry}$$
+$$
+\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)
+\;\longleftarrow\;
+\text{closure geometry}
+$$
 
-Electric charge emerges from phase flux deviation within the triangle. The fractional charges $+2/3$ and $-1/3$ are the only stable configurations under the complete-closure prohibition barrier.
+Electric charge emerges from phase flux deviation within the triangle. The fractional charges $+2/3$ and $-1/3$ are interpreted as stable configurations under an effective non-closure constraint.
 
 Mass is the curvature of the closure energy at the attractor:
 
 $$m_k \propto \frac{1}{\Delta_k^2}, \qquad \Delta_k := L_{\max} - L_k$$
 
-Heavy particles live close to the complete-closure limit. Three generations follow from the three edges of the triangle — each generation corresponds to one edge locking into place, in sequence, because simultaneous locking would require complete symmetry, which the axiom forbids.
+Heavy particles live close to the complete-closure limit. This limit should be read as a boundary representation, not as an ordinary attainable state. Three generations follow from the three edges of the triangle — each generation corresponds to one edge locking into place, in sequence, because simultaneous locking would erase the asymmetry required for dynamics.
 
 -----
 
@@ -127,13 +131,13 @@ The closure density $L$ is the vorticity of the log-flow. This is the sense in w
 
 $$\nabla^2 \Psi \propto L, \qquad g = -\nabla\Psi$$
 
-The Einstein equations appear as the linearization of VED’s fixed-point equation $g_{\mu\nu} = g^{(0)}*{\mu\nu} + \alpha_G L*{\mu\nu}[g]$ in the weak-gravity, classical-active phase.
+The Einstein equations appear as the linearization of VED’s fixed-point equation $g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu}[g]$ in the weak-gravity, classical-active phase.
 
-Newton’s constant is not primitive:
+Newton’s constant is not primitive in this structural reading:
 
-$$G \sim \frac{\eta_\phi , \epsilon}{4\pi , \kappa_B^2} , F(\lambda, \beta, \ldots)$$
+$$G \sim \frac{\eta_\phi , \epsilon}{4\pi , \kappa_{B,\mathrm{eff}}^2} , F(\lambda, \beta, \ldots)$$
 
-Its universality across particle species is a dynamic convergence property of the classical phase, not an axiom.
+Here $\kappa_{B,\mathrm{eff}}$ denotes an effective non-closure scale. Vol.4 reinterprets this kind of barrier parameter as a projected or coarse-grained quantity, rather than as a fundamental external prohibition. Its universality across particle species is a dynamic convergence property of the classical phase, not an axiom.
 
 -----
 
@@ -143,11 +147,11 @@ Its universality across particle species is a dynamic convergence property of th
 
 Outside the horizon, the classical fixed-point condition holds: $\sigma \approx 0$, $\nabla\cdot J \approx 0$, the geometry is stable. At the horizon, this condition breaks down — the closure density $L$ grows until the fixed-point geometry can no longer be maintained.
 
-The interior is a non-equilibrium closure phase, where log-generation $\sigma > 0$ reignites. The center is not a singularity. The complete-closure prohibition barrier:
+The interior is a non-equilibrium closure phase, where log-generation $\sigma > 0$ reignites. The center is not treated as an ordinary singular object. In the older effective notation, the non-closure resistance was written as:
 
-$$B(L) = -\kappa_B \log!\left(1 - \frac{L}{L_{\max}}\right) \to \infty \quad \text{as } L \to L_{\max}$$
+$$B(L) = -\kappa_{B,\mathrm{eff}} \log\!\left(1 - \frac{L}{L_{\max}}\right) \to \infty \quad \text{as } L \to L_{\max}$$
 
-prevents the system from ever fully closing. The center is an asymptotic limit, not a divergence.
+This term summarizes the fact that the system cannot be represented as fully closed within the generated description. The center is an asymptotic closure limit, not a literal divergence object.
 
 **Cosmology** is the global regime where $\sigma > 0$ persists everywhere. In the homogeneous, isotropic limit, the framework reduces to:
 
@@ -178,7 +182,7 @@ The laws of physics — conservation laws, gauge symmetries, the Einstein equati
 
 VED is a **structural framework**, not yet a predictive theory.
 
-What has been established:
+What has been structurally formulated:
 
 - Derivation of $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ from closure geometry
 - Qualitative mass hierarchy and charge quantization

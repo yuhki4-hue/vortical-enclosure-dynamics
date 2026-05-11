@@ -24,20 +24,20 @@ Quasi-closures decay over time, either being reabsorbed into closure or being re
 \end{equation}
 where $\Gamma$ is the dissipation rate.
 
-\paragraph{(iii) Barrier term --- the prohibition of complete closure.}
-As a basic principle of VED, complete closure at $C = C_{\max} = 1$ is prohibited. This is a structural constraint that follows from the foundational axiom ``\emph{there is difference}.'' The prohibition is expressed as a repulsive potential that diverges as $C \to C_{\max}$:
+\paragraph{(iii) Effective barrier term --- non-closure constraint.}
+Complete closure at $C = C_{\max} = 1$ is not treated as an ordinary attainable state, because it would remove the residual difference required for quasi-closure and informational persistence. In the present effective model, this non-closure constraint is represented by a repulsive phenomenological term:
 \begin{equation}
 \sigma_{\mathrm{barrier}} = -\frac{\kappa_B}{C_{\max} - C},
 \label{eq:sigma_barrier}
 \end{equation}
-where $\kappa_B$ is the barrier strength. This term prevents asymptotic approach to complete closure and ensures circulation as a quasi-closure.
+where $\kappa_B$ is an effective barrier strength. This term does not claim to be the microscopic origin of non-closure; it encodes, at the present level of description, the resistance to complete closure required for circulation as a quasi-closure.
 
 The three contributions are visualized in Fig.~\ref{fig:sigma_decomposition}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.95\textwidth]{figures/fig3_sigma_decomposition_en.pdf}
-  \caption{Decomposition of $\sigma$ into drive, dissipation, and barrier terms. The barrier term diverges as $C \to 1$, ensuring that complete closure is unattainable.}
+  \caption{Decomposition of $\sigma$ into drive, dissipation, and effective barrier terms. The barrier term represents non-closure resistance as $C \to 1$ within this phenomenological description.}
   \label{fig:sigma_decomposition}
 \end{figure}
 
@@ -61,10 +61,18 @@ Substituting into~\eqref{eq:basic}, we obtain the following unified equation:
 }
 \label{eq:unified}
 \end{equation}
+The equation is understood on the effective domain
+$0 \le C < C_{\max}$.
+Near both boundaries, additional regularization terms may be required in
+a microscopic model.
+
 \begin{equation}
 J_C = -D \nabla C - \mu \alpha \, C \nabla C.
 \label{eq:J_C}
 \end{equation}
+Here $C_*$ denotes the effective saturation scale of quasi-closure,
+while $C_{\max}=1$ denotes the ideal complete-closure boundary.
+In general, $C_* < C_{\max}$ in informational regimes.
 The second term on the right-hand side of~\eqref{eq:J_C} originates from the constraint potential gradient $F_I = \alpha \nabla C$ given in~\eqref{eq:F_I}, rewritten in terms of $C$ under the linear assumption~\eqref{eq:linear_assumption}.
 
 \paragraph{On the temporal argument.}
@@ -93,14 +101,20 @@ Equation~\eqref{eq:unified} could, in principle, generate an extremely broad cla
 
 These may all be positioned as distinct solution classes of~\eqref{eq:unified}, but their individual identification and derivation lie beyond the scope of this paper. Under the division of roles in which VED handles generation, IFGT handles structure, and the unified equation~\eqref{eq:unified} bridges the two through dynamics, these concrete correspondences will be developed in separate works.
 
-\subsection{The minimal axiom system}
+\subsection{The minimal foundation and effective tendency}
 \label{subsec:minimal_axioms}
 
-Equation~\eqref{eq:unified} is derived from the following \emph{two axioms}:
+Equation~\eqref{eq:unified} is built from one foundational axiom and one
+effective dynamical tendency:
 
 \begin{enumerate}
   \item \emph{There is difference.} (the foundational axiom of VED)
-  \item \emph{Difference tends to close.} (the additional axiom of IFGT)
+  \item \emph{Difference tends to form partial closure.}
+        (an effective dynamical tendency used at the IFGT layer)
 \end{enumerate}
 
-From the first axiom, the driving and barrier terms are derived; from the second, the dissipation term and the construction of the information flow are derived. The unified VED$\times$IFGT system is thus built upon these two minimal axioms.
+From the foundational axiom, the driving and effective barrier terms are
+motivated; from the effective tendency, the dissipation term and the
+construction of the information flow are introduced. The unified
+VED$\times$IFGT system is therefore built without adding a second
+foundational axiom to VED.

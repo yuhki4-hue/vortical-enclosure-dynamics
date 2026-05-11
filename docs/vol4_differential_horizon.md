@@ -89,8 +89,9 @@ The Planck scale, the speed-of-light limit, singularities,
 and the incompatibility of gravity and quantum theory—  
 the various unsolved problems of modern physics may share a common structure.
 
-That structure is an approach toward a boundary not yet clearly named—  
-a boundary dividing the generated from the un-generated.
+That structure is the appearance of a descriptive boundary—
+the point where a difference-based description fails to convert
+the absence of difference into an ordinary observable state.
 
 This volume calls that boundary the **Differential Horizon**.
 

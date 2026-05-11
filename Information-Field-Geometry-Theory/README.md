@@ -66,8 +66,11 @@ the repository for convenient reading.
 ## Relation to VED
 
 IFGT is intended as a companion framework to Vortical Enclosure Dynamics. VED
-addresses generative physical structure; IFGT focuses on the geometry of
-informational persistence, constraint, and observation-like relations.
+addresses stabilized quasi-closure as generative physical structure; IFGT
+focuses on the residual side of the same process, where traces of difference
+persist as informational constraint and observation-like relations.
+In this sense, IFGT treats information not as a separate substance, but as the
+residual geometry left by incomplete closure.
 
 ## Citation
 

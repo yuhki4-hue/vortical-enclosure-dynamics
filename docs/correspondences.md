@@ -9,7 +9,7 @@ This note preserves the compact correspondence tables that were previously embed
 | Time | Accumulation of causal logs ($d\tau/dt = \rho$) |
 | Space | Structure of causal connectivity ($d_{ij} = -\log\tilde{S}_{ij}$) |
 | Particles | Stable closure attractors (triangular enclosure) |
-| Mass | $m_k \propto 1/\Delta_k^2$ (inverse square of closure barrier distance) |
+| Mass | $m_k \propto 1/\Delta_k^2$ (inverse square scaling with distance from the closure limit) |
 | SU(3) | Symmetry of non-degenerate triangular closure |
 | SU(2) | Mixing of 2-state degenerate closure |
 | U(1) | Global phase redundancy |
@@ -21,7 +21,7 @@ This note preserves the compact correspondence tables that were previously embed
 
 ## Relation to Existing Frameworks
 
-VED is not a quantization of GR, nor a discretization of QFT.
+VED is not presented as a quantization of GR, nor as a discretization of QFT.
 
 | Framework | Relation to VED |
 |---|---|

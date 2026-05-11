@@ -252,15 +252,15 @@ $$
 
 where $\Gamma$ is the dissipation rate.
 
-**(iii) Barrier term — the prohibition of complete closure**
+**(iii) Effective barrier term — non-closure constraint**
 
-As a basic principle of VED, complete closure at $C = C_{\max} = 1$ is prohibited. This is a structural constraint that follows from the foundational axiom "*there is difference*." The prohibition is expressed as a repulsive potential that diverges as $C \to C_{\max}$:
+Complete closure at $C = C_{\max} = 1$ is not treated as an ordinary attainable state, because it would remove the residual difference required for quasi-closure and informational persistence. In the present effective model, this non-closure constraint is represented by a repulsive phenomenological term:
 
 $$
 \sigma_{\mathrm{barrier}} = -\frac{\kappa_B}{C_{\max} - C},
 $$
 
-where $\kappa_B$ is the barrier strength. This term prevents asymptotic approach to complete closure and ensures circulation as a quasi-closure.
+where $\kappa_B$ is an effective barrier strength. This term does not claim to be the microscopic origin of non-closure; it encodes, at the present level of description, the resistance to complete closure required for circulation as a quasi-closure.
 
 ### 5.2 The unified VED×IFGT equation
 
@@ -284,12 +284,19 @@ $$
 \qquad (5.2)
 $$
 
+This equation is understood on the effective domain
+$0 \le C < C_{\max}$. Near both boundaries, additional regularization terms
+may be required in a microscopic model.
+
 $$
 J_C = -D \nabla C - \mu \alpha \, C \nabla C.
 \qquad (5.3)
 $$
 
 The second term on the right-hand side of (5.3) originates from the constraint potential gradient $F_I = \alpha\nabla C$ given in (4.3), rewritten in terms of $C$ under the linear assumption (5.1).
+Here $C_*$ denotes the effective saturation scale of quasi-closure, while
+$C_{\max}=1$ denotes the ideal complete-closure boundary. In general,
+$C_* < C_{\max}$ in informational regimes.
 
 **On the temporal argument.** The time derivative in (5.2) is taken with respect to the informational time $\tau$ (§2.3), which is not an external parameter defined on a background spacetime. $\tau$ is generated endogenously from the update process of the closure-degree field $C$ itself; in this sense, (5.2) is an equation that internalizes the generative process of time.
 
@@ -315,14 +322,18 @@ Equation (5.2) could, in principle, generate an extremely broad class of structu
 
 These may all be positioned as distinct solution classes of (5.2), but their individual identification and derivation lie beyond the scope of this paper. Under the division of roles in which VED handles generation, IFGT handles structure, and the unified equation (5.2) bridges the two through dynamics, these concrete correspondences will be developed in separate works.
 
-### 5.4 The minimal axiom system
+### 5.4 The minimal foundation and effective tendency
 
-Equation (5.2) is derived from the following **two axioms**:
+Equation (5.2) is built from one foundational axiom and one effective
+dynamical tendency:
 
 1. *There is difference.* (the foundational axiom of VED)
-2. *Difference tends to close.* (the additional axiom of IFGT)
+2. *Difference tends to form partial closure.* (an effective dynamical tendency used at the IFGT layer)
 
-From the first axiom, the driving and barrier terms are derived; from the second, the dissipation term and the construction of the information flow are derived. The unified VED×IFGT system is thus built upon these two minimal axioms.
+From the foundational axiom, the driving and effective barrier terms are
+motivated; from the effective tendency, the dissipation term and the
+construction of the information flow are introduced. The unified VED×IFGT
+system is therefore built without adding a second foundational axiom to VED.
 
 ---
 
@@ -332,7 +343,7 @@ This paper has proposed Information Field Geometry Theory (IFGT) and redefined i
 
 IFGT is positioned as an upper-layer theory built upon the generative structure described by Vortical Enclosure Dynamics (VED), and it clarifies the correspondence between physical persistence through closure and informational structure through quasi-closure. The two are not opposing theories but complementary frameworks describing the same generative structure from different aspects. In particular, by formulating the relation between information density $I$ and closure degree $C$ as $I = f(1 - C)$, the division of roles between the two theories is made explicit at the level of variables.
 
-The theory introduces the information density $I$, the information flow $J$, the information potential $\Phi$, the informational time $\tau$, and the generation term $\sigma$ to describe motion within a quasi-closure. In Chapter 5, $\sigma$ is expanded into three contributions — driving, dissipation, and barrier — and a single evolution equation for the closure-degree field $C(x,\tau)$ is obtained as the unified VED×IFGT equation. This equation is derived from two minimal axioms: "*there is difference*" and "*difference tends to close*."
+The theory introduces the information density $I$, the information flow $J$, the information potential $\Phi$, the informational time $\tau$, and the generation term $\sigma$ to describe motion within a quasi-closure. In Chapter 5, $\sigma$ is expanded into three contributions — driving, dissipation, and barrier — and a single evolution equation for the closure-degree field $C(x,\tau)$ is obtained as the unified VED×IFGT equation. This equation is built from the foundational VED axiom "*there is difference*" together with the IFGT-layer effective tendency that difference forms partial closure.
 
 Within this framework, information appears not as a static object of description, but as a dynamic process that participates in structural formation through the persistence of difference and the constraint of flow. Physical structure and informational structure are not separated entities; they are understood as being generated cyclically through mutual influence.
 

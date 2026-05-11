@@ -115,7 +115,7 @@ This equation has the following properties:
 
 - When $\rho_i = 0$: no structure exists, so nothing is retained ($C_{ij} = 0$).
 - As $\rho_i$ increases: existing structure amplifies selection from new history.
-- As $H_{ij} \to \infty$: $C_{ij} \to 1$, but never reaches it (complete closure is prohibited; see Chapter 3).
+- As $H_{ij} \to \infty$: $C_{ij} \to 1$, but never reaches it within the generated description (see Chapter 3).
 
 The result is a self-referential loop:
 
@@ -403,23 +403,23 @@ where:
 - $\alpha|\sum\vec{e}_i|^2$: cost of residual imbalance (non-closure),
 - $-\beta\Phi(A)$: reward for non-degenerate triangular closure,
 - $\gamma|A|$: size cost,
-- $B(L(A))$: complete-closure prohibition barrier (see §5.5).
+- $B(L(A))$: effective non-closure barrier (see §5.5).
 
 A **particle** is a local minimum of $E(A)$.
 
 $$\boxed{\text{Closure structures are dynamical attractors; particles are their local minima.}}$$
 
-## 5.5 The Complete-Closure Prohibition
+## 5.5 The Non-Closure Constraint
 
 If a closure were complete — if all edges saturated at $C_{ij} = 1$ — all gradients would vanish and dynamics would cease. This contradicts the minimal axiom: *there is difference*. Therefore:
 
 $$\boxed{L < L_{\max} \quad \text{at all times.}}$$
 
-This constraint is enforced by the closure barrier:
+In this overview, the constraint is represented by an effective closure barrier:
 
 $$B(L) = -\kappa_B \log\!\left(1 - \frac{L}{L_{\max}}\right), \qquad L \to L_{\max} \;\Rightarrow\; B(L) \to \infty$$
 
-The barrier is not an additional assumption. It is the dynamical expression of the minimal axiom: complete symmetry is forbidden because it would terminate existence.
+The barrier should be read as a phenomenological encoding of the fact that complete symmetry would erase the differences required for dynamics. Vol.4 later reinterprets this kind of barrier parameter as an emergent or projected effective quantity, not as a fundamental external prohibition.
 
 $$\boxed{\text{Structure persists because complete closure is unreachable.}}$$
 
@@ -587,13 +587,13 @@ $$\boxed{\text{Dynamics produces structure; structure stabilizes dynamics.}}$$
 
 This mutual reinforcement is not circular. It is the self-referential attractor structure of the selection equation $C_{ij} = 1 - \exp(-\lambda\rho_i H_{ij})$.
 
-## 7.5 The Prohibition on Complete Closure
+## 7.5 The Non-Closure Constraint
 
 A central result is that closure is never complete. If a closure were to saturate — if all edges reached $C_{ij} = 1$ — all gradients would vanish and dynamics would cease. This contradicts the minimal axiom. Therefore:
 
 $$\boxed{L < L_{\max} \quad \text{at all times.}}$$
 
-The closure barrier $B(L) = -\kappa_B\log(1 - L/L_{\max})$ enforces this prohibition dynamically.
+The effective barrier $B(L) = -\kappa_B\log(1 - L/L_{\max})$ summarizes this non-closure constraint at the phenomenological level.
 
 $$\boxed{\text{Existence requires incompleteness. The world persists because it never fully closes.}}$$
 
