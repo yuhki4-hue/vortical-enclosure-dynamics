@@ -65,7 +65,7 @@ latexmk -pdf main.tex
 | Layer | Theory | Repository |
 |-------|--------|------------|
 | L0 (generation) | VED Vol. 1–4 | `vortical-enclosure-dynamics/` |
-| L0 (structure)  | IFGT          | `IFGT/` |
+| L0 (structure)  | IFGT          | `Information-Field-Geometry-Theory/` |
 | L1 (application) | **Conceptual Topography [this]** | `conceptual-topography/` |
 | L1 (application) | Consciousness Theory | `[forthcoming]` |
 | L1 (application) | Intelligence Theory  | `[forthcoming]` |
@@ -78,7 +78,8 @@ All variables follow the Master Variable Table v2.1 used in the VED × IFGT
 series.
 
 Key identities:
-- `I = f(1 - C)` — information density from closure degree
+- `I = f(1 - C)` — general IFGT information density; CT uses its
+  cognitive-window projection
 - `Φ = K ∗ I` — potential (primary definition; non-local)
 - `J_I = -D∇I + μF_I` — information flow (IFGT side)
 - `J_C = -D∇C - μαC∇C` — closure flow (VED side)
@@ -95,8 +96,8 @@ general IFGT variables.
 
 ## arXiv Submission
 
-For arXiv submission, use `main_arxiv.tex` (to be generated),
-which integrates all sections into a single flat file.
+For arXiv submission, a flattened `main_arxiv.tex` can be generated from the
+modular source.
 
 ---
 
