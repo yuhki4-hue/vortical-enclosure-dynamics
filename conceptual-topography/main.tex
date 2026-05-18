@@ -1,0 +1,123 @@
+% ============================================================
+%  Conceptual Topography
+%  A Field-Theoretic Account of Conceptual Landscapes
+%
+%  Author : Yuhki Endoh (Independent Researcher)
+%  Repo   : conceptual-topography/
+%  Series : VED × IFGT Application Layer 1
+%  Date   : 2026
+% ============================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% ---- packages ----
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{cleveref}
+\usepackage{microtype}
+\usepackage{natbib}
+
+\geometry{
+  top=25mm, bottom=25mm,
+  left=25mm, right=25mm
+}
+
+% ---- fonts ----
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+
+% ---- colors ----
+\definecolor{vedblue}{RGB}{30,100,180}
+\definecolor{ifgtorange}{RGB}{180,80,20}
+\definecolor{clgreen}{RGB}{40,140,80}
+
+% ---- theorem environments ----
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+
+% ---- notation macros (Master Table v2.1) ----
+\newcommand{\JI}{J_{\!I}}
+\newcommand{\JC}{J_{\!C}}
+\newcommand{\Cmax}{C_{\max}}
+\newcommand{\Phistar}{\Phi^{*}}
+\newcommand{\seddto}{\xrightarrow{\;\mathrm{sed.}\;}}
+
+% ---- hyperref setup ----
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = vedblue,
+  citecolor  = clgreen,
+  urlcolor   = ifgtorange,
+  pdftitle   = {Conceptual Topography},
+  pdfauthor  = {Yuhki Endoh},
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ---- title ----
+\title{%
+  \textbf{Conceptual Topography}\\[6pt]
+  {\large A Field-Theoretic Account of Conceptual Landscapes}\\[4pt]
+  {\normalsize VED $\times$ IFGT Application Layer 1}
+}
+\author{%
+  Yuhki Endoh\\
+  {\small Independent Researcher}
+}
+\date{2026}
+\maketitle
+
+% ---- scope declaration (Master Table v2.1) ----
+\begin{quote}
+\small\itshape
+This paper operates within the VED$\times$IFGT framework established in
+\cite{VED_vol1,VED_vol2,VED_vol3,VED_vol4,IFGT}.
+All variables conform to the Master Variable Table v2.1.
+The present work does not redefine $C$, $I$, $\Phi$, $\JI$, $\JC$, $\sigma$,
+or $\tau$; it applies them to the domain of conceptual structure and thought dynamics.
+The primary definition $\Phi = K*I$ is used throughout;
+the linear approximation $\Phi \approx -\alpha C + \Phi_0$ is employed only where
+explicitly stated.
+Semantic, psychological, or intentional interpretations of these quantities
+are not assumed unless explicitly stated.
+The strict inequality $C < \Cmax$ is maintained at all times.
+Conceptual-domain uses of $I$, $C$, and $\Phi$ should be read as projected
+or coarse-grained realizations of the IFGT variables within a cognitive
+observation window.
+\end{quote}
+
+\vspace{4pt}
+
+% ---- sections ----
+\input{sections/abstract}
+\newpage
+\tableofcontents
+\newpage
+
+\input{sections/introduction}
+\input{sections/intuitive_picture}
+\input{sections/formal_mapping}
+\input{sections/core_equations}
+\input{sections/structural_interpretation}
+\input{sections/dynamics}
+\input{sections/multiscale}
+\input{sections/pathologies}
+\input{sections/relation_to_note}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% ---- bibliography ----
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

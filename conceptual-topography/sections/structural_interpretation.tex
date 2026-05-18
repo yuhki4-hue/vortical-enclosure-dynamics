@@ -1,0 +1,82 @@
+% ============================================================
+%  §5  Structural Interpretation
+% ============================================================
+
+\section{Structural Interpretation}
+\label{sec:structural}
+
+\subsection{Solution Classes of the Unified Equation}
+
+The unified VED$\times$IFGT equation admits several classes of
+solutions that correspond to distinct cognitive phenomena.
+We identify the principal classes here; detailed analysis is
+deferred to future work.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.29\textwidth}p{0.31\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Solution class} & \textbf{Field structure} & \textbf{Cognitive interpretation} \\
+\midrule
+Smooth gradient region   & $\nabla\Phi$ slowly varying     & Background cognitive disposition \\
+Shallow metastable well  & $\nabla\Phi\approx 0$, small depth & Tentative or unstable concept \\
+Deep stable well         & $\nabla\Phi\approx 0$, large depth & Entrenched concept or belief \\
+Limit-cycle trajectory   & $\JI$ circulates without sedimentation & Recurring thought pattern \\
+Barrier region           & $|\nabla\Phi|$ large             & Cognitive block or resistance \\
+Ridge structure          & Local maximum of $\Phi$           & Conceptual boundary or category edge \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Depth, Width, and Robustness}
+
+Three geometric parameters characterize a conceptual attractor:
+
+\textbf{Depth} ($-\min\Phi$ within the well) measures resistance to
+deformation by new input. Deep concepts are stable under perturbation;
+shallow concepts are easily displaced.
+
+\textbf{Width} (spatial extent of the sub-threshold region) measures
+contextual range. Broad concepts apply across many domains; narrow
+concepts are context-specific.
+
+\textbf{Robustness} (curvature of $\Phi$ at the minimum) measures
+precision. High curvature produces sharp, well-defined concepts;
+low curvature produces fuzzy or polysemous ones.
+
+These parameters are not fixed intrinsic properties; they evolve
+continuously with $\Phi$ under the dynamics of
+Eqs.~\eqref{eq:I_evolution}--\eqref{eq:sigma_barrier}.
+
+\subsection{Conceptual Boundaries}
+
+Ridge structures in $\Phi$ --- regions of locally high potential
+separating neighboring wells --- correspond to conceptual boundaries:
+the distinctions between concepts.
+These boundaries are not sharp lines but extended regions of high
+traversal cost.
+
+A key consequence is that conceptual boundaries shift under repeated
+linguistic or experiential perturbation.
+Tokens that consistently couple to the gradient near a ridge will
+either reinforce it (deepening the distinction) or erode it (merging
+the adjacent concepts).
+This provides a mechanistic account of semantic drift and conceptual
+change.
+
+\subsection{The Vocabulary as a Distribution}
+
+The full set of stabilized tokens $\{\ell_i\}$ constitutes a vocabulary.
+In this framework, vocabulary is not a list but a distribution over
+stability measures:
+\begin{equation}
+  \mathcal{V} = \bigl\{\ell_i \;\big|\; S(\ell_i) > \epsilon \bigr\},
+  \label{eq:vocabulary}
+\end{equation}
+where $S(\ell_i)$ is a stability functional derived from reuse frequency,
+persistence time, and basin depth, and $\epsilon$ is a system-dependent
+threshold.
+
+Vocabulary is a field property, continuously reshaped by use.
+Token frequencies reflect basin accessibility, not semantic importance.
+Boundaries between tokens are fuzzy and context-sensitive.
