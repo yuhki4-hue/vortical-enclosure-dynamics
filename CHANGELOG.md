@@ -2,6 +2,15 @@
 
 All notable changes to this repository will be documented in this file.
 
+## Unreleased
+
+- Added `bio-ifgt/`, a biological coarse-graining of IFGT/VED.
+- Added a minimal neural-field toy simulation for morphogen diffusion,
+  constraint-density formation, neural commitment, boundary stabilization,
+  and secondary eye-like commitment.
+- Clarified that Bio-IFGT variables are biological coarse-grained proxies and
+  should not be directly identified with the general IFGT variables.
+
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 
 ### Added

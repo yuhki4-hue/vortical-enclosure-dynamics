@@ -79,9 +79,9 @@ arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
 
-`bio-ifgt/` is a biological coarse-graining of IFGT/VED, describing life,
-development, gene-mediated constraints, and intelligence as quasi-closure
-regimes rather than completed forms.
+- `bio-ifgt/`: A biological coarse-graining of IFGT/VED, describing life,
+  development, gene-mediated constraints, and intelligence as quasi-closure
+  regimes rather than completed forms.
 
 ## Suggested Reading Order
 
