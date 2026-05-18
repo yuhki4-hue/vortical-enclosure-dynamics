@@ -1,0 +1,65 @@
+\section{Development and Morphogenesis}
+
+This section applies the preceding framework to development and morphogenesis. Development is interpreted not as execution of a design, but as a process in which state changes converge toward stable structures.
+
+\subsection{Initial State and Asymmetry}
+
+A fertilized egg is an initial state with broad potential in state space. At this stage, information density may be approximately uniform, and no macroscopic structure is yet fixed.
+
+Small asymmetries nevertheless exist through initial conditions and environmental fluctuations. These asymmetries can seed later structure formation.
+
+\subsection{Morphogens as Information Density}
+
+During development, morphogens form spatial concentration profiles. In the present framework, such profiles are represented as information density:
+\begin{equation}
+  \I(\mathbf{r},t).
+\end{equation}
+Local production creates gradients in \(\I\). Diffusion and degradation then shape the resulting distribution.
+
+\subsection{Dynamics}
+
+A standard coarse-grained form for this process is
+\begin{equation}
+  \frac{\partial \I}{\partial t}
+  = D\nabla^2 \I - \lambda \I + \sigma(\mathbf{r},t;\theta),
+\end{equation}
+where \(D\) is a diffusion coefficient, \(\lambda\) is a decay rate, and \(\sigma\) is a local source constrained by the parameter set \(\theta\).
+
+This equation is not special to this framework. It is a standard reaction--diffusion form used here as a component of the information-flow description.
+
+\subsection{Induced Potential and Gradient}
+
+The distribution of \(\I\) induces a potential
+\begin{equation}
+  \PhiI = \PhiI[\I].
+\end{equation}
+State change is biased by
+\begin{equation}
+  \mathbf{F} = -\nabla \PhiI.
+\end{equation}
+As a result, states become biased toward regions or gradients associated with \(\I\). This bias gives directionality to structure formation.
+
+\subsection{Differentiation by Thresholds}
+
+Cell fate can branch according to thresholds in \(\I\). For example,
+\begin{align}
+  \I(\mathbf{r}) < \theta_1
+  &\quad \Rightarrow \quad \text{state A},\\
+  \theta_1 \leq \I(\mathbf{r}) < \theta_2
+  &\quad \Rightarrow \quad \text{state B},\\
+  \I(\mathbf{r}) \geq \theta_2
+  &\quad \Rightarrow \quad \text{state C}.
+\end{align}
+The variable \(\I\) is continuous, while the observed outcome may be discrete. Differentiation is therefore interpreted as a threshold response to continuous state change.
+
+\subsection{Morphology as Attractor}
+
+The combination of dynamics and thresholds stabilizes distributions and fixes differentiation patterns. The stable state is the morphology observed in development. Morphology is thus not an independently specified object. It is the result of dynamical convergence.
+
+\subsection{Robustness}
+
+Development is often reproducible and robust. In this framework, robustness follows from attractor structure: multiple nearby initial states can converge to the same stable configuration. Local fluctuations are absorbed by the dynamics.
+
+\subsection{Summary}
+
+Development and morphogenesis are described through small initial asymmetries, distributions of information density, gradient-driven bias, threshold branching, and convergence to attractors. No design or purpose is required as an additional explanatory primitive.

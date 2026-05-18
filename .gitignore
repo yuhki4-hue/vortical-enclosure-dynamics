@@ -10,6 +10,7 @@
 *.out
 *.synctex.gz
 *.toc
+.texmf-var/
 
 # Local build/output directories
 build/

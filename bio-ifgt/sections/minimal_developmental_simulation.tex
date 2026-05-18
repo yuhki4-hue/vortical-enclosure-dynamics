@@ -1,0 +1,119 @@
+\section{Minimal Developmental Simulation (Bio-IFGT Toy Model)}
+
+\subsection{Purpose}
+
+This section introduces a minimal Bio-IFGT toy model. The purpose is to illustrate how a small set of DNA-like parameters, including sources, diffusion, decay, thresholds, and response rates, can generate stable biological-like structures without explicitly encoding their geometry.
+
+\subsection{Model Setup}
+
+We consider a two-dimensional domain representing an embryo-like field. The system evolves over discrete time steps and consists of four primary fields:
+\begin{itemize}
+  \item morphogen field \(M(x,y,t)\),
+  \item information density \(\I(x,y,t)\),
+  \item neural commitment \(N(x,y,t)\),
+  \item eye-like commitment \(E(x,y,t)\).
+\end{itemize}
+
+An auxiliary boundary field is also introduced:
+\begin{itemize}
+  \item boundary stabilization \(B(x,y,t)\).
+\end{itemize}
+
+\subsection{Dynamics}
+
+\paragraph{Morphogen field.}
+The morphogen field evolves by diffusion, decay, and localized production:
+\begin{equation}
+  \frac{\partial M}{\partial t}
+  =
+  D_M \nabla^2 M - \lambda_M M + \sigma_M(x,y).
+\end{equation}
+
+\paragraph{Information density.}
+The information density accumulates from the morphogen field while also diffusing and decaying:
+\begin{equation}
+  \frac{\partial \I}{\partial t}
+  =
+  D_I \nabla^2 \I - \lambda_I \I + \alpha M.
+\end{equation}
+
+\paragraph{Neural commitment.}
+Neural commitment is updated by thresholding the information density:
+\begin{equation}
+  N_{t+1}
+  =
+  N_t + \eta_N S(\I - \theta_N)(1 - N_t).
+\end{equation}
+
+\paragraph{Boundary field.}
+The boundary field is derived from the gradient structure of information density:
+\begin{equation}
+  G = |\nabla \I|.
+\end{equation}
+The boundary field represents regions where spatial variation is locally maximized.
+It then stabilizes through a thresholded update:
+\begin{equation}
+  B_{t+1}
+  =
+  B_t + \eta_B S(G - \theta_B)(1 - B_t).
+\end{equation}
+
+\paragraph{Eye-like commitment.}
+The eye-like commitment field is updated only where neural commitment, boundary stabilization, and a positional window are simultaneously active:
+\begin{equation}
+  E_{t+1}
+  =
+  E_t
+  + \eta_E S(N - \theta_{EN}) S(B - \theta_{EB}) A(x,y)(1 - E_t).
+\end{equation}
+The thresholding function is
+\begin{equation}
+  S(z) = \frac{1}{1 + e^{-kz}}.
+\end{equation}
+
+\subsection{Interpretation}
+
+The model encodes no explicit geometric description of neural or eye-like structures. Instead, it specifies localized sources \(\sigma_M\), diffusion and decay parameters, threshold conditions, and response rates. From these conditions, a hierarchical structure appears:
+\begin{enumerate}
+  \item a smooth morphogen gradient forms in \(M\),
+  \item an information-density landscape develops in \(\I\),
+  \item a neural-plate-like region emerges through thresholding in \(N\),
+  \item boundary structure arises from gradients in \(B\),
+  \item eye-like localized structures appear through secondary thresholding in \(E\).
+\end{enumerate}
+
+\subsection{Key Observation}
+
+The emergence proceeds through successive constraints:
+\begin{equation}
+  M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E.
+\end{equation}
+Each stage introduces a higher-order structural condition:
+\begin{itemize}
+  \item \(\I\): scalar field,
+  \item \(\nabla \I\): first-order structure,
+  \item thresholding: discretization,
+  \item combined conditions: localization.
+\end{itemize}
+
+\subsection{Conceptual Implication}
+
+The simulation illustrates that biological-like structure need not be encoded as a completed form. It can arise as a stable solution within a constrained information landscape.
+
+In this sense, DNA-like parameters act as conditions that shape the geometry of possible states.
+
+\subsection{Relation to Bio-IFGT}
+
+Within the Bio-IFGT framework:
+\begin{itemize}
+  \item \(\I\) corresponds to information density,
+  \item \(\PhiI \sim -\I\) defines an effective potential landscape,
+  \item \(\J \sim -\nabla \PhiI\) induces flows toward stable regions.
+\end{itemize}
+The observed structures correspond to attractor-like configurations of this field.
+
+Each stage in the generation path \(M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E\) can be interpreted as a successive localization of quasi-closure: the morphogen field establishes a global information gradient, which drives local accumulation of \(\I\), which in turn crosses thresholds that stabilize sub-regions of the field. The eye-like commitment \(E\) represents a secondary quasi-closure, supported by but distinct from the neural-plate-like region \(N\). This hierarchical structure mirrors the attractor-within-attractor interpretation of differentiation developed in Section 7.7.
+
+\subsection{Limitations}
+
+This model is intentionally minimal and does not attempt to reproduce biological detail. It serves only to demonstrate the structural principle of emergence under constrained dynamics.

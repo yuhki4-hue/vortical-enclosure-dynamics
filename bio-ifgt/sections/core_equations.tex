@@ -1,0 +1,80 @@
+\section{Core Equations}
+
+This section introduces the minimal equation system used throughout the paper. The equations are not tied to a specific biological system. They provide a general form for describing state change, flow, and stable structure.
+
+\subsection{Basic Variables}
+
+The basic fields are the information density
+\begin{equation}
+  \I(\mathbf{r},t)
+\end{equation}
+and the information flow
+\begin{equation}
+  \J(\mathbf{r},t).
+\end{equation}
+The field \(\I\) represents local density of structure or constraint. The field \(\J\) represents the direction and rate of state change.
+
+\subsection{Continuity Equation}
+
+Information density obeys the continuity equation
+\begin{equation}
+  \frac{\partial \I}{\partial t} + \nabla \cdot \J = \sigma,
+  \label{eq:continuity}
+\end{equation}
+where \(\sigma(\mathbf{r},t)\) is a local generation rate. This equation records local production, outflow, and conservation-like transport of the coarse-grained quantity \(\I\).
+
+\subsection{Structure of the Flow}
+
+The flow is written as
+\begin{equation}
+  \J = -D\nabla \I + \mu \mathbf{F},
+  \label{eq:flow}
+\end{equation}
+where \(D\) is a diffusion coefficient, \(\mu\) is a response coefficient, and \(\mathbf{F}\) is an induced direction field.
+
+\subsection{Potential}
+
+The direction field is determined by the induced potential:
+\begin{equation}
+  \mathbf{F} = -\nabla \PhiI.
+  \label{eq:force}
+\end{equation}
+The potential is a functional of information density:
+\begin{equation}
+  \PhiI = \PhiI[\I].
+  \label{eq:potential}
+\end{equation}
+The specific form of \(\PhiI\) is system-dependent and left unspecified.
+Thus, biases in information density induce a gradient-driven bias in state change.
+The sign convention is fixed only after \(\PhiI[\I]\) is specified.
+For example, choosing \(\PhiI\sim-\I\) makes the induced component
+\(-\nabla\PhiI\) point toward increasing constraint density.
+Other biological observables may require the opposite convention or additional
+response terms.
+
+\subsection{Dynamical Loop}
+
+Equations~\eqref{eq:continuity}--\eqref{eq:potential} form a loop: the distribution of \(\I\) induces \(\PhiI\), the potential shapes \(\J\), and the flow redistributes \(\I\). In general this loop does not necessarily terminate in a static equilibrium. It can produce non-equilibrium structures that are sustained under continued update.
+
+\subsection{Two-Layer Description of Time}
+
+The equations use the external time parameter \(t\). An internal time \(\tau\) can be introduced as
+\begin{equation}
+  \frac{\dd \tau}{\dd t} = \rho(\I,\J),
+\end{equation}
+where \(\rho(\I,\J)\) is a state-dependent progression rate. The variable \(t\) is used for equations of motion. The variable \(\tau\) is used to interpret the internal progress of the system.
+
+\subsection{Stable Structures}
+
+Under these dynamics, a region of state space is stable if states within or near it tend to remain there or return after perturbation. Such a region is interpreted as an attractor.
+
+\subsection{Summary}
+
+The minimal equation system is
+\begin{align}
+  \frac{\partial \I}{\partial t} + \nabla \cdot \J &= \sigma,\\
+  \J &= -D\nabla \I + \mu \mathbf{F},\\
+  \mathbf{F} &= -\nabla \PhiI,\\
+  \PhiI &= \PhiI[\I].
+\end{align}
+This system describes state change, flow formation, and the emergence of stable structures in a common form.

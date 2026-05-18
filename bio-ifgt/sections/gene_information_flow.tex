@@ -1,0 +1,69 @@
+\section{Gene \texorpdfstring{\(\times\)}{x} Information Flow}
+
+This section describes DNA and gene-related processes in terms of information density and information flow. The aim is to describe the emergence of development, form, and cell fate as sequences of state change, rather than as the execution of semantic instructions.
+
+\subsection{Role of DNA}
+
+A DNA sequence \(s\) is written as
+\begin{equation}
+  s \in \{A,T,G,C\}^{N}.
+\end{equation}
+The sequence has no intrinsic meaning or purpose in the present formalism. It constrains molecular possibilities, reaction propensities, and threshold conditions.
+
+Thus DNA is treated as a parameter set
+\begin{equation}
+  \theta = \theta(s),
+\end{equation}
+which constrains system dynamics. It is not treated as a direct specification of a completed form.
+
+\subsection{Gene Events as State Changes}
+
+Transcription, translation, binding, and modification are represented as local operations that change information density:
+\begin{equation}
+  \I(\mathbf{r},t) \mapsto \I(\mathbf{r},t) + \Delta \I.
+\end{equation}
+Although these events are discrete, their aggregate effect can be represented as a continuous information flow \(\J(\mathbf{r},t)\). A gene network is therefore interpreted as a relational structure that generates information flow.
+
+\subsection{Connection to the Continuity Equation}
+
+In the continuity equation
+\begin{equation}
+  \frac{\partial \I}{\partial t} + \nabla \cdot \J = \sigma,
+\end{equation}
+the source term \(\sigma\) represents information generation due to gene-related events. The flow \(\J\) represents the accumulated effect of such events across space and time.
+
+\subsection{Bias and Induced Potential}
+
+When information density becomes biased, it induces a potential
+\begin{equation}
+  \PhiI = \PhiI[\I].
+\end{equation}
+State change is then biased according to
+\begin{equation}
+  \mathbf{F} = -\nabla \PhiI.
+\end{equation}
+This is not a new fundamental force. It describes the ordinary dynamical fact that stable states are more easily maintained and can draw nearby states into their basin.
+
+\subsection{If--Then Conditions as Thresholds}
+
+The conditional effects associated with DNA are implemented as threshold conditions in a continuous field. For a response function \(F_k\), a reaction may switch when
+\begin{equation}
+  F_k(\I,\J,\mathbf{r},t;\theta) > \theta_k.
+\end{equation}
+Here \(\theta_k\) is a parameter induced by the DNA-dependent parameter set \(\theta\). The condition is not a symbolic rule in isolation. It is a threshold in the dynamics.
+
+\subsection{Interpretation of Form}
+
+The resulting picture is as follows. DNA supplies parameters. Information density and information flow are formed. Biases in \(\I\) induce \(\PhiI\). Flow is shaped by the induced potential. Thresholds branch the state. Stable configurations then appear as attractors. Cell fate and morphology are observed as such stable configurations.
+
+\subsection{Scale Invariance}
+
+The same formal structure can be used at molecular, cellular, and tissue scales. The level of coarse-graining changes, but the variables \(\I\), \(\J\), \(\PhiI\), thresholds, and stable solutions retain the same roles.
+
+\subsection{Summary}
+
+DNA is treated as a condition-setting parameter set. Biological structure appears as a stable solution formed by information density and information flow. This provides the basis for the treatment of development and morphogenesis in the next section.
+
+\subsection{Origin of the Parameter Set}
+
+At this descriptive layer, the parameter set \(\theta\) is not treated as a primitive. In IFGT terms, \(\theta\) may be read as a quasi-closure structure stabilized through prior dynamics of difference: a configuration retained by the persistence of certain closure patterns over others. DNA sequences are therefore interpreted here as historically stabilized constraint patterns that persisted because they supported sustained non-equilibrium dynamics. This does not derive the concrete origin of \(\theta\) for a given organism. It only states that \(\theta\) need not be placed outside the framework as an explanatory object.

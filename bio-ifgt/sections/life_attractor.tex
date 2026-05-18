@@ -1,0 +1,59 @@
+\section{Life as Attractor}
+
+This section formulates life not as a completed object, but as a sustained stable structure in state space. This view allows maintenance, development, differentiation, and regeneration to be described within one dynamical framework.
+
+\subsection{State-Space Description}
+
+A biological system is represented by a state vector
+\begin{equation}
+  x(t) = (x_1(t),x_2(t),\ldots,x_n(t)),
+\end{equation}
+where the components may include molecular concentrations, expression levels, reaction rates, and local environmental variables.
+
+The system evolves as
+\begin{equation}
+  \frac{\dd x}{\dd t} = F(x;\theta),
+\end{equation}
+where \(\theta\) is the parameter set associated with DNA-dependent constraints such as reaction propensities and thresholds.
+
+\subsection{Internal Time}
+
+In addition to external time \(t\), we introduce an internal time \(\tau\) that measures the progress of state update:
+\begin{equation}
+  \frac{\dd \tau}{\dd t} = \rho(x).
+\end{equation}
+The function \(\rho(x)\) is a state-dependent progression rate. The variable \(\tau\) represents accumulated state change or information update, and need not coincide with \(t\). Equations of motion are written in \(t\); \(\tau\) is used to interpret their internal progression.
+
+\subsection{Definition of Life}
+
+Life is not a single state. It is motion that continues while remaining within a bounded region of state space. Such motion is not static, does not diverge arbitrarily, and remains constrained within a viable range. In this regime, \(\tau\) continues to increase.
+
+\subsection{Life as Attractor}
+
+Let \(\Omega\) be the state space and let
+\begin{equation}
+  \Omega_{\mathrm{life}} \subset \Omega
+\end{equation}
+be a region such that, once the system enters it, the dynamics tend to return to it after moderate perturbation. We call \(\Omega_{\mathrm{life}}\) the life attractor.
+
+This region is not externally imposed. It is formed through interactions within the system and its environment.
+
+\subsection{Non-Equilibrium Sustained Structure}
+
+The life attractor is not an equilibrium state. Matter enters and leaves, molecules are replaced, and energy is consumed. Nevertheless, the organization persists. Life is therefore interpreted as a sustained structure in a non-equilibrium state.
+
+\subsection{Relation to Development}
+
+The developmental process described in Section 6 can be interpreted as convergence from an initial state toward the life attractor. Reproducibility and robustness arise when multiple initial conditions converge to the same attractor region.
+
+\subsection{Differentiation and Sub-Attractors}
+
+Within the life attractor, more specific stable regions may exist. These are sub-attractors. Cell differentiation is interpreted as transition into such sub-attractors within \(\Omega_{\mathrm{life}}\). This structure can describe discreteness, plasticity, and partial reversibility without treating differentiated states as externally specified endpoints.
+
+\subsection{Robustness and Regeneration}
+
+Robustness follows from the attractor property. When perturbations displace the system, the dynamics can return it toward the stable region. Regeneration is interpreted as a case in which attractor structure is reconstructed after a larger disturbance.
+
+\subsection{Summary}
+
+Life is not merely a collection of matter or a static structure. It is dynamically sustained stable motion in state space. This motion is described through dynamics involving information density \(\I\), information flow \(\J\), and induced potential \(\PhiI\). The next section uses this view to revise the formulation of emergence probability.

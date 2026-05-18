@@ -1,0 +1,61 @@
+\section{Formal Mapping}
+
+This section maps the intuitive picture onto formal quantities. The goal is to make the correspondence between intuition and equations explicit, not to derive a complete model for any particular organism.
+
+\subsection{State Description}
+
+A biological system is represented as a spatially and temporally varying state. For position \(\mathbf{r} \in \mathbb{R}^3\) and time \(t \in \mathbb{R}\), we consider coarse-grained fields rather than all microscopic molecular details.
+
+\subsection{Information Density}
+
+The bias or constraint present in a local state is represented by the information density
+\begin{equation}
+  \I(\mathbf{r},t).
+\end{equation}
+Here, information does not mean semantic content. It denotes the degree of local structure, constraint, differentiation, or interdependence.
+
+\subsection{Information Flow}
+
+The direction and rate of state update are represented by the information flow
+\begin{equation}
+  \J(\mathbf{r},t).
+\end{equation}
+The flow combines contributions from reactions, diffusion, transport, and interactions. It describes how the coarse-grained state is updated.
+
+\subsection{Induced Potential}
+
+When information density is spatially biased, state change becomes asymmetric. This asymmetry is represented by an induced potential
+\begin{equation}
+  \PhiI = \PhiI[\I].
+\end{equation}
+This represents an effective potential induced by the distribution of \(\I\).
+The corresponding gradient-driven bias is written as
+\begin{equation}
+  \mathbf{F} = -\nabla \PhiI.
+\end{equation}
+
+\subsection{Relation to Flow}
+
+The information flow can be written as the sum of a diffusive component and a component induced by the potential:
+\begin{equation}
+  \J = -D\nabla \I + \mu \mathbf{F},
+\end{equation}
+where \(D\) is a diffusion coefficient and \(\mu\) is a response coefficient.
+
+\subsection{Treatment of Time}
+
+The equations are written using an external time parameter \(t\). This is the time with respect to which state change is recorded. We may also introduce an internal time \(\tau\) that measures the progress of state update:
+\begin{equation}
+  \frac{\dd \tau}{\dd t} = \rho(\I,\J),
+\end{equation}
+where \(\rho\) is a state-dependent progression rate. In this paper, equations of motion are written in \(t\), while \(\tau\) is used interpretively.
+
+\subsection{Summary}
+
+The mapping is
+\begin{align}
+  \text{bias or constraint} &\mapsto \I,\\
+  \text{state update} &\mapsto \J,\\
+  \text{asymmetry in update} &\mapsto \PhiI.
+\end{align}
+With these quantities, the intuitive picture becomes a continuous-field description.

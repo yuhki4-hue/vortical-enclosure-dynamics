@@ -27,6 +27,8 @@ after submission approval.
   as the smallest form of the Differential Horizon Principle.
 - [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv identifier pending
+- [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)
+  arXiv identifier pending
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
 
@@ -72,9 +74,14 @@ docs/                              explanatory documents, methodology, claims, a
 figures/                           diagrams and visual materials
 paper/                             LaTeX source files and paper-specific figures for Vol.1–Vol.4
 Information-Field-Geometry-Theory/ IFGT source, figures, and compiled PDF
+bio-ifgt/                          biological coarse-graining of IFGT/VED
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
+
+`bio-ifgt/` is a biological coarse-graining of IFGT/VED, describing life,
+development, gene-mediated constraints, and intelligence as quasi-closure
+regimes rather than completed forms.
 
 ## Suggested Reading Order
 
