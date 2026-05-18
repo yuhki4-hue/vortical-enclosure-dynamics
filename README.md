@@ -27,7 +27,7 @@ after submission approval.
   as the smallest form of the Differential Horizon Principle.
 - [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv identifier pending
-- [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)
+- [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
   arXiv identifier pending
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
