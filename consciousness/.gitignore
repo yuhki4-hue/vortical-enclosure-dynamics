@@ -1,0 +1,12 @@
+# Keep the PDF figures used by the TeX sources.
+# SVG/PNG exports are local figure-generation artifacts and need not be committed.
+figures/*.svg
+figures_ja/*.svg
+figures_ja/*.png
+
+# Local compiled manuscripts can be regenerated from source.
+main.pdf
+main_ja.pdf
+
+# Old flattened drafts are kept locally only; the maintained source is modular TeX.
+draft_*.md
