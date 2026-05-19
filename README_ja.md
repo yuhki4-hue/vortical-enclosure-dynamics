@@ -19,6 +19,10 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
   2026年5月に大幅改訂。registered difference、trace formation、local Differential Horizons を中核的な記述枠組みとして導入しました。Divergence は boundary signal として、renormalization は boundary contact の finite re-expression として読み替えられます。動的バリア（§13）は Differential Horizon Principle の最小形として再解釈されています。
 - [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv ID は未確定
+- [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
+  arXiv ID は未確定
+- [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](conceptual-topography/main.pdf)  
+  arXiv ID は未確定
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
 
@@ -51,9 +55,16 @@ docs/                              解説文書、方法論、主張整理、未
 figures/                           図表・概念図
 paper/                             Vol.1–Vol.4 の LaTeX ソースと論文用図版
 Information-Field-Geometry-Theory/ IFGT のソース、図版、PDF
+bio-ifgt/                          IFGT/VED の生物学的 coarse-graining
+conceptual-topography/             IFGT/VED の認知・社会的応用層
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
+
+- `bio-ifgt/`: IFGT/VED の生物学的 coarse-graining。生命、発生、
+  遺伝子媒介的制約、知性を、完成形ではなく準閉包レジームとして記述します。
+- `conceptual-topography/`: IFGT/VED の認知・社会的応用層。概念、理解、
+  言語トークン、共有された概念地形を、投影された準閉包レジームとして記述します。
 
 ## 推奨読書順
 
