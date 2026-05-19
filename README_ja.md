@@ -23,6 +23,8 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
   arXiv ID は未確定
 - [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](conceptual-topography/main.pdf)  
   arXiv ID は未確定
+- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](consciousness/main.pdf)  
+  arXiv ID は未確定
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
 
@@ -57,6 +59,7 @@ paper/                             Vol.1–Vol.4 の LaTeX ソースと論文用
 Information-Field-Geometry-Theory/ IFGT のソース、図版、PDF
 bio-ifgt/                          IFGT/VED の生物学的 coarse-graining
 conceptual-topography/             IFGT/VED の認知・社会的応用層
+consciousness/                     時間的非閉包とログ参照としての意識論
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
@@ -65,6 +68,9 @@ notes/                             作業ノートと補足資料
   遺伝子媒介的制約、知性を、完成形ではなく準閉包レジームとして記述します。
 - `conceptual-topography/`: IFGT/VED の認知・社会的応用層。概念、理解、
   言語トークン、共有された概念地形を、投影された準閉包レジームとして記述します。
+- `consciousness/`: 意識を、生成された対象ではなく、時間的非閉包、
+  speed-scale orchestration、ログ参照として開かれるレジームとして記述する
+  応用層です。IFGT 変数は、生物的・認知的観測窓に射影された有効変数として扱います。
 
 ## 推奨読書順
 

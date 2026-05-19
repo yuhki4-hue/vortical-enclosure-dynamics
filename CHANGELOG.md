@@ -18,6 +18,13 @@ All notable changes to this repository will be documented in this file.
 - Aligned Conceptual Topography with the revised closure framework by treating
   conceptual variables as cognitive-window projections and effective barrier
   terms as coarse-grained resistance rather than fundamental prohibitions.
+- Added `consciousness/`, an application-layer account of consciousness as
+  temporal non-closure, speed-scale orchestration, and cross-scale log
+  referencing.
+- Aligned the consciousness manuscript with the revised VED closure framework by
+  treating consciousness as an opening regime rather than a generated object,
+  using projected IFGT variables and the local log-referencing flow
+  `J_{\log}`.
 
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 

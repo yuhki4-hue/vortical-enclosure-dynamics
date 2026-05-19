@@ -31,6 +31,8 @@ after submission approval.
   arXiv identifier pending
 - [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](conceptual-topography/main.pdf)  
   arXiv identifier pending
+- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](consciousness/main.pdf)  
+  arXiv identifier pending
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
 
@@ -78,6 +80,7 @@ paper/                             LaTeX source files and paper-specific figures
 Information-Field-Geometry-Theory/ IFGT source, figures, and compiled PDF
 bio-ifgt/                          biological coarse-graining of IFGT/VED
 conceptual-topography/             cognitive and social application layer of IFGT/VED
+consciousness/                     consciousness as temporal non-closure and log referencing
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
@@ -88,6 +91,10 @@ notes/                             working notes and supplementary material
 - `conceptual-topography/`: A cognitive and social application layer of
   IFGT/VED, describing concepts, understanding, language tokens, and shared
   conceptual landscapes as projected quasi-closure regimes.
+- `consciousness/`: An application-layer account of consciousness as temporal
+  non-closure, speed-scale orchestration, and log referencing. It treats
+  consciousness as an opening regime rather than as a generated object, using
+  projected IFGT variables inside a biological-cognitive observation window.
 
 ## Suggested Reading Order
 
