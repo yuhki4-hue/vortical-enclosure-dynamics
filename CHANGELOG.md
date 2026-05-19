@@ -10,6 +10,14 @@ All notable changes to this repository will be documented in this file.
   and secondary eye-like commitment.
 - Clarified that Bio-IFGT variables are biological coarse-grained proxies and
   should not be directly identified with the general IFGT variables.
+- Added `conceptual-topography/`, a cognitive and social application layer of
+  IFGT/VED.
+- Added a field-theoretic account of conceptual landscapes, token-field
+  coupling, sedimented attractors, understanding as traversal-cost reduction,
+  and social conceptual synchronization.
+- Aligned Conceptual Topography with the revised closure framework by treating
+  conceptual variables as cognitive-window projections and effective barrier
+  terms as coarse-grained resistance rather than fundamental prohibitions.
 
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 
