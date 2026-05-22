@@ -29,9 +29,9 @@ after submission approval.
   arXiv identifier pending
 - [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
   arXiv identifier pending
-- [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](conceptual-topography/main.pdf)  
+- [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](./conceptual-topography/main.pdf)  
   arXiv identifier pending
-- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](consciousness/main.pdf)  
+- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
   arXiv identifier pending
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).

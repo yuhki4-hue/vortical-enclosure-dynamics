@@ -21,9 +21,9 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
   arXiv ID は未確定
 - [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
   arXiv ID は未確定
-- [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](conceptual-topography/main.pdf)  
+- [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](./conceptual-topography/main.pdf)  
   arXiv ID は未確定
-- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](consciousness/main.pdf)  
+- [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
   arXiv ID は未確定
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
