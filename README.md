@@ -33,6 +33,8 @@ after submission approval.
   arXiv identifier pending
 - [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
   arXiv identifier pending
+- [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
+  arXiv identifier pending
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
 
@@ -81,6 +83,7 @@ Information-Field-Geometry-Theory/ IFGT source, figures, and compiled PDF
 bio-ifgt/                          biological coarse-graining of IFGT/VED
 conceptual-topography/             cognitive and social application layer of IFGT/VED
 consciousness/                     consciousness as temporal non-closure and log referencing
+intelligence-part1/                intelligence as a non-closed dynamical phenomenon
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
@@ -95,6 +98,10 @@ notes/                             working notes and supplementary material
   non-closure, speed-scale orchestration, and log referencing. It treats
   consciousness as an opening regime rather than as a generated object, using
   projected IFGT variables inside a biological-cognitive observation window.
+- `intelligence-part1/`: The first intelligence-layer paper in the VED/IFGT
+  application series. It treats intelligence as a dynamical phenomenon
+  constrained by connected state space, temporal ordering, global constraint,
+  and a local horizon-form requiring externalized stopping structures.
 
 ## Suggested Reading Order
 

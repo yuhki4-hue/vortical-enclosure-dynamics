@@ -25,6 +25,8 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
   arXiv ID は未確定
 - [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
   arXiv ID は未確定
+- [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
+  arXiv ID は未確定
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
 
@@ -60,6 +62,7 @@ Information-Field-Geometry-Theory/ IFGT のソース、図版、PDF
 bio-ifgt/                          IFGT/VED の生物学的 coarse-graining
 conceptual-topography/             IFGT/VED の認知・社会的応用層
 consciousness/                     時間的非閉包とログ参照としての意識論
+intelligence-part1/                非閉包的な力学的現象としての知性論 Part I
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
@@ -71,6 +74,9 @@ notes/                             作業ノートと補足資料
 - `consciousness/`: 意識を、生成された対象ではなく、時間的非閉包、
   speed-scale orchestration、ログ参照として開かれるレジームとして記述する
   応用層です。IFGT 変数は、生物的・認知的観測窓に射影された有効変数として扱います。
+- `intelligence-part1/`: VED/IFGT 応用系列における知性層の第一論文です。
+  知性を、連結状態空間、時間順序、グローバル制約、外化された停止構造を要請する
+  local horizon-form によって制約される力学的現象として扱います。
 
 ## 推奨読書順
 

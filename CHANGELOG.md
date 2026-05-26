@@ -25,6 +25,15 @@ All notable changes to this repository will be documented in this file.
   treating consciousness as an opening regime rather than a generated object,
   using projected IFGT variables and the local log-referencing flow
   `J_{\log}`.
+- Added `intelligence-part1/`, the first intelligence-layer paper in the
+  VED/IFGT application series.
+- Added English and Japanese LaTeX manuscripts, compiled PDFs, references, and
+  bilingual figure sets for Intelligence Part I.
+- Framed intelligence as a non-closed dynamical phenomenon constrained by
+  connected state space, temporal ordering, global constraint `\Phi`, and a
+  local horizon-form requiring externalized stopping structures.
+- Added cross-domain structural comparison between slime mold dynamics and
+  Transformer layer dynamics under the three minimal axioms.
 
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 
