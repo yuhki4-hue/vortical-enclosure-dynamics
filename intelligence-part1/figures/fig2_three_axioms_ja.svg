@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="'Noto Sans CJK JP', 'Noto Sans Mono CJK JP', 'Hiragino Sans', 'Yu Gothic', 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#FAFAF8"/>
+
+  <!-- TITLE -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    図2　三公理の同時必要性
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    知的ダイナミクスは、三つの公理が同時に成り立つときだけ現れる
+  </text>
+
+  <!-- Arrow defs -->
+  <defs>
+    <marker id="arrFail" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 L1.8,4.5 Z" fill="#C0392B"/>
+    </marker>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== THREE OVERLAPPING CIRCLES ========== -->
+  <!-- Geometric layout:
+       Top:    Axiom I  (連結された 状態空間)        center (700, 320), r=200, blue
+       BL:     Axiom II (時間的 順序づけ)            center (570, 510), r=200, green
+       BR:     Axiom III (大域的 constraint Φ)         center (830, 510), r=200, orange
+       Center triangular overlap: intelligent dynamics                                         -->
+
+  <g opacity="0.42">
+    <circle cx="700" cy="320" r="200" fill="#2980B9" stroke="#2980B9" stroke-width="2"/>
+    <circle cx="570" cy="510" r="200" fill="#27AE60" stroke="#27AE60" stroke-width="2"/>
+    <circle cx="830" cy="510" r="200" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+  </g>
+
+  <!-- circle outlines on top (sharp) -->
+  <g fill="none" stroke-width="2.5">
+    <circle cx="700" cy="320" r="200" stroke="#1F6391"/>
+    <circle cx="570" cy="510" r="200" stroke="#1E8449"/>
+    <circle cx="830" cy="510" r="200" stroke="#B9651C"/>
+  </g>
+
+  <!-- ========== AXIOM LABELS (inside circles, away from overlap) ========== -->
+
+  <!-- Axiom I label (top of top-circle) -->
+  <text x="700" y="195" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">公理 I</text>
+  <text x="700" y="225" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">連結された</text>
+  <text x="700" y="247" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">状態空間</text>
+  <text x="700" y="278" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    状態が到達可能である
+  </text>
+  <text x="700" y="294" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    遷移を通じて
+  </text>
+
+  <!-- Axiom II label (bottom-left circle) -->
+  <text x="520" y="555" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">公理 II</text>
+  <text x="520" y="585" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">時間的</text>
+  <text x="520" y="607" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">順序づけ</text>
+  <text x="520" y="635" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    s(t+1) = F(s(t))
+  </text>
+  <text x="520" y="652" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    変化が蓄積する
+  </text>
+
+  <!-- Axiom III label (bottom-right circle) -->
+    <text x="880" y="555" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">公理 III</text>
+    <text x="880" y="585" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">大域的</text>
+    <text x="880" y="607" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">拘束 Φ</text>
+    <text x="880" y="635" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    Φ : S → R
+  </text>
+  <text x="880" y="652" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    局所規則へ還元できない
+  </text>
+
+  <!-- ========== CENTER: triangular overlap ========== -->
+  <!-- The geometric centroid of three circles -->
+  <g>
+    <circle cx="700" cy="455" r="60" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="700" cy="455" r="60" fill="none" stroke="#7D3C98" stroke-width="2.5" stroke-dasharray="4,3"/>
+    <text x="700" y="448" font-size="13" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">知的</text>
+    <text x="700" y="468" font-size="13" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">ダイナミクス</text>
+    <text x="700" y="488" font-size="10" fill="#5B2C72" text-anchor="middle" font-style="italic">(I ∧ II ∧ III)</text>
+  </g>
+
+  <!-- ========== DEGENERATION ANNOTATIONS (outside circles) ========== -->
+
+  <!-- Missing I: top-left exterior  (II + III only) -->
+  <g transform="translate(120, 720)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">公理 I がない場合</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">孤立した局所最適</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">情報伝播なし</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">統合された動態なし</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      例：並列する独立反応器
+    </text>
+  </g>
+
+  <!-- Missing II: center-bottom exterior  (I + III only) -->
+  <g transform="translate(565, 730)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">公理 II がない場合</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">静的固定</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">瞬時の均衡へ崩壊</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">履歴なし、学習なし</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      例：凍結した最適化問題
+    </text>
+  </g>
+
+  <!-- Missing III: right exterior  (I + II only) -->
+  <g transform="translate(1010, 720)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">公理 III がない場合</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">方向なき拡散</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">履歴は蓄積するが漂流する</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">大域的一貫性なし</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      例：記憶つきランダムウォーク
+    </text>
+  </g>
+
+  <!-- (connection lines removed: the labels "WITHOUT 公理 I/II/III" on each box already make the correspondence explicit, and dashed lines crossing the Venn diagram added more confusion than clarity) -->
+
+  <!-- ========== BOTTOM BANNER: "commonly confused with intelligence" ========== -->
+  <g transform="translate(0,0)">
+    <rect x="80" y="865" width="1240" height="25" fill="none"/>
+  </g>
+
+  <!-- Right side legend: "commonly mistaken as intelligence" -->
+  <g transform="translate(80, 130)">
+    <rect x="0" y="0" width="290" height="160" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1" rx="5"/>
+    <text x="145" y="22" font-size="12" font-weight="700" fill="#444444" text-anchor="middle" letter-spacing="1">
+      知性と誤認されがちなもの
+    </text>
+    <line x1="20" y1="32" x2="270" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="20" y="55" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">並列性</tspan>  → II または III を欠く
+    </text>
+    <text x="20" y="78" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">最適化</tspan>  → II を欠く
+    </text>
+    <text x="20" y="101" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">記憶</tspan>  → III を欠く
+    </text>
+    <text x="145" y="135" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      単独では知的ダイナミクスを生まない。
+    </text>
+    <text x="145" y="150" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      同時充足だけがそれを可能にする。
+    </text>
+  </g>
+
+  <!-- Top-right small caption: 下限条件, not upper -->
+  <g transform="translate(1030, 130)">
+    <rect x="0" y="0" width="290" height="160" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1.2" rx="5"/>
+    <text x="145" y="22" font-size="12" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">
+      公理が確立するもの
+    </text>
+    <line x1="20" y1="32" x2="270" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="145" y="55" font-size="12" fill="#1A1A1A" text-anchor="middle">
+      知性の <tspan font-weight="700" fill="#5B2C72">下限条件</tspan> であり、
+    </text>
+    <text x="145" y="73" font-size="12" fill="#1A1A1A" text-anchor="middle">
+      上限ではない
+    </text>
+    <text x="145" y="100" font-size="11" fill="#555555" text-anchor="middle">I ∧ II ∧ III を満たす系が</text>
+    <text x="145" y="116" font-size="11" fill="#555555" text-anchor="middle">高度な知性を保証される</text>
+    <text x="145" y="132" font-size="11" fill="#555555" text-anchor="middle">わけではない——しかし、</text>
+    <text x="145" y="148" font-size="11" fill="#555555" text-anchor="middle">一つでも欠けば維持できない。</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="700" y="877" font-size="11" fill="#888888" text-anchor="middle" font-style="italic">
+    三公理は意味論的に中立である。この水準では、意味・目的・正しさ・主観性を前提しない（§3.5）。
+  </text>
+
+</svg>

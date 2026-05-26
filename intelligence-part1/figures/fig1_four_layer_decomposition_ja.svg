@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780" font-family="'Noto Sans CJK JP', 'Noto Sans Mono CJK JP', 'Hiragino Sans', 'Yu Gothic', 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="780" fill="#FAFAF8"/>
+
+  <!-- ============ TITLE ============ -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    図1　知性の四層分解
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    知覚 → 認識 → 知識 ⇄ 知性
+  </text>
+
+  <!-- ============ GROUP HEADER BANDS ============ -->
+  <!-- Precursor group band -->
+  <rect x="80" y="115" width="540" height="28" fill="#EAEAEA" rx="3"/>
+  <text x="350" y="135" font-size="13" font-weight="600" fill="#444444" text-anchor="middle" letter-spacing="1">
+    前駆層
+  </text>
+
+  <!-- Stopping structure band -->
+  <rect x="650" y="115" width="280" height="28" fill="#EAEAEA" rx="3"/>
+  <text x="790" y="135" font-size="13" font-weight="600" fill="#444444" text-anchor="middle" letter-spacing="1">
+    停止構造
+  </text>
+
+  <!-- Ongoing dynamics band -->
+  <rect x="960" y="115" width="320" height="28" fill="#F1E8F5" rx="3" stroke="#7D3C98" stroke-width="0.8"/>
+  <text x="1120" y="135" font-size="13" font-weight="600" fill="#5B2C72" text-anchor="middle" letter-spacing="1">
+    継続するダイナミクス
+  </text>
+
+  <!-- ============ FOUR LAYER BOXES ============ -->
+
+  <!-- Layer 1: 知覚 -->
+  <g>
+    <rect x="100" y="180" width="240" height="180" fill="#FFFFFF" stroke="#888888" stroke-width="1.5" rx="6"/>
+    <text x="220" y="222" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle">知覚</text>
+    <line x1="125" y1="252" x2="315" y2="252" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="220" y="278" font-size="12" fill="#444444" text-anchor="middle">構造種別</text>
+    <text x="220" y="296" font-size="13" font-weight="600" fill="#2980B9" text-anchor="middle">前駆層</text>
+    <text x="220" y="324" font-size="12" fill="#444444" text-anchor="middle">本質的性質</text>
+    <text x="220" y="344" font-size="13" font-weight="500" fill="#1A1A1A" text-anchor="middle">利用可能性</text>
+  </g>
+
+  <!-- Layer 2: 認識 -->
+  <g>
+    <rect x="380" y="180" width="240" height="180" fill="#FFFFFF" stroke="#888888" stroke-width="1.5" rx="6"/>
+    <text x="500" y="222" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle">認識</text>
+    <line x1="405" y1="252" x2="595" y2="252" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="500" y="278" font-size="12" fill="#444444" text-anchor="middle">構造種別</text>
+    <text x="500" y="296" font-size="13" font-weight="600" fill="#2980B9" text-anchor="middle">前駆層</text>
+    <text x="500" y="324" font-size="12" fill="#444444" text-anchor="middle">本質的性質</text>
+    <text x="500" y="344" font-size="13" font-weight="500" fill="#1A1A1A" text-anchor="middle">対応づけ可能性</text>
+  </g>
+
+  <!-- Layer 3: 知識 -->
+  <g>
+    <rect x="660" y="180" width="260" height="180" fill="#FFFFFF" stroke="#27AE60" stroke-width="2" rx="6"/>
+    <text x="790" y="222" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle">知識</text>
+    <line x1="685" y1="252" x2="895" y2="252" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="790" y="278" font-size="12" fill="#444444" text-anchor="middle">構造種別</text>
+    <text x="790" y="296" font-size="13" font-weight="600" fill="#27AE60" text-anchor="middle">停止構造</text>
+    <text x="790" y="324" font-size="12" fill="#444444" text-anchor="middle">本質的性質</text>
+    <text x="790" y="344" font-size="13" font-weight="500" fill="#1A1A1A" text-anchor="middle">安定性</text>
+  </g>
+
+  <!-- Layer 4: 知性 -->
+  <g>
+    <rect x="970" y="180" width="300" height="180" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2.5" rx="6"/>
+    <text x="1120" y="222" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle">知性</text>
+    <line x1="995" y1="252" x2="1245" y2="252" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="1120" y="278" font-size="12" fill="#444444" text-anchor="middle">構造種別</text>
+    <text x="1120" y="296" font-size="13" font-weight="600" fill="#7D3C98" text-anchor="middle">継続運動</text>
+    <text x="1120" y="324" font-size="12" fill="#444444" text-anchor="middle">本質的性質</text>
+    <text x="1120" y="344" font-size="13" font-weight="500" fill="#1A1A1A" text-anchor="middle">改訂可能性</text>
+  </g>
+
+  <!-- ============ FLOW ARROWS BETWEEN LAYERS ============ -->
+
+  <!-- arrow defs -->
+  <defs>
+    <marker id="arrowGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L2,5 Z" fill="#888888"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L2,5 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L2,5 Z" fill="#7D3C98"/>
+    </marker>
+    <marker id="arrowPurpleSmall" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 L1.6,4 Z" fill="#7D3C98"/>
+    </marker>
+  </defs>
+
+  <!-- 知覚 → 認識 -->
+  <line x1="340" y1="270" x2="378" y2="270" stroke="#888888" stroke-width="1.8" marker-end="url(#arrowGrey)"/>
+
+  <!-- 認識 → 知識 -->
+  <line x1="620" y1="270" x2="658" y2="270" stroke="#888888" stroke-width="1.8" marker-end="url(#arrowGrey)"/>
+
+  <!-- 知識 ⇄ 知性 (bidirectional, the core claim) -->
+  <line x1="920" y1="260" x2="968" y2="260" stroke="#27AE60" stroke-width="2.2" marker-end="url(#arrowGreen)"/>
+  <line x1="968" y1="282" x2="920" y2="282" stroke="#7D3C98" stroke-width="2.2" marker-end="url(#arrowPurple)"/>
+  <text x="944" y="252" font-size="9.5" fill="#27AE60" text-anchor="middle">安定化</text>
+  <text x="944" y="300" font-size="9.5" fill="#7D3C98" text-anchor="middle">改訂</text>
+
+  <!-- ============ INTELLIGENCE-AS-FLOW LAYER (bottom) ============ -->
+
+  <!-- horizontal sweep showing intelligence operates ALL four layers -->
+  <g transform="translate(0,0)">
+    <!-- background band -->
+    <rect x="80" y="430" width="1240" height="155" fill="#F1E8F5" rx="6" stroke="#7D3C98" stroke-width="1" stroke-dasharray="3,3" opacity="0.55"/>
+
+    <text x="700" y="478" font-size="16" font-weight="600" fill="#5B2C72" text-anchor="middle">
+      知性はいずれの層にも保存されない——すべての層を横断して作動する
+    </text>
+
+    <!-- sweeping flow arrow -->
+    <path d="M 130 540 C 350 530, 550 530, 700 540 S 1050 550, 1270 540"
+          stroke="#7D3C98" stroke-width="2.5" fill="none" marker-end="url(#arrowPurpleSmall)"/>
+
+    <!-- small annotations above each pillar from the band -->
+    <text x="220" y="565" font-size="10.5" fill="#5B2C72" text-anchor="middle">入力を形成</text>
+    <text x="500" y="565" font-size="10.5" fill="#5B2C72" text-anchor="middle">図式へ対応</text>
+    <text x="790" y="565" font-size="10.5" fill="#5B2C72" text-anchor="middle">安定化／参照</text>
+    <text x="1120" y="565" font-size="10.5" fill="#5B2C72" text-anchor="middle">改訂／拡張</text>
+  </g>
+
+  <!-- ============ FOOTER NOTES ============ -->
+
+  <text x="700" y="640" font-size="13" fill="#333333" text-anchor="middle">
+    知識は停止構造である（保存・引用・固定が可能）。
+  </text>
+  <text x="700" y="660" font-size="13" fill="#333333" text-anchor="middle">
+    知性は、その停止構造を産出し、改訂し、横断し続ける動態である。
+  </text>
+  <text x="700" y="685" font-size="12" fill="#555555" text-anchor="middle" font-style="italic">
+    両者は互いに還元されない；混同がゲティア型混乱の源になる（§6）。
+  </text>
+
+  <!-- corner caption -->
+  <text x="80" y="730" font-size="10.5" fill="#888888">
+    色分け：前駆層（青/灰）・停止構造（緑）・継続運動（紫、知性層）
+  </text>
+
+</svg>

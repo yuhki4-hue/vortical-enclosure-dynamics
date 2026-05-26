@@ -1,0 +1,81 @@
+\section{IFGT as Vocabulary, with Lexical Correspondence to the Physarum Solver}
+
+\subsection{Overview}
+
+\S{}3 introduced $\Phi$ as a global constraint. This section asks how such a constraint can be described without importing normativity.
+
+The difficulty is linguistic. Terms such as goal, utility, judgment, meaning, and value bring with them assumptions about agency and normativity. A structural theory of intelligence-like dynamics requires a vocabulary that can describe motion, accumulation, and constraint without deciding in advance what is meaningful or correct.
+
+IFGT is used here for that purpose. The three axioms do not logically depend on IFGT. They could be written in another dynamical vocabulary. IFGT is adopted because it currently provides the least obstructive language for the required structure.
+
+\subsection{Why a vocabulary, not a theory}
+
+In this paper, IFGT is not treated as a completed explanatory theory \citep{IFGT}. It is a vocabulary.
+
+An explanatory theory often aims to close explanation: why a state occurred, why it is valid, or why it should be accepted. IFGT does not close those questions. It describes what is happening structurally. It does not decide what is correct, desirable, or meaningful.
+
+This is why IFGT is useful here. If it were introduced as a full theory, the validity of IFGT would become a premise of the paper. Introduced as vocabulary, only its descriptive utility is required.
+
+\subsection{The IFGT vocabulary}
+
+The minimal vocabulary used in this paper consists of four terms.
+
+\textbf{$I$: information density.}
+\(I\) measures local accumulation in a state space. It is not a measure of truth. It does not distinguish correct and incorrect information. It records structural density.
+
+\textbf{$J$: information flow.}
+\(J\) denotes directed relation, transition, influence, or dependence between states. It is vector-like. It need not be causal in the strong physical sense; causality can be introduced later as a special form of directed relation.
+
+\textbf{$\Phi$: information-field potential.}
+\(\Phi\) provides global bias. It is structurally identical to the third axiom of \S{}3. It is not purpose or value. It is the global constraint that prevents local dynamics from dissolving into directionless diffusion.
+
+\textbf{Projection.}
+Projection is the operation by which a state or representation gains unequal influence. It describes attention, selection, priority, or weighting without assuming conscious intention.
+
+The use of these terms in this paper is a projected use. The variables $I$, $J$, and $\Phi$ are not directly identified with the general IFGT fields. They are effective coordinates in the intelligence-layer observational window. When needed, $J$ may be read as shorthand for $J_{\mathrm{int}}$, the information flow projected into the intelligence layer.
+
+\subsection{Lexical correspondence with the Physarum solver}
+
+The Physarum solver of Tero, Kobayashi, and Nakagaki (2007) provides an independent biophysical model with the same structural features \citep{Tero2007}. The model describes the adaptive tube network of \emph{Physarum polycephalum}. Nutrient sources define boundary conditions. Tubes carrying stronger flow are reinforced; unused tubes decay.
+
+Let \(Q_{ij}\) be the flow through an edge \(e_{ij}\), \(D_{ij}\) its conductivity, and \(L_{ij}\) its length. The flow is given by
+\[
+Q_{ij}=\frac{D_{ij}}{L_{ij}}\Delta p_{ij},
+\]
+where \(\Delta p_{ij}\) is the pressure difference. Conductivity evolves as
+\[
+\frac{dD_{ij}}{dt}=f(|Q_{ij}|)-D_{ij}.
+\]
+This is a minimal flow-reinforcement dynamics.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Physarum solver & IFGT vocabulary & Structural role \\
+\midrule
+Flow \(Q_{ij}\) & information flow \(J\) & directed propagation through an edge \\
+Conductivity \(D_{ij}\) & local information density \(I\) & accumulated edge weight \\
+Reinforcement \(f(|Q|)\) & projection & flow-dependent assignment of influence \\
+Nutrient sources + Kirchhoff law & potential \(\Phi\) & global bias and boundary condition \\
+Stationary shortest-path-like solution & local minimum of closure degree under \(\Phi\) & global form emerging from local rules \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The correspondence is not a strict mathematical identity. The Physarum solver is bound to a concrete tube network, whereas IFGT is a more abstract vocabulary. The point is structural: local flow reinforcement and global boundary constraints combine to produce a global form that cannot be reduced to any single local rule.
+
+\subsection{What IFGT vocabulary does not do}
+
+The vocabulary does not guarantee correctness. Describing a phenomenon in IFGT terms does not imply that the phenomenon is good, valid, rational, or desirable.
+
+It also does not justify social structures, prescribe actions, or replace domain-specific theories. It supplies a neutral structural language.
+
+\subsection{Summary}
+
+\begin{quote}
+IFGT is used here as a vocabulary that does not close explanation. The terms \(I\), \(J\), \(\Phi\), and projection provide a way to describe intelligence-like dynamics without importing normativity.
+\end{quote}
+
+The Physarum solver shows that the role assigned here to \(\Phi\) is not arbitrary. A comparable structure appears in an independent biophysical research line: local flow-reinforcement is insufficient without a global boundary condition.

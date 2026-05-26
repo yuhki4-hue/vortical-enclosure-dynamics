@@ -1,0 +1,207 @@
+\section{IFGT as Vocabulary, with Lexical Correspondence to the Physarum Solver}
+
+
+\subsection{Overview}
+
+
+\S{}3 では知性的動態の三公理を提示し、特に第三公理として \textbf{グローバル制約} $\Phi$ の存在を要請した。本セクションは、この $\Phi$ を \textbf{どう書くか} という問題に取り組む。
+
+問題の核心は次の通りである。$\Phi$ は意味でも目的でも価値でもない構造的バイアスである(\S{}3.3, \S{}3.5)が、これを記述するために用いる既存語彙のほとんどが、必然的に規範性または主体性を密輸入する。「目的関数」は目的を、「効用」は価値を、「判断基準」は判断主体を ── いずれも公理レベルでは導入していない概念を、語彙の使用そのものによって持ち込んでしまう。
+
+本セクションは二段階の議論を行う。第一段は、\textbf{IFGT 語彙} が規範性なしに $\Phi$ を記述するための言語的基盤を提供することを示す(\S{}4.1〜\S{}4.3)。第二段は、Tero, Kobayashi \& Nakagaki (2007) による Physarum solver の動力学モデルが、IFGT 語彙と \textbf{構造的に対応} することを示し、これにより本論文の語彙系が独自構成ではなく、独立な実証研究路線と同型の構造に到達していることを明示する(\S{}4.4)。
+
+なお重要な但し書きとして、\S{}3 の三公理は IFGT に \textbf{論理的には依存しない}。三公理は IFGT 以外の任意の動力学語彙でも書くことが可能である。本セクションが提示するのは、現時点で \textbf{最も摩擦の少ない記述媒体} としての IFGT であり、その正当性は構造論的有用性に立脚する。
+
+\subsection{Why a vocabulary, not a theory}
+
+
+IFGT は完成された説明理論ではない \citep{IFGT}。本論文における IFGT の地位を明示する:
+
+\textbf{IFGT は説明を閉じない。} 説明理論は通常、なぜそれが起こったか、なぜそれが正しいか、なぜそれが受容されるべきか ── これらの問いを閉じることを目指す。IFGT はそのいずれも行わない。IFGT は「何が起きているか」を記述するだけで、「何が正しいか」「何であるべきか」には踏み込まない。
+
+\textbf{IFGT は既存理論を置換しない。} IFGT は物理理論、生物理論、認知理論を置き換えるものではない。それぞれの理論が記述する現象のうち、本論文で扱う \textbf{動的・構造的側面} に対する記述媒体を提供するのみである。
+
+\textbf{IFGT は語彙である。} すなわち、最小限の記述用語の組であって、意味論的・規範的・主体中心的前提を持ち込まずに、動的現象を articulate するために設計されている。
+
+この \textbf{語彙としての地位} が、IFGT を本論文の議論にとって有用にする。完成された理論として導入されれば、その理論の妥当性が論証の前提となり、循環や脆弱性を生む。語彙として導入されれば、語彙の利用可能性のみが問われ、これは構造的に確立可能である。
+
+\subsection{Why existing vocabularies fail}
+
+
+知性を「能力でも所有物でもなく、構造的条件下で成立する力学的状態」(\S{}1.2, \S{}3.6)として扱う立場を取った瞬間、多くの既存語彙が機能不全に陥る:
+
+\begin{itemize}
+\item \textbf{「知識」(knowledge)} は安定化または停止を前提する(\S{}2.4)── 持続運動の記述には不適合
+\item \textbf{「意味」(meaning)} は解釈を暗黙裡に呼び出す ── 公理 \S{}3.5 が排除した規範性を密輸入する
+\item \textbf{「判断」(judgment)} は行為主体または主観を前提する ── 公理 \S{}3.5 が排除した主体性を密輸入する
+\item \textbf{「目的」(purpose)} は意図的存在を前提する ── 同様の問題
+\item \textbf{「正しさ」(correctness)} は真理基準または規範を前提する ── \S{}6 で示す通り、これは知識層の属性であって知性層の属性ではない
+\end{itemize}
+
+これらの用語は上位記述層では有用である。だが、知性的動態の \textbf{構造的成立条件} を語る場では、規範性または主体性を \textbf{未審査のまま持ち込む} ことになる。
+
+この困難は語彙選択の問題ではなく、概念史的問題である。これらの用語は、知性が「停止構造」として理解されてきた長い歴史のなかで形成されてきた。知性を持続運動として記述しようとすれば、停止構造を前提とする語彙では不十分になりやすい。
+
+IFGT 語彙はこの空隙を埋めるために導入される ── すなわち、\textbf{運動・累積・制約を、解釈を時期尚早に閉じることなく} 記述するために。
+
+\subsection{The IFGT vocabulary}
+
+
+IFGT が提供する最小語彙は以下である。
+
+\textbf{$I$:情報密度(information density)}
+状態空間内で情報がどの程度累積しているかを示す測度。
+
+\begin{itemize}
+\item $I$ は「情報量」の量化ではなく、\textbf{累積度の構造的尺度} である
+\item $I$ は真偽値を持たない ── 「正しい情報」と「誤った情報」を区別しない
+\item $I$ は主体を必要としない ── 「誰にとっての情報か」を問わない
+\item 形式的には、状態空間上のスカラー場あるいは局所的測度として表現される
+\end{itemize}
+
+\textbf{$J$:情報流(information flow)}
+情報が伝播する方向的関係。
+
+\begin{itemize}
+\item $J$ はベクトル的構造である ── 単なる量ではなく方向性を持つ
+\item $J$ は連結状態空間(\S{}3.1)における状態間の遷移・影響・依存関係を担う
+\item $J$ は因果関係を要求しない ── 因果性は $J$ の特殊形として後から導入されうるが、公理レベルでは方向的関係性のみが要請される
+\end{itemize}
+
+\textbf{$\Phi$:情報場ポテンシャル(information-gravity potential)}
+動態に大域的バイアスを与え、これを安定化させるスカラー場。
+
+\begin{itemize}
+\item $\Phi$ は \S{}3.3 の第三公理 $\Phi$ と同一構造を持つ
+\item $\Phi$ は目的でも価値でもない ── 構造的バイアスとしてのみ機能する
+\item $\Phi$ は局所更新規則の単純集約には還元されない ── これが $\Phi$ の本質的特徴
+\end{itemize}
+
+\textbf{projection(質量割当)}
+特定の状態または表象が、不均衡な影響力を獲得する操作。
+
+\begin{itemize}
+\item projection は注意・選択・優先化の構造的記述である
+\item projection は意図的選択を要求しない ── 物理的偏向、生物学的優先化、人工的重み付けのすべてを含む
+\item projection は $\Phi$ と $J$ を結ぶ ── 大域的バイアスが具体的な状態に局所化する機構
+\end{itemize}
+
+\textbf{心理学的 projection との関係(但し書き):}
+本論文の projection は、心理学(特に精神分析的伝統)における projection ── すなわち主体が自身の内的状態を他者または外部対象に投影する機制 ── と用語を共有するが、構造論的地位は異なる。心理学的 projection は主体・無意識・内部状態の存在を前提するが、IFGT における projection はこれらをいずれも公理レベルでは前提しない。両者は「重みの不均衡配分」という構造的特徴を共有しており、心理学的 projection は IFGT projection の \textbf{特定層における運用論的記述} ── すなわち主体性を持つ複雑系の表層における具体的現れ ── として読みうる。両概念のどちらが他方を還元するわけではなく、両者は同じ構造を異なる粒度で記述している関係にある。本論文では構造論的水準のみを扱い、心理学的概念との詳細な対応は射程外とする。
+
+なお、本論文における IFGT 語彙の使用は意識編 \citep{Consciousness} と同様、\textbf{projected uses}(投影された使用)である。すなわち $I$、$J$、$\Phi$ を一般 IFGT 場と直接同定するのではなく、それぞれの観測窓(本論文では知性層、意識編では生物-認知層)における \textbf{有効座標} として用いる。この立場により、各論文の主張は IFGT 全体への過剰な存在論的コミットメントを避けつつ、構造論的記述の精度を保つ。必要に応じて、本論文の $J$ は知性層に投影された情報流 $J_{\mathrm{int}}$ の略記として読む。同様に $I$ と $\Phi$ も、一般 IFGT 変数そのものではなく知性層の記述窓における有効量である。
+
+これら四つの語彙は、いずれも \textbf{「何が正しいか」を述べず、「何が起きているか」を記述する}。
+
+\subsection{Lexical correspondence with the Physarum solver}
+
+
+本小節は、本論文の語彙系が独自構成ではないことを示す。具体的には、Tero, Kobayashi \& Nakagaki (2007) による \textbf{Physarum solver} の動力学モデルが、IFGT 語彙と構造的に対応することを示す \citep{Tero2007}。
+
+\textbf{Physarum solver は粘菌(\emph{Physarum polycephalum})の管網ネットワーク適応動態を記述する最小数理モデルである。} 粘菌は栄養源を頂点とする管網を形成し、利用頻度の高い管を強化し、利用されない管を減衰させることで、最終的に栄養源間の最短経路に類似する構造を生成する \citep{Nakagaki2000}。
+
+\subsubsection{The Physarum solver model}
+
+
+Tero-Kobayashi-Nakagaki モデルは、管網ネットワークを以下の要素で記述する:
+
+\begin{itemize}
+\item ノード集合 $\{N_i\}$:管の接続点
+\item エッジ集合 $\{e_{ij}\}$:ノード間の管
+\item 流量 $Q_{ij}$:エッジ $e_{ij}$ を流れる流量
+\item 伝導度 $D_{ij}$:エッジ $e_{ij}$ の伝導度(管の太さに比例)
+\item 境界条件:特定のノードを源・吸込みとする栄養源配置
+\end{itemize}
+
+各エッジの両端における圧力差を $\Delta p_{ij}$ とすれば、Hagen-Poiseuille 則により流量は
+
+\[
+Q_{ij} = \frac{D_{ij}}{L_{ij}} \Delta p_{ij}
+\]
+
+で与えられる(ここで $L_{ij}$ はエッジ長)。各ノードでは Kirchhoff 則(流入流出の総和ゼロ)が成立する。
+
+伝導度 $D_{ij}$ の時間発展は次の微分方程式に従う:
+
+\[
+\frac{dD_{ij}}{dt} = f(|Q_{ij}|) - D_{ij}
+\]
+
+ここで $f$ は流量依存の \textbf{強化関数} ── 流量が大きいほど $D_{ij}$ を強化し、流量が小さければ $D_{ij}$ を減衰させる非線形写像である。最も単純な形は $f(Q) = |Q|^{\mu}$ で、指数 $\mu > 0$ が強化の鋭さを決める。
+
+この \textbf{flow-reinforcement 動力学} から、局所規則のみを与えたにもかかわらず、定常解として \textbf{大域最短経路} が現れる。これが Physarum solver の核心的観察である。
+
+\subsubsection{Lexical correspondence}
+
+
+Physarum solver の変数と IFGT 語彙との対応を以下に整理する。
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Physarum solver & IFGT vocabulary & 構造的役割 \\
+\midrule
+流量 $Q_{ij}$ & 情報流 $J$ & エッジを通じる方向的伝搬 \\
+伝導度 $D_{ij}$ & 情報密度 $I$(局所) & エッジに付随する累積量 \\
+強化関数 $f(\lvert Q\rvert)$ & projection(質量割当) & 流量依存の影響度の更新 \\
+栄養源配置 + Kirchhoff 則 & 情報場ポテンシャル $\Phi$ & 大域バイアスを与える外的拘束 \\
+定常解としての shortest path & $\Phi$ 下で安定化する閉包度 $C$ の局所最小 & 局所規則からの大域構造の創発 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+この対応は厳密な数学的同型ではない ── Physarum solver は管網という具体構造に縛られており、IFGT 語彙はそれより抽象的な記述層に属する。だが両者は \textbf{同じ構造を別の言葉で書いている}:局所規則(flow-reinforcement)と大域条件(境界・Kirchhoff 則)が組み合わさって、大域最適構造が動的に創発する。
+
+\subsubsection{The emergence of $\Phi$ in independent confirmation}
+
+
+本対応が示す最も重要な点は、$\Phi$ の \textbf{創発性} が独立な実証研究で確認されていることである。
+
+Physarum solver において、shortest path は局所規則(flow-reinforcement)からは \textbf{直接導出されない}。それが現れるのは、境界条件(栄養源配置)と Kirchhoff 則(各ノードでの流量保存)の組み合わせが \textbf{大域バイアス} として作用するからである。すなわち、局所的に well-defined な動力学だけでは大域最適化は起こらない ── 大域構造が局所動態を制約する役割を果たすときにのみ、shortest path が現れる。
+
+これは \S{}3.3 で要請した $\Phi$ の構造的特徴 ── \textbf{局所更新規則の単純集約に還元されない大域制約} ── と構造的に同型である。Physarum solver における「境界 + Kirchhoff」の組み合わせは、$\Phi$ の具体的な現れの一例である。
+
+この同型性は偶然ではない。Tero-Kobayashi-Nakagaki らは、知性概念とは独立に、純粋に生物物理学的観察から flow-reinforcement モデルに到達した。本論文は、構造論的議論から $\Phi$ の非還元性を要請した。両者が同じ構造的特徴に独立に到達したことは、本論文の語彙系が \textbf{任意の構成ではない} ことを示唆する。
+
+\subsection{What IFGT vocabulary does not do}
+
+
+IFGT 語彙が \textbf{何をしないか} を明示することも、何をするかを明示することと同じく重要である。
+
+\textbf{IFGT 語彙は正しさを保証しない。} ある現象を IFGT 語彙で記述することは、その現象が「正しい」「望ましい」「あるべき姿である」ことを意味しない。記述と評価は別の作業である。
+
+\textbf{IFGT 語彙は社会構造を正当化しない。} IFGT 語彙で社会的動態を記述しうるとしても、その記述が当該社会構造の正当化を含意することはない。記述的妥当性と規範的妥当性は独立である。
+
+\textbf{IFGT 語彙は特定の操作を指示しない。} IFGT 語彙は「何をすべきか」を述べない。応用層・倫理層・規範層における処方は、IFGT 語彙の外側で別途扱われる必要がある。
+
+これら \textbf{非主張} は IFGT 語彙の弱点ではなく、その \textbf{構造的指針} である。語彙は規範性を主張しないことによって、規範的議論への中立な基盤を提供しうる。
+
+\subsection{Summary}
+
+
+本セクションの結論を以下に述べる:
+
+\begin{quote}
+IFGT は説明を閉じない語彙である。
+$I$、$J$、$\Phi$、projection という最小語彙の組によって、
+知性的動態を規範性なしに記述する言語的基盤を提供する。
+\end{quote}
+
+\begin{quote}
+Tero-Kobayashi-Nakagaki の Physarum solver は、本論文の枠組みからは独立に、
+flow-reinforcement と境界条件の組み合わせによる大域構造の創発を定式化した。
+両者の語彙対応は、$\Phi$ の非還元性が独自構成ではなく、
+独立な実証研究路線にも現れている \textbf{構造的特徴} であることを示す。
+\end{quote}
+
+後続セクションでは、IFGT 語彙が以下のように展開される:
+
+\begin{itemize}
+\item \S{}5 では、IFGT 語彙のもとで粘菌と Transformer が構造的に対応するものとして記述される
+\item \S{}6 では、IFGT 語彙の意味論的中立性が、Gettier 問題の層間ミスマッチを診断可能にする
+\item \S{}7 では、$I$ の累積(知識の蓄積)が $J$ の分岐爆発を生む動力学的帰結が示される
+\item \S{}9 では、IFGT 語彙が物理層・生命層・意識層・知性層を貫いて適用可能であることが、四層対応表として明示される
+\end{itemize}

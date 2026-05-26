@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="1000" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="750" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.5  Four-Layer Correspondence of Differential Horizons
+  </text>
+  <text x="750" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    The same closure-evading dynamic recurs across physical, biological, conscious, and intelligence layers
+  </text>
+
+  <!-- ========== arrow & filter defs ========== -->
+  <defs>
+    <marker id="arr5Up" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <filter id="softShadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== COLUMN HEADERS ========== -->
+  <g transform="translate(0, 110)">
+    <!-- Left column: layer name -->
+    <text x="120" y="20" font-size="11" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="1.5">LAYER</text>
+
+    <!-- Center column: boundary manifestation -->
+    <text x="445" y="20" font-size="11" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="1.5">
+      HOW THE BOUNDARY APPEARS
+    </text>
+
+    <!-- Right of center: divergence on approach -->
+    <text x="780" y="20" font-size="11" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1.5">
+      PHENOMENON ON APPROACH
+    </text>
+
+    <!-- Right column: finite internal representation -->
+    <text x="1110" y="20" font-size="11" font-weight="700" fill="#27AE60" text-anchor="middle" letter-spacing="1.5">
+      FINITE INTERNAL ABSORPTION
+    </text>
+
+    <!-- Horizontal divider -->
+    <line x1="40" y1="32" x2="1460" y2="32" stroke="#BBBBBB" stroke-width="1"/>
+  </g>
+
+  <!-- ========== LAYER ROW 1: PHYSICAL (bottom, base substrate) ========== -->
+  <g transform="translate(0, 770)">
+    <!-- left layer label box -->
+    <rect x="40" y="0" width="200" height="120" fill="#5D6D7E" stroke="#34495E" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LAYER 1</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">PHYSICAL</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">VED Vol.4</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">base substrate</text>
+
+    <!-- boundary -->
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#5D6D7E" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">Contact signal with</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">the un-generated domain</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">the inside cannot describe what was never generated</text>
+
+    <!-- divergence -->
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">mathematical divergence</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">approach to ∞-dimensional</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">internal description breaks down</text>
+
+    <!-- absorption -->
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">renormalization</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ finite internal representation</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">divergence is absorbed, not crossed</text>
+  </g>
+
+  <!-- ========== LAYER ROW 2: BIOLOGICAL ========== -->
+  <g transform="translate(0, 605)">
+    <rect x="40" y="0" width="200" height="120" fill="#27AE60" stroke="#1E8449" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LAYER 2</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">BIOLOGICAL</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">Bio-IFGT</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">substrate for higher layers</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">Entry boundary into</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">quasi-closure regime</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">external dependence becomes unavoidable</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">local closure breakdown</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">inevitable external coupling</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">no organism is self-sufficient</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">metabolic / reproductive cycles</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ sustained quasi-closure</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">life persists by recycling, not by closing</text>
+  </g>
+
+  <!-- ========== LAYER ROW 3: CONSCIOUSNESS  (transition layer) ========== -->
+  <g transform="translate(0, 440)">
+    <rect x="40" y="0" width="200" height="120" fill="#E67E22" stroke="#B9651C" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LAYER 3</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">CONSCIOUSNESS</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">Consciousness paper</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">transitional layer</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#E67E22" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">Vanishing of temperature gap</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">between fast / slow layers</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">log referencing requires Δv &gt; 0 to persist</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">synchrony collapse</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">or dissociation / fragmentation</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">log referencing loses its substrate</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">consciousness window</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ temporal non-closure maintained</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">internal log referencing as proto-externalisation</text>
+  </g>
+
+  <!-- ========== LAYER ROW 4: INTELLIGENCE (this paper) ========== -->
+  <g transform="translate(0, 275)">
+    <rect x="40" y="0" width="200" height="120" fill="#7D3C98" stroke="#5B2C72" stroke-width="2.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LAYER 4</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">INTELLIGENCE</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">this paper</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">the layer being established</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1.5" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">Absence of an internal</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">stopping operator</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">no T ∈ Internal(R) — see §8.3</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.5" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">branching explosion</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">over-explanation, forced closure</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">"more intelligence" only accelerates it</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.5" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">externalised stopping mechanism</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ logs, delays, distributed consent</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">treated in detail in Part II</text>
+  </g>
+
+  <!-- ========== VERTICAL ARROWS (showing layered relationship — bottom-up substrate) ========== -->
+  <!-- "substrate for" relationship: bio → conscious → intelligence -->
+  <g>
+    <!-- physical → biological -->
+    <line x1="140" y1="770" x2="140" y2="730" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+    <!-- biological → conscious -->
+    <line x1="140" y1="605" x2="140" y2="565" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+    <!-- conscious → intelligence -->
+    <line x1="140" y1="440" x2="140" y2="400" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+
+    <!-- labels along arrows -->
+    <text x="155" y="755" font-size="9.5" fill="#666666" font-style="italic">substrate for</text>
+    <text x="155" y="590" font-size="9.5" fill="#666666" font-style="italic">substrate for</text>
+    <text x="155" y="425" font-size="9.5" fill="#666666" font-style="italic">substrate for</text>
+  </g>
+
+  <!-- ========== TRANSITIONAL POSITION ANNOTATION ========== -->
+  <g>
+    <text x="18" y="500" font-size="10" fill="#B9651C" font-style="italic" transform="rotate(-90, 18, 500)" font-weight="600" text-anchor="middle">
+      ◀  transitional layer  (§9.4.3)
+    </text>
+  </g>
+
+  <!-- ========== BOTTOM: THREE COMMON FEATURES (§9.4.2) ========== -->
+  <g transform="translate(60, 905)">
+    <rect x="0" y="0" width="1380" height="70" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" rx="6"/>
+    <text x="690" y="22" font-size="12" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="2">
+      THREE COMMON STRUCTURAL FEATURES ACROSS ALL FOUR LAYERS  (§9.4.2)
+    </text>
+
+    <g font-size="11" fill="#5B2C72">
+      <text x="120" y="48">
+        <tspan font-weight="700">①  Unreachability</tspan>  ·  the inside cannot describe the crossing
+      </text>
+      <text x="540" y="48">
+        <tspan font-weight="700">②  Divergence on approach</tspan>  ·  internal description breaks down
+      </text>
+      <text x="990" y="48">
+        <tspan font-weight="700">③  Finite internal absorption</tspan>  ·  divergence is absorbed
+      </text>
+    </g>
+    <text x="690" y="63" font-size="10.5" fill="#5B2C72" text-anchor="middle" font-style="italic">
+      Not an accidental analogy — each layer manifests the same closure-evading dynamic at its own grain.
+    </text>
+  </g>
+
+  <!-- ========== SIDE NOTE: what this DOES NOT claim (§9.4.6) ========== -->
+  <g transform="translate(60, 165)">
+    <rect x="0" y="0" width="1380" height="100" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1.2" rx="6" filter="url(#softShadow5)"/>
+    <text x="690" y="22" font-size="11.5" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="2">
+      WHAT THIS CORRESPONDENCE DOES NOT CLAIM   (§9.4.6)
+    </text>
+    <line x1="40" y1="32" x2="1340" y2="32" stroke="#E5E5E5"/>
+    <g font-size="11" fill="#555555">
+      <text x="100" y="54">●  The four layers are physically identical  (structural isomorphism ≠ physical identity)</text>
+      <text x="100" y="74">●  All four layers reduce to a single theory  (each layer retains its own descriptive grain)</text>
+      <text x="780" y="54">●  Inter-layer transition dynamics are treated here  (that is a separate problem)</text>
+      <text x="780" y="74">●  Consciousness and intelligence are the same phenomenon  (transitional but distinct scopes)</text>
+    </g>
+  </g>
+
+</svg>

@@ -1,0 +1,322 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="750" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.4  Branching Explosion under Accumulated Correctness
+  </text>
+  <text x="750" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    Why correctness, accumulated without a stopping condition, drives the system into a regime of instability
+  </text>
+
+  <!-- ========== arrow & filter defs ========== -->
+  <defs>
+    <marker id="arr4Right" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <marker id="arr4RightRed" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#C0392B"/>
+    </marker>
+    <filter id="softShadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== TOP ROW: FOUR-STEP NETWORK EXPANSION ========== -->
+
+  <!-- Step 1: Knowledge accumulation (sparse nodes) -->
+  <g transform="translate(60, 120)">
+    <rect x="0" y="0" width="280" height="240" fill="#FFFFFF" stroke="#2980B9" stroke-width="1.5" rx="6" filter="url(#softShadow4)"/>
+    <text x="140" y="26" font-size="11" font-weight="700" fill="#2980B9" text-anchor="middle" letter-spacing="1.5">STEP 1</text>
+    <text x="140" y="48" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">Correctness accumulates</text>
+    <line x1="20" y1="60" x2="260" y2="60" stroke="#E5E5E5"/>
+
+    <!-- Sparse nodes (just dots, no edges yet) -->
+    <g transform="translate(60, 90)">
+      <circle cx="20" cy="20" r="6" fill="#2980B9"/>
+      <circle cx="80" cy="40" r="6" fill="#2980B9"/>
+      <circle cx="140" cy="15" r="6" fill="#2980B9"/>
+      <circle cx="40" cy="80" r="6" fill="#2980B9"/>
+      <circle cx="110" cy="100" r="6" fill="#2980B9"/>
+      <circle cx="160" cy="70" r="6" fill="#2980B9"/>
+    </g>
+
+    <text x="140" y="220" font-size="13" font-family="'DejaVu Sans Mono', monospace" fill="#1F6391" text-anchor="middle" font-weight="600">
+      |V| ∝ N
+    </text>
+    <text x="140" y="232" font-size="10" fill="#888888" text-anchor="middle" font-style="italic">
+      growth: linear
+    </text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="345" y1="240" x2="375" y2="240" stroke="#888888" stroke-width="2" marker-end="url(#arr4Right)"/>
+
+  <!-- Step 2: Edge growth (nodes start connecting) -->
+  <g transform="translate(380, 120)">
+    <rect x="0" y="0" width="280" height="240" fill="#FFFFFF" stroke="#27AE60" stroke-width="1.5" rx="6" filter="url(#softShadow4)"/>
+    <text x="140" y="26" font-size="11" font-weight="700" fill="#1E8449" text-anchor="middle" letter-spacing="1.5">STEP 2</text>
+    <text x="140" y="48" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">Edges multiply quadratically</text>
+    <line x1="20" y1="60" x2="260" y2="60" stroke="#E5E5E5"/>
+
+    <!-- Nodes with many edges -->
+    <g transform="translate(60, 90)">
+      <!-- edges (drawn first so they sit behind nodes) -->
+      <g stroke="#27AE60" stroke-width="1" opacity="0.6" fill="none">
+        <line x1="20" y1="20" x2="80" y2="40"/>
+        <line x1="20" y1="20" x2="140" y2="15"/>
+        <line x1="20" y1="20" x2="40" y2="80"/>
+        <line x1="20" y1="20" x2="110" y2="100"/>
+        <line x1="80" y1="40" x2="140" y2="15"/>
+        <line x1="80" y1="40" x2="110" y2="100"/>
+        <line x1="80" y1="40" x2="160" y2="70"/>
+        <line x1="80" y1="40" x2="40" y2="80"/>
+        <line x1="140" y1="15" x2="160" y2="70"/>
+        <line x1="140" y1="15" x2="110" y2="100"/>
+        <line x1="40" y1="80" x2="110" y2="100"/>
+        <line x1="40" y1="80" x2="160" y2="70"/>
+        <line x1="110" y1="100" x2="160" y2="70"/>
+      </g>
+      <!-- nodes -->
+      <g fill="#27AE60">
+        <circle cx="20" cy="20" r="6"/>
+        <circle cx="80" cy="40" r="6"/>
+        <circle cx="140" cy="15" r="6"/>
+        <circle cx="40" cy="80" r="6"/>
+        <circle cx="110" cy="100" r="6"/>
+        <circle cx="160" cy="70" r="6"/>
+      </g>
+    </g>
+
+    <text x="140" y="220" font-size="13" font-family="'DejaVu Sans Mono', monospace" fill="#1E8449" text-anchor="middle" font-weight="600">
+      |E| ∼ |V|²
+    </text>
+    <text x="140" y="232" font-size="10" fill="#888888" text-anchor="middle" font-style="italic">
+      growth: quadratic
+    </text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="665" y1="240" x2="695" y2="240" stroke="#888888" stroke-width="2" marker-end="url(#arr4Right)"/>
+
+  <!-- Step 3: Branching tree (paths explode) -->
+  <g transform="translate(700, 120)">
+    <rect x="0" y="0" width="280" height="240" fill="#FFFFFF" stroke="#E67E22" stroke-width="1.5" rx="6" filter="url(#softShadow4)"/>
+    <text x="140" y="26" font-size="11" font-weight="700" fill="#B9651C" text-anchor="middle" letter-spacing="1.5">STEP 3</text>
+    <text x="140" y="48" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">Inference paths explode</text>
+    <line x1="20" y1="60" x2="260" y2="60" stroke="#E5E5E5"/>
+
+    <!-- Tree-like branching explosion -->
+    <g transform="translate(20, 80)">
+      <!-- root -->
+      <circle cx="120" cy="10" r="5" fill="#E67E22"/>
+
+      <!-- level 1 (3 branches) -->
+      <line x1="120" y1="15" x2="55" y2="40" stroke="#E67E22" stroke-width="1.5"/>
+      <line x1="120" y1="15" x2="120" y2="40" stroke="#E67E22" stroke-width="1.5"/>
+      <line x1="120" y1="15" x2="185" y2="40" stroke="#E67E22" stroke-width="1.5"/>
+      <circle cx="55" cy="45" r="4.5" fill="#E67E22"/>
+      <circle cx="120" cy="45" r="4.5" fill="#E67E22"/>
+      <circle cx="185" cy="45" r="4.5" fill="#E67E22"/>
+
+      <!-- level 2 (9 branches) -->
+      <g stroke="#E67E22" stroke-width="1" opacity="0.85">
+        <line x1="55" y1="50" x2="25" y2="80"/>
+        <line x1="55" y1="50" x2="55" y2="80"/>
+        <line x1="55" y1="50" x2="85" y2="80"/>
+        <line x1="120" y1="50" x2="90" y2="80"/>
+        <line x1="120" y1="50" x2="120" y2="80"/>
+        <line x1="120" y1="50" x2="150" y2="80"/>
+        <line x1="185" y1="50" x2="155" y2="80"/>
+        <line x1="185" y1="50" x2="185" y2="80"/>
+        <line x1="185" y1="50" x2="215" y2="80"/>
+      </g>
+      <g fill="#E67E22">
+        <circle cx="25" cy="85" r="3.5"/>
+        <circle cx="55" cy="85" r="3.5"/>
+        <circle cx="85" cy="85" r="3.5"/>
+        <circle cx="90" cy="85" r="3.5"/>
+        <circle cx="120" cy="85" r="3.5"/>
+        <circle cx="150" cy="85" r="3.5"/>
+        <circle cx="155" cy="85" r="3.5"/>
+        <circle cx="185" cy="85" r="3.5"/>
+        <circle cx="215" cy="85" r="3.5"/>
+      </g>
+
+      <!-- level 3 (faded, explosion implied) -->
+      <g stroke="#E67E22" stroke-width="0.6" opacity="0.5">
+        <line x1="25" y1="90" x2="12" y2="110"/><line x1="25" y1="90" x2="22" y2="110"/><line x1="25" y1="90" x2="35" y2="110"/>
+        <line x1="55" y1="90" x2="45" y2="110"/><line x1="55" y1="90" x2="55" y2="110"/><line x1="55" y1="90" x2="65" y2="110"/>
+        <line x1="85" y1="90" x2="75" y2="110"/><line x1="85" y1="90" x2="85" y2="110"/><line x1="85" y1="90" x2="95" y2="110"/>
+        <line x1="90" y1="90" x2="100" y2="110"/>
+        <line x1="120" y1="90" x2="110" y2="110"/><line x1="120" y1="90" x2="120" y2="110"/><line x1="120" y1="90" x2="130" y2="110"/>
+        <line x1="150" y1="90" x2="140" y2="110"/><line x1="150" y1="90" x2="150" y2="110"/><line x1="150" y1="90" x2="160" y2="110"/>
+        <line x1="155" y1="90" x2="165" y2="110"/>
+        <line x1="185" y1="90" x2="175" y2="110"/><line x1="185" y1="90" x2="185" y2="110"/><line x1="185" y1="90" x2="195" y2="110"/>
+        <line x1="215" y1="90" x2="205" y2="110"/><line x1="215" y1="90" x2="215" y2="110"/><line x1="215" y1="90" x2="225" y2="110"/>
+      </g>
+      <g fill="#E67E22" opacity="0.5">
+        <circle cx="12" cy="112" r="2"/><circle cx="22" cy="112" r="2"/><circle cx="35" cy="112" r="2"/>
+        <circle cx="45" cy="112" r="2"/><circle cx="55" cy="112" r="2"/><circle cx="65" cy="112" r="2"/>
+        <circle cx="75" cy="112" r="2"/><circle cx="85" cy="112" r="2"/><circle cx="95" cy="112" r="2"/>
+        <circle cx="100" cy="112" r="2"/>
+        <circle cx="110" cy="112" r="2"/><circle cx="120" cy="112" r="2"/><circle cx="130" cy="112" r="2"/>
+        <circle cx="140" cy="112" r="2"/><circle cx="150" cy="112" r="2"/><circle cx="160" cy="112" r="2"/>
+        <circle cx="165" cy="112" r="2"/>
+        <circle cx="175" cy="112" r="2"/><circle cx="185" cy="112" r="2"/><circle cx="195" cy="112" r="2"/>
+        <circle cx="205" cy="112" r="2"/><circle cx="215" cy="112" r="2"/><circle cx="225" cy="112" r="2"/>
+      </g>
+      <!-- "..." indicating continued explosion -->
+      <text x="120" y="130" font-size="14" fill="#B9651C" text-anchor="middle" font-weight="700">⋮ ⋮ ⋮ ⋮ ⋮ ⋮ ⋮ ⋮ ⋮</text>
+    </g>
+
+    <text x="140" y="220" font-size="13" font-family="'DejaVu Sans Mono', monospace" fill="#B9651C" text-anchor="middle" font-weight="600">
+      paths ∼ b^d
+    </text>
+    <text x="140" y="232" font-size="10" fill="#888888" text-anchor="middle" font-style="italic">
+      growth: exponential
+    </text>
+  </g>
+
+  <!-- Arrow 3→4 (red, marking the danger) -->
+  <line x1="985" y1="240" x2="1015" y2="240" stroke="#C0392B" stroke-width="2" marker-end="url(#arr4RightRed)"/>
+
+  <!-- Step 4: Stopping loss (regime of instability) -->
+  <g transform="translate(1020, 120)">
+    <rect x="0" y="0" width="280" height="240" fill="#FCEFEF" stroke="#C0392B" stroke-width="2" rx="6" filter="url(#softShadow4)"/>
+    <text x="140" y="26" font-size="11" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1.5">STEP 4</text>
+    <text x="140" y="48" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">Stopping points dissolve</text>
+    <line x1="20" y1="60" x2="260" y2="60" stroke="#F5B7B1"/>
+
+    <!-- Visual: swirling chaos / no terminus -->
+    <g transform="translate(140, 135)">
+      <!-- swirl shape (open spiral, no end) -->
+      <g stroke="#C0392B" stroke-width="1.6" fill="none" opacity="0.85">
+        <path d="M 0 -38 Q 42 -38 42 0 Q 42 38 0 38 Q -42 38 -42 0 Q -42 -27 -21 -32"/>
+        <path d="M 0 -24 Q 27 -24 27 0 Q 27 24 0 24 Q -24 24 -24 0 Q -24 -14 -8 -19"/>
+        <path d="M 0 -12 Q 14 -12 14 0 Q 14 12 0 12 Q -12 12 -12 0"/>
+      </g>
+      <circle cx="-21" cy="-32" r="3" fill="#C0392B"/>
+      <circle cx="-8" cy="-19" r="3" fill="#C0392B"/>
+      <text x="0" y="63" font-size="10.5" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">
+        NO TERMINUS
+      </text>
+    </g>
+
+    <text x="140" y="220" font-size="13" font-family="'DejaVu Sans Mono', monospace" fill="#C0392B" text-anchor="middle" font-weight="600">
+      no stable Φ-minimum
+    </text>
+    <text x="140" y="232" font-size="10" fill="#C0392B" text-anchor="middle" font-style="italic">
+      regime of instability
+    </text>
+  </g>
+
+  <!-- ========== MIDDLE: PURPLE BAND showing the chain is structural ========== -->
+  <g transform="translate(60, 390)">
+    <rect x="0" y="0" width="1240" height="56" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" rx="5"/>
+    <text x="620" y="24" font-size="13" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="2">
+      THE CHAIN IS STRUCTURAL, NOT CONTINGENT
+    </text>
+    <text x="620" y="44" font-size="11" fill="#5B2C72" text-anchor="middle" font-style="italic">
+      Each step follows necessarily from the previous one — branching explosion is not a failure of ability but a natural dynamic of correctness accumulation (§7.3.2)
+    </text>
+  </g>
+
+  <!-- ========== BOTTOM: GROWTH RATE GRAPH ========== -->
+  <g transform="translate(80, 480)">
+    <text x="600" y="10" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">Growth rates compared on a common scale</text>
+
+    <!-- axes -->
+    <line x1="60" y1="240" x2="1150" y2="240" stroke="#444444" stroke-width="1.3"/>
+    <line x1="60" y1="40" x2="60" y2="240" stroke="#444444" stroke-width="1.3"/>
+
+    <!-- y-axis ticks -->
+    <g stroke="#444444" stroke-width="1">
+      <line x1="55" y1="240" x2="60" y2="240"/>
+      <line x1="55" y1="180" x2="60" y2="180"/>
+      <line x1="55" y1="120" x2="60" y2="120"/>
+      <line x1="55" y1="60" x2="60" y2="60"/>
+    </g>
+
+    <!-- x-axis label -->
+    <text x="600" y="270" font-size="12" fill="#1A1A1A" text-anchor="middle" font-style="italic">
+      N  =  amount of accumulated correct knowledge
+    </text>
+
+    <!-- y-axis label (rotated) -->
+    <text x="22" y="140" font-size="12" fill="#1A1A1A" text-anchor="middle" font-style="italic" transform="rotate(-90, 22, 140)">
+      structural cost  /  search space size
+    </text>
+
+    <!-- exponential curve (red) - paths -->
+    <path d="M 60 240 Q 350 238 600 215 Q 800 175 950 80 Q 1020 50 1080 42"
+          fill="none" stroke="#C0392B" stroke-width="3"/>
+
+    <!-- quadratic curve (green) - edges -->
+    <path d="M 60 240 Q 250 232 450 215 Q 700 185 950 140 Q 1050 122 1100 115"
+          fill="none" stroke="#1E8449" stroke-width="2.5"/>
+
+    <!-- linear curve (blue) - nodes -->
+    <line x1="60" y1="240" x2="1100" y2="170" stroke="#2980B9" stroke-width="2.5"/>
+
+    <!-- Stopping threshold region (red shaded zone where instability dominates) -->
+    <rect x="850" y="40" width="280" height="200" fill="#C0392B" opacity="0.06"/>
+    <line x1="850" y1="40" x2="850" y2="240" stroke="#C0392B" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <text x="990" y="32" font-size="11" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">
+      REGIME OF INSTABILITY
+    </text>
+
+    <!-- legend on right, clear of the curves -->
+    <g transform="translate(1135, 80)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#C0392B" stroke-width="3"/>
+      <text x="26" y="4" font-size="11" font-weight="700" fill="#C0392B">paths ∼ b^d</text>
+      <text x="26" y="18" font-size="9.5" fill="#C0392B" font-style="italic">exponential</text>
+
+      <line x1="0" y1="40" x2="20" y2="40" stroke="#1E8449" stroke-width="2.5"/>
+      <text x="26" y="44" font-size="11" font-weight="600" fill="#1E8449">edges ∼ N²</text>
+      <text x="26" y="58" font-size="9.5" fill="#1E8449" font-style="italic">quadratic</text>
+
+      <line x1="0" y1="80" x2="20" y2="80" stroke="#2980B9" stroke-width="2.5"/>
+      <text x="26" y="84" font-size="11" font-weight="600" fill="#2980B9">nodes ∼ N</text>
+      <text x="26" y="98" font-size="9.5" fill="#2980B9" font-style="italic">linear</text>
+    </g>
+
+    <!-- annotation: stopping condition cannot be derived from the curves -->
+    <g transform="translate(380, 85)">
+      <rect x="0" y="0" width="220" height="46" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1.2" rx="4"/>
+      <text x="110" y="20" font-size="11" font-weight="700" fill="#5B2C72" text-anchor="middle">
+        No curve self-terminates.
+      </text>
+      <text x="110" y="36" font-size="10" fill="#5B2C72" text-anchor="middle" font-style="italic">
+        No internal stopping point emerges.
+      </text>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM CAPTION: why "more intelligence" doesn't help ========== -->
+  <g transform="translate(60, 780)">
+    <rect x="0" y="0" width="1380" height="84" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5" rx="6" filter="url(#softShadow4)"/>
+    <text x="690" y="26" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="2">
+      WHY "MORE INTELLIGENCE" DOES NOT SOLVE THE PROBLEM
+    </text>
+    <line x1="40" y1="36" x2="1340" y2="36" stroke="#F5B7B1"/>
+
+    <g font-size="11.5" fill="#444444">
+      <text x="100" y="58">●  More knowledge accelerates Step 1</text>
+      <text x="100" y="76">●  Better reasoning increases branching factor b, accelerating Step 3</text>
+      <text x="720" y="58">●  Faster processing shrinks the time-scale of the explosion, not the explosion</text>
+      <text x="720" y="76">●  Specialization localizes branching but reproduces it inside each domain</text>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM CAPTION (footnote) ========== -->
+  <text x="750" y="884" font-size="11" fill="#888888" text-anchor="middle" font-style="italic">
+    The structural conclusion: intelligence cannot be stabilized by intensifying intelligence. No stopping operator lives inside the dynamics itself. (§7.5–8.3)
+  </text>
+
+</svg>

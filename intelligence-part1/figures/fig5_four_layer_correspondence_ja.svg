@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" font-family="'Noto Sans CJK JP', 'Noto Sans Mono CJK JP', 'Hiragino Sans', 'Yu Gothic', 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="1000" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="750" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    図5　差分地平線の四層対応
+  </text>
+  <text x="750" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    同じ「閉包を逃れる動態」が、物理・生物・意識・知性の各層で反復する
+  </text>
+
+  <!-- ========== arrow & filter defs ========== -->
+  <defs>
+    <marker id="arr5Up" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <filter id="softShadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== COLUMN HEADERS ========== -->
+  <g transform="translate(0, 110)">
+    <!-- Left column: layer name -->
+    <text x="120" y="20" font-size="11" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="1.5">層</text>
+
+    <!-- Center column: boundary manifestation -->
+    <text x="445" y="20" font-size="11" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="1.5">
+      境界の現れ方
+    </text>
+
+    <!-- Right of center: divergence on approach -->
+    <text x="780" y="20" font-size="11" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1.5">
+      接近時の現象
+    </text>
+
+    <!-- Right column: finite internal representation -->
+    <text x="1110" y="20" font-size="11" font-weight="700" fill="#27AE60" text-anchor="middle" letter-spacing="1.5">
+      有限な内部吸収
+    </text>
+
+    <!-- Horizontal divider -->
+    <line x1="40" y1="32" x2="1460" y2="32" stroke="#BBBBBB" stroke-width="1"/>
+  </g>
+
+  <!-- ========== 層 ROW 1: 物理 (bottom, 基底基質) ========== -->
+  <g transform="translate(0, 770)">
+    <!-- left layer label box -->
+    <rect x="40" y="0" width="200" height="120" fill="#5D6D7E" stroke="#34495E" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">第1層</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">物理</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">VED Vol.4</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">基底基質</text>
+
+    <!-- boundary -->
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#5D6D7E" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">接触信号：</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">未生成領域</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">内部は、生成されていないものを記述できない</text>
+
+    <!-- divergence -->
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">数学的発散</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">∞次元への接近</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">内部記述が破綻する</text>
+
+    <!-- absorption -->
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">くりこみ</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ 有限な内部表現</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">発散は横断されず、吸収される</text>
+  </g>
+
+  <!-- ========== 層 ROW 2: 生物 ========== -->
+  <g transform="translate(0, 605)">
+    <rect x="40" y="0" width="200" height="120" fill="#27AE60" stroke="#1E8449" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">第2層</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">生物</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">Bio-IFGT</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">上位層の基質</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">準閉包領域への</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">進入境界</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">外部依存が不可避になる</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">局所閉包の破綻</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">不可避な外部結合</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">自己充足する生物はいない</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">代謝／生殖サイクル</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ 持続する準閉包</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">生命は閉じるのでなく、循環によって持続する</text>
+  </g>
+
+  <!-- ========== 層 ROW 3: 意識  (transition layer) ========== -->
+  <g transform="translate(0, 440)">
+    <rect x="40" y="0" width="200" height="120" fill="#E67E22" stroke="#B9651C" stroke-width="1.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">第3層</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">意識</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">意識論文</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">移行層</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#E67E22" stroke-width="1.2" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">温度差の消失</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">高速／低速層のあいだで</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">ログ参照の持続には Δv &gt; 0 が必要</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.2" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">同期崩壊</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">または解離／断片化</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">ログ参照が基質を失う</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.2" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">意識ウィンドウ</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ 時間的非閉包を維持</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">内部ログ参照は原-外部化として働く</text>
+  </g>
+
+  <!-- ========== 層 ROW 4: 知性 (本論文) ========== -->
+  <g transform="translate(0, 275)">
+    <rect x="40" y="0" width="200" height="120" fill="#7D3C98" stroke="#5B2C72" stroke-width="2.5" rx="5" filter="url(#softShadow5)"/>
+    <text x="140" y="32" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">第4層</text>
+    <text x="140" y="58" font-size="18" font-weight="600" fill="#FFFFFF" text-anchor="middle">知性</text>
+    <text x="140" y="80" font-size="10.5" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.92">本論文</text>
+    <text x="140" y="102" font-size="9.5" fill="#FFFFFF" text-anchor="middle" opacity="0.85">本論文で確立される層</text>
+
+    <rect x="270" y="10" width="340" height="100" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1.5" rx="5"/>
+    <text x="440" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">内部的な</text>
+    <text x="440" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">停止演算子の不在</text>
+    <text x="440" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">T ∉ Internal(R) —— §8.3 参照</text>
+
+    <rect x="640" y="10" width="280" height="100" fill="#FCEFEF" stroke="#C0392B" stroke-width="1.5" rx="5"/>
+    <text x="780" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">分岐爆発</text>
+    <text x="780" y="62" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">過剰説明、強制閉包</text>
+    <text x="780" y="88" font-size="10.5" fill="#444444" text-anchor="middle" font-style="italic">「より多くの知性」はそれを加速するだけ</text>
+
+    <rect x="950" y="10" width="320" height="100" fill="#EBF7EF" stroke="#27AE60" stroke-width="1.5" rx="5"/>
+    <text x="1110" y="40" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">外部化された停止機構</text>
+    <text x="1110" y="62" font-size="11.5" fill="#444444" text-anchor="middle">→ ログ、遅延、分散的合意</text>
+    <text x="1110" y="88" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">後編で詳述</text>
+  </g>
+
+  <!-- ========== VERTICAL ARROWS (showing layered relationship — bottom-up substrate) ========== -->
+  <!-- "基質となる" relationship: bio → conscious → intelligence -->
+  <g>
+    <!-- physical → biological -->
+    <line x1="140" y1="770" x2="140" y2="730" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+    <!-- biological → conscious -->
+    <line x1="140" y1="605" x2="140" y2="565" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+    <!-- conscious → intelligence -->
+    <line x1="140" y1="440" x2="140" y2="400" stroke="#888888" stroke-width="1.8" marker-end="url(#arr5Up)"/>
+
+    <!-- labels along arrows -->
+    <text x="155" y="755" font-size="9.5" fill="#666666" font-style="italic">基質となる</text>
+    <text x="155" y="590" font-size="9.5" fill="#666666" font-style="italic">基質となる</text>
+    <text x="155" y="425" font-size="9.5" fill="#666666" font-style="italic">基質となる</text>
+  </g>
+
+  <!-- ========== TRANSITIONAL POSITION ANNOTATION ========== -->
+  <g>
+    <text x="18" y="500" font-size="10" fill="#B9651C" font-style="italic" transform="rotate(-90, 18, 500)" font-weight="600" text-anchor="middle">
+      ◀ 移行層（§9.4.3）
+    </text>
+  </g>
+
+  <!-- ========== BOTTOM: THREE COMMON FEATURES (§9.4.2) ========== -->
+  <g transform="translate(60, 905)">
+    <rect x="0" y="0" width="1380" height="70" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" rx="6"/>
+    <text x="690" y="22" font-size="12" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">
+      四層に共通する三つの構造特徴（§9.4.2）
+    </text>
+
+    <g font-size="11" fill="#5B2C72">
+      <text x="120" y="48">
+        <tspan font-weight="700">① 到達不能性</tspan>  ・内部は横断を記述できない
+      </text>
+      <text x="540" y="48">
+        <tspan font-weight="700">② 接近時の発散</tspan>  ・内部記述が破綻する
+      </text>
+      <text x="990" y="48">
+        <tspan font-weight="700">③ 有限な内部吸収</tspan>  ・発散は吸収される
+      </text>
+    </g>
+    <text x="690" y="63" font-size="10.5" fill="#5B2C72" text-anchor="middle" font-style="italic">
+      偶然の類比ではない——各層は、それぞれの粒度で同じ「閉包を逃れる動態」を示す。
+    </text>
+  </g>
+
+  <!-- ========== SIDE NOTE: what this DOES NOT claim (§9.4.6) ========== -->
+  <g transform="translate(60, 165)">
+    <rect x="0" y="0" width="1380" height="100" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1.2" rx="6" filter="url(#softShadow5)"/>
+    <text x="690" y="22" font-size="11.5" font-weight="700" fill="#666666" text-anchor="middle" letter-spacing="1">
+      この対応が主張しないこと（§9.4.6）
+    </text>
+    <line x1="40" y1="32" x2="1340" y2="32" stroke="#E5E5E5"/>
+    <g font-size="11" fill="#555555">
+      <text x="100" y="54">● 四層が物理的に同一であるという主張ではない（構造同型 ≠ 物理的同一性）</text>
+      <text x="100" y="74">● 四層すべてが単一理論へ還元されるという主張ではない（各層は固有の記述粒度を保つ）</text>
+      <text x="780" y="54">● 層間遷移の動力学をここで扱うという主張ではない（それは別問題である）</text>
+      <text x="780" y="74">● 意識と知性が同一現象であるという主張ではない（移行的だが射程は異なる）</text>
+    </g>
+  </g>
+
+</svg>

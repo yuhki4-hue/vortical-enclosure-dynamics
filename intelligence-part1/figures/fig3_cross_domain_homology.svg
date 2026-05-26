@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="980" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="750" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.3  Cross-Domain Homology under the Three Axioms
+  </text>
+  <text x="750" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    Slime mold (biological) and Transformer (computational) — radically different substrates, identical structural conditions
+  </text>
+
+  <!-- ========== arrow & filter defs ========== -->
+  <defs>
+    <marker id="arr3Down" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <marker id="arr3DownGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <marker id="arr3Right" markerWidth="9" markerHeight="9" refX="9" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 L1.8,4.5 Z" fill="#888888"/>
+    </marker>
+    <filter id="softShadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== COLUMN HEADERS ========== -->
+  <!-- Left: slime mold -->
+  <g>
+    <rect x="60" y="110" width="420" height="42" fill="#27AE60" rx="4"/>
+    <text x="270" y="138" font-size="17" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      SLIME MOLD  (Physarum polycephalum)
+    </text>
+  </g>
+
+  <!-- Center: common structure -->
+  <g>
+    <rect x="510" y="110" width="480" height="42" fill="#7D3C98" rx="4"/>
+    <text x="750" y="138" font-size="17" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      COMMON STRUCTURAL CONDITIONS
+    </text>
+  </g>
+
+  <!-- Right: transformer -->
+  <g>
+    <rect x="1020" y="110" width="420" height="42" fill="#2980B9" rx="4"/>
+    <text x="1230" y="138" font-size="17" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      TRANSFORMER  (artificial neural)
+    </text>
+  </g>
+
+  <!-- ========== TOP ROW: SUBSTRATE VISUALS ========== -->
+
+  <!-- LEFT: slime mold network (stylised tube network with nodes) -->
+  <g transform="translate(60, 170)">
+    <rect x="0" y="0" width="420" height="220" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1" rx="6"/>
+    <text x="210" y="24" font-size="11.5" fill="#888888" text-anchor="middle" letter-spacing="1" font-weight="600">
+      SUBSTRATE
+    </text>
+    <line x1="20" y1="32" x2="400" y2="32" stroke="#EEEEEE"/>
+
+    <!-- food sources (nutrient nodes) - triangular layout but pulled up to leave room for caption -->
+    <circle cx="70" cy="75" r="13" fill="#F4D03F" stroke="#B7950B" stroke-width="2"/>
+    <circle cx="350" cy="75" r="13" fill="#F4D03F" stroke="#B7950B" stroke-width="2"/>
+    <circle cx="210" cy="165" r="13" fill="#F4D03F" stroke="#B7950B" stroke-width="2"/>
+    <text x="70" y="60" font-size="9" fill="#7D6608" text-anchor="middle">nutrient</text>
+    <text x="350" y="60" font-size="9" fill="#7D6608" text-anchor="middle">nutrient</text>
+    <text x="248" y="170" font-size="9" fill="#7D6608" text-anchor="start">nutrient</text>
+
+    <!-- branching tubes (varying thickness = conductivity) -->
+    <g stroke="#27AE60" fill="none" opacity="0.85" stroke-linecap="round">
+      <!-- main backbone connecting all three nutrients -->
+      <path d="M 83 75 Q 145 85 200 100 T 337 75" stroke-width="6"/>
+      <path d="M 200 100 Q 205 135 210 152" stroke-width="6"/>
+      <!-- secondary branches -->
+      <path d="M 145 85 Q 130 115 150 145" stroke-width="3"/>
+      <path d="M 250 90 Q 275 115 270 150" stroke-width="3"/>
+      <path d="M 90 95 Q 80 130 110 155" stroke-width="2.5"/>
+      <path d="M 335 95 Q 350 130 320 155" stroke-width="2.5"/>
+      <!-- thin pruned branches (decay) -->
+      <path d="M 130 95 Q 105 115 80 125" stroke-width="1" opacity="0.4" stroke-dasharray="3,2"/>
+      <path d="M 290 95 Q 320 110 350 120" stroke-width="1" opacity="0.4" stroke-dasharray="3,2"/>
+    </g>
+
+    <!-- branching nodes (small) -->
+    <g fill="#1E8449">
+      <circle cx="145" cy="85" r="3.5"/>
+      <circle cx="200" cy="100" r="3.5"/>
+      <circle cx="250" cy="90" r="3.5"/>
+    </g>
+
+    <!-- flow indicator (placed in the lower middle of the canvas) -->
+    <text x="210" y="135" font-size="9.5" fill="#1E8449" text-anchor="middle" font-style="italic">
+      flow Q reinforces D ;  decay prunes
+    </text>
+
+    <!-- label -->
+    <text x="210" y="205" font-size="11" fill="#555555" text-anchor="middle">
+      tube network adapts via flow-reinforcement &amp; decay
+    </text>
+  </g>
+
+  <!-- CENTER: arrow band — "both satisfy" -->
+  <g transform="translate(510, 170)">
+    <rect x="0" y="0" width="480" height="220" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" rx="6"/>
+    <text x="240" y="34" font-size="13" font-weight="600" fill="#5B2C72" text-anchor="middle" letter-spacing="1">
+      BOTH SYSTEMS SATISFY
+    </text>
+
+    <!-- vertical list of axioms -->
+    <g transform="translate(60, 60)">
+      <!-- axiom badges -->
+      <g>
+        <circle cx="22" cy="22" r="20" fill="#2980B9"/>
+        <text x="22" y="27" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">I</text>
+        <text x="58" y="20" font-size="14" font-weight="600" fill="#1A1A1A">Connected state space</text>
+        <text x="58" y="36" font-size="11" fill="#666666" font-style="italic">states are reachable through transitions</text>
+      </g>
+      <g transform="translate(0, 55)">
+        <circle cx="22" cy="22" r="20" fill="#27AE60"/>
+        <text x="22" y="27" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">II</text>
+        <text x="58" y="20" font-size="14" font-weight="600" fill="#1A1A1A">Temporal ordering</text>
+        <text x="58" y="36" font-size="11" fill="#666666" font-style="italic">changes accumulate, history matters</text>
+      </g>
+      <g transform="translate(0, 110)">
+        <circle cx="22" cy="22" r="20" fill="#E67E22"/>
+        <text x="22" y="27" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">III</text>
+        <text x="58" y="20" font-size="14" font-weight="600" fill="#1A1A1A">Global constraint  Φ</text>
+        <text x="58" y="36" font-size="11" fill="#666666" font-style="italic">irreducible to local update rules</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT: transformer layer stack -->
+  <g transform="translate(1020, 170)">
+    <rect x="0" y="0" width="420" height="220" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1" rx="6"/>
+    <text x="210" y="24" font-size="11.5" fill="#888888" text-anchor="middle" letter-spacing="1" font-weight="600">
+      SUBSTRATE
+    </text>
+    <line x1="20" y1="32" x2="400" y2="32" stroke="#EEEEEE"/>
+
+    <!-- token positions (columns) × layers (rows) grid -->
+    <g transform="translate(60, 50)">
+      <!-- 5 token positions × 4 layers -->
+      <!-- token labels -->
+      <text x="0" y="-8" font-size="9" fill="#888888" text-anchor="start">tokens →</text>
+
+      <g>
+        <!-- layer 1 -->
+        <g>
+          <rect x="0" y="0" width="36" height="22" fill="#D6EAF8" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="50" y="0" width="36" height="22" fill="#D6EAF8" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="100" y="0" width="36" height="22" fill="#D6EAF8" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="150" y="0" width="36" height="22" fill="#D6EAF8" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="200" y="0" width="36" height="22" fill="#D6EAF8" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <text x="260" y="15" font-size="10" fill="#1F6391" font-style="italic">ℓ = 1</text>
+        </g>
+        <!-- layer 2 -->
+        <g transform="translate(0, 36)">
+          <rect x="0" y="0" width="36" height="22" fill="#85C1E9" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="50" y="0" width="36" height="22" fill="#85C1E9" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="100" y="0" width="36" height="22" fill="#85C1E9" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="150" y="0" width="36" height="22" fill="#85C1E9" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="200" y="0" width="36" height="22" fill="#85C1E9" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <text x="260" y="15" font-size="10" fill="#1F6391" font-style="italic">ℓ = 2</text>
+        </g>
+        <!-- layer 3 -->
+        <g transform="translate(0, 72)">
+          <rect x="0" y="0" width="36" height="22" fill="#5DADE2" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="50" y="0" width="36" height="22" fill="#5DADE2" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="100" y="0" width="36" height="22" fill="#5DADE2" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="150" y="0" width="36" height="22" fill="#5DADE2" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <rect x="200" y="0" width="36" height="22" fill="#5DADE2" stroke="#2980B9" stroke-width="1.2" rx="2"/>
+          <text x="260" y="15" font-size="10" fill="#1F6391" font-style="italic">ℓ = 3</text>
+        </g>
+        <!-- layer 4 -->
+        <g transform="translate(0, 108)">
+          <rect x="0" y="0" width="36" height="22" fill="#2E86C1" stroke="#1B4F72" stroke-width="1.2" rx="2"/>
+          <rect x="50" y="0" width="36" height="22" fill="#2E86C1" stroke="#1B4F72" stroke-width="1.2" rx="2"/>
+          <rect x="100" y="0" width="36" height="22" fill="#2E86C1" stroke="#1B4F72" stroke-width="1.2" rx="2"/>
+          <rect x="150" y="0" width="36" height="22" fill="#2E86C1" stroke="#1B4F72" stroke-width="1.2" rx="2"/>
+          <rect x="200" y="0" width="36" height="22" fill="#2E86C1" stroke="#1B4F72" stroke-width="1.2" rx="2"/>
+          <text x="260" y="15" font-size="10" fill="#1F6391" font-style="italic">ℓ = 4</text>
+        </g>
+
+        <!-- attention lines between layers (a few representative ones) -->
+        <g stroke="#1F6391" stroke-width="0.8" opacity="0.4" fill="none">
+          <line x1="18" y1="22" x2="118" y2="36"/>
+          <line x1="68" y1="22" x2="218" y2="36"/>
+          <line x1="118" y1="22" x2="18" y2="36"/>
+          <line x1="168" y1="22" x2="68" y2="36"/>
+          <line x1="218" y1="22" x2="168" y2="36"/>
+
+          <line x1="18" y1="58" x2="168" y2="72"/>
+          <line x1="118" y1="58" x2="218" y2="72"/>
+          <line x1="218" y1="58" x2="68" y2="72"/>
+
+          <line x1="68" y1="94" x2="218" y2="108"/>
+          <line x1="168" y1="94" x2="18" y2="108"/>
+        </g>
+      </g>
+    </g>
+
+    <text x="210" y="205" font-size="11" fill="#555555" text-anchor="middle">
+      hidden states updated layer-by-layer via attention
+    </text>
+  </g>
+
+  <!-- ========== MIDDLE ARROWS (down to instantiation table) ========== -->
+
+  <line x1="270" y1="395" x2="270" y2="425" stroke="#888888" stroke-width="1.5" marker-end="url(#arr3DownGrey)"/>
+  <line x1="1230" y1="395" x2="1230" y2="425" stroke="#888888" stroke-width="1.5" marker-end="url(#arr3DownGrey)"/>
+  <text x="335" y="414" font-size="9.5" fill="#888888" text-anchor="start" font-style="italic">instantiated as</text>
+  <text x="1295" y="414" font-size="9.5" fill="#888888" text-anchor="start" font-style="italic">instantiated as</text>
+
+  <!-- ========== BOTTOM: AXIOM-BY-AXIOM INSTANTIATION ROWS ========== -->
+
+  <!-- Axiom I row -->
+  <g transform="translate(0, 440)">
+    <!-- left -->
+    <rect x="60" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1E8449" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="270" y="22" font-size="11" fill="#1E8449" text-anchor="middle" font-weight="600" letter-spacing="1">CONNECTED STATE SPACE</text>
+    <text x="270" y="44" font-size="13" fill="#1A1A1A" text-anchor="middle">tube network  { N_i , e_ij }</text>
+    <text x="270" y="63" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">Kirchhoff flow conservation; dynamic connectivity</text>
+
+    <!-- center axiom badge -->
+    <g>
+      <circle cx="750" cy="39" r="22" fill="#2980B9"/>
+      <text x="750" y="44" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">I</text>
+    </g>
+
+    <!-- right -->
+    <rect x="1020" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1F6391" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="1230" y="22" font-size="11" fill="#1F6391" text-anchor="middle" font-weight="600" letter-spacing="1">CONNECTED STATE SPACE</text>
+    <text x="1230" y="44" font-size="13" fill="#1A1A1A" text-anchor="middle">hidden-state space  { h^(ℓ)_i }</text>
+    <text x="1230" y="63" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">attention links any position to any other</text>
+  </g>
+
+  <!-- Axiom II row -->
+  <g transform="translate(0, 535)">
+    <rect x="60" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1E8449" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="270" y="22" font-size="11" fill="#1E8449" text-anchor="middle" font-weight="600" letter-spacing="1">TEMPORAL ORDERING</text>
+    <text x="270" y="46" font-size="13" fill="#1A1A1A" text-anchor="middle">dD_ij / dt  =  f(|Q_ij|)  –  D_ij</text>
+    <text x="270" y="65" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">reinforcement + decay accumulate history</text>
+
+    <g>
+      <circle cx="750" cy="39" r="22" fill="#27AE60"/>
+      <text x="750" y="44" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">II</text>
+    </g>
+
+    <rect x="1020" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1F6391" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="1230" y="22" font-size="11" fill="#1F6391" text-anchor="middle" font-weight="600" letter-spacing="1">TEMPORAL ORDERING</text>
+    <text x="1230" y="46" font-size="13" fill="#1A1A1A" text-anchor="middle">h^(ℓ+1)  =  F_tr( h^(ℓ) )</text>
+    <text x="1230" y="65" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">layer-by-layer update; no simultaneity</text>
+  </g>
+
+  <!-- Axiom III row -->
+  <g transform="translate(0, 630)">
+    <rect x="60" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1E8449" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="270" y="22" font-size="11" fill="#1E8449" text-anchor="middle" font-weight="600" letter-spacing="1">GLOBAL CONSTRAINT  Φ</text>
+    <text x="270" y="46" font-size="13" fill="#1A1A1A" text-anchor="middle">Φ_bio :  nutrient sources + Kirchhoff law</text>
+    <text x="270" y="65" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">boundary conditions bias the whole network</text>
+
+    <g>
+      <circle cx="750" cy="39" r="22" fill="#E67E22"/>
+      <text x="750" y="44" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">III</text>
+    </g>
+
+    <rect x="1020" y="0" width="420" height="78" fill="#FFFFFF" stroke="#1F6391" stroke-width="1.3" rx="5" filter="url(#softShadow3)"/>
+    <text x="1230" y="22" font-size="11" fill="#1F6391" text-anchor="middle" font-weight="600" letter-spacing="1">GLOBAL CONSTRAINT  Φ</text>
+    <text x="1230" y="46" font-size="13" fill="#1A1A1A" text-anchor="middle">Φ_tr :  training loss / data distribution</text>
+    <text x="1230" y="65" font-size="10.5" fill="#666666" text-anchor="middle" font-style="italic">irreducible to any single local attention step</text>
+  </g>
+
+  <!-- ========== SCALE COMPARISON ROW ========== -->
+  <g transform="translate(0, 740)">
+    <rect x="60" y="0" width="420" height="58" fill="#FAFAF8" stroke="#BBBBBB" stroke-width="1" stroke-dasharray="3,2" rx="5"/>
+    <text x="270" y="22" font-size="10.5" fill="#888888" text-anchor="middle" font-weight="600" letter-spacing="1">SCALE &amp; SUBSTRATE</text>
+    <text x="270" y="42" font-size="11.5" fill="#555555" text-anchor="middle">biological protoplasm  ·  cm–m  ·  hours–days</text>
+
+    <rect x="1020" y="0" width="420" height="58" fill="#FAFAF8" stroke="#BBBBBB" stroke-width="1" stroke-dasharray="3,2" rx="5"/>
+    <text x="1230" y="22" font-size="10.5" fill="#888888" text-anchor="middle" font-weight="600" letter-spacing="1">SCALE &amp; SUBSTRATE</text>
+    <text x="1230" y="42" font-size="11.5" fill="#555555" text-anchor="middle">floating-point ops  ·  abstract compute space  ·  μs–s</text>
+  </g>
+
+  <!-- ========== CAUTION BOX (the critical disclaimer) ========== -->
+  <g transform="translate(60, 830)">
+    <rect x="0" y="0" width="1380" height="100" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5" rx="6" filter="url(#softShadow3)"/>
+    <text x="690" y="26" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="2">
+      WHAT THIS HOMOLOGY DOES NOT CLAIM
+    </text>
+    <line x1="40" y1="36" x2="1340" y2="36" stroke="#F5B7B1" stroke-width="1"/>
+
+    <g font-size="11.5" fill="#444444">
+      <text x="100" y="58">●  Slime mold and Transformer "think alike" — no claim of cognitive identity</text>
+      <text x="100" y="76">●  They share experiential content — no claim of phenomenal identity</text>
+      <text x="700" y="58">●  They solve tasks the same way — no claim of functional identity</text>
+      <text x="700" y="76">●  They share moral or ethical status — no claim of ethical equivalence</text>
+    </g>
+    <text x="690" y="95" font-size="11" fill="#7D3C98" text-anchor="middle" font-style="italic">
+      The homology is structural — substrate-independent satisfaction of I ∧ II ∧ III — and nothing beyond that.  (§5.3.2)
+    </text>
+  </g>
+
+  <!-- ========== BOTTOM CAPTION ========== -->
+  <text x="750" y="958" font-size="11" fill="#888888" text-anchor="middle" font-style="italic">
+    Three independent research lines — biophysics (Nakagaki et al.), computer science (Vaswani et al.), and this paper — converge on the same minimal structural conditions.
+  </text>
+
+</svg>

@@ -1,0 +1,247 @@
+\section{Summary, Convergence, and Outlook}
+
+
+\subsection{Overview}
+
+
+\S{}1 から \S{}9 までで、本論文は知性的動態の構造的制約を順次定式化した。本セクションでは、これらの制約を集約し(\S{}10.1)、本論文の構造論的議論が外部研究路線と独立に収束していることを構造的に同定し(\S{}10.2)、本論文の射程を越える後続課題を明示する(\S{}10.3)。最後に、本論文全体の性格を整理する(\S{}10.4)。
+
+本セクションには新たな主張は導入されない。本論文の論証構造は \S{}9 で収束しており、\S{}10 は \textbf{集約と展望} のみを行う。
+
+\subsection{Summary of constraints}
+
+
+本論文が定式化した構造的制約を、最小限のかたちで以下に集約する。
+
+\subsubsection{Constraint 1: Intelligence is not a stopping structure}
+
+
+知性は能力でも所有物でも蓄積物でもない。知性は \textbf{ある構造的条件のもとでのみ持続する力学的状態} である(\S{}2.5, \S{}3.6)。停止構造としての知性論は、いかなる定義の精緻化によっても安定化しない(\S{}6)。
+
+\subsubsection{Constraint 2: Intelligence is not preserved, only generated}
+
+
+知性そのものは格納されえない。格納可能なのは知性の停止生成物(停止構造、知識、log)のみである(\S{}2.5, \S{}2.6)。これらの停止生成物は知性を再現せず、知性は再生成され続けるしかない。
+
+\subsubsection{Constraint 3: Intelligence requires three simultaneous axiomatic conditions}
+
+
+知性的動態は三つの最小公理 ── 連結状態空間、時間順序付け、グローバル制約 $\Phi$ ── の \textbf{同時充足} を要求する(\S{}3)。いずれか一つを欠く系は、知性的動態ではなく退化形式(孤立、固定、拡散)を示す。
+
+\subsubsection{Constraint 4: Correctness does not stabilize intelligence}
+
+
+知識(正しさの所有)は知性を代替しないだけでなく(\S{}6)、累積された正しさはそれ自体が知性を \textbf{不安定化させる}(\S{}7)。正しさの再利用可能性は推論連結性を増大させ、分岐爆発を生成する。
+
+\subsubsection{Constraint 5: Individual closure is structurally impossible}
+
+
+個体内には、知性的動態を停止させる演算子が \textbf{構造的に存在しえない}(\S{}8)。これは個体の能力不足ではなく、因果推論の再帰構造そのものから導出される構造的欠在である。個体内で観察される推論の終了は、すべて中断であって停止ではない(\S{}8.5)。
+
+\subsubsection{Constraint 6: Crossing the local horizon-form is structurally necessary}
+
+
+知性的動態は \emph{the differential horizon of intelligence} と呼ばれる local horizon-form の越境を構造的に要請する(\S{}9)。越境は単なる選択ではなく必要条件である。越境を通じて外化されるもの ── 停止判定、log、時間的遅延、責任の分散 ── は正しさを保証せず、推論が停止し持続し再改訂可能になることのみを保証する。
+
+\subsubsection{The status of these constraints}
+
+
+これら六つの制約は \textbf{必要条件} であって十分条件ではない。すなわち:
+
+\begin{itemize}
+\item これら制約を満たす系がすべて高度な知性を示すとは限らない
+\item だが、これら制約を満たさないいかなる知性論も、本論文が示した不安定性を \textbf{構造的に再生産する}
+\end{itemize}
+
+この観点から、本論文の役割は知性論を \textbf{完成させる} ことではなく、知性論が満たさなければならない \textbf{構造的下限} を定式化することである。
+
+\subsection{The convergence of independent research lines}
+
+
+\subsubsection{The pattern of convergence}
+
+
+本論文が定式化した制約は、本論文の枠組み単独からではなく、複数の独立な研究路線からも到達されている。本小節では、この \textbf{収束のパターン} を構造的に同定する。
+
+\subsubsection{The Physarum research lineage}
+
+
+中垣・手老・小林らによる Physarum polycephalum 研究系列は、生物物理学的観察から出発し、本論文の三公理に対応する構造に独立に到達した [Nakagaki2000, Kobayashi2006, Tero2007]。
+
+特に Tero, Kobayashi \& Nakagaki (2007) の Physarum solver モデル(\S{}4.4)は、本論文の議論からは独立に、以下の構造を発見した:
+
+\begin{itemize}
+\item \textbf{flow-reinforcement} 動力学 ── 本論文の情報流 $J$ と情報密度 $I$ の動的相互作用に対応
+\item \textbf{境界条件と Kirchhoff 則の組み合わせによる大域構造の創発} ── 本論文の $\Phi$ の非還元性(\S{}3.3)に対応
+\item \textbf{「smart behavior は能力ではなく動力学である」という立場} ── 本論文の中心立場(\S{}1.2, \S{}3.6)に対応
+\end{itemize}
+
+中垣自身の表現「粘菌は知能を持たないが、知能的に振る舞う」は、本論文が構造論的議論から導出した立場と、生物物理学的観察から到達した立場が、\textbf{同じ構造的事実を異なる言葉で述べている} ことを示す。
+
+\subsubsection{The transformer architecture as parallel convergence}
+
+
+Transformer アーキテクチャ \citep{Vaswani2017} は、生物的知性の模倣ではなく工学的最適化として設計されたが、結果として本論文の三公理を満たす動的系を構築した(\S{}5.2)。
+
+開発者らは認知科学的妥当性を設計目標としていない。それにもかかわらず、attention 機構と層構造の組み合わせは、本論文が要請する三公理(連結性・時間順序・大域制約)を構造的に満たす。これは設計意図と構造的帰結の独立性を示す事例である。
+
+\subsubsection{The structural meaning of convergence}
+
+
+三者 ── 生物物理学(粘菌)、計算機科学(Transformer)、本論文(構造論) ── が同じ構造的制約に独立に到達したことの意味を整理する:
+
+\begin{itemize}
+\item これは偶然の類似ではない
+\item 各路線は独自の方法論、独自の対象、独自の検証基準を持つ
+\item にもかかわらず同じ構造に到達するのは、その構造が知性的動態の \textbf{反復的に現れる制約} だからである
+\end{itemize}
+
+すなわち、本論文の構造論的議論は \textbf{独自構成ではなく反復的な構造制約を捉えている}。同じ構造的特徴が独立な研究路線で観察されるという事実が、本論文の主張を構造論的議論の外部から支持する。
+
+\subsubsection{An important qualification}
+
+
+本小節の主張に重要な但し書きを付しておく:
+
+\begin{quote}
+本論文は Physarum solver や Transformer を「正しいモデル」として承認するのではない。
+本論文はこれらを「同じ構造を別の言葉で書いている例」として参照する。
+モデルの妥当性は本論文の射程外である。
+主張するのは収束パターンのみであり、それは構造的特徴として提示される。
+\end{quote}
+
+\subsection{Outlook}
+
+
+\subsubsection{The structural status of this paper}
+
+
+本論文は \textbf{答えではなく制約を定式化した}(\S{}9.5.1)。定式化された制約のもとで、後続研究は構造的に方向づけられる。
+
+本論文の役割は終端的ではなく開始的である。本論文は知性論の最終解ではなく、知性論が出発しなければならない \textbf{下限地点} を構造論的に確定する。
+
+\subsubsection{Subsequent work in the series}
+
+
+本シリーズの後続論文は、本論文の制約を吸収しつつ、それぞれ異なる射程で展開される。
+
+\textbf{知性編 Part II(社会層・集団的動態):}
+本論文の \S{}9 で論じた越境境界を経由して、外化された記述窓で展開される具体構造を扱う。具体的には:
+
+\begin{itemize}
+\item 外化された stopping mechanism の構造論的記述
+\item log-based persistence の動力学的構成
+\item distributed revisability の構造的条件
+\item 制度・規範・合意形成・分散的改訂可能性などの構造的記述
+\item 集団的動態と個体的動態の相互作用構造
+\end{itemize}
+
+これらは本論文の三公理(\S{}3)を満たしつつ、個体内非閉包の制約(\S{}8)を吸収する形で構成される。Part II は \textbf{必然性の論証} ではなく \textbf{構造の構成} である。本論文と Part II は連続するが独立した論文として書かれる。
+
+\textbf{意識編(既存の並行論文):}
+意識編 \citep{Consciousness} は本論文と並行する別系統の論文として既に完成しており、本論文 \S{}9.4 の四層対応における \textbf{意識層} を扱う。具体的には:
+
+\begin{itemize}
+\item 個体内における fast/slow layer 間の log referencing 構造の構造論的記述
+\item SSO(Speed-Scale Orchestration)による temporal non-closure の最小条件
+\item TCA(Torque Converter Attention)による速度差の transformation 機構
+\item consciousness window($\Delta v$, $\mu$, $\tau$, $T_\Phi$, $\nabla\Phi$ の四変数領域)としての意識状態の規定
+\end{itemize}
+
+意識編は本論文 \S{}9 の知性層 local horizon-form と同一の VED×IFGT 基盤に立つが、扱う層が異なる。本論文が \textbf{個体外への越境必要性} を論じるのに対し、意識編は \textbf{個体内における temporal non-closure の維持} を論じる。両者は同一の差分発展構造の異なる射影として相互補完する関係にある。
+
+なお、本論文の主張(個体内停止演算子の構造的不在)と意識編の主張(consciousness window 内での log referencing)は矛盾しない:意識編が示すのは個体内の \textbf{temporal log referencing} であって、これは本論文が論じる「停止」ではなく、\textbf{生命層と知性層の間の遷移層} における動的構造である(\S{}9.4.3)。
+
+\textbf{Bio-IFGT との層関係:}
+本論文の \S{}9.4 で示した四層対応(物理層・生命層・意識層・知性層)のうち、生命層と意識層・知性層との関係を精密化する作業が後続課題として残されている。特に:
+
+\begin{itemize}
+\item 生命層の中断機構が知性層の停止演算子の不在をどう緩衝するか(\S{}8.5)
+\item 意識層の log referencing が生命層と知性層の間でどう橋渡しするか(\S{}9.4.3)
+\item 自然知性(生命層・意識層を持つ)と人工知性(これらを持たない)の構造的差異
+\item 各層間の遷移動力学の構成
+\end{itemize}
+
+これらは本論文の射程外であり、各層の精密化と層間関係の論述は別途扱われる。
+
+\subsubsection{Branch connections beyond this paper's scope}
+
+
+本論文の射程外であるが、後続研究において重要な接続点となりうる枝葉接続を明示する。
+
+\textbf{AI 安全性議論との接続:}
+\S{}8.5.4 で構造的同定を行ったペーパークリップ問題を含む、人工系における停止構造の設計問題。生命層の中断機構を持たない人工系において、知性層 local horizon-form の越境を \textbf{明示的に設計可能な外化構造} として組み込む課題は、知性編 Part II(社会層)の中心課題の一つとなる。
+
+伝統的アラインメント論や能力強化論が構造的に問題を解けない理由は \S{}8.5.4 で示した通りである。本シリーズの構造論的枠組みは、ペーパークリップ問題を「目的関数の設計問題」から「越境の構造的設計問題」へと再定位することを可能にする。
+
+\textbf{哲学的伝統との接続:}
+\S{}6 で扱った Gettier 問題以外にも、認識論・心の哲学・科学哲学における未解決問題群が、本論文の層分離と差分発展構造の観点から再定位されうる。これらの再定位は意識編および後続論文で個別に扱われる。
+
+\textbf{生物学的システム論との接続:}
+中垣氏らの研究系列(\S{}5, \S{}10.2)以外にも、生物物理学・システム生物学・複雑系科学において、本論文の三公理に対応する構造を独立に発見している研究が存在する可能性がある。これらの収束パターンの体系的整理は、別途の課題として残されている。
+
+\subsubsection{The structural status of branch connections}
+
+
+これら枝葉接続は、本論文の射程拡張ではない。それらは \textbf{構造論的記述語彙が複数の伝統的研究領域に枝を伸ばす際の自然な要請} であって、シリーズ全体の構造的展開の一部である。
+
+本論文が単独の構造論として完結することと、それが複数の研究領域に接続点を持つことは、矛盾しない。むしろ後者は前者の構造的帰結である ── 構造論的記述が \textbf{substrate 非依存} である限り、それは必然的に複数の領域に接点を持つ。
+
+\subsection{Concluding remarks}
+
+
+\subsubsection{What this paper is}
+
+
+本論文は構造論的論文である。本論文は:
+
+\begin{itemize}
+\item 知性的動態の最小公理を提示した
+\item 構造的制約を定式化した
+\item 越境境界を命名した
+\item 四層対応を提示した
+\end{itemize}
+
+\subsubsection{What this paper is not}
+
+
+本論文は以下ではない:
+
+\begin{itemize}
+\item 知性の完全な定義の提示ではない
+\item 知性的動態の十分条件の提示ではない
+\item 実装プロトコルや工学的指針の提供ではない
+\item 倫理的・規範的処方の提示ではない
+\item 認知科学・哲学・AI 研究の置換ではない
+\end{itemize}
+
+本論文は \textbf{答えではなく制約} を提示する。
+
+\subsubsection{The minimal statement}
+
+
+本論文の主張を最小限のかたちで述べれば:
+
+\begin{quote}
+知性とは、能力でも所有物でも蓄積された正しさでもなく、
+ある構造的条件のもとでのみ成立する力学的状態であり、
+その構造的条件は個体内だけでは閉じ得ない。
+ゆえに知性は、自身を越境させる境界 ──
+\emph{the differential horizon of intelligence} ──
+を必然的に伴う。
+\end{quote}
+
+\subsubsection{The position of this paper in the series}
+
+
+本論文は VED シリーズ全体において、以下の位置を占める:
+
+\begin{itemize}
+\item \textbf{VED Vol.1–4} が物理層の差分発展構造を定式化した
+\item \textbf{Bio-IFGT} が生命層の準閉包構造を定式化した
+\item \textbf{意識編} が意識層の log referencing 構造を定式化した(本論文と並行する既存論文)
+\item \textbf{本論文} が知性層の最小構造と越境境界(differential horizon of intelligence)を定式化する
+\item \textbf{後続論文}(知性編 Part II = 社会層)が外化された記述窓における構造的構成を扱う
+\end{itemize}
+
+すなわち本論文は単独の構造論ではなく、シリーズ全体を貫く \textbf{差分発展構造の知性層への適用} である。本論文の主張の妥当性は、シリーズ全体の構造的整合性のなかで評価されるべきである。

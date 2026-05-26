@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#FAFAF8"/>
+
+  <!-- TITLE -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.2  Joint Necessity of the Three Axioms
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    Intelligent dynamics emerges only when all three axioms hold simultaneously
+  </text>
+
+  <!-- Arrow defs -->
+  <defs>
+    <marker id="arrFail" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 L1.8,4.5 Z" fill="#C0392B"/>
+    </marker>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== THREE OVERLAPPING CIRCLES ========== -->
+  <!-- Geometric layout:
+       Top:    Axiom I  (Connected state space)        center (700, 320), r=200, blue
+       BL:     Axiom II (Temporal ordering)            center (570, 510), r=200, green
+       BR:     Axiom III (Global constraint Φ)         center (830, 510), r=200, orange
+       Center triangular overlap: intelligent dynamics                                         -->
+
+  <g opacity="0.42">
+    <circle cx="700" cy="320" r="200" fill="#2980B9" stroke="#2980B9" stroke-width="2"/>
+    <circle cx="570" cy="510" r="200" fill="#27AE60" stroke="#27AE60" stroke-width="2"/>
+    <circle cx="830" cy="510" r="200" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+  </g>
+
+  <!-- circle outlines on top (sharp) -->
+  <g fill="none" stroke-width="2.5">
+    <circle cx="700" cy="320" r="200" stroke="#1F6391"/>
+    <circle cx="570" cy="510" r="200" stroke="#1E8449"/>
+    <circle cx="830" cy="510" r="200" stroke="#B9651C"/>
+  </g>
+
+  <!-- ========== AXIOM LABELS (inside circles, away from overlap) ========== -->
+
+  <!-- Axiom I label (top of top-circle) -->
+  <text x="700" y="195" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AXIOM I</text>
+  <text x="700" y="225" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">Connected</text>
+  <text x="700" y="247" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">state space</text>
+  <text x="700" y="278" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    states are reachable
+  </text>
+  <text x="700" y="294" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    through transitions
+  </text>
+
+  <!-- Axiom II label (bottom-left circle) -->
+  <text x="520" y="555" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AXIOM II</text>
+  <text x="520" y="585" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">Temporal</text>
+  <text x="520" y="607" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">ordering</text>
+  <text x="520" y="635" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    s(t+1) = F(s(t))
+  </text>
+  <text x="520" y="652" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    changes accumulate
+  </text>
+
+  <!-- Axiom III label (bottom-right circle) -->
+    <text x="880" y="555" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AXIOM III</text>
+    <text x="880" y="585" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">Global</text>
+    <text x="880" y="607" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="middle">constraint  Φ</text>
+    <text x="880" y="635" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    Φ : S → ℝ
+  </text>
+  <text x="880" y="652" font-size="13" fill="#FFFFFF" text-anchor="middle" font-style="italic" opacity="0.95">
+    irreducible to local rules
+  </text>
+
+  <!-- ========== CENTER: triangular overlap ========== -->
+  <!-- The geometric centroid of three circles -->
+  <g>
+    <circle cx="700" cy="455" r="60" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="700" cy="455" r="60" fill="none" stroke="#7D3C98" stroke-width="2.5" stroke-dasharray="4,3"/>
+    <text x="700" y="448" font-size="13" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">INTELLIGENT</text>
+    <text x="700" y="468" font-size="13" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">DYNAMICS</text>
+    <text x="700" y="488" font-size="10" fill="#5B2C72" text-anchor="middle" font-style="italic">(I ∧ II ∧ III)</text>
+  </g>
+
+  <!-- ========== DEGENERATION ANNOTATIONS (outside circles) ========== -->
+
+  <!-- Missing I: top-left exterior  (II + III only) -->
+  <g transform="translate(120, 720)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">WITHOUT  AXIOM I</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">isolated local optima</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">no information propagation</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">no integrated dynamics</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      e.g. parallel independent reactors
+    </text>
+  </g>
+
+  <!-- Missing II: center-bottom exterior  (I + III only) -->
+  <g transform="translate(565, 730)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">WITHOUT  AXIOM II</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">static fixation</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">collapses to instant equilibrium</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">no history, no learning</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      e.g. frozen optimization problem
+    </text>
+  </g>
+
+  <!-- Missing III: right exterior  (I + II only) -->
+  <g transform="translate(1010, 720)">
+    <rect x="0" y="0" width="270" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.4" rx="5" filter="url(#softShadow)"/>
+    <text x="135" y="22" font-size="12" font-weight="700" fill="#C0392B" text-anchor="middle" letter-spacing="1">WITHOUT  AXIOM III</text>
+    <line x1="20" y1="32" x2="250" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="135" y="52" font-size="13" font-weight="600" fill="#1A1A1A" text-anchor="middle">directionless diffusion</text>
+    <text x="135" y="74" font-size="11" fill="#555555" text-anchor="middle">history accumulates but drifts</text>
+    <text x="135" y="90" font-size="11" fill="#555555" text-anchor="middle">no global coherence</text>
+    <text x="135" y="108" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      e.g. random walk with memory
+    </text>
+  </g>
+
+  <!-- (connection lines removed: the labels "WITHOUT AXIOM I/II/III" on each box already make the correspondence explicit, and dashed lines crossing the Venn diagram added more confusion than clarity) -->
+
+  <!-- ========== BOTTOM BANNER: "commonly confused with intelligence" ========== -->
+  <g transform="translate(0,0)">
+    <rect x="80" y="865" width="1240" height="25" fill="none"/>
+  </g>
+
+  <!-- Right side legend: "commonly mistaken as intelligence" -->
+  <g transform="translate(80, 130)">
+    <rect x="0" y="0" width="290" height="160" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="1" rx="5"/>
+    <text x="145" y="22" font-size="12" font-weight="700" fill="#444444" text-anchor="middle" letter-spacing="1">
+      OFTEN MISTAKEN FOR INTELLIGENCE
+    </text>
+    <line x1="20" y1="32" x2="270" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="20" y="55" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">Parallelism</tspan>  →  fails II or III
+    </text>
+    <text x="20" y="78" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">Optimization</tspan>  →  fails II
+    </text>
+    <text x="20" y="101" font-size="11.5" fill="#1A1A1A">
+      <tspan font-weight="600">Memory</tspan>  →  fails III
+    </text>
+    <text x="145" y="135" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      None alone produces intelligent dynamics.
+    </text>
+    <text x="145" y="150" font-size="10.5" fill="#888888" text-anchor="middle" font-style="italic">
+      Only the joint satisfaction does.
+    </text>
+  </g>
+
+  <!-- Top-right small caption: lower bound, not upper -->
+  <g transform="translate(1030, 130)">
+    <rect x="0" y="0" width="290" height="160" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1.2" rx="5"/>
+    <text x="145" y="22" font-size="12" font-weight="700" fill="#5B2C72" text-anchor="middle" letter-spacing="1">
+      WHAT THE AXIOMS ESTABLISH
+    </text>
+    <line x1="20" y1="32" x2="270" y2="32" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="145" y="55" font-size="12" fill="#1A1A1A" text-anchor="middle">
+      a <tspan font-weight="700" fill="#5B2C72">lower bound</tspan> on intelligence,
+    </text>
+    <text x="145" y="73" font-size="12" fill="#1A1A1A" text-anchor="middle">
+      not an upper bound
+    </text>
+    <text x="145" y="100" font-size="11" fill="#555555" text-anchor="middle">Systems satisfying I ∧ II ∧ III</text>
+    <text x="145" y="116" font-size="11" fill="#555555" text-anchor="middle">are not guaranteed to be highly</text>
+    <text x="145" y="132" font-size="11" fill="#555555" text-anchor="middle">intelligent — but systems missing</text>
+    <text x="145" y="148" font-size="11" fill="#555555" text-anchor="middle">any one cannot sustain it at all.</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="700" y="877" font-size="11" fill="#888888" text-anchor="middle" font-style="italic">
+    The three axioms are semantically neutral: no meaning, purpose, correctness, or subjectivity is presupposed at this level (§3.5).
+  </text>
+
+</svg>
