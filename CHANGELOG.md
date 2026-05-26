@@ -25,6 +25,12 @@ All notable changes to this repository will be documented in this file.
   treating consciousness as an opening regime rather than a generated object,
   using projected IFGT variables and the local log-referencing flow
   `J_{\log}`.
+- Introduced projection as the fourth IFGT primitive in the consciousness
+  manuscript, clarified projected uses of IFGT variables, and distinguished the
+  structural use of projection from the psychological sense.
+- Aligned the consciousness and intelligence manuscripts by treating the
+  consciousness window and the intelligence-layer horizon as different
+  projected windows of the same differential-development structure.
 - Added `intelligence-part1/`, the first intelligence-layer paper in the
   VED/IFGT application series.
 - Added English and Japanese LaTeX manuscripts, compiled PDFs, references, and
