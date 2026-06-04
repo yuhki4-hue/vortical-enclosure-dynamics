@@ -28,13 +28,13 @@ after submission approval.
 - [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv identifier pending
 - [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
-  arXiv identifier pending
+  [Japanese PDF](bio-ifgt/main_ja.pdf) available; arXiv identifier pending
 - [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](./conceptual-topography/main.pdf)  
   arXiv identifier pending
 - [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
-  arXiv identifier pending
+  [Japanese PDF](./consciousness/main_ja.pdf) available; arXiv identifier pending
 - [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
-  arXiv identifier pending
+  [Japanese PDF](./intelligence-part1/main_ja.pdf) available; arXiv identifier pending
 - [Intelligence Part II — Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers](./intelligence-part2/main.pdf)  
   [Japanese PDF](./intelligence-part2/main_ja.pdf) available; English TeX draft in progress
 
