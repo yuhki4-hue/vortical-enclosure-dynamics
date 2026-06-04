@@ -1,0 +1,65 @@
+% English draft based on sections/03_nonclosure_theorem_ja.tex
+\section{The Non-Closure Theorem: No Internal Fixed Point in $L_F$}
+
+This chapter is the first center of the paper. It establishes that the inference layer $L_F$ cannot close itself by its own operation. The externalization of stopping is therefore not an optional design choice but a structural consequence of inference.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig1_c_landscape.pdf}
+\caption{The C-landscape and the inference trajectory. Inference moves along the gradient $\nabla C$ on the closure landscape, but structurally it cannot settle at an internal stopping point.}
+\label{fig:part2-c-landscape}
+\figurenote{The horizontal axis is state space and the vertical axis is closure degree $C$. The blue trajectory represents iterations of $F$, while the red boundary marks the unattainable $C_{\max}$.}{Within fixed $\theta$ and movement type (A), $L_F$ has no internal fixed point. The figure gives the geometric intuition for why $\mu_\theta$, region reconfiguration, and $L_E$ become necessary.}
+\end{figure}
+
+\subsection{Assumptions}
+
+The proof requires only minimal assumptions.
+
+\textbf{P1: Justification extension.} The inference operator $F$ sends a state $x_n$ to a more justified state $x_{n+1}=F(x_n)$.
+
+\textbf{P2: Monotonic justification measure.} There exists a measure $J$ such that
+\[
+J(F(x))>J(x)
+\]
+for admissible states.
+
+\textbf{P3: Fixed movement region.} The argument is made within a fixed movement region $\Omega_\theta$. It concerns movement type (A), not reconfiguration type (B).
+
+\subsection{Theorem}
+
+\textbf{Theorem 3.1 (Non-Closure Theorem).}
+For any inference operator $F$ satisfying P1 and P2, there is no internal fixed point $x^*$ such that
+\[
+F(x^*)=x^*.
+\]
+Equivalently,
+\[
+\forall x\in\mathcal{X},\quad F(x)\neq x
+\]
+within the range of fixed-$\theta$ inference.
+
+\subsection{Proof Sketch}
+
+Assume, for contradiction, that a fixed point $x^*$ exists. Then $F(x^*)=x^*$. By P2,
+\[
+J(F(x^*))>J(x^*).
+\]
+But since $F(x^*)=x^*$, this becomes
+\[
+J(x^*)>J(x^*),
+\]
+which is impossible. Therefore no such internal fixed point exists.
+
+The proof is short because the result follows from the minimal meaning of inference as justification extension. Once inference is defined as an operation that advances justification, an internal stopping point is structurally excluded.
+
+\subsection{Branching Explosion}
+
+The absence of an internal fixed point has two dynamical faces. First, the trajectory does not become still. Second, when inference has probabilistic or generative structure, the trajectory is not single. It branches.
+
+This is the branching explosion introduced in Part I. In the present context it is re-described as the inability of an internal stopping condition to stop branching. The increase of inferential capacity may therefore accelerate branching explosion rather than suppress it. The problem of intelligence shifts from strengthening inference itself to operating enlarged branching in a stoppable form.
+
+\subsection{Consequence}
+
+The inference layer $L_F$ cannot be the whole of intelligence. If intelligence stopped nowhere, it would dissolve into regress or explosion. If it stopped by an internal predicate, that predicate would require further inference. Stopping must therefore be supplied from outside $F$ as such. \S{}5 explains how this occurs through $L_R$ and $L_E$.
+
+\bigskip

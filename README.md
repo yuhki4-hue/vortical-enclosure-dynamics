@@ -35,6 +35,8 @@ after submission approval.
   arXiv identifier pending
 - [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
   arXiv identifier pending
+- [Intelligence Part II — Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers](./intelligence-part2/)  
+  Japanese TeX manuscript and English TeX draft in progress
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
 
@@ -84,6 +86,7 @@ bio-ifgt/                          biological coarse-graining of IFGT/VED
 conceptual-topography/             cognitive and social application layer of IFGT/VED
 consciousness/                     consciousness as temporal non-closure and log referencing
 intelligence-part1/                intelligence as a non-closed dynamical phenomenon
+intelligence-part2/                externalized stopping and emergent stopping layers
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
@@ -102,6 +105,10 @@ notes/                             working notes and supplementary material
   application series. It treats intelligence as a dynamical phenomenon
   constrained by connected state space, temporal ordering, global constraint,
   and a local horizon-form requiring externalized stopping structures.
+- `intelligence-part2/`: The second intelligence-layer paper. It develops the
+  non-closure of inference into a theory of externalized stopping, emergent
+  stopping layers, and historical stopping-operation systems such as religion,
+  science, and social consensus.
 
 ## Suggested Reading Order
 

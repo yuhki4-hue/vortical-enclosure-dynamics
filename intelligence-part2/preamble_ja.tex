@@ -1,0 +1,42 @@
+\usepackage{luatexja}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+\graphicspath{{figures/}}
+
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注}
+
+\providecommand{\VED}{VED}
+\providecommand{\IFGT}{IFGT}
+\providecommand{\DH}{Differential Horizon}
+\providecommand{\DHI}{differential horizon of intelligence}
+
+\newcommand{\figurenote}[2]{%
+  \par\smallskip
+  \begin{minipage}{0.94\linewidth}
+  \small
+  \textbf{読み方.} #1\par
+  \textbf{理論的含意.} #2
+  \end{minipage}
+}

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <text x="750" y="54" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.2  Responsive and Silent Regimes as Threshold Phenomena
+  </text>
+  <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    The same world may appear responsive or silent depending on the threshold boundary moved by μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>
+  </text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#D68910"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="regimeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#27AE60" stop-opacity="0.11"/>
+      <stop offset="48%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="52%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7D3C98" stop-opacity="0.09"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shared field -->
+  <rect x="100" y="145" width="1300" height="610" rx="26" fill="url(#regimeGrad)" stroke="#D7D7D7"/>
+  <text x="750" y="190" font-size="15" font-weight="700" fill="#555555" text-anchor="middle">
+    same environment / same C-landscape
+  </text>
+
+  <!-- threshold boundary -->
+  <line x1="750" y1="205" x2="750" y2="720" stroke="#D68910" stroke-width="2.2" stroke-dasharray="8,7"/>
+  <text x="750" y="232" font-size="15" font-weight="700" fill="#B9770E" text-anchor="middle">
+    threshold boundary
+  </text>
+  <text x="750" y="254" font-size="12.5" fill="#777777" text-anchor="middle">
+    moved by μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>
+  </text>
+
+  <!-- mu theta slider -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="675" width="260" height="70" rx="14" fill="#FFFFFF" stroke="#D68910" stroke-width="2"/>
+    <text x="750" y="704" font-size="24" font-weight="700" fill="#B9770E" text-anchor="middle">μ<tspan font-size="0.62em" baseline-shift="-22%">θ</tspan></text>
+    <text x="750" y="728" font-size="12.5" fill="#555555" text-anchor="middle">threshold mobility</text>
+  </g>
+  <path d="M705 660 C675 630, 675 595, 710 560" stroke="#D68910" stroke-width="1.7" fill="none" marker-end="url(#arrowOrange)"/>
+  <path d="M795 660 C825 630, 825 595, 790 560" stroke="#D68910" stroke-width="1.7" fill="none" marker-end="url(#arrowOrange)"/>
+
+  <!-- left panel: responsive -->
+  <g filter="url(#shadow)">
+    <rect x="165" y="255" width="470" height="360" rx="20" fill="#FFFFFF" stroke="#27AE60" stroke-width="2"/>
+    <text x="400" y="292" font-size="19" font-weight="700" fill="#1E8449" text-anchor="middle">Responsive regime</text>
+    <line x1="205" y1="312" x2="595" y2="312" stroke="#E6E6E6"/>
+    <text x="400" y="338" font-size="12.5" fill="#555555" text-anchor="middle">feedback closes above threshold</text>
+  </g>
+
+  <!-- responsive loop -->
+  <g>
+    <circle cx="300" cy="450" r="50" fill="#F7FBFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="300" y="444" font-size="14" font-weight="700" fill="#2980B9" text-anchor="middle">observer</text>
+    <text x="300" y="464" font-size="11.5" fill="#666666" text-anchor="middle">query / action</text>
+
+    <circle cx="500" cy="450" r="50" fill="#F4FBF6" stroke="#27AE60" stroke-width="2"/>
+    <text x="500" y="444" font-size="14" font-weight="700" fill="#1E8449" text-anchor="middle">world</text>
+    <text x="500" y="464" font-size="11.5" fill="#666666" text-anchor="middle">response</text>
+
+    <path d="M350 430 C395 390, 435 390, 475 425" stroke="#2980B9" stroke-width="2.2" fill="none" marker-end="url(#arrowBlue)"/>
+    <path d="M475 475 C430 520, 385 520, 325 475" stroke="#27AE60" stroke-width="2.2" fill="none" marker-end="url(#arrowGreen)"/>
+
+    <text x="400" y="385" font-size="12" fill="#2980B9" text-anchor="middle">∇C query</text>
+    <text x="400" y="535" font-size="12" fill="#1E8449" text-anchor="middle">feedback / correction</text>
+  </g>
+
+  <g>
+    <rect x="220" y="565" width="360" height="36" rx="8" fill="#F4FBF6" stroke="#CDEBD6"/>
+    <text x="400" y="588" font-size="12.5" fill="#1E8449" text-anchor="middle">
+      ρ<tspan font-size="0.72em" baseline-shift="-22%">resp</tspan> high  ·  closed loop  ·  local stopping possible
+    </text>
+  </g>
+
+  <!-- right panel: silent -->
+  <g filter="url(#shadow)">
+    <rect x="865" y="255" width="470" height="360" rx="20" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2"/>
+    <text x="1100" y="292" font-size="19" font-weight="700" fill="#7D3C98" text-anchor="middle">Silent regime</text>
+    <line x1="905" y1="312" x2="1295" y2="312" stroke="#E6E6E6"/>
+    <text x="1100" y="338" font-size="12.5" fill="#555555" text-anchor="middle">feedback remains below threshold or does not close</text>
+  </g>
+
+  <!-- silent non-loop -->
+  <g>
+    <circle cx="1000" cy="450" r="50" fill="#F7FBFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="1000" y="444" font-size="14" font-weight="700" fill="#2980B9" text-anchor="middle">observer</text>
+    <text x="1000" y="464" font-size="11.5" fill="#666666" text-anchor="middle">query / action</text>
+
+    <circle cx="1200" cy="450" r="50" fill="#FAF7FC" stroke="#7D3C98" stroke-width="2"/>
+    <text x="1200" y="444" font-size="14" font-weight="700" fill="#7D3C98" text-anchor="middle">world</text>
+    <text x="1200" y="464" font-size="11.5" fill="#666666" text-anchor="middle">no return</text>
+
+    <path d="M1050 430 C1095 390, 1135 390, 1175 425" stroke="#2980B9" stroke-width="2.2" fill="none" marker-end="url(#arrowBlue)"/>
+    <path d="M1170 475 C1125 520, 1085 520, 1030 480" stroke="#7D3C98" stroke-width="2" fill="none" stroke-dasharray="6,6" opacity="0.55"/>
+    <line x1="1092" y1="506" x2="1130" y2="468" stroke="#7D3C98" stroke-width="2.2" opacity="0.75"/>
+    <line x1="1130" y1="506" x2="1092" y2="468" stroke="#7D3C98" stroke-width="2.2" opacity="0.75"/>
+
+    <text x="1100" y="385" font-size="12" fill="#2980B9" text-anchor="middle">∇C query</text>
+    <text x="1100" y="535" font-size="12" fill="#7D3C98" text-anchor="middle">broken / subthreshold return</text>
+  </g>
+
+  <g>
+    <rect x="920" y="565" width="360" height="36" rx="8" fill="#FAF7FC" stroke="#E5D6EC"/>
+    <text x="1100" y="588" font-size="12.5" fill="#7D3C98" text-anchor="middle">
+      ρ<tspan font-size="0.72em" baseline-shift="-22%">resp</tspan> low  ·  open loop  ·  no local stopping
+    </text>
+  </g>
+
+  <!-- Central interpretation -->
+  <g filter="url(#shadow)">
+    <rect x="535" y="102" width="430" height="62" rx="12" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="128" font-size="13" fill="#555555" text-anchor="middle">
+      responsive and silent are not ontological kinds
+    </text>
+    <text x="750" y="148" font-size="13" fill="#B9770E" font-weight="600" text-anchor="middle">
+      they are threshold-dependent regimes
+    </text>
+  </g>
+
+  <!-- bottom note -->
+  <g>
+    <rect x="370" y="804" width="760" height="42" rx="9" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="829" font-size="13" fill="#555555" text-anchor="middle">
+      μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> does not create a new world; it moves the boundary at which the same world becomes answerable.
+    </text>
+  </g>
+
+</svg>

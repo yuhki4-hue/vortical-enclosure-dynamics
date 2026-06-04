@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', Meiryo, Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1400" height="880" fill="#FAFAF8"/>
+
+  <!-- TITLE -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.8  知性の三軸相図
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    安定運用領域は、発散域と硬直域のあいだの狭い領域にある
+  </text>
+
+  <defs>
+    <marker id="ax8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#444444"/>
+    </marker>
+    <marker id="blueArrow8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2980B9"/>
+    </marker>
+    <filter id="sh8" x="-12%" y="-12%" width="124%" height="124%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="stableG" cx="38%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#A9DFBF" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#27AE60" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1E8449" stop-opacity="0.12"/>
+    </radialGradient>
+    <radialGradient id="divG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0.06"/>
+    </radialGradient>
+    <radialGradient id="rigidG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#7D6608" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#7D6608" stop-opacity="0.06"/>
+    </radialGradient>
+    <radialGradient id="speedGapG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2980B9" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#2980B9" stop-opacity="0.06"/>
+    </radialGradient>
+    <linearGradient id="rigidBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B7950B" stop-opacity="0.52"/>
+      <stop offset="55%" stop-color="#B7950B" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#B7950B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="divBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#C0392B" stop-opacity="0.01"/>
+      <stop offset="80%" stop-color="#C0392B" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0.58"/>
+    </linearGradient>
+    <radialGradient id="divVert" cx="100%" cy="100%" r="95%">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#C0392B" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurEdge" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <!-- ===== 3D axis system (isometric) ===== -->
+  <!-- origin -->
+  <g>
+    <!-- origin point -->
+    <circle cx="360" cy="600" r="4" fill="#444444"/>
+    <text x="345" y="618" font-size="11" fill="#888888">(0,0,0)</text>
+
+    <!-- axis: v_inf (right-up) -->
+    <line x1="360" y1="600" x2="760" y2="500" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="772" y="498" font-size="13" fill="#2980B9" font-weight="600">v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan></text>
+    <text x="772" y="514" font-size="10.5" fill="#888888">推論速度</text>
+
+    <!-- axis: r_res (right-down) -->
+    <line x1="360" y1="600" x2="720" y2="710" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="730" y="722" font-size="13" fill="#2980B9" font-weight="600">r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan></text>
+    <text x="730" y="738" font-size="10.5" fill="#888888">解像度</text>
+
+    <!-- axis: eta (up) -->
+    <line x1="360" y1="600" x2="360" y2="220" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="352" y="212" font-size="13" fill="#27AE60" font-weight="600" text-anchor="end">η</text>
+    <text x="352" y="230" font-size="10.5" fill="#888888" text-anchor="end">停止硬度</text>
+  </g>
+
+  <!-- ===== DIVERGENT ZONE : left edge = η axis (x=360), top = rigid top (y=158) ===== -->
+  <!-- horizontal gradient layer (left light → right dark) -->
+  <path d="M 360 600 L 730 713 L 840 675 L 840 158 L 360 158 Z" fill="url(#divBand)"/>
+  <!-- vertical gradient layer (top light → bottom dark) -->
+  <path d="M 360 600 L 730 713 L 840 675 L 840 158 L 360 158 Z" fill="url(#divVert)"/>
+  <!-- redraw r_res axis on top as the lower boundary -->
+  <line x1="360" y1="600" x2="720" y2="710" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+
+  <!-- ===== STABLE OPERATION REGION (center, green) ===== -->
+  <ellipse cx="575" cy="480" rx="112" ry="102" fill="url(#stableG)" filter="url(#sh8)"/>
+  <ellipse cx="540" cy="440" rx="30" ry="21" fill="#FFFFFF" opacity="0.35"/>
+  <text x="575" y="468" font-size="15" font-weight="700" fill="#1E8449" text-anchor="middle">安定</text>
+  <text x="575" y="488" font-size="15" font-weight="700" fill="#1E8449" text-anchor="middle">運用領域</text>
+  <text x="575" y="510" font-size="10.5" fill="#1E8449" text-anchor="middle" font-style="italic">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> が機能 · L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> は改訂可能</text>
+
+  <!-- ===== DIVERGENT ZONE labels ===== -->
+  <text x="770" y="665" font-size="15" font-weight="700" fill="#C0392B" text-anchor="middle">発散域</text>
+  <text x="770" y="627" font-size="10.5" fill="#C0392B" text-anchor="middle">高 v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> · 高 r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan> · 内部停止</text>
+  <text x="770" y="683" font-size="10.5" fill="#C0392B" text-anchor="middle" font-style="italic">暴走最適化、単一視点の絶対化</text>
+
+  <!-- ===== RIGID ZONE (high eta) : whole upper region ===== -->
+  <rect x="360" y="158" width="480" height="200" fill="url(#rigidBand)" rx="6"/>
+  <text x="380" y="195" font-size="15" font-weight="700" fill="#7D6608">硬直域</text>
+  <text x="380" y="216" font-size="10.5" fill="#7D6608">過剰な η（高い停止硬度）</text>
+  <text x="380" y="234" font-size="10.5" fill="#7D6608" font-style="italic">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> 固着、適応なし</text>
+
+  <!-- ===== 速度差破断域: η・r_res と平行なしきい境界で囲む ===== -->
+  <path d="M 704 512 L 704 158 L 840 158 L 840 554 Z" fill="url(#speedGapG)" opacity="0.86"/>
+  <text x="765" y="430" font-size="12.5" font-weight="700" fill="#1F618D" text-anchor="middle">速度差破断域</text>
+  <text x="765" y="449" font-size="10.5" fill="#1F618D" text-anchor="middle">Δv<tspan font-size="0.72em" baseline-shift="-22%">intel</tspan> = v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> − v<tspan font-size="0.72em" baseline-shift="-22%">LR</tspan></text>
+  <text x="765" y="466" font-size="10.5" fill="#1F618D" text-anchor="middle">ログ参照が断裂する</text>
+
+  <!-- (0,0,0) is NOT intelligence note -->
+  <g transform="translate(250,640)">
+    <text x="0" y="0" font-size="10.5" fill="#888888" font-style="italic">v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> = r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan> = 0 :</text>
+    <text x="0" y="16" font-size="10.5" fill="#888888" font-style="italic">知性の完成ではなく、</text>
+    <text x="0" y="32" font-size="10.5" fill="#888888" font-style="italic">知性の終了（運動停止）である。</text>
+  </g>
+
+  <!-- ===== RIGHT: four-fold collapse (divergent) ===== -->
+  <g transform="translate(880,140)">
+    <rect x="0" y="0" width="430" height="270" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.6" rx="8" filter="url(#sh8)"/>
+    <text x="20" y="34" font-size="15" font-weight="700" fill="#C0392B">発散域: 四重崩壊</text>
+    <line x1="20" y1="46" x2="410" y2="46" stroke="#E5E5E5"/>
+
+    <text x="22" y="76" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">1.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> が暴走する</text>
+    <text x="40" y="94" font-size="11" fill="#666666">高 v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> · r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan>、外部停止なし</text>
+
+    <text x="22" y="122" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">2.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> が追いつかない</text>
+    <text x="40" y="140" font-size="11" fill="#666666">ログ生成が再帰参照を上回る</text>
+
+    <text x="22" y="168" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">3.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> が創発できない</text>
+    <text x="40" y="186" font-size="11" fill="#666666">創発の基盤（L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>）が失われる</text>
+
+    <text x="22" y="214" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">4.</tspan> μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> が開放窓を開けない</text>
+    <text x="40" y="232" font-size="11" fill="#666666">組み替え不能、L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> は暴走を続ける</text>
+
+    <text x="20" y="258" font-size="10.5" fill="#C0392B" font-style="italic">四つの崩壊は連鎖する（§11.4）。</text>
+  </g>
+
+  <!-- ===== RIGHT: rigid zone ===== -->
+  <g transform="translate(880,440)">
+    <rect x="0" y="0" width="430" height="150" fill="#FFFFFF" stroke="#7D6608" stroke-width="1.6" rx="8" filter="url(#sh8)"/>
+    <text x="20" y="34" font-size="15" font-weight="700" fill="#7D6608">硬直域: L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> 固着</text>
+    <line x1="20" y1="46" x2="410" y2="46" stroke="#E5E5E5"/>
+    <text x="22" y="74" font-size="12" fill="#444444">• 過剰な停止硬度 η が L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> を固定する。</text>
+    <text x="22" y="98" font-size="12" fill="#444444">• μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> が機能停止する（組み替えなし）。</text>
+    <text x="22" y="122" font-size="12" fill="#444444">• L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan>–L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> の動的相互作用が凍結する。</text>
+    <text x="20" y="142" font-size="10.5" fill="#7D6608" font-style="italic">参照: 病的引力子（§8.5）強迫・絶対主義…</text>
+  </g>
+
+  <!-- ===== RIGHT: stable / sapient note ===== -->
+  <g transform="translate(880,620)">
+    <rect x="0" y="0" width="430" height="130" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" rx="8"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#5B2C72">能動的安定と受動的安定</text>
+    <text x="22" y="58" font-size="11.5" fill="#5B2C72">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> = 三軸上を動き、安定領域へ</text>
+    <text x="22" y="76" font-size="11.5" fill="#5B2C72"><tspan font-weight="700">能動的に</tspan>復帰する能力（サピエンス）。</text>
+    <text x="22" y="98" font-size="11.5" fill="#5B2C72">内発的 μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> を持たない系は、</text>
+    <text x="22" y="116" font-size="11.5" fill="#5B2C72">外部条件に置かれて<tspan font-weight="700">受動的に</tspan>安定しうる。</text>
+  </g>
+
+  <!-- ===== BOTTOM strip ===== -->
+  <g transform="translate(0,792)">
+    <rect x="60" y="0" width="1280" height="56" fill="#FDF6E3" rx="6" stroke="#B7950B" stroke-width="0.8" opacity="0.9"/>
+    <text x="700" y="24" font-size="13" font-weight="600" fill="#7D6608" text-anchor="middle">
+      不安定性は欠陥ではなく構成的特徴である。知性は発散と硬直のあいだの狭い帯でのみ持続する。
+    </text>
+    <text x="700" y="44" font-size="11.5" fill="#7D6608" text-anchor="middle" font-style="italic">
+      単一ノード・高速・高解像・内部停止の系は発散域を占める。これは規範的主張ではなく動力学的帰結である（§11.8）。
+    </text>
+  </g>
+
+  <!-- FOOTER -->
+  <text x="60" y="872" font-size="10.5" fill="#888888">
+    色: 安定運用（緑） · 発散域（赤） · 硬直域（黄土） · μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> 注記（紫）。三本の論理線はここで統合される（§11.9）。
+  </text>
+
+</svg>

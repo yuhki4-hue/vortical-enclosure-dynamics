@@ -15,3 +15,8 @@
 # Local build/output directories
 build/
 _build/
+
+# Keep scaffold placeholders for subproject build directories.
+!intelligence-part2/build/
+intelligence-part2/build/*
+!intelligence-part2/build/.gitkeep

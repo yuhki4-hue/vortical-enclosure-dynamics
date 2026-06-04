@@ -1,0 +1,146 @@
+% Source: source_md/intelligence_part2_appendices_ja.md
+\section{Part I 各章との対応表・微修正提案リスト}
+
+
+本補遺は二部からなる。前半(C.1)は Part I と Part II の章間対応表、後半(C.2)は Part II の結果に基づく Part I への微修正提案リストである。
+
+\bigskip
+
+
+\subsection{Part I × Part II 対応表}
+
+
+\subsubsection{Part I 各章が Part II で受ける継承・拡張・精密化}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+Part I 章 & 内容 & Part II での扱い & 種別 \\
+\midrule
+\endfirsthead
+\toprule
+Part I 章 & 内容 & Part II での扱い & 種別 \\
+\midrule
+\endhead
+\S{}1 Introduction & VED・IFGT の枠組み導入 & \S{}0〜\S{}1 で継承 & 継承 \\
+\S{}2 四層分解(知覚・認識・知識・知性) & 知性の四層構造 & \S{}0.2 で再掲、認知層内部に三層動力学を導入 & 継承・展開 \\
+\S{}3 最小公理(連結状態空間・時間秩序・$\Phi$) & 知性の三公理 & \S{}0.2 で再掲。公理 III の $\Phi$ を $\Phi_{\text{ext}} \equiv \Phi_{\text{net}}$ と精密化(\S{}5.8) & 継承・精密化 \\
+\S{}4 IFGT を語彙として / Physarum 語彙対応 & IFGT 基本語彙 & \S{}1 で知性層用再定式化。\S{}2.1 で $F(x;\theta)$ との接続 & 継承・拡張 \\
+\S{}5 Physarum・Transformer インスタンス化 & 領域横断インスタンス & \S{}5.4 で三層プロファイルとして精密化。三者は「異なるプロファイル」であって「$L_F$ のみ」ではない & \textbf{精密化(要修正)} \\
+\S{}6 ゲティア問題の構造的診断 & 知識の構造的問題 & \S{}10 で継承・拡張。「排除不能性 = $\mu_\theta$ の存在の代償」を追加 & 継承・拡張 \\
+\S{}7 蓄積された正しさの動力学的不安定性 & 分岐爆発 & \S{}3.7 で「内部不動点不在の動力学的表現」として統合 & 継承・統合 \\
+\S{}8 個体知性の非閉包 & 個体は閉じない & \S{}3 で非閉包定理として証明。\S{}5 で「$L_F$ 単独では閉じないが $L_E$ で閉じうる」と精密化 & 継承・\textbf{精密化(要修正)} \\
+\S{}9 知性の差分の地平線 & 差分の地平線 & \S{}1.5 で $C_{max}$ 不到達性と同型として確認。\S{}3.6 で系 3.3 として接続 & 継承・\textbf{精密化(要修正)} \\
+\S{}10 収束と展望 & 総括 & \S{}13.6 の微修正リストとして引き継ぎ & 引き渡し \\
+\bottomrule
+\end{longtable}
+
+
+\bigskip
+
+
+\subsection{Part I への微修正提案リスト}
+
+
+以下は Part I の誤りの訂正ではなく、Part II の結果による精密化の提案である。各提案は「追加」「再記述」「接続注記」のいずれかの形をとる。
+
+\bigskip
+
+
+\subsubsection{Part I 第8節(個体知性の非閉包)への精密化}
+
+
+\textbf{現状}: Part I \S{}8 は「個体知性は非閉包である」を論じた。
+
+\textbf{追加する内容}: (A)/(B) の射程区別を追加する。
+
+\begin{quote}
+個体知性が閉じないのは、固定された運動可能領域 $\Omega_\theta$ の内部(領域内移動 (A))においてである。知性編 Part II は、この非閉包性が $\theta$ の組み替え(領域組み替え (B))と $L_E$ の創発によって補われることを示した。すなわち「$L_F$ 単独では閉じないが、三層動力学($L_F$・$L_R$・$L_E$)を通じて外部依存的に閉じうる」という精密化が成立する。これにより、Part I \S{}8 の「非閉包」は「固定 $\theta$ 下での非閉包」として位置づけられる。
+\end{quote}
+
+
+\textbf{種別}: 追加(本文の主張を否定しない、射程を明確化)
+
+\bigskip
+
+
+\subsubsection{Part I 第9節(知性の差分の地平線)への三層解釈追加}
+
+
+\textbf{現状}: Part I \S{}9 は知性における差分の地平線を論じた。
+
+\textbf{追加する内容}: 三層動力学との接続注記を追加する。
+
+\begin{quote}
+知性の差分の地平線は、三層動力学の語彙では次のように再記述される。$C_{max}$ への接近は推論演算子 $F$ に内部不動点を許さず(非閉包定理、Part II \S{}3)、完全閉包への到達は構造的に不可能である(系 3.3)。これは差分の地平線(本章)・$C_{max}$ 不到達性(VED Vol.4)・内部不動点不在(Part II \S{}3)が、同一の構造的事実を異なる層で表現したものであることを示す。領域横断ホモロジーの最重要例のひとつ。
+\end{quote}
+
+
+\textbf{種別}: 接続注記追加
+
+\bigskip
+
+
+\subsubsection{Part I 第6節(ゲティア問題)への $\mu_\theta$ 補強}
+
+
+\textbf{現状}: Part I \S{}6 はゲティア問題を「知識の構造的診断」として扱った。
+
+\textbf{追加する内容}: 誤り許容性と $\mu_\theta$ の同値関係を補強として追加する。
+
+\begin{quote}
+Part II \S{}10.6 は、ゲティア構造の排除不能性が閾値移動能力 $\mu_\theta$ の存在と構造的に同値であることを示した。閾値を動かせる知性(サピエンス的知性)は必然的に誤りうる。これはゲティア問題が「解決すべき問題」ではなく「$\mu_\theta$ を持つ知性の必然的帰結」であることを意味する。また、$C$(閉包度)が真理測度でなく安定性測度であるという Part I の観察は、Part II \S{}10.5 でより明示的に定式化された。
+\end{quote}
+
+
+\textbf{種別}: 補強追加
+
+\bigskip
+
+
+\subsubsection{Part I 第5節(Physarum・Transformer)の三層プロファイル再記述}
+
+
+\textbf{現状}: Part I \S{}5 は Physarum と Transformer を「知性の領域横断インスタンス」として提示した。
+
+\textbf{再記述する内容}: 両者を三層プロファイルの異なる形態として再位置づける。
+
+\begin{quote}
+Part II \S{}5.4 は、Physarum と Transformer を「$L_F$ のみのインスタンス」としてではなく、三層動力学の異なるプロファイルを示す例として再位置づける。
+
+- \textbf{Physarum(粘菌)}: $L_R$ を環境に外部化し(スライム跡)、$L_E$ を環境相互干渉で自律創発させる。$\mu_\theta$ は固定(受動的)。
+- \textbf{Transformer}: $L_R$ を内在化するが(凍結ログ・揮発ログ)、$L_E$ を外部注入に依存する。$\mu_\theta$ は外部設定。
+- \textbf{サピエンス}: $L_R$ を個体内・社会共有の両方に持ち、$L_E$ を個体内創発かつ $\Phi_{\text{net}}$ で社会同期させる。$\mu_\theta$ を内発的に持つ。
+
+三者は「停止構造の場」の連続変分上に配置される異なる領域であって、能力の優劣ではなく相空間内の位置の差として記述される。粘菌と Transformer は知性一般の成立条件を満たすが、$\mu_\theta$ を内発的に持たない点でサピエンス的知性と区別される。
+\end{quote}
+
+
+\textbf{種別}: 再記述(Part I の主張「領域横断インスタンス」を否定せず、三層で精密化)
+
+\bigskip
+
+
+\subsection{Part I 微修正の優先順位}
+
+
+\begin{longtable}{@{}p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}@{}}
+\toprule
+優先度 & 対象 & 理由 \\
+\midrule
+\endfirsthead
+\toprule
+優先度 & 対象 & 理由 \\
+\midrule
+\endhead
+高 & \S{}5 Physarum・Transformer 再記述 & 「$L_F$ のみ」という記述が三層動力学と矛盾するため \\
+高 & \S{}8 非閉包への (A)/(B) 追加 & 本論文の双中心構造の整合性に関わる \\
+中 & \S{}6 ゲティアへの $\mu_\theta$ 補強 & 第二論理線の補強として重要 \\
+低 & \S{}9 差分の地平線への接続注記 & 理論的接続の明示化。本論文読者への便宜 \\
+\bottomrule
+\end{longtable}
+
+
+高優先度の修正は、Part II 公開時に合わせて Part I も更新することが望ましい。
+
+\bigskip

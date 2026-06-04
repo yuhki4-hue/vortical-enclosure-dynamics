@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this manuscript, please cite it as below."
+title: "Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers"
+authors:
+  - family-names: "Endoh"
+    given-names: "Yuhki"
+year: 2026
+version: "0.1.0"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/yuhki4-hue/vortical-enclosure-dynamics"
+type: "article"

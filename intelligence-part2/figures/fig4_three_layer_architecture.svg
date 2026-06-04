@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="860" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.4  The Three-Layer Architecture of Intelligence
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> cannot stop internally; L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> emerges from L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> under external constraint; μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> is the opening window
+  </text>
+
+  <!-- ========== defs ========== -->
+  <defs>
+    <marker id="aGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <marker id="aBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="aGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="aPurple" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== THREE STACKED LAYERS ========== -->
+
+  <!-- Layer L_F : Inference (blue) -->
+  <g>
+    <rect x="120" y="120" width="700" height="150" fill="#FFFFFF" stroke="#2980B9" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="150" y="158" font-size="20" font-weight="700" fill="#2980B9">L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan></text>
+    <text x="220" y="158" font-size="18" font-weight="600" fill="#1A1A1A">Inference Layer</text>
+    <line x1="150" y1="172" x2="790" y2="172" stroke="#E5E5E5"/>
+    <text x="150" y="196" font-size="13" fill="#444444">Reasoning operator F acts along ∇C. Produces inference trajectories.</text>
+    <text x="150" y="218" font-size="13" font-weight="600" fill="#C0392B">No internal fixed point (Theorem 3.1) — cannot stop by itself.</text>
+    <!-- inference trajectory (non-stopping flow) -->
+    <path d="M 160 244 Q 250 232, 340 244 T 520 244 T 700 244" stroke="#2980B9" stroke-width="2" fill="none" marker-end="url(#aBlue)"/>
+    <text x="730" y="238" font-size="13" fill="#2980B9" font-style="italic">x<tspan font-size="9" baseline-shift="-25%">n</tspan> → x<tspan font-size="9" baseline-shift="-25%">n+1</tspan></text>
+  </g>
+
+  <!-- Layer L_R : Log (grey) -->
+  <g>
+    <rect x="120" y="320" width="700" height="150" fill="#FFFFFF" stroke="#888888" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="150" y="358" font-size="20" font-weight="700" fill="#666666">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan></text>
+    <text x="220" y="358" font-size="18" font-weight="600" fill="#1A1A1A">Log Layer</text>
+    <line x1="150" y1="372" x2="790" y2="372" stroke="#E5E5E5"/>
+    <text x="150" y="396" font-size="13" fill="#444444">Traces of L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan>'s motion + recursive reference. Inside the individual, outside current F.</text>
+    <text x="150" y="418" font-size="13" fill="#444444">Location varies: internal · environment-externalized · frozen (§5.4).</text>
+    <!-- log dots + recursive arc -->
+    <g transform="translate(150,453)">
+      <circle cx="20" cy="0" r="4" fill="#888888"/>
+      <circle cx="70" cy="0" r="4" fill="#888888"/>
+      <circle cx="120" cy="0" r="4" fill="#888888"/>
+      <circle cx="170" cy="0" r="4" fill="#888888"/>
+      <circle cx="220" cy="0" r="4" fill="#888888"/>
+      <path d="M 220 -4 Q 130 -34, 20 -6" stroke="#888888" stroke-width="1.5" fill="none" stroke-dasharray="3,2" marker-end="url(#aGrey)"/>
+      <text x="300" y="3" font-size="11" fill="#888888" font-style="italic">recursive reference</text>
+    </g>
+  </g>
+
+  <!-- Layer L_E : Emergent Stopping (green) -->
+  <g>
+    <rect x="120" y="520" width="700" height="160" fill="#FFFFFF" stroke="#27AE60" stroke-width="2.5" rx="8" filter="url(#sh)"/>
+    <text x="150" y="558" font-size="20" font-weight="700" fill="#1E8449">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+    <text x="220" y="558" font-size="18" font-weight="600" fill="#1A1A1A">Emergent Stopping Layer</text>
+    <line x1="150" y1="572" x2="790" y2="572" stroke="#E5E5E5"/>
+    <text x="150" y="596" font-size="13" fill="#444444">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> = Φ(L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>'s motion, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>). A stopping attractor — inside the individual, yet</text>
+    <text x="150" y="616" font-size="13" font-weight="600" fill="#1E8449">externally dependent. Supplies the stop that L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> lacks.</text>
+    <!-- attractor basin -->
+    <g transform="translate(430,663)">
+      <path d="M -120 0 Q -60 -34, 0 -34 Q 60 -34, 120 0" stroke="#27AE60" stroke-width="2" fill="none"/>
+      <circle cx="0" cy="-34" r="7" fill="#27AE60"/>
+      <text x="0" y="3" font-size="11" fill="#1E8449" text-anchor="middle" font-weight="600">stable stop</text>
+      <!-- small balls rolling into basin -->
+      <circle cx="-90" cy="-9" r="4" fill="#27AE60" opacity="0.5"/>
+      <circle cx="80" cy="-15" r="4" fill="#27AE60" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ========== VERTICAL FLOW: trace → emergence ========== -->
+  <!-- L_F → L_R : motion leaves traces -->
+  <line x1="470" y1="270" x2="470" y2="318" stroke="#888888" stroke-width="2.2" marker-end="url(#aGrey)"/>
+  <text x="490" y="298" font-size="12" fill="#666666">motion leaves traces</text>
+
+  <!-- L_R → L_E : emergence under H_ij -->
+  <line x1="470" y1="470" x2="470" y2="518" stroke="#27AE60" stroke-width="2.5" marker-end="url(#aGreen)"/>
+  <text x="490" y="498" font-size="12" fill="#1E8449" font-weight="600">Φ(·, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>): emergence</text>
+
+  <!-- ========== μ_θ : THE OPENING WINDOW (right side, purple) ========== -->
+  <g>
+    <!-- vertical purple channel connecting all three layers -->
+    <rect x="900" y="120" width="380" height="560" fill="#F1E8F5" rx="10" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <text x="1090" y="158" font-size="18" font-weight="700" fill="#5B2C72" text-anchor="middle">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> — Opening Window</text>
+    <text x="1090" y="182" font-size="12.5" fill="#5B2C72" text-anchor="middle" font-style="italic">Threshold mobility (Sapient feature)</text>
+
+    <!-- the channel arrow from L_F down to L_E -->
+    <path d="M 1090 210 L 1090 560" stroke="#7D3C98" stroke-width="2.5" fill="none" marker-end="url(#aPurple)"/>
+
+    <!-- annotation cards along the window -->
+    <g transform="translate(940,230)">
+      <rect x="0" y="0" width="300" height="86" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">(B) domain reconfiguration</text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> moves θ — reshapes the region</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">of admissible motion (Ω<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>).</text>
+      <text x="14" y="80" font-size="10.5" fill="#888888" font-style="italic">vs (A) intra-domain movement by F</text>
+    </g>
+
+    <g transform="translate(940,360)">
+      <rect x="0" y="0" width="300" height="86" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">projection of E-site</text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">reconfiguration projects, along H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>,</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">a region where stopping operator E</text>
+      <text x="14" y="80" font-size="11.5" fill="#444444">can be placed (§5.5).</text>
+    </g>
+
+    <g transform="translate(940,490)">
+      <rect x="0" y="0" width="300" height="72" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> converges → L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">log motion settles into the projected</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">site, forming the stopping attractor.</text>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM: the four-step chain ========== -->
+  <g transform="translate(0,710)">
+    <rect x="120" y="0" width="1160" height="64" fill="#FDF6E3" rx="6" stroke="#B7950B" stroke-width="0.8" opacity="0.9"/>
+    <text x="700" y="26" font-size="13.5" font-weight="600" fill="#7D6608" text-anchor="middle" font-family="'DejaVu Sans Mono', monospace">
+      μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>  →  (B) reconfiguration  →  projection of E-site along H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>  →  L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> convergence  →  L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>
+    </text>
+    <text x="700" y="50" font-size="11.5" fill="#7D6608" text-anchor="middle" font-style="italic">
+      The emergence mechanism (§5.5): stopping is not internal to L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> — it is projected and converged into being.
+    </text>
+  </g>
+
+  <!-- ========== FOOTER color key ========== -->
+  <text x="120" y="812" font-size="10.5" fill="#888888">
+    Color key:  L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> inference (blue)  ·  L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> log (grey)  ·  L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> stopping (green)  ·  μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> / motion (purple)  ·  non-closure warning (red)
+  </text>
+  <text x="120" y="832" font-size="10.5" fill="#888888" font-style="italic">
+    μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> is the Sapient feature, not a condition for intelligence in general (§12). Slime mold and Transformers have L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan>/L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>/L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> but not internal μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>.
+  </text>
+
+</svg>

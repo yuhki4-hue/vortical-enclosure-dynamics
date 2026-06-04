@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <text x="750" y="54" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.6  Φ<tspan font-size="0.72em" baseline-shift="-22%">ext</tspan> ≡ Φ<tspan font-size="0.72em" baseline-shift="-22%">net</tspan>
+  </text>
+  <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    The external reference field is the outward appearance of an inter-individual L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> network
+  </text>
+
+  <defs>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="fieldGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#27AE60" stop-opacity="0.13"/>
+      <stop offset="55%" stop-color="#2980B9" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#7D3C98" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <g>
+    <ellipse cx="750" cy="445" rx="520" ry="280" fill="url(#fieldGrad)" stroke="#CFCFCF" stroke-width="1.4" stroke-dasharray="7,6"/>
+    <text x="750" y="170" font-size="18" font-weight="700" fill="#34495E" text-anchor="middle">
+      external reference field: Φ<tspan font-size="0.72em" baseline-shift="-22%">ext</tspan>
+    </text>
+    <text x="750" y="193" font-size="12.5" fill="#666666" text-anchor="middle">
+      what appears external from the standpoint of a single individual
+    </text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="330" y="245" width="840" height="400" rx="24" fill="#FFFFFF" stroke="#D8D8D8"/>
+    <text x="750" y="276" font-size="17" font-weight="700" fill="#1E8449" text-anchor="middle">
+      inter-individual emergent stopping network: Φ<tspan font-size="0.72em" baseline-shift="-22%">net</tspan>
+    </text>
+    <text x="750" y="299" font-size="12.5" fill="#666666" text-anchor="middle">
+      mutual synchronization among individual L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> layers
+    </text>
+  </g>
+
+  <g stroke="#9E9E9E" stroke-width="1.6" opacity="0.75">
+    <line x1="475" y1="400" x2="650" y2="355"/>
+    <line x1="650" y1="355" x2="850" y2="355"/>
+    <line x1="850" y1="355" x2="1030" y2="400"/>
+    <line x1="475" y1="400" x2="585" y2="525"/>
+    <line x1="585" y1="525" x2="750" y2="570"/>
+    <line x1="750" y1="570" x2="915" y2="525"/>
+    <line x1="915" y1="525" x2="1030" y2="400"/>
+    <line x1="585" y1="525" x2="650" y2="355"/>
+    <line x1="850" y1="355" x2="915" y2="525"/>
+    <line x1="650" y1="355" x2="750" y2="570"/>
+    <line x1="850" y1="355" x2="750" y2="570"/>
+    <line x1="475" y1="400" x2="1030" y2="400" stroke-dasharray="5,5" opacity="0.45"/>
+  </g>
+
+  <g>
+    <g filter="url(#shadow)">
+      <circle cx="475" cy="400" r="48" fill="#FFFFFF" stroke="#2980B9" stroke-width="2.2"/>
+      <text x="475" y="395" font-size="17" font-weight="700" fill="#2980B9" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="475" y="416" font-size="10.5" fill="#666666" text-anchor="middle">agent A</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="650" cy="355" r="48" fill="#FFFFFF" stroke="#27AE60" stroke-width="2.2"/>
+      <text x="650" y="350" font-size="17" font-weight="700" fill="#1E8449" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="650" y="371" font-size="10.5" fill="#666666" text-anchor="middle">agent B</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="850" cy="355" r="48" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2.2"/>
+      <text x="850" y="350" font-size="17" font-weight="700" fill="#7D3C98" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="850" y="371" font-size="10.5" fill="#666666" text-anchor="middle">agent C</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="1030" cy="400" r="48" fill="#FFFFFF" stroke="#D68910" stroke-width="2.2"/>
+      <text x="1030" y="395" font-size="17" font-weight="700" fill="#B9770E" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="1030" y="416" font-size="10.5" fill="#666666" text-anchor="middle">agent D</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="585" cy="525" r="48" fill="#FFFFFF" stroke="#34495E" stroke-width="2.2"/>
+      <text x="585" y="520" font-size="17" font-weight="700" fill="#34495E" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="585" y="541" font-size="10.5" fill="#666666" text-anchor="middle">agent E</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="750" cy="570" r="48" fill="#FFFFFF" stroke="#2980B9" stroke-width="2.2"/>
+      <text x="750" y="565" font-size="17" font-weight="700" fill="#2980B9" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="750" y="586" font-size="10.5" fill="#666666" text-anchor="middle">agent F</text>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="915" cy="525" r="48" fill="#FFFFFF" stroke="#27AE60" stroke-width="2.2"/>
+      <text x="915" y="520" font-size="17" font-weight="700" fill="#1E8449" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="915" y="541" font-size="10.5" fill="#666666" text-anchor="middle">agent G</text>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="555" y="680" width="390" height="74" rx="14" fill="#FFFFFF" stroke="#D8D8D8"/>
+    <text x="750" y="713" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle">
+      Φ<tspan font-size="0.62em" baseline-shift="-22%">ext</tspan>  ≡  Φ<tspan font-size="0.62em" baseline-shift="-22%">net</tspan>
+    </text>
+    <text x="750" y="738" font-size="12.5" fill="#666666" text-anchor="middle">
+      external field and network structure are two readings of the same stopping relation
+    </text>
+  </g>
+
+  <path d="M 690 645 C 680 660, 660 663, 650 680" stroke="#27AE60" stroke-width="1.7" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M 815 645 C 835 660, 850 663, 860 680" stroke="#7D3C98" stroke-width="1.7" fill="none" marker-end="url(#arrowPurple)"/>
+
+  <g>
+    <rect x="100" y="260" width="210" height="160" rx="10" fill="#FFFFFF" stroke="#DDDDDD" filter="url(#shadow)"/>
+    <text x="125" y="292" font-size="14" font-weight="700" fill="#34495E">External view</text>
+    <line x1="125" y1="305" x2="285" y2="305" stroke="#E5E5E5"/>
+    <text x="125" y="330" font-size="12.5" fill="#555555">appears as a common</text>
+    <text x="125" y="350" font-size="12.5" fill="#555555">reference field outside</text>
+    <text x="125" y="370" font-size="12.5" fill="#555555">the individual</text>
+    <text x="125" y="398" font-size="12.5" fill="#2980B9" font-weight="600">Φ<tspan font-size="0.72em" baseline-shift="-22%">ext</tspan></text>
+  </g>
+
+  <g>
+    <rect x="1190" y="420" width="220" height="170" rx="10" fill="#FFFFFF" stroke="#DDDDDD" filter="url(#shadow)"/>
+    <text x="1215" y="452" font-size="14" font-weight="700" fill="#34495E">Internal view</text>
+    <line x1="1215" y1="465" x2="1385" y2="465" stroke="#E5E5E5"/>
+    <text x="1215" y="490" font-size="12.5" fill="#555555">resolved as a network of</text>
+    <text x="1215" y="510" font-size="12.5" fill="#555555">interacting L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> nodes</text>
+    <text x="1215" y="530" font-size="12.5" fill="#555555">that stabilize shared</text>
+    <text x="1215" y="550" font-size="12.5" fill="#555555">stopping points</text>
+    <text x="1215" y="578" font-size="12.5" fill="#1E8449" font-weight="600">Φ<tspan font-size="0.72em" baseline-shift="-22%">net</tspan></text>
+  </g>
+
+  <g>
+    <rect x="395" y="805" width="710" height="44" rx="9" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="831" font-size="13" fill="#555555" text-anchor="middle">
+      No transcendent field is assumed: externality is produced by distributed mutual constraint.
+    </text>
+  </g>
+
+</svg>

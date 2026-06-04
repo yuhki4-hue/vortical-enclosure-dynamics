@@ -1,0 +1,41 @@
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+\graphicspath{{figures/}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\providecommand{\VED}{VED}
+\providecommand{\IFGT}{IFGT}
+\providecommand{\DH}{Differential Horizon}
+\providecommand{\DHI}{differential horizon of intelligence}
+
+\newcommand{\figurenote}[2]{%
+  \par\smallskip
+  \begin{minipage}{0.94\linewidth}
+  \small
+  \textbf{How to read.} #1\par
+  \textbf{Theoretical implication.} #2
+  \end{minipage}
+}

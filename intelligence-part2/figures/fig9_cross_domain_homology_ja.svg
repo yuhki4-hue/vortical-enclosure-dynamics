@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', Meiryo, Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <text x="750" y="54" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.9  領域横断ホモロジー
+  </text>
+  <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    非閉包 → 創発アトラクター → 持続可能な動力学という同型パターンが、物理・生命・意識・知性・社会の各層に現れる
+  </text>
+
+  <defs>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#27AE60" stop-opacity="0.20"/>
+      <stop offset="70%" stop-color="#2980B9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7D3C98" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background circular field -->
+  <circle cx="750" cy="455" r="320" fill="url(#coreGrad)" stroke="#D1D1D1" stroke-width="1.4" stroke-dasharray="7,6"/>
+  <circle cx="750" cy="455" r="245" fill="none" stroke="#E0E0E0" stroke-width="1.2" stroke-dasharray="4,5"/>
+
+  <!-- Connections -->
+  <g stroke="#B8B8B8" stroke-width="1.7" opacity="0.72">
+    <line x1="750" y1="340" x2="750" y2="205"/>
+    <line x1="635" y1="455" x2="365" y2="455"/>
+    <line x1="865" y1="455" x2="1135" y2="455"/>
+    <line x1="705" y1="540" x2="445" y2="690"/>
+    <line x1="795" y1="540" x2="1055" y2="690"/>
+  </g>
+
+  <!-- Core -->
+  <g filter="url(#shadow)">
+    <rect x="555" y="340" width="390" height="230" rx="22" fill="#FFFFFF" stroke="#D8D8D8"/>
+    <text x="750" y="380" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">ホモロジー核</text>
+    <line x1="590" y1="398" x2="910" y2="398" stroke="#E8E8E8"/>
+    <text x="750" y="432" font-size="15" fill="#34495E" text-anchor="middle">不完全な閉包</text>
+    <path d="M750 444 L750 466" stroke="#777777" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="750" y="494" font-size="15" fill="#1E8449" text-anchor="middle">創発アトラクター</text>
+    <path d="M750 506 L750 528" stroke="#777777" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="750" y="556" font-size="15" fill="#7D3C98" text-anchor="middle">持続可能な動力学</text>
+  </g>
+
+  <!-- Physics -->
+  <g filter="url(#shadow)">
+    <rect x="570" y="120" width="360" height="170" rx="16" fill="#FFFFFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="750" y="155" font-size="18" font-weight="700" fill="#2980B9" text-anchor="middle">物理 / VED</text>
+    <line x1="600" y1="170" x2="900" y2="170" stroke="#E6E6E6"/>
+    <text x="750" y="198" font-size="13" fill="#333333" text-anchor="middle">差分 Δ → 勾配 ∇Δ</text>
+    <text x="750" y="222" font-size="13" fill="#333333" text-anchor="middle">流れ → 渦 / 準閉包</text>
+    <text x="750" y="246" font-size="13" fill="#333333" text-anchor="middle">粒子的アトラクター</text>
+    <text x="750" y="272" font-size="11.5" fill="#777777" text-anchor="middle">Vol.1–4 / 差分の地平線</text>
+  </g>
+
+  <!-- Life -->
+  <g filter="url(#shadow)">
+    <rect x="105" y="370" width="380" height="170" rx="16" fill="#FFFFFF" stroke="#27AE60" stroke-width="2"/>
+    <text x="295" y="405" font-size="18" font-weight="700" fill="#1E8449" text-anchor="middle">生命 / Bio-IFGT</text>
+    <line x1="135" y1="420" x2="455" y2="420" stroke="#E6E6E6"/>
+    <text x="295" y="448" font-size="13" fill="#333333" text-anchor="middle">情報流 J</text>
+    <text x="295" y="472" font-size="13" fill="#333333" text-anchor="middle">状態発展 F(x; θ)</text>
+    <text x="295" y="496" font-size="13" fill="#333333" text-anchor="middle">生命アトラクター Ω<tspan font-size="0.72em" baseline-shift="-22%">life</tspan></text>
+    <text x="295" y="522" font-size="11.5" fill="#777777" text-anchor="middle">非平衡交換の下での準閉包</text>
+  </g>
+
+  <!-- Consciousness -->
+  <g filter="url(#shadow)">
+    <rect x="1015" y="370" width="380" height="170" rx="16" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2"/>
+    <text x="1205" y="405" font-size="18" font-weight="700" fill="#7D3C98" text-anchor="middle">意識</text>
+    <line x1="1045" y1="420" x2="1365" y2="420" stroke="#E6E6E6"/>
+    <text x="1205" y="448" font-size="13" fill="#333333" text-anchor="middle">速度スケール差 Δv</text>
+    <text x="1205" y="472" font-size="13" fill="#333333" text-anchor="middle">ログ参照窓</text>
+    <text x="1205" y="496" font-size="13" fill="#333333" text-anchor="middle">SSO / TCA の非閉包</text>
+    <text x="1205" y="522" font-size="11.5" fill="#777777" text-anchor="middle">生成物ではなく状態</text>
+  </g>
+
+  <!-- Intelligence -->
+  <g filter="url(#shadow)">
+    <rect x="170" y="660" width="410" height="170" rx="16" fill="#FFFFFF" stroke="#D68910" stroke-width="2"/>
+    <text x="375" y="695" font-size="18" font-weight="700" fill="#B9770E" text-anchor="middle">知性 / Part II</text>
+    <line x1="200" y1="710" x2="550" y2="710" stroke="#E6E6E6"/>
+    <text x="375" y="738" font-size="13" fill="#333333" text-anchor="middle">推論演算子 F</text>
+    <text x="375" y="762" font-size="13" fill="#333333" text-anchor="middle">非閉包定理</text>
+    <text x="375" y="786" font-size="13" fill="#333333" text-anchor="middle">創発停止層としての L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+    <text x="375" y="812" font-size="11.5" fill="#777777" text-anchor="middle">自由の条件としての停止</text>
+  </g>
+
+  <!-- Society -->
+  <g filter="url(#shadow)">
+    <rect x="920" y="660" width="410" height="170" rx="16" fill="#FFFFFF" stroke="#34495E" stroke-width="2"/>
+    <text x="1125" y="695" font-size="18" font-weight="700" fill="#34495E" text-anchor="middle">社会 / Φ<tspan font-size="0.72em" baseline-shift="-22%">net</tspan></text>
+    <line x1="950" y1="710" x2="1300" y2="710" stroke="#E6E6E6"/>
+    <text x="1125" y="738" font-size="13" fill="#333333" text-anchor="middle">共有された停止構造</text>
+    <text x="1125" y="762" font-size="13" fill="#333333" text-anchor="middle">宗教 / 科学 / 制度</text>
+    <text x="1125" y="786" font-size="13" fill="#333333" text-anchor="middle">合意と同期</text>
+    <text x="1125" y="812" font-size="11.5" fill="#777777" text-anchor="middle">分散した相互拘束</text>
+  </g>
+
+  <!-- Outer labels -->
+  <g opacity="0.85">
+    <text x="750" y="318" font-size="12" fill="#777777" text-anchor="middle">物理層</text>
+    <text x="515" y="455" font-size="12" fill="#777777" text-anchor="middle">生命層</text>
+    <text x="985" y="455" font-size="12" fill="#777777" text-anchor="middle">意識層</text>
+    <text x="610" y="640" font-size="12" fill="#777777" text-anchor="middle">知性層</text>
+    <text x="890" y="640" font-size="12" fill="#777777" text-anchor="middle">社会層</text>
+  </g>
+
+  <!-- Bottom note -->
+  <g>
+    <rect x="370" y="855" width="760" height="32" rx="8" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="876" font-size="12.5" fill="#555555" text-anchor="middle">
+      ホモロジーは領域間の差異を消さない。各層を横断して反復する VED パターンを識別する。
+    </text>
+  </g>
+
+</svg>

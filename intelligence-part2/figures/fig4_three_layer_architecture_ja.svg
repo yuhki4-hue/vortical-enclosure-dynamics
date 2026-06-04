@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', Meiryo, Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1400" height="860" fill="#FAFAF8"/>
+
+  <!-- ========== TITLE ========== -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.4  知性の三層アーキテクチャ
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> は内部で停止できない。L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> は外部相互拘束の下で L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> から創発し、μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> は開放窓となる
+  </text>
+
+  <!-- ========== defs ========== -->
+  <defs>
+    <marker id="aGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#888888"/>
+    </marker>
+    <marker id="aBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="aGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="aPurple" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== THREE STACKED LAYERS ========== -->
+
+  <!-- Layer L_F : Inference (blue) -->
+  <g>
+    <rect x="120" y="120" width="700" height="150" fill="#FFFFFF" stroke="#2980B9" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="150" y="158" font-size="20" font-weight="700" fill="#2980B9">L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan></text>
+    <text x="220" y="158" font-size="18" font-weight="600" fill="#1A1A1A">推論層</text>
+    <line x1="150" y1="172" x2="790" y2="172" stroke="#E5E5E5"/>
+    <text x="150" y="196" font-size="13" fill="#444444">推論演算子 F は ∇C に沿って作用し、推論軌道を生む。</text>
+    <text x="150" y="218" font-size="13" font-weight="600" fill="#C0392B">内部固定点を持たない（定理3.1）— 単独では停止できない。</text>
+    <!-- inference trajectory (non-stopping flow) -->
+    <path d="M 160 244 Q 250 232, 340 244 T 520 244 T 700 244" stroke="#2980B9" stroke-width="2" fill="none" marker-end="url(#aBlue)"/>
+    <text x="730" y="238" font-size="13" fill="#2980B9" font-style="italic">x<tspan font-size="9" baseline-shift="-25%">n</tspan> → x<tspan font-size="9" baseline-shift="-25%">n+1</tspan></text>
+  </g>
+
+  <!-- Layer L_R : Log (grey) -->
+  <g>
+    <rect x="120" y="320" width="700" height="150" fill="#FFFFFF" stroke="#888888" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="150" y="358" font-size="20" font-weight="700" fill="#666666">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan></text>
+    <text x="220" y="358" font-size="18" font-weight="600" fill="#1A1A1A">ログ層</text>
+    <line x1="150" y1="372" x2="790" y2="372" stroke="#E5E5E5"/>
+    <text x="150" y="396" font-size="13" fill="#444444">L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> の運動の痕跡 + 再帰参照。個体内にあり、現在の F の外側にある。</text>
+    <text x="150" y="418" font-size="13" fill="#444444">所在は可変: 個体内・環境外部化・凍結（§5.4）。</text>
+    <!-- log dots + recursive arc -->
+    <g transform="translate(150,453)">
+      <circle cx="20" cy="0" r="4" fill="#888888"/>
+      <circle cx="70" cy="0" r="4" fill="#888888"/>
+      <circle cx="120" cy="0" r="4" fill="#888888"/>
+      <circle cx="170" cy="0" r="4" fill="#888888"/>
+      <circle cx="220" cy="0" r="4" fill="#888888"/>
+      <path d="M 220 -4 Q 130 -34, 20 -6" stroke="#888888" stroke-width="1.5" fill="none" stroke-dasharray="3,2" marker-end="url(#aGrey)"/>
+      <text x="300" y="3" font-size="11" fill="#888888" font-style="italic">再帰参照</text>
+    </g>
+  </g>
+
+  <!-- Layer L_E : Emergent Stopping (green) -->
+  <g>
+    <rect x="120" y="520" width="700" height="160" fill="#FFFFFF" stroke="#27AE60" stroke-width="2.5" rx="8" filter="url(#sh)"/>
+    <text x="150" y="558" font-size="20" font-weight="700" fill="#1E8449">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+    <text x="220" y="558" font-size="18" font-weight="600" fill="#1A1A1A">創発停止層</text>
+    <line x1="150" y1="572" x2="790" y2="572" stroke="#E5E5E5"/>
+    <text x="150" y="596" font-size="13" fill="#444444">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> = Φ(L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> の運動, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>)。個体内にありながら外部依存的な</text>
+    <text x="150" y="616" font-size="13" font-weight="600" fill="#1E8449">停止アトラクター。L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> が欠く停止を供給する。</text>
+    <!-- attractor basin -->
+    <g transform="translate(430,663)">
+      <path d="M -120 0 Q -60 -34, 0 -34 Q 60 -34, 120 0" stroke="#27AE60" stroke-width="2" fill="none"/>
+      <circle cx="0" cy="-34" r="7" fill="#27AE60"/>
+      <text x="0" y="3" font-size="11" fill="#1E8449" text-anchor="middle" font-weight="600">安定停止</text>
+      <!-- small balls rolling into basin -->
+      <circle cx="-90" cy="-9" r="4" fill="#27AE60" opacity="0.5"/>
+      <circle cx="80" cy="-15" r="4" fill="#27AE60" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ========== VERTICAL FLOW: trace → emergence ========== -->
+  <!-- L_F → L_R : motion leaves traces -->
+  <line x1="470" y1="270" x2="470" y2="318" stroke="#888888" stroke-width="2.2" marker-end="url(#aGrey)"/>
+  <text x="490" y="298" font-size="12" fill="#666666">運動が痕跡を残す</text>
+
+  <!-- L_R → L_E : emergence under H_ij -->
+  <line x1="470" y1="470" x2="470" y2="518" stroke="#27AE60" stroke-width="2.5" marker-end="url(#aGreen)"/>
+  <text x="490" y="498" font-size="12" fill="#1E8449" font-weight="600">Φ(·, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>): 創発</text>
+
+  <!-- ========== μ_θ : THE OPENING WINDOW (right side, purple) ========== -->
+  <g>
+    <!-- vertical purple channel connecting all three layers -->
+    <rect x="900" y="120" width="380" height="560" fill="#F1E8F5" rx="10" stroke="#7D3C98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.85"/>
+    <text x="1090" y="158" font-size="18" font-weight="700" fill="#5B2C72" text-anchor="middle">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> — 開放窓</text>
+    <text x="1090" y="182" font-size="12.5" fill="#5B2C72" text-anchor="middle" font-style="italic">閾値移動能力（サピエンス的特徴）</text>
+
+    <!-- the channel arrow from L_F down to L_E -->
+    <path d="M 1090 210 L 1090 560" stroke="#7D3C98" stroke-width="2.5" fill="none" marker-end="url(#aPurple)"/>
+
+    <!-- annotation cards along the window -->
+    <g transform="translate(940,230)">
+      <rect x="0" y="0" width="300" height="86" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">(B) 領域組み替え</text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> が θ を動かし、操作可能</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">推論領域 Ω<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> を組み替える。</text>
+      <text x="14" y="80" font-size="10.5" fill="#888888" font-style="italic">対: (A) F による領域内運動</text>
+    </g>
+
+    <g transform="translate(940,360)">
+      <rect x="0" y="0" width="300" height="86" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">E 設置領域の投影</text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">組み替えは H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan> に沿って、</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">停止演算子 E を置ける領域を</text>
+      <text x="14" y="80" font-size="11.5" fill="#444444">状態空間へ投影する（§5.5）。</text>
+    </g>
+
+    <g transform="translate(940,490)">
+      <rect x="0" y="0" width="300" height="72" fill="#FFFFFF" stroke="#7D3C98" stroke-width="1" rx="6"/>
+      <text x="14" y="24" font-size="12.5" font-weight="600" fill="#5B2C72">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> 収束 → L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+      <text x="14" y="46" font-size="11.5" fill="#444444">ログ運動が投影領域に落ち着き、</text>
+      <text x="14" y="64" font-size="11.5" fill="#444444">停止アトラクターを形成する。</text>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM: the four-step chain ========== -->
+  <g transform="translate(0,710)">
+    <rect x="120" y="0" width="1160" height="64" fill="#FDF6E3" rx="6" stroke="#B7950B" stroke-width="0.8" opacity="0.9"/>
+    <text x="700" y="26" font-size="13.5" font-weight="600" fill="#7D6608" text-anchor="middle" font-family="'DejaVu Sans Mono', monospace">
+      μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>  →  (B) 組み替え  →  H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan> に沿う E 設置領域の投影  →  L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> 収束  →  L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>
+    </text>
+    <text x="700" y="50" font-size="11.5" fill="#7D6608" text-anchor="middle" font-style="italic">
+      創発機構（§5.5）: 停止は L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> の内部にあるのではなく、投影され収束して成立する。
+    </text>
+  </g>
+
+  <!-- ========== FOOTER color key ========== -->
+  <text x="120" y="812" font-size="10.5" fill="#888888">
+    色:  L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> 推論（青） · L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> ログ（灰） · L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> 停止（緑） · μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> / 運動（紫） · 非閉包警告（赤）
+  </text>
+  <text x="120" y="832" font-size="10.5" fill="#888888" font-style="italic">
+    μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> はサピエンス的特徴であり、知性一般の条件ではない（§12）。粘菌や Transformer は L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan>/L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>/L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> を持ちうるが、内発的 μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> は持たない。
+  </text>
+
+</svg>

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', Meiryo, Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <text x="750" y="54" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.3  相互拘束 H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan> と閾値移動能力 μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan>
+  </text>
+  <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    停止領域は孤立した推論層からではなく、相互拘束を通じて投影される
+  </text>
+
+  <defs>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#D68910"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="constraintGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#D68910" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#27AE60" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#2980B9" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Mutual constraint field -->
+  <ellipse cx="750" cy="390" rx="420" ry="210" fill="url(#constraintGrad)" stroke="#CFCFCF" stroke-width="1.4" stroke-dasharray="7,6"/>
+  <text x="750" y="185" font-size="17" font-weight="700" fill="#B9770E" text-anchor="middle">
+    相互拘束場  H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>
+  </text>
+  <text x="750" y="208" font-size="12.5" fill="#666666" text-anchor="middle">
+    観測者-環境 / 個体間結合が、停止可能な場所を組み替える
+  </text>
+
+  <!-- Left agent -->
+  <g filter="url(#shadow)">
+    <rect x="130" y="260" width="300" height="230" rx="18" fill="#FFFFFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="280" y="300" font-size="18" font-weight="700" fill="#2980B9" text-anchor="middle">主体 i</text>
+    <line x1="165" y1="318" x2="395" y2="318" stroke="#E6E6E6"/>
+    <text x="280" y="350" font-size="15" font-weight="700" fill="#34495E" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>(i)</text>
+    <text x="280" y="374" font-size="12.5" fill="#555555" text-anchor="middle">再帰的ログ層</text>
+    <text x="280" y="398" font-size="12.5" fill="#555555" text-anchor="middle">推論の痕跡</text>
+    <text x="280" y="422" font-size="12.5" fill="#555555" text-anchor="middle">再入力と比較</text>
+    <circle cx="280" cy="455" r="18" fill="#EAF3FB" stroke="#2980B9"/>
+    <text x="280" y="460" font-size="12" fill="#2980B9" text-anchor="middle">ログ</text>
+  </g>
+
+  <!-- Right agent -->
+  <g filter="url(#shadow)">
+    <rect x="1070" y="260" width="300" height="230" rx="18" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2"/>
+    <text x="1220" y="300" font-size="18" font-weight="700" fill="#7D3C98" text-anchor="middle">主体 j / 環境</text>
+    <line x1="1105" y1="318" x2="1335" y2="318" stroke="#E6E6E6"/>
+    <text x="1220" y="350" font-size="15" font-weight="700" fill="#34495E" text-anchor="middle">L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>(j)</text>
+    <text x="1220" y="374" font-size="12.5" fill="#555555" text-anchor="middle">応答の痕跡</text>
+    <text x="1220" y="398" font-size="12.5" fill="#555555" text-anchor="middle">環境フィードバック</text>
+    <text x="1220" y="422" font-size="12.5" fill="#555555" text-anchor="middle">社会的・物質的拘束</text>
+    <circle cx="1220" cy="455" r="18" fill="#F4ECF7" stroke="#7D3C98"/>
+    <text x="1220" y="460" font-size="12" fill="#7D3C98" text-anchor="middle">痕跡</text>
+  </g>
+
+  <!-- bidirectional coupling -->
+  <path d="M430 360 C540 300, 610 285, 690 315" stroke="#777777" stroke-width="2" fill="none" marker-end="url(#arrowGrey)"/>
+  <path d="M1070 360 C960 300, 890 285, 810 315" stroke="#777777" stroke-width="2" fill="none" marker-end="url(#arrowGrey)"/>
+  <path d="M430 440 C560 510, 665 520, 720 475" stroke="#777777" stroke-width="1.6" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowGrey)"/>
+  <path d="M1070 440 C940 510, 835 520, 780 475" stroke="#777777" stroke-width="1.6" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowGrey)"/>
+
+  <!-- Central mu theta -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="270" width="320" height="190" rx="20" fill="#FFFFFF" stroke="#D68910" stroke-width="2"/>
+    <text x="750" y="310" font-size="30" font-weight="700" fill="#B9770E" text-anchor="middle">μ<tspan font-size="0.62em" baseline-shift="-22%">θ</tspan></text>
+    <text x="750" y="338" font-size="14" font-weight="700" fill="#333333" text-anchor="middle">閾値移動能力</text>
+    <line x1="625" y1="356" x2="875" y2="356" stroke="#E6E6E6"/>
+    <text x="750" y="384" font-size="12.5" fill="#555555" text-anchor="middle">Ω<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> の境界を動かす</text>
+    <text x="750" y="406" font-size="12.5" fill="#555555" text-anchor="middle">停止を設置できる場所を選ぶ</text>
+    <text x="750" y="430" font-size="12.5" fill="#B9770E" font-weight="600" text-anchor="middle">領域の組み替え (B)</text>
+  </g>
+
+  <!-- Projection downward -->
+  <path d="M750 460 C750 520, 750 550, 750 600" stroke="#D68910" stroke-width="2.2" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="790" y="540" font-size="13" fill="#B9770E" font-weight="600">停止領域の投影</text>
+
+  <!-- Projected stopping zone -->
+  <g filter="url(#shadow)">
+    <rect x="435" y="610" width="630" height="135" rx="20" fill="#FFFFFF" stroke="#27AE60" stroke-width="2"/>
+    <text x="750" y="648" font-size="19" font-weight="700" fill="#1E8449" text-anchor="middle">
+      創発停止層  L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>
+    </text>
+    <line x1="480" y1="666" x2="1020" y2="666" stroke="#E6E6E6"/>
+    <text x="750" y="692" font-size="13" fill="#333333" text-anchor="middle">
+      停止は、ログ・拘束・投影された閾値の関係として生じる
+    </text>
+    <text x="750" y="718" font-size="12.5" fill="#555555" text-anchor="middle">
+      L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> は個体内にありながら外部依存的である
+    </text>
+  </g>
+
+  <!-- LE local outputs to each agent -->
+  <path d="M555 610 C480 565, 390 525, 325 490" stroke="#27AE60" stroke-width="1.7" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M945 610 C1020 565, 1110 525, 1175 490" stroke="#27AE60" stroke-width="1.7" fill="none" marker-end="url(#arrowGreen)"/>
+
+  <!-- Examples of stopping regions -->
+  <g filter="url(#shadow)">
+    <rect x="105" y="610" width="250" height="170" rx="14" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="230" y="642" font-size="14" font-weight="700" fill="#34495E" text-anchor="middle">投影された停止点</text>
+    <line x1="130" y1="656" x2="330" y2="656" stroke="#E6E6E6"/>
+    <text x="230" y="684" font-size="12.5" fill="#555555" text-anchor="middle">環境 / アニミズム</text>
+    <text x="230" y="708" font-size="12.5" fill="#555555" text-anchor="middle">神 / 中心化演算子</text>
+    <text x="230" y="732" font-size="12.5" fill="#555555" text-anchor="middle">宗教 / 維持</text>
+    <text x="230" y="756" font-size="12.5" fill="#555555" text-anchor="middle">科学 / 改訂</text>
+  </g>
+
+  <!-- Reading rule -->
+  <g filter="url(#shadow)">
+    <rect x="1145" y="610" width="270" height="170" rx="14" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="1280" y="642" font-size="14" font-weight="700" fill="#34495E" text-anchor="middle">読み方</text>
+    <line x1="1175" y1="656" x2="1385" y2="656" stroke="#E6E6E6"/>
+    <text x="1280" y="684" font-size="12.5" fill="#555555" text-anchor="middle">推論だけが止まるのではない</text>
+    <text x="1280" y="710" font-size="12.5" fill="#555555" text-anchor="middle">相互拘束を通じて</text>
+    <text x="1280" y="734" font-size="12.5" fill="#555555" text-anchor="middle">推論が停止される</text>
+    <text x="1280" y="758" font-size="12.5" fill="#1E8449" font-weight="600" text-anchor="middle">自由には可動な停止が必要</text>
+  </g>
+
+  <!-- Bottom note -->
+  <g>
+    <rect x="365" y="817" width="770" height="42" rx="9" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="842" font-size="13" fill="#555555" text-anchor="middle">
+      μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> は最終回答を加えるのではなく、答えが一時的停止として機能する場所を移す。
+    </text>
+  </g>
+
+</svg>

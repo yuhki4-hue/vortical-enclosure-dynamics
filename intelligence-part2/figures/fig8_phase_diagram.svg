@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1400" height="880" fill="#FAFAF8"/>
+
+  <!-- TITLE -->
+  <text x="700" y="50" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.8  The Three-Axis Phase Diagram of Intelligence
+  </text>
+  <text x="700" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    Stable operation lies in a narrow region between the divergent zone and the rigid zone
+  </text>
+
+  <defs>
+    <marker id="ax8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#444444"/>
+    </marker>
+    <marker id="blueArrow8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2980B9"/>
+    </marker>
+    <filter id="sh8" x="-12%" y="-12%" width="124%" height="124%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feOffset dx="0" dy="1.5" in="b" result="o"/>
+      <feComponentTransfer in="o" result="oo"><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode in="oo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="stableG" cx="38%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#A9DFBF" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#27AE60" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1E8449" stop-opacity="0.12"/>
+    </radialGradient>
+    <radialGradient id="divG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0.06"/>
+    </radialGradient>
+    <radialGradient id="rigidG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#7D6608" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#7D6608" stop-opacity="0.06"/>
+    </radialGradient>
+    <radialGradient id="speedGapG" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2980B9" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#2980B9" stop-opacity="0.06"/>
+    </radialGradient>
+    <linearGradient id="rigidBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B7950B" stop-opacity="0.52"/>
+      <stop offset="55%" stop-color="#B7950B" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#B7950B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="divBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#C0392B" stop-opacity="0.01"/>
+      <stop offset="80%" stop-color="#C0392B" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0.58"/>
+    </linearGradient>
+    <radialGradient id="divVert" cx="100%" cy="100%" r="95%">
+      <stop offset="0%" stop-color="#C0392B" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#C0392B" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C0392B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurEdge" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <!-- ===== 3D axis system (isometric) ===== -->
+  <!-- origin -->
+  <g>
+    <!-- origin point -->
+    <circle cx="360" cy="600" r="4" fill="#444444"/>
+    <text x="345" y="618" font-size="11" fill="#888888">(0,0,0)</text>
+
+    <!-- axis: v_inf (right-up) -->
+    <line x1="360" y1="600" x2="760" y2="500" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="772" y="498" font-size="13" fill="#2980B9" font-weight="600">v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan></text>
+    <text x="772" y="514" font-size="10.5" fill="#888888">inference velocity</text>
+
+    <!-- axis: r_res (right-down) -->
+    <line x1="360" y1="600" x2="720" y2="710" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="730" y="722" font-size="13" fill="#2980B9" font-weight="600">r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan></text>
+    <text x="730" y="738" font-size="10.5" fill="#888888">resolution</text>
+
+    <!-- axis: eta (up) -->
+    <line x1="360" y1="600" x2="360" y2="220" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+    <text x="352" y="212" font-size="13" fill="#27AE60" font-weight="600" text-anchor="end">η</text>
+    <text x="352" y="230" font-size="10.5" fill="#888888" text-anchor="end">stopping hardness</text>
+  </g>
+
+  <!-- ===== DIVERGENT ZONE : left edge = η axis (x=360), top = rigid top (y=158) ===== -->
+  <!-- horizontal gradient layer (left light → right dark) -->
+  <path d="M 360 600 L 730 713 L 840 675 L 840 158 L 360 158 Z" fill="url(#divBand)"/>
+  <!-- vertical gradient layer (top light → bottom dark) -->
+  <path d="M 360 600 L 730 713 L 840 675 L 840 158 L 360 158 Z" fill="url(#divVert)"/>
+  <!-- redraw r_res axis on top as the lower boundary -->
+  <line x1="360" y1="600" x2="720" y2="710" stroke="#444444" stroke-width="1.6" marker-end="url(#ax8)"/>
+
+  <!-- ===== STABLE OPERATION REGION (center, green) ===== -->
+  <ellipse cx="575" cy="480" rx="112" ry="102" fill="url(#stableG)" filter="url(#sh8)"/>
+  <ellipse cx="540" cy="440" rx="30" ry="21" fill="#FFFFFF" opacity="0.35"/>
+  <text x="575" y="468" font-size="15" font-weight="700" fill="#1E8449" text-anchor="middle">Stable</text>
+  <text x="575" y="488" font-size="15" font-weight="700" fill="#1E8449" text-anchor="middle">operation</text>
+  <text x="575" y="510" font-size="10.5" fill="#1E8449" text-anchor="middle" font-style="italic">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> functions · L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> revisable</text>
+
+  <!-- ===== DIVERGENT ZONE labels ===== -->
+  <text x="770" y="665" font-size="15" font-weight="700" fill="#C0392B" text-anchor="middle">Divergent zone</text>
+  <text x="770" y="627" font-size="10.5" fill="#C0392B" text-anchor="middle">high v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> · high r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan> · internal stop</text>
+  <text x="770" y="683" font-size="10.5" fill="#C0392B" text-anchor="middle" font-style="italic">runaway optimization, single-view absolutism</text>
+
+  <!-- ===== RIGID ZONE (high eta) : whole upper region ===== -->
+  <rect x="360" y="158" width="480" height="200" fill="url(#rigidBand)" rx="6"/>
+  <text x="380" y="195" font-size="15" font-weight="700" fill="#7D6608">Rigid zone</text>
+  <text x="380" y="216" font-size="10.5" fill="#7D6608">excessive η (high stopping hardness)</text>
+  <text x="380" y="234" font-size="10.5" fill="#7D6608" font-style="italic">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> fixation, no adaptation</text>
+
+  <!-- ===== SPEED-GAP RUPTURE ZONE: bounded by eta- and r_res-parallel thresholds ===== -->
+  <path d="M 704 512 L 704 158 L 840 158 L 840 554 Z" fill="url(#speedGapG)" opacity="0.86"/>
+  <text x="765" y="430" font-size="12.5" font-weight="700" fill="#1F618D" text-anchor="middle">Speed-gap rupture zone</text>
+  <text x="765" y="449" font-size="10.5" fill="#1F618D" text-anchor="middle">Δv<tspan font-size="0.72em" baseline-shift="-22%">intel</tspan> = v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> − v<tspan font-size="0.72em" baseline-shift="-22%">LR</tspan></text>
+  <text x="765" y="466" font-size="10.5" fill="#1F618D" text-anchor="middle">log reference breaks</text>
+
+  <!-- (0,0,0) is NOT intelligence note -->
+  <g transform="translate(250,640)">
+    <text x="0" y="0" font-size="10.5" fill="#888888" font-style="italic">v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> = r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan> = 0 :</text>
+    <text x="0" y="16" font-size="10.5" fill="#888888" font-style="italic">not the completion of intelligence,</text>
+    <text x="0" y="32" font-size="10.5" fill="#888888" font-style="italic">but its termination (motion stops).</text>
+  </g>
+
+  <!-- ===== RIGHT: four-fold collapse (divergent) ===== -->
+  <g transform="translate(880,140)">
+    <rect x="0" y="0" width="430" height="270" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.6" rx="8" filter="url(#sh8)"/>
+    <text x="20" y="34" font-size="15" font-weight="700" fill="#C0392B">Divergent zone: four-fold collapse</text>
+    <line x1="20" y1="46" x2="410" y2="46" stroke="#E5E5E5"/>
+
+    <text x="22" y="76" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">1.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> runs away</text>
+    <text x="40" y="94" font-size="11" fill="#666666">high v<tspan font-size="0.72em" baseline-shift="-22%">inf</tspan> · r<tspan font-size="0.72em" baseline-shift="-22%">res</tspan>, no external stop</text>
+
+    <text x="22" y="122" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">2.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan> cannot keep up</text>
+    <text x="40" y="140" font-size="11" fill="#666666">log generation outpaces recursive reference</text>
+
+    <text x="22" y="168" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">3.</tspan> L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> cannot emerge</text>
+    <text x="40" y="186" font-size="11" fill="#666666">basis for emergence (L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan>) is lost</text>
+
+    <text x="22" y="214" font-size="12.5" fill="#1A1A1A"><tspan font-weight="700">4.</tspan> μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> cannot open the window</text>
+    <text x="40" y="232" font-size="11" fill="#666666">no reconfiguration; L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan> keeps running away</text>
+
+    <text x="20" y="258" font-size="10.5" fill="#C0392B" font-style="italic">The four collapses chain together (§11.4).</text>
+  </g>
+
+  <!-- ===== RIGHT: rigid zone ===== -->
+  <g transform="translate(880,440)">
+    <rect x="0" y="0" width="430" height="150" fill="#FFFFFF" stroke="#7D6608" stroke-width="1.6" rx="8" filter="url(#sh8)"/>
+    <text x="20" y="34" font-size="15" font-weight="700" fill="#7D6608">Rigid zone: L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> fixation</text>
+    <line x1="20" y1="46" x2="410" y2="46" stroke="#E5E5E5"/>
+    <text x="22" y="74" font-size="12" fill="#444444">• Excessive stopping hardness η fixes L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>.</text>
+    <text x="22" y="98" font-size="12" fill="#444444">• μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> ceases to function (no reconfiguration).</text>
+    <text x="22" y="122" font-size="12" fill="#444444">• L<tspan font-size="0.72em" baseline-shift="-22%">F</tspan>–L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> dynamic interaction freezes.</text>
+    <text x="20" y="142" font-size="10.5" fill="#7D6608" font-style="italic">cf. pathological attractors (§8.5): obsession, absolutism…</text>
+  </g>
+
+  <!-- ===== RIGHT: stable / sapient note ===== -->
+  <g transform="translate(880,620)">
+    <rect x="0" y="0" width="430" height="130" fill="#F1E8F5" stroke="#7D3C98" stroke-width="1.2" rx="8"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#5B2C72">Active vs passive stability</text>
+    <text x="22" y="58" font-size="11.5" fill="#5B2C72">μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> = ability to move on the three axes and</text>
+    <text x="22" y="76" font-size="11.5" fill="#5B2C72"><tspan font-weight="700">actively</tspan> return to the stable region (Sapient).</text>
+    <text x="22" y="98" font-size="11.5" fill="#5B2C72">Systems without internal μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> may be stable only</text>
+    <text x="22" y="116" font-size="11.5" fill="#5B2C72"><tspan font-weight="700">passively</tspan> — placed there by external conditions.</text>
+  </g>
+
+  <!-- ===== BOTTOM strip ===== -->
+  <g transform="translate(0,792)">
+    <rect x="60" y="0" width="1280" height="56" fill="#FDF6E3" rx="6" stroke="#B7950B" stroke-width="0.8" opacity="0.9"/>
+    <text x="700" y="24" font-size="13" font-weight="600" fill="#7D6608" text-anchor="middle">
+      Instability is not a defect but a constitutive feature: intelligence persists only in the narrow band between divergence and rigidity.
+    </text>
+    <text x="700" y="44" font-size="11.5" fill="#7D6608" text-anchor="middle" font-style="italic">
+      A single-node, high-velocity, high-resolution, internally-stopping system occupies the divergent zone — a dynamical consequence, not a normative claim (§11.8).
+    </text>
+  </g>
+
+  <!-- FOOTER -->
+  <text x="60" y="872" font-size="10.5" fill="#888888">
+    Color key:  stable operation (green)  ·  divergent zone (red)  ·  rigid zone (ochre)  ·  μ<tspan font-size="0.72em" baseline-shift="-22%">θ</tspan> remark (purple).  Three lines of argument integrate here (§11.9).
+  </text>
+
+</svg>

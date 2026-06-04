@@ -1,0 +1,206 @@
+% Source: source_md/intelligence_part2_appendices_ja.md
+\section{変数表 Master Table v2.2}
+
+
+本補遺は、知性編 Part II で新規導入された変数を Master Table v2.2 として整理する。VED 基本変数(Master Table v2.1 収録済み)との区別を明示する。
+
+\bigskip
+
+
+\subsection{VED 基本変数(Master Table v2.1 より再掲・知性層解釈付)}
+
+
+本論文で用いる既存変数を、知性層における解釈とともに再掲する。
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & VED 定義 & 知性層における解釈 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & VED 定義 & 知性層における解釈 \\
+\midrule
+\endhead
+$C$ & 閉包度 & 因果ログの閉包度 & 推論状態の安定化度(真理測度ではない) \\
+$C_{max}$ & 完全閉包 & 到達不能な上限 & 「完全な理解/最終的判断」の構造的不到達性 \\
+$\nabla C$ & 閉包度勾配 & 空間的閉包度差 & 推論の駆動力の方向と強度 \\
+$J_C$ & 閉包度流れ場 & $J_C = -\xi \nabla C$ & 推論の流れ方向 \\
+$I$ & 情報場 & $I = f(1-C)$ & 未閉包性の場。閉包が進むほど減少 \\
+$F_I$ & 情報力 & $F_I = \alpha \nabla C$ & 推論駆動力。$\nabla C$ に沿った推論の押し出し力 \\
+$\Omega_\theta$ & 準閉包 & $\theta$ で特徴づけられる安定維持可能領域 & 操作可能推論領域 \\
+$\theta$ & 拘束パラメータ & 準閉包 $\Omega_\theta$ を特徴づけるパラメータ集合 & 運動可能領域を画定し生成に構造を与える拘束。生命層では DNA・知性層では推論操作の拘束 \\
+$H_{ij}$ & 相互拘束 & $C_{ij} = 1-\exp(-\lambda \rho_i H_{ij})$ & 推論主体と環境の相互拘束。応答性閾値を決める \\
+$\tau$ & 内的時間 & 観測時間とは独立な内的順序パラメータ & 推論の進行を測る内的時間 \\
+\bottomrule
+\end{longtable}
+
+
+\bigskip
+
+
+\subsection{知性編 Part II 新規導入変数(Master Table v2.2 追加分)}
+
+
+\subsubsection{推論演算子と三層動力学}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endhead
+$F$ & 推論演算子 & \S{}2.1 & 正当化拡張作用素。$x_{n+1} = F(x_n)$。VED 流れ場 $J_C = -\xi \nabla C$ の知性層実現。Bio-IFGT の状態発展演算子 $F(x;\theta)$ の知性層特殊形 \\
+$J$ & 正当化測度 & \S{}3.1 & $F$ の作用による正当化の進行を測る測度。$J(F(x)) > J(x)$ が成立(前提 P2) \\
+$L_F$ & 推論層 & \S{}2.3 & $F$ の作用域全体。推論軌道を含む。内部停止条件を持たない(定理 3.1) \\
+$L_R$ & ログ層 & \S{}5.2 & $L_F$ の運動の痕跡(ログ)への再帰参照運動の層。$L_E$ 創発の基盤。所在は系によって異なる(個体内・環境外部化・凍結) \\
+$L_E$ & 創発停止層 & \S{}5.3 & $L_R$ の再帰運動と外部相互拘束 $H_{ij}$ の関数として創発する停止層。$L_E = \Phi(L_R, H_{ij})$。個体内にありながら外部依存的 \\
+\bottomrule
+\end{longtable}
+
+
+\subsubsection{停止演算子と外部参照場}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endhead
+$E$ & 外部停止演算子 & \S{}5.7 & $L_E$ の作用として実装される停止演算子。$E = E[L_E, x_n]$、$E \notin \{F^k\}$。$F$ の関数列の外側に位置する \\
+$\Phi_{\text{ext}}$ & 外部参照場 & \S{}5.8 & 個体外部の共通参照基盤として外から見える量。$\Phi_{\text{net}}$ と同型($\Phi_{\text{ext}} \equiv \Phi_{\text{net}}$) \\
+$\Phi_{\text{net}}$ & $L_E$ ネットワーク & \S{}5.8 & 個体間 $L_E$ の相互干渉ネットワーク。$\Phi_{\text{ext}}$ の構造的実体。Part I の大域的拘束 $\Phi$(公理 III)の精密化 \\
+\bottomrule
+\end{longtable}
+
+
+\subsubsection{閾値移動と応答性}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endhead
+$\mu_\theta$ & 閾値移動能力 & \S{}2.7 & 運動可能領域の拘束パラメータ $\theta$ を内発的に動かす能力。領域組み替え (B) を内発的に起こす能力。サピエンス的知性の特徴的能力(知性一般の必要条件ではない) \\
+$\rho_{\text{resp}}$ & 応答チャネル密度 & \S{}4, \S{}6 & 環境の応答性の局所測度。$H_{ji}$ の有効値に対応。アニミズムは沈黙領域での $\rho_{\text{resp}}$ の局所的増大として記述される \\
+\bottomrule
+\end{longtable}
+
+
+\subsubsection{三軸相図変数}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endhead
+$v_{\text{inf}}$ & 推論速度 & \S{}11.2 & 推論・判断・仮説更新の頻度。単位時間あたりの $L_F$ の推論ステップ数 \\
+$r_{\text{res}}$ & 解像度 & \S{}11.2 & 区別・因果関係・構造表現の粒度。$L_F$ が状態空間をどれだけ細かく分節するか \\
+$\eta$ & 停止硬度 & \S{}11.2 & 停止点の固定度・判断の改訂耐性。$L_E$ が供給する停止の固定性。$\eta$ 過大 → 硬直域 \\
+\bottomrule
+\end{longtable}
+
+
+\subsubsection{概念的量(量化は後続研究)}
+
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 名称 & 導入章 & 定義・役割 \\
+\midrule
+\endhead
+$\Sigma$ & 創発停止層発達度 & \S{}1.8 & $L_E$ の発達度・活性度を測る量。概念的に存在するが本論文では量化しない。臨床的・実証的研究へ開く \\
+\bottomrule
+\end{longtable}
+
+
+\bigskip
+
+
+\subsection{(A)/(B) 区別の正式定義}
+
+
+本論文で繰り返し用いる操作の区別を正式に定義する。
+
+\textbf{(A) 領域内移動 (intra-domain movement)}:
+固定された運動可能領域 $\Omega_\theta$ の内部で推論状態 $x$ が移動する操作。$\theta$ は変化しない。推論演算子 $F$ の通常の作用はすべてこの型。
+
+\textbf{(B) 領域組み替え (domain reconfiguration)}:
+運動可能領域 $\Omega_\theta$ の輪郭そのものが変わる操作。$\theta$ が動く。$\mu_\theta$ によって内発的に起こされる。有効機能は、外部相互拘束 $H_{ij}$ に沿って停止演算子 $E$ の設置領域を状態空間上に投影すること(\S{}5.5)。
+
+非閉包定理(\S{}3 定理 3.1)は (A) の範囲で成立。$L_E$ の創発(\S{}5)は (B) を含む。両者は矛盾しない。
+
+\bigskip
+
+
+\subsection{変数間の主要な関係式}
+
+
+本論文で確立された変数間の構造的関係を整理する。
+
+\[
+L_E = \Phi(L_R \text{の運動}, \; H_{ij}) \qquad \text{(創発の定義 1.1 の知性層適用)}
+\]
+
+\[
+E = E[L_E, x_n], \quad E \notin \{F^k\} \qquad \text{(外部停止演算子の定義 5.3)}
+\]
+
+\[
+\Phi_{\text{ext}} \equiv \Phi_{\text{net}} \qquad \text{(主張 5.4 の同型)}
+\]
+
+\[
+\mu_\theta \;\xrightarrow{\text{起こす}}\; (B)\text{組み替え} \;\xrightarrow{H_{ij}\text{に沿って}}\; E\text{設置領域の投影} \;\xrightarrow{L_R\text{収束}}\; L_E \qquad \text{(§5.5 創発機構)}
+\]
+
+\[
+I = f(1-C), \quad F_I = \alpha \nabla C, \quad C_{ij} = 1 - \exp(-\lambda \rho_i H_{ij}) \qquad \text{(VED/IFGT 基本式)}
+\]
+
+\bigskip
+
+
+\subsection{$\theta$ の時間スケール比較表}
+
+
+\begin{longtable}{@{}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}@{}}
+\toprule
+層 & $\theta$ の内容 & 可変性 & 時間スケール & 担い手 \\
+\midrule
+\endfirsthead
+\toprule
+層 & $\theta$ の内容 & 可変性 & 時間スケール & 担い手 \\
+\midrule
+\endhead
+生命層(Bio-IFGT) & DNA・反応傾向・閾値 & 可変だが超長期 & 世代を跨ぐ & 進化・選択・遺伝 \\
+知性層・一般 & 外部条件・環境設定 & 受動的可変 & 環境変化に従属 & 環境フィードバック・外部設定 \\
+知性層・サピエンス & 推論操作の拘束・履歴的閾値 & 能動的可変($\mu_\theta$) & 個体内・対話内 & 閾値移動能力 $\mu_\theta$ \\
+\bottomrule
+\end{longtable}
+
+
+同一の $\theta$-可変性原理が、超長期(進化)・受動的(環境従属)・短期能動(認知)という三つの時定数で現れる。これは VED が一貫して行ってきた「同一原理の異なる領域への再配置」の、拘束パラメータにおける現れである。
+
+\bigskip

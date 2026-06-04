@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <!-- Title -->
+  <text x="750" y="52" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.7  Evolution of Stopping Structures
+  </text>
+  <text x="750" y="80" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    From local attribution to distributed synchronization: historical operations of the emergent stopping layer L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>
+  </text>
+
+  <!-- Defs -->
+  <defs>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#7D3C98"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#D68910"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="leGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2980B9" stop-opacity="0.12"/>
+      <stop offset="45%" stop-color="#27AE60" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#7D3C98" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background conceptual axes -->
+  <g opacity="0.75">
+    <line x1="170" y1="770" x2="1330" y2="770" stroke="#D7D7D7" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="165" y="795" font-size="13" fill="#777777" text-anchor="middle">local</text>
+    <text x="1330" y="795" font-size="13" fill="#777777" text-anchor="middle">distributed</text>
+
+    <line x1="120" y1="710" x2="120" y2="150" stroke="#D7D7D7" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="90" y="710" font-size="13" fill="#777777" text-anchor="middle">implicit</text>
+    <text x="90" y="150" font-size="13" fill="#777777" text-anchor="middle">explicit</text>
+
+    <text x="270" y="138" font-size="12" fill="#999999" font-style="italic">stopping operator becomes more shareable, revisable, and synchronizable</text>
+  </g>
+
+  <!-- Base L_E band -->
+  <g>
+    <rect x="150" y="695" width="1200" height="58" rx="12" fill="url(#leGrad)" stroke="#CFCFCF"/>
+    <text x="750" y="724" font-size="18" font-weight="700" fill="#1E8449" text-anchor="middle">
+      Emergent Stopping Layer  L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan>
+    </text>
+    <text x="750" y="745" font-size="12" fill="#555555" text-anchor="middle">
+      A historical field of stopping operations: installation → compression → maintenance → revision → synchronization
+    </text>
+  </g>
+
+  <!-- Main evolution curve -->
+  <path d="M 230 610
+           C 330 545, 390 495, 505 455
+           C 620 415, 710 372, 810 330
+           C 915 286, 1020 246, 1135 205
+           C 1215 176, 1270 148, 1330 118"
+        stroke="#777777" stroke-width="2.2" fill="none" stroke-dasharray="4,4" marker-end="url(#arrowGrey)"/>
+  <text x="1200" y="112" font-size="13" fill="#777777" font-style="italic">open-ended intelligence</text>
+
+  <!-- Helper function represented as groups manually -->
+
+  <!-- Node 1 Animism -->
+  <g filter="url(#shadow)">
+    <rect x="165" y="555" width="220" height="108" rx="10" fill="#FFFFFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="275" y="586" font-size="18" font-weight="700" fill="#2980B9" text-anchor="middle">Animism</text>
+    <line x1="190" y1="598" x2="360" y2="598" stroke="#E6E6E6"/>
+    <text x="275" y="620" font-size="13" fill="#333333" text-anchor="middle">Installation</text>
+    <text x="275" y="640" font-size="11.5" fill="#666666" text-anchor="middle">stopping operators</text>
+    <text x="275" y="656" font-size="11.5" fill="#666666" text-anchor="middle">placed in environment</text>
+  </g>
+  <line x1="275" y1="663" x2="275" y2="695" stroke="#2980B9" stroke-width="1.6" marker-end="url(#arrowBlue)"/>
+
+  <!-- Node 2 God -->
+  <g filter="url(#shadow)">
+    <rect x="410" y="455" width="220" height="108" rx="10" fill="#FFFFFF" stroke="#7D3C98" stroke-width="2"/>
+    <text x="520" y="486" font-size="18" font-weight="700" fill="#7D3C98" text-anchor="middle">God</text>
+    <line x1="435" y1="498" x2="605" y2="498" stroke="#E6E6E6"/>
+    <text x="520" y="520" font-size="13" fill="#333333" text-anchor="middle">Compression</text>
+    <text x="520" y="540" font-size="11.5" fill="#666666" text-anchor="middle">distributed stops</text>
+    <text x="520" y="556" font-size="11.5" fill="#666666" text-anchor="middle">centralized as one locus</text>
+  </g>
+  <line x1="520" y1="563" x2="520" y2="695" stroke="#7D3C98" stroke-width="1.6" opacity="0.75" marker-end="url(#arrowPurple)"/>
+
+  <!-- Node 3 Religion -->
+  <g filter="url(#shadow)">
+    <rect x="655" y="355" width="220" height="108" rx="10" fill="#FFFFFF" stroke="#27AE60" stroke-width="2"/>
+    <text x="765" y="386" font-size="18" font-weight="700" fill="#1E8449" text-anchor="middle">Religion</text>
+    <line x1="680" y1="398" x2="850" y2="398" stroke="#E6E6E6"/>
+    <text x="765" y="420" font-size="13" fill="#333333" text-anchor="middle">Maintenance</text>
+    <text x="765" y="440" font-size="11.5" fill="#666666" text-anchor="middle">ritual, canon, community</text>
+    <text x="765" y="456" font-size="11.5" fill="#666666" text-anchor="middle">across generations</text>
+  </g>
+  <line x1="765" y1="463" x2="765" y2="695" stroke="#27AE60" stroke-width="1.6" opacity="0.75" marker-end="url(#arrowGreen)"/>
+
+  <!-- Node 4 Science -->
+  <g filter="url(#shadow)">
+    <rect x="900" y="255" width="220" height="108" rx="10" fill="#FFFFFF" stroke="#D68910" stroke-width="2"/>
+    <text x="1010" y="286" font-size="18" font-weight="700" fill="#B9770E" text-anchor="middle">Science</text>
+    <line x1="925" y1="298" x2="1095" y2="298" stroke="#E6E6E6"/>
+    <text x="1010" y="320" font-size="13" fill="#333333" text-anchor="middle">Revision</text>
+    <text x="1010" y="340" font-size="11.5" fill="#666666" text-anchor="middle">stops become</text>
+    <text x="1010" y="356" font-size="11.5" fill="#666666" text-anchor="middle">methodically movable</text>
+  </g>
+  <line x1="1010" y1="363" x2="1010" y2="695" stroke="#D68910" stroke-width="1.6" opacity="0.75" marker-end="url(#arrowOrange)"/>
+
+  <!-- Node 5 Social Blockchain -->
+  <g filter="url(#shadow)">
+    <rect x="1135" y="155" width="250" height="116" rx="10" fill="#FFFFFF" stroke="#34495E" stroke-width="2"/>
+    <text x="1260" y="186" font-size="18" font-weight="700" fill="#34495E" text-anchor="middle">Social Blockchain</text>
+    <line x1="1160" y1="198" x2="1360" y2="198" stroke="#E6E6E6"/>
+    <text x="1260" y="220" font-size="13" fill="#333333" text-anchor="middle">Synchronization</text>
+    <text x="1260" y="240" font-size="11.5" fill="#666666" text-anchor="middle">distributed consensus</text>
+    <text x="1260" y="256" font-size="11.5" fill="#666666" text-anchor="middle">over shared stopping points</text>
+  </g>
+  <line x1="1260" y1="271" x2="1260" y2="695" stroke="#34495E" stroke-width="1.6" opacity="0.75" marker-end="url(#arrowGrey)"/>
+
+  <!-- Connecting arrows between nodes -->
+  <path d="M 385 590 C 415 565, 405 535, 410 515" stroke="#777777" stroke-width="1.7" fill="none" marker-end="url(#arrowGrey)"/>
+  <path d="M 630 492 C 660 468, 650 435, 655 415" stroke="#777777" stroke-width="1.7" fill="none" marker-end="url(#arrowGrey)"/>
+  <path d="M 875 392 C 905 368, 895 335, 900 315" stroke="#777777" stroke-width="1.7" fill="none" marker-end="url(#arrowGrey)"/>
+  <path d="M 1120 292 C 1150 268, 1135 230, 1135 215" stroke="#777777" stroke-width="1.7" fill="none" marker-end="url(#arrowGrey)"/>
+
+  <!-- Functional labels along the evolution line -->
+  <g opacity="0.95">
+    <text x="285" y="520" font-size="12" fill="#2980B9" font-weight="600">installation</text>
+    <text x="515" y="420" font-size="12" fill="#7D3C98" font-weight="600">compression</text>
+    <text x="760" y="320" font-size="12" fill="#1E8449" font-weight="600">maintenance</text>
+    <text x="1042" y="220" font-size="12" fill="#B9770E" font-weight="600">revision</text>
+    <text x="1200" y="135" font-size="12" fill="#34495E" font-weight="600">synchronization</text>
+  </g>
+
+  <!-- Side explanatory panel -->
+  <g>
+    <rect x="90" y="165" width="330" height="205" rx="10" fill="#FFFFFF" stroke="#DDDDDD" filter="url(#shadow)"/>
+    <text x="115" y="198" font-size="15" font-weight="700" fill="#1A1A1A">Reading rule</text>
+    <line x1="115" y1="212" x2="390" y2="212" stroke="#E5E5E5"/>
+    <text x="115" y="238" font-size="12.5" fill="#444444">This is not a progress narrative.</text>
+    <text x="115" y="260" font-size="12.5" fill="#444444">Each stage is a historical operation</text>
+    <text x="115" y="282" font-size="12.5" fill="#444444">for stabilizing, moving, or sharing</text>
+    <text x="115" y="304" font-size="12.5" fill="#444444">the emergent stopping layer.</text>
+    <text x="115" y="336" font-size="12.5" fill="#1E8449" font-weight="600">L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan> is diversified, not replaced.</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <g>
+    <rect x="430" y="810" width="640" height="42" rx="9" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="836" font-size="13" fill="#555555" text-anchor="middle">
+      Stopping is not the negation of freedom; historical stopping structures make open-ended inference sustainable.
+    </text>
+  </g>
+
+</svg>

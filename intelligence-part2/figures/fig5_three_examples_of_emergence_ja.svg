@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', Meiryo, Inter, 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif">
+
+  <rect width="1500" height="900" fill="#FAFAF8"/>
+
+  <text x="750" y="54" font-size="22" font-weight="600" fill="#1A1A1A" text-anchor="middle">
+    Fig.5  VEDで定義される創発の三例
+  </text>
+  <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
+    創発は単なる複雑化ではない。非閉包が外部相互拘束の下でアトラクターを形成することである
+  </text>
+
+  <defs>
+    <marker id="arrowGrey" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#777777"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#2980B9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#27AE60"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#D68910"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="1.5" in="blur" result="offset"/>
+      <feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+      <feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#27AE60" stop-opacity="0.18"/>
+      <stop offset="65%" stop-color="#2980B9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7D3C98" stop-opacity="0.04"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Top reading rule -->
+  <g>
+    <rect x="390" y="112" width="720" height="54" rx="10" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="135" font-size="13" fill="#555555" text-anchor="middle">
+      VEDでの用法: 下位層の運動 + 相互拘束 → 創発する上位層アトラクター
+    </text>
+    <text x="750" y="155" font-size="13" fill="#1E8449" text-anchor="middle" font-weight="600">
+      U = Φ(L, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>)
+    </text>
+  </g>
+
+  <!-- Three source columns -->
+  <!-- Physics -->
+  <g filter="url(#shadow)">
+    <rect x="95" y="220" width="360" height="350" rx="18" fill="#FFFFFF" stroke="#2980B9" stroke-width="2"/>
+    <text x="275" y="258" font-size="19" font-weight="700" fill="#2980B9" text-anchor="middle">物理 / 標準模型構造</text>
+    <line x1="130" y1="275" x2="420" y2="275" stroke="#E6E6E6"/>
+    <text x="275" y="306" font-size="13" fill="#777777" text-anchor="middle">下位層 L</text>
+    <text x="275" y="330" font-size="13.5" fill="#333333" text-anchor="middle">因果ログ C<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan></text>
+    <text x="275" y="352" font-size="13.5" fill="#333333" text-anchor="middle">内部ベクトル e<tspan font-size="0.72em" baseline-shift="-22%">i</tspan></text>
+    <path d="M275 368 L275 398" stroke="#777777" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="275" y="424" font-size="13" fill="#777777" text-anchor="middle">相互拘束 H</text>
+    <text x="275" y="448" font-size="13.5" fill="#333333" text-anchor="middle">閉包条件</text>
+    <text x="275" y="470" font-size="13.5" fill="#333333" text-anchor="middle">閉包エネルギー E(A)</text>
+    <path d="M275 486 L275 516" stroke="#2980B9" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+    <text x="275" y="542" font-size="13" fill="#777777" text-anchor="middle">上位層 U</text>
+    <text x="275" y="562" font-size="14" fill="#2980B9" font-weight="700" text-anchor="middle">粒子的アトラクター</text>
+  </g>
+
+  <!-- Life -->
+  <g filter="url(#shadow)">
+    <rect x="570" y="220" width="360" height="350" rx="18" fill="#FFFFFF" stroke="#27AE60" stroke-width="2"/>
+    <text x="750" y="258" font-size="19" font-weight="700" fill="#1E8449" text-anchor="middle">生命 / Bio-IFGT</text>
+    <line x1="605" y1="275" x2="895" y2="275" stroke="#E6E6E6"/>
+    <text x="750" y="306" font-size="13" fill="#777777" text-anchor="middle">下位層 L</text>
+    <text x="750" y="330" font-size="13.5" fill="#333333" text-anchor="middle">情報流 J</text>
+    <text x="750" y="352" font-size="13.5" fill="#333333" text-anchor="middle">状態発展 F(x; θ)</text>
+    <path d="M750 368 L750 398" stroke="#777777" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="750" y="424" font-size="13" fill="#777777" text-anchor="middle">相互拘束 H</text>
+    <text x="750" y="448" font-size="13.5" fill="#333333" text-anchor="middle">DNA由来パラメータ θ</text>
+    <text x="750" y="470" font-size="13.5" fill="#333333" text-anchor="middle">非平衡交換</text>
+    <path d="M750 486 L750 516" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="750" y="542" font-size="13" fill="#777777" text-anchor="middle">上位層 U</text>
+    <text x="750" y="562" font-size="14" fill="#1E8449" font-weight="700" text-anchor="middle">生命アトラクター Ω<tspan font-size="0.72em" baseline-shift="-22%">life</tspan></text>
+  </g>
+
+  <!-- Intelligence -->
+  <g filter="url(#shadow)">
+    <rect x="1045" y="220" width="360" height="350" rx="18" fill="#FFFFFF" stroke="#D68910" stroke-width="2"/>
+    <text x="1225" y="258" font-size="19" font-weight="700" fill="#B9770E" text-anchor="middle">知性 / Part II</text>
+    <line x1="1080" y1="275" x2="1370" y2="275" stroke="#E6E6E6"/>
+    <text x="1225" y="306" font-size="13" fill="#777777" text-anchor="middle">下位層 L</text>
+    <text x="1225" y="330" font-size="13.5" fill="#333333" text-anchor="middle">再帰的ログ層 L<tspan font-size="0.72em" baseline-shift="-22%">R</tspan></text>
+    <text x="1225" y="352" font-size="13.5" fill="#333333" text-anchor="middle">推論の痕跡と再入力</text>
+    <path d="M1225 368 L1225 398" stroke="#777777" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
+    <text x="1225" y="424" font-size="13" fill="#777777" text-anchor="middle">相互拘束 H</text>
+    <text x="1225" y="448" font-size="13.5" fill="#333333" text-anchor="middle">観測者-環境 H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan></text>
+    <text x="1225" y="470" font-size="13.5" fill="#333333" text-anchor="middle">停止領域の投影</text>
+    <path d="M1225 486 L1225 516" stroke="#D68910" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+    <text x="1225" y="542" font-size="13" fill="#777777" text-anchor="middle">上位層 U</text>
+    <text x="1225" y="562" font-size="14" fill="#B9770E" font-weight="700" text-anchor="middle">創発停止層 L<tspan font-size="0.72em" baseline-shift="-22%">E</tspan></text>
+  </g>
+
+  <!-- Converging arrows -->
+  <g stroke="#9E9E9E" stroke-width="2" opacity="0.75" fill="none">
+    <path d="M275 570 C350 660, 475 710, 610 725" marker-end="url(#arrowGrey)"/>
+    <path d="M750 570 L750 695" marker-end="url(#arrowGrey)"/>
+    <path d="M1225 570 C1150 660, 1025 710, 890 725" marker-end="url(#arrowGrey)"/>
+  </g>
+
+  <!-- Central emergence kernel -->
+  <g filter="url(#shadow)">
+    <ellipse cx="750" cy="735" rx="210" ry="85" fill="url(#coreGrad)" stroke="#D8D8D8"/>
+    <text x="750" y="712" font-size="19" font-weight="700" fill="#1A1A1A" text-anchor="middle">VEDで定義される創発</text>
+    <text x="750" y="743" font-size="24" font-weight="700" fill="#1E8449" text-anchor="middle">
+      U = Φ(L, H<tspan font-size="0.62em" baseline-shift="-22%">ij</tspan>)
+    </text>
+    <text x="750" y="770" font-size="12.5" fill="#555555" text-anchor="middle">
+      下位層の運動は消えず、上位層アトラクターとして安定化される
+    </text>
+  </g>
+
+  <!-- Bottom contrast note -->
+  <g>
+    <rect x="325" y="842" width="850" height="36" rx="8" fill="#FFFFFF" stroke="#DDDDDD"/>
+    <text x="750" y="865" font-size="12.5" fill="#555555" text-anchor="middle">
+      「複雑性が何か新しいものになる」ではなく、「非閉包 + 拘束が持続可能なアトラクターを作る」。
+    </text>
+  </g>
+
+</svg>
