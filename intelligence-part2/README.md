@@ -33,6 +33,11 @@ make en
 
 `make ja` builds `main_ja.tex`; `make en` builds `main.tex`. Both write artifacts to `build/`.
 
+Tracked PDF entry points:
+
+- [English draft PDF](main.pdf)
+- [Japanese manuscript PDF](main_ja.pdf)
+
 Useful targets:
 
 ```sh
