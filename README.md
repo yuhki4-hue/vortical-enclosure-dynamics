@@ -35,7 +35,7 @@ after submission approval.
   arXiv identifier pending
 - [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
   arXiv identifier pending
-- [Intelligence Part II — Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers](./intelligence-part2/)  
+- [Intelligence Part II — Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers](./intelligence-part2/main.pdf)  
   Japanese TeX manuscript and English TeX draft in progress
 
 Submission-ready PDF copies are also collected in [`arXiv_pdf/`](arXiv_pdf/).
