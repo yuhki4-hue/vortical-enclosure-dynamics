@@ -40,6 +40,18 @@ All notable changes to this repository will be documented in this file.
   local horizon-form requiring externalized stopping structures.
 - Added cross-domain structural comparison between slime mold dynamics and
   Transformer layer dynamics under the three minimal axioms.
+- Added `intelligence-part2/`, the second intelligence-layer paper in the
+  VED/IFGT application series.
+- Added Japanese and English TeX manuscripts, appendices, source Markdown,
+  bilingual figure sets, detailed figure-caption notes, and tracked PDF entry
+  points for Intelligence Part II.
+- Framed Intelligence Part II around inferential non-closure, externalized
+  stopping, emergent stopping layers `L_E`, and historical stopping-operation
+  systems such as religion, science, and social consensus.
+- Linked available Japanese PDFs from the top-level README for Bio-IFGT,
+  consciousness, Intelligence Part I, and Intelligence Part II.
+- Flattened Intelligence Part II figure PDFs against a white background for more
+  stable rendering in GitHub's PDF preview.
 
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 
