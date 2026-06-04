@@ -1,8 +1,6 @@
 # Intelligence Part II
 
-## 推論の非閉包性、停止の外部化、創発的停止層
-
-English title: *Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers*
+## Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers
 
 This repository directory contains the scaffold for Intelligence Part II, a Japanese TeX manuscript and an English TeX draft in the VED/IFGT application series.
 
