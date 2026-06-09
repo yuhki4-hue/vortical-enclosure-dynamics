@@ -4,6 +4,9 @@ This document lists common ways in which VED / IFGT terms can collapse into
 familiar but unintended meanings. It is an interpretation guide, not a new
 theoretical layer.
 
+For entry-layer name traps, see [Name Misreadings](name_misreadings.md). For a
+shorter attractor-style index, see [Concept Traps](concept_traps.md).
+
 ## Closure
 
 Appears in:

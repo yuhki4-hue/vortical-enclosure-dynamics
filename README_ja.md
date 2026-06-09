@@ -10,6 +10,12 @@ VED は、完成済みの物理理論というより、構造を読むための�
 
 このリポジトリには、理論的提案、概念モデル、探索的シミュレーション、既存理論の再配置の試みが含まれています。各セクションは異なる抽象度で書かれているため、ファイルを任意の順序で読むよりも、概念地図と読書経路を使って読むことを推奨します。
 
+## 重要な用語上の注意
+
+VED は computational fluid dynamics（CFD）の枠組みではなく、Navier--Stokes 方程式の方法論でもありません。
+
+「vortex」「enclosure」「dynamics」といった語は、主に生成的な構造概念として使われています。流体力学は比喩や説明のために現れることがありますが、VED は CFD プログラムとして読むべきものではありません。
+
 ## Navigation Layer
 
 | Guide | 目的 |
@@ -19,8 +25,11 @@ VED は、完成済みの物理理論というより、構造を読むための�
 | [Theory Relationships](docs/navigation/theory_relationships.md) | 既存理論との関係を、置換主張ではなく再配置として読むための案内。 |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | 身体化された認知、環境結合、生命・認知層との関係を整理する比較文書。 |
 | [Reading Paths](docs/navigation/reading_paths.md) | 読者の目的別に入口を選ぶための読書経路。 |
+| [Name Misreadings](docs/navigation/name_misreadings.md) | VED 名称や用語が CFD や通常の物体語彙へ吸着するのを防ぐための入口ガイド。 |
+| [Concept Traps](docs/navigation/concept_traps.md) | VED 用語が既存概念へ自動的に吸着する高頻度パターンを整理する文書。 |
 | [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Vol.4 のシミュレーションを過剰解釈せずに読むためのガイド。 |
 | [Common Misreadings](docs/navigation/common_misreadings.md) | 既存概念への自動吸着による誤読を避けるための索引。 |
+| [AI Summary Tests](docs/navigation/ai_summary_tests.md) | AI 要約テストと再テスト結果を記録するためのテンプレート。 |
 
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 

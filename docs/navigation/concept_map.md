@@ -15,6 +15,7 @@ in those files.
 | Conceptual Topography | [Conceptual Topography](../../conceptual-topography/) | Concept-space and conceptual-landscape layer. |
 | Consciousness | [Consciousness](../../consciousness/) | Temporal non-closure, speed-scale orchestration, and log referencing. |
 | Log referencing | [Consciousness log referencing](../../consciousness/sections/dynamics_log_referencing.tex) | Cross-scale referencing and log sedimentation. |
+| Entry-layer terminology | [Name Misreadings](name_misreadings.md), [Concept Traps](concept_traps.md) | Prevents early collapse into CFD, object-container language, or ordinary data-log meanings. |
 | SSO | [SSO section](../../consciousness/sections/sso.tex) | Speed-scale orchestration. |
 | TCA | [TCA section](../../consciousness/sections/torque_converter_attention.tex) | Torque-converter attention. |
 | Intelligence Part I | [Intelligence Part I](../../intelligence-part1/) | Intelligence as non-closed dynamical phenomenon. |

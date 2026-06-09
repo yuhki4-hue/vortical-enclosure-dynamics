@@ -19,6 +19,15 @@ operate at different levels of abstraction. Readers are encouraged to use the
 navigation documents and reading paths rather than reading files in arbitrary
 order.
 
+## Important Terminology Note
+
+VED is not a computational fluid dynamics framework, and it is not a
+Navier--Stokes methodology.
+
+Terms such as "vortex," "enclosure," and "dynamics" are used primarily as
+generative structural concepts. Fluid dynamics may occasionally appear as an
+analogy or illustration, but VED should not be read as a CFD program.
+
 ## Navigation Layer
 
 | Guide | Purpose |
@@ -28,8 +37,11 @@ order.
 | [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
 | [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
+| [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
+| [Concept Traps](docs/navigation/concept_traps.md) | Track high-frequency conceptual attractors that distort VED terms. |
 | [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Read Vol.4 simulations without over-interpreting them. |
 | [Common Misreadings](docs/navigation/common_misreadings.md) | Prevent common collapses into familiar but unintended meanings. |
+| [AI Summary Tests](docs/navigation/ai_summary_tests.md) | Record AI summary experiments and retests without fabricating results. |
 
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 
