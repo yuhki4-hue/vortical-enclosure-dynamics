@@ -1,8 +1,26 @@
 # Vortical Enclosure Dynamics (VED)
 
-Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的な閉包過程から、時間・空間・物質・重力・宇宙論的構造がどのように立ち上がりうるかを探る理論的枠組みです。
+Vortical Enclosure Dynamics（VED）は、差分的な力学、因果ログ形成、非閉包的な囲い込み過程から、時間・空間・物質・重力・宇宙論的構造がどのように立ち上がりうるかを探る理論的枠組みです。
 
 このリポジトリは、初回 arXiv 投稿のためのソース公開・研究背景提示を目的として、arXiv ID の確定前に先行公開しています。arXiv ID は投稿承認後に追記します。
+
+## 読み始める前に
+
+VED は、完成済みの物理理論というより、構造を読むための言語として読むのが適切です。
+
+このリポジトリには、理論的提案、概念モデル、探索的シミュレーション、既存理論の再配置の試みが含まれています。各セクションは異なる抽象度で書かれているため、ファイルを任意の順序で読むよりも、概念地図と読書経路を使って読むことを推奨します。
+
+## Navigation Layer
+
+| Guide | 目的 |
+|---|---|
+| [Concept Map](docs/navigation/concept_map.md) | VED/IFGT の主要概念がリポジトリ内のどこに現れるかを探すための地図。 |
+| [Translation Table](docs/navigation/translation_table.md) | 物理層、IFGT、認知層、社会層のあいだで語彙を対応づける表。 |
+| [Theory Relationships](docs/navigation/theory_relationships.md) | 既存理論との関係を、置換主張ではなく再配置として読むための案内。 |
+| [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | 身体化された認知、環境結合、生命・認知層との関係を整理する比較文書。 |
+| [Reading Paths](docs/navigation/reading_paths.md) | 読者の目的別に入口を選ぶための読書経路。 |
+| [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Vol.4 のシミュレーションを過剰解釈せずに読むためのガイド。 |
+| [Common Misreadings](docs/navigation/common_misreadings.md) | 既存概念への自動吸着による誤読を避けるための索引。 |
 
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 
@@ -20,13 +38,15 @@ Vortical Enclosure Dynamics（VED）は、因果ログ動力学と非閉包的�
 - [IFGT — Information Field Geometry Theory](Information-Field-Geometry-Theory/main.pdf)  
   arXiv ID は未確定
 - [Bio-IFGT — Biological Morphogenesis as Information-Flow Attractor Dynamics](bio-ifgt/main.pdf)  
-  arXiv ID は未確定
+  [Japanese PDF](bio-ifgt/main_ja.pdf) available; arXiv ID は未確定
 - [Conceptual Topography — A Field-Theoretic Account of Conceptual Landscapes](./conceptual-topography/main.pdf)  
   arXiv ID は未確定
 - [A Non-Generative Account of Consciousness — Temporal Non-Closure and Cross-Scale Log Referencing](./consciousness/main.pdf)  
-  arXiv ID は未確定
+  [Japanese PDF](./consciousness/main_ja.pdf) available; arXiv ID は未確定
 - [Intelligence Part I — Structural Constraints on Intelligence as a Dynamical Phenomenon](./intelligence-part1/main.pdf)  
-  arXiv ID は未確定
+  [Japanese PDF](./intelligence-part1/main_ja.pdf) available; arXiv ID は未確定
+- [Intelligence Part II — Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers](./intelligence-part2/main.pdf)  
+  [Japanese PDF](./intelligence-part2/main_ja.pdf) available; English TeX draft in progress
 
 投稿用 PDF コピーは [`arXiv_pdf/`](arXiv_pdf/) にまとめています。
 
@@ -63,6 +83,7 @@ bio-ifgt/                          IFGT/VED の生物学的 coarse-graining
 conceptual-topography/             IFGT/VED の認知・社会的応用層
 consciousness/                     時間的非閉包とログ参照としての意識論
 intelligence-part1/                非閉包的な力学的現象としての知性論 Part I
+intelligence-part2/                外化された停止と創発的停止層
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
@@ -77,6 +98,8 @@ notes/                             作業ノートと補足資料
 - `intelligence-part1/`: VED/IFGT 応用系列における知性層の第一論文です。
   知性を、連結状態空間、時間順序、グローバル制約、外化された停止構造を要請する
   local horizon-form によって制約される力学的現象として扱います。
+- `intelligence-part2/`: 知性層の第二論文です。推論の非閉包性を、外化された停止、
+  創発的停止層、宗教・科学・社会的合意などの歴史的な停止運用システムへ展開します。
 
 ## 推奨読書順
 

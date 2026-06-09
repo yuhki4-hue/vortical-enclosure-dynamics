@@ -1,12 +1,35 @@
 # Vortical Enclosure Dynamics (VED)
 
 Vortical Enclosure Dynamics (VED) is a theoretical framework that explores how
-time, space, matter, gravity, and cosmological structure may emerge from causal
-log dynamics and non-closed closure processes.
+time, space, matter, gravity, and cosmological structure may emerge from
+differential dynamics, causal log formation, and non-closed enclosure processes.
 
 This repository is being made public first to provide source availability and
 project context for the initial arXiv submission. arXiv identifiers will be added
 after submission approval.
+
+## Before You Start
+
+VED is best read as a structural language rather than a completed physical
+theory.
+
+The repository contains theoretical proposals, conceptual models, exploratory
+simulations, and ongoing reformulations of existing theories. Different sections
+operate at different levels of abstraction. Readers are encouraged to use the
+navigation documents and reading paths rather than reading files in arbitrary
+order.
+
+## Navigation Layer
+
+| Guide | Purpose |
+|---|---|
+| [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
+| [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
+| [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
+| [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
+| [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
+| [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Read Vol.4 simulations without over-interpreting them. |
+| [Common Misreadings](docs/navigation/common_misreadings.md) | Prevent common collapses into familiar but unintended meanings. |
 
 ![Differential Horizon Map](figures/differential_horizon_map.svg)
 
