@@ -4,6 +4,16 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Added a top-level Navigation Layer to the English and Japanese README files,
+  including reader-orientation guidance and links to concept, translation,
+  theory-relationship, reading-path, simulation, and misreading guides.
+- Added `docs/navigation/` as a conceptual navigation layer for human
+  researchers and AI summarizers.
+- Added navigation guides for concept mapping, vocabulary translation, reading
+  paths, Vol.4 simulation interpretation, and common misreadings.
+- Added cautious comparison guides for Enactivism, FEP, Predictive Processing,
+  IIT, and Global Workspace-type models, framing them as theory relationships
+  without equivalence or replacement claims.
 - Added `bio-ifgt/`, a biological coarse-graining of IFGT/VED.
 - Added a minimal neural-field toy simulation for morphogen diffusion,
   constraint-density formation, neural commitment, boundary stabilization,
