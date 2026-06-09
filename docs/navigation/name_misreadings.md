@@ -12,16 +12,30 @@ Common misreading:
 - computational fluid dynamics vortex,
 - Navier--Stokes vortex structure.
 
+### Common Advanced Misreadings
+
+- dissipative structure only,
+- biological self-maintenance only,
+- autopoietic circulation only.
+
 VED usage:
 
 - recursive circulation,
 - self-referential persistence,
 - circulation-like formation of stable structure within a generative sequence.
 
+Clarification:
+
+- VED uses vortical structure as a generative concept across physical,
+  biological, cognitive, and social scales. Dissipative, biological, or
+  autopoietic readings may be useful neighbors, but they should not exhaust the
+  term.
+
 Related links:
 
 - [Conceptual overview](../../README.md#conceptual-overview)
 - [Vol.1 foundations](../../paper/vol1/)
+- [Conceptual Neighbors](conceptual_neighbors.md)
 
 ## Enclosure
 
@@ -82,4 +96,3 @@ Related links:
 - [Before You Start](../../README.md#before-you-start)
 - [Theory Relationship Map](theory_relationships.md)
 - [Concept Traps](concept_traps.md)
-

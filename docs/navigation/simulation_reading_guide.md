@@ -18,6 +18,19 @@ They are not:
 The simulations should be read as exploratory models for reasoning about
 non-closure, feedback, dissipation, and barrier-like behavior.
 
+### Common Advanced Misreading
+
+Misreading:
+
+- The simulations model biological self-organizing systems.
+
+Clarification:
+
+- The simulations are intended as minimal demonstrations of barrier formation,
+  differential horizons, non-closure dynamics, and boundary signaling.
+- Biological systems are only one possible realization.
+- The simulations should not be reduced to biological self-organization models.
+
 ## Vol.4 Dynamic-Barrier Simulations
 
 The Vol.4 barrier-term simulations illustrate dynamic non-closure and
@@ -54,4 +67,3 @@ validation, or standard-theory equivalence. Those remain open unless addressed
 in the relevant papers or future work.
 
 For broader interpretation safeguards, see [Common Misreadings](common_misreadings.md).
-

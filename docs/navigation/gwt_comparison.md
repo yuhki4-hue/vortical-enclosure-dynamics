@@ -47,6 +47,7 @@ The explanatory focus is different.
 | Often centers global broadcasting or availability. | Centers temporal transformation into log-referenceable structure. |
 | Spatial breadth of availability can be central. | Temporal transformation is more central than spatial breadth. |
 | Consciousness may be defined by global access. | Global access may be a condition or result, but is not consciousness itself. |
+| Some neighboring theories emphasize self-representation or recursive self-modeling. | VED consciousness is primarily routed through temporal non-closure, cross-scale log referencing, and speed-scale orchestration. |
 
 The consciousness paper explicitly states that information becoming broadly
 available may be part of the result or conditions of a conscious state, but is
@@ -77,4 +78,3 @@ Do not read this comparison as claiming that:
 
 Current status: explicit bridge written at the navigation level; full formal
 comparison remains future work.
-

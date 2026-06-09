@@ -47,6 +47,7 @@ The explanatory center is different.
 | Often centers integrated information or structural indivisibility. | Centers temporal non-closure and the opening of log referencing. |
 | Integration quantity can become the main explanatory index. | No single quantity is treated as consciousness itself. |
 | Strong integration can be read positively. | Excessive integration can become fixation or loss of plasticity. |
+| Some neighboring consciousness theories emphasize self-representation or recursive self-modeling. | VED consciousness is primarily routed through temporal non-closure, cross-scale log referencing, and speed-scale orchestration. |
 
 The consciousness paper explicitly states that consciousness is not maximum
 integration but a non-closure stability window.
@@ -78,4 +79,3 @@ Do not read this comparison as claiming that:
 
 Current status: explicit bridge written at the navigation level; full formal
 comparison remains future work.
-

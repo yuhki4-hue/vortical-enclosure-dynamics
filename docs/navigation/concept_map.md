@@ -12,6 +12,7 @@ in those files.
 | Constraint dynamics | [IFGT fundamental dynamics](../../Information-Field-Geometry-Theory/sections/fundamental_dynamics.tex), [IFGT unified equation](../../Information-Field-Geometry-Theory/sections/unified_equation.tex) | Constraint potential and information-flow dynamics. |
 | IFGT | [IFGT repository section](../../Information-Field-Geometry-Theory/), [IFGT overview](../../Information-Field-Geometry-Theory/ifgt_en.md) | Information Field Geometry Theory. |
 | Bio-IFGT | [Bio-IFGT](../../bio-ifgt/) | Biological coarse-graining of IFGT/VED. |
+| Conceptual neighbors | [Conceptual Neighbors](conceptual_neighbors.md), [Theory Relationships](theory_relationships.md) | Routes legitimate overlaps without reducing VED to a single existing category. |
 | Conceptual Topography | [Conceptual Topography](../../conceptual-topography/) | Concept-space and conceptual-landscape layer. |
 | Consciousness | [Consciousness](../../consciousness/) | Temporal non-closure, speed-scale orchestration, and log referencing. |
 | Log referencing | [Consciousness log referencing](../../consciousness/sections/dynamics_log_referencing.tex) | Cross-scale referencing and log sedimentation. |
