@@ -7,6 +7,11 @@ All notable changes to this repository will be documented in this file.
 - Reframed the English and Japanese README entry layers around a positive
   definition of VED as a generative structural framework beginning from the
   single axiom of difference.
+- Updated the README and navigation layer to clarify that the causal log
+  `C_{ij}` is the rank-1 formal variable generated from difference, not a
+  second axiom or a late derived trace.
+- Replaced the AI summary test template with an observed test log covering GPT,
+  Grok, and Gemini summary behavior, residual misreadings, and applied fixes.
 - Added navigation documents for the VED generative sequence and for preventing
   reduction to complex-systems, dissipative-structure, or autopoiesis
   categories.

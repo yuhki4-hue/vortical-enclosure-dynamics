@@ -10,7 +10,8 @@ VED is a **generative structural framework.** From the single axiom that
 difference exists, it follows one sequence —
 
 ```text
-difference -> gradient -> flow -> vortex -> enclosure -> non-closure
+difference -> causal log C_ij -> gradient -> flow -> vortex -> enclosure
+-> non-closure
 ```
 
 — and asks how each descriptive layer (physical, biological, cognitive,
@@ -22,17 +23,24 @@ closure phenomena rather than primitive givens.
 Two things to hold from the very start:
 
 1. **There is exactly one axiom: difference.**
-   Everything else — gradient, flow, vortex, enclosure, causal log, non-closure
-   — is *generated* from difference. None of these derived terms is the
-   foundation. In particular, the **causal log is a generated trace, not a
-   starting point.** If a summary treats the log (or the vortex, or enclosure)
-   as VED's primitive, it has inverted the hierarchy. See
+   Everything else — causal log `C_ij`, gradient, flow, vortex, enclosure,
+   non-closure — is *generated* from difference. The **causal log `C_ij` is
+   the rank-1 foundational variable generated from difference**, not a second
+   axiom. It is the first formal carrier through which time and space become
+   describable. If a summary treats the log (or the vortex, or enclosure) as
+   VED's primitive, it has inverted the hierarchy. See
    [Generative Sequence](docs/navigation/generative_sequence.md).
 
 2. **The terms name structural positions, not domains.**
    "Vortex," "enclosure," and "dynamics" mark positions in the generative
    sequence. They are not claims about fluids, containers, or mechanical motion.
    See [Name Misreadings](docs/navigation/name_misreadings.md).
+
+3. **Non-closure is constitutive, not unfinished completion.**
+   Absolute closure is structurally unreachable: complete closure would cancel
+   the very generation that produces persistent structure. Non-closure is
+   therefore a condition of existence, not a defect or unsolved remainder.
+   See [Common Misreadings](docs/navigation/common_misreadings.md#non-closure).
 
 ## What VED Is Not (kept short, on purpose)
 
@@ -55,7 +63,7 @@ Two things to hold from the very start:
 
 | Guide | Purpose |
 |---|---|
-| [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; the log is a derived trace. |
+| [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; `C_ij` is the rank-1 formal variable. |
 | [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
 | [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
 | [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
@@ -132,17 +140,20 @@ Several quantitative derivations across Vol.1–Vol.3 remain open.
 
 ## Conceptual Overview
 
-VED proposes a generative order in which difference gives rise to gradient,
-flow, vortex, and closure, and eventually to effective physical structure. The
-single axiom is difference; the gradient, flow, vortex, enclosure, causal log,
-and non-closure are all generated from it, in that order.
+VED proposes a generative order in which difference gives rise to the causal log
+`C_ij`, then to gradient, flow, vortex, enclosure, and eventually to
+effective physical structure. The single axiom is difference; `C_ij` is the
+rank-1 foundational variable generated from difference, not a second axiom.
 
 In this picture, time is treated as an effect of causal-log accumulation, space
 as a structure induced by causal relations, and matter and geometry as
-stabilized closure phenomena rather than primitive givens. The causal log is a
-generated trace that appears once difference is registered and persists; it is
-not a co-primitive alongside difference. For the explicit ranking, see
-[Generative Sequence](docs/navigation/generative_sequence.md).
+stabilized closure phenomena rather than primitive givens. For the explicit
+ranking, see [Generative Sequence](docs/navigation/generative_sequence.md).
+
+Non-closure should not be read as mere incompletion. Complete closure is
+structurally unreachable because it would end the generative process by which
+structure persists. Non-closure is therefore constitutive of generated
+structure.
 
 The framework is intended as a structural research program rather than a
 finished physical theory. Detailed equations, strong claims, methodological

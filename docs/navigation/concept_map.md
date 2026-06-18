@@ -6,7 +6,7 @@ in those files.
 
 | Concept | Primary Locations | Notes |
 |---|---|---|
-| Generative sequence | [Generative Sequence](generative_sequence.md), [README](../../README.md#what-ved-is-read-this-first), [Vol.1](../../paper/vol1/) | Fixes the hierarchy: difference is the sole axiom; causal log is a generated trace. |
+| Generative sequence | [Generative Sequence](generative_sequence.md), [README](../../README.md#what-ved-is-read-this-first), [Vol.1](../../paper/vol1/) | Fixes the hierarchy: difference is the sole axiom; causal log `C_ij` is the rank-1 formal variable generated from difference. |
 | Difference, gradient, flow, vortex, enclosure | [Generative Sequence](generative_sequence.md), [README](../../README.md#conceptual-overview), [Vol.1](../../paper/vol1/) | Core VED sequence. |
 | Non-closure | [Common Misreadings: Non-Closure](common_misreadings.md#non-closure), [Vol.1 minimal axiom](../../paper/vol1/sections/minimal_axiom.tex), [Vol.4](../../paper/vol4/) | Complete closure is unreachable and non-closure is constitutive, not a defect. |
 | Differential Horizon | [Vol.4 main paper](../../paper/vol4/), [Vol.4 guide](../vol4_differential_horizon.md) | Local horizon-form of generation and description. |
