@@ -20,6 +20,10 @@ physical, biological, cognitive, consciousness, intelligence, and social
 stopping-operation layers. It should therefore not be collapsed into a single
 neighboring category.
 
+For the core ordering of VED terms, see [Generative Sequence](generative_sequence.md).
+For the strongest complex-systems / dissipative-structure reduction trap, see
+[Not Just Complex Systems](not_just_complex_systems.md).
+
 ## Complex Systems
 
 ### Why Readers Connect Them
@@ -38,6 +42,7 @@ structure.
 
 Relevant links:
 
+- [Not Just Complex Systems](not_just_complex_systems.md)
 - [Bio-IFGT life attractor](../../bio-ifgt/sections/life_attractor.tex)
 - [Concept Map](concept_map.md)
 - [Reading Paths](reading_paths.md)
@@ -76,6 +81,7 @@ non-equilibrium persistence, dissipation, flow, and maintained structure.
 
 Relevant links:
 
+- [Not Just Complex Systems](not_just_complex_systems.md)
 - [Bio-IFGT life attractor](../../bio-ifgt/sections/life_attractor.tex)
 - [Vol.4 dynamic barrier](../../paper/vol4/sections/dynamic_barrier.tex)
 - [Simulation Reading Guide](simulation_reading_guide.md)
@@ -112,6 +118,7 @@ boundary formation, and self-sustaining organization.
 
 Relevant links:
 
+- [Not Just Complex Systems](not_just_complex_systems.md)
 - [Bio-IFGT life attractor](../../bio-ifgt/sections/life_attractor.tex)
 - [Bio-IFGT formal mapping](../../bio-ifgt/sections/formal_mapping.tex)
 - [Enactivism Comparison](enactivism_comparison.md)

@@ -43,8 +43,20 @@ Common misreadings:
 
 VED usage:
 
-- a boundary condition that prevents absolute closure and keeps structure
-  dynamically open.
+- the structural condition that **absolute closure is unreachable**, not
+  merely unfinished. Complete closure would coincide with the cessation of
+  generation, so any structure that persists is *necessarily* non-closed.
+  Non-closure is therefore a **condition of existence**, not a deficiency,
+  gap, or unsolved remainder.
+
+Note the distinction this targets:
+
+```text
+Weak (residual misreading):  closure is never complete  -> "still unfinished"
+Intended:                    complete closure is unreachable and would
+                             cancel the very generation that produces
+                             structure -> non-closure is constitutive
+```
 
 ## Log / Causal Log
 

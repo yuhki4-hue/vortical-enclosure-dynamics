@@ -4,6 +4,15 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Reframed the English and Japanese README entry layers around a positive
+  definition of VED as a generative structural framework beginning from the
+  single axiom of difference.
+- Added navigation documents for the VED generative sequence and for preventing
+  reduction to complex-systems, dissipative-structure, or autopoiesis
+  categories.
+- Strengthened non-closure guidance by clarifying that absolute closure is
+  structurally unreachable and that non-closure is constitutive rather than a
+  defect or unfinished remainder.
 - Added a top-level Navigation Layer to the English and Japanese README files,
   including reader-orientation guidance and links to concept, translation,
   theory-relationship, reading-path, simulation, and misreading guides.

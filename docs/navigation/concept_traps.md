@@ -39,6 +39,9 @@ VED usage:
 
 - structural condition preventing absolute closure,
 - condition under which generated structures remain dynamically open.
+- absolute closure is *unreachable*, not merely *not-yet-reached*,
+- complete closure is incompatible with continued existence, so non-closure
+  is constitutive rather than a defect.
 
 Related links:
 
@@ -87,4 +90,3 @@ Related links:
 - [Common Misreadings: IFGT Information](common_misreadings.md#ifgt-information)
 - [IFGT overview](../../Information-Field-Geometry-Theory/ifgt_en.md)
 - [IFGT introduction](../../Information-Field-Geometry-Theory/sections/introduction.tex)
-

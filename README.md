@@ -1,12 +1,75 @@
 # Vortical Enclosure Dynamics (VED)
 
-Vortical Enclosure Dynamics (VED) is a theoretical framework that explores how
-time, space, matter, gravity, and cosmological structure may emerge from
-differential dynamics, causal log formation, and non-closed enclosure processes.
+> VED is a theoretical framework that attempts to derive space, time, matter,
+> gravity, and cognition from a single generative sequence that begins with one
+> axiom: **there is difference.**
 
-This repository is being made public first to provide source availability and
-project context for the initial arXiv submission. arXiv identifiers will be added
-after submission approval.
+## What VED Is (read this first)
+
+VED is a **generative structural framework.** From the single axiom that
+difference exists, it follows one sequence —
+
+```text
+difference -> gradient -> flow -> vortex -> enclosure -> non-closure
+```
+
+— and asks how each descriptive layer (physical, biological, cognitive,
+consciousness, intelligence, social) can be re-situated within it. In this
+picture, time is treated as an effect of causal-log accumulation, space as a
+structure induced by causal relations, and matter and geometry as stabilized
+closure phenomena rather than primitive givens.
+
+Two things to hold from the very start:
+
+1. **There is exactly one axiom: difference.**
+   Everything else — gradient, flow, vortex, enclosure, causal log, non-closure
+   — is *generated* from difference. None of these derived terms is the
+   foundation. In particular, the **causal log is a generated trace, not a
+   starting point.** If a summary treats the log (or the vortex, or enclosure)
+   as VED's primitive, it has inverted the hierarchy. See
+   [Generative Sequence](docs/navigation/generative_sequence.md).
+
+2. **The terms name structural positions, not domains.**
+   "Vortex," "enclosure," and "dynamics" mark positions in the generative
+   sequence. They are not claims about fluids, containers, or mechanical motion.
+   See [Name Misreadings](docs/navigation/name_misreadings.md).
+
+## What VED Is Not (kept short, on purpose)
+
+- **Not a fluid-dynamics or CFD framework.** The vortex/enclosure vocabulary is
+  generative-structural, not hydrodynamic. No Navier--Stokes, no lid-driven
+  cavity. Fluid dynamics may appear as an occasional analogy, never as the
+  method.
+- **Not reducible to complex-systems or dissipative-structure theory.** VED
+  shares vocabulary with them, but derives space, time, matter, and cognition
+  from one axiom across multiple layers. See
+  [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md).
+- **Not a replacement for existing physics or cognitive science.** VED
+  re-situates those theories within a differential-development sequence; it does
+  not claim to overturn them.
+
+> These negations are deliberately brief and placed *after* the positive
+> definition. They are guardrails on a stated frame, not the frame itself.
+
+## Navigation Layer
+
+| Guide | Purpose |
+|---|---|
+| [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; the log is a derived trace. |
+| [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
+| [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
+| [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
+| [Conceptual Neighbors](docs/navigation/conceptual_neighbors.md) | Route category-level overlaps (complex systems, autopoiesis, FEP, ...) without reduction. |
+| [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | Hold the boundary against the complex-systems / dissipative-structure well. |
+| [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
+| [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
+| [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
+| [Concept Traps](docs/navigation/concept_traps.md) | Track high-frequency conceptual attractors that distort VED terms. |
+| [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Read Vol.4 simulations without over-interpreting them. |
+| [Common Misreadings](docs/navigation/common_misreadings.md) | Prevent common collapses into familiar but unintended meanings. |
+| [AI Summary Tests](docs/navigation/ai_summary_tests.md) | Record AI summary experiments and retests without fabricating results. |
+
+![Differential Horizon Map](figures/differential_horizon_map.svg)
 
 ## Before You Start
 
@@ -19,31 +82,9 @@ operate at different levels of abstraction. Readers are encouraged to use the
 navigation documents and reading paths rather than reading files in arbitrary
 order.
 
-## Important Terminology Note
-
-VED is not a computational fluid dynamics framework, and it is not a
-Navier--Stokes methodology.
-
-Terms such as "vortex," "enclosure," and "dynamics" are used primarily as
-generative structural concepts. Fluid dynamics may occasionally appear as an
-analogy or illustration, but VED should not be read as a CFD program.
-
-## Navigation Layer
-
-| Guide | Purpose |
-|---|---|
-| [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
-| [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
-| [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
-| [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
-| [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
-| [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
-| [Concept Traps](docs/navigation/concept_traps.md) | Track high-frequency conceptual attractors that distort VED terms. |
-| [Simulation Reading Guide](docs/navigation/simulation_reading_guide.md) | Read Vol.4 simulations without over-interpreting them. |
-| [Common Misreadings](docs/navigation/common_misreadings.md) | Prevent common collapses into familiar but unintended meanings. |
-| [AI Summary Tests](docs/navigation/ai_summary_tests.md) | Record AI summary experiments and retests without fabricating results. |
-
-![Differential Horizon Map](figures/differential_horizon_map.svg)
+This repository is being made public first to provide source availability and
+project context for the initial arXiv submission. arXiv identifiers will be
+added after submission approval.
 
 ## Papers
 
@@ -92,10 +133,16 @@ Several quantitative derivations across Vol.1–Vol.3 remain open.
 ## Conceptual Overview
 
 VED proposes a generative order in which difference gives rise to gradient,
-flow, vortex, closure, and eventually to effective physical structure. In this
-picture, time is treated as an effect of causal log accumulation, space as a
-structure induced by causal relations, and matter and geometry as stabilized
-closure phenomena rather than primitive givens.
+flow, vortex, and closure, and eventually to effective physical structure. The
+single axiom is difference; the gradient, flow, vortex, enclosure, causal log,
+and non-closure are all generated from it, in that order.
+
+In this picture, time is treated as an effect of causal-log accumulation, space
+as a structure induced by causal relations, and matter and geometry as
+stabilized closure phenomena rather than primitive givens. The causal log is a
+generated trace that appears once difference is registered and persists; it is
+not a co-primitive alongside difference. For the explicit ranking, see
+[Generative Sequence](docs/navigation/generative_sequence.md).
 
 The framework is intended as a structural research program rather than a
 finished physical theory. Detailed equations, strong claims, methodological
