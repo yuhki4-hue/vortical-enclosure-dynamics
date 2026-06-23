@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VED AI Spine",
+  "type": "object",
+  "required": ["spine_version", "purpose", "layer_policy", "layer0", "layer1"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "spine_version": { "type": "string" },
+    "purpose": { "type": "string" },
+    "layer_policy": {
+      "type": "object",
+      "required": ["machine_validated", "not_enforced", "absent"],
+      "additionalProperties": false,
+      "properties": {
+        "machine_validated": { "const": [0, 1] },
+        "not_enforced": { "const": [2] },
+        "absent": { "const": [3] },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "advisory_links": {
+      "type": "array",
+      "description": "Layer 2 references. Advisory only — never existence-checked or enforced.",
+      "items": {
+        "type": "object",
+        "required": ["path", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "layer0": {
+      "type": "object",
+      "required": ["repository_name", "framework_name", "abbreviation", "calibration_paths"],
+      "additionalProperties": false,
+      "properties": {
+        "repository_name": { "type": "string" },
+        "framework_name": { "type": "string" },
+        "abbreviation": { "type": "string" },
+        "calibration_paths": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string" },
+              "role": { "type": "string" }
+            }
+          }
+        },
+        "generated_outputs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "layer1": {
+      "type": "object",
+      "required": ["canonical_derivation_order"],
+      "additionalProperties": false,
+      "properties": {
+        "canonical_derivation_order": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rank", "id", "label", "kind", "derivation_role", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "rank": { "type": "integer", "minimum": 0 },
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "kind": {
+                "type": "string",
+                "enum": ["axiom", "variable", "relation", "process",
+                         "recursive_process", "regime", "boundary_condition"]
+              },
+              "derivation_role": {
+                "type": "string",
+                "enum": ["origin", "first_formal_carrier", "generated_stage",
+                         "effective_local_closure", "constitutive_limit"]
+              },
+              "status": { "type": "string", "enum": ["confirmed", "proposed"] }
+            }
+          }
+        },
+        "boundary_terms": {
+          "type": "array",
+          "description": "Off-backbone terms referenced by relations. They carry a kind but no rank.",
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "kind", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "kind": { "type": "string", "enum": ["structure", "field"] },
+              "status": { "type": "string", "enum": ["confirmed", "proposed"] }
+            }
+          }
+        },
+        "validated_relations": {
+          "type": "array",
+          "description": "Non-generative boundary constraints. They never raise generative rank.",
+          "items": {
+            "type": "object",
+            "required": ["from", "to", "relation", "generative", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "relation": {
+                "type": "string",
+                "enum": ["accumulation_structure", "structural_extension_of"]
+              },
+              "generative": { "type": "boolean", "const": false },
+              "status": { "type": "string", "enum": ["confirmed", "proposed"] },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

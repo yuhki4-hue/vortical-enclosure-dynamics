@@ -4,13 +4,17 @@
 > gravity, and cognition from a single generative sequence that begins with one
 > axiom: **there is difference.**
 
+AI readers and automated summarizers should start from the
+[AI Spine](docs/ai_spine/README.md). It provides machine-validated Layer 0-1
+calibration data before any interpretive navigation layer is consulted.
+
 ## What VED Is (read this first)
 
 VED is a **generative structural framework.** From the single axiom that
 difference exists, it follows one sequence —
 
 ```text
-difference -> causal log C_ij -> gradient -> flow -> vortex -> enclosure
+difference -> closure degree C_ij -> gradient -> flow -> vortex -> enclosure
 -> non-closure
 ```
 
@@ -20,15 +24,15 @@ picture, time is treated as an effect of causal-log accumulation, space as a
 structure induced by causal relations, and matter and geometry as stabilized
 closure phenomena rather than primitive givens.
 
-Two things to hold from the very start:
+Three things to hold from the very start:
 
 1. **There is exactly one axiom: difference.**
-   Everything else — causal log `C_ij`, gradient, flow, vortex, enclosure,
-   non-closure — is *generated* from difference. The **causal log `C_ij` is
-   the rank-1 foundational variable generated from difference**, not a second
-   axiom. It is the first formal carrier through which time and space become
-   describable. If a summary treats the log (or the vortex, or enclosure) as
-   VED's primitive, it has inverted the hierarchy. See
+   Everything else — closure degree `C_ij`, gradient, flow, vortex, enclosure,
+   non-closure — is *generated* from difference. The **closure degree `C_ij`
+   is the rank-1 foundational variable generated from difference**, not a
+   second axiom. The causal log is the accumulated trace of `C_ij`, not another
+   ranked primitive. If a summary treats the log (or the vortex, or enclosure)
+   as VED's primitive, it has inverted the hierarchy. See
    [Generative Sequence](docs/navigation/generative_sequence.md).
 
 2. **The terms name structural positions, not domains.**
@@ -63,6 +67,7 @@ Two things to hold from the very start:
 
 | Guide | Purpose |
 |---|---|
+| [AI Spine](docs/ai_spine/README.md) | Machine-validated Layer 0-1 calibration for AI readers; start here before interpretation. |
 | [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; `C_ij` is the rank-1 formal variable. |
 | [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
 | [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
@@ -140,10 +145,11 @@ Several quantitative derivations across Vol.1–Vol.3 remain open.
 
 ## Conceptual Overview
 
-VED proposes a generative order in which difference gives rise to the causal log
-`C_ij`, then to gradient, flow, vortex, enclosure, and eventually to
-effective physical structure. The single axiom is difference; `C_ij` is the
-rank-1 foundational variable generated from difference, not a second axiom.
+VED proposes a generative order in which difference gives rise to the closure
+degree `C_ij`, then to gradient, flow, vortex, enclosure, and eventually to
+effective physical structure. The causal log is the accumulated trace of
+`C_ij`. The single axiom is difference; `C_ij` is the rank-1 foundational
+variable generated from difference, not a second axiom.
 
 In this picture, time is treated as an effect of causal-log accumulation, space
 as a structure induced by causal relations, and matter and geometry as

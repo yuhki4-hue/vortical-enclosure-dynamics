@@ -5,6 +5,7 @@ read only in directory order.
 
 | Reader Goal | Suggested Path |
 |---|---|
+| Calibrate an AI reader before summarizing | [AI Spine](../ai_spine/README.md) -> [Generated canonical order](../ai_spine/generated/canonical_derivation_order.md) -> [Generative Sequence](generative_sequence.md) |
 | Understand the core VED sequence | [README](../../README.md) -> [Generative Sequence](generative_sequence.md) -> [Overview](../00_overview.md) -> [Vol.1](../../paper/vol1/) |
 | Prevent entry-layer terminology errors | [Name Misreadings](name_misreadings.md) -> [Concept Traps](concept_traps.md) -> [Common Misreadings](common_misreadings.md) |
 | Route nearby theory classifications | [Conceptual Neighbors](conceptual_neighbors.md) -> [Not Just Complex Systems](not_just_complex_systems.md) -> [Theory Relationships](theory_relationships.md) |

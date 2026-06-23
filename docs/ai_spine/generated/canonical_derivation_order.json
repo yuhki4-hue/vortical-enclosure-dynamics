@@ -1,0 +1,104 @@
+{
+  "generated_by": "docs/ai_spine/validate.py",
+  "source": "docs/ai_spine/spine.json",
+  "validated_layers": [
+    0,
+    1
+  ],
+  "not_enforced_layers": [
+    2
+  ],
+  "absent_layers": [
+    3
+  ],
+  "canonical_derivation_order": [
+    {
+      "rank": 0,
+      "id": "difference",
+      "label": "Difference",
+      "kind": "axiom",
+      "derivation_role": "origin",
+      "status": "confirmed"
+    },
+    {
+      "rank": 1,
+      "id": "c_ij",
+      "label": "Closure degree C_ij",
+      "kind": "variable",
+      "derivation_role": "first_formal_carrier",
+      "status": "confirmed"
+    },
+    {
+      "rank": 2,
+      "id": "gradient",
+      "label": "Gradient",
+      "kind": "relation",
+      "derivation_role": "generated_stage",
+      "status": "confirmed"
+    },
+    {
+      "rank": 3,
+      "id": "flow",
+      "label": "Flow",
+      "kind": "process",
+      "derivation_role": "generated_stage",
+      "status": "confirmed"
+    },
+    {
+      "rank": 4,
+      "id": "vortex",
+      "label": "Vortex",
+      "kind": "recursive_process",
+      "derivation_role": "generated_stage",
+      "status": "confirmed"
+    },
+    {
+      "rank": 5,
+      "id": "enclosure",
+      "label": "Enclosure",
+      "kind": "regime",
+      "derivation_role": "effective_local_closure",
+      "status": "confirmed"
+    },
+    {
+      "rank": 6,
+      "id": "non_closure",
+      "label": "Non-closure",
+      "kind": "boundary_condition",
+      "derivation_role": "constitutive_limit",
+      "status": "confirmed"
+    }
+  ],
+  "boundary_terms": [
+    {
+      "id": "causal_log",
+      "label": "Causal log (accumulated causal trace)",
+      "kind": "structure",
+      "status": "confirmed"
+    },
+    {
+      "id": "information_field",
+      "label": "Information field (IFGT)",
+      "kind": "field",
+      "status": "confirmed"
+    }
+  ],
+  "validated_relations": [
+    {
+      "from": "c_ij",
+      "to": "causal_log",
+      "relation": "accumulation_structure",
+      "generative": false,
+      "status": "confirmed",
+      "note": "C_ij is the scalar closure-degree variable; the causal log is the accumulated trace of it. Off-backbone: it does not occupy a rank."
+    },
+    {
+      "from": "c_ij",
+      "to": "information_field",
+      "relation": "structural_extension_of",
+      "generative": false,
+      "status": "confirmed",
+      "note": "IFGT shares C_ij as basis and stretches field/transport structure on top. It is NOT the next generative stage of VED core."
+    }
+  ]
+}

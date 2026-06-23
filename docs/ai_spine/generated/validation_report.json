@@ -1,0 +1,48 @@
+{
+  "generated_by": "docs/ai_spine/validate.py",
+  "source": "docs/ai_spine/spine.json",
+  "status": "pass",
+  "validated_layers": [
+    0,
+    1
+  ],
+  "not_enforced_layers": [
+    2
+  ],
+  "absent_layers": [
+    3
+  ],
+  "checks": [
+    {
+      "id": "schema",
+      "description": "spine.json conforms to spine.schema.json.",
+      "status": "skipped"
+    },
+    {
+      "id": "layer_policy",
+      "description": "Only Layer 0-1 machine-validated; Layer 2 not enforced; Layer 3 absent.",
+      "status": "pass"
+    },
+    {
+      "id": "layer0_paths",
+      "description": "Calibration paths exist; no Layer 2 doc among them.",
+      "status": "pass"
+    },
+    {
+      "id": "canonical_derivation_order",
+      "description": "Ranks consecutive; begins with `difference`; `c_ij` rank 1 variable.",
+      "status": "pass"
+    },
+    {
+      "id": "term_types",
+      "description": "Every backbone term carries a valid kind and derivation_role.",
+      "status": "pass"
+    },
+    {
+      "id": "non_generative_relations",
+      "description": "validated_relations are non-generative and never occupy a rank.",
+      "status": "pass"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "./spine.schema.json",
+  "spine_version": "0.2.0",
+  "purpose": "AI-readable calibration layer for VED/IFGT repository entry. This file calibrates Layer 0-1 only. It fixes starting coordinates and term types; it does not interpret, score, or route.",
+  "layer_policy": {
+    "machine_validated": [0, 1],
+    "not_enforced": [2],
+    "absent": [3],
+    "notes": [
+      "Layer 2 interpretive framing belongs to docs/navigation and is referenced as advisory_links only; it is never existence-checked or enforced by validate.py.",
+      "Layer 1 now carries term kind and derivation_role as calibration metadata, plus non-generative boundary relations. These constrain type, not interpretation.",
+      "Layer 3 evaluation, scoring, summary weighting, and final interpretation are absent from docs/ai_spine."
+    ]
+  },
+  "advisory_links": [
+    { "path": "docs/navigation/name_misreadings.md", "role": "entry-layer terminology guard (Layer 2, advisory)" },
+    { "path": "docs/navigation/common_misreadings.md", "role": "common interpretation guard (Layer 2, advisory)" },
+    { "path": "docs/navigation/conceptual_neighbors.md", "role": "neighbor-theory routing (Layer 2, advisory)" }
+  ],
+  "layer0": {
+    "repository_name": "vortical-enclosure-dynamics",
+    "framework_name": "Vortical Enclosure Dynamics",
+    "abbreviation": "VED",
+    "calibration_paths": [
+      { "path": "README.md", "role": "primary repository entry" },
+      { "path": "docs/ai_spine/README.md", "role": "AI-readable calibration entry" },
+      { "path": "docs/ai_spine/spine.json", "role": "machine-readable calibration data" }
+    ],
+    "generated_outputs": [
+      "docs/ai_spine/generated/canonical_derivation_order.md",
+      "docs/ai_spine/generated/canonical_derivation_order.json",
+      "docs/ai_spine/generated/validation_report.json"
+    ]
+  },
+  "layer1": {
+    "canonical_derivation_order": [
+      { "rank": 0, "id": "difference",  "label": "Difference",          "kind": "axiom",             "derivation_role": "origin",                  "status": "confirmed" },
+      { "rank": 1, "id": "c_ij",        "label": "Closure degree C_ij", "kind": "variable",          "derivation_role": "first_formal_carrier",    "status": "confirmed" },
+      { "rank": 2, "id": "gradient",    "label": "Gradient",            "kind": "relation",          "derivation_role": "generated_stage",         "status": "confirmed" },
+      { "rank": 3, "id": "flow",        "label": "Flow",                "kind": "process",           "derivation_role": "generated_stage",         "status": "confirmed" },
+      { "rank": 4, "id": "vortex",      "label": "Vortex",              "kind": "recursive_process", "derivation_role": "generated_stage",         "status": "confirmed" },
+      { "rank": 5, "id": "enclosure",   "label": "Enclosure",           "kind": "regime",            "derivation_role": "effective_local_closure", "status": "confirmed" },
+      { "rank": 6, "id": "non_closure", "label": "Non-closure",         "kind": "boundary_condition","derivation_role": "constitutive_limit",      "status": "confirmed" }
+    ],
+    "boundary_terms": [
+      { "id": "causal_log",        "label": "Causal log (accumulated causal trace)", "kind": "structure", "status": "confirmed" },
+      { "id": "information_field", "label": "Information field (IFGT)",               "kind": "field",     "status": "confirmed" }
+    ],
+    "validated_relations": [
+      { "from": "c_ij", "to": "causal_log",        "relation": "accumulation_structure",  "generative": false, "status": "confirmed",
+        "note": "C_ij is the scalar closure-degree variable; the causal log is the accumulated trace of it. Off-backbone: it does not occupy a rank." },
+      { "from": "c_ij", "to": "information_field", "relation": "structural_extension_of", "generative": false, "status": "confirmed",
+        "note": "IFGT shares C_ij as basis and stretches field/transport structure on top. It is NOT the next generative stage of VED core." }
+    ]
+  }
+}

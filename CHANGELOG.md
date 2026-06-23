@@ -4,12 +4,25 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Added `docs/ai_spine/` as an AI-readable calibration layer with
+  machine-validated Layer 0-1 data, generated canonical derivation-order
+  outputs, and an explicit policy that Layer 2 remains advisory and Layer 3 is
+  absent.
+- Added typed canonical-order metadata distinguishing `difference`, closure
+  degree `C_ij`, gradient, flow, vortex, enclosure, and non-closure by
+  `kind` and `derivation_role`.
+- Separated closure degree `C_ij` from the causal log in the AI Spine and
+  navigation entry text: `C_ij` is the rank-1 formal variable, while the causal
+  log is the off-backbone accumulated trace of `C_ij`.
+- Added non-generative validated relations for `c_ij -> causal_log`
+  (`accumulation_structure`) and `c_ij -> information_field`
+  (`structural_extension_of`) so IFGT is calibrated as a structure-layer
+  extension rather than the next VED core rank.
 - Reframed the English and Japanese README entry layers around a positive
   definition of VED as a generative structural framework beginning from the
   single axiom of difference.
 - Updated the README and navigation layer to clarify that the causal log
-  `C_{ij}` is the rank-1 formal variable generated from difference, not a
-  second axiom or a late derived trace.
+  should not be fused with closure degree `C_ij` or treated as a second axiom.
 - Replaced the AI summary test template with an observed test log covering GPT,
   Grok, and Gemini summary behavior, residual misreadings, and applied fixes.
 - Added navigation documents for the VED generative sequence and for preventing
