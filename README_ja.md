@@ -7,6 +7,12 @@ AI 読者や自動要約器は、まず [AI Spine](docs/ai_spine/README.md) か�
 読み始めてください。解釈用ナビゲーション層に入る前に、機械検証された
 Layer 0–1 の calibration data を提供します。
 
+静的 GitHub Pages 入口:
+[https://yuhki4-hue.github.io/vortical-enclosure-dynamics/](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/)
+
+AI Spine JSON への直接リンク:
+[https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/spine.json](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/spine.json)
+
 ## VED とは何か（最初にこれを読んでください）
 
 VED は **生成的な構造の枠組み** です。差異が存在するという単一の公理から出発し、
@@ -63,6 +69,7 @@ VED は **生成的な構造の枠組み** です。差異が存在するとい�
 | Guide | 目的 |
 |---|---|
 | [AI Spine](docs/ai_spine/README.md) | AI 読者向けの機械検証済み Layer 0–1 calibration。解釈前の入口。 |
+| [AI Spine on GitHub Pages](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/) | GitHub UI を安定して辿れない AI 読者向けの静的 Pages 入口。 |
 | [Generative Sequence](docs/navigation/generative_sequence.md) | 順序と階層を固定する。差異が唯一の公理であり、`C_ij` は rank-1 の形式変数である。 |
 | [Concept Map](docs/navigation/concept_map.md) | VED/IFGT の主要概念がリポジトリ内のどこに現れるかを探すための地図。 |
 | [Translation Table](docs/navigation/translation_table.md) | 物理層、IFGT、認知層、社会層のあいだで語彙を対応づける表。 |

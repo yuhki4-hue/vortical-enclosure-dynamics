@@ -7,6 +7,9 @@ All notable changes to this repository will be documented in this file.
 - Added GitHub Pages preparation files: root `.nojekyll`, a minimal static
   `index.html`, `robots.txt`, and an AI Spine directory index so
   `docs/ai_spine/spine.json` can be served directly as static JSON.
+- Added explicit GitHub Pages and direct AI Spine JSON links to the English and
+  Japanese README entry layers for AI readers that cannot reliably traverse the
+  GitHub UI.
 - Added `docs/ai_spine/` as an AI-readable calibration layer with
   machine-validated Layer 0-1 data, generated canonical derivation-order
   outputs, and an explicit policy that Layer 2 remains advisory and Layer 3 is

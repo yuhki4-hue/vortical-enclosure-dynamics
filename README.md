@@ -8,6 +8,12 @@ AI readers and automated summarizers should start from the
 [AI Spine](docs/ai_spine/README.md). It provides machine-validated Layer 0-1
 calibration data before any interpretive navigation layer is consulted.
 
+Static GitHub Pages entry:
+[https://yuhki4-hue.github.io/vortical-enclosure-dynamics/](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/)
+
+Direct AI Spine JSON:
+[https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/spine.json](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/spine.json)
+
 ## What VED Is (read this first)
 
 VED is a **generative structural framework.** From the single axiom that
@@ -68,6 +74,7 @@ Three things to hold from the very start:
 | Guide | Purpose |
 |---|---|
 | [AI Spine](docs/ai_spine/README.md) | Machine-validated Layer 0-1 calibration for AI readers; start here before interpretation. |
+| [AI Spine on GitHub Pages](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/) | Static Pages entry for AI readers that cannot reliably traverse GitHub UI pages. |
 | [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; `C_ij` is the rank-1 formal variable. |
 | [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
 | [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
