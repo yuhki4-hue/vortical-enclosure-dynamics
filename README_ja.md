@@ -76,6 +76,7 @@ VED は **生成的な構造の枠組み** です。差異が存在するとい�
 | [Theory Relationships](docs/navigation/theory_relationships.md) | 既存理論との関係を、置換主張ではなく再配置として読むための案内。 |
 | [Conceptual Neighbors](docs/navigation/conceptual_neighbors.md) | 複雑系・autopoiesis・FEP などのカテゴリ的重なりを、還元せずに整理する。 |
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | 複雑系・散逸構造の意味井戸に対して境界を保持するための文書。 |
+| [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | 拘束を、層ごとに物理的制約・確率的偏り・生命条件・認知的停止・社会的合意として整理する文書。 |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | 身体化された認知、環境結合、生命・認知層との関係を整理する比較文書。 |
 | [Reading Paths](docs/navigation/reading_paths.md) | 読者の目的別に入口を選ぶための読書経路。 |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | VED 名称や用語が CFD や通常の物体語彙へ吸着するのを防ぐための入口ガイド。 |

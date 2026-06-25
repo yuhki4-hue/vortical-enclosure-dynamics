@@ -4,6 +4,19 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Added fast/slow interpretation guardrails distinguishing Kahneman System
+  1/2, AI engineering inference protocols, System 0/1/2/3 classifications, and
+  VED/SSO structural speed-scale organization.
+- Added LLM interpretation cautions: fast token generation should not be read
+  as fast-layer dominance; Transformer-based LLMs may be read as
+  System-3-like social-symbolic sedimentation appearing through a
+  System-1-like interface.
+- Added intelligence-locus caution: the output site is not the same as the
+  intelligence locus.
+- Added `docs/navigation/constraint_dynamics.md` to clarify constraint as
+  trajectory-shaping across physical barriers, probabilistic biases,
+  biological viability conditions, cognitive stopping structures, and social
+  consensus mechanisms.
 - Added GitHub Pages preparation files: root `.nojekyll`, a minimal static
   `index.html`, `robots.txt`, and an AI Spine directory index so
   `docs/ai_spine/spine.json` can be served directly as static JSON.

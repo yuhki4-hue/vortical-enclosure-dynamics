@@ -194,6 +194,47 @@ self-organization.
   adjustment so shallow fetches surface "not CFD / derived from difference";
   search-first / non-reading agents may remain out of scope.
 
+## Additional wind-tunnel failure modes
+
+### Fast-layer over-attribution
+
+Observed risk:
+
+AI summaries may describe current LLMs as having a strong VED fast layer because
+they generate tokens quickly or behave like System-1-style pattern completion
+systems.
+
+Observed case:
+
+- Model: Grok.
+- Prompt: asked for a VED-based interpretation of the black-box character of
+  current AI, especially Transformer-based LLMs.
+- Drift: described current large-scale AI as forming a strong
+  "fast-layer vortex/enclosure" while having insufficient slow-layer
+  causal-log sedimentation and cross-scale log referencing.
+- Why this is misleading: the output is fast, but the system is not therefore
+  fast-layer dominant in the VED/SSO sense. The more precise issue is that the
+  learned conceptual terrain is already massively past-sedimented, while
+  ordinary inference traverses that terrain without writing the traversal back
+  into it as persistent self-updating causal log.
+
+Correction:
+
+Fast token generation should not be treated as evidence of fast-layer
+dominance. Current LLMs are better interpreted as massive slow sedimented
+terrains with fast traversal/projection. In ordinary inference, traversal reads
+and activates this terrain but does not write back into it as persistent
+self-updating causal-log reference.
+
+Canonical guardrail:
+
+```text
+A slow protocol is not a slow layer.
+A fast response may be the projection of slow sedimentation.
+Inference may read the terrain without engraving it.
+The output site is not the same as the intelligence locus.
+```
+
 ---
 
 ## Test Entry Template

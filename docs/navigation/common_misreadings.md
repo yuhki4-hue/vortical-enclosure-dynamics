@@ -83,6 +83,7 @@ VED / IFGT usage:
 
 Appears in:
 
+- [Constraint Dynamics](constraint_dynamics.md)
 - [IFGT fundamental dynamics](../../Information-Field-Geometry-Theory/sections/fundamental_dynamics.tex)
 - [IFGT unified equation](../../Information-Field-Geometry-Theory/sections/unified_equation.tex)
 - [Bio-IFGT](../../bio-ifgt/)
@@ -92,12 +93,18 @@ Common misreadings:
 
 - external force only,
 - arbitrary restriction,
-- suppression of dynamics.
+- suppression of dynamics,
+- physical barrier only,
+- Bayesian update only.
 
 VED / IFGT usage:
 
 - a structuring condition that shapes possible motion, flow, inference, or
   stabilization.
+- depending on the layer, this can appear as an energy or barrier condition, a
+  potential gradient, a probability bias, a learned distribution, a biological
+  viability condition, or a social stopping/consensus structure. The shared
+  role is not substrate identity but the organization of reachable trajectories.
 
 ## Projection
 

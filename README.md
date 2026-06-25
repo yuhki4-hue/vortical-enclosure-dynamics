@@ -81,6 +81,7 @@ Three things to hold from the very start:
 | [Theory Relationships](docs/navigation/theory_relationships.md) | Clarify relations to existing theories without replacement claims. |
 | [Conceptual Neighbors](docs/navigation/conceptual_neighbors.md) | Route category-level overlaps (complex systems, autopoiesis, FEP, ...) without reduction. |
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | Hold the boundary against the complex-systems / dissipative-structure well. |
+| [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | Clarify constraint as physical, probabilistic, biological, cognitive, or social trajectory-shaping depending on layer. |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
 | [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
