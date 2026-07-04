@@ -88,6 +88,7 @@ target a ranked term — so neither the causal log nor IFGT can silently become
 | `spine.json` | Machine-readable Layer 0-1 calibration data. |
 | `spine.schema.json` | Structural contract for the calibration data. |
 | `validate.py` | Validates Layer 0-1 and emits generated outputs. |
+| `requirements.txt` | Optional dependency for JSON Schema validation. |
 | `generated/canonical_derivation_order.md` | Human-readable generated order + types + relations. |
 | `generated/canonical_derivation_order.json` | Machine-readable generated order. |
 | `generated/validation_report.json` | Machine-readable validation result. |
@@ -98,6 +99,16 @@ target a ranked term — so neither the causal log nor IFGT can silently become
 python3 validate.py                 # from this directory
 python3 docs/ai_spine/validate.py   # from the repository root
 ```
+
+Schema validation uses the optional `jsonschema` package:
+
+```bash
+pip install -r docs/ai_spine/requirements.txt
+```
+
+If `jsonschema` is unavailable, `generated/validation_report.json` marks the
+schema check as `skipped` with a reason, severity, remedy, and impact note. The
+Layer 0-1 checks below still run through independent validation logic.
 
 ## What Is Validated
 

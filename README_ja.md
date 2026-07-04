@@ -77,6 +77,7 @@ VED は **生成的な構造の枠組み** です。差異が存在するとい�
 | [Conceptual Neighbors](docs/navigation/conceptual_neighbors.md) | 複雑系・autopoiesis・FEP などのカテゴリ的重なりを、還元せずに整理する。 |
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | 複雑系・散逸構造の意味井戸に対して境界を保持するための文書。 |
 | [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | 拘束を、層ごとに物理的制約・確率的偏り・生命条件・認知的停止・社会的合意として整理する文書。 |
+| [Stochastic Quantization Module](stochastic-quantization/README.md) | VED/IFGT 閉包動力学を χ 層の確率的量子化構成へ接続する探索的な定量化モジュール。 |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | 身体化された認知、環境結合、生命・認知層との関係を整理する比較文書。 |
 | [Reading Paths](docs/navigation/reading_paths.md) | 読者の目的別に入口を選ぶための読書経路。 |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | VED 名称や用語が CFD や通常の物体語彙へ吸着するのを防ぐための入口ガイド。 |
@@ -176,6 +177,7 @@ conceptual-topography/             IFGT/VED の認知・社会的応用層
 consciousness/                     時間的非閉包とログ参照としての意識論
 intelligence-part1/                非閉包的な力学的現象としての知性論 Part I
 intelligence-part2/                外化された停止と創発的停止層
+stochastic-quantization/           χ 層の確率的量子化を扱う探索的な定量化モジュール
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
@@ -192,6 +194,10 @@ notes/                             作業ノートと補足資料
   local horizon-form によって制約される力学的現象として扱います。
 - `intelligence-part2/`: 知性層の第二論文です。推論の非閉包性を、外化された停止、
   創発的停止層、宗教・科学・社会的合意などの歴史的な停止運用システムへ展開します。
+- `stochastic-quantization/`: VED/IFGT 閉包方程式を χ 層の Langevin 形式へ
+  書き換え、その定常測度が確率的量子化へ接続しうるかを調べる working-note
+  モジュールです。スクリプト、図、監査台帳、未解決問題を含みますが、標準模型作用の
+  完成済み導出ではなく、探索的な定量化の橋として読んでください。
 
 ## 推奨読書順
 

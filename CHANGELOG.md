@@ -4,6 +4,19 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Added `stochastic-quantization/`, an exploratory quantitative working-note
+  module for a χ-layer bridge from VED/IFGT closure dynamics to stochastic
+  quantization, including bilingual READMEs, reproducible Python scripts, and
+  generated figures for propagator, emergent light-cone, Collins two-field, and
+  re-addressing gauge-sector probes.
+- Linked the stochastic-quantization module from the top-level READMEs,
+  Navigation Layer, Concept Map, Reading Paths, Theory Relationship Map,
+  Simulation Reading Guide, and GitHub Pages entry point.
+- Added `docs/ai_spine/requirements.txt` and made the AI Spine schema check
+  self-describing when optional `jsonschema` validation is unavailable.
+- Localized AI Spine validation report statuses so one failing check no longer
+  turns unrelated checks into ambiguous global `see_errors` entries; added an
+  explicit `layer3_absence` check.
 - Added fast/slow interpretation guardrails distinguishing Kahneman System
   1/2, AI engineering inference protocols, System 0/1/2/3 classifications, and
   VED/SSO structural speed-scale organization.

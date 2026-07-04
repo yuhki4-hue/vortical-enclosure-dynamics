@@ -11,6 +11,7 @@ read only in directory order.
 | Route nearby theory classifications | [Conceptual Neighbors](conceptual_neighbors.md) -> [Not Just Complex Systems](not_just_complex_systems.md) -> [Theory Relationships](theory_relationships.md) |
 | Follow the physics sequence | [Vol.1](../../paper/vol1/) -> [Vol.3](../../paper/vol3/) -> [Vol.4](../../paper/vol4/) -> [Vol.2](../../paper/vol2/) |
 | Understand information and constraint language | [IFGT](../../Information-Field-Geometry-Theory/) -> [Bio-IFGT](../../bio-ifgt/) |
+| Inspect quantitative bridge attempts | [Simulation Reading Guide](simulation_reading_guide.md) -> [Stochastic Quantization](../../stochastic-quantization/) -> [Vol.4 simulations](../../paper/vol4/simulations/) |
 | Understand cognitive and conceptual layers | [Conceptual Topography](../../conceptual-topography/) -> [Consciousness](../../consciousness/) |
 | Understand intelligence papers | [Intelligence Part I](../../intelligence-part1/) -> [Intelligence Part II](../../intelligence-part2/) |
 | Inspect simulation status | [Simulation Reading Guide](simulation_reading_guide.md) -> [Vol.4 simulations](../../paper/vol4/simulations/) |

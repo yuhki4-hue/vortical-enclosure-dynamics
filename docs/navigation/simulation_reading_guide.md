@@ -18,6 +18,14 @@ They are not:
 The simulations should be read as exploratory models for reasoning about
 non-closure, feedback, dissipation, and barrier-like behavior.
 
+The repository also contains a separate
+[Stochastic Quantization module](../../stochastic-quantization/). That module
+is more quantitative than the Vol.4 dynamic-barrier diagrams: it tests a
+χ-layer Langevin bridge, propagators, emergent light cones, two-field cone
+mixing, and a re-addressing gauge sector. It is still a working note and should
+not be read as a completed derivation of the Standard Model action or empirical
+validation of VED.
+
 ### Common Advanced Misreading
 
 Misreading:
@@ -48,6 +56,35 @@ Primary locations:
 - [Energy-balance diagnostics](../../paper/vol4/simulations/dynamic_barrier_energy_balance.py)
 - [Critical-D analysis](../../paper/vol4/simulations/dynamic_barrier_critical_D_no_rotation_damping.py)
 - [Observation-window diagnostics](../../paper/vol4/simulations/dynamic_barrier_windows.py)
+
+## Stochastic Quantization Module
+
+The stochastic-quantization module is an exploratory quantitative attempt to
+rewrite the VED/IFGT closure equation in the unbounded χ chart and compare the
+resulting Langevin dynamics with stochastic quantization.
+
+Primary locations:
+
+- [Module README](../../stochastic-quantization/README.md)
+- [Japanese README](../../stochastic-quantization/README_ja.md)
+- [Phase 2 stationary propagator script](../../stochastic-quantization/simulate.py)
+- [Phase 3 emergent light-cone script](../../stochastic-quantization/simulate_phase3.py)
+- [Collins two-field probe](../../stochastic-quantization/simulate_collins.py)
+- [Phase 4 re-addressing gauge-sector script](../../stochastic-quantization/simulate_phase4.py)
+
+Read this module as:
+
+- a working quantitative bridge,
+- an audit-ledger of what has and has not been displaced,
+- a set of reproducible numerical probes,
+- an open-problem generator.
+
+Avoid reading it as:
+
+- a completed derivation of the Standard Model action,
+- empirical confirmation of VED,
+- proof that nature uses the exact simulated equations,
+- a replacement for the Vol.1-Vol.4 derivations.
 
 ## How to Read the Outputs
 

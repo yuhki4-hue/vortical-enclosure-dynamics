@@ -16,7 +16,11 @@
     {
       "id": "schema",
       "description": "spine.json conforms to spine.schema.json.",
-      "status": "skipped"
+      "status": "skipped",
+      "reason": "optional dependency 'jsonschema' not installed",
+      "severity": "advisory",
+      "remedy": "pip install -r docs/ai_spine/requirements.txt",
+      "note": "Does not affect layer_policy, layer0_paths, canonical_derivation_order, term_types, or non_generative_relations, which use independent validation logic."
     },
     {
       "id": "layer_policy",
@@ -41,6 +45,11 @@
     {
       "id": "non_generative_relations",
       "description": "validated_relations are non-generative and never occupy a rank.",
+      "status": "pass"
+    },
+    {
+      "id": "layer3_absence",
+      "description": "No Layer 3-like evaluation/scoring files exist in docs/ai_spine.",
       "status": "pass"
     }
   ],

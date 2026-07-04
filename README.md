@@ -82,6 +82,7 @@ Three things to hold from the very start:
 | [Conceptual Neighbors](docs/navigation/conceptual_neighbors.md) | Route category-level overlaps (complex systems, autopoiesis, FEP, ...) without reduction. |
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | Hold the boundary against the complex-systems / dissipative-structure well. |
 | [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | Clarify constraint as physical, probabilistic, biological, cognitive, or social trajectory-shaping depending on layer. |
+| [Stochastic Quantization Module](stochastic-quantization/README.md) | Exploratory quantitative bridge from VED/IFGT closure dynamics to a χ-layer stochastic-quantization construction. |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
 | [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
@@ -194,6 +195,7 @@ conceptual-topography/             cognitive and social application layer of IFG
 consciousness/                     consciousness as temporal non-closure and log referencing
 intelligence-part1/                intelligence as a non-closed dynamical phenomenon
 intelligence-part2/                externalized stopping and emergent stopping layers
+stochastic-quantization/           exploratory quantitative χ-layer stochastic-quantization module
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
@@ -216,6 +218,12 @@ notes/                             working notes and supplementary material
   non-closure of inference into a theory of externalized stopping, emergent
   stopping layers, and historical stopping-operation systems such as religion,
   science, and social consensus.
+- `stochastic-quantization/`: A working-note module exploring whether the
+  VED/IFGT closure equation can be rewritten in a χ-layer Langevin form whose
+  stationary measure reproduces stochastic quantization. It includes scripts,
+  figures, an audit ledger, and open problems; it should be read as an
+  exploratory quantitative bridge, not a completed derivation of the Standard
+  Model action.
 
 ## Suggested Reading Order
 
