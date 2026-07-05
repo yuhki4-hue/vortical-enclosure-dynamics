@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>VED Stochastic Quantization</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body { max-width: 880px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif; line-height: 1.65; color: #1a1a1a; }
+h1, h2, h3 { line-height: 1.35; }
+h1 { border-bottom: 2px solid #eee; padding-bottom: .3em; }
+h2 { border-bottom: 1px solid #eee; padding-bottom: .2em; margin-top: 2.2em; }
+code { background: #f3f3f3; padding: .1em .35em; border-radius: 3px; font-size: .92em; }
+pre code { display: block; padding: .8em; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .95em; }
+th, td { border: 1px solid #ddd; padding: .45em .7em; text-align: left; }
+th { background: #f7f7f7; }
+img { max-width: 100%; height: auto; display: block; margin: 1.2em auto; border: 1px solid #eee; }
+blockquote { border-left: 3px solid #ccc; margin-left: 0; padding-left: 1em; color: #555; }
+nav.top-links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0 2rem; }
+nav.top-links a { color: #0645ad; text-decoration: none; }
+nav.top-links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">VED Stochastic Quantization</h1>
+</header>
+<nav class="top-links">
+  <a href="README.md">Markdown source</a>
+  <a href="README_ja.html">日本語版</a>
+  <a href="index.html">Module index</a>
+  <a href="../index.html">Repository index</a>
+</nav>
+<h1 id="stochastic-quantization-of-ved-the-χ-layer-bridge">Stochastic
+Quantization of VED: The χ-Layer Bridge</h1>
+<p><strong>Status:</strong> working note (Phases 1–4 executed, plus the
+Collins two-field probe). Analytical derivation + numerical
+confirmation. Pre-publication. Per §0, “executed” means quasi-closed:
+each phase left named, audited residues (§8). <strong>Depends
+on:</strong> VED core equation (<code>C_ij</code>, generative rank 1),
+IFGT closure dynamics (<code>∂C/∂τ</code> equation). <strong>Edge
+type:</strong> <code>derives_from</code> (VED core),
+<code>structural_extension_of</code> (IFGT).</p>
+<h2 id="audit-discipline-residue-and-displacement">0. Audit discipline:
+residue and displacement</h2>
+<p>VED’s founding claim is that nothing fully closes — closure is only
+ever quasi-closure. Applied to this module, that claim has a
+methodological consequence, not only a physical one: no derivation here
+may be read as having <em>disposed of</em> a residue. Every place a
+quantity is found to be protected, cancelled, or absent must instead
+name <strong>where the corresponding residue went</strong>, backed by an
+<strong>independent, differently-measurable signature at that
+destination</strong>. This is the lesson of the Collins two-field
+experiment (§7.5): the running cone speed <code>c²(k)</code> was not a
+confirmation of a story (“splitting survives at high k”) — it was an
+independent measurement that turned the story into a finding. Physics
+has both failure and success modes here: the cosmological constant
+problem is residue <em>cancelled</em> with no named, verified
+destination (naturalness reasoning built on this has since been
+questioned); Fermi’s four-point theory was residue whose insistence on a
+destination <em>produced</em> the W/Z bosons as real structure. The
+discipline below is designed to land on the second side.</p>
+<p><strong>Rule.</strong> A claim of the form “X is protected / X
+cancels / X is absent” is provisionally downgraded to <em>unexplained
+cancellation</em> until: (1) a specific destination layer, sector, or
+observable rank is named; (2) a quantity is measured or derived at that
+destination that would not otherwise be predicted; (3) that quantity’s
+value is checked against the residue’s expected magnitude, not merely
+asserted to exist. Absent (3), “it went somewhere else” is a phrase, not
+a finding.</p>
+<p><strong>First self-test, applied to this module’s own
+claims:</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claim</th>
+<th>Residue</th>
+<th>Named destination</th>
+<th>Independent signature</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mass protected at one loop (§5, Liouville)</td>
+<td>tadpole correction</td>
+<td>mean <code>&lt;χ&gt;</code> (rank-1 observable)</td>
+<td>measured, 4-decimal match</td>
+<td><strong>audited: displacement</strong></td>
+</tr>
+<tr class="even">
+<td>Two-field cone splitting (§7.5)</td>
+<td>UV-localized non-universality</td>
+<td>running <code>c²(k)</code> at large <code>k</code></td>
+<td>measured directly</td>
+<td><strong>audited: displacement</strong></td>
+</tr>
+<tr class="odd">
+<td>C-layer transport avoided in favor of χ-layer (§3)</td>
+<td>broken detailed balance</td>
+<td>KPZ / non-equilibrium sector</td>
+<td>not yet measured</td>
+<td>open</td>
+</tr>
+<tr class="even">
+<td>C-layer barrier coupling (§7.5)</td>
+<td>non-gradient χ-drift</td>
+<td>same non-equilibrium sector as above</td>
+<td>not yet measured</td>
+<td>open</td>
+</tr>
+<tr class="odd">
+<td><code>hbar_eff</code> / <code>D</code> uniformity required for the
+quantum sector (§2.2, §8.2)</td>
+<td>— (a constraint, not yet a found cancellation)</td>
+<td>critical-phase fluctuation statistics</td>
+<td>not yet measured</td>
+<td>open</td>
+</tr>
+<tr class="even">
+<td>Gauge-sector mass protected by re-addressing invariance (§7.7)</td>
+<td>longitudinal (would-be-mass) dof</td>
+<td>non-equilibrating gauge orbit</td>
+<td>orbit growth <code>2ℏτ</code> measured, slope 0.1009 vs 0.100;
+converse: breaking <code>ε</code> restores mass <strong>and</strong>
+closes orbit</td>
+<td><strong>audited: displacement, round-trip</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Three rows pass the discipline; three remain open and are
+<strong>not</strong> to be treated as settled by the vocabulary of
+“residue” alone.</p>
+<p><strong>Self-application (required, not optional).</strong> This
+discipline is itself a closure candidate and is audited by its own rule.
+Its residue is the case where a destination is named, a signature is
+sought, and the search is inconclusive — such cases are not resolved by
+asserting displacement anyway; they stay open, indefinitely if
+necessary. A discipline for tracking un-closed residue that itself
+closes prematurely would falsify the principle it exists to protect.
+<strong>This section is therefore never finished.</strong> It is
+reopened at every phase and against every new claim — including the
+three still-open rows above, and including any future claim that invokes
+“displacement” without doing the measurement.</p>
+<h2 id="what-this-module-claims-positive-definition">What this module
+claims (positive definition)</h2>
+<p>Euclidean quantum field theory is the <strong>stationary solution of
+VED closure dynamics</strong> in observational time <code>τ</code>. This
+is not an analogy: it is the statement that the VED/IFGT closure
+equation, rewritten in its natural additive chart, is a Langevin
+equation whose stationary measure is <code>exp(-S/hbar_eff)</code>, from
+which Hilbert space, Hamiltonian, and unitary evolution in physical time
+<code>t</code> follow by Osterwalder–Schrader reconstruction. The
+separation of <code>τ</code> (generative flow) from <code>t</code>
+(sedimented internal geometry), posited in VED from the start, is
+exactly the separation required by the Parisi–Wu framework.</p>
+<p>This module does <strong>not</strong> claim to derive the Standard
+Model action. Action selection is an open problem (see ledger,
+§8.1).</p>
+<h2 id="the-natural-chart-χ">1. The natural chart: χ</h2>
+<p><code>C_ij</code> is bounded in <code>[0, 1)</code> and unsuitable as
+a Langevin variable. The VED core equation</p>
+<pre><code>C_ij = 1 - exp(-λ ρ_i H_ij)</code></pre>
+<p>already designates the unbounded additive variable:</p>
+<pre><code>χ_ij ≡ -ln(1 - C_ij) = λ ρ_i H_ij      (cumulative exposure to difference)</code></pre>
+<p>The map <code>e^{-χ} = 1 - C</code> is a Cole–Hopf transform: the
+exponential closure law is precisely the standard linearizing change of
+variables of the KPZ growth family. Saturation nonlinearity is kinematic
+(a coordinate property), not dynamical.</p>
+<h2 id="derived-constraints">2. Derived constraints</h2>
+<p>Rewriting the IFGT equation
+<code>∂C/∂τ = aΔ(1 - C/C*) - ΓC - κ_B/(C_max - C) - ∇·J_C</code> in the
+χ chart yields, without additional assumptions:</p>
+<ol type="1">
+<li><strong><code>C* = 1</code> in the quantum sector.</strong> Only at
+<code>C* = 1</code> does the Δ-drive become additive in χ. Additive
+noise is required for the equilibrium stationary measure
+<code>exp(-S/hbar)</code> (and removes the Itô/Stratonovich ambiguity).
+<code>C* = 1</code> is derived from consistency, not assumed.</li>
+<li><strong><code>hbar_eff = a² × S_Δ</code></strong>
+(fluctuation–dissipation). Planck’s constant is the fluctuation strength
+of the difference field — the “temperature” of Δ — under the fast/slow
+separation between δΔ and χ. Corollary: uniformity of <code>hbar</code>
+across links is a nontrivial constraint on VED (candidate explanation:
+universality of fluctuation strength in the critical/active phase).</li>
+<li><strong><code>m² = Γ e^{χ̄}</code> + barrier curvature.</strong>
+Field mass equals closure dissipation rate. The same quantity is the
+spectral gap of the Fokker–Planck generator: <strong>dissipation
+guarantees the existence of the stationary (quantum) sector.</strong>
+Relaxation time <code>~ 1/m²</code>.</li>
+<li><strong>Liouville potential.</strong> The drift integrates to
+<code>V(χ) = Γ(e^χ - χ) + (barrier term) - &lt;aΔ&gt;χ</code>. Coupling
+constants of the emergent field theory are functions of
+<code>Γ, κ_B</code> — read off, not chosen.</li>
+<li><strong>OS positivity → unitarity as a theorem.</strong> Gradient
+flow + additive noise gives a reflection-positive stationary measure;
+Osterwalder–Schrader reconstruction then produces Hilbert space and
+unitary <code>t</code>-evolution. <code>t</code> is the internal
+geometry of sedimented correlations; <code>τ</code> is the relaxation
+flow that generated them.</li>
+<li><strong>Massless fields live on criticality.</strong>
+<code>m² → 0</code> is critical slowing-down: relaxation never
+completes. Massless (photon-like) modes can only inhabit the “never
+fully closing” critical regime — the one-line VED definition recurs
+inside the quantum sector. Protection candidate: link-variable gauge
+symmetry (local re-addressing invariance of nodes), Phase 4 —
+<strong>realized and measured, §7.7</strong>.</li>
+<li><strong>Lorentz invariance = isotropy of <code>D</code></strong>
+across the d directions of the reconstructed lattice. The Collins
+fine-tuning objection compresses to a single RG question: does
+anisotropy of <code>D</code> flow to irrelevance at the critical fixed
+point? (Phase 3; falsifiable.)</li>
+</ol>
+<h2 id="the-equation-phase-1-deliverable">3. The equation (Phase 1
+deliverable)</h2>
+<pre><code>∂χ/∂τ = D ∇²χ - V&#39;(χ) + η
+V&#39;(χ)  = Γ(e^χ - 1) - aΔ̄                    (barrier omitted: χ̄ far from saturation)
+&lt;η(x,τ) η(x&#39;,τ&#39;)&gt; = 2 hbar_eff δ(x-x&#39;) δ(τ-τ&#39;)
+S[χ]   = ∫ d^d x [ (D/2)(∇χ)² + V(χ) ]
+P*[χ] ∝ exp(-S[χ]/hbar_eff)</code></pre>
+<p>Transport is posited at the χ layer (<code>J_χ = -D∇χ</code>): the
+transported primitive is cumulative history <code>H</code>, of which
+<code>C</code> is the saturating readout. Positing transport at the C
+layer instead yields the KPZ equation and broken detailed balance for
+<code>d ≥ 2</code> — recorded as the <strong>residual sector</strong>
+(§8.4), not an error.</p>
+<h2 id="numerical-confirmation-phase-2-deliverable">4. Numerical
+confirmation (Phase 2 deliverable)</h2>
+<p>1+1d periodic lattice, <code>N = 256</code>, <code>D = 1</code>,
+<code>Γ = 0.25</code>, <code>aΔ̄ = 0.25</code> (so <code>χ̄ = ln 2</code>,
+<code>m² = 0.5</code>), Euler–Maruyama <code>dτ = 0.02</code>, 5×10⁵
+steps, two noise strengths. Reproduce with
+<code>python3 simulate.py</code>.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Prediction</th>
+<th>Measured</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stationary propagator</td>
+<td><code>S(k) = hbar/(D k̂² + m²)</code></td>
+<td>agreement to 0.4%</td>
+<td>after removing understood Euler <code>O(dτ)</code> artifact
+<code>1 + λ_k dτ/2</code> (shape confirmed, see fig. 1 right panel)</td>
+</tr>
+<tr class="even">
+<td>FDT scaling</td>
+<td><code>S ∝ hbar_eff</code>, ratio 4.000</td>
+<td>4.019</td>
+<td><code>hbar</code> acts literally as noise strength</td>
+</tr>
+<tr class="odd">
+<td>Spectral gap (zero mode)</td>
+<td><code>m² = 0.500</code></td>
+<td>0.493 / 0.482</td>
+<td>dynamic confirmation of constraint 3</td>
+</tr>
+<tr class="even">
+<td>Mean shift (tadpole)</td>
+<td><code>&lt;χ&gt; = χ̄ - &lt;δχ²&gt;/2</code></td>
+<td>match to 4 decimals</td>
+<td>Liouville <code>V&#39;&#39;&#39; = m²</code></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig1_stationary_propagator.png" alt="fig1" />
+<figcaption aria-hidden="true">fig1</figcaption>
+</figure>
+<h2 id="discovered-structure-liouville-protection-of-the-mass">5.
+Discovered structure: Liouville protection of the mass</h2>
+<p>For the exponential potential,
+<code>V&#39;&#39; = V&#39;&#39;&#39; = V&#39;&#39;&#39;&#39; = Γ e^χ</code>, hence the one-loop mass
+correction cancels identically:</p>
+<pre><code>Δm² = (1/2) &lt;δχ²&gt; ( V&#39;&#39;&#39;&#39; - V&#39;&#39;&#39;²/V&#39;&#39; ) = 0</code></pre>
+<p>Numerically: the mean shifts exactly as the tadpole predicts, while
+the gap is unmoved by a 4× increase in <code>hbar</code>. <strong>The
+exponential closure law <code>C = 1 - e^{-χ}</code> depresses the mean
+but protects the mass (= dissipation rate = spectral gap) at first
+order.</strong> Rigidity against quantum corrections is built into the
+functional form of the VED core equation. Open: does this extend beyond
+one loop (non-renormalization structure)? — §8.5.</p>
+<h2 id="the-bridge-end-to-end">6. The bridge, end to end</h2>
+<pre><code>C_ij = 1 - e^{-λρH}   →   χ-layer Langevin in τ   →   stationary measure exp(-S/hbar)   [Phase 2: confirmed]
+                       →   OS reconstruction        →   unitary QFT in emergent t
+                                                    →   light cone, c^2 = D_x/D_y        [Phase 3: measured]
+                       →   re-addressing invariance  →   Maxwell sector, massless          [Phase 4: measured]</code></pre>
+<h2 id="phase-3-emergent-light-cone-and-the-isotropy-measurement">7.
+Phase 3: emergent light cone and the isotropy measurement</h2>
+<p>Setup: 2+1d — a 2d lattice <code>(x, y)</code> evolving in
+<code>τ</code>; the stationary state is a 2d Euclidean QFT; OS
+reconstruction takes <code>y</code> as emergent time. <strong>Energy in
+emergent <code>t</code> is the decay rate of sedimented correlations
+along <code>y</code></strong> (transfer-matrix pole
+<code>4 D_y sinh²(E/2) = D_x k̂_x² + m²</code>, fitted in momentum space
+per <code>k_x</code>, Euler <code>O(dτ)</code> artifact corrected
+iteratively). Two runs: isotropic <code>D = (1, 1)</code> and
+anisotropic <code>D = (1.44, 1)</code>. Reproduce with
+<code>python3 simulate_phase3.py</code>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Prediction (iso / aniso)</th>
+<th>Measured (iso / aniso)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>light-cone speed <code>c² = D_x/D_y</code></td>
+<td>1.0000 / 1.4400</td>
+<td>1.0036 / 1.4440</td>
+</tr>
+<tr class="even">
+<td>IR metric anisotropy <code>(A−B)/(A+B)</code></td>
+<td>0 / +0.1803</td>
+<td>+0.0004 / +0.1807</td>
+</tr>
+<tr class="odd">
+<td>mass <code>m²</code> (Liouville protection, 2d interacting)</td>
+<td>0.0800</td>
+<td>0.0808 / 0.0811</td>
+</tr>
+<tr class="even">
+<td>deviation from <code>E² = c²k² + m_t²</code></td>
+<td><code>∝ k²</code></td>
+<td>confirmed (fig. 2, center)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig2_emergent_lightcone.png" alt="fig2" />
+<figcaption aria-hidden="true">fig2</figcaption>
+</figure>
+<p>Constraint 7 is thereby upgraded from statement to measurement:
+<strong>Lorentz invariance is the isotropy of <code>D</code></strong>,
+and the light cone tilts exactly with the transport tensor. Violation of
+the relativistic dispersion by the hypercubic substrate is suppressed as
+<code>(ka)² = (E/E_gen)²</code>: linear-order Planck-scale Lorentz
+violation (strongly constrained by astrophysical time-of-flight bounds)
+is <em>not</em> predicted; quadratic-order violation <em>is</em> — a
+falsifiable window.</p>
+<p><strong>Structural answer to the Collins fine-tuning
+problem.</strong> The problem presupposes multiple fields with
+independent kinetic coefficients whose limiting speeds must be tuned to
+coincide. In VED there is one substrate <code>χ</code>; every emergent
+excitation inherits the single <code>D</code> tensor, so <strong>species
+universality of <code>c</code> is structural, not tuned</strong>.
+Caveat: automatic for excitations of one field; survival for distinct
+emergent species (gauge sectors, Phase 4) is a designated test — §8.3.
+The residual exposure — why the generated graph is isotropic at all —
+merges with the <code>hbar</code>-uniformity constraint into one item
+(§8.2): <strong><code>hbar</code> is the fluctuation temperature of the
+substrate, <code>c</code> is its transport isotropy; both must descend
+from the same critical-phase universality.</strong></p>
+<h2 id="two-field-collins-experiment-arms-01">7.5 Two-field Collins
+experiment: arms 0–1</h2>
+<p>Two <code>χ</code> fields on the same lattice with opposite bare
+anisotropies, <code>D₁ = (1.3, 0.77)</code> and
+<code>D₂ = (0.77, 1.3)</code> (bare cones <code>c₁² = 1.69</code>,
+<code>c₂² = 0.59</code>), coupled only through a shared closure budget
+<code>W = κ_B/(C_max − C₁ − C₂)</code>. This is a potential coupling:
+gradient flow and detailed balance survive, so the mass matrix and
+bilinear mixing <code>μ²</code> are <strong>derived</strong>, not fit,
+from expanding <code>W</code> about the coupled stationary point (κ_B =
+0.02, C_max = 1.5). Measurement: the 2×2 cross-spectrum
+<code>S_ab(k)</code> inverted to <code>Λ(k) = hbar S⁻¹(k)</code>
+(iterated Euler matrix correction), bands read as the generalized
+eigenvalues of <code>A(k_x)</code> against <code>B(k_x)</code>.
+Reproduce with <code>python3 simulate_collins.py</code> (arms 0–1; arm 2
+— pure quartic RG test — is designed but not yet run, §8.3).</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Derived</th>
+<th>Measured</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>arm0 (κ_B=0) mass matrix off-diagonal</td>
+<td>0</td>
+<td>0.0003</td>
+<td>control: no spurious mixing</td>
+</tr>
+<tr class="even">
+<td>arm1 diagonal mass <code>M</code></td>
+<td>0.0723</td>
+<td>0.0739</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>arm1 mixing <code>μ²</code></td>
+<td>0.0314</td>
+<td><strong>0.0303</strong></td>
+<td>3% agreement, zero fit parameters</td>
+</tr>
+<tr class="even">
+<td>both arms, band dispersion <code>E²_±(k)</code> vs. tree curve</td>
+<td>—</td>
+<td>mean deviation 0.6–1.1%, max &lt;2.8%</td>
+<td>fig. 3, left panel</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig3_collins_twofield.png" alt="fig3" />
+<figcaption aria-hidden="true">fig3</figcaption>
+</figure>
+<p><strong>Result: partial convergence, and the partiality is itself a
+tree-level prediction.</strong> The naive expectation was that the
+shared budget would fully merge the two cones. It doesn’t — the correct
+tree-level statement (visible once the time-direction kinetic term is
+included in the same expansion) is that convergence is governed by
+<code>μ²</code> competing with <code>δD·(k² + E²)</code>: <strong>modes
+with <code>E² ≪ μ²/δD</code> see a common cone; modes above that scale
+see the split bare cones.</strong> Fig. 3 (right panel) shows exactly
+this: the running cone speeds <code>c²_±(k) = dE²_±/dk²</code> pull
+toward <code>D̄_x/D̄_y = 1</code> at small <code>k</code> and relax back
+toward the bare <code>1.69</code>/<code>0.59</code> values past the
+crossover <code>k_* ≈ 0.34</code>.</p>
+<p>This sharpens the structural answer to Collins from one layer to two.
+Single-substrate inheritance is a static, kinematic protection. The
+shared-barrier mixing adds a <strong>dynamical</strong> mechanism that
+specifically privileges the null cone: the modes for which the cone
+speed matters most physically (light, long-wavelength excitations) are
+exactly the modes for which convergence is strongest. A new open item
+follows directly: at <code>μ² &gt; M_diag</code> the symmetric point can
+become unstable to mixing — unexamined here, flagged as a candidate site
+for spontaneous symmetry breaking (§8.6).</p>
+<p><strong>A second residue, found in the course of this design, belongs
+to the audit ledger directly.</strong> Defining the barrier coupling at
+the <code>C</code> layer instead of the <code>χ</code> layer
+(<code>W = κ_B/(C_max − C₁ − C₂)</code> with <code>C_a</code> as the
+fundamental variable) turns the resulting <code>χ</code>-drift
+non-gradient — the same equilibrium/non-equilibrium split already found
+for single-field transport (§3) <strong>reproduces itself at the level
+of interaction, not just kinetics</strong>. Recorded in §0 as an open
+audit row.</p>
+<h2 id="phase-4-the-re-addressing-gauge-sector">7.7 Phase 4: the
+re-addressing gauge sector</h2>
+<p><strong>The gauge principle is the founding axiom,
+localized.</strong> VED’s axiom grants physical content only to
+differences; a node’s absolute state — its <em>address</em> — is not a
+difference and carries none. Demanding this node-by-node gives the
+re-addressing transformation <code>χ_ij → χ_ij + φ_i − φ_j</code>, under
+which physics must be invariant. Gauge symmetry is not added to VED; the
+axiom forces it.</p>
+<p>The core variable supplies the sector’s location:
+<code>C_ij = 1 − exp(−λρ_i H_ij)</code> is an <strong>oriented</strong>
+link variable (<code>ρ_i</code> makes <code>C_ij ≠ C_ji</code>).
+Decompose <code>χ_ij</code> into symmetric part <code>s_ij</code> (the
+matter-like sector studied in Phases 1–3) and antisymmetric part
+<code>a_ij</code>, the gauge potential.
+<code>a_ij = λ(ρ_i H_ij − ρ_j H_ji)/2</code>: for uniform accumulated
+history <code>H</code>, <code>a</code> is a pure gradient and all loop
+sums vanish — <strong>nonzero field strength <code>F_p</code> (plaquette
+curvature) requires circulating correlation between
+<code>H</code>-inhomogeneity and <code>ρ</code>-gradients. Field
+strength is memory in circulation</strong> — the “vortical” in Vortical
+Enclosure Dynamics is this sector.</p>
+<p>Re-addressing invariance forces the <code>a</code>-sector action to
+be loop-based, hence Maxwell at leading order
+(<code>S = (β/2)Σ_p F_p²</code>), and <strong>forbids the mass
+term</strong> <code>Σ a²</code> — realizing the protection mechanism
+predicted for constraint §2.6. Stochastic quantization runs without
+gauge fixing (Parisi–Wu): drift vanishes along gauge orbits, so
+<strong>address directions never equilibrate while loop invariants
+do</strong> — the one-line VED definition operating inside the
+quantization of the gauge field itself.</p>
+<p>Numerical tests (2d links, <code>β = 1</code>, same
+<code>hbar = 0.05</code> substrate; zero fit parameters;
+<code>python3 simulate_phase4.py</code>):</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Prediction</th>
+<th>Measured</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>transverse propagator (<code>ε=0</code>)</td>
+<td><code>hbar/(β k̂²)</code>, massless pole</td>
+<td>ratio 0.9998 ± 0.0002</td>
+</tr>
+<tr class="even">
+<td>longitudinal cold-start growth (<code>ε=0</code>)</td>
+<td><code>2 hbar τ</code>, never stationary</td>
+<td>slope 0.1009 vs 0.1000</td>
+</tr>
+<tr class="odd">
+<td>explicit breaking <code>ε = 0.02</code></td>
+<td>mass² <code>= ε</code> appears <strong>and</strong> orbit closes at
+<code>hbar/ε</code></td>
+<td>1.0000 / 0.9995</td>
+</tr>
+<tr class="even">
+<td>flux-area law</td>
+<td><code>Var(Φ_A) = (hbar/β) A (1 − A/N²)</code></td>
+<td>1–5% (small-<code>A</code> excess is the Euler <code>O(dτ)</code>
+artifact on UV modes)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig4_gauge_sector.png" alt="fig4" />
+<figcaption aria-hidden="true">fig4</figcaption>
+</figure>
+<p><strong>Round-trip audit (first of its kind in this module).</strong>
+Claim: the gauge mass is protected. Residue: the would-be-mass
+(longitudinal) degree of freedom. Destination: the non-equilibrating
+gauge orbit. Signature with magnitude check: orbit variance grows as
+<code>2 hbar τ</code>, coefficient verified to 1%. Converse bookkeeping:
+breaking the invariance returns the residue to the physical sector
+(mass² <code>= ε</code>, exact) <em>and</em> closes the orbit
+(saturation at <code>hbar/ε</code>, 0.9995) — displacement verified in
+both directions. §0 conditions (1)–(3) all pass. The deepest available
+phrasing survives its own audit: <strong>the photon is massless because
+addresses never finish closing</strong> — massless fields live on the
+never-closing critical line (§2.6), and here the never-closing line is
+exhibited as the gauge orbit itself.</p>
+<p>Honest limitations: 2d has no propagating photon polarization
+(<code>d−2 = 0</code>), so this is a structural demonstration; the
+propagating-photon dispersion requires the 3d run (open, §8.7). The
+group is non-compact <code>ℝ</code>, not <code>U(1)</code>; compactness
+is not derived here (§8.7).</p>
+<h2 id="open-problems-ledger">8. Open problems ledger</h2>
+<ol type="1">
+<li><strong>Action selection.</strong> Stochastic quantization
+reproduces the QFT of a given action; deriving <em>which</em> action
+(Standard Model) requires showing the VED quasi-closure stability
+spectrum selects it. Long-term, explicitly unsolved.</li>
+<li><strong>Substrate universality</strong> (merger of former “Lorentz
+emergence” and “uniformity of <code>hbar_eff</code>”, following Phase
+3). <code>c² = D_x/D_y</code> is measured; what remains is why the
+<em>generated</em> substrate is isotropic and homogeneous at all. Both
+<code>hbar_eff = a² S_Δ</code> (fluctuation temperature) and the
+<code>D</code> tensor (transport isotropy) must descend from the
+statistical universality of the critical-phase graph. One question, two
+constants.</li>
+<li><strong>Species universality of <code>c</code> under interaction —
+two-field Collins experiment.</strong> Arms 0–1 executed (§7.5):
+shared-barrier coupling gives derived, measured-to-3% mixing
+<code>μ²</code>, and partial (IR-dominant) cone convergence exactly as
+the tree-level competition <code>μ²</code> vs. <code>δD·(k²+E²)</code>
+predicts. <strong>Arm 2 (pure quartic RG test, no bilinear) remains
+planned</strong>: couple via <code>g χ̃₁²χ̃₂²</code> only, to isolate
+loop-induced (rather than tree-mixing-induced) universality. In 2d this
+is super-renormalizable, so the effect is expected at
+<code>O(g²ℏ²)</code> — a plausible null result, which would itself be
+informative (it would mean tree-level substrate mixing, not loop RG
+flow, is the operative mechanism).</li>
+<li><strong>Residual sector (B-branch).</strong> C-layer transport ⇒ KPZ
+⇒ broken detailed balance in <code>d ≥ 2</code>. Candidate home of
+irreversibility / arrow of time / cosmological non-equilibrium.
+Deliberately not developed here. The same split reappears at the level
+of interaction (§7.5, C-layer barrier coupling) — one phenomenon, two
+occurrences, still one open item.</li>
+<li><strong>Liouville protection beyond one loop.</strong> Exact
+non-renormalization theorem? Per the audit discipline (§0), a claimed
+higher-loop protection must name where the higher-order correction is
+displaced to (candidate: higher moments of <code>χ</code>, or the
+field-strength renormalization) and measure it there — absence without a
+named destination does not count as protection.</li>
+<li><strong>Symmetric-point instability at
+<code>μ² &gt; M_diag</code>.</strong> Unexamined region of the two-field
+coupling (§7.5) where barrier-induced mixing could destabilize the
+symmetric stationary point. Candidate site for spontaneous symmetry
+breaking within VED’s own dynamics.</li>
+<li><strong>Gauge sector — Phase 4 executed (§7.7), remaining
+exposures:</strong> (a) <strong>compactness</strong>: the derived group
+is non-compact <code>ℝ</code>; a <code>U(1)</code> period is not derived
+(candidate origin: QLFT’s discrete re-addressable units — addresses
+defined modulo a quantum of re-addressing); (b) <strong>non-abelian
+extension</strong>: multiple internal comparison channels per link →
+matrix-valued re-addressing; (c) <strong>matter coupling</strong>: what
+is “charge” in VED terms — which excitations of the
+<code>s</code>-sector carry address-dependence; (d)
+<strong><code>β</code> from transport</strong>: the gauge coupling
+should be the transport stiffness of the antisymmetric exposure channel,
+as <code>D</code> was for the symmetric one — not yet derived; (e)
+<strong>3d run for a propagating photon</strong>: 2d demonstrates
+structure only (<code>d−2 = 0</code> polarizations).</li>
+</ol>
+<h2 id="reproduction">Reproduction</h2>
+<pre><code>python3 simulate.py           # Phase 2: 1+1d, four tests, figures/fig1               (~1 min)
+python3 simulate_phase3.py    # Phase 3: 2+1d, light cone + isotropy, figures/fig2    (~4 min)
+python3 simulate_collins.py   # Collins arms 0-1: two-field mixing, figures/fig3      (~4-5 min)
+python3 simulate_phase4.py    # Phase 4: gauge sector, four tests, figures/fig4       (~5 min)</code></pre>
+<p>All scripts accept <code>QUICK=1</code> (env var) for a fast smoke
+test. Requires <code>numpy</code>, <code>matplotlib</code>.</p>
+</body>
+</html>

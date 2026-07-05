@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>VEDの確率的量子化</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body { max-width: 880px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif; line-height: 1.65; color: #1a1a1a; }
+h1, h2, h3 { line-height: 1.35; }
+h1 { border-bottom: 2px solid #eee; padding-bottom: .3em; }
+h2 { border-bottom: 1px solid #eee; padding-bottom: .2em; margin-top: 2.2em; }
+code { background: #f3f3f3; padding: .1em .35em; border-radius: 3px; font-size: .92em; }
+pre code { display: block; padding: .8em; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .95em; }
+th, td { border: 1px solid #ddd; padding: .45em .7em; text-align: left; }
+th { background: #f7f7f7; }
+img { max-width: 100%; height: auto; display: block; margin: 1.2em auto; border: 1px solid #eee; }
+blockquote { border-left: 3px solid #ccc; margin-left: 0; padding-left: 1em; color: #555; }
+nav.top-links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0 2rem; }
+nav.top-links a { color: #0645ad; text-decoration: none; }
+nav.top-links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">VEDの確率的量子化</h1>
+</header>
+<nav class="top-links">
+  <a href="README_ja.md">Markdown source</a>
+  <a href="README.html">English version</a>
+  <a href="index.html">Module index</a>
+  <a href="../index.html">Repository index</a>
+</nav>
+<h1 id="vedの確率的量子化χ層の橋">VEDの確率的量子化:χ層の橋</h1>
+<p><strong>状態:</strong>
+ワーキングノート(フェーズ1–4実行済み、および二場Collins実験)。解析的導出+数値確認。未公開。§0に従い「実行済み」は準閉包を意味する:各フェーズは名指しされ監査された残差を残している(§8)。
+<strong>依存:</strong>
+VED核方程式(<code>C_ij</code>、生成順位1)、IFGT閉包動力学(<code>∂C/∂τ</code>方程式)。
+<strong>辺の型:</strong>
+<code>derives_from</code>(VED核)、<code>structural_extension_of</code>(IFGT)。</p>
+<h2 id="監査規律残差と転位">0. 監査規律:残差と転位</h2>
+<p>VEDの根幹の主張は「何も完全には閉じない——閉包は常に準閉包にすぎない」というものである。これを本モジュールに適用すると、物理的帰結だけでなく方法論的帰結が生じる:本文中のいかなる導出も、残差を<strong>処分した</strong>ものとして読んではならない。ある量が保護される・相殺される・消えるとされる箇所は、必ず<strong>対応する残差がどこへ行ったか</strong>を名指しし、<strong>その行き先固有の、独立に測定可能な署名</strong>によって裏付けられなければならない。これは二場Collins実験(§7.5)から得た教訓そのものである:走る円錐速度<code>c²(k)</code>は「高kで分裂が残る」という物語の確認ではなく、その物語を発見に変えた独立測定だった。物理学にはこの点で失敗例と成功例の両方がある:宇宙定数問題は、行き先を名指しされず検証もされないまま相殺された残差であり(この上に築かれた自然性の論法はその後疑問視されている)、フェルミの4点理論は行き先への固執がW/Zボソンという実在の構造を生み出した残差だった。以下の規律は後者側に着地するよう設計されている。</p>
+<p><strong>規律。</strong>「Xは保護される/Xは相殺する/Xは消える」という形式の主張は、以下が満たされるまで暫定的に<strong>未説明の相殺</strong>へ格下げされる:①具体的な行き先の層・セクター・観測量のランクが名指しされること、②その行き先で、他の方法では予言されなかったはずの量が測定または導出されること、③その量の値が、残差の期待される大きさと照合されること(存在を主張するだけでは不可)。③を欠く場合、「どこか別の場所へ行った」は発見ではなく単なる言葉であり、そのように明示されねばならない。</p>
+<p><strong>本モジュール自身の主張への第一回自己検査:</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>主張</th>
+<th>残差</th>
+<th>名指しされた行き先</th>
+<th>独立署名</th>
+<th>状態</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>一次(one-loop)での質量保護(§5、Liouville)</td>
+<td>tadpole補正</td>
+<td>平均<code>&lt;χ&gt;</code>(一点観測量)</td>
+<td>測定済み、小数4桁一致</td>
+<td><strong>監査済:転位</strong></td>
+</tr>
+<tr class="even">
+<td>二場の円錐分裂(§7.5)</td>
+<td>UV局在の非普遍性</td>
+<td>大kでの走る<code>c²(k)</code></td>
+<td>直接測定済み</td>
+<td><strong>監査済:転位</strong></td>
+</tr>
+<tr class="odd">
+<td>C層輸送を避けχ層を選択(§3)</td>
+<td>詳細釣り合いの破れ</td>
+<td>KPZ/非平衡セクター</td>
+<td>未測定</td>
+<td>未解決</td>
+</tr>
+<tr class="even">
+<td>C層での障壁結合(§7.5)</td>
+<td>χの非勾配ドリフト</td>
+<td>上記と同じ非平衡セクター</td>
+<td>未測定</td>
+<td>未解決</td>
+</tr>
+<tr class="odd">
+<td>量子セクターに必要な<code>hbar_eff</code>/<code>D</code>の一様性(§2の2、§8の2)</td>
+<td>——(まだ発見された相殺ではなく制約)</td>
+<td>臨界相の揺らぎ統計</td>
+<td>未測定</td>
+<td>未解決</td>
+</tr>
+<tr class="even">
+<td>再アドレス不変性によるゲージセクターの質量保護(§7.7)</td>
+<td>縦(質量になるはずだった)自由度</td>
+<td>非平衡化するゲージ軌道</td>
+<td>軌道成長<code>2ℏτ</code>を測定、傾き0.1009対0.100;逆向き:破れ<code>ε</code>は質量を復元し<strong>かつ</strong>軌道を閉じる</td>
+<td><strong>監査済:転位、往復</strong></td>
+</tr>
+</tbody>
+</table>
+<p>3項目が規律を通過し、3項目は未解決のまま残る——「残差」という語彙だけで解決済みと扱ってはならない。</p>
+<p><strong>自己適用(義務、任意ではない)。</strong>
+この規律自体も閉包の候補であり、自らの規則によって監査される。その残差は、行き先が名指しされ署名が探索されたが結論が出ない場合である——そうしたケースは、それでも転位を主張することで解決してはならず、必要な限り無期限に未解決のまま残る。閉じない残差を追跡するための規律自身が早々に閉じてしまえば、それが守るべき原理そのものを反証してしまう。<strong>したがってこの節は決して完成しない。</strong>
+新しいフェーズ・新しい主張のたびに——上記の3つの未解決項目、および今後「転位」を測定なしに援用するいかなる主張も含めて——再び開かれる。</p>
+<h2 id="本モジュールの主張正の定義">本モジュールの主張(正の定義)</h2>
+<p>ユークリッド量子場理論は、観測時間<code>τ</code>における<strong>VED閉包動力学の定常解</strong>である。これは比喩ではない:VED/IFGT閉包方程式をその自然な加法チャートに書き直すとLangevin方程式になり、その定常測度が<code>exp(-S/hbar_eff)</code>であり、そこからOsterwalder–Schrader再構成によってヒルベルト空間・ハミルトニアン・物理時間<code>t</code>のユニタリ発展が定理として従う、という主張である。VEDが当初から置いていた<code>τ</code>(生成の流れ)と<code>t</code>(沈殿した内部幾何)の分離は、Parisi–Wu枠組みが要求する分離と正確に一致する。</p>
+<p>本モジュールは標準模型の作用の導出を<strong>主張しない</strong>。作用選択は未解決問題である(§8.1)。</p>
+<h2 id="自然なチャートχ">1. 自然なチャート:χ</h2>
+<p><code>C_ij</code>は<code>[0, 1)</code>に有界でありLangevin変数として不適。VED核方程式</p>
+<pre><code>C_ij = 1 - exp(-λ ρ_i H_ij)</code></pre>
+<p>が非有界の加法変数を最初から指定している:</p>
+<pre><code>χ_ij ≡ -ln(1 - C_ij) = λ ρ_i H_ij      (差への累積曝露量)</code></pre>
+<p>写像<code>e^{-χ} = 1 - C</code>は<strong>Cole–Hopf変換</strong>そのもの:指数閉包則は、KPZ成長族を線形化する標準的変数変換と同一形である。飽和の非線形性は座標の性質(kinematics)であって動力学ではない。</p>
+<h2 id="導出された制約">2. 導出された制約</h2>
+<p>IFGT方程式<code>∂C/∂τ = aΔ(1 - C/C*) - ΓC - κ_B/(C_max - C) - ∇·J_C</code>をχチャートに書き直すと、追加の仮定なしに:</p>
+<ol type="1">
+<li><strong>量子セクターでは<code>C* = 1</code>。</strong>
+<code>C* = 1</code>のとき、かつそのときに限り、Δ駆動がχに対して加法的になる。加法ノイズは平衡定常測度<code>exp(-S/hbar)</code>の成立条件であり(Itô/Stratonovich問題も消える)、<code>C* = 1</code>は仮定ではなく整合性からの導出。</li>
+<li><strong><code>hbar_eff = a² × S_Δ</code></strong>(揺動散逸関係)。プランク定数は差の場の揺らぎ強度——Δの「温度」——である(δΔ(速)とχ(遅)の二層分離の下で)。系:<code>hbar</code>の全辺一様性は<code>a² S_Δ</code>の一様性というVEDへの非自明な制約(候補:臨界相/活性相における揺らぎ強度の普遍性)。</li>
+<li><strong><code>m² = Γ e^{χ̄}</code> + 障壁曲率。</strong>
+場の質量=閉包の散逸率。同じ量がFokker–Planck生成子のスペクトルギャップ:<strong>散逸が定常(量子)セクターの存在を保証する。</strong>
+緩和時間 <code>~ 1/m²</code>。</li>
+<li><strong>Liouvilleポテンシャル。</strong>
+ドリフトの積分は<code>V(χ) = Γ(e^χ - χ) + (障壁項) - &lt;aΔ&gt;χ</code>。創発場理論の結合定数は<code>Γ, κ_B</code>の関数——選ぶのではなく読み取る。</li>
+<li><strong>OS陽性→ユニタリ性は定理。</strong>
+勾配流+加法ノイズは反射陽性な定常測度を与え、OS再構成がヒルベルト空間と<code>t</code>方向ユニタリ発展を構成する。<code>t</code>は沈殿した相関の内部幾何、<code>τ</code>はそれを生成した緩和流。</li>
+<li><strong>質量ゼロ場は臨界性の上に住む。</strong>
+<code>m² → 0</code>は臨界減速——緩和が完了しない。質量ゼロ(光子的)モードは「閉じ切らない」臨界領域にしか住めない:VEDの一行定義が量子セクター内部で回帰する。保護機構の候補はリンク変数のゲージ対称性(ノードの局所再アドレス不変性)、フェーズ4——<strong>実現・測定済み、§7.7</strong>。</li>
+<li><strong>ローレンツ不変性=<code>D</code>の等方性</strong>(再構成格子のd方向にわたる)。Collinsの微調整問題は「<code>D</code>の異方性は臨界固定点で無関係方向に流れるか」という単一のRG問題に圧縮される(フェーズ3;反証可能)。</li>
+</ol>
+<h2 id="方程式フェーズ1成果物">3. 方程式(フェーズ1成果物)</h2>
+<pre><code>∂χ/∂τ = D ∇²χ - V&#39;(χ) + η
+V&#39;(χ)  = Γ(e^χ - 1) - aΔ̄                    (障壁項省略:χ̄は飽和から遠い)
+&lt;η(x,τ) η(x&#39;,τ&#39;)&gt; = 2 hbar_eff δ(x-x&#39;) δ(τ-τ&#39;)
+S[χ]   = ∫ d^d x [ (D/2)(∇χ)² + V(χ) ]
+P*[χ] ∝ exp(-S[χ]/hbar_eff)</code></pre>
+<p>輸送はχ層に置く(<code>J_χ = -D∇χ</code>):輸送される基本量は累積履歴<code>H</code>であり、<code>C</code>はその飽和的読み出し。C層に置くとKPZ方程式が現れ<code>d ≥ 2</code>で詳細釣り合いが破れる——これは誤りではなく<strong>残差セクター</strong>として記録(§8.4)。</p>
+<h2 id="数値確認フェーズ2成果物">4. 数値確認(フェーズ2成果物)</h2>
+<p>1+1次元周期格子、<code>N = 256</code>、<code>D = 1</code>、<code>Γ = 0.25</code>、<code>aΔ̄ = 0.25</code>(<code>χ̄ = ln 2</code>、<code>m² = 0.5</code>)、Euler–Maruyama
+<code>dτ = 0.02</code>、5×10⁵ステップ、ノイズ強度2種。再現は<code>python3 simulate.py</code>。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>検証</th>
+<th>予測</th>
+<th>測定</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>定常プロパゲータ</td>
+<td><code>S(k) = hbar/(D k̂² + m²)</code></td>
+<td>0.4%で一致</td>
+<td>Euler
+<code>O(dτ)</code>アーティファクト<code>1 + λ_k dτ/2</code>除去後(形状も確認、図1右)</td>
+</tr>
+<tr class="even">
+<td>FDTスケーリング</td>
+<td><code>S ∝ hbar_eff</code>、比4.000</td>
+<td>4.019</td>
+<td><code>hbar</code>が文字通りノイズ強度として作動</td>
+</tr>
+<tr class="odd">
+<td>スペクトルギャップ(ゼロモード)</td>
+<td><code>m² = 0.500</code></td>
+<td>0.493 / 0.482</td>
+<td>制約3の動的確認</td>
+</tr>
+<tr class="even">
+<td>平均シフト(tadpole)</td>
+<td><code>&lt;χ&gt; = χ̄ - &lt;δχ²&gt;/2</code></td>
+<td>小数4桁一致</td>
+<td>Liouville <code>V&#39;&#39;&#39; = m²</code></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig1_stationary_propagator.png" alt="fig1" />
+<figcaption aria-hidden="true">fig1</figcaption>
+</figure>
+<h2 id="発見された構造質量のliouville保護">5.
+発見された構造:質量のLiouville保護</h2>
+<p>指数型ポテンシャルでは<code>V&#39;&#39; = V&#39;&#39;&#39; = V&#39;&#39;&#39;&#39; = Γ e^χ</code>なので、一次(one-loop)の質量補正が恒等的に相殺する:</p>
+<pre><code>Δm² = (1/2) &lt;δχ²&gt; ( V&#39;&#39;&#39;&#39; - V&#39;&#39;&#39;²/V&#39;&#39; ) = 0</code></pre>
+<p>数値的にも:平均はtadpole予測どおり正確にシフトする一方、<code>hbar</code>を4倍にしてもギャップは動かない。<strong>指数閉包則<code>C = 1 - e^{-χ}</code>は、平均を押し下げながら質量(=散逸率=スペクトルギャップ)を一次で保護する。</strong>
+量子補正への剛性がVED核方程式の関数形自体に組み込まれている。未解決:一次を超えて成立するか(非繰り込み構造)——§8.5。</p>
+<h2 id="橋の全景">6. 橋の全景</h2>
+<pre><code>C_ij = 1 - e^{-λρH}   →   τにおけるχ層Langevin   →   定常測度 exp(-S/hbar)      [フェーズ2:確認済]
+                       →   OS再構成                →   創発tのユニタリQFT
+                                                   →   光円錐、c^2 = D_x/D_y      [フェーズ3:測定済]
+                       →   再アドレス不変性         →   Maxwellセクター、質量ゼロ  [フェーズ4:測定済]</code></pre>
+<h2 id="フェーズ3光円錐の創発と等方性の測定">7.
+フェーズ3:光円錐の創発と等方性の測定</h2>
+<p>設定:2+1次元——2次元格子<code>(x, y)</code>が<code>τ</code>で発展;定常状態は2次元ユークリッドQFT;OS再構成は<code>y</code>を創発時間に取る。<strong>創発<code>t</code>におけるエネルギーとは、<code>y</code>方向に沈殿した相関の減衰率である</strong>(伝達行列の極
+<code>4 D_y sinh²(E/2) = D_x k̂_x² + m²</code>を各<code>k_x</code>について運動量空間でフィット、Euler
+<code>O(dτ)</code>アーティファクトは反復補正)。2運転:等方<code>D = (1, 1)</code>と異方<code>D = (1.44, 1)</code>。再現は<code>python3 simulate_phase3.py</code>。</p>
+<table>
+<thead>
+<tr class="header">
+<th>検証</th>
+<th>予測(等方 / 異方)</th>
+<th>測定(等方 / 異方)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>光円錐速度 <code>c² = D_x/D_y</code></td>
+<td>1.0000 / 1.4400</td>
+<td>1.0036 / 1.4440</td>
+</tr>
+<tr class="even">
+<td>IR計量の異方性 <code>(A−B)/(A+B)</code></td>
+<td>0 / +0.1803</td>
+<td>+0.0004 / +0.1807</td>
+</tr>
+<tr class="odd">
+<td>質量 <code>m²</code>(Liouville保護、2次元相互作用系)</td>
+<td>0.0800</td>
+<td>0.0808 / 0.0811</td>
+</tr>
+<tr class="even">
+<td><code>E² = c²k² + m_t²</code>からのズレ</td>
+<td><code>∝ k²</code></td>
+<td>確認(図2中央)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig2_emergent_lightcone.png" alt="fig2" />
+<figcaption aria-hidden="true">fig2</figcaption>
+</figure>
+<p>これにより制約7は声明から<strong>測定</strong>に昇格した:<strong>ローレンツ不変性とは<code>D</code>の等方性であり</strong>、光円錐は輸送テンソルの通りに傾く。超立方基板による相対論的分散からの破れは<code>(ka)² = (E/E_gen)²</code>で抑制される:線形次数のプランクスケール破れ(天体物理の到達時刻観測で強く制約済み)は予言<em>されず</em>、二次次数の破れが予言<em>される</em>——反証可能な窓。</p>
+<p><strong>Collins微調整問題への構造的回答。</strong>
+この問題は「複数の場が独立な運動項係数を持ち、各極限速度を一致させるよう調整せねばならない」ことを前提とする。VEDでは基板は<code>χ</code>一枚であり、創発するすべての励起は単一の<code>D</code>テンソルを継承する——<strong><code>c</code>の種普遍性は調整ではなく構造</strong>。注意:単一場の励起には自動だが、異なる創発種(ゲージセクター、フェーズ4)での存続は指定検証項目——§8.3。残る露出——生成されたグラフ自体はなぜ等方か——は<code>hbar</code>一様性の制約と一項に合流する(§8.2):<strong><code>hbar</code>は基板の揺らぎ温度、<code>c</code>は基板の輸送等方性——どちらも同一の臨界相普遍性から降りてこなければならない。</strong></p>
+<h2 id="二場collins実験腕01">7.5 二場Collins実験:腕0–1</h2>
+<p>同一格子上の二つの<code>χ</code>場に反対向きの裸異方性<code>D₁ = (1.3, 0.77)</code>、<code>D₂ = (0.77, 1.3)</code>(裸円錐<code>c₁² = 1.69</code>、<code>c₂² = 0.59</code>)を与え、共有閉包予算<code>W = κ_B/(C_max − C₁ − C₂)</code>のみで結合する。これはポテンシャル結合であり、勾配流と詳細釣り合いが保たれるため、質量行列と双線形混合<code>μ²</code>は結合定常点まわりの<code>W</code>展開から<strong>導出</strong>される(フィットではない、κ_B
+= 0.02、C_max =
+1.5)。測定:2×2交差スペクトル<code>S_ab(k)</code>を反転して<code>Λ(k) = hbar S⁻¹(k)</code>(Euler行列補正を反復)、バンドは<code>A(k_x)</code>と<code>B(k_x)</code>の一般化固有値として読む。再現は<code>python3 simulate_collins.py</code>(腕0–1;腕2——純四次RGテスト——は設計済みだが未実行、§8.3)。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>量</th>
+<th>導出値</th>
+<th>測定値</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>腕0(κ_B=0)質量行列の非対角成分</td>
+<td>0</td>
+<td>0.0003</td>
+<td>対照:偽の混合なし</td>
+</tr>
+<tr class="even">
+<td>腕1対角質量<code>M</code></td>
+<td>0.0723</td>
+<td>0.0739</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>腕1混合<code>μ²</code></td>
+<td>0.0314</td>
+<td><strong>0.0303</strong></td>
+<td>フィットパラメータゼロで3%一致</td>
+</tr>
+<tr class="even">
+<td>両腕、バンド分散<code>E²_±(k)</code>対木曲線</td>
+<td>——</td>
+<td>平均偏差0.6–1.1%、最大2.8%未満</td>
+<td>図3左パネル</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig3_collins_twofield.png" alt="fig3" />
+<figcaption aria-hidden="true">fig3</figcaption>
+</figure>
+<p><strong>結果:部分収束であり、その部分性自体が木レベルの予言である。</strong>
+素朴な期待は共有予算が二つの円錐を完全に合体させることだった。そうはならない——正しい木レベルの主張は(時間方向の運動項を同じ展開に含めると見えてくる)、収束が<code>μ²</code>と<code>δD·(k² + E²)</code>の競合で支配されるというもの:<strong><code>E² ≪ μ²/δD</code>のモードは共通円錐を見る;その上のモードは分裂した裸円錐を見る。</strong>
+図3右パネルはまさにこれを示す:走る円錐速度<code>c²_±(k) = dE²_±/dk²</code>は小kで<code>D̄_x/D̄_y = 1</code>へ引き寄せられ、クロスオーバー<code>k_* ≈ 0.34</code>を過ぎると裸の値1.69/0.59へ戻っていく。</p>
+<p>これによりCollinsへの構造的回答は一層から二層へ鋭くなる。単一基板継承は静的・運動学的な保護である。共有障壁の混合は、これに加えて<strong>動的</strong>な機構を与え、特にヌル円錐を優遇する:円錐速度が物理的に最も効くモード(軽く波長の長い励起)こそが、収束が最も強く働くモードである。ここから新しい未解決項目が直接出る:<code>μ² &gt; M_diag</code>では対称点が混合に対して不安定化しうる——未検証、自発的対称性の破れの候補地として記録(§8.6)。</p>
+<p><strong>この設計の過程で見つかったもう一つの残差は、監査台帳に直接属する。</strong>
+障壁結合を<code>χ</code>層ではなく<code>C</code>層で定義すると(<code>C_a</code>を基本変数として<code>W = κ_B/(C_max − C₁ − C₂)</code>)、結果として生じる<code>χ</code>ドリフトは非勾配的になる——単一場の輸送で既に見つかった平衡/非平衡の分割(§3)が、<strong>運動学だけでなく相互作用の水準でも自己再現する</strong>。§0に未解決の監査項目として記録済み。</p>
+<h2 id="フェーズ4再アドレスゲージセクター">7.7
+フェーズ4:再アドレスゲージセクター</h2>
+<p><strong>ゲージ原理は根源公理の局所形である。</strong>
+VEDの公理は差にのみ物理的内容を認める;ノードの絶対状態——その<em>アドレス</em>——は差ではなく、内容を持たない。これをノードごとに要求すると再アドレス変換<code>χ_ij → χ_ij + φ_i − φ_j</code>が得られ、物理はこの下で不変でなければならない。ゲージ対称性はVEDに付け加えられるのではない;公理がそれを強制する。</p>
+<p>核変数がセクターの在り処を教える:<code>C_ij = 1 − exp(−λρ_i H_ij)</code>は<strong>有向</strong>リンク変数である(<code>ρ_i</code>により<code>C_ij ≠ C_ji</code>)。<code>χ_ij</code>を対称部<code>s_ij</code>(フェーズ1–3で研究した物質的セクター)と反対称部<code>a_ij</code>(ゲージポテンシャル)に分解する。<code>a_ij = λ(ρ_i H_ij − ρ_j H_ji)/2</code>:蓄積履歴<code>H</code>が一様なら<code>a</code>は純勾配となり全ループ和が消える——<strong>非零の場の強さ<code>F_p</code>(プラケット曲率)には<code>H</code>の非一様性と<code>ρ</code>勾配の循環的相関が必要である。場の強さとは循環する記憶</strong>——Vortical
+Enclosure Dynamicsの「渦(vortical)」はこのセクターのことだった。</p>
+<p>再アドレス不変性は<code>a</code>セクターの作用をループ基底に強制し、最低次でMaxwell(<code>S = (β/2)Σ_p F_p²</code>)を与え、<strong>質量項</strong><code>Σ a²</code><strong>を禁止する</strong>——制約§2.6で予告した保護機構の実現。確率的量子化はゲージ固定なしで走る(Parisi–Wu):ゲージ軌道方向のドリフトが消えるため、<strong>アドレス方向は決して平衡せず、ループ不変量だけが平衡する</strong>——VEDの一行定義が、ゲージ場の量子化それ自体の内部で作動している。</p>
+<p>数値検証(2次元リンク、<code>β = 1</code>、同一の<code>hbar = 0.05</code>基板;フィットパラメータゼロ;<code>python3 simulate_phase4.py</code>):</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>検証</th>
+<th>予測</th>
+<th>測定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>横伝播関数(<code>ε=0</code>)</td>
+<td><code>hbar/(β k̂²)</code>、質量ゼロ極</td>
+<td>比 0.9998 ± 0.0002</td>
+</tr>
+<tr class="even">
+<td>縦モードのコールドスタート成長(<code>ε=0</code>)</td>
+<td><code>2 hbar τ</code>、決して定常化しない</td>
+<td>傾き0.1009対0.1000</td>
+</tr>
+<tr class="odd">
+<td>明示的破れ<code>ε = 0.02</code></td>
+<td>質量²<code>= ε</code>が現れ<strong>かつ</strong>軌道が<code>hbar/ε</code>で閉じる</td>
+<td>1.0000 / 0.9995</td>
+</tr>
+<tr class="even">
+<td>フラックス面積則</td>
+<td><code>Var(Φ_A) = (hbar/β) A (1 − A/N²)</code></td>
+<td>1–5%(小<code>A</code>の超過はUVモードへのEuler
+<code>O(dτ)</code>アーティファクト)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/fig4_gauge_sector.png" alt="fig4" />
+<figcaption aria-hidden="true">fig4</figcaption>
+</figure>
+<p><strong>往復監査(本モジュール初)。</strong>
+主張:ゲージ質量は保護される。残差:質量になるはずだった(縦)自由度。行き先:非平衡化するゲージ軌道。大きさの照合を伴う署名:軌道分散は<code>2 hbar τ</code>で成長、係数は1%で検証。逆向きの簿記:不変性を破ると残差は物理セクターに戻り(質量²<code>= ε</code>、厳密)、<em>かつ</em>軌道が閉じる(<code>hbar/ε</code>で飽和、0.9995)——転位が双方向で検証された。§0の条件①〜③すべて通過。最も深い言い方がそれ自身の監査を生き延びた:<strong>光子が質量ゼロなのは、アドレスが閉じ終わらないからである</strong>——質量ゼロ場は閉じ切らない臨界線に住み(§2.6)、ここでその閉じ切らない線がゲージ軌道そのものとして展示された。</p>
+<p>誠実な限界:2次元には伝播する光子偏極がない(<code>d−2 = 0</code>)ため、これは構造の実証である;伝播光子の分散には3次元走行が必要(未解決、§8.7)。群は非コンパクトな<code>ℝ</code>であり<code>U(1)</code>ではない;コンパクト性はここでは導出されていない(§8.7)。</p>
+<h2 id="未解決問題台帳">8. 未解決問題台帳</h2>
+<ol type="1">
+<li><strong>作用選択。</strong>
+確率的量子化は与えられた作用のQFTを再現する機械であり、<em>どの</em>作用か(標準模型)の導出はVED準閉包安定性スペクトルによる選択の証明を要する。長期・明示的未解決。</li>
+<li><strong>基板の普遍性</strong>(フェーズ3を受けて旧「ローレンツ創発」と旧「<code>hbar_eff</code>の一様性」を統合)。<code>c² = D_x/D_y</code>は測定済み;残る問いは「<em>生成された</em>基板はなぜそもそも等方かつ一様なのか」。<code>hbar_eff = a² S_Δ</code>(揺らぎ温度)と<code>D</code>テンソル(輸送等方性)は、ともに臨界相グラフの統計的普遍性から降りてこなければならない。<strong>一つの問い、二つの定数。</strong></li>
+<li><strong>相互作用下での<code>c</code>の種普遍性——二場Collins実験。</strong>
+腕0–1は実行済み(§7.5):共有障壁結合は導出され3%で測定一致する混合<code>μ²</code>を与え、木レベルの競合<code>μ²</code>対<code>δD·(k²+E²)</code>が予言する通りの部分的(IR支配の)円錐収束を示す。<strong>腕2(双線形なしの純四次RGテスト)は計画のまま残る</strong>:<code>g χ̃₁²χ̃₂²</code>のみで結合し、(木レベル混合ではなく)ループ由来の普遍性を単離する。2次元では超繰り込み可能なので効果は<code>O(g²ℏ²)</code>級と予想される——尤もらしいnull結果であり、それ自体が情報になる(木レベルの基板混合がループRG流ではなく作動機構であることを意味する)。</li>
+<li><strong>残差セクター(B分岐)。</strong> C層輸送 ⇒ KPZ ⇒
+<code>d ≥ 2</code>で詳細釣り合い破れ。不可逆性・時間の矢・宇宙論的非平衡の住処の候補。ここでは意図的に展開しない。同じ分割は相互作用の水準でも再出現する(§7.5、C層障壁結合)——一つの現象、二度の出現、それでも一つの未解決項目。</li>
+<li><strong>Liouville保護の高次。</strong>
+厳密な非繰り込み定理はあるか。監査規律(§0)に従えば、高次保護を主張するには高次補正の行き先を名指しし(候補:χの高次モーメント、または波動関数繰り込み)そこで測定せねばならない——行き先を名指ししない不在は保護とみなされない。</li>
+<li><strong><code>μ² &gt; M_diag</code>での対称点の不安定性。</strong>
+二場結合(§7.5)の未検証領域で、障壁誘起混合が対称定常点を不安定化しうる。VED自身の力学内での自発的対称性の破れの候補地。</li>
+<li><strong>ゲージセクター——フェーズ4実行済み(§7.7)、残る露出:</strong>
+(a)
+<strong>コンパクト性</strong>:導出された群は非コンパクトな<code>ℝ</code>であり、<code>U(1)</code>の周期は導出されていない(起源の候補:QLFTの離散再アドレス可能単位——再アドレスの量子を法として定義されるアドレス);(b)
+<strong>非可換拡張</strong>:リンクごとの複数の内部比較チャネル →
+行列値の再アドレス;(c)
+<strong>物質結合</strong>:VEDの言葉で「電荷」とは何か——<code>s</code>セクターのどの励起がアドレス依存性を運ぶか;(d)
+<strong>輸送からの<code>β</code></strong>:ゲージ結合は反対称曝露チャネルの輸送剛性であるはず(対称チャネルの<code>D</code>と同様)——未導出;(e)
+<strong>伝播光子のための3次元走行</strong>:2次元は構造のみを実証する(偏極<code>d−2 = 0</code>)。</li>
+</ol>
+<h2 id="再現">再現</h2>
+<pre><code>python3 simulate.py           # フェーズ2:1+1次元、4検証、figures/fig1を生成            (約1分)
+python3 simulate_phase3.py    # フェーズ3:2+1次元、光円錐+等方性、figures/fig2を生成    (約4分)
+python3 simulate_collins.py   # Collins腕0–1:二場混合、figures/fig3を生成               (約4–5分)
+python3 simulate_phase4.py    # フェーズ4:ゲージセクター、4検証、figures/fig4を生成      (約5分)</code></pre>
+<p>全スクリプトは環境変数<code>QUICK=1</code>で簡易テストに対応。必要:<code>numpy</code>,
+<code>matplotlib</code>。</p>
+</body>
+</html>

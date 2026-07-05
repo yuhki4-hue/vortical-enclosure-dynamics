@@ -12,6 +12,9 @@ All notable changes to this repository will be documented in this file.
 - Linked the stochastic-quantization module from the top-level READMEs,
   Navigation Layer, Concept Map, Reading Paths, Theory Relationship Map,
   Simulation Reading Guide, and GitHub Pages entry point.
+- Added lightweight HTML reading views for the stochastic-quantization English
+  and Japanese READMEs, using relative links to existing figure PNGs for easier
+  GitHub Pages browsing.
 - Added `docs/ai_spine/requirements.txt` and made the AI Spine schema check
   self-describing when optional `jsonschema` validation is unavailable.
 - Localized AI Spine validation report statuses so one failing check no longer
