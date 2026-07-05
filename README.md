@@ -271,8 +271,11 @@ approval. Repository metadata is provided in [CITATION.cff](CITATION.cff).
 
 ## License
 
-Theory documents and figures are released under CC BY 4.0 unless otherwise
-noted. See [LICENSE](LICENSE).
+Unless otherwise noted, this work is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+You are free to share and adapt the materials, provided appropriate credit is
+given to the author. See [LICENSE](LICENSE).
 
 ## Author's Position
 

@@ -241,8 +241,13 @@ arXiv ID が確定する前に本枠組みを参照または議論する場合�
 
 ## ライセンス
 
-特記のない限り、理論文書と図版は CC BY 4.0 で公開します。詳細は [LICENSE](LICENSE) を
-参照してください。
+Unless otherwise noted, this work is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+特に明記がない限り、本リポジトリの文書・図表・理論的記述は Creative Commons
+Attribution 4.0 International License（CC BY 4.0）の下で公開されています。
+再配布・翻案・引用・研究利用は可能ですが、適切な著作者表示をお願いします。詳細は
+[LICENSE](LICENSE) を参照してください。
 
 ## 著者の立場
 
