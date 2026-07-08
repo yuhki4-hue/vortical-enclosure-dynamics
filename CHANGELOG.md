@@ -9,9 +9,16 @@ All notable changes to this repository will be documented in this file.
   quantization, including bilingual READMEs, reproducible Python scripts, and
   generated figures for propagator, emergent light-cone, Collins two-field, and
   re-addressing gauge-sector probes.
+- Added `dimensionality-working-note/`, a working-note module on dimension as
+  effective rank of persistent difference structure, preserving failed routes,
+  exploratory scripts, Betti/topological verification notes, and the open
+  question of a VED account of `3+1` dimensionality.
 - Linked the stochastic-quantization module from the top-level READMEs,
   Navigation Layer, Concept Map, Reading Paths, Theory Relationship Map,
   Simulation Reading Guide, and GitHub Pages entry point.
+- Linked the dimensionality working note from the top-level READMEs, Navigation
+  Layer, Concept Map, Reading Paths, Theory Relationship Map, Simulation
+  Reading Guide, and GitHub Pages entry point.
 - Added lightweight HTML reading views for the stochastic-quantization English
   and Japanese READMEs, using relative links to existing figure PNGs for easier
   GitHub Pages browsing.

@@ -78,6 +78,7 @@ VED は **生成的な構造の枠組み** です。差異が存在するとい�
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | 複雑系・散逸構造の意味井戸に対して境界を保持するための文書。 |
 | [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | 拘束を、層ごとに物理的制約・確率的偏り・生命条件・認知的停止・社会的合意として整理する文書。 |
 | [Stochastic Quantization Module](stochastic-quantization/README.md) | VED/IFGT 閉包動力学を χ 層の確率的量子化構成へ接続する探索的な定量化モジュール。 |
+| [Dimensionality Working Note](dimensionality-working-note/README.md) | 次元を「持続する差分構造の有効ランク」として読み、`3+1` 次元の VED 的導出へ向けた失敗ルートも含めて保存する作業ノート。 |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | 身体化された認知、環境結合、生命・認知層との関係を整理する比較文書。 |
 | [Reading Paths](docs/navigation/reading_paths.md) | 読者の目的別に入口を選ぶための読書経路。 |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | VED 名称や用語が CFD や通常の物体語彙へ吸着するのを防ぐための入口ガイド。 |
@@ -178,6 +179,7 @@ consciousness/                     時間的非閉包とログ参照としての
 intelligence-part1/                非閉包的な力学的現象としての知性論 Part I
 intelligence-part2/                外化された停止と創発的停止層
 stochastic-quantization/           χ 層の確率的量子化を扱う探索的な定量化モジュール
+dimensionality-working-note/       次元、登録、3+1 導出ルートを扱う作業ノート
 arXiv_pdf/                         投稿用 PDF コピー
 notes/                             作業ノートと補足資料
 ```
@@ -198,6 +200,9 @@ notes/                             作業ノートと補足資料
   書き換え、その定常測度が確率的量子化へ接続しうるかを調べる working-note
   モジュールです。スクリプト、図、監査台帳、未解決問題を含みますが、標準模型作用の
   完成済み導出ではなく、探索的な定量化の橋として読んでください。
+- `dimensionality-working-note/`: VED において次元とは何かを問う working-note
+  モジュールです。`3+1` 次元構造を背景として仮定せず導出できるか、という問いから始まり、
+  試行錯誤した定義、失敗したルート、数値的プローブ、監査メモを研究記録として保存します。
 
 ## 推奨読書順
 

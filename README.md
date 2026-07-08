@@ -83,6 +83,7 @@ Three things to hold from the very start:
 | [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md) | Hold the boundary against the complex-systems / dissipative-structure well. |
 | [Constraint Dynamics](docs/navigation/constraint_dynamics.md) | Clarify constraint as physical, probabilistic, biological, cognitive, or social trajectory-shaping depending on layer. |
 | [Stochastic Quantization Module](stochastic-quantization/README.md) | Exploratory quantitative bridge from VED/IFGT closure dynamics to a χ-layer stochastic-quantization construction. |
+| [Dimensionality Working Note](dimensionality-working-note/README.md) | Working-note audit of dimension as effective rank of persistent difference structure, including failed routes toward a VED account of `3+1` dimensions. |
 | [Enactivism Comparison](docs/navigation/enactivism_comparison.md) | Situate VED relative to embodied cognition and organism-environment coupling. |
 | [Reading Paths](docs/navigation/reading_paths.md) | Choose an entry route by reader goal. |
 | [Name Misreadings](docs/navigation/name_misreadings.md) | Prevent entry-layer collapse of VED terminology into CFD or ordinary object-language. |
@@ -152,6 +153,30 @@ framework — that runs consistently through all 14 sections.
 
 Several quantitative derivations across Vol.1–Vol.3 remain open.
 
+## Dimensionality Working Note
+
+A new working-note module has been added for the dimensionality question:
+[Dimensionality Working Note](dimensionality-working-note/README.md).
+
+This module asks whether dimensionality can be read as an effective description
+of persistent registered difference, rather than assumed as a primitive
+background container. It does not claim a completed derivation of `3+1`
+dimensions.
+
+The module preserves both successful reductions and failed routes as part of
+the audit trail. Several failed probes are kept intentionally because they show
+where hidden assumptions about space, time, addressability, or measurement
+would otherwise enter the derivation.
+
+The current strongest numerical checkpoint is a v24 per-event Betti audit. In
+that model family, the rule that produces metric windows is identified as
+irreversible triangular insertion rather than ordinary subdivision: one
+registration event preserves an existing edge while adding a new node connected
+to both endpoints, producing one new vertex and one new cycle in the same
+event. This result is currently limited to the v24 model family and is treated
+as a topological signature of registration, not as a final derivation of
+observed dimensionality.
+
 ## Conceptual Overview
 
 VED proposes a generative order in which difference gives rise to the closure
@@ -196,6 +221,7 @@ consciousness/                     consciousness as temporal non-closure and log
 intelligence-part1/                intelligence as a non-closed dynamical phenomenon
 intelligence-part2/                externalized stopping and emergent stopping layers
 stochastic-quantization/           exploratory quantitative χ-layer stochastic-quantization module
+dimensionality-working-note/       working note on dimension, registration, and failed 3+1 derivation routes
 arXiv_pdf/                         submission-ready PDF copies
 notes/                             working notes and supplementary material
 ```
@@ -224,6 +250,11 @@ notes/                             working notes and supplementary material
   figures, an audit ledger, and open problems; it should be read as an
   exploratory quantitative bridge, not a completed derivation of the Standard
   Model action.
+- `dimensionality-working-note/`: A working-note module asking what
+  dimensionality means inside VED, beginning from the question of whether
+  `3+1` dimensional structure can be derived rather than assumed. It preserves
+  provisional routes, failed definitions, numerical probes, and audit notes as
+  part of the research record.
 
 ## Suggested Reading Order
 

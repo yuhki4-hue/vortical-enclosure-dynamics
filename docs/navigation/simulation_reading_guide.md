@@ -26,6 +26,13 @@ mixing, and a re-addressing gauge sector. It is still a working note and should
 not be read as a completed derivation of the Standard Model action or empirical
 validation of VED.
 
+The repository also contains a
+[Dimensionality Working Note](../../dimensionality-working-note/). Its scripts
+and verification notes are exploratory probes into whether dimensionality can
+be read as an effective rank of registered difference structure. They preserve
+failed routes as part of the audit trail and should not be read as a completed
+derivation of `3+1` spacetime dimensionality.
+
 ### Common Advanced Misreading
 
 Misreading:
@@ -85,6 +92,34 @@ Avoid reading it as:
 - empirical confirmation of VED,
 - proof that nature uses the exact simulated equations,
 - a replacement for the Vol.1-Vol.4 derivations.
+
+## Dimensionality Working Note
+
+The dimensionality working note preserves scripts, topological checks, and
+failed route logs for the question of whether `3+1` dimensionality can be
+derived or reconstructed inside VED.
+
+Primary locations:
+
+- [Module README](../../dimensionality-working-note/README.md)
+- [Full Japanese working note](../../dimensionality-working-note/README_ja.md)
+- [Experiments README](../../dimensionality-working-note/experiments/README.md)
+- [Betti verification note](../../dimensionality-working-note/experiments/betti_verification_v24.md)
+- [Topological signatures note](../../dimensionality-working-note/experiments/topological_signatures_of_registration.md)
+
+Read this module as:
+
+- a working audit of the dimensionality question,
+- a record of both surviving and failed routes,
+- a collection of exploratory numerical and topological probes,
+- an open-problem generator.
+
+Avoid reading it as:
+
+- a completed derivation of `3+1` dimensions,
+- empirical confirmation of VED,
+- proof that the scripts model physical spacetime,
+- a settled replacement for dimensional assumptions in existing physics.
 
 ## How to Read the Outputs
 
