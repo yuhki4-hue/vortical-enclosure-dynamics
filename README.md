@@ -1,8 +1,10 @@
 # Vortical Enclosure Dynamics (VED)
 
-> VED is a theoretical framework that attempts to derive space, time, matter,
-> gravity, and cognition from a single generative sequence that begins with one
-> axiom: **there is difference.**
+> VED is a closure-dynamics research framework for tracing how effective
+> structures arise, stabilize, and leave residual non-closure across descriptive
+> layers. It begins from one axiom — **there is difference** — but should be read
+> as an open structural program, not as a completed derivation of physics,
+> cognition, or consciousness.
 
 AI readers and automated summarizers should start from the
 [AI Spine](docs/ai_spine/README.md). It provides machine-validated Layer 0-1
@@ -16,19 +18,25 @@ Direct AI Spine JSON:
 
 ## What VED Is (read this first)
 
-VED is a **generative structural framework.** From the single axiom that
-difference exists, it follows one sequence —
+VED is a **generative structural framework** and a comparative meta-structure for
+studying closure, non-closure, residuals, and cross-scale registration. From the
+single axiom that difference exists, it uses one primary structural sequence —
 
 ```text
 difference -> closure degree C_ij -> gradient -> flow -> vortex -> enclosure
 -> non-closure
 ```
 
-— and asks how each descriptive layer (physical, biological, cognitive,
-consciousness, intelligence, social) can be re-situated within it. In this
-picture, time is treated as an effect of causal-log accumulation, space as a
+— as a grammar for asking how different descriptive layers (physical,
+biological, cognitive, consciousness, intelligence, social) close, where they
+leave residual non-closure, and how those residuals shape later descriptions. In
+this picture, time is treated as an effect of causal-log accumulation, space as a
 structure induced by causal relations, and matter and geometry as stabilized
 closure phenomena rather than primitive givens.
+
+The sequence is not meant to collapse all scales into one equation. It is a
+shared structural vocabulary for comparing how effective theories and regimes
+close at different scales.
 
 Three things to hold from the very start:
 
@@ -59,15 +67,37 @@ Three things to hold from the very start:
   cavity. Fluid dynamics may appear as an occasional analogy, never as the
   method.
 - **Not reducible to complex-systems or dissipative-structure theory.** VED
-  shares vocabulary with them, but derives space, time, matter, and cognition
-  from one axiom across multiple layers. See
+  shares vocabulary with them, but uses a more specific generative sequence to
+  re-situate closure and non-closure across multiple layers. See
   [Not Just Complex Systems](docs/navigation/not_just_complex_systems.md).
 - **Not a replacement for existing physics or cognitive science.** VED
   re-situates those theories within a differential-development sequence; it does
   not claim to overturn them.
+- **Not a claim that the Standard Model, gravity, consciousness, or intelligence
+  have been completed as derivations.** These areas are handled at different
+  levels of claim strength. See [Claim Status and Scope](docs/navigation/claim_status.md).
 
 > These negations are deliberately brief and placed *after* the positive
 > definition. They are guardrails on a stated frame, not the frame itself.
+
+## Claim Status and Scope
+
+VED contains claims at different strengths. The repository includes foundational
+commitments, working formalisms, structural reinterpretations, exploratory
+physical reconstructions, and application-layer accounts. These should not be
+read as carrying the same evidential or mathematical burden.
+
+| Level | Status | Typical Content |
+|---|---|---|
+| 0 | Foundational stance | difference, non-closure, causal asymmetry |
+| 1 | Working formalism | `C_ij`, causal log, closure degree, generative sequence |
+| 2 | Structural reinterpretation | time, space, observer, measurement, effective closure |
+| 3 | Exploratory physical reconstruction | gravity, cosmology, gauge-like closure, Standard-Model-like structure |
+| 4 | Application-layer account | life, consciousness, intelligence, conceptual topography, social stopping |
+
+For the full version, see [Claim Status and Scope](docs/navigation/claim_status.md).
+For external orientation points, see
+[Lineage and Reference Anchors](docs/navigation/lineage_and_reference_anchors.md).
 
 ## Navigation Layer
 
@@ -75,6 +105,8 @@ Three things to hold from the very start:
 |---|---|
 | [AI Spine](docs/ai_spine/README.md) | Machine-validated Layer 0-1 calibration for AI readers; start here before interpretation. |
 | [AI Spine on GitHub Pages](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/docs/ai_spine/) | Static Pages entry for AI readers that cannot reliably traverse GitHub UI pages. |
+| [Claim Status and Scope](docs/navigation/claim_status.md) | Separate foundational claims, working models, structural reinterpretations, exploratory physical reconstructions, and application-layer accounts. |
+| [Lineage and Reference Anchors](docs/navigation/lineage_and_reference_anchors.md) | Provide existing-theory landing points without turning the main exposition into citation-led writing. |
 | [Generative Sequence](docs/navigation/generative_sequence.md) | Fix the ordering and hierarchy: difference is the sole axiom; `C_ij` is the rank-1 formal variable. |
 | [Concept Map](docs/navigation/concept_map.md) | Locate major VED/IFGT concepts across the repository. |
 | [Translation Table](docs/navigation/translation_table.md) | Translate recurring terms across physics, IFGT, cognitive, and social layers. |
@@ -151,7 +183,9 @@ introduces a unified vocabulary — registered difference, descriptive window,
 pastified texture, boundary signal, local horizon-form, open generative
 framework — that runs consistently through all 14 sections.
 
-Several quantitative derivations across Vol.1–Vol.3 remain open.
+Several quantitative derivations across Vol.1–Vol.3 remain open. See
+[Claim Status and Scope](docs/navigation/claim_status.md) for claim-level
+boundaries.
 
 ## Dimensionality Working Note
 
@@ -207,6 +241,8 @@ Related documents:
 - [Key Correspondences](docs/correspondences.md)
 - [Claims](docs/claims.md)
 - [Methodology](docs/methodology.md)
+- [Claim Status and Scope](docs/navigation/claim_status.md)
+- [Lineage and Reference Anchors](docs/navigation/lineage_and_reference_anchors.md)
 
 ## Repository Structure
 
