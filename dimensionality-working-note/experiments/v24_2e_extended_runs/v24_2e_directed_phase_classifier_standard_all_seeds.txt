@@ -1,0 +1,18 @@
+v24_2e_directed_g0.075_s5_snapshots.tsv: w_snaps=9.2 eps_v=1.361 switches=1
+  new: growth_occ=0.206 contr_occ=1.000   old: growth_occ=0.190 contr_occ=0.924
+  -> v24_2e_directed_g0.075_s5_snapshots_phases.tsv
+v24_2e_directed_g0.075_s7_snapshots.tsv: w_snaps=9.2 eps_v=1.387 switches=2
+  new: growth_occ=0.120 contr_occ=0.420   old: growth_occ=0.089 contr_occ=0.276
+  -> v24_2e_directed_g0.075_s7_snapshots_phases.tsv
+v24_2e_directed_g0.075_s10_snapshots.tsv: w_snaps=9.2 eps_v=1.063 switches=1
+  new: growth_occ=0.243 contr_occ=1.000   old: growth_occ=0.227 contr_occ=0.839
+  -> v24_2e_directed_g0.075_s10_snapshots_phases.tsv
+v24_2e_directed_g0.075_s15_snapshots.tsv: w_snaps=9.2 eps_v=1.846 switches=3
+  new: growth_occ=0.396 contr_occ=1.000   old: growth_occ=0.541 contr_occ=1.000
+  -> v24_2e_directed_g0.075_s15_snapshots_phases.tsv
+v24_2e_directed_g0.075_s21_snapshots.tsv: w_snaps=9.2 eps_v=1.38 switches=1
+  new: growth_occ=0.298 contr_occ=1.000   old: growth_occ=0.195 contr_occ=1.000
+  -> v24_2e_directed_g0.075_s21_snapshots_phases.tsv
+v24_2e_directed_g0.075_s33_snapshots.tsv: w_snaps=9.2 eps_v=1.41 switches=1
+  new: growth_occ=0.425 contr_occ=1.000   old: growth_occ=0.324 contr_occ=1.000
+  -> v24_2e_directed_g0.075_s33_snapshots_phases.tsv

@@ -1,0 +1,14 @@
+cell=directed g=0.075 s=5 [ok] SAT=no snaps=36 occ=17 occ(npts>=5)=4 edge_life_med=221 censored=948 n_dst_mean=16.8 fire_share_mean=nan rev_share_mean=nan reflections=48 nsub=1660 dead=1129
+    -> v24_3_directed_g0.075_s5.tsv
+cell=directed g=0.075 s=7 [ok] SAT=no snaps=36 occ=12 occ(npts>=5)=0 edge_life_med=244 censored=339 n_dst_mean=16.7 fire_share_mean=nan rev_share_mean=nan reflections=62 nsub=1286 dead=1082
+    -> v24_3_directed_g0.075_s7.tsv
+cell=directed g=0.075 s=10 [ok] SAT=no snaps=36 occ=10 occ(npts>=5)=0 edge_life_med=220 censored=994 n_dst_mean=15.8 fire_share_mean=nan rev_share_mean=nan reflections=55 nsub=1050 dead=524
+    -> v24_3_directed_g0.075_s10.tsv
+cell=directed g=0.075 s=15 [ok] SAT=no snaps=36 occ=11 occ(npts>=5)=2 edge_life_med=231 censored=646 n_dst_mean=19.8 fire_share_mean=nan rev_share_mean=nan reflections=50 nsub=1466 dead=1112
+    -> v24_3_directed_g0.075_s15.tsv
+cell=directed g=0.075 s=21 [ok] SAT=no snaps=36 occ=10 occ(npts>=5)=5 edge_life_med=237 censored=1245 n_dst_mean=19.9 fire_share_mean=nan rev_share_mean=nan reflections=59 nsub=1613 dead=958
+    -> v24_3_directed_g0.075_s21.tsv
+cell=directed g=0.075 s=33 [ok] SAT=no snaps=36 occ=18 occ(npts>=5)=10 edge_life_med=233 censored=996 n_dst_mean=17.3 fire_share_mean=nan rev_share_mean=nan reflections=42 nsub=1528 dead=978
+    -> v24_3_directed_g0.075_s33.tsv
+
+POOLED cell=directed: edge lifetimes n=12044 median=231 p90=490

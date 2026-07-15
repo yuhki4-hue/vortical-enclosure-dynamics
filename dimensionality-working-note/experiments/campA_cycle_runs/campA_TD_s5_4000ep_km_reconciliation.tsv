@@ -1,0 +1,7 @@
+window	phase	dt	start	end	observed_survival	km_expected_survival	obs_over_exp	z	jaccard	end_newborn_frac	phase_start	phase_end
+3625-4000	consolidation	375	136	114	0.095588	0.033461	2.856693	4.045007	0.054852	0.885965	('contraction', 'consolidation')	('contraction', 'consolidation')
+300-675	first_growth_to_first_shedding_boundary	375	323	654	0.077399	0.031884	2.427542	4.670977	0.026261	0.961774	('growth', '-')	('contraction', 'shedding')
+1825-2200	second_growth	375	194	230	0.041237	0.033201	1.242044	0.627999	0.019231	0.965217	('growth', '-')	('growth', '-')
+3025-3400	shedding	375	300	243	0.030000	0.027507	1.090648	0.264969	0.016854	0.962963	('contraction', 'shedding')	('contraction', 'shedding')
+700-1075	first_shedding	375	584	128	0.008562	0.027735	0.308691	-2.836793	0.007072	0.960938	('contraction', 'shedding')	('contraction', 'shedding')
+2575-2675	short_consolidation	100	226	357	0.619469	0.642173	0.964645	-0.905440	0.316027	0.607843	('contraction', 'consolidation')	('contraction', 'consolidation')

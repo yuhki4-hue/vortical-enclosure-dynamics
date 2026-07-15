@@ -1,0 +1,3 @@
+2 consolidation window(s)
+  win ep 2575-2675 (100ep): |start|=226 |end|=357 Jaccard=0.316 start_survival=0.619 end_newborn_frac=0.608 -> MIXED
+  win ep 3625-4000 (375ep): |start|=136 |end|=114 Jaccard=0.055 start_survival=0.096 end_newborn_frac=0.886 -> TURNOVER

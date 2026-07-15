@@ -1,0 +1,25 @@
+# unimodal subset (mechanical, smoothing = largest grid window):
+#   v24_2e_directed_g0.075_s5_snapshots.tsv: n_major_maxima=1 unimodal=True old growth_occ=0.190 contr_occ=0.924
+#   v24_2e_directed_g0.075_s7_snapshots.tsv: n_major_maxima=2 unimodal=False old growth_occ=0.089 contr_occ=0.276
+#   v24_2e_directed_g0.075_s10_snapshots.tsv: n_major_maxima=4 unimodal=False old growth_occ=0.227 contr_occ=0.839
+#   v24_2e_directed_g0.075_s15_snapshots.tsv: n_major_maxima=4 unimodal=False old growth_occ=0.541 contr_occ=1.000
+#   v24_2e_directed_g0.075_s21_snapshots.tsv: n_major_maxima=2 unimodal=False old growth_occ=0.195 contr_occ=1.000
+#   v24_2e_directed_g0.075_s33_snapshots.tsv: n_major_maxima=1 unimodal=True old growth_occ=0.324 contr_occ=1.000
+# calibrating on 2 unimodal run(s)
+window_ratio	eps_ratio	n_pass_occ	n_pass_switch	n_pass_ushape	reproduces
+0.1	0.1	2/2	0/2	1/2	no
+0.1	0.25	2/2	0/2	1/2	no
+0.1	0.5	2/2	1/2	1/2	no
+0.1	1.0	2/2	2/2	1/2	no
+0.2	0.1	2/2	1/2	1/2	no
+0.2	0.25	2/2	1/2	1/2	no
+0.2	0.5	2/2	2/2	1/2	no
+0.2	1.0	2/2	2/2	2/2	YES
+0.3	0.1	2/2	1/2	1/2	no
+0.3	0.25	2/2	2/2	1/2	no
+0.3	0.5	2/2	2/2	1/2	no
+0.3	1.0	2/2	2/2	2/2	YES
+0.5	0.1	2/2	2/2	1/2	no
+0.5	0.25	2/2	2/2	2/2	YES
+0.5	0.5	2/2	2/2	2/2	YES
+0.5	1.0	2/2	2/2	0/2	no

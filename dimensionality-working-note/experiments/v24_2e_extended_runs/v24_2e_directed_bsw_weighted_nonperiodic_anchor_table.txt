@@ -1,0 +1,19 @@
+# empirical weight pool: n=397954 median=6.22 cv=0.48
+dim=1 side=127 N=  127 slope=0.945 +-0.003 (npts=36)
+dim=1 side=371 N=  371 slope=0.969 +-0.002 (npts=36)
+dim=1 side=1024 N= 1024 slope=0.980 +-0.001 (npts=36)
+dim=2 side=11 N=  121 slope=1.717 +-0.042 (npts=8)
+dim=2 side=19 N=  361 slope=1.821 +-0.019 (npts=16)
+dim=2 side=32 N= 1024 slope=1.877 +-0.009 (npts=27)
+dim=3 side=5 N=  125 slope=2.257 +-0.036 (npts=4)
+dim=3 side=7 N=  343 slope=2.458 +-0.022 (npts=7)
+dim=3 side=10 N= 1000 slope=2.603 +-0.011 (npts=11)
+dim=4 side=3 N=   81 slope=nan +-nan (npts=3)
+dim=4 side=4 N=  256 slope=2.745 +-0.064 (npts=5)
+dim=4 side=6 N= 1296 slope=3.005 +-0.085 (npts=9)
+-> v24_2e_directed_bsw_weighted_nonperiodic_anchor_table.tsv
+
+# suggested anchor arrays (use the row matching the V of the snapshots you are recalibrating):
+N~127: m = np.array([0.945, 1.717, 2.257, nan]); t = np.array([1.0, 2.0, 3.0, 4.0])
+N~371: m = np.array([0.969, 1.821, 2.458, 2.745]); t = np.array([1.0, 2.0, 3.0, 4.0])
+N~1024: m = np.array([0.98, 1.877, 2.603, 3.005]); t = np.array([1.0, 2.0, 3.0, 4.0])

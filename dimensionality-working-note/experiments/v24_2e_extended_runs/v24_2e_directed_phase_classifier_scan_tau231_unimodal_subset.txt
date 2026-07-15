@@ -1,0 +1,23 @@
+# sensitivity scan  (validation target: old classifier on unimodal runs -> growth~0.215 / contraction~0.731)
+# reference (old classifier, per file):
+#   v24_2e_directed_g0.075_s5_snapshots.tsv: old growth_occ=0.190 contr_occ=0.924
+#   v24_2e_directed_g0.075_s10_snapshots.tsv: old growth_occ=0.227 contr_occ=0.839
+#   v24_2e_directed_g0.075_s21_snapshots.tsv: old growth_occ=0.195 contr_occ=1.000
+#   v24_2e_directed_g0.075_s33_snapshots.tsv: old growth_occ=0.324 contr_occ=1.000
+window_ratio	eps_ratio	mean_growth_occ	mean_contr_occ	mean_nswitch	reproduces
+0.1	0.1	0.382	0.801	11.8	no
+0.1	0.25	0.370	0.816	6.8	no
+0.1	0.5	0.332	0.845	3.8	no
+0.1	1.0	0.286	0.944	1.5	no
+0.2	0.1	0.376	0.794	7.5	no
+0.2	0.25	0.357	0.815	4.0	no
+0.2	0.5	0.286	0.858	2.0	no
+0.2	1.0	0.294	1.000	1.0	no
+0.3	0.1	0.347	0.821	3.5	no
+0.3	0.25	0.299	0.852	2.2	no
+0.3	0.5	0.272	0.944	1.5	no
+0.3	1.0	0.316	1.000	0.8	no
+0.5	0.1	0.309	0.856	2.2	no
+0.5	0.25	0.283	0.892	1.5	no
+0.5	0.5	0.270	0.982	1.0	no
+0.5	1.0	0.328	1.000	0.8	no

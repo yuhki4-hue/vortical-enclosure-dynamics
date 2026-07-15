@@ -1,0 +1,6 @@
+run: 36 snapshots, ep 25-900, final V=356, METR occupancy=0.306
+(a) extinction : closed_for_rest=False V_final<50.0=False  -> False
+(b) steady     : TS slope=-2.34 [-3.04,-1.26] MK p=0.000 band_open_tail=False  -> False
+(c) breathing  : switches=1 reopen_each_contraction=True  -> False
+
+VERDICT: UNDECIDED (no clean pattern; extend run)

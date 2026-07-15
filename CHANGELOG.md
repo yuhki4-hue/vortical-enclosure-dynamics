@@ -13,6 +13,25 @@ All notable changes to this repository will be documented in this file.
   effective rank of persistent difference structure, preserving failed routes,
   exploratory scripts, Betti/topological verification notes, and the open
   question of a VED account of `3+1` dimensionality.
+- Added Dimensionality Working Note II materials and v24.1-v24.3 diagnostic
+  runs, including headroom, extended-epoch, rule-decomposition, phase
+  classification, and band-fate audit tools for BSW/MRW route testing.
+- Added `lattice_anchor_ext.py` and v24.3 robust-BSW `-log(S)` weight exports
+  for non-periodic, size-matched, empirical-weight `d_cal` anchor
+  recalibration.
+- Added v24.2e robust-BSW weight exports and faithful-convention `d_cal`
+  recalibration; updated 2b phase-classifier calibration to use same-run
+  old-classifier agreement on mechanically selected unimodal runs, yielding a
+  reproducing region and standard setting for subsequent 2c adjudication.
+- Added Campaign A cycle-individual tracking runs for the dimensionality
+  working note, including TD/TL2 lifetime, death-attribution, phase
+  classification, and repair/turnover diagnostic outputs.
+- Added 4000-epoch TD seed-5 Campaign A reconciliation logs and analysis,
+  linking the 2c trajectory to repair/turnover reinterpretation via
+  phase-dependent cycle-hazard modulation.
+- Added `dimensionality-working-note/reports/` as a public summary layer for
+  the current dimensionality-selection experiment cycle, with GitHub Pages
+  routing from the dimensionality index and README.
 - Linked the stochastic-quantization module from the top-level READMEs,
   Navigation Layer, Concept Map, Reading Paths, Theory Relationship Map,
   Simulation Reading Guide, and GitHub Pages entry point.

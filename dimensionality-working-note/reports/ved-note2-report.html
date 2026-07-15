@@ -1,0 +1,1010 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>次元選択ワーキングノートII 実験総括レポート</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f6f7f4;
+    --surface: #fdfdfc;
+    --ink: #1a1c1e;
+    --ink-2: #54585b;
+    --muted: #8b8f8e;
+    --hair: #e1e3dd;
+    --grid: #e9eae4;
+    --accent: #256abf;
+    --accent-ink: #1c5cab;
+    --accent-wash: rgba(37,106,191,0.07);
+    --g: #2a78d6;   /* 成長相 */
+    --s: #1baf7a;   /* shedding相 */
+    --c: #eda100;   /* consolidation相 */
+    --lt: #86b6ef;  /* 同系明step(許可セル) */
+    --neu: #a2a5a0; /* 境界・中立 */
+    --rej: #c04a42;
+    --rej-wash: rgba(192,74,66,0.09);
+    --ok-wash: rgba(27,175,122,0.11);
+    --hyp-wash: rgba(237,161,0,0.13);
+    --open-wash: rgba(139,143,142,0.13);
+    --serif: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", serif;
+    --sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", Meiryo, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #101214;
+      --surface: #1b1d1f;
+      --ink: #eef0ee;
+      --ink-2: #b4b9b8;
+      --muted: #878b8a;
+      --hair: #2c2f31;
+      --grid: #26292b;
+      --accent: #4a94e8;
+      --accent-ink: #6ea9ec;
+      --accent-wash: rgba(74,148,232,0.10);
+      --g: #3987e5;
+      --s: #199e70;
+      --c: #c98500;
+      --lt: #86b6ef;
+      --neu: #6f7370;
+      --rej: #e07068;
+      --rej-wash: rgba(224,112,104,0.12);
+      --ok-wash: rgba(25,158,112,0.16);
+      --hyp-wash: rgba(201,133,0,0.18);
+      --open-wash: rgba(135,139,138,0.16);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #101214;
+    --surface: #1b1d1f;
+    --ink: #eef0ee;
+    --ink-2: #b4b9b8;
+    --muted: #878b8a;
+    --hair: #2c2f31;
+    --grid: #26292b;
+    --accent: #4a94e8;
+    --accent-ink: #6ea9ec;
+    --accent-wash: rgba(74,148,232,0.10);
+    --g: #3987e5;
+    --s: #199e70;
+    --c: #c98500;
+    --lt: #86b6ef;
+    --neu: #6f7370;
+    --rej: #e07068;
+    --rej-wash: rgba(224,112,104,0.12);
+    --ok-wash: rgba(25,158,112,0.16);
+    --hyp-wash: rgba(201,133,0,0.18);
+    --open-wash: rgba(135,139,138,0.16);
+  }
+
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.95;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+  .prose { max-width: 720px; }
+
+  /* ---------- header ---------- */
+  header.doc {
+    padding: 64px 0 36px;
+    border-bottom: 1px solid var(--hair);
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--accent-ink);
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(28px, 4.6vw, 42px);
+    line-height: 1.45;
+    letter-spacing: 0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .subtitle {
+    font-size: 15.5px;
+    color: var(--ink-2);
+    margin: 0 0 22px;
+    max-width: 640px;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .meta b { color: var(--ink-2); font-weight: 600; }
+
+  /* ---------- sections ---------- */
+  section { margin: 56px 0 0; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  h2 .no {
+    color: var(--accent-ink);
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 6px;
+    font-family: var(--sans);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 16.5px;
+    font-weight: 700;
+    margin: 36px 0 8px;
+    line-height: 1.6;
+  }
+  h3 .fno {
+    color: var(--accent-ink);
+    font-family: var(--mono);
+    font-size: 13px;
+    margin-right: 10px;
+  }
+  p { margin: 12px 0; }
+  .prose p, .prose ul, .prose ol { color: var(--ink); }
+  code {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    background: var(--accent-wash);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+  strong { font-weight: 700; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 6px 0; }
+  .note {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* ---------- summary box ---------- */
+  .tldr {
+    background: var(--surface);
+    border: 1px solid var(--hair);
+    border-radius: 10px;
+    padding: 26px 30px;
+    margin: 0 0 8px;
+  }
+  .tldr h2 {
+    font-size: 17px;
+    font-family: var(--sans);
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .tldr ol { margin: 0; padding-left: 1.5em; }
+  .tldr li { margin: 10px 0; }
+
+  /* ---------- chips ---------- */
+  .chip {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 99px;
+    padding: 1px 10px;
+    white-space: nowrap;
+    line-height: 1.9;
+  }
+  .chip.ok   { background: var(--ok-wash);   color: var(--ink); }
+  .chip.rej  { background: var(--rej-wash);  color: var(--ink); }
+  .chip.hyp  { background: var(--hyp-wash);  color: var(--ink); }
+  .chip.open { background: var(--open-wash); color: var(--ink-2); }
+
+  /* ---------- figures ---------- */
+  figure.fig {
+    margin: 26px 0;
+    background: var(--surface);
+    border: 1px solid var(--hair);
+    border-radius: 10px;
+    padding: 22px 22px 16px;
+  }
+  figure.fig .figtitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 2px;
+  }
+  figure.fig .figsub {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+  figure.fig figcaption {
+    font-size: 12.5px;
+    color: var(--ink-2);
+    line-height: 1.8;
+    border-top: 1px solid var(--hair);
+    padding-top: 10px;
+    margin-top: 14px;
+  }
+  figure.fig figcaption b { color: var(--ink); }
+  .figscroll { overflow-x: auto; }
+  svg { display: block; max-width: 100%; height: auto; }
+  svg text { font-family: var(--sans); }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-size: 12.5px;
+    color: var(--ink-2);
+    margin: 0 0 10px;
+  }
+  .legend .sw {
+    display: inline-block;
+    width: 11px; height: 11px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: -1px;
+  }
+  .panels { display: flex; flex-wrap: wrap; gap: 18px; }
+  .panels > div { flex: 1 1 320px; min-width: 300px; }
+  .paneltitle { font-size: 12.5px; color: var(--ink-2); font-weight: 600; margin: 0 0 4px; }
+
+  /* ---------- tables ---------- */
+  .tablewrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--hair); border-radius: 10px; background: var(--surface); }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+  th {
+    text-align: left;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 12px 14px 8px;
+    border-bottom: 1px solid var(--hair);
+    white-space: nowrap;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--grid);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .tcode { font-family: var(--mono); font-size: 12px; color: var(--accent-ink); white-space: nowrap; }
+  .tcap {
+    font-size: 12.5px;
+    color: var(--ink-2);
+    margin: -12px 0 26px;
+    line-height: 1.8;
+  }
+  .tcap b { color: var(--ink); }
+
+  /* ---------- ladder ---------- */
+  .ladder { list-style: none; padding: 0; margin: 22px 0; }
+  .ladder li {
+    display: grid;
+    grid-template-columns: 58px 1fr auto;
+    gap: 14px;
+    align-items: baseline;
+    padding: 10px 14px;
+    border-left: 2px solid var(--hair);
+    margin: 0 0 0 8px;
+    position: relative;
+  }
+  .ladder li::before {
+    content: "";
+    position: absolute;
+    left: -5px; top: 1.15em;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .ladder .lk { font-family: var(--mono); font-size: 12.5px; color: var(--accent-ink); font-weight: 600; }
+  .ladder .lt2 { font-size: 14px; line-height: 1.75; }
+  @media (max-width: 560px) {
+    .ladder li { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  /* ---------- stages (Note I journey) ---------- */
+  .stages { list-style: none; padding: 0; margin: 0; }
+  .stages li {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--grid);
+  }
+  .stages li:first-child { border-top: none; padding-top: 4px; }
+  .stages .sno {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--accent-ink);
+    font-weight: 600;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+  .stages .st { font-weight: 700; font-size: 14.5px; margin: 0; line-height: 1.7; }
+  .stages .st .note { font-weight: 400; }
+  .stages .sd { font-size: 13.5px; color: var(--ink-2); line-height: 1.9; margin: 4px 0 0; }
+  @media (max-width: 560px) {
+    .stages li { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  /* ---------- quote ---------- */
+  blockquote.central {
+    font-family: var(--serif);
+    font-size: 16.5px;
+    line-height: 2.1;
+    margin: 26px 0;
+    padding: 22px 28px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-wash);
+    border-radius: 0 10px 10px 0;
+  }
+  blockquote.central p { margin: 0; }
+
+  a { color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media print { body { background: #fff; } }
+</style>
+
+<div class="wrap">
+
+<header class="doc">
+  <p class="eyebrow">VED PROJECT — DIMENSIONALITY WORKING NOTE II 総括</p>
+  <h1>差分は、いつ「空間」として読めるようになるか</h1>
+  <p class="subtitle">次元選択ワーキングノートI(2026-07-06〜08)およびII(2026-07-10〜14)がここまでに行った実験と、その到達点を整理したレポート。図中の数値はすべてノート記載値に基づく。</p>
+  <div class="meta">
+    <span><b>対象</b> Working Note I(v1〜v25)+ II(v24〜v24.3、2b/2c、キャンペーンA)</span>
+    <span><b>レポート作成</b> 2026-07-15</span>
+    <span><b>性格</b> 内容整理のみ。新しい主張は含まない</span>
+  </div>
+</header>
+
+<div class="tldr">
+  <h2>まず4行で</h2>
+  <ol>
+    <li><strong>問い:</strong>「なぜ世界は3+1次元か」を直接問わず、<strong>登録された差分の履歴が、どんな条件で"距離"として読めるようになるか</strong>を測定可能な部品に分解して検証している。次元はその最後の段。</li>
+    <li><strong>軌跡(ノートI):</strong> v1〜v25の3日間で、16版の連続失敗が「モデルに無償で与えていた背景前提」=<strong>6つの容器</strong>を特定。すべて外した系は<strong>登録可能性保存則(ρ=1)</strong>で初めて安定し、計量が読める状態は場所ではなく<strong>代謝振動の中の時間帯(冷側)</strong>として現れた。窓の固有次元として「3」が測定にかけられ——<strong>棄却された</strong>(≈2.6)。</li>
+    <li><strong>装置(ノートII):</strong> 辺が減衰する有向グラフ台帳。一登録事象=不可逆三角挿入(T1)。辺は再給餌されない限り消える——登録は「旗」ではなく維持され続ける準安定状態。</li>
+    <li><strong>ここまでの核心:</strong> ①<strong>寿命と可読性は別の法則で決まる</strong>(自己給餌の禁止→長寿命、給餌の集中→可読性)。②可読の窓は成長期ではなく<strong>収縮期に開き、系は消えずに「呼吸」する</strong>。③可読状態とはサイクルが多い状態ではなく、<strong>サイクル同士が解け、選択的に保存されている状態</strong>。</li>
+  </ol>
+</div>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§1</span>何を問うているのか — 問いの転回</h2>
+  <p>出発点はWorking Note I冒頭の一文——<strong>「次元は存在論ではなく、差分構造の有効記述である」</strong>——にある。「なぜ世界は3+1次元なのか」という存在論の問いは、まず「なぜ自由度の伸長が3(+1)で観測されるのか」(ノートI)へ、そして計器監査を経て<strong>「どのような差分登録の履歴が、計量として読める独立方向を持つのか」</strong>(ノートII)へと二段階で掛け替えられた。空間も座標も背景として仮定しない。あるのは「差がある」という最小の事実だけで、そこから 差分 → 二項関係 → 登録 → サイクル → 計量可読性 → 次元、という梯子を一段ずつ、測定で確かめながら登る(梯子の全体は§6・図9)。なおノートIは、ノード間の距離構造が要する<strong>関係的次元</strong>(基空間)と、ノード内部の自由度である<strong>状態的次元</strong>(ファイバー)を別の棚として早期に分離しており、SU(3)の「3」と空間の「3」を同一視する誘惑はこの区分で封じられている。</p>
+  <p>この一連のノートを特徴づけるのは主張よりむしろ<strong>監査の運用</strong>である。すべての記述は「測定事実/純粋帰結/構成原理/予想」に区分され、実験は実施前に設計・判定基準ごと登録され、自分自身の過去の読みが繰り返し棄却・降格される。ノートIでは16版の連続失敗の測量と「3」の棄却が(§2)、ノートIIでは7項目の棄却台帳が(§5末・表5)、その運用の証跡である。現在残っている主張は、この選別を生き延びたものだけである。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§2</span>前史 — Working Note I の軌跡(v1〜v25、2026-07-06〜08)</h2>
+  <p>ノートIIの装置と規律は、先行するノートIの3日間・25版にわたる数値キャンペーンの産物である。出発点には二つの測定路線があった。<strong>ルートI</strong>(絡み・渦の位相的保護が3を選ぶ、という予想の道)と、<strong>ルートII</strong>(流束行列 S̃ のスペクトルから有効次元を読む、予想を含まない計算の道)。予想を含まないルートIIが先に走り、最初の本番測定で早くも重要な否定的結果が出た:<strong>C<sub>ij</sub> の不動点方程式は、単独では有限次元の幾何を生成しない</strong>。次元が生まれる場所があるとすれば、履歴 H の蓄積動力学の中にしかない——以後の全実験はこの一点に集中する。全体は五幕に要約できる(図1)。</p>
+
+  <figure class="fig">
+    <p class="figtitle">Working Note I の五幕</p>
+    <ol class="stages">
+      <li>
+        <span class="sno">第一幕</span>
+        <div>
+          <p class="st">計器の較正と、最初の否定的結果 <span class="note">(§5.6)</span></p>
+          <p class="sd">スペクトル次元計を既知グラフで較正(Weyl推定器などの失敗も記録)。VED不動点ネットワークを測ると、無構造な履歴からは無次元、潜在3D幾何は保存されつつ圧縮(2.57)。不動点だけでは次元は建たない——生成の座を H の成長動力学に特定。</p>
+        </div>
+      </li>
+      <li>
+        <span class="sno">第二幕</span>
+        <div>
+          <p class="st">容器の消去 — v1〜v16b、16版の全滅 <span class="note">(§5.7–5.33)</span></p>
+          <p class="sd">背景なし成長モデルが飽和・断線・small-world崩壊・爆発で連続崩壊。だが各失敗は「モデルに無償で与えていた前提」を一つずつ暴く<b>消去法の測量</b>として機能した(表1)。事前登録、妥当性基準(「失敗」と「実験の無効」の区別)、失敗モード解釈規則という方法論もここで確立。</p>
+        </div>
+      </li>
+      <li>
+        <span class="sno">第三幕</span>
+        <div>
+          <p class="st">保存則と初の安定 — v17系 <span class="note">(§5.34–5.38)</span></p>
+          <p class="sd">純理検討から<b>登録可能性保存則 ρ=1</b>(1回の登録は登録可能性をちょうど1単位消費し、ちょうど1単位生産する)を導出・実装。爆発も絶滅もない初の安定モデルが成立(ρ実測 1.01〜1.05)。<b>総量保存が安定性を、分配の形は幾何だけを決める</b>——3種の分配形比較で分離を確認。</p>
+        </div>
+      </li>
+      <li>
+        <span class="sno">第四幕</span>
+        <div>
+          <p class="st">計量窓の発見と追跡 — v17t〜v21 <span class="note">(§5.39–5.49)</span></p>
+          <p class="sd">ball次元フィットが成立する「計量窓(METR)」を発見。計量相は (λ,γ) 平面上の場所ではなく、系が自発的に刻む<b>代謝振動(温↔冷)の冷側の時間帯</b>に出る(コア8/8 seedが通過)。台帳を方向付きにすると窓占有は約7倍。有向循環は保護なしで自然に湧く(Φ_circ≈0.5)が、循環を保護すると系が温まり逆効果——窓を支えるのは循環ではなく<b>温度制御</b>。持続は 1/γ に単調、頻度は γ≈0.15 に最適帯。</p>
+        </div>
+      </li>
+      <li>
+        <span class="sno">第五幕</span>
+        <div>
+          <p class="st">「3」の棄却と、窓が要求する成長様式 — v22〜v25 <span class="note">(§5.50–5.60)</span></p>
+          <p class="sd">長寿命窓は固有次元を持つ(H9成立)が、値は≈2.6にクラスターし、反証応募の検定で<b>「3」は棄却</b>(図2)。転入形3候補の比較で、窓は<b>細分(T1)でしか生まれない</b>(表2)。積層仮説は較正で計器の盲目が発覚し本番中止——「計器を信頼できるまで物理主張を止める」規律ごと、ノートII(v24計器監査)へ引き継がれた。</p>
+        </div>
+      </li>
+    </ol>
+    <figcaption><b>図1</b> — ノートIの実験軌跡の五幕構成。矢印は時系列であると同時に依存関係でもある:各幕の「失敗の診断」が次の幕の設計を機械的に導いている。</figcaption>
+  </figure>
+
+  <p>第二幕の16連続失敗の中身が、いわゆる<strong>「容器の台帳」</strong>である。どのモデルも、公理(「差がある」)が許していないものをどこかで無償で供給しており、崩壊のたびにそれが一つずつ特定された。</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>#</th><th>容器(暗黙の前提)</th><th>無償で与えていたもの</th><th>暴いた実験</th></tr></thead>
+      <tbody>
+        <tr><td class="num">①</td><td>固定ノード集合</td><td>場所(事前のアドレス空間)</td><td>v4の枠組み診断(§5.8)</td></tr>
+        <tr><td class="num">②</td><td>全順序=単一ウォーカー</td><td>大域時計(逐次イベント順序)</td><td>v8の二重ヒル(§5.12)</td></tr>
+        <tr><td class="num">③</td><td>不死ノード</td><td>存続の保証(脱登録の不在)</td><td>v13(§5.22)</td></tr>
+        <tr><td class="num">④</td><td>エージェント抽象</td><td>流れの物象化(流れ数=ノード数の束縛)</td><td>v14bの相互不死デッドロック(§5.24–5.25)</td></tr>
+        <tr><td class="num">⑤</td><td>固定イベント予算</td><td>活動量(差がなくても供給される時計)</td><td>v15(§5.27)</td></tr>
+        <tr><td class="num">⑥</td><td>Cの瞬時平衡化</td><td>平衡(緩和速度∞)</td><td>v15bの冷却不能(§5.28–5.29)</td></tr>
+        <tr><td class="num">補</td><td>種(初期ダイアド)</td><td>最初の差</td><td>v17で除去:第一登録が自らダイアドを生成(§5.34.5)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tcap"><b>表1</b> — 容器の台帳(ノートI §5.33)。16版の失敗系列は無作為な試行錯誤ではなく「与えてはいけないもの」の測量だった。⑥まで外した状態で初めて系は安定した(第三幕)。残る唯一の供与「一様な登録可能性の測度」は、hbar_eff(揺らぎ=登録可能性の強度)と同格の基底として、未解決のまま明示的に保持されている。</p>
+
+  <p>第五幕の転入形比較は、ノートIIの中心概念への直接の橋である。計量窓を生む成長様式はただ一つだった。</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>転入形</th><th>操作</th><th>結果</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tcode">T1 細分</span></td><td>発火辺の上に新極を置き、両端へ接続(次数2、ループ保存)</td><td><b>計量窓 多数</b>(N=450でd≈3.0–3.8)</td></tr>
+        <tr><td><span class="tcode">T2 幹伸ばし</span></td><td>辺の一端から新極を1本の辺で追加(次数1)</td><td>窓ゼロ(樹のままSW固定)</td></tr>
+        <tr><td><span class="tcode">T3 再貼り</span></td><td>新極なしで既存対に辺を追加</td><td>窓ゼロ(飽和で固定)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tcap"><b>表2</b> — 転入形三候補の比較(ノートI §5.57)。「ループを保ちながらノードを増やす」細分だけが計量窓を生む——<b>新しい差は既存の差の「間」に登録されなければならない</b>という様式の要求。この観測が、ノートIIの内部アドレス原理(L2)と不可逆三角挿入T1のper-event監査へ直結した。</p>
+
+  <figure class="fig">
+    <p class="figtitle">長寿命窓の固有次元 —「3」の棄却</p>
+    <p class="figsub">ノートI §5.51–5.53。ball計器・当時の較正。点=窓内平均、横棒=±1σ</p>
+    <div class="figscroll">
+    <svg viewBox="0 0 760 240" width="760" role="img" aria-label="長寿命窓の固有次元のドットプロット。値は2.4から2.8にクラスターし、3は棄却、eとは分離不能">
+      <line x1="479.9" y1="24" x2="479.9" y2="192" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4 5"/>
+      <line x1="575" y1="24" x2="575" y2="192" stroke="var(--rej)" stroke-width="1.2" stroke-dasharray="4 5"/>
+      <text x="479.9" y="16" text-anchor="end" font-size="10.5" fill="var(--muted)">e≈2.72(分離不能)</text>
+      <text x="581" y="16" text-anchor="start" font-size="10.5" fill="var(--rej)">3(棄却)</text>
+      <!-- row 1 -->
+      <text x="160" y="56" text-anchor="end" font-size="11.5" fill="var(--ink-2)">v22 s10 窓A(6点)</text>
+      <line x1="372.5" y1="52" x2="622.3" y2="52" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="372.5" y1="47" x2="372.5" y2="57" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="622.3" y1="47" x2="622.3" y2="57" stroke="var(--muted)" stroke-width="1.5"/>
+      <circle cx="497.4" cy="52" r="6" fill="var(--accent)"><title>2.77±0.37(立ち上がり途中の窓、ばらつき大)</title></circle>
+      <text x="497.4" y="40" text-anchor="middle" font-size="10.5" fill="var(--ink)" font-variant-numeric="tabular-nums">2.77±0.37</text>
+      <!-- row 2 -->
+      <text x="160" y="88" text-anchor="end" font-size="11.5" fill="var(--ink-2)">v22 s10 窓B(6点)</text>
+      <line x1="463.6" y1="84" x2="544.6" y2="84" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="463.6" y1="79" x2="463.6" y2="89" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="544.6" y1="79" x2="544.6" y2="89" stroke="var(--muted)" stroke-width="1.5"/>
+      <circle cx="504.1" cy="84" r="6" fill="var(--accent)"><title>2.79±0.12(H9成立の明確な事例)</title></circle>
+      <text x="504.1" y="72" text-anchor="middle" font-size="10.5" fill="var(--ink)" font-variant-numeric="tabular-nums">2.79±0.12</text>
+      <!-- row 3 -->
+      <text x="160" y="120" text-anchor="end" font-size="11.5" fill="var(--ink-2)">v23 s14(5点)</text>
+      <line x1="436.6" y1="116" x2="531.1" y2="116" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="436.6" y1="111" x2="436.6" y2="121" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="531.1" y1="111" x2="531.1" y2="121" stroke="var(--muted)" stroke-width="1.5"/>
+      <circle cx="483.9" cy="116" r="6" fill="var(--accent)"><title>2.73±0.14(独立seed追試)</title></circle>
+      <text x="483.9" y="104" text-anchor="middle" font-size="10.5" fill="var(--ink)" font-variant-numeric="tabular-nums">2.73±0.14</text>
+      <!-- row 4 -->
+      <text x="160" y="152" text-anchor="end" font-size="11.5" fill="var(--ink-2)">v23 s17(5点)</text>
+      <line x1="281.4" y1="148" x2="483.9" y2="148" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="281.4" y1="143" x2="281.4" y2="153" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="483.9" y1="143" x2="483.9" y2="153" stroke="var(--muted)" stroke-width="1.5"/>
+      <circle cx="382.6" cy="148" r="6" fill="var(--accent)"><title>2.43±0.30(独立seed追試)</title></circle>
+      <text x="382.6" y="136" text-anchor="middle" font-size="10.5" fill="var(--ink)" font-variant-numeric="tabular-nums">2.43±0.30</text>
+      <!-- row 5 -->
+      <text x="160" y="184" text-anchor="end" font-size="11.5" fill="var(--ink-2)">v23 s17・N=450(9点)</text>
+      <circle cx="453.5" cy="180" r="6" fill="var(--accent)"><title>2.64(最長・90エポック窓)</title></circle>
+      <text x="453.5" y="168" text-anchor="middle" font-size="10.5" fill="var(--ink)" font-variant-numeric="tabular-nums">2.64</text>
+      <!-- axis -->
+      <line x1="170" y1="196" x2="730" y2="196" stroke="var(--hair)" stroke-width="1.5"/>
+      <text x="237.5" y="216" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.0</text>
+      <text x="372.5" y="216" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.4</text>
+      <text x="507.5" y="216" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.8</text>
+      <text x="642.5" y="216" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">3.2</text>
+      <text x="730" y="216" text-anchor="end" font-size="10.5" fill="var(--muted)">窓固有次元 d</text>
+    </svg>
+    </div>
+    <figcaption><b>図2</b> — 長寿命の計量窓の固有次元測定(H9成立窓)。値は 2.4〜2.8 にクラスターし、d(N) は N=300→450 で平坦——3へ漸近する兆候はなく、帰無仮説「窓固有次元=3」は反証応募の検定(H10)で<b>棄却</b>された。e≈2.72 とは分離できない(偶然と区別不能と明記)。<b>注意:</b>この目盛り自体が後にノートIIの d_cal 監査で境界・サイズ・重み規約への依存と判明し(図8)、旧規約の「≈2.6」は忠実較正で 2.34 へ移動、離散的な「層」の存在も否定された。ここに示す値は当時の較正での歴史的読みである。</figcaption>
+  </figure>
+
+  <p>ノートIの終端で、問いは「3を探す実験」から<strong>「計量窓の成熟過程を測る実験」</strong>へ公式に再定義された(§5.54)。瞬間の次元値ではなく、窓幅・安定時間・相関長・粗視化スケール依存 d(ℓ) の共スケーリングを測るべきである、と。この再定義と、v24で判明した「METRラベルは何を測っているのか」という計器不信が、そのままノートIIの出発点になる。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§3</span>実験装置 — 減衰する台帳と、ひとつの更新規則</h2>
+  <p>数値実験系(v24系)——前節の軌跡の到達点——は次のように要約できる。ノードは「登録項」、辺は「登録された差分」で、各辺は流束 <code>C_ij</code> を持ち一様に減衰する。発火した辺の流束は規則に従って他の辺へ再分配され(=再給餌)、給餌が減衰に追いつかない辺は支持閾値を割って消える。つまり<strong>登録とは一度立てたら消えない旗ではなく、流れによって維持され続ける準安定状態</strong>である——これはコード監査から得た確定的な読みである。</p>
+  <p>成長はただ一つの更新規則で起きる。<strong>T1=不可逆三角挿入</strong>:既存の辺を保存したまま、新しい極をその両端に接続する(図3)。一回の登録事象が、新ノードとサイクルを同時に、正確に <code>ΔV=+1, ΔE=+2, Δβ₁=+1</code> だけ生む。この「正確に1ずつ」という帳簿的恒等式が、後で重要な罠(§5-5)にもなる。</p>
+
+  <figure class="fig" style="max-width:720px">
+    <p class="figtitle">T1 — 不可逆三角挿入</p>
+    <p class="figsub">一登録事象がノードとサイクルを同時に生む</p>
+    <svg viewBox="0 0 640 230" role="img" aria-label="T1挿入の模式図。登録前は2ノードと1辺、登録後は新ノードaが両端に接続され三角形になる">
+      <!-- before -->
+      <text x="150" y="28" text-anchor="middle" font-size="12.5" fill="var(--muted)" letter-spacing="1">登録前</text>
+      <line x1="80" y1="140" x2="220" y2="140" stroke="var(--ink-2)" stroke-width="2.5"/>
+      <circle cx="80" cy="140" r="13" fill="var(--surface)" stroke="var(--ink-2)" stroke-width="2"/>
+      <circle cx="220" cy="140" r="13" fill="var(--surface)" stroke="var(--ink-2)" stroke-width="2"/>
+      <text x="80" y="145" text-anchor="middle" font-size="13" fill="var(--ink)" font-style="italic">i</text>
+      <text x="220" y="145" text-anchor="middle" font-size="13" fill="var(--ink)" font-style="italic">j</text>
+      <text x="150" y="168" text-anchor="middle" font-size="11.5" fill="var(--muted)">既存差分 (i, j)</text>
+      <!-- arrow -->
+      <line x1="262" y1="120" x2="330" y2="120" stroke="var(--muted)" stroke-width="1.5"/>
+      <path d="M330 120 l-9 -5 v10 z" fill="var(--muted)"/>
+      <text x="296" y="106" text-anchor="middle" font-size="12" fill="var(--accent-ink)" font-weight="600">T1</text>
+      <!-- after -->
+      <text x="465" y="28" text-anchor="middle" font-size="12.5" fill="var(--muted)" letter-spacing="1">登録後</text>
+      <path d="M385 170 L545 170 L465 62 Z" fill="var(--accent-wash)"/>
+      <line x1="385" y1="170" x2="545" y2="170" stroke="var(--ink-2)" stroke-width="2.5"/>
+      <line x1="385" y1="170" x2="465" y2="62" stroke="var(--accent)" stroke-width="2.5"/>
+      <line x1="545" y1="170" x2="465" y2="62" stroke="var(--accent)" stroke-width="2.5"/>
+      <circle cx="385" cy="170" r="13" fill="var(--surface)" stroke="var(--ink-2)" stroke-width="2"/>
+      <circle cx="545" cy="170" r="13" fill="var(--surface)" stroke="var(--ink-2)" stroke-width="2"/>
+      <circle cx="465" cy="62" r="13" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5"/>
+      <text x="385" y="175" text-anchor="middle" font-size="13" fill="var(--ink)" font-style="italic">i</text>
+      <text x="545" y="175" text-anchor="middle" font-size="13" fill="var(--ink)" font-style="italic">j</text>
+      <text x="465" y="67" text-anchor="middle" font-size="13" fill="var(--ink)" font-style="italic">a</text>
+      <text x="465" y="200" text-anchor="middle" font-size="12" fill="var(--ink-2)" font-variant-numeric="tabular-nums">ΔV = +1　ΔE = +2　Δβ₁ = +1</text>
+    </svg>
+    <figcaption><b>図3</b> — T1(不可逆三角挿入)。既存辺 (i, j) を削除・置換せず(不可逆履歴の保存)、新極 a を両端へ接続する。青が新規要素。新しい登録位置が外部座標ではなく「既存の差分への参照」としてのみ指定される、という<b>内部アドレス原理</b>(§3.1)の最小実装であり、v24のper-event監査でこの署名が事象単位で確認された。</figcaption>
+  </figure>
+
+  <p>もう一つの鍵は流束の逃がし方の規則である。<strong>directed(有向)台帳では、発火した辺自身とその逆向き辺への還流が禁止される</strong>。つまり辺は自分で自分を養えない。ここから「持続する登録は、系を巡って戻ってくる<strong>閉じた再給餌回路</strong>を要求するのではないか」という本ノートの構造仮説が生まれた。主要な用語を表3にまとめる。</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>用語</th><th>意味</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tcode">台帳 / 登録</span></td><td>ノード=登録項、辺=登録された差分。辺は減衰し、再給餌で維持される準安定状態。支持閾値 θ に相対的(<code>R_ij^(θ)</code>)。</td></tr>
+        <tr><td><span class="tcode">T1</span></td><td>不可逆三角挿入。唯一の成長規則(図3)。ノートIの転入形比較(表2)で選定された様式そのもの。</td></tr>
+        <tr><td><span class="tcode">directed / symmetric</span></td><td>発火辺の流束再分配規則。directed=片側(下流のみ)へ集中+自己給餌禁止。symmetric=両側へ分散+自己給餌許可。</td></tr>
+        <tr><td><span class="tcode">BSW</span></td><td>ball-scaling window(旧称 METR)。断片化(FRAG)・飽和(SAT)を除外した後、球成長スケーリング d(ℓ) のフィットが成立している観測窓。</td></tr>
+        <tr><td><span class="tcode">MRW</span></td><td>metric-readability window。複数の経路・尺度・時点をまたぐ比較が有限誤差で再利用可能な状態。BSWより強い概念で、<b>BSW≠MRW</b>。両者の関係(必要条件か相関物か)は未決。</td></tr>
+        <tr><td><span class="tcode">β₁(H) / β₁(S)</span></td><td>因果ログH上/対称化流束S上の独立サイクル数。H側は「帳簿上の登録」、S側は「運搬を実際に支持する硬い幾何」に対応。</td></tr>
+        <tr><td><span class="tcode">硬化率 h</span></td><td><code>h = β₁(S,10⁻⁶) / β₁(H,10⁻¹²)</code>。帳簿に登録されたサイクルのうち、幾何として硬化しているものの割合。</td></tr>
+        <tr><td><span class="tcode">shedding / consolidation</span></td><td>収縮の二相。h が低下する「脱ぎ」の相と、h が回復する「締固め」の相(§5-3)。</td></tr>
+        <tr><td><span class="tcode">W_cont / npts</span></td><td>球フィットに使える半径域の対数幅と点数。BSW開閉を駆動する主要連続計器。</td></tr>
+        <tr><td><span class="tcode">d_cal</span></td><td>較正格子アンカー系に対するball次元の読み。境界条件・サイズ・辺重み規約に依存する(§5-7)。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tcap"><b>表3</b> — 本レポートで使う最小限の用語。ノートII本体の定義(§2, §5, §9)の要約。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§4</span>ノートIIの実験系譜 — 5日間で何を走らせたか</h2>
+  <p>ノートII(07-10〜14)の各走行は、前の走行が残した交絡や過剰主張を潰すために設計されている。系譜を表4に示す。</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>走行 / 監査</th><th>中心の問い</th><th>答え</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tcode">v24 コード監査</span><br><span class="note">〜07-10</span></td>
+          <td>METR分類器は何を測っているのか</td>
+          <td>METRは計量可読性の陽性判定ではなく、除外後にball次元フィットが成立する残余クラス。<b>BSWと再命名</b>。T1=不可逆三角挿入と確認。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">v24.1</span><br><span class="note">36 run・900ep・N=300–650</span></td>
+          <td>directed と symmetric はどう違うか</td>
+          <td>directed の辺登録は約<b>2.7倍長寿命</b>(中央値250 vs 163ep)、BSWもdirectedに偏る。BSWの開閉は fit品質でなく<b>npts閾値の通過</b>。ただしNMAX飽和と交絡。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">v24.2</span><br><span class="note">ヘッドルーム走行</span></td>
+          <td>v24.1の差は容量アーティファクトか</td>
+          <td><b>棄却</b>。飽和なしでも非対称は維持。新事実:BSWは<b>収縮期に濃縮</b>(滞在率 73.1% vs 成長期 21.5%)。β₁(H)≈V+const のトートロジー発見。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">オフライン検定</span></td>
+          <td>収縮が読めるのは「浄化」のせいか</td>
+          <td><b>棄却</b>(素朴形・選択形とも)。硬化率 h はむしろ収縮期に低下する——幾何が帳簿から「脱げて」いる。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">v24.2e</span><br><span class="note">1500ep 延長</span></td>
+          <td>帯(BSW)は閉じるか。可読=骨化か</td>
+          <td>帯は<b>閉じない</b>(6 seed中5が走行終端までMETR、最長950ep連続)。強い骨格化仮説は棄却。収縮は<b>shedding→consolidationの二相</b>。Vは単峰でなく「呼吸」する。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">v24.3</span><br><span class="note">2×2規則分解・24 run</span></td>
+          <td>directedの優位はどの因子によるか</td>
+          <td><b>寿命と可読性の解離</b>(§5-2・図4)。自己給餌の禁止→長寿命、片側成形→可読性。交互作用は陰性。希釈仮説は寿命について棄却。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">d_cal 監査+再較正</span></td>
+          <td>「3.43次元」は本物か</td>
+          <td><b>撤回</b>。較正アンカーが周期境界・サイズ・重み規約に依存していた。忠実較正で中央値<b>2.83</b>(§5-7・図8)。「≈2.6層」も棄却——V駆動の連続ランの見かけ。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">2b 位相分類器</span></td>
+          <td>「呼吸」する軌道で相をどう切るか</td>
+          <td>平滑化 dV/dt のヒステリシス分類器を較正・機械間再現でロック。層別の結果:<b>頑健可読性はconsolidation相に濃縮</b>(0.760)(§5-3・図5)。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">2c 超長走行</span><br><span class="note">4000ep・seed 5</span></td>
+          <td>帯の運命は — 消滅/定常化/呼吸継続?</td>
+          <td>判定 <b>BREATHE</b>。V=1052→86→642→224 と二呼吸し、<b>各収縮相で帯が再び開く</b>(収縮相占有 0.543 vs 成長相 0.055)(§5-4・図6)。</td>
+        </tr>
+        <tr>
+          <td><span class="tcode">キャンペーンA</span><br><span class="note">cycle個体追跡・07-14</span></td>
+          <td>L6→L7:どのサイクルが可読性を担うか</td>
+          <td>可読状態=サイクルの<b>「解れ」</b>(overlap疎)。挿入規則間の寿命差は辺数比でほぼ説明。repair/turnover二分法は「相変調ハザード」に解消(§5-6・図7)。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tcap"><b>表4</b> — ノートIIの実験系譜(2026-07-10〜07-14)。各行の「答え」列の太字が、そのまま§5の発見一覧に対応する。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§5</span>ノートIIでわかったこと — 7つの発見</h2>
+
+  <h3><span class="fno">5-1</span>「可読の窓」の正体は、フィットの質ではなく測れる幅だった <span class="chip ok">確定</span></h3>
+  <p>v24で「METR相」と呼ばれていたものは、コード監査の結果、計量が読める証明ではなく<strong>ball次元フィットが成立する残余クラス(BSW)</strong>だと判明した。しかも v24.1 の再読解で、窓の開閉を決めているのはフィットの良し悪しではない(成立時のR²は常に0.975以上と高い)。決めているのは<strong>使える半径点数 npts が最小条件をまたぐか</strong>——つまり「どれだけ広い距離レンジが測定に使えるか」という幅の閾値通過である。系は常に閾値近傍に滞在し、窓は緩やかに開くのではなく揺らぎで横断される。以後、頑健な主張は <code>min-npts≥5</code> を生き残る窓に限定された。</p>
+
+  <h3><span class="fno">5-2</span>登録の「寿命」と構造の「可読性」は、別の法則で決まる <span class="chip ok">確定(v24.3)</span></h3>
+  <p>directed と symmetric は実は2つの因子——<strong>自己給餌の可否</strong>(発火辺が自分を養えるか)と<strong>逃口の成形</strong>(流束を片側に集中するか両側に分散するか)——を同時に変えていた。v24.3はこれを2×2の4セルに分解した(図4)。</p>
+
+  <figure class="fig">
+    <p class="figtitle">v24.3 規則分解 — 寿命と可読性の解離</p>
+    <p class="figsub">4セル × 6 seed × 900ep, N=2000(全run飽和なし)</p>
+    <div class="legend" aria-hidden="true">
+      <span><span class="sw" style="background:var(--g)"></span>自己給餌 禁止</span>
+      <span><span class="sw" style="background:var(--lt)"></span>自己給餌 許可</span>
+    </div>
+    <div class="panels">
+      <div>
+        <p class="paneltitle">辺寿命 中央値(epochs)— 禁止/許可の軸が支配</p>
+        <svg viewBox="0 0 420 250" role="img" aria-label="辺寿命の棒グラフ。片側成形:禁止231、許可157。両側成形:禁止242、許可163">
+          <defs><clipPath id="clipC1"><rect x="46" y="20" width="360" height="190"/></clipPath></defs>
+          <line x1="46" y1="140" x2="406" y2="140" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="46" y1="70" x2="406" y2="70" stroke="var(--grid)" stroke-width="1"/>
+          <text x="40" y="214" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+          <text x="40" y="144" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">100</text>
+          <text x="40" y="74" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">200</text>
+          <g clip-path="url(#clipC1)">
+            <rect x="88"  y="48.3"  width="48" height="170" rx="4" fill="var(--g)"><title>directed(片側・禁止): 231 epochs</title></rect>
+            <rect x="152" y="100.1" width="48" height="118" rx="4" fill="var(--lt)"><title>対照A(片側・許可): 157 epochs</title></rect>
+            <rect x="248" y="40.6"  width="48" height="178" rx="4" fill="var(--g)"><title>対照B(両側・禁止): 242 epochs</title></rect>
+            <rect x="312" y="95.9"  width="48" height="122" rx="4" fill="var(--lt)"><title>symmetric(両側・許可): 163 epochs</title></rect>
+          </g>
+          <line x1="46" y1="210" x2="406" y2="210" stroke="var(--hair)" stroke-width="1.5"/>
+          <text x="112" y="42"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">231</text>
+          <text x="176" y="94"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">157</text>
+          <text x="272" y="34"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">242</text>
+          <text x="336" y="90"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">163</text>
+          <text x="144" y="230" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">片側成形</text>
+          <text x="304" y="230" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">両側成形</text>
+        </svg>
+      </div>
+      <div>
+        <p class="paneltitle">頑健BSWステップ数(6 seed 計)— 片側/両側の軸が支配</p>
+        <svg viewBox="0 0 420 250" role="img" aria-label="頑健BSW数の棒グラフ。片側成形:禁止21、許可0。両側成形:禁止3、許可0">
+          <defs><clipPath id="clipC2"><rect x="46" y="20" width="360" height="190"/></clipPath></defs>
+          <line x1="46" y1="123.6" x2="406" y2="123.6" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="46" y1="37.3" x2="406" y2="37.3" stroke="var(--grid)" stroke-width="1"/>
+          <text x="40" y="214" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+          <text x="40" y="127.6" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">10</text>
+          <text x="40" y="41.3" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">20</text>
+          <g clip-path="url(#clipC2)">
+            <rect x="88"  y="28.7" width="48" height="190" rx="4" fill="var(--g)"><title>directed(片側・禁止): 21 ステップ</title></rect>
+            <rect x="248" y="184.1" width="48" height="34" rx="4" fill="var(--g)"><title>対照B(両側・禁止): 3 ステップ</title></rect>
+          </g>
+          <line x1="46" y1="210" x2="406" y2="210" stroke="var(--hair)" stroke-width="1.5"/>
+          <text x="112" y="22"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">21</text>
+          <text x="176" y="204" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">0</text>
+          <text x="272" y="178" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">3</text>
+          <text x="336" y="204" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">0</text>
+          <text x="144" y="230" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">片側成形</text>
+          <text x="304" y="230" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">両側成形</text>
+        </svg>
+      </div>
+    </div>
+    <figcaption><b>図4</b> — v24.3 の2×2規則分解(ノートII §2.2.2)。<b>左:</b>辺寿命の中央値は「自己給餌 禁止/許可」だけで決まり(禁止 231・242 vs 許可 157・163)、成形にはほぼ依存しない——自己給餌は文脈非依存に寿命を約1/3縮める。<b>右:</b>頑健BSW(<code>min-npts≥5</code>)は「片側/両側」だけで決まり(片側・禁止 21 vs 両側・禁止 3、許可セルは 0)、給餌の集中が可読性を生む。交互作用は陰性(効果 −74 vs −79、平行)。対照B は directed と同等に長寿命なのにほぼ読めない——<b>長持ちすることと読めることは別</b>。なお対照A(片側・許可)は自己捕食(実現シェア 0.83–0.85)で成長が飢え、V≈120 で凍結する第三のレジームを示した。</figcaption>
+  </figure>
+
+  <h3><span class="fno">5-3</span>読めるのは成長期ではなく収縮期 — しかも収縮は二相ある <span class="chip ok">確定(測定)</span> <span class="chip rej">浄化仮説は棄却</span></h3>
+  <p>v24.2で意外な事実が出た。可読の窓は系が成長しているときではなく、<strong>ピーク後の緩やかな収縮期に集中して開く</strong>(滞在率 73.1% vs 21.5%)。当初の説明候補「収縮=弱い構造が蒸発して純化するから読める」(浄化仮説)はオフライン検定で棄却された:蒸発の勢いと窓の開きは無相関(corr≈−0.01)で、しかも硬化率 h はむしろ収縮期に<strong>下がる</strong>。窓が開くのは蒸発の「勢い」ではなく、薄く・伸びた「状態」においてである。</p>
+  <p>さらにv24.2e以降、収縮は一枚岩ではないことがわかった。h(t) はU字を描く——まず幾何が帳簿から剥がれる <strong>shedding(脱ぎ)</strong>、次に h が回復する <strong>consolidation(締固め)</strong>(図5右)。そして相分類器(2b)で層別すると、頑健な可読性は締固め相に最も濃縮していた(図5左)。</p>
+
+  <figure class="fig">
+    <p class="figtitle">相層別の可読性と、収縮の二相構造</p>
+    <p class="figsub">v24.2e directed 6 seed プール・標準分類器(window_ratio=0.4, eps_ratio=0.75)</p>
+    <div class="legend" aria-hidden="true">
+      <span><span class="sw" style="background:var(--g)"></span>成長</span>
+      <span><span class="sw" style="background:var(--s)"></span>shedding(脱ぎ)</span>
+      <span><span class="sw" style="background:var(--c)"></span>consolidation(締固め)</span>
+    </div>
+    <div class="panels">
+      <div>
+        <p class="paneltitle">頑健BSW滞在率(min-npts≥5)</p>
+        <svg viewBox="0 0 480 250" role="img" aria-label="相層別の頑健BSW滞在率。成長0.101、shedding 0.580、consolidation 0.760">
+          <defs><clipPath id="clipD"><rect x="52" y="16" width="420" height="180"/></clipPath></defs>
+          <line x1="52" y1="153" x2="460" y2="153" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="52" y1="110" x2="460" y2="110" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="52" y1="67"  x2="460" y2="67"  stroke="var(--grid)" stroke-width="1"/>
+          <line x1="52" y1="24"  x2="460" y2="24"  stroke="var(--grid)" stroke-width="1"/>
+          <text x="46" y="200" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+          <text x="46" y="114" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0.5</text>
+          <text x="46" y="28"  text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">1.0</text>
+          <g clip-path="url(#clipD)">
+            <rect x="84"  y="178.6" width="72" height="30"  rx="4" fill="var(--g)"><title>成長相: 0.101</title></rect>
+            <rect x="204" y="96.2"  width="72" height="110" rx="4" fill="var(--s)"><title>shedding相: 0.580</title></rect>
+            <rect x="324" y="65.3"  width="72" height="140" rx="4" fill="var(--c)"><title>consolidation相: 0.760</title></rect>
+          </g>
+          <line x1="52" y1="196" x2="460" y2="196" stroke="var(--hair)" stroke-width="1.5"/>
+          <text x="120" y="172" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">0.101</text>
+          <text x="240" y="90"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">0.580</text>
+          <text x="360" y="59"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">0.760</text>
+          <text x="120" y="216" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">成長</text>
+          <text x="240" y="216" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">shedding</text>
+          <text x="360" y="216" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">consolidation</text>
+        </svg>
+      </div>
+      <div>
+        <p class="paneltitle">硬化率 h(t) のU字(模式)</p>
+        <svg viewBox="0 0 400 250" role="img" aria-label="hのU字。sheddingで0.7から0.5前後へ低下し、consolidationで0.75前後へ回復する">
+          <line x1="56" y1="158" x2="384" y2="158" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="56" y1="103" x2="384" y2="103" stroke="var(--grid)" stroke-width="1"/>
+          <line x1="56" y1="48"  x2="384" y2="48"  stroke="var(--grid)" stroke-width="1"/>
+          <text x="50" y="162" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0.5</text>
+          <text x="50" y="107" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0.6</text>
+          <text x="50" y="52"  text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0.7</text>
+          <path d="M56 48 C120 50 140 158 200 158 C260 158 300 36 384 30" fill="none" stroke="var(--ink-2)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="56" cy="48" r="4.5" fill="var(--ink-2)"/>
+          <circle cx="200" cy="158" r="4.5" fill="var(--ink-2)"/>
+          <circle cx="384" cy="30" r="4.5" fill="var(--ink-2)"/>
+          <text x="70" y="38" font-size="11.5" fill="var(--ink)" font-variant-numeric="tabular-nums">≈0.70</text>
+          <text x="200" y="180" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-variant-numeric="tabular-nums">0.49–0.55</text>
+          <text x="376" y="20" text-anchor="end" font-size="11.5" fill="var(--ink)" font-variant-numeric="tabular-nums">0.65–0.79</text>
+          <rect x="56" y="206" width="144" height="7" rx="3.5" fill="var(--s)"/>
+          <rect x="208" y="206" width="176" height="7" rx="3.5" fill="var(--c)"/>
+          <text x="128" y="232" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">shedding</text>
+          <text x="296" y="232" text-anchor="middle" font-size="11.5" fill="var(--ink-2)">consolidation</text>
+        </svg>
+      </div>
+    </div>
+    <figcaption><b>図5</b> — <b>左:</b>局所位相分類器(2b・機械間再現済み)による層別。頑健な可読窓の滞在率は 成長 0.101 → shedding 0.580 → consolidation 0.760 と、収縮の後半で最大になる(seed別では4/6が consolidation ≥ shedding。s33 は逆転例であり普遍とはしない)。<b>右:</b>硬化率 h=β₁(S)/β₁(H) の典型軌道(ノート記載値からの模式図)。幾何が帳簿から剥がれる相と、幾何が登録へ追いつき直す相に収縮が分かれる。「帯が最も読めるのは、剥がれたあと締め固まっていく局面」という描像が三つの独立計器(§5-6参照)で合流する。</figcaption>
+  </figure>
+
+  <h3><span class="fno">5-4</span>帯は消えない — 系は「呼吸」し、収縮のたびに読める <span class="chip ok">確定(n=1走行+呼吸内再現)</span></h3>
+  <p>では可読の帯は最終的にどうなるのか。選択肢は3つあった:(a) 系とともに消滅する、(b) 定常状態に落ち着く、(c) 成長と収縮を繰り返しながら続く。4000エポックの超長走行(2c)の判定は <strong>BREATHE(呼吸継続)</strong> だった(図6)。</p>
+
+  <figure class="fig">
+    <p class="figtitle">2c 超長走行 — V(t) の呼吸と帯の開閉</p>
+    <p class="figsub">directed・seed 5・4000ep・N=2000(模式図:記載の極値・区間から再構成、曲線形状は補間)</p>
+    <div class="figscroll">
+    <svg viewBox="0 0 860 330" width="860" role="img" aria-label="V(t)は1052まで成長し86まで収縮、642まで再成長し224へ再収縮する。BSW帯は各収縮相で開く">
+      <!-- contraction washes -->
+      <rect x="185" y="30" width="183" height="210" fill="var(--open-wash)"/>
+      <rect x="560" y="30" width="270" height="210" fill="var(--open-wash)"/>
+      <text x="276" y="46" text-anchor="middle" font-size="11" fill="var(--muted)">収縮 ①</text>
+      <text x="695" y="46" text-anchor="middle" font-size="11" fill="var(--muted)">収縮 ②</text>
+      <!-- grid -->
+      <line x1="60" y1="144.5" x2="830" y2="144.5" stroke="var(--grid)" stroke-width="1"/>
+      <line x1="60" y1="49" x2="830" y2="49" stroke="var(--grid)" stroke-width="1"/>
+      <text x="54" y="148.5" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">500</text>
+      <text x="54" y="53" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">1000</text>
+      <text x="54" y="244" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+      <!-- curve -->
+      <path d="M60 228 C100 225 150 39 185 39 C220 39 330 224 368 224 C405 224 520 117 560 117 C600 117 760 197 830 197"
+            fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="185" cy="39" r="4.5" fill="var(--accent)"/>
+      <circle cx="368" cy="224" r="4.5" fill="var(--accent)"/>
+      <circle cx="560" cy="117" r="4.5" fill="var(--accent)"/>
+      <circle cx="830" cy="197" r="4.5" fill="var(--accent)"/>
+      <text x="185" y="26" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">V=1052</text>
+      <text x="368" y="212" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">86</text>
+      <text x="560" y="104" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">642</text>
+      <text x="824" y="184" text-anchor="end" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">224</text>
+      <!-- axis -->
+      <line x1="60" y1="240" x2="830" y2="240" stroke="var(--hair)" stroke-width="1.5"/>
+      <text x="60" y="258" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+      <text x="252.5" y="258" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">1000</text>
+      <text x="445" y="258" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2000</text>
+      <text x="637.5" y="258" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">3000</text>
+      <text x="830" y="258" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">4000 ep</text>
+      <!-- band track -->
+      <text x="60" y="292" font-size="11" fill="var(--ink-2)">帯(BSW開)</text>
+      <rect x="190" y="300" width="173" height="10" rx="4" fill="var(--c)"><title>675–1575ep: 長期開放</title></rect>
+      <rect x="387" y="300" width="16" height="10" rx="3" fill="var(--c)" opacity="0.55"><title>1700–2600ep: 断続的な短窓</title></rect>
+      <rect x="418" y="300" width="12" height="10" rx="3" fill="var(--c)" opacity="0.55"/>
+      <rect x="447" y="300" width="18" height="10" rx="3" fill="var(--c)" opacity="0.55"/>
+      <rect x="482" y="300" width="10" height="10" rx="3" fill="var(--c)" opacity="0.55"/>
+      <rect x="508" y="300" width="16" height="10" rx="3" fill="var(--c)" opacity="0.55"/>
+      <rect x="540" y="300" width="12" height="10" rx="3" fill="var(--c)" opacity="0.55"/>
+      <rect x="647" y="300" width="183" height="10" rx="4" fill="var(--c)"><title>3050–4000ep: 持続開放のまま走行終端</title></rect>
+    </svg>
+    </div>
+    <figcaption><b>図6</b> — 2c走行(ノートII §5.5.2)。V(t)(青)は 1052→86→642→224 と二度呼吸し、V=86 の谷(過去の可読最小V=101 を下回る)からも再成長した。下段トラックは帯(BSW)の開閉:第一収縮で長期開放(675–1575ep)、再成長期は断続的な短窓のみ、第二収縮で再び持続開放のまま走行終端へ。頑健BSWの収縮相占有 0.543 vs 成長相 0.055——<b>「収縮期に読める」は呼吸を跨いで再現する</b>。ピークと谷が減衰していく兆候(定常Vへの漸近)もあるが n=2 呼吸では判定不能。帯は特定のV水準ではなく<b>Vの変化に対してロバストな準定常アトラクタ候補</b>。</figcaption>
+  </figure>
+
+  <h3><span class="fno">5-5</span>「サイクルの総数」は幻だった — β₁(H) ≈ V + const <span class="chip ok">確定(恒等式)</span></h3>
+  <p>初期の有望な相関「サイクルが多いほど読める(β₁↑ → BSW)」は、v24.2で帳簿の恒等式に還元された。T1は全事象で正確に <code>dV=+1, dβ₁=+1</code> を刻むため、<strong>β₁(H) は V+const、つまりただの系サイズの代理量</strong>である。サイクル総数と可読性の相関は、サイズとの共線性にすぎなかった。これにより中心仮説L6→L7は「サイクルが多いほど読める」から<strong>「どのサイクルが運搬支持へ硬化し、持続するかを読める幾何が決める」</strong>へ再定式化された。検証計器も総数から、β₁(S)系・サイクル寿命・overlapへ移された——これがキャンペーンAである。</p>
+
+  <h3><span class="fno">5-6</span>可読状態とは、サイクルが「解けて」選択保存されている状態 <span class="chip hyp">仮説+初の陽性信号</span></h3>
+  <p>キャンペーンA(cycle個体追跡)は、三角挿入TDと長周期挿入TL2の対照でサイクルを個体レベルで追った。結果は三つ。</p>
+  <ul>
+    <li><strong>寿命差は辺数比でほぼ説明される。</strong>サイクル寿命中央値の比 144/190=0.76 は周長比 3/4=0.75 と一致——サイクルは「構成辺がそれぞれ独立ハザードで死ぬ」帰無モデルから大きく外れない。「TLは脆弱なサイクルを作る」懸念は棄却。</li>
+    <li><strong>L6→L7に初の陽性信号。</strong>頑健に読めているステップでは、サイクルの数や年齢は変わらないのに、<strong>overlap(サイクル同士の辺共有)連結性が有意に低い</strong>(ov_lcc 中央値 0.049 vs 0.124)。可読状態はサイクルが多い状態ではなく、<strong>サイクル同士が解けている状態</strong>である。</li>
+    <li><strong>consolidation相はサイクル生存の「抑制場」。</strong>repair(同一サイクルの復硬化)か turnover(入れ替わり)かという二分法は、年齢別Kaplan–Meier補正で「相変調ハザード」に解消された(図7)。</li>
+  </ul>
+
+  <figure class="fig">
+    <p class="figtitle">サイクル生存ハザードの相変調</p>
+    <p class="figsub">2c軌道 × キャンペーンA計器(seed 5・4000ep)。375ep統一窓・年齢別KM帰無に対する観測生存比</p>
+    <div class="legend" aria-hidden="true">
+      <span><span class="sw" style="background:var(--g)"></span>成長</span>
+      <span><span class="sw" style="background:var(--s)"></span>shedding</span>
+      <span><span class="sw" style="background:var(--c)"></span>consolidation</span>
+      <span><span class="sw" style="background:var(--neu)"></span>相境界</span>
+    </div>
+    <svg viewBox="0 0 640 280" role="img" aria-label="5つの窓の観測/帰無生存比。consolidationで2.86倍、第一sheddingで0.31倍">
+      <defs><clipPath id="clipF"><rect x="52" y="16" width="560" height="184"/></clipPath></defs>
+      <line x1="52" y1="82.7" x2="612" y2="82.7" stroke="var(--grid)" stroke-width="1"/>
+      <text x="46" y="86.7" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.0</text>
+      <text x="46" y="204" text-anchor="end" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">0</text>
+      <g clip-path="url(#clipF)">
+        <rect x="68"  y="57.4"  width="64" height="148" rx="4" fill="var(--neu)"><title>ep300–675(成長→shedding境界): 2.43× (z=+4.67)</title></rect>
+        <rect x="173" y="181.8" width="64" height="24"  rx="4" fill="var(--s)"><title>ep700–1075(第一shedding): 0.31× (z=−2.84)</title></rect>
+        <rect x="278" y="127.3" width="64" height="79"  rx="4" fill="var(--g)"><title>ep1825–2200(第二成長): 1.24× (z=+0.63)</title></rect>
+        <rect x="383" y="136.1" width="64" height="70"  rx="4" fill="var(--s)"><title>ep3025–3400(shedding): 1.09× (z=+0.26)</title></rect>
+        <rect x="488" y="32.3"  width="64" height="174" rx="4" fill="var(--c)"><title>ep3625–4000(consolidation): 2.86× (z=+4.05)</title></rect>
+      </g>
+      <line x1="52" y1="141.3" x2="612" y2="141.3" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <text x="612" y="134" text-anchor="end" font-size="11" fill="var(--muted)">帰無(=1.0)</text>
+      <line x1="52" y1="200" x2="612" y2="200" stroke="var(--hair)" stroke-width="1.5"/>
+      <text x="100" y="50"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">×2.43</text>
+      <text x="205" y="176" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">×0.31</text>
+      <text x="310" y="121" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">×1.24</text>
+      <text x="415" y="130" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">×1.09</text>
+      <text x="520" y="26"  text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">×2.86</text>
+      <text x="100" y="220" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-variant-numeric="tabular-nums">300–675</text>
+      <text x="205" y="220" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-variant-numeric="tabular-nums">700–1075</text>
+      <text x="310" y="220" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-variant-numeric="tabular-nums">1825–2200</text>
+      <text x="415" y="220" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-variant-numeric="tabular-nums">3025–3400</text>
+      <text x="520" y="220" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-variant-numeric="tabular-nums">3625–4000 ep</text>
+      <text x="100" y="238" text-anchor="middle" font-size="10.5" fill="var(--muted)">境界</text>
+      <text x="205" y="238" text-anchor="middle" font-size="10.5" fill="var(--muted)">shedding①</text>
+      <text x="310" y="238" text-anchor="middle" font-size="10.5" fill="var(--muted)">成長②</text>
+      <text x="415" y="238" text-anchor="middle" font-size="10.5" fill="var(--muted)">shedding②</text>
+      <text x="520" y="238" text-anchor="middle" font-size="10.5" fill="var(--muted)">consolidation</text>
+    </svg>
+    <figcaption><b>図7</b> — 窓開始時点に生きていたサイクルの、年齢別帰無(構成辺が独立に死ぬ)に対する観測生存比(§7.7.1)。consolidation窓ではサイクルが帰無の <b>2.86倍</b> 生き残り(z=+4.05)、第一shedding窓では <b>0.31倍</b> しか残らない(z=−2.84)。生のJaccardで見れば「入れ替わり(turnover)」に見えるが、それは窓長(375ep)が寿命中央値(185ep)を超えるための錯覚で、実態は<b>「抑制されたハザード場の中での入れ替わり」</b>——consolidationはサイクルを選択的に保存する相である。注意:単一seed・単一軌道であり、z値はサイクル間相関(辺共有)により過大。</figcaption>
+  </figure>
+
+  <h3><span class="fno">5-7</span>「何次元か」はまだ言えない — 3.43は撤回、忠実較正で「3のやや下」 <span class="chip rej">3.43次元は撤回</span> <span class="chip open">次元言明は条件付きのみ</span></h3>
+  <p>directed頑健帯のball次元読み d_cal の中央値 3.43 は、90%が3D格子アンカーの上限を超える「外挿値」だった。監査の結果、較正アンカー自体が周期境界・系サイズ・辺重みの一様性に強く依存しており(重みの不均一だけで読みが 1.97→2.54 動く)、規約を宣言しない d_cal は次元主張に使えないと判明。成長グラフに忠実な規約(非周期・ステップごとのV整合・経験的辺重み)で再較正すると読みは大きく動いた(図8)。</p>
+
+  <figure class="fig">
+    <p class="figtitle">d_cal 再較正 — 較正規約で「次元の読み」はここまで動く</p>
+    <p class="figsub">旧規約(周期境界・サイズ非整合・単位重み)→ 忠実規約(非周期・V整合・経験重み)</p>
+    <div class="figscroll">
+    <svg viewBox="0 0 760 200" width="760" role="img" aria-label="v24.3では3.43が2.83へ、v24.2eでは2.70が2.34へ移動するドットレンジ図">
+      <!-- refs -->
+      <line x1="440" y1="24" x2="440" y2="152" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4 5"/>
+      <line x1="633" y1="24" x2="633" y2="152" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4 5"/>
+      <text x="440" y="16" text-anchor="middle" font-size="10.5" fill="var(--muted)">d=3(3D格子)</text>
+      <text x="633" y="16" text-anchor="middle" font-size="10.5" fill="var(--muted)">d=4(4D格子)</text>
+      <!-- axis -->
+      <line x1="150" y1="152" x2="730" y2="152" stroke="var(--hair)" stroke-width="1.5"/>
+      <text x="150" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">1.5</text>
+      <text x="246.7" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.0</text>
+      <text x="343.3" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">2.5</text>
+      <text x="440" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">3.0</text>
+      <text x="536.7" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">3.5</text>
+      <text x="633" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">4.0</text>
+      <text x="730" y="172" text-anchor="middle" font-size="10.5" fill="var(--muted)" font-variant-numeric="tabular-nums">4.5</text>
+      <!-- row 1: v24.3 -->
+      <text x="140" y="62" text-anchor="end" font-size="12" fill="var(--ink-2)">v24.3 頑健帯</text>
+      <line x1="322" y1="58" x2="476.8" y2="58" stroke="var(--grid)" stroke-width="2"/>
+      <rect x="376.2" y="53" width="48.3" height="10" rx="5" fill="var(--accent)" opacity="0.35"><title>IQR 2.67–2.92</title></rect>
+      <line x1="512" y1="58" x2="428" y2="58" stroke="var(--muted)" stroke-width="1.4"/>
+      <path d="M428 58 l9 -4.5 v9 z" fill="var(--muted)"/>
+      <circle cx="523.3" cy="58" r="6" fill="none" stroke="var(--muted)" stroke-width="2"><title>旧規約: 3.43(90%が3Dアンカー外)</title></circle>
+      <circle cx="407.1" cy="58" r="6.5" fill="var(--accent)"><title>忠実較正: 2.83(IQR 2.67–2.92、外挿ゼロ)</title></circle>
+      <text x="523.3" y="42" text-anchor="middle" font-size="11.5" fill="var(--muted)" font-variant-numeric="tabular-nums">旧 3.43</text>
+      <text x="399" y="84" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">新 2.83</text>
+      <!-- row 2: v24.2e -->
+      <text x="140" y="126" text-anchor="end" font-size="12" fill="var(--ink-2)">v24.2e 頑健帯</text>
+      <line x1="235.1" y1="122" x2="370.4" y2="122" stroke="var(--grid)" stroke-width="2"/>
+      <rect x="235.1" y="117" width="135.3" height="10" rx="5" fill="var(--accent)" opacity="0.35"><title>IQR 1.94–2.64</title></rect>
+      <line x1="371" y1="122" x2="333" y2="122" stroke="var(--muted)" stroke-width="1.4"/>
+      <path d="M333 122 l9 -4.5 v9 z" fill="var(--muted)"/>
+      <circle cx="381.8" cy="122" r="6" fill="none" stroke="var(--muted)" stroke-width="2"><title>旧規約: 2.70(旧「≈2.6層」)</title></circle>
+      <circle cx="312.2" cy="122" r="6.5" fill="var(--accent)"><title>忠実較正: 2.34(IQR 1.94–2.64)</title></circle>
+      <text x="392" y="106" text-anchor="start" font-size="11.5" fill="var(--muted)" font-variant-numeric="tabular-nums">旧 2.70</text>
+      <text x="306" y="146" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-weight="600" font-variant-numeric="tabular-nums">新 2.34</text>
+    </svg>
+    </div>
+    <figcaption><b>図8</b> — d_cal の再較正(ノートII §2.2.3)。塗りつぶし点=忠実規約での中央値、帯=IQR、白抜き点=旧規約の読み。v24.3 directed頑健帯は 3.43→<b>2.83</b>(全21点がアンカー内側に収まり外挿消滅)、v24.2e は 2.70→<b>2.34</b>。二つの中央値の差は主に<b>系サイズVの構成差</b>で、Vを揃えると差はほぼ消える。さらに d_new の駆動変数はV自身(偏相関 ρ=+0.54)で、seedごとに異なる d(V) 関係が刻まれ、分布に離散的な「層」は存在しない。ゆえに<b>「この系はd次元だ」という言明は現時点で立たず</b>、立つのは「規約Xの下、V帯Yで d は Z を読む」という条件付きの形だけ。</figcaption>
+  </figure>
+
+  <h3>棄却台帳 — ノートIIの5日間で死んだ仮説</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>仮説</th><th>殺した実験</th><th>死因</th></tr></thead>
+      <tbody>
+        <tr><td>directedの優位は容量(NMAX)アーティファクト</td><td class="num">v24.2</td><td>ヘッドルーム下でも BSW 183 vs 1、寿命非対称は維持。</td></tr>
+        <tr><td>収縮=浄化だから読める(素朴・選択的)</td><td class="num">オフライン検定</td><td>蒸発と窓開きが無相関。hはむしろ低下。</td></tr>
+        <tr><td>可読=骨格化(強い痩身)</td><td class="num">v24.2e</td><td>帯は厚くも薄くも同程度に冗長(occ2ecc 0.730/0.730)。効くのは蒸発の勢いでなく「薄い状態」。</td></tr>
+        <tr><td>β₁(高いほど読める)</td><td class="num">v24.2</td><td>β₁(H)≈V+const のトートロジー。サイズ共線性。</td></tr>
+        <tr><td>寿命差は給餌の希釈(分配先数)のせい</td><td class="num">v24.3</td><td>分配先数6.5倍差でも寿命はほぼ同一(231 vs 242)。</td></tr>
+        <tr><td>「3.43次元」「≈2.6層」</td><td class="num">d_cal監査</td><td>較正規約依存。忠実較正で 2.83 / 層は連続ランのモード。</td></tr>
+        <tr><td>TLは脆弱なサイクルを作る(A1:三角の局所性が必須)</td><td class="num">キャンペーンA</td><td>寿命差は辺数比3:4で説明。TL2も頑健窓を作る(A2採用)。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tcap"><b>表5</b> — ノートIIで棄却された仮説の一覧。ノートIの棄却(SOC、「3」、強い骨化ほか)は§2の各幕に記載。監査運用(測定事実・帰結・仮説の分離)が機能している証跡でもある。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§6</span>概念の梯子と、中心仮説の現在形</h2>
+  <p>ノートIIはこの依存関係の梯子(L系列)の上に組まれている。ノートIのK系列(離散登録→コンパクト化→巻き数の整数化→絡み→3+1)がこの分野で登ろうとする「縦の道」だとすれば、L系列はその成立条件を横から監査する足場である——K6(絡みが3を選ぶ)に賭ける前に、L7(計量可読性)を固めるという順序が自覚的に選ばれている。各段の現在の監査状態を付す。</p>
+
+  <figure class="fig" style="padding-bottom:22px">
+    <p class="figtitle">L0→L8 — 差分から次元までの依存の鎖</p>
+    <ol class="ladder">
+      <li><span class="lk">L0→L1</span><span class="lt2">差の成立は最小の二項関係を要求する</span><span class="chip ok">純粋帰結</span></li>
+      <li><span class="lk">L1→L2</span><span class="lt2">背景容器なしの新しい項は、既存差分への参照としてのみ内部アドレスを持つ</span><span class="chip open">open(原理)</span></li>
+      <li><span class="lk">L2→L3</span><span class="lt2">確定した登録は単一事象内で保存される(不可逆履歴)</span><span class="chip ok">独立条件</span></li>
+      <li><span class="lk">→L4</span><span class="lt2">新極の最小登録=不可逆三角挿入(ΔV=1, ΔE=2, Δβ₁=1)</span><span class="chip ok">構成的帰結・実測一致</span></li>
+      <li><span class="lk">→L4b</span><span class="lt2">directed台帳は局所自己給餌を禁止する→持続登録は閉じた再給餌回路を要求</span><span class="chip hyp">構造仮説(v24.3が寿命軸として支持)</span></li>
+      <li><span class="lk">→L5</span><span class="lt2">サイクルが登録維持と複数経路の照合を可能にする</span><span class="chip hyp">グラフ帰結+仮説</span></li>
+      <li><span class="lk">→L6</span><span class="lt2">サイクルの生滅が準定常な循環核を形成する</span><span class="chip open">open(campAで追跡開始)</span></li>
+      <li><span class="lk">→L7</span><span class="lt2">差分構造が計量として再利用可能になる(MRW)——鍵は数でなく「どのサイクルが硬化・持続するか」</span><span class="chip hyp">中心仮説(再定式化済・初の陽性信号)</span></li>
+      <li><span class="lk">→L8</span><span class="lt2">計量可読な構造から有効次元ランクが測定される</span><span class="chip open">未帰還(§10の帰還条件待ち)</span></li>
+    </ol>
+    <figcaption><b>図9</b> — 依存の鎖(ノートII §6)。次元(L8)は最後の段であり、L7(計量可読性)が確立するまでノートは「3次元の導出」へ戻らないと自らを縛っている。帰還条件は、BSWとMRWの操作的分離・因果判別・独立な二つの次元計器の整合など5項目(§10)。</figcaption>
+  </figure>
+
+  <p>以上を束ねた中心仮説の現在形(ノート§11の圧縮)は次のとおり。</p>
+  <blockquote class="central">
+    <p>差は二項を要する。背景容器を持たない新しい差は、既存差に対して登録される。有向台帳では自分で自分を養えないため、持続する登録は系を巡る閉じた再給餌回路を要求する。可読の帯は成長期でなく中間収縮帯に開く。それを支えるのはサイクルの数ではなく、<strong>どのサイクルが運搬へ硬化し、持続するか</strong>である。——流束の閉回路が持続登録を、硬化したサイクルが計量可読性を担うとき、差分構造は計量として読める可能性がある。</p>
+  </blockquote>
+  <p class="note">この三文のうち、前半は純粋構成とコード帰結、中央は測定事実と未分離の要因、後半は検証すべき仮説——という区分までがノートに明記されている。</p>
+</section>
+
+<!-- ================================================================ -->
+<section class="prose">
+  <h2><span class="no">§7</span>まだ開いていること・次の一手</h2>
+  <p><strong>開いている主要問題:</strong></p>
+  <ul>
+    <li><strong>L1→L2(内部アドレス原理)</strong>は依然として最も痛い急所。孤立項の内部アドレス構成が示されれば弱まる。登録概念の自己適用問題(「登録済み/未登録」の区別自体が差分を使う)も未決。</li>
+    <li><strong>BSWはMRWの何なのか</strong>(必要条件・十分条件・相関物?)。MRWの4条件のうち、接続性・経路冗長性(0.73)・時間的持続(950ep)には正の証拠があるが、<strong>「有限な不整合」だけは構成上自動成立のため未検定</strong>。§10の帰還条件4(独立二計器の次元整合)も未着手。</li>
+    <li><strong>campAの残件:</strong> TSセル(細分対照)が未走行でA3判定は未決。TL2の異パターン(若く少ないサイクル)の解釈保留。s33の逆転例、seed異質性、呼吸の減衰(n=2)も未解決。</li>
+    <li><strong>相関どまりの発見:</strong>「可読=解れ」「consolidation=選択保存」はいずれも観測的合流であり、因果は未確定。</li>
+  </ul>
+  <p><strong>ノートが自ら指定している次の一手(§12優先順):</strong></p>
+  <ol>
+    <li>規則分解の残作業——剥離される辺の属性層別(寿命・シェア・cycle所属)、状態整合対照。</li>
+    <li>小規模較正——既知グラフ(木・格子・ランダム・小世界)でBSW判定器とMRW候補軸を独立検証(判定器の反証条件 §9.7)。</li>
+    <li>キャンペーンB(因果介入)の設計——変数を一つに絞り、持続・硬化サイクルに介入してBSW/MRW挙動が動くかを見る。L6→L7の因果判別はここにかかる。</li>
+    <li>§10の帰還条件をすべて満たした場合のみ、有効次元 d(ℓ,N,t) を主要主張へ戻す。</li>
+  </ol>
+  <p class="note">総括:この5日間の実質的な前進は「答え」よりも<strong>測定器の信頼化</strong>にある。METR→BSWの再命名、β₁(H)の降格、d_calの規約依存の暴露、位相分類器のロック、サイクル個体追跡の確立——次元について何かを言うための足場が、ようやく音を立てなくなってきた段階である。</p>
+</section>
+
+</div>

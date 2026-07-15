@@ -1,0 +1,2 @@
+1 consolidation window(s)
+  win ep 850-900 (50ep): |start|=54 |end|=68 Jaccard=0.452 start_survival=0.704 end_newborn_frac=0.441 -> MIXED

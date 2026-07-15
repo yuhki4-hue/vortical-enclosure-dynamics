@@ -1,0 +1,18 @@
+campA_TD_g0.075_s5.tsv: w_snaps=3.7 eps_v=1.74 switches=1
+  new: growth_occ=0.296 contr_occ=1.000   old: growth_occ=0.304 contr_occ=0.769
+  -> campA_TD_g0.075_s5_phases.tsv
+campA_TD_g0.075_s7.tsv: w_snaps=3.7 eps_v=1.503 switches=1
+  new: growth_occ=0.208 contr_occ=0.583   old: growth_occ=0.111 contr_occ=0.556
+  -> campA_TD_g0.075_s7_phases.tsv
+campA_TD_g0.075_s10.tsv: w_snaps=3.7 eps_v=1.071 switches=0
+  new: growth_occ=0.278 contr_occ=nan   old: growth_occ=0.286 contr_occ=0.000
+  -> campA_TD_g0.075_s10_phases.tsv
+campA_TD_g0.075_s15.tsv: w_snaps=3.7 eps_v=1.624 switches=1
+  new: growth_occ=0.233 contr_occ=0.667   old: growth_occ=0.222 contr_occ=0.556
+  -> campA_TD_g0.075_s15_phases.tsv
+campA_TD_g0.075_s21.tsv: w_snaps=3.7 eps_v=1.612 switches=0
+  new: growth_occ=0.278 contr_occ=nan   old: growth_occ=0.212 contr_occ=1.000
+  -> campA_TD_g0.075_s21_phases.tsv
+campA_TD_g0.075_s33.tsv: w_snaps=3.7 eps_v=1.668 switches=1
+  new: growth_occ=0.438 contr_occ=1.000   old: growth_occ=0.333 contr_occ=1.000
+  -> campA_TD_g0.075_s33_phases.tsv

@@ -17,6 +17,8 @@ This is a working-note module.
 - It treats failed definitions and failed simulations as part of the audit
   trail.
 - It distinguishes conceptual progress from numerical confirmation.
+- It now has a bounded public summary layer in [reports/](reports/) for the
+  current dimensionality-selection experiment cycle.
 - It should be read together with the VED core sequence, Vol.2 closure
   geometry, Vol.4 audit discipline, and the stochastic-quantization module.
 
@@ -67,11 +69,26 @@ identifies a topology-generating registration rule that can be tested further.
 See [Topological Signatures of Registration](experiments/topological_signatures_of_registration.md)
 and the machine-readable per-seed record [repro.tsv](experiments/repro.tsv).
 
+## Current Public Summary
+
+The current stopping point for the dimensionality-selection experiment cycle
+is summarized in:
+
+- [Reports index](reports/)
+- [Working Note II experimental summary report](reports/ved-note2-report.html)
+
+The report is a reading layer over the working notes and experiment logs. It
+does not replace the raw logs or establish a completed derivation of observed
+dimensionality. It is intended to make the current audit state readable before
+the next experiment cycle begins.
+
 ## What Is Preserved Here
 
 | Material | Location | Role |
 |---|---|---|
+| Current public reports | [reports/](reports/) | Bounded summary layer for the current dimensionality-selection cycle |
 | Full Japanese working note | [README_ja.md](README_ja.md) | Main research log and current argument state |
+| Japanese working note II | [README_II_ja.md](README_II_ja.md) | Continuation from registered difference to metric readability |
 | Early Japanese note | [archive/dimensionality_working_note_ja_initial.md](archive/dimensionality_working_note_ja_initial.md) | Earlier snapshot preserved for provenance |
 | Numerical and topological probes | [experiments/](experiments/) | Scripts, TSV output, verification notes, failed routes |
 | Experiment index | [experiments/README.md](experiments/README.md) | Guide to the prototype scripts and failure logs |

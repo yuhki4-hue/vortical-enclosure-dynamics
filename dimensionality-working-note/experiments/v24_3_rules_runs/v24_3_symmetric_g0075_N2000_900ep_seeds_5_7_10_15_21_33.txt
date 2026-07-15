@@ -1,0 +1,14 @@
+cell=symmetric g=0.075 s=5 [ok] SAT=no snaps=36 occ=0 occ(npts>=5)=0 edge_life_med=162 censored=343 n_dst_mean=53.7 fire_share_mean=0.3970 rev_share_mean=0.0009 reflections=0 nsub=1151 dead=980
+    -> v24_3_symmetric_g0.075_s5.tsv
+cell=symmetric g=0.075 s=7 [ok] SAT=no snaps=36 occ=0 occ(npts>=5)=0 edge_life_med=162 censored=471 n_dst_mean=64.9 fire_share_mean=0.4303 rev_share_mean=0.0009 reflections=0 nsub=1178 dead=943
+    -> v24_3_symmetric_g0.075_s7.tsv
+cell=symmetric g=0.075 s=10 [ok] SAT=no snaps=36 occ=0 occ(npts>=5)=0 edge_life_med=163 censored=425 n_dst_mean=56.0 fire_share_mean=0.4455 rev_share_mean=0.0008 reflections=0 nsub=1078 dead=866
+    -> v24_3_symmetric_g0.075_s10.tsv
+cell=symmetric g=0.075 s=15 [ok] SAT=no snaps=36 occ=0 occ(npts>=5)=0 edge_life_med=163 censored=272 n_dst_mean=59.4 fire_share_mean=0.4312 rev_share_mean=0.0009 reflections=0 nsub=1073 dead=937
+    -> v24_3_symmetric_g0.075_s15.tsv
+cell=symmetric g=0.075 s=21 [ok] SAT=no snaps=36 occ=1 occ(npts>=5)=0 edge_life_med=164 censored=353 n_dst_mean=62.5 fire_share_mean=0.4027 rev_share_mean=0.0007 reflections=0 nsub=1372 dead=1195
+    -> v24_3_symmetric_g0.075_s21.tsv
+cell=symmetric g=0.075 s=33 [ok] SAT=no snaps=36 occ=0 occ(npts>=5)=0 edge_life_med=165 censored=387 n_dst_mean=53.4 fire_share_mean=0.3879 rev_share_mean=0.0009 reflections=0 nsub=1183 dead=990
+    -> v24_3_symmetric_g0.075_s33.tsv
+
+POOLED cell=symmetric: edge lifetimes n=11825 median=163 p90=184

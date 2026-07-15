@@ -1,0 +1,3 @@
+v24_3_directed_g0.075_s15.tsv: w_snaps=1.8 eps_v=1.083 switches=1
+  new: growth_occ=0.241 contr_occ=0.571   old: growth_occ=0.222 contr_occ=0.556
+  -> v24_3_directed_g0.075_s15_phases.tsv

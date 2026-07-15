@@ -1,0 +1,12 @@
+cell=TD g=0.075 s=5 SAT=no cycles=1660 dead=1438 censored=222 cyc_life_med=190 died_new_frac=0.773 robBSW=4 tl_fallback=0 nsub=1660
+    -> campA_TD_g0.075_s5.tsv / _cycles.tsv / _alive.tsv
+cell=TD g=0.075 s=7 SAT=no cycles=1286 dead=1222 censored=64 cyc_life_med=194 died_new_frac=0.759 robBSW=0 tl_fallback=0 nsub=1286
+    -> campA_TD_g0.075_s7.tsv / _cycles.tsv / _alive.tsv
+cell=TD g=0.075 s=10 SAT=no cycles=1050 dead=759 censored=291 cyc_life_med=187 died_new_frac=0.772 robBSW=0 tl_fallback=0 nsub=1050
+    -> campA_TD_g0.075_s10.tsv / _cycles.tsv / _alive.tsv
+cell=TD g=0.075 s=15 SAT=no cycles=1466 dead=1358 censored=108 cyc_life_med=188 died_new_frac=0.767 robBSW=2 tl_fallback=0 nsub=1466
+    -> campA_TD_g0.075_s15.tsv / _cycles.tsv / _alive.tsv
+cell=TD g=0.075 s=21 SAT=no cycles=1613 dead=1198 censored=415 cyc_life_med=187 died_new_frac=0.767 robBSW=5 tl_fallback=0 nsub=1613
+    -> campA_TD_g0.075_s21.tsv / _cycles.tsv / _alive.tsv
+cell=TD g=0.075 s=33 SAT=no cycles=1528 dead=1278 censored=250 cyc_life_med=193 died_new_frac=0.738 robBSW=10 tl_fallback=0 nsub=1528
+    -> campA_TD_g0.075_s33.tsv / _cycles.tsv / _alive.tsv
