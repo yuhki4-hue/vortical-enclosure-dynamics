@@ -1,0 +1,6 @@
+seed	switches	HR_shedding	HR_consolidation	HR_cons_young_a1	HR_cons_old_a2a3	I_s	A	B	old_protected
+7	3	1.594	0.567	0.355	0.906	+0.936	PASS	FAIL	yes
+10	2	1.397	1.154	1.348	0.938	-0.362	PASS	PASS	yes
+15	5	1.306	1.299	1.510	1.041	-0.372	PASS	PASS	no
+21	3	1.262	0.893	0.945	0.829	-0.131	PASS	PASS	yes
+33	5	1.584	1.134	1.287	0.954	-0.299	PASS	PASS	yes

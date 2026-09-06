@@ -1,0 +1,13 @@
+phase x age_band hazard table (events/at-risk per 25ep interval):
+  growth        a0:0/8314=0.000  a1:989/6489=0.152  a2:688/3029=0.227  a3:92/433=0.212
+  shedding      a0:2/1621=0.001  a1:486/1656=0.293  a2:285/1005=0.284  a3:57/227=0.251
+  consolidation a0:1/6306=0.000  a1:970/4946=0.196  a2:578/2652=0.218  a3:124/614=0.202
+
+age-adjusted (Mantel-Haenszel over locked 4 bands) HR vs growth:
+  HR(shedding     ) = 1.584
+  HR(consolidation) = 1.134
+
+phase x age strata: HR_cons(young a1)=1.287 HR_cons(old a2+a3)=0.954  [shed young=1.926 old=1.232]
+criterion A (shedding culling: HR_shed>1 AND HR_shed>HR_cons): PASS
+criterion B (age selectivity: I_s = logHR_cons,old - logHR_cons,young = -0.299 < 0): PASS
+secondary record: HR_cons,old<1 -> yes

@@ -1,0 +1,3 @@
+campA_TD_s10_4000ep.tsv: w_snaps=3.7 eps_v=1.128 switches=2
+  new: growth_occ=0.613 contr_occ=0.889   old: growth_occ=0.635 contr_occ=0.778
+  -> campA_TD_s10_4000ep_phases.tsv

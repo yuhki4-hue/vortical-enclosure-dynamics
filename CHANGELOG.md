@@ -35,6 +35,28 @@ All notable changes to this repository will be documented in this file.
 - Added 4000-epoch TD seed-5 Campaign A reconciliation logs and analysis,
   linking the 2c trajectory to repair/turnover reinterpretation via
   phase-dependent cycle-hazard modulation.
+- Added `campA_phase_hazard.py` and the TD seed-7 4000-epoch phase-hazard
+  confirmation run for Campaign A, preserving the shedding-culling result
+  while exposing seed-dependent consolidation age selectivity.
+- Completed TD 4000-epoch Campaign A phase-hazard confirmation for seeds
+  10/15/21/33, reproducing shedding culling in 5/5 confirmation seeds and
+  consolidation age-selectivity in 4/5.
+- Refined the Campaign A phase-hazard interpretation: pooled results indicate
+  that old-cycle hazard attenuation belongs to contraction broadly, while
+  consolidation differs from shedding by lower hazard level rather than a
+  unique age-gradient.
+- Added `campA_insertion_hazard.py` and updated Dimensionality Working Note II
+  through §7.7.3: absolute-hazard decomposition re-identifies the age effect
+  as growth-phase old-cycle culling, and the holdout insertion-pressure audit
+  yields partial decomposition rather than full mediation.
+- Registered the next Dimensionality Working Note II step as an edge
+  flux-fate audit, prioritizing pure-read edge-level feeding, maintenance
+  margin, shared-edge loss, and overlap-unraveling diagnostics before further
+  TS-cell or `d_new(V)` work.
+- Added `growth_flux_ledger.py` and TD 4000-epoch Campaign A flux-ledger runs
+  for seeds 5/7/10/15/21/33; verified pure-read behavior against existing
+  Campaign A cycle/alive logs and preserved edge-level ledger plus cycle-edge
+  outputs for §7.7.4.
 - Added `dimensionality-working-note/reports/` as a public summary layer for
   the current dimensionality-selection experiment cycle, with GitHub Pages
   routing from the dimensionality index and README.

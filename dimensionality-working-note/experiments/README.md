@@ -26,7 +26,7 @@ For a bounded interpretive summary of the current experiment cycle, start from
 | v24.2 headroom runs | `growth_v24_2_headroom.py`, `v24_2_headroom_runs/` | Headroom scan separating BSW behavior from NMAX saturation while adding scaling-width and support-ladder diagnostics |
 | v24.2e extended-epoch runs | `growth_v24_2e_extended.py`, `v24_2e_extended_runs/` | Extended-epoch diagnostic run adding edge evaporation, S-support density, and path-redundancy instruments |
 | v24.3 rule decomposition | `growth_v24_3_rules.py`, `v24_3_rules_runs/` | Two-by-two rule decomposition separating self-feeding and fanout effects |
-| Campaign A cycle tracking | `growth_campA_cycles.py`, `campA_repair_turnover.py`, `campA_cycle_runs/` | TD/TL2 cycle-individual tracking for lifetime, death attribution, overlap degeneracy, and repair/turnover decomposition |
+| Campaign A cycle tracking | `growth_campA_cycles.py`, `campA_repair_turnover.py`, `campA_insertion_hazard.py`, `growth_flux_ledger.py`, `campA_cycle_runs/`, `campA_flux_ledger_runs/` | TD/TL2 cycle-individual tracking for lifetime, death attribution, overlap degeneracy, repair/turnover decomposition, insertion-pressure hazard audits, and edge flux-fate ledgers |
 | Campaign support tools | `phase_classifier_v1.py`, `band_fate_judge.py`, `lattice_anchor_ext.py`, `campaign_tools_README_ja.md` | Local phase classification, band-fate adjudication, and d_cal anchor recalibration tools for later campaigns |
 | Betti / topological checks | `betti repro.py`, `growth v24 betti.py`, `repro.tsv`, `betti_verification_v24.md`, `topological_signatures_of_registration.md` | Attempts to track whether registration leaves topological signatures |
 | Route 2 attempts | `route2 v1 deprecated.py`, `route2 v2.py` | Alternative route, with the first version explicitly preserved as deprecated |
@@ -155,8 +155,11 @@ Primary files:
 
 - [growth_campA_cycles.py](growth_campA_cycles.py)
 - [campA_repair_turnover.py](campA_repair_turnover.py)
+- [campA_insertion_hazard.py](campA_insertion_hazard.py)
+- [growth_flux_ledger.py](growth_flux_ledger.py)
 - [campA_cycle_runs/](campA_cycle_runs/)
 - [campA_cycle_runs summary](campA_cycle_runs/README.md)
+- [campA_flux_ledger_runs/](campA_flux_ledger_runs/)
 
 The first full run separates cycle persistence and death attribution across
 TD and TL2. TD has longer median cycle lifetime and a much higher fraction of
@@ -170,6 +173,32 @@ the 2c trajectory. Its raw Jaccard window score indicates turnover, but
 age-conditioned survival correction shows consolidation-phase hazard
 suppression. This reframes the repair/turnover distinction as
 phase-dependent cycle-hazard modulation.
+
+The TD seed-7 4000-epoch confirmation run adds the first unused-seed check
+with `campA_phase_hazard.py`. It reproduces the shedding-culling criterion
+but reverses the age-selectivity direction relative to seed 5.
+
+The completed confirmation set `7,10,15,21,33` passes the registered
+two-pillar gate: shedding culling is reproduced in all five confirmation
+seeds, and consolidation age-selectivity is reproduced in four of five.
+Post-registration decomposition refines the reading: the apparent
+consolidation protection is a ratio effect against the growth baseline.
+Absolute hazards show that the strong age dependence belongs to growth, where
+old cycles are culled much more sharply than young cycles.
+
+The insertion-pressure audit in `campA_insertion_hazard.py` partially
+re-describes that growth-age effect. On holdout seeds `15,21,33`, the
+registered `age x insertion-pressure` coefficient is positive in all three
+seeds, but phase-age terms remain after the insertion variable is included.
+The reading is therefore partial decomposition, not mediation proof:
+insertion competition is one contributor, while the remaining residual points
+toward feeding-allocation structure.
+
+The edge flux-fate ledger in `growth_flux_ledger.py` records pure-read
+edge-level feeding opportunity, allocation share, H-layer inflow, decay,
+maintenance margin, and alive-cycle sharing load. The TD 4000-epoch six-seed
+rerun matches the existing Campaign A cycle and alive logs byte-for-byte while
+adding ledger and cycle-edge outputs for the next audit stage.
 
 ## Caution
 
