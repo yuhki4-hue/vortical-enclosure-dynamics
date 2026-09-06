@@ -14,3 +14,5 @@ the paper were revised.
 
 論文本文の理解を補助したい読者や、各章がどのように更新されたかを追いたい読者向けの
 資料です。
+
+完結済みの theorem / proof anatomy 実験系列は、[closed research record archive](./theorem_proof_anatomy_experiment/README.md) として整理しています。

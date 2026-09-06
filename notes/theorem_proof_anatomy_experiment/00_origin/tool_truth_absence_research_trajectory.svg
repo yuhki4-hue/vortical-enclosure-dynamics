@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1760" viewBox="0 0 1600 1760" role="img" aria-labelledby="title desc">
+  <title id="title">「道具の真理不在性」研究軌跡、2026年8月22日スナップショット</title>
+  <desc id="desc">観測成功から存在論的一意性を導けるかという問いが、普遍定理探索、条件分解、一般監査語彙、否定的ケース検査を経て、狭い文書比較研究へ縮小した履歴。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 36px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 20px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #475569; }
+      .stage { font: 700 20px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #334155; letter-spacing: .04em; }
+      .head { font: 700 25px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #0f172a; }
+      .body { font: 400 20px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #334155; }
+      .small { font: 400 17px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #475569; }
+      .result { font: 700 20px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #7f1d1d; }
+      .current { font: 700 21px -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; fill: #064e3b; }
+      .box { stroke-width: 2; rx: 18; filter: url(#shadow); }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1760" fill="#f8fafc"/>
+
+  <text x="800" y="58" text-anchor="middle" class="title">「道具の真理不在性」研究軌跡</text>
+  <text x="800" y="94" text-anchor="middle" class="subtitle">2026-08-22 スナップショット：普遍的不可能定理の探索 → 条件分解 → 一般語彙の消去試験 → 狭い経験的比較</text>
+
+  <rect x="250" y="130" width="1100" height="135" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="800" y="172" text-anchor="middle" class="head">出発点：予測が当たることは、唯一の世界像を保証するか</text>
+  <text x="800" y="207" text-anchor="middle" class="body">限定された直観：成功そのものは、存在論への接続条件を全部は自己証明しない</text>
+  <text x="800" y="238" text-anchor="middle" class="small">非主張：真理不存在／科学の原理的不可能性／VEDの支持</text>
+
+  <path d="M800 265 L800 310" class="arrow"/>
+
+  <text x="110" y="347" class="stage">I　普遍定理の探索</text>
+  <rect x="110" y="365" width="1380" height="205" class="box" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="150" y="406" class="head">候補：観測写像・内部観測・生成→ログから一般的不可能性を出す</text>
+  <text x="150" y="445" class="body">① 非単射 O:W→L　② self-containment　③ stabilization / logging</text>
+  <text x="150" y="482" class="result">破綻：</text>
+  <text x="235" y="482" class="body">①は既知のidentifiability／inverse problem、②は単独では不十分、③は情報損失を定義へ埋め込みうる</text>
+  <text x="150" y="526" class="body">残存：観測ログが候補を分離するための条件を、モデルクラスごとに問うこと</text>
+
+  <path d="M800 570 L800 615" class="arrow"/>
+
+  <text x="110" y="652" class="stage">II　条件付き数学への分解</text>
+  <rect x="110" y="670" width="1380" height="205" class="box" fill="#ffedd5" stroke="#f97316"/>
+  <text x="150" y="711" class="head">資源ファイバー／pairwise separation／単一履歴／実験合成</text>
+  <text x="150" y="750" class="body">局所的に区別できる実験を、一つの実現可能履歴へまとめられるかを検討</text>
+  <text x="150" y="789" class="result">訂正：</text>
+  <text x="235" y="789" class="body">障害は「内部性」固有ではなく、copy・reset・干渉・interface・部分合成に依存</text>
+  <text x="150" y="833" class="body">CIF／EAは一般定理ではなく比較用ラベルへ降格。informational refinement ≠ physical realizability</text>
+
+  <path d="M800 875 L800 920" class="arrow"/>
+
+  <text x="110" y="957" class="stage">III　前提ネットワーク／保証網への転換</text>
+  <rect x="110" y="975" width="1380" height="205" class="box" fill="#fef3c7" stroke="#d97706"/>
+  <text x="150" y="1016" class="head">識別可能性を支える条件群を横断配置</text>
+  <text x="150" y="1055" class="body">candidate class、校正、再準備、独立性、識別、安定性、scope、解釈橋</text>
+  <text x="150" y="1094" class="result">先行研究監査：</text>
+  <text x="330" y="1094" class="body">各局所構造は量子情報・統計・因果・計量・科学哲学で既に精密に研究</text>
+  <text x="150" y="1138" class="body">中心像を prerequisite stack から assurance provenance／backgrounding／handoff へ弱める</text>
+
+  <path d="M800 1180 L800 1225" class="arrow"/>
+
+  <text x="110" y="1262" class="stage">IV　一般語彙の否定的校正</text>
+  <rect x="110" y="1280" width="670" height="195" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="145" y="1322" class="head">GST Case 01</text>
+  <text x="145" y="1360" class="body">Deferred Resolution連鎖を検査</text>
+  <text x="145" y="1396" class="result">Negative：</text>
+  <text x="265" y="1396" class="body">field-native語彙で全て再構成</text>
+  <text x="145" y="1433" class="small">joint estimation／gauge quotient／model checking</text>
+
+  <rect x="820" y="1280" width="670" height="195" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="855" y="1322" class="head">Metrology Case 02</text>
+  <text x="855" y="1360" class="body">handoff-loss auditを対照比較</text>
+  <text x="855" y="1396" class="result">M1 / M0：</text>
+  <text x="975" y="1396" class="body">整理価値のみ、診断差なし</text>
+  <text x="855" y="1433" class="small">traceability／uncertainty／decision ruleが既に管理</text>
+
+  <path d="M800 1475 L800 1515" class="arrow"/>
+
+  <rect x="170" y="1530" width="1260" height="170" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="800" y="1572" text-anchor="middle" class="head">現在：普遍理論ではなく、反証可能な狭い調査計画</text>
+  <text x="800" y="1610" text-anchor="middle" class="current">source–target artifact × time-sliced corpus × field-native control</text>
+  <text x="800" y="1646" text-anchor="middle" class="body">水文学ではP0/P1により大半がstandards lifecycle／artifact type／governanceへ吸収</text>
+  <text x="800" y="1679" text-anchor="middle" class="small">positive diagnostic case = 0　／　新しい「層・遡行路」も現時点ではprior art吸収が有力</text>
+
+  <text x="800" y="1735" text-anchor="middle" class="subtitle">残った規律：field-native first・Erasure Test・対照再構成・事前登録・kill criteria</text>
+</svg>

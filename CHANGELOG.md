@@ -4,6 +4,12 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Archived the closed theorem/proof anatomy experimental series under
+  `notes/theorem_proof_anatomy_experiment/`, with a reader-facing archive
+  README, final experimental record, source architecture, source map, and
+  internal audit; preserved negative results and retired terminology as
+  historical records, made no new proof-theory/framework claim, and updated
+  relative links after the move.
 - Added `stochastic-quantization/`, an exploratory quantitative working-note
   module for a χ-layer bridge from VED/IFGT closure dynamics to stochastic
   quantization, including bilingual READMEs, reproducible Python scripts, and
