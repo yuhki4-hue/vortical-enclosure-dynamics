@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="『論理哲学論考』を圏論で読み直す形式化レポート。対応モデル、条件付きで証明できる緊張点、公理設計による修理案とその代償。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%AA%9C</text></svg>">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>語りえぬものの圏</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --paper:#EDEFEE;
+  --surface:#F7F8F7;
+  --surface-2:#E3E7E4;
+  --veil:rgba(237,239,238,.86);
+  --ink:#161A19;
+  --ink-2:#49514F;
+  --ink-3:#757D7A;
+  --rule:#D2D7D4;
+  --rule-2:#BEC5C1;
+  --blue:#1E3F6B;
+  --blue-tint:#DEE6F0;
+  --rust:#8C3A28;
+  --rust-tint:#EFE1DD;
+  --quote:#242927;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101413;
+    --surface:#171B1A;
+    --surface-2:#1F2423;
+    --veil:rgba(16,20,19,.86);
+    --ink:#E3E7E4;
+    --ink-2:#A9B1AE;
+    --ink-3:#7C8481;
+    --rule:#2A302E;
+    --rule-2:#3B4340;
+    --blue:#93B5E0;
+    --blue-tint:#18222F;
+    --rust:#DC917B;
+    --rust-tint:#2C1E19;
+    --quote:#CFD5D2;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101413;
+  --surface:#171B1A;
+  --surface-2:#1F2423;
+  --veil:rgba(16,20,19,.86);
+  --ink:#E3E7E4;
+  --ink-2:#A9B1AE;
+  --ink-3:#7C8481;
+  --rule:#2A302E;
+  --rule-2:#3B4340;
+  --blue:#93B5E0;
+  --blue-tint:#18222F;
+  --rust:#DC917B;
+  --rust-tint:#2C1E19;
+  --quote:#CFD5D2;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.8;margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+/* ============ progress + top bar ============ */
+#prog{
+  position:fixed;top:0;left:0;height:2px;width:0;
+  background:var(--blue);z-index:60;
+}
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--veil);
+  backdrop-filter:saturate(1.4) blur(10px);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.topbar .inner{
+  max-width:1180px;margin:0 auto;padding:9px 20px;
+  display:flex;align-items:center;gap:12px;
+}
+.topbar .mark{
+  font-family:"Newsreader",serif;font-weight:600;font-size:.95rem;
+  white-space:nowrap;
+}
+.topbar .now{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);
+  letter-spacing:.06em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  flex:1;min-width:0;
+}
+.navdrop{position:relative;flex:none}
+.navdrop summary{
+  font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.11em;
+  color:var(--ink-2);background:transparent;
+  border:1px solid var(--rule-2);border-radius:2px;
+  padding:7px 11px;cursor:pointer;white-space:nowrap;list-style:none;
+}
+.navdrop summary::-webkit-details-marker{display:none}
+.navdrop summary::marker{content:""}
+.navdrop summary:hover,.navdrop[open] summary{color:var(--ink);border-color:var(--ink-3)}
+#sheet{
+  position:absolute;right:0;top:calc(100% + 9px);
+  width:min(88vw,360px);max-height:min(72vh,620px);overflow-y:auto;
+  border:1px solid var(--rule-2);background:var(--surface);
+  box-shadow:0 12px 34px rgba(0,0,0,.16);
+}
+#sheet ol{
+  margin:0;padding:10px 15px 12px;list-style:none;display:block;
+}
+#sheet a{
+  display:flex;gap:10px;align-items:baseline;
+  padding:7px 0;text-decoration:none;color:var(--ink-2);font-size:.9rem;
+}
+#sheet a:hover{color:var(--blue)}
+#sheet a i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10.5px;color:var(--ink-3);width:20px;flex:none}
+@media(min-width:1060px){.navdrop{display:none}}
+
+/* ============ shell ============ */
+.shell{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+@media(min-width:1060px){
+  .shell{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 60px;align-items:start}
+}
+
+/* ============ side nav ============ */
+.sidenav{display:none}
+@media(min-width:1060px){
+  .sidenav{
+    display:block;position:sticky;top:70px;
+    padding:14px 0 40px;max-height:calc(100vh - 90px);overflow-y:auto;
+  }
+  .sidenav .cap{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.17em;
+    text-transform:uppercase;color:var(--ink-3);margin:0 0 12px;padding-left:13px;
+  }
+  .sidenav ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--rule)}
+  .sidenav a{
+    display:flex;gap:9px;align-items:baseline;
+    padding:6px 0 6px 13px;margin-left:-1px;
+    border-left:1px solid transparent;
+    text-decoration:none;color:var(--ink-2);font-size:.855rem;line-height:1.45;
+  }
+  .sidenav a i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;color:var(--ink-3);width:18px;flex:none}
+  .sidenav a:hover{color:var(--ink)}
+  .sidenav a.on{color:var(--blue);border-left-color:var(--blue);font-weight:500}
+  .sidenav a.on i{color:var(--blue)}
+}
+
+/* ============ masthead ============ */
+.masthead{border-bottom:1px solid var(--rule);padding:46px 0 30px;margin-bottom:52px}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 18px;
+}
+h1{
+  font-family:"Newsreader",serif;font-weight:600;
+  font-size:clamp(2.15rem,6.6vw,3.5rem);line-height:1.1;letter-spacing:-.012em;
+  margin:0 0 18px;text-wrap:balance;
+}
+.dek{
+  font-family:"Newsreader",serif;font-size:clamp(1.04rem,2.5vw,1.24rem);
+  line-height:1.62;color:var(--ink-2);max-width:58ch;margin:0 0 30px;
+}
+.facts{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule);margin:0}
+.fact{flex:1 1 158px;padding:14px 18px 12px 0;border-right:1px solid var(--rule)}
+.fact:last-child{border-right:0}
+.fact dt{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 4px}
+.fact dd{margin:0;font-family:"Newsreader",serif;font-size:1.3rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.fact dd small{font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:400;color:var(--ink-2);display:block;line-height:1.4;margin-top:1px}
+
+/* ============ sections ============ */
+section{margin:0 0 66px;scroll-margin-top:76px}
+.sec-head{border-top:2px solid var(--ink);padding-top:13px;margin-bottom:28px}
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.13em;color:var(--blue);display:block;margin-bottom:5px}
+.sec-head h2{font-family:"Newsreader",serif;font-weight:600;font-size:clamp(1.5rem,4.2vw,2.05rem);line-height:1.22;margin:0;text-wrap:balance}
+.sec-head .lede{font-family:"Newsreader",serif;font-size:1.05rem;color:var(--ink-2);margin:10px 0 0;max-width:60ch;line-height:1.6}
+h3{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1.02rem;margin:38px 0 12px;line-height:1.5}
+h3 .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;color:var(--ink-3);margin-right:9px;letter-spacing:.06em}
+p{margin:0 0 17px;max-width:66ch}
+ul,ol{max-width:66ch;padding-left:1.2em;margin:0 0 19px}
+li{margin-bottom:8px}
+strong{font-weight:600;color:var(--ink)}
+a{color:var(--blue)}
+code{font-family:"IBM Plex Mono",monospace;font-size:.87em;background:var(--surface-2);padding:.1em .35em;border-radius:2px}
+
+/* ============ quotation ============ */
+.tlp{
+  display:grid;grid-template-columns:1fr;gap:5px 20px;
+  background:var(--surface);border-left:2px solid var(--rule-2);
+  padding:15px 18px;margin:0 0 21px;max-width:68ch;
+}
+.tlp .n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;color:var(--ink-3);letter-spacing:.05em;font-variant-numeric:tabular-nums}
+.tlp .t{font-family:"Newsreader",serif;font-size:1.07rem;line-height:1.58;color:var(--quote);margin:0}
+.tlp .t .de{font-style:italic;color:var(--ink-2);font-size:.93em;display:block;margin-top:5px;line-height:1.5}
+@media(min-width:720px){.tlp{grid-template-columns:60px 1fr;padding:16px 20px}.tlp .n{padding-top:5px}}
+
+/* ============ formula ============ */
+.fml{
+  font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.8;
+  background:var(--surface);border-left:3px solid var(--blue);
+  padding:14px 18px;margin:0 0 21px;overflow-x:auto;white-space:pre;color:var(--ink);
+}
+.fml .c{color:var(--ink-3)}
+.fml b{font-weight:500}
+.fml.bad{border-left-color:var(--rust)}
+
+/* ============ callout ============ */
+.claim{
+  border:1px solid var(--rule);border-left:3px solid var(--blue);
+  background:var(--surface);padding:17px 20px;margin:0 0 23px;max-width:68ch;
+}
+.claim .lab{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--blue);display:block;margin-bottom:8px;
+}
+.claim p:last-child{margin-bottom:0}
+.claim.fail{border-left-color:var(--rust)}
+.claim.fail .lab{color:var(--rust)}
+
+/* ============ layer map ============ */
+.layers{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 24px}
+.layer{background:var(--surface);padding:14px 18px;display:grid;grid-template-columns:1fr;gap:3px}
+.layer .lv{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
+.layer .nm{font-weight:600;font-size:.98rem}
+.layer .ds{font-size:.87rem;color:var(--ink-2);line-height:1.6}
+@media(min-width:700px){
+  .layer{grid-template-columns:58px 1fr 1fr;gap:0 20px;align-items:baseline}
+  .layer .lv{padding-top:2px}
+}
+
+/* ============ correspondence ============ */
+.corr{border-top:1px solid var(--rule);margin:0 0 24px}
+.corr .row{display:grid;grid-template-columns:76px 1fr;gap:0 16px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.corr .k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;color:var(--blue);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+.corr .v{font-size:.93rem;line-height:1.62;min-width:0}
+.corr .v b{font-weight:600}
+.corr .v span{color:var(--ink-2)}
+
+/* ============ breakdown ============ */
+.brk{border-top:1px solid var(--rule);padding:26px 0 6px;display:grid;grid-template-columns:1fr;gap:0 26px}
+.brk .side{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:9px}
+.brk .idx{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;color:var(--rust);letter-spacing:.06em}
+.chip{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;padding:3px 7px;border-radius:2px;white-space:nowrap;
+  background:var(--rust-tint);color:var(--rust);border:1px solid transparent;
+}
+.chip.blue{background:var(--blue-tint);color:var(--blue)}
+.brk h3{margin:0 0 12px;font-size:1.14rem;font-family:"Newsreader",serif;font-weight:600;line-height:1.35}
+.brk .body{min-width:0}
+@media(min-width:900px){
+  .brk{grid-template-columns:132px 1fr}
+  .brk .side{flex-direction:column;align-items:flex-start;gap:7px;padding-top:6px;margin-bottom:0}
+}
+
+/* ============ diagnosis matrix ============ */
+.matrix{border-top:1px solid var(--rule);margin:0 0 24px}
+.mrow{
+  display:grid;grid-template-columns:1fr;gap:6px;
+  padding:15px 0;border-bottom:1px solid var(--rule);
+}
+.mrow .cell{min-width:0}
+.mrow .lbl{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px;
+}
+.mrow .cell b{font-weight:600;font-size:.94rem;display:block;line-height:1.5}
+.mrow .cell small{font-size:.82rem;color:var(--ink-2);display:block;line-height:1.55}
+.mrow .arrow{display:none;color:var(--ink-3);font-family:"IBM Plex Mono",monospace;font-size:13px;align-self:center;text-align:center}
+.mrow .cell.a b{color:var(--rust)}
+.mrow .cell.c b{color:var(--rust);font-family:"IBM Plex Mono",monospace;font-size:.86rem;letter-spacing:.02em}
+@media(min-width:820px){
+  .mrow{grid-template-columns:1.15fr 26px 1fr 26px .85fr;gap:0 4px;align-items:start}
+  .mrow .arrow{display:block;padding-top:20px}
+}
+
+/* ============ repairs ============ */
+.repairs{border-top:1px solid var(--rule);margin-bottom:26px}
+.rep{border-bottom:1px solid var(--rule);padding:22px 0;display:grid;grid-template-columns:1fr;gap:14px}
+.rep .hd{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:9px}
+.rep .mono{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.rep .title{font-weight:600;font-size:1.04rem;line-height:1.5;margin:0 0 12px;font-family:"Newsreader",serif;font-size:1.2rem}
+.rep .cost{border-left:2px solid var(--rust);padding-left:14px;font-size:.9rem;color:var(--ink-2);line-height:1.7}
+.rep .cost b{color:var(--rust);font-weight:500;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;font-family:"IBM Plex Mono",monospace;display:block;margin-bottom:4px}
+.rep p{margin:0 0 12px}
+.rep .main>p:last-of-type{margin-bottom:0}
+.rep ul{margin-bottom:12px}
+@media(min-width:900px){.rep{grid-template-columns:1fr 268px;gap:0 34px;align-items:start}}
+
+/* ============ diagram ============ */
+figure{margin:0 0 28px}
+.diagram{background:var(--surface);border:1px solid var(--rule);padding:20px 14px 12px;overflow-x:auto}
+.diagram svg{display:block;width:100%;min-width:470px;height:auto}
+figcaption{font-size:.83rem;color:var(--ink-2);margin-top:10px;line-height:1.6;max-width:62ch}
+
+/* ============ verdict ============ */
+.verdict{background:var(--surface);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:28px 22px 24px;margin:0 0 36px}
+.verdict ol{counter-reset:v;list-style:none;padding:0;margin:0;max-width:66ch}
+.verdict ol li{counter-increment:v;position:relative;padding-left:36px;margin-bottom:15px}
+.verdict ol li::before{
+  content:counter(v);position:absolute;left:0;top:3px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;color:var(--blue);
+  border:1px solid var(--rule-2);border-radius:50%;width:21px;height:21px;
+  display:grid;place-items:center;
+}
+.verdict ol li:last-child{margin-bottom:0}
+
+/* ============ index ============ */
+.tindex{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.tindex a{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-variant-numeric:tabular-nums;
+  text-decoration:none;color:var(--ink-2);background:var(--surface);
+  border:1px solid var(--rule);padding:4px 9px;border-radius:2px;
+}
+.tindex a:hover{color:var(--blue);border-color:var(--blue);background:var(--blue-tint)}
+
+footer{border-top:1px solid var(--rule);padding-top:24px;margin-top:60px;font-size:.86rem;color:var(--ink-3)}
+footer p{max-width:68ch;margin-bottom:11px;line-height:1.75}
+footer a{color:var(--ink-2)}
+.silence{
+  font-family:"Newsreader",serif;font-style:italic;font-size:1.4rem;
+  color:var(--ink-2);text-align:center;padding:46px 0 6px;margin:0;
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="topbar">
+  <div class="inner">
+    <span class="mark">語りえぬものの圏</span>
+    <span class="now" id="now">§ 0 — 結論を先に</span>
+    <details class="navdrop" id="navdrop">
+      <summary>目次</summary>
+      <nav id="sheet" aria-label="目次">
+        <ol>
+          <li><a href="#s0"><i>00</i>結論を先に</a></li>
+          <li><a href="#s1"><i>01</i>方針 — 4 つの層</a></li>
+          <li><a href="#s2"><i>02</i>実体層 — オペラッドと米田</a></li>
+          <li><a href="#s3"><i>03</i>論理空間 — Stone 双対と自由性</a></li>
+          <li><a href="#s4"><i>04</i>命題層 — 自己関手と始代数</a></li>
+          <li><a href="#s5"><i>05</i>語る／示す — 対角線論法</a></li>
+          <li><a href="#s6"><i>06</i>対応・モデルの一覧</a></li>
+          <li><a href="#s7"><i>07</i>引っ掛かる箇所</a></li>
+          <li><a href="#s8"><i>08</i>公理設計で補えるか</a></li>
+          <li><a href="#s9"><i>09</i>6.4 以降について</a></li>
+          <li><a href="#s10"><i>10</i>差し引き</a></li>
+          <li><a href="#s11"><i>11</i>次に手を付けるとしたら</a></li>
+          <li><a href="#idx"><i>—</i>命題番号索引</a></li>
+        </ol>
+      </nav>
+    </details>
+  </div>
+</div>
+
+<div class="shell">
+
+<nav class="sidenav" aria-label="セクション">
+  <p class="cap">Inhalt</p>
+  <ol id="toc">
+    <li><a href="#s0" data-t="s0"><i>00</i>結論を先に</a></li>
+    <li><a href="#s1" data-t="s1"><i>01</i>方針 — 4 つの層</a></li>
+    <li><a href="#s2" data-t="s2"><i>02</i>実体層</a></li>
+    <li><a href="#s3" data-t="s3"><i>03</i>論理空間</a></li>
+    <li><a href="#s4" data-t="s4"><i>04</i>命題層</a></li>
+    <li><a href="#s5" data-t="s5"><i>05</i>語る／示す</a></li>
+    <li><a href="#s6" data-t="s6"><i>06</i>対応・モデル</a></li>
+    <li><a href="#s7" data-t="s7"><i>07</i>引っ掛かる箇所</a></li>
+    <li><a href="#s8" data-t="s8"><i>08</i>公理設計</a></li>
+    <li><a href="#s9" data-t="s9"><i>09</i>6.4 以降</a></li>
+    <li><a href="#s10" data-t="s10"><i>10</i>差し引き</a></li>
+    <li><a href="#s11" data-t="s11"><i>11</i>次の一手</a></li>
+    <li><a href="#idx" data-t="idx"><i>—</i>命題番号索引</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="masthead">
+  <p class="eyebrow">形式化レポート ／ Tractatus 1–7</p>
+  <h1>語りえぬものの圏</h1>
+  <p class="dek">『論理哲学論考』を圏論の語彙で書き直す試み。どこまで書けて、どこで壊れ、その壊れ方を公理設計でどこまで買い戻せるか。結論を先に言えば——いくつかの読みでは、壊れ方そのものを定理にできる。</p>
+  <dl class="facts">
+    <div class="fact"><dt>構成した層</dt><dd>4<small>実体・論理空間・命題・語り/示し</small></dd></div>
+    <div class="fact"><dt>対応・モデル</dt><dd>14<small>うち 3 つは既知定理による精密化</small></dd></div>
+    <div class="fact"><dt>緊張点</dt><dd>6<small>うち 2 つは採用モデル内で証明可能</small></dd></div>
+    <div class="fact"><dt>修理案</dt><dd>5<small>すべて原文の要請と代償を伴う</small></dd></div>
+  </dl>
+</header>
+
+<!-- ================= 0 ================= -->
+<section id="s0">
+  <div class="sec-head"><span class="sec-num">§ 0</span><h2>結論を先に</h2></div>
+
+  <div class="claim">
+    <span class="lab">読み方</span>
+    <p>以下では、<strong>引用そのもの</strong>、それを数学に移すための<strong>モデル仮定</strong>、その仮定から出る<strong>定理</strong>を分ける。「証明できる」というのは、『論考』の唯一の正しい形式化を証明したという意味ではない。明示したモデルを採れば、その内部で帰結が定理になる、という意味である。</p>
+  </div>
+
+  <div class="verdict">
+    <ol>
+      <li><strong>前半（1–5.4）には、一貫した圏論モデルを与えられる。</strong>実体の層はオペラッド、論理空間は Stone 双対、命題は自由ブール代数、真理関数は代数準同型として読める。2.0123 には米田的な同一性規準が対応し、4.26 は自由関手の普遍性として精密化できる。</li>
+      <li><strong>2 箇所は、特定の読みを採ると「壊れること」まで証明できる。</strong>命題 6 の <code>N</code> を完全なべき集合関手で読むと、Lambek の補題と Cantor の定理により始代数は存在しない。また、命題を証明の射をもつデカルト閉圏として読み、二重否定が自然同型になると要求すれば、Joyal の補題によりその圏は前順序へ崩壊する。</li>
+      <li><strong>圏論が得意とする「証明を射として区別する」層は、この読みでは前順序に潰れる。</strong>その結果、構造の大部分は「基底圏の組合せ論」へ移る。これは形式化の単なる失敗ではなく、『論考』が証明過程と結果の差をどれだけ小さく見積もっているかを可視化する。</li>
+      <li><strong>この設計で繰り返し必要になるのは、階層・様相・証明関連性の 3 系統である。</strong>いずれも『論考』の他の要求と強い緊張を作る。したがってここで示せるのは、「あらゆる忠実な形式化が不可能」という絶対的な不可能性ではない。このモデルで記録した要求を同時に満たすと、どこに非両立性が出るか、である。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="sec-head">
+    <span class="sec-num">§ 1</span><h2>方針：何を圏で書くのか</h2>
+    <p class="lede">『論考』を一つの圏に押し込むと、実体・世界・命題・論理形式の違いが見えなくなる。そこで本レポートでは、テキストの要求を 4 層に分けて読む。</p>
+  </div>
+
+  <p>層の分離は便宜ではない。<strong>2.024（実体は「事実であること」から独立に存立する）</strong>が、実体層は世界の選択に依存してはならないと要求しているからである。</p>
+
+  <div class="layers">
+    <div class="layer"><span class="lv">層 I</span><span class="nm">実体層（基底）</span><span class="ds">対象・形式・事態の組合せ論。世界に依存しない。オペラッド／多圏。</span></div>
+    <div class="layer"><span class="lv">層 II</span><span class="nm">論理空間</span><span class="ds">事態の成立・不成立の全体。Stone 空間 2<sup>S</sup>。</span></div>
+    <div class="layer"><span class="lv">層 III</span><span class="nm">命題層</span><span class="ds">真理関数の自由ブール代数、演算 N の始代数。</span></div>
+    <div class="layer"><span class="lv">層 IV</span><span class="nm">語り／示し</span><span class="ds">層 I と層 III の関係そのもの。ファイブレーションの底と繊維。</span></div>
+  </div>
+
+  <p>この分割で採る中心仮定は、<strong>層 I 自身には真理値を与えない</strong>ことである。形式について述べる文を層 I の内部に置かない。この設計が、後で「示す」の形式的な候補になる（<a href="#s5">§5</a>）。</p>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="sec-head">
+    <span class="sec-num">§ 2</span><h2>実体層：対象は色、事態は多射</h2>
+    <p class="lede">2.03 の「鎖の環」という比喩は、オペラッド的合成として読むと、対象の結合可能性を簡潔に書ける。</p>
+  </div>
+
+  <div class="tlp"><div class="n">2.03</div><p class="t">事態において対象は鎖の環のように互いに結びついている。<span class="de">Im Sachverhalt hängen die Gegenstände ineinander, wie die Glieder einer Kette.</span></p></div>
+  <div class="tlp"><div class="n">3.1432</div><p class="t">「複合記号『aRb』は a が b に対して関係 R にあることを言う」のではない。そうではなく、「a」が「b」に対してある関係にあること、それが aRb を言うのである。</p></div>
+
+  <p>この二つは、どちらも<em>結合を「対象とは別の接着剤」として追加しない</em>方向を向いている、と読める。オペラッドは関係を消去するわけではない。関係の型を「多射」として合成則の中に組み込む、というモデル化である。</p>
+
+  <h3><span class="tag">構成</span>形式の多圏</h3>
+  <p><strong>F</strong> を小さな対称有色オペラッド（多圏）とする。色が<em>論理形式</em>、多射が<em>事態の型</em>である。ゲーゲンシュタントの集合 G と型付け φ: G → col(<strong>F</strong>) を与える。事態 Sachverhalt とは、多射 <code>φ(g₁), …, φ(gₙ) → ⋆</code> に対象を差し込んだものである。</p>
+
+  <div class="fml">S  =  { (m; g₁,…,gₙ)  |  m ∈ <b>F</b>(φ(g₁),…,φ(gₙ); ⋆) }      <span class="c">— 事態の全体</span></div>
+
+  <p>「鎖の環」が効いている：適合可能性は色と多射の型で決まり、そのたびに別の接着対象を足す必要がない。オペラッドの合成則が 2.031（対象が特定の仕方で関係しあう）を担う。</p>
+
+  <h3><span class="tag">2.0123</span>米田の補題としての「対象を知る」</h3>
+
+  <div class="tlp"><div class="n">2.0123</div><p class="t">私が対象を知っているならば、私はそれが事態のうちに現れる可能性のすべてをも知っている。<span class="de">Wenn ich den Gegenstand kenne, so kenne ich auch sämtliche Möglichkeiten seines Vorkommens in Sachverhalten.</span></p></div>
+  <div class="tlp"><div class="n">2.0141</div><p class="t">事態のうちに現れうるという可能性、それが対象の形式である。</p></div>
+
+  <p>これを「対象の<strong>形式</strong>は、その結合可能性の全体によって決まる」と読む。オペラッド <strong>F</strong> から生成される形式・文脈の圏を <strong>ᶜ<sub>F</sub></strong> とし、形式 <code>φ(g)</code> の出現プロファイルを次で表す。</p>
+
+  <div class="fml">Prof(g) = <b>ᶜ</b><sub>F</sub>(−, φ(g))
+<span class="c">米田の補題：形式 φ(g) はこの表現可能関手によって、同型を除き決まる。</span></div>
+
+  <p>ここで米田が識別するのは、個々の <code>g</code> そのものではなく<strong>形式 <code>φ(g)</code></strong>である。同じ色をもつ二つの対象を区別するには、別の個別化条件が要る。また 2.0124（すべての対象が与えられれば、すべての可能な事態も与えられる）は米田密度そのものではなく、<code>G</code> と <strong>F</strong> から <code>S</code> を生成する上の構成の帰結である。それでも、「単純性」に対して<strong>内部分解ではなく、出現可能性のプロファイルで識別する</strong>という精密な候補を与えられる。</p>
+
+  <div class="claim">
+    <span class="lab">実体＝底</span>
+    <p>2.024「実体とは、事実であることから独立に存立するもの」を、次の設計条件として読む：オペラッド <strong>F</strong> から生成される形式・文脈の圏 <code>𝓑</code> は、ファイブレーション（<a href="#s5">§5</a>）の底にあり、世界 <code>w</code> の選択に依存しない。2.0211 は、<em>意味付けが真理値の層より先に、底の上で完結していなければならない</em>という要求としてモデル化される。</p>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="sec-head">
+    <span class="sec-num">§ 3</span><h2>論理空間：Stone 双対と自由性</h2>
+    <p class="lede">事態の独立性を自由ブール代数で表すこのモデルでは、4.26 を自由関手の普遍性として正確に書ける。本レポートで最もきれいに収まる箇所である。</p>
+  </div>
+
+  <p>事態の集合 S に対し、論理空間を <code>L = 2<sup>S</sup></code>（積位相を入れた Stone 空間）とおく。<em>世界</em>は L の点 w である。</p>
+
+  <div class="tlp"><div class="n">2.061<br>2.062</div><p class="t">事態は互いに独立である。ある事態の成立・不成立から、他の事態の成立・不成立を推論することはできない。</p></div>
+
+  <p>この独立性は、圏論の言葉では一語で言える：<strong>自由性</strong>。</p>
+
+  <div class="fml">Prop  =  Free<sub>BA</sub>(S)  ≅  Clopen(2<sup>S</sup>)      <span class="c">— 4.431 命題はその真理条件の表現</span>
+
+<b>BA</b>( Free<sub>BA</sub>(S) , 2 )  ≅  <b>Set</b>( S , 2 )         <span class="c">— このモデルにおける 4.26</span></div>
+
+  <div class="tlp"><div class="n">4.26</div><p class="t">真なる要素命題をすべて挙げれば、世界は完全に記述される。</p></div>
+
+  <div class="claim">
+    <span class="lab">対応 1</span>
+    <p><strong>4.26 は自由関手の hom 集合の全単射である。</strong>「真なる要素命題をすべて挙げること」＝ S → 2 という関数を与えること。「世界が完全に記述される」＝ それが Prop → 2 という代数準同型（＝超フィルター＝世界）に一意に延長すること。左随伴の普遍性が 4.26 の内容である。</p>
+    <p>同じ普遍性が 2.05（成立する事態の全体は、どの事態が成立しないかも決定する）も同時に処理する。否定的事実は別に要らない。</p>
+  </div>
+
+  <h3><span class="tag">4.46 / 4.463</span>トートロジーは終対象、矛盾は始対象</h3>
+  <p>命題を <code>L</code> の開閉集合として見ると、包含で順序づけた圏 <code>Clopen(L)</code> において <code>⊤ = L</code> が終対象、<code>⊥ = ∅</code> が始対象。4.463 の「トートロジーは論理空間の全体を実在に開け放ち、矛盾は論理空間を埋め尽くして一点も残さない」は、この二つの端点の記述として正確に読める。</p>
+
+  <h3><span class="tag">5.15</span>確率は積測度</h3>
+  <p><code>S</code> が有限なら、5.15 の「真理根拠の個数比」は、<code>L</code> 上の一様 Bernoulli 測度による条件付き確率としてそのまま再現できる。<code>S</code> が無限の場合は「個数比」自体は使えないが、Bernoulli 積測度（<code>2<sup>S</sup></code> の Haar 測度）への自然な拡張がある。5.152 の独立性は、互いに異なる生成元に依存する命題に限れば、測度論的独立性と一致する。</p>
+
+  <h3><span class="tag">5.525</span>様相を極端に縮約する読み</h3>
+  <p>5.525（可能性・必然性は命題によってではなく、表現がトートロジー／有意味な命題／矛盾であることによって表される）と 6.37（論理的必然性のほかに必然性はない）は、次の一行で尽きる。</p>
+  <div class="fml">□p  ⟺  p = ⊤ in Prop        ◇p  ⟺  p ≠ ⊥ in Prop</div>
+  <p>この読みでは、<code>□</code> と <code>◇</code> は命題を別の命題に送る様相演算子ではなく、頂と底を判定するメタレベルの略記である。これは一つの整合的なモデルだが、標準的な S5 様相代数を構成したわけではない。また、この外延的な縮約は命題的態度を扱えないことと表裏一体である（<a href="#s7">§7.6</a>）。</p>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="sec-head">
+    <span class="sec-num">§ 4</span><h2>命題層：操作は自己関手、数は始代数</h2>
+    <p class="lede">形式列の書き方は、後の始代数・自然数対象に驚くほどよく似ている。ただし、似ていることと、同じ定義であることは分けて読む必要がある。</p>
+  </div>
+
+  <h3><span class="tag">5.25 / 5.251</span>操作と関数の区別＝自己関手と射の区別</h3>
+  <div class="tlp"><div class="n">5.251</div><p class="t">関数はそれ自身の項でありえないが、操作の結果はそれ自身の基底となりうる。</p></div>
+
+  <p>ここでは、型付きの圏論モデルを採る。<strong>関数を射 <code>A → B</code> として表すと、<code>f(f)</code> のような自己適用は一般に型が合わない。一方、操作の反復は自己関手 <code>Ω: 𝒞 → 𝒞</code> の合成 <code>Ω∘Ω</code> として書ける。</strong>これは「操作と関数は同じ論理型のものではない」という差を捕まえる一つの方法である。</p>
+
+  <p>自己関手は一般に <code>𝒞</code> 自身の対象ではなく、関手圏 <code>[𝒞,𝒞]</code> の対象である。したがって、操作／関数の区別と示す／語るの区別に、<strong>同じ「一段上がる」構造が反復している</strong>、という解釈が成り立つ。これは定理ではなく、本レポートの中心的な読みである。</p>
+
+  <h3><span class="tag">5.2522 / 6.02 / 6.03</span>形式列と自然数対象</h3>
+  <div class="tlp"><div class="n">5.2522</div><p class="t">形式列 a, O'a, O'O'a, … の一般項を私は「[a, x, O'x]」と書く。</p></div>
+  <div class="tlp"><div class="n">6.03</div><p class="t">整数の一般形式は [0, ξ, ξ+1] である。</p></div>
+
+  <div class="fml">[a, x, O'x]  ≈  μX. ( A + Ω(X) )      <span class="c">— 存在すれば、A 上の自由 Ω-代数（自由モナドの成分）</span>
+[0, ξ, ξ+1]  ≈  μX. ( 1 + X )  =  ℕ   <span class="c">— Set では自然数、一般には自然数対象</span></div>
+
+  <p>6.021「数は操作の指数である」は、<code>Ω<sup>n</sup></code> ＝ 自己関手のモノイド <code>End(Prop)</code> の元、6.022「数の概念とは可変数である」は、そのモノイドの<em>対象</em>（型）であって述語ではない、と読める。<strong>4.126 の「形式概念は変項によって表される」が、そのまま「型は変項によって与えられる（<code>x : A</code>）」になる。</strong>この一致は驚くほど正確で、依存型理論との親和性（<a href="#s8">§8 修理 4</a>）の根拠になる。</p>
+
+  <p>6.1271 の「論理の命題に原始的なものと派生的なものの区別はない」、6.126 の「証明は機械的な便法にすぎない」、6.1261 の「論理においては過程と結果が等価である」——これらは全部、次の一つの主張に帰着する。</p>
+
+  <div class="claim">
+    <span class="lab">対応 2</span>
+    <p><strong>5.11–5.132 は「命題の意味論を前順序でモデル化する」ことと相性がよい。</strong>前順序では hom 集合の濃度が 0 か 1 であり、<code>p</code> から <code>q</code> への異なる証明を区別しない。5.132 をその意味論的モデルとして読める、ということであり、命題文から直接「命題の圏は前順序である」が出るわけではない。</p>
+    <p>これは形式化の成果であると同時に、<a href="#s7">§7.2</a> で見るとおり最大の代償でもある。</p>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="sec-head">
+    <span class="sec-num">§ 5</span><h2>語る／示す：ファイブレーションと対角線論法</h2>
+    <p class="lede">4.12 の否定的な側面——言語が自分の意味条件の全体を全域的に内在化できないこと——は、Lawvere の対角線定理と同じ形で精密化できる。</p>
+  </div>
+
+  <p>層 I（形式）と層 III（命題）の関係をファイブレーション <code>p: 𝓔 → 𝓑</code> として書く。通常のファイブレーションの底は圏なので、ここで <code>𝓑</code> はオペラッド <strong>F</strong> そのものではなく、そこから生成される<strong>形式・文脈の圏</strong>を指す。形式 <code>b</code> 上の繊維 <code>p⁻¹(b)</code> は、その形式で記述できる命題のブール代数とする。なお、ファイブレーション自体が「底に論理がない」ことを保証するわけではない。それは後で加える設計条件である。</p>
+
+  <figure>
+    <div class="diagram">
+      <svg viewBox="0 0 720 306" role="img" aria-label="ファイブレーション p の図。上段に三つの繊維、下段に底圏の形式。繊維の内部が語ること、底が示すこと。">
+        <g>
+          <rect x="70" y="30" width="120" height="126" rx="3" fill="var(--blue-tint)" stroke="var(--rule-2)" stroke-width="1"/>
+          <rect x="300" y="30" width="120" height="126" rx="3" fill="var(--blue-tint)" stroke="var(--rule-2)" stroke-width="1"/>
+          <rect x="530" y="30" width="120" height="126" rx="3" fill="var(--blue-tint)" stroke="var(--rule-2)" stroke-width="1"/>
+        </g>
+        <g fill="var(--blue)" font-family="IBM Plex Mono, monospace" font-size="12.5">
+          <text x="130" y="60" text-anchor="middle">⊤</text>
+          <text x="130" y="96" text-anchor="middle">p ∨ q</text>
+          <text x="130" y="132" text-anchor="middle">⊥</text>
+          <text x="360" y="60" text-anchor="middle">⊤</text>
+          <text x="360" y="96" text-anchor="middle">¬r</text>
+          <text x="360" y="132" text-anchor="middle">⊥</text>
+          <text x="590" y="60" text-anchor="middle">⊤</text>
+          <text x="590" y="96" text-anchor="middle">s → t</text>
+          <text x="590" y="132" text-anchor="middle">⊥</text>
+        </g>
+        <g stroke="var(--rule-2)" stroke-width="1">
+          <line x1="130" y1="66" x2="130" y2="84"/><line x1="130" y1="102" x2="130" y2="120"/>
+          <line x1="360" y1="66" x2="360" y2="84"/><line x1="360" y1="102" x2="360" y2="120"/>
+          <line x1="590" y1="66" x2="590" y2="84"/><line x1="590" y1="102" x2="590" y2="120"/>
+        </g>
+        <g stroke="var(--ink-3)" stroke-width="1" stroke-dasharray="3 4">
+          <line x1="130" y1="156" x2="130" y2="220"/>
+          <line x1="360" y1="156" x2="360" y2="220"/>
+          <line x1="590" y1="156" x2="590" y2="220"/>
+        </g>
+        <g fill="var(--ink-3)">
+          <path d="M126 220 L130 229 L134 220 Z"/>
+          <path d="M356 220 L360 229 L364 220 Z"/>
+          <path d="M586 220 L590 229 L594 220 Z"/>
+        </g>
+        <text x="148" y="194" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="12.5">p</text>
+        <line x1="50" y1="252" x2="670" y2="252" stroke="var(--ink)" stroke-width="1.5"/>
+        <g fill="var(--ink)"><circle cx="130" cy="252" r="4"/><circle cx="360" cy="252" r="4"/><circle cx="590" cy="252" r="4"/></g>
+        <g fill="var(--ink-2)" font-family="IBM Plex Mono, monospace" font-size="12">
+          <text x="130" y="276" text-anchor="middle">F₁</text>
+          <text x="360" y="276" text-anchor="middle">F₂</text>
+          <text x="590" y="276" text-anchor="middle">F₃</text>
+        </g>
+        <text x="50" y="20" fill="var(--blue)" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.6">SAGEN — 繊維の内部（真理値が変わる）</text>
+        <text x="50" y="300" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.6">ZEIGEN — 底（形式間の射・指定論理なし）</text>
+      </svg>
+    </div>
+    <figcaption>語ること＝繊維の内部で命題を操作すること。示すこと＝どの形式の上でその操作が行われているか。ただしこれは 4.12 の完全な翻訳ではなく、「語る／示す」の差を層の差として可視化するモデルである。</figcaption>
+  </figure>
+
+  <div class="tlp"><div class="n">4.12</div><p class="t">命題は実在の全体を表現しうるが、実在を表現しうるために実在と共有していなければならないもの——論理形式——を表現することはできない。論理形式を表現しうるためには、我々は命題とともに論理の外に、すなわち世界の外に立つことができなければならないだろう。</p></div>
+
+  <h3><span class="tag">対応 3</span>4.12 の否定的側面と Lawvere の対角線論法</h3>
+  <p>デカルト閉圏 <code>𝒞</code> において、射 <code>f: A × A → B</code>（同値に <code>A → B<sup>A</sup></code>）が弱点全射——つまり、すべての <code>g: A → B</code> が、ある大域点 <code>a: 1 → A</code> に対する列 <code>f(a, −)</code> として表せる——ならば、任意の自己射 <code>t: B → B</code> は不動点をもつ。非自明なブール的トポスで <code>B = Ω</code>、<code>t = ¬</code> とすれば、否定に大域的な不動点はない。したがって：</p>
+
+  <div class="fml">∄ A, f: A × A → Ω  弱点全射
+<span class="c">言語が自分自身の意味条件の全体を内部で表現することはできない。</span></div>
+
+  <div class="claim">
+    <span class="lab">成果と、その限界</span>
+    <p><strong>成果：</strong>4.12 のうち「意味条件の全体を同じレベルで網羅できない」という部分に、対角線論法という正確な骨格が入る。Tarski の真理定義不可能性定理は、同じ対角化のスキーマから得られる代表的な帰結である。</p>
+    <p><strong>限界：</strong>Lawvere が禁じるのは<em>全域的・内在的</em>な自己表現だけである。<em>部分的</em>な、<em>階層化された</em>、<em>反映的</em>な自己表現は禁じられていない。実際、宇宙階層をもつ型理論では「レベル <code>n</code> について語るレベル <code>n+1</code>」が普通に存在する。ヴィトゲンシュタインの「示す」の肯定的な内容は、この不可能性定理だけからは出ない。少なくとも本レポートの設定では、それを一つの数学的対象で閉じることに成功していない。</p>
+  </div>
+
+  <h3><span class="tag">4.126</span>形式概念＝型、本来の概念＝部分対象</h3>
+  <div class="tlp"><div class="n">4.1272</div><p class="t">「本がある」と言うようには「対象がある」とは言えない。</p></div>
+  <p>これは型と述語の区別として読める。<code>Gegenstand</code> をソートとして導入するなら、それは同時に通常の述語ではないため、<code>∃x. Gegenstand(x)</code> はそのままでは整形式にならない。Martin-Löf 型理論では <code>a : A</code> という<strong>判断</strong>と、体系内の<strong>命題</strong>を区別する。判断そのものに論理否定をかけて <code>¬(a : A)</code> と書くことはできない。<strong>これは「示す」の有力な形式モデルである</strong>が、それだけで 4.126 の哲学的内容を尽くすわけではない（<a href="#s8">§8 修理 4</a>）。</p>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="sec-head">
+    <span class="sec-num">§ 6</span><h2>対応・モデルの一覧</h2>
+    <p class="lede">以下は同じ強さの主張ではない。厳密な同型、条件付きの定理、構造を見やすくする解釈モデルを一つの地図にまとめている。</p>
+  </div>
+
+  <div class="corr">
+    <div class="row"><div class="k">1.13</div><div class="v"><b>論理空間の中の事実が世界</b> <span>— 世界 = Stone 空間 2<sup>S</sup> の一点</span></div></div>
+    <div class="row"><div class="k">2.0123</div><div class="v"><b>対象を知れば結合可能性を知る</b> <span>— 米田：対象の形式は出現プロファイルで決まる</span></div></div>
+    <div class="row"><div class="k">2.03</div><div class="v"><b>鎖の環</b> <span>— オペラッドの合成としてモデル化する</span></div></div>
+    <div class="row"><div class="k">2.024</div><div class="v"><b>実体は事実から独立</b> <span>— 底圏は世界 w に依存しない</span></div></div>
+    <div class="row"><div class="k">2.061</div><div class="v"><b>事態の相互独立性</b> <span>— Prop の自由性（生成元に関係式がない）</span></div></div>
+    <div class="row"><div class="k">3.1432</div><div class="v"><b>関係は配置である</b> <span>— 関係の型を多射として合成則に組み込む</span></div></div>
+    <div class="row"><div class="k">4.126</div><div class="v"><b>形式概念は変項で表される</b> <span>— 型は変項で与えられる（<code>x : A</code>）</span></div></div>
+    <div class="row"><div class="k">4.26</div><div class="v"><b>真なる要素命題の全体＝世界の完全記述</b> <span>— 自由関手の普遍性（hom の全単射）</span></div></div>
+    <div class="row"><div class="k">4.431</div><div class="v"><b>命題は真理条件の表現</b> <span>— 命題 = Clopen(L) の元</span></div></div>
+    <div class="row"><div class="k">4.46</div><div class="v"><b>トートロジーと矛盾は限界事例</b> <span>— 終対象と始対象（退化した極限）</span></div></div>
+    <div class="row"><div class="k">5.132</div><div class="v"><b>推論法則は無意味で余計</b> <span>— 前順序による意味論モデル（hom は高々一元）</span></div></div>
+    <div class="row"><div class="k">5.15</div><div class="v"><b>確率＝真理根拠の比</b> <span>— 2<sup>S</sup> 上の一様積測度による条件付き確率</span></div></div>
+    <div class="row"><div class="k">5.251</div><div class="v"><b>操作は反復できるが関数は自己適用できない</b> <span>— 自己関手と射の型の違いとしてモデル化する</span></div></div>
+    <div class="row"><div class="k">6.03</div><div class="v"><b>整数の一般形式 [0, ξ, ξ+1]</b> <span>— 自然数対象 μX. (1 + X) との構造的類似</span></div></div>
+  </div>
+
+  <p>このうち <strong>4.26</strong> は自由ブール代数というモデル仮定のもとで普遍性として厳密に書ける。<strong>5.132</strong> は Curry–Howard–Lambek 的な命題圏と二重否定の自然同型まで仮定すれば Joyal の補題で精密化でき、<strong>4.12</strong> の否定的側面は Lawvere の対角線論法で境界を与えられる。圏論が足すのは「唯一の翻訳」ではなく、どの仮定からどの帰結が出るかという依存関係である。</p>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="sec-head">
+    <span class="sec-num">§ 7</span><h2>引っ掛かる箇所</h2>
+    <p class="lede">6 箇所。うち 2 つは、追加したモデル仮定を明示すれば、単なる解釈上の違和感ではなく数学的な非存在・崩壊として示せる。</p>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.1</span><span class="chip">条件付きの非存在</span></div>
+    <div class="body">
+      <h3>完全べき集合として読むと、一般命題形式に始代数がない</h3>
+      <p>命題 6 は、要素命題から出発して共同否定 <code>N</code> を反復適用したものが全命題である、と主張する。5.501 は <code>ξ̄</code> の値の与え方を三つ挙げる（直接枚挙、関数 <code>fx</code> の値の全体、形式法則）。ここから直ちに「任意の部分集合」が得られるわけではない。しかし、無制限の一般性を<strong>完全なべき集合</strong>としてモデル化するなら、要求される関手は次になる。</p>
+      <div class="fml bad">T(X) = E + 𝒫(X)        <span class="c">E は要素命題、𝒫 は共変べき集合関手</span></div>
+      <p>この <code>T</code> に始代数は存在しない。Lambek の補題により始代数 <code>α: T(A) → A</code> は同型でなければならないが、そこから <code>|𝒫(A)| ≤ |A|</code> が従い、Cantor の定理に反する。</p>
+      <p>したがって、ここで正確に証明できるのは<strong>「N の値域を完全べき集合で読む形式化は成立しない」</strong>ことである。これは N 演算子論争の一つの数学的な局在化だが、『論考』のあらゆる N 解釈を排除する定理ではない。修理案は <a href="#s8">§8 修理 1</a>。</p>
+    </div>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.2</span><span class="chip">導出可能／代償大</span></div>
+    <div class="body">
+      <h3>古典性が証明関連性を殺す — Joyal の補題</h3>
+      <p>ここでは追加の意味論仮定として、命題を対象、証明を射とする Curry–Howard–Lambek 的な圏を採る。その圏がデカルト閉で始対象をもち、さらに古典性を「すべての対象で標準写像 <code>A → ¬¬A</code> が自然同型になる」として実装するとする。</p>
+      <p><strong>Joyal の補題：</strong>始対象をもつデカルト閉圏で、始対象が双対化対象——すなわち標準写像 <code>A → ¬¬A</code> がすべての <code>A</code> で同型——ならば、その圏は前順序である。</p>
+      <div class="fml bad">古典性 + デカルト閉性  ⟹  hom 集合は高々一元  ⟹  証明は識別できない</div>
+      <p>したがって、<strong>5.132 は「4.023 と 5.44 だけ」から出るのではない</strong>。それらを上の証明圏へ持ち上げ、二重否定を対象レベルの自然同型として要求したときに、Joyal の補題が 5.132 に対応する崩壊を与える。</p>
+      <p><em>この条件下では、Curry–Howard–Lambek 対応が区別しようとする複数の証明がすべて同じ射に潰れる。</em>ここから「『論考』は証明関連性を持たない意味論と親和的である」とは言える。しかし「『論考』そのものが圏論的に前順序である」は、一段強すぎる結論である。</p>
+    </div>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.3</span><span class="chip">構造的ずれ</span></div>
+    <div class="body">
+      <h3>排他的解釈を採ると、縮約と緊張する</h3>
+      <div class="tlp"><div class="n">5.53</div><p class="t">対象の同一性を私は記号の同一性によって表現し、同一性記号によっては表現しない。</p></div>
+      <p>ここでは、異なる変項は異なる対象を取るという<strong>いわゆる排他的解釈</strong>を採る。この解釈は文献上も論争があり、5.53 だけから一意に強制されるわけではない。採用するなら、同じ変項を自由に複製する縮約に制限がかかる。文脈と代入を有限集合で表す標準的な構成を、適切な反変を含めて「有限集合とすべての関数」から「有限集合と単射」へ制限する、とモデル化できる。</p>
+      <div class="fml bad">通常:   <b>FinSet</b>（向きは文脈の取り方による）   <span class="c">有限積・対角によって縮約を表せる</span>
+排他的: I = 有限集合と単射の圏   <span class="c">一般に有限積をもたない → 縮約を自由に表せない</span></div>
+      <p>この読みでは、名前の運用は<em>部分構造的</em>なのに、命題論理は<em>古典的</em>で縮約と弱化を自由に使うため、二つの層に緊張が生じる。線形論理では指数 <code>!</code>（しばしばコモナドとして意味づけられる）が両者をつなぐ。ただし 6.37 は「論理的必然性以外の必然性」を否定する命題であり、そこから任意のコモナドの禁止が直接出るわけではない。ここでは、新しい様相的装置を導入することが『論考』の節約的な設計と緊張する、と限定して言う。</p>
+      <p>この緊張に対する有力な修理候補が <a href="#s8">§8 修理 2</a> である。</p>
+    </div>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.4</span><span class="chip">未閉包</span></div>
+    <div class="body">
+      <h3>「示す」の肯定的側面を、一つの対象では閉じられない</h3>
+      <p><a href="#s5">§5</a> で見たとおり、Lawvere と Tarski は「全域的には語れない」という否定的な境界を与える。しかし『論考』はそれだけでなく、語れないものが<em>示される</em>という肯定的な役割も「示す」に与えている。</p>
+      <p>本レポートで検討する候補は 3 つあり、いずれも部分的にしか働かない。</p>
+      <ul>
+        <li><strong>ファイブレーションの底</strong>：うまくいくが、底自身の形式は何が示すのか、という問いが反復し、階層を呼ぶ。</li>
+        <li><strong>2 圏的な構造・整合条件</strong>：操作／関数の区別（5.251）を正確に捉えるが、やはり次元を一つ上げている。</li>
+        <li><strong>依存型理論の判断層</strong>：最も近い。<code>a : A</code> は体系内の命題と同じ仕方では否定できない。ただし標準的な MLTT は構成的・証明関連的であり、形式そのものを内部化するなら通常は宇宙も必要になる。</li>
+      </ul>
+      <p>本レポートの範囲で言えるのは、<strong>「示す」を積極的に実装するほど、古典性・証明非関連性・無階層性という別の要請から離れる</strong>ということだ。これは重要な非両立性候補だが、考えうるすべての形式系に対する不可能性定理ではない。</p>
+    </div>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.5</span><span class="chip">古典的な緊張点</span></div>
+    <div class="body">
+      <h3>色の排除（6.3751）が自由性を破壊する</h3>
+      <div class="tlp"><div class="n">6.3751</div><p class="t">たとえば、視野の一点が同時に二つの異なる色をもつことは不可能である。</p></div>
+      <p>これは 2.061／4.211 の要素命題の相互独立性と強く緊張する、いわゆる色排除問題である。1929 年の「論理形式についての若干の考察」では、ヴィトゲンシュタインは色や度合いの排除を扱うため、真理表の許容行を制限する方向へ進んだ。これを『論考』の単純な自己矛盾と呼ぶか、要素命題の分析が未完だったと読むかは解釈が分かれる。</p>
+      <p>圏論的診断は明快である：色の排除を認めるなら <code>Prop</code> は自由ではありえない。生成元のあいだに関係式が入る。</p>
+      <div class="fml bad">Prop = Free<sub>BA</sub>(S)   →   Prop = 一般のブール代数 B</div>
+      <p><strong>救われるもの：</strong>Stone 双対性は生き残る。任意のブール代数 <code>B</code> には Stone 空間 <code>X</code> が対応し、<code>B ≅ Clopen(X)</code> が成り立つ。トートロジーと矛盾の像も残る。確率については、もはや生成元上の標準的な一様積測度は自動ではないが、別途測度を選べば扱える。</p>
+      <p><strong>失われるもの：</strong>4.26 を自由関手の普遍性として読むこのモデル、5.134 のア・プリオリな推論不可能性、5.55 の綱領、そして命題 6 を自由生成として読む構図である。<em>本レポートが採った前半の骨格は大幅な修正を迫られる。</em></p>
+      <p>圏論的に最も安価な修理（自由性を捨てる）が、哲学的には最も高価だという構図になっている。</p>
+    </div>
+  </div>
+
+  <div class="brk">
+    <div class="side"><span class="idx">7.6</span><span class="chip">表現力不足</span></div>
+    <div class="body">
+      <h3>命題的態度（5.542）が外延性を破る</h3>
+      <p>「A は p と信じる」を 5.542 は「『p』が p と言う」の形に還元する。ここには引用・表象・主体の構造が入り、単なる真理関数ではない。したがって自由ブール代数とその準同型だけで作った<strong>本レポートの命題層</strong>には、そのまま置く場所がない。</p>
+      <p>修理候補は、認識様相を扱うモナド／コモナド、あるいは内部言語による反映や Gödel 的符号化である。前者は 6.37 から形式的に禁止されるわけではないが、論理的必然性だけを認める設計との説明が必要になる。後者は対象言語とメタ言語の階層を導入する。5.5423 のネッカーの立方体は魅力的な着想だが、少なくとも純粋に外延的なブール代数だけでは扱えない。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8 ================= -->
+<section id="s8">
+  <div class="sec-head">
+    <span class="sec-num">§ 8</span><h2>公理設計でどこまで補えるか</h2>
+    <p class="lede">5 つの修理案。それぞれ何が買えて、何を支払うか。</p>
+  </div>
+
+  <div class="repairs">
+
+    <div class="rep">
+      <div class="main">
+        <div class="hd"><span class="mono">修理 1 ／ 対 7.1</span><span class="chip blue">条件付きで弁護可能</span></div>
+        <p class="title">サイズ公理：N の引数を κ 有界にする</p>
+        <p>正則基数 <code>κ</code> を固定し、<code>𝒫</code> を <code>𝒫<sub>&lt;κ</sub></code>（濃度が <code>κ</code> 未満の部分集合）に置き換える。<code>|E| &lt; κ</code> などの通常のサイズ条件のもとで、この関手は接近可能になり、<code>E</code> を葉にもつ分岐数 <code>&lt;κ</code> の整礎木として始代数を構成できる。これは原子を加えた遺伝的 <code>&lt;κ</code> 集合の階層に対応する。</p>
+        <div class="fml">μX. ( E + 𝒫<sub>&lt;κ</sub>(X) )   は存在する</div>
+        <p>この <code>κ</code> を「言われるもの」ではなく「示されるもの」——記法そのものが担う制約——として扱えば、4.1272 の禁止（「対象がいくつある」とは言えない）との緊張を弱められる可能性がある。本レポートの修理案の中では、ヴィトゲンシュタイン自身の語法に最も寄せやすい。</p>
+      </div>
+      <div class="cost"><b>代償</b><code>κ</code> の選択は許される一般性の上限を外から決める。集合／類の区別や小写像の公理を導入する代数的集合論では、適切な条件のもとで小さいべき類関手の初期代数が「集合の宇宙」を表すが、その条件自体が追加のメタ構造である。これは 3.331–3.333 の反階層的な志向と少なくとも強く緊張する。</div>
+    </div>
+
+    <div class="rep">
+      <div class="main">
+        <div class="hd"><span class="mono">修理 2 ／ 対 7.3</span><span class="chip blue">最有望</span></div>
+        <p class="title">周囲トポスを Schanuel トポス（nominal sets）にとる</p>
+        <p>有限集合と単射の圏から得られるアトミック・トポスである Schanuel トポス（nominal sets）を意味論の舞台に選ぶ。ここでは：</p>
+        <ul>
+          <li>名前の置換と有限台が<strong>構造的</strong>に組み込まれる ⟶ 同一性記号を基本装置にしない 5.53–5.5352 のモデル候補になる。</li>
+          <li>アトミックなトポスは<strong>ブール的</strong>である ⟶ 古典性（4.023、5.44）が保たれる。</li>
+          <li>すべての元が<strong>有限台</strong>をもつ ⟶ 有限個の名前だけに依存する構文を自然に表せる。ただし 4.22 全体が自動的に定理になるわけではない。</li>
+          <li>原子名の対象は<strong>大域点をもたない</strong> ⟶ 特定の名前を大域的に選ばずに一般化する 5.526 のモデル候補になる。</li>
+        </ul>
+        <p>複数の要求を一つの環境で同時に扱えるため、本レポートで最も有望な設計候補である。ただし各命題との対応は、今後個別に定理化する必要がある。</p>
+      </div>
+      <div class="cost"><b>代償</b>Schanuel トポスは well-pointed でない。したがって 4.26 の「完全記述」は大域点のレベルでは成り立たず、段階付きの一般化元でしか言えない。皮肉なことに、その制限は 5.526 が言っていることとほぼ一致するので、代償を主張として読み替えられる余地がある。それでも「世界＝一点」という 1.13 の素朴な像は失われる。</div>
+    </div>
+
+    <div class="rep">
+      <div class="main">
+        <div class="hd"><span class="mono">修理 3 ／ 対 7.4</span><span class="chip blue">6.54 の構造を模写</span></div>
+        <p class="title">底に論理を持たせない公理</p>
+        <p>「形式については、指定した内部論理では何も語れない」を、底圏そのものではなく<strong>底に割り当てる述語論理</strong>への条件として書く。</p>
+        <div class="fml">公理 (Z′)  ——  Pred<sub>𝓑</sub>(X) ≅ 1  （すべての X について）
+<span class="c">底の各対象に割り当てる指定述語は ⊤ だけ。底の射や対象そのものを消去しない。</span></div>
+        <p>元の条件 <code>Sub<sub>𝓑</sub>(X) = {id<sub>X</sub>}</code> は強すぎる。始対象をもつ普通の圏では <code>0 → X</code> も部分対象になるため、条件は底圏をほぼ自明化しかねない。<code>(Z′)</code> なら、形式間の射を残したまま、指定した内部述語論理には底のデータを内容とする非自明な命題が現れない。これは 4.12・4.121 の<strong>形式的な類比</strong>を与えるが、6.54 そのものを定理にするわけではない。</p>
+      </div>
+      <div class="cost"><b>代償</b><code>Pred</code> を外から選ぶメタ言語が必要になる。「内部では語れない」と「どのメタ言語からも語れない」はまったく別であり、この修理が再現するのは前者だけである。6.54 の自己解体的な力は、対象言語／メタ言語の区別へ翻訳した時点で弱くなる。</div>
+    </div>
+
+    <div class="rep">
+      <div class="main">
+        <div class="hd"><span class="mono">修理 4 ／ 対 7.4</span><span class="chip">三重の違反</span></div>
+        <p class="title">判断層を採用する（依存型理論）</p>
+        <p>語る／示すを、命題／判断の区別として実装する。<code>a : A</code> と <code>A type</code> は判断であり、体系内の命題と同じ仕方では否定・量化できない。形式概念（4.126）を型、本来の概念を型の上の述語として読む。有力な「示す」の実装候補である。</p>
+      </div>
+      <div class="cost"><b>代償</b>標準的な MLTT は (1) 構成的、(2) 証明関連的であり、この二点で本レポートの古典的・証明非関連的な命題層から離れる。(3) さらに形式や型の全体を内部化するなら通常は宇宙階層を用いる。ただし宇宙を含まない断片もあるため、三点目は MLTT 一般の必須条件ではなく、この目的で十分な表現力を持たせる際の代償である。</div>
+    </div>
+
+    <div class="rep">
+      <div class="main">
+        <div class="hd"><span class="mono">修理 5 ／ 対 7.5</span><span class="chip">骨格を失う</span></div>
+        <p class="title">自由性を捨て、Stone 双対だけを残す</p>
+        <p>色の排除を受け入れ、<code>Prop</code> を一般のブール代数 B とする。Stone 双対 <code>B ≅ Clopen(X)</code> により論理空間・世界・トートロジー・矛盾・確率はすべて生き残る。像としての『論考』（論理空間の中の一点としての世界）はほぼ無傷である。</p>
+      </div>
+      <div class="cost"><b>代償</b>要素命題の自由生成という本レポートの読みが落ち、4.26、5.134、5.55、命題 6 の解釈を作り直す必要がある。1929 年の仕事では、ヴィトゲンシュタイン自身も色排除を扱うため真理表の単純な自由性を修正する方向へ進んだ。圏論的には安価だが、このレポートの哲学的骨格には高くつく。</div>
+    </div>
+
+  </div>
+
+  <h3><span class="tag">診断</span>緊張点と修理装置が繰り返し対応する</h3>
+  <p>この設計で繰り返し現れる修理は、<strong>階層</strong>（型・宇宙・サイズ公理）、<strong>様相・反映</strong>（モナド／コモナド／引用）、<strong>証明関連性</strong>（前順序でない hom）の 3 系統である。『論考』はこれらを現代的な名称で一括して禁じてはいない。しかし、それぞれが無階層性、論理的必然性の一元化、証明過程の非本質性という別の要請と衝突する。</p>
+
+  <div class="matrix">
+    <div class="mrow">
+      <div class="cell a"><span class="lbl">破綻点</span><b>7.1</b><small>N の一般形式に始代数がない</small></div>
+      <div class="arrow">→</div>
+      <div class="cell b"><span class="lbl">必要な装置</span><b>階層</b><small>サイズ公理・集合／類の区別</small></div>
+      <div class="arrow">⊘</div>
+      <div class="cell c"><span class="lbl">緊張する命題</span><b>3.331–3.333</b></div>
+    </div>
+    <div class="mrow">
+      <div class="cell a"><span class="lbl">破綻点</span><b>7.2</b><small>命題の圏が前順序へ崩壊</small></div>
+      <div class="arrow">→</div>
+      <div class="cell b"><span class="lbl">必要な装置</span><b>証明関連性</b><small>hom を一元より大きくする</small></div>
+      <div class="arrow">⊘</div>
+      <div class="cell c"><span class="lbl">緊張する命題</span><b>5.132 / 6.126</b></div>
+    </div>
+    <div class="mrow">
+      <div class="cell a"><span class="lbl">緊張点</span><b>7.3</b><small>排他的解釈と縮約</small></div>
+      <div class="arrow">→</div>
+      <div class="cell b"><span class="lbl">必要な装置</span><b>様相</b><small>線形論理の指数 <code>!</code>（コモナド）</small></div>
+      <div class="arrow">⊘</div>
+      <div class="cell c"><span class="lbl">緊張する命題</span><b>6.37 / 5.4</b></div>
+    </div>
+    <div class="mrow">
+      <div class="cell a"><span class="lbl">破綻点</span><b>7.4</b><small>「示す」の内在化</small></div>
+      <div class="arrow">→</div>
+      <div class="cell b"><span class="lbl">必要な装置</span><b>階層 ＋ 証明関連性</b><small>宇宙階層をもつ判断層</small></div>
+      <div class="arrow">⊘</div>
+      <div class="cell c"><span class="lbl">緊張する命題</span><b>3.331 / 5.132</b></div>
+    </div>
+    <div class="mrow">
+      <div class="cell a"><span class="lbl">破綻点</span><b>7.6</b><small>命題的態度が外延性を破る</small></div>
+      <div class="arrow">→</div>
+      <div class="cell b"><span class="lbl">必要な装置</span><b>様相</b><small>モナド／内部言語による反映</small></div>
+      <div class="arrow">⊘</div>
+      <div class="cell c"><span class="lbl">緊張する命題</span><b>6.37 / 5.4</b></div>
+    </div>
+  </div>
+
+  <div class="claim fail">
+    <span class="lab">統一診断</span>
+    <p>これは単なる偶然とも言い切れない。修理装置はいずれも、対象言語の外側、証明の差、名前の支持、反映の層といった「事実の一覧だけでは尽くせない構造」を導入する。<strong>緊張点と修理装置が似た場所に繰り返し現れること自体が、この形式化の最も重要な診断結果である。</strong>ただし、上の表の「緊張する命題」は形式的な禁止定理ではなく、解釈上の衝突先を示す。</p>
+  </div>
+</section>
+
+<!-- ================= 9 ================= -->
+<section id="s9">
+  <div class="sec-head">
+    <span class="sec-num">§ 9</span><h2>6.4 以降について</h2>
+    <p class="lede">正直に言えば、ここから先の対応は形式化というより構造的な比喩になる。ただし、形式系が何を表現対象から外しているかは明示できる。</p>
+  </div>
+
+  <p>価値、倫理、意志、死、神秘的なもの——6.4 から 7 までを圏論で「書く」試みは、どれも装飾に終わる。5.632（主体は世界に属さず、世界の限界である）を「終対象は錐の底となる図式の中にはいない」と読むことはできるし、5.633 の目と視野の比喩とよく合う。6.43（善悪の意志は世界の限界を変えるのであって事実を変えるのではない）を「底の取り替え（change of base）であって繊維内の点の移動ではない」と読むこともできる。5.64（独我論を徹底すると純粋な実在論と一致し、独我論の自我は延長のない点に縮む）は<strong>圏同値</strong>の記述として悪くない——同値には標準的な逆がないが、内部からはその欠如が見えない。</p>
+
+  <p>だがこれらは翻訳であって、それだけでは新しい帰結を生まない。形式化が与えられるのは、内容そのものではなく、何を表現域の外へ置いたかの記録である。</p>
+
+  <div class="claim">
+    <span class="lab">沈黙の配置を明示する</span>
+    <p><a href="#s8">修理 3</a> の公理 <code>(Z′)</code> を採用し、さらに倫理・価値・主体を底の形式側へ配置するなら、<strong>それらが指定した述語論理の内部に命題として現れない</strong>ことは構成上の帰結になる。ただし、後半の主題を底へ置く判断自体は哲学的なモデル仮定であり、定理ではない。</p>
+    <p>したがって圏論は、6.4 以降の内容を生成しない。ただ、何を語彙の外へ置いた結果として沈黙が生じたのかを、モデルの設計図として示すことはできる。</p>
+  </div>
+</section>
+
+<!-- ================= 10 ================= -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">§ 10</span><h2>差し引き：圏論は何を足したか</h2></div>
+
+  <h3><span class="tag">＋</span>足したもの</h3>
+  <ul>
+    <li>4.26 が随伴の普遍性であること。「完全記述」という曖昧な語に正確な内容が入る。</li>
+    <li>5.132 を証明圏の前順序崩壊として読むために、どの追加仮定が必要かが見えること（Joyal）。</li>
+    <li>4.12 の否定的側面に対角線論法の骨格があること（Lawvere／Tarski）。同時に、その定理だけでは「示す」の肯定的側面まで届かないこと。</li>
+    <li>命題 6 を完全べき集合で読むときの破綻点（Lambek + Cantor）。哲学的論争の一つの形式的な所在が見える。</li>
+    <li>2.0123 に米田的な同一性規準を与えられること。ただし米田が識別するのは、このモデルでは個体ではなく対象の形式であること。</li>
+    <li>5.53 の排他的解釈と縮約の緊張を、単射の圏と nominal sets によって具体的な研究課題へ変換できること。</li>
+  </ul>
+
+  <h3><span class="tag">−</span>足せなかったもの</h3>
+  <ul>
+    <li>「示す」の肯定的側面。対角線論法が与えるのは全域的内在化の限界であって、示されるものの実体ではない。</li>
+    <li>メタ言語を使わずに限界を記述すること。あらゆる形式化は何らかのメタレベルを使うため、6.54 の自己解体性は弱まる。</li>
+    <li>6.4 以降の内容。</li>
+  </ul>
+
+  <div class="claim">
+    <span class="lab">全体の総括</span>
+    <p>このモデルで読む『論考』は、圏論にとって意図的に<strong>痩せた対象</strong>になる。命題層に古典的な二重否定の自然同型まで要求すると、証明圏は前順序に潰れ、射の違いを調べる余地が消える。一方、構造的な内容の多くは基底の形式・文脈の圏へ移り、そこには指定した内部述語論理を与えない。</p>
+    <p>そこから浮かぶ読みは、『論考』が単に論理について語る本ではなく、<em>論理が可能になる条件を語ろうとして、自らの意味論ではその条件を命題化できない位置に立つ本</em>だということだ。形式化は、その位置を完全に再現するのではなく、どの仮定を同時に置くと緊張が発生するかを可視化する。6.54 の梯子を対象言語とメタ言語の区別へ移すことはできる。しかし数学はその区別の外へは出ない。<strong>最後の一段だけは、やはり梯子が届かない。</strong></p>
+  </div>
+</section>
+
+<!-- ================= 11 ================= -->
+<section id="s11">
+  <div class="sec-head"><span class="sec-num">§ 11</span><h2>次に手を付けるとしたら</h2></div>
+  <ul>
+    <li><strong>修理 2 の完全な定式化。</strong>Schanuel トポス内で層 I–III をきちんと構成し、5.526 が本当に定理として出るかを確認する。ここが一番リターンが大きい。</li>
+    <li><strong>Joyal 崩壊の逆向きの利用。</strong>命題の圏をあえて前順序でない圏に緩めると『論考』のどの主張が最初に壊れるかを列挙する。証明関連的『論考』の地図。</li>
+    <li><strong>κ の「示され方」。</strong>修理 1 の κ を記法の性質として底に押し込めるか。押し込めるなら 5.55 の綱領に部分的な回答が与えられる。</li>
+    <li><strong>色排除の層的処理。</strong>質の次元を空間として、Prop を <code>Sh(質空間)</code> 上のブール代数として取り直す。6.3751 を独立性の破れではなく台の重なりとして扱えるか。</li>
+  </ul>
+</section>
+
+<!-- ================= index ================= -->
+<section id="idx">
+  <div class="sec-head">
+    <span class="sec-num">索引</span><h2>命題番号から引く</h2>
+    <p class="lede">本レポートで扱った『論考』の命題。番号をたどると該当節へ移動する。</p>
+  </div>
+  <div class="tindex">
+    <a href="#s3">1.13</a><a href="#s2">2.02</a><a href="#s2">2.0123</a><a href="#s2">2.0124</a><a href="#s2">2.0141</a><a href="#s2">2.021</a><a href="#s2">2.0211</a><a href="#s2">2.024</a><a href="#s2">2.03</a><a href="#s2">2.031</a><a href="#s3">2.05</a><a href="#s3">2.061</a><a href="#s3">2.062</a><a href="#s2">3.1432</a><a href="#s7">3.318</a><a href="#s8">3.331</a><a href="#s8">3.333</a><a href="#s3">3.4</a><a href="#s7">4.023</a><a href="#s5">4.12</a><a href="#s5">4.121</a><a href="#s5">4.126</a><a href="#s5">4.1272</a><a href="#s7">4.211</a><a href="#s8">4.22</a><a href="#s3">4.26</a><a href="#s3">4.431</a><a href="#s3">4.46</a><a href="#s3">4.463</a><a href="#s4">5.11</a><a href="#s4">5.132</a><a href="#s7">5.134</a><a href="#s3">5.15</a><a href="#s3">5.152</a><a href="#s4">5.25</a><a href="#s4">5.251</a><a href="#s4">5.2522</a><a href="#s8">5.4</a><a href="#s7">5.44</a><a href="#s7">5.501</a><a href="#s3">5.525</a><a href="#s8">5.526</a><a href="#s7">5.53</a><a href="#s7">5.542</a><a href="#s7">5.5423</a><a href="#s7">5.55</a><a href="#s9">5.632</a><a href="#s9">5.633</a><a href="#s9">5.64</a><a href="#s7">6</a><a href="#s4">6.02</a><a href="#s4">6.021</a><a href="#s4">6.022</a><a href="#s4">6.03</a><a href="#s7">6.111</a><a href="#s4">6.1251</a><a href="#s4">6.126</a><a href="#s4">6.1261</a><a href="#s4">6.1271</a><a href="#s3">6.37</a><a href="#s7">6.3751</a><a href="#s9">6.43</a><a href="#s8">6.54</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>用いた数学：</strong>Stone 双対性、Lambek の補題、Lawvere の不動点定理、Joyal の補題、始代数と接近可能関手、Joyal–Moerdijk の代数的集合論、nominal sets／Schanuel トポス、Martin-Löf 型理論の判断と命題の区別。数学上の結果はいずれも既知のもので、新規性を主張するのはそれらの配置と診断である。本文中の「対応」は、定理・条件付き帰結・解釈モデルを含み、すべてが同じ強さの同値を意味するわけではない。</p>
+  <p><strong>数理上の参照：</strong><a href="https://www.tac.mta.ca/tac/reprints/articles/15/tr15abs.html">Lawvere, “Diagonal Arguments and Cartesian Closed Categories”</a>、<a href="https://arxiv.org/abs/0910.2401">Abramsky, “No-Cloning in Categorical Quantum Mechanics”</a>（Joyal の補題の簡潔な定式化）、<a href="https://www.cambridge.org/core/books/nominal-sets/80F2B0C1B78A1DC309072CCEDAA88422">Pitts, <em>Nominal Sets</em></a>。</p>
+  <p>引用は Ogden 訳／独語原文を参照した拙訳。関連する哲学側の議論として <a href="https://link.springer.com/article/10.1007/s11229-022-03470-y">論理空間と論理形式をめぐる近年の研究</a>、<a href="https://link.springer.com/article/10.1007/s12136-023-00581-0">同一性記号の排除をめぐる研究</a>、<a href="https://www.wittgensteinproject.org/w/index.php/Some_Remarks_on_Logical_Form">1929 年「論理形式についての若干の考察」</a>がある。</p>
+  <p class="silence">7 — 語りえぬものについては、沈黙せねばならない。</p>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var bar = document.getElementById('prog');
+  var now = document.getElementById('now');
+  var navdrop = document.getElementById('navdrop');
+  var links = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+  var secs = Array.prototype.slice.call(document.querySelectorAll('main section'));
+
+  if (navdrop) {
+    navdrop.addEventListener('click', function(e){
+      if (e.target.closest && e.target.closest('a')) navdrop.open = false;
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && navdrop.open) {
+        navdrop.open = false;
+        navdrop.querySelector('summary').focus();
+      }
+    });
+  }
+
+  var titles = {};
+  secs.forEach(function(s){
+    var n = s.querySelector('.sec-num'), h = s.querySelector('h2');
+    titles[s.id] = (n ? n.textContent.trim() + ' — ' : '') + (h ? h.textContent.trim() : '');
+  });
+
+  function setActive(id){
+    if (now && titles[id]) now.textContent = titles[id];
+    links.forEach(function(a){
+      var active = a.getAttribute('data-t') === id;
+      a.classList.toggle('on', active);
+      if (active) a.setAttribute('aria-current','location');
+      else a.removeAttribute('aria-current');
+    });
+  }
+
+  function tick(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    var line = h.clientHeight * 0.28, best = secs[0];
+    for (var i = 0; i < secs.length; i++) {
+      if (secs[i].getBoundingClientRect().top <= line) best = secs[i];
+    }
+    if (best) setActive(best.id);
+  }
+
+  var queued = false;
+  window.addEventListener('scroll', function(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function(){ queued = false; tick(); });
+  }, {passive:true});
+  window.addEventListener('resize', function(){
+    if (navdrop && window.matchMedia('(min-width: 1060px)').matches) navdrop.open = false;
+    tick();
+  }, {passive:true});
+  tick();
+})();
+</script>
+</body>
+</html>
