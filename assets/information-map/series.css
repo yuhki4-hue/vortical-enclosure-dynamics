@@ -1,0 +1,63 @@
+/* Presentation only: deliberately namespaced to preserve the existing explorers. */
+.series-nav, .series-pager, .series-context {
+  box-sizing: border-box;
+  font: 14px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  color: #283f43;
+  background: #f5f8f6;
+  padding: 12px clamp(12px, 3vw, 32px);
+  border-block: 1px solid #d5e0dc;
+  text-align: left;
+}
+.series-nav .series-links, .series-pager {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px;
+}
+.series-nav a, .series-pager a, .series-context a { color: #245f64; text-decoration: underline; text-underline-offset: 3px; }
+.series-nav a, .series-pager a { display: inline-block; padding: 7px 0; }
+.series-nav a[aria-current="page"] { color: #1b3438; font-weight: 750; }
+.series-nav a:focus-visible, .series-pager a:focus-visible, .series-context a:focus-visible { outline: 3px solid #b66b29; outline-offset: 4px; }
+.series-context p { margin: 4px 0; }
+.series-context strong { font-weight: 700; }
+.series-pager { justify-content: space-between; margin-top: 28px; }
+.series-pager small { flex-basis: 100%; color: #51656a; }
+
+body.series-page { margin: 0; background: #f7f8f4; color: #243b40; font: 16px/1.8 system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+.series-page * { box-sizing: border-box; }
+.series-main { max-width: 1160px; margin: auto; padding: clamp(24px, 5vw, 60px) 20px; }
+.series-page a { color: #246269; text-underline-offset: 3px; }
+.series-page a:focus-visible, .series-page button:focus-visible, .series-page [tabindex]:focus-visible { outline: 3px solid #b66b29; outline-offset: 4px; }
+.series-kicker { font-size: 12px; letter-spacing: .12em; color: #5b746f; }
+.series-main h1 { font-size: clamp(26px, 4vw, 43px); line-height: 1.45; margin: 14px 0 22px; font-weight: 650; }
+.series-main h2 { font-size: 24px; margin-top: 36px; }
+.series-intro { max-width: 800px; }
+.series-lead { font-size: clamp(18px, 2.4vw, 23px); }
+.series-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 32px 0; }
+.series-card { background: #fff; border: 1px solid #d2ded7; border-radius: 12px; padding: 26px; }
+.series-card h2 { margin: 6px 0 12px; font-size: 23px; }
+.series-card p { margin: 12px 0; }
+.series-card .series-label { color: #56746c; font-size: 13px; letter-spacing: .08em; }
+.series-caution { background: #edf2ee; border-left: 3px solid #52796c; padding: 16px 20px; margin: 24px 0; }
+.series-caution p { margin: 6px 0; }
+.series-resources { padding-left: 24px; }
+.series-resources li { margin: 8px 0; }
+.series-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 18px 0; }
+.series-toolbar button { font: inherit; color: #264c48; border: 1px solid #afc4ba; background: #fff; padding: 8px 15px; min-height: 44px; border-radius: 6px; cursor: pointer; }
+.series-toolbar button:disabled { opacity: .5; cursor: default; }
+.series-toolbar output { min-width: 6em; }
+.series-viewer { overflow: auto; height: 72vh; height: 72dvh; min-height: 320px; border: 1px solid #bacdc3; background: #fff; position: relative; }
+.series-viewer img { display: block; width: 100%; height: auto; max-width: none; }
+.series-figure { margin: 0; }
+.series-figure figcaption { color: #536a64; margin: 14px 0; font-size: 14px; }
+.series-footer { max-width: 1160px; margin: auto; padding: 10px 20px 28px; font-size: 14px; }
+[data-viewer-controls][hidden] { display: none; }
+@media (max-width: 640px) {
+  .series-cards { grid-template-columns: 1fr; }
+  .series-card { padding: 21px; }
+  .series-main { padding-inline: 16px; }
+  .series-nav .series-links { gap: 2px 14px; }
+  .series-nav { font-size: 13px; }
+}
+@media print {
+  .series-nav, .series-pager, .series-toolbar { display: none; }
+  .series-viewer { height: auto; overflow: visible; border: 0; }
+  .series-viewer img { width: 100% !important; }
+}

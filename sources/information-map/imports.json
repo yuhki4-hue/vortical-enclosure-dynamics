@@ -1,0 +1,74 @@
+{
+  "schema": "information-map-imports-1",
+  "latest_package_label": "20261006",
+  "authority": "User-designated latest delivery. Original Downloads and older packages remain untouched.",
+  "presentation_changes": [
+    "Shared navigation and stylesheet in figure1/2b/3 index.html",
+    "figure2b data.js: twoDConditionsUrl only; all scientific data unchanged"
+  ],
+  "canonical_policy": "Delivered figure 2 SVGs are canonical exported artifacts, not editable generator sources. Audit HTML/JSON are distinct author audit records. See docs/information-map.md.",
+  "imports": [
+    {
+      "source": "figure1-github-20261006.zip",
+      "sha256": "a633c3113644cc0c80a53e3a188b9a6596d6a60487a68acfefebbe9669629505",
+      "members": {
+        "figure1/index.html": "8ce3d05ebc8e4170ce6b3b71ec819181d863b41688f22e7f43ab15a20ab011c0"
+      }
+    },
+    {
+      "source": "figure2-github-20261006.zip",
+      "sha256": "6efba41d8dd76fca3fa18bb7fa13e0f1632cac2fdf84b79111301531398e30c5",
+      "members": {
+        "figure2b/AUDIT.md": "83f3a590485fd888c8ecabe38a3209c139b59e1a54ab6a37189c0f49c46d8ce6",
+        "figure2b/README.md": "ad1bd7d1a8fd706e1891d423a67bb36c30616338086d1c487477caa926f0f94f",
+        "figure2b/app.js": "20ee869b20a01009e5950ffdfa1aa231c8200984f55f22bf392eccbba2e9c52f",
+        "figure2b/data.js": "92a9edfc5351035f181f43a040694b6f40b27ca4c6325c58e54f0e0bc963a033",
+        "figure2b/index.html": "aa84cced1ec30a6cc36a2b86a2edf955e9b418ae239c8667c54d3f0146578ffb",
+        "figure2b/mobile.css": "31e77f4b71e1f74146475f3243f54c79f9f15dad5f5089fd3c4a718569d2767d",
+        "figure2b/mobile.js": "14f46ab1f4031861feb347ca03d2d8adab2a99d53a6552741409c29f1dfbadab",
+        "figure2b/style.css": "a4b86cc32aac59858bcc575a8d1941161ac0120b139d3e557155e89116002056",
+        "figure2b/vendor/LICENSE-font.txt": "3e3555b9536a600252f3ac1622a182c5dda5aeae38734ea2427c4d8f9c87d636",
+        "figure2b/vendor/LICENSE-three.txt": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+        "figure2b/vendor/diagram-ja.woff": "1b27ea53c1ccb50cc09f6a225b41f41fe1b9283a5af0ac135f46d78d162f258e",
+        "figure2b/vendor/three.min.js": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+      }
+    },
+    {
+      "source": "figure3-github-20261006.zip",
+      "sha256": "0189c0e655c698b00a2d191074d90d69463a0ecd5bad175aef6f1b56195362d9",
+      "members": {
+        "figure3/index.html": "b8ff881ec02c256f172da3dd665ee53aad8c560b98181d82eca2e98697300618"
+      }
+    },
+    {
+      "source": "figure-2A-v4-2.svg",
+      "destination": "assets/information-map/figure-2A-v4.svg",
+      "sha256": "3226e6e74047f4784d8c119469f63ba3a704d19ef559aaa046d6361f667ee26c",
+      "policy": "byte-exact"
+    },
+    {
+      "source": "figure-2B-v4-2.svg",
+      "destination": "assets/information-map/figure-2B-v4.svg",
+      "sha256": "53b9c67eda41c7790b0dc8fbccc5577c436c3597ba0efe3afc114d323a23af26",
+      "policy": "byte-exact"
+    },
+    {
+      "source": "figure-2-v4-audit-2.html",
+      "destination": "audits/information-map/figure-2-v4-audit.html",
+      "sha256": "193b22f57af342e3afbfb9f21c612608c8a6544e23b9767ff3bda292c0799631",
+      "policy": "byte-exact"
+    },
+    {
+      "source": "chemotaxis-case-audit.html",
+      "destination": "audits/information-map/chemotaxis-case-audit.html",
+      "sha256": "fa7acda26981fdb1a2a610a129a0db8e49b76cd95408daf6d787e793c0ba6c10",
+      "policy": "byte-exact"
+    },
+    {
+      "source": "chemotaxis-case-audit.json",
+      "destination": "audits/information-map/chemotaxis-case-audit.json",
+      "sha256": "3462c863475a324cbe857f40da9158dec96714dcc49f1abf4e80ba1ea653ffaa",
+      "policy": "byte-exact"
+    }
+  ]
+}

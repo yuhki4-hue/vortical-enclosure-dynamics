@@ -1,0 +1,2395 @@
+{
+  "schemaVersion": "chemotaxis-audit-1.0",
+  "caseId": "ecoli_chemotaxis",
+  "label": "ケース監査02：E. coli型走化性",
+  "date": "2026-10-05",
+  "scope": "原著に基づく機構の監査と図2作業定義への限定的対応づけ。3D本番データは未更新。",
+  "statusDefinitions": {
+    "strong": "指定Σ・機構について直接介入または標準的機構証拠。理論モデルの場合はその条件内の結果のみ。",
+    "candidate": "定義への有力な帰属だが必要な介入・同定が未完。",
+    "weak": "より単純な関係で説明でき、追加帰属の根拠が弱い。不存在の証明ではない。",
+    "uncertain": "内容・Σ・機構・履歴・文献の必要項目が未特定。"
+  },
+  "references": [
+    {
+      "id": "CH01",
+      "title": "Berg & Brown (1972), Chemotaxis in Escherichia coli analysed by Three-dimensional Tracking",
+      "doi": "10.1038/239500a0",
+      "url": "https://doi.org/10.1038/239500a0",
+      "evidenceKind": [
+        "behavioral"
+      ],
+      "finding": "三次元追跡によるrun/tumbleと走化性行動。",
+      "limit": "行動から表象内容は同定できない。",
+      "access": "出版社・PubMedの書誌を確認。行動機構の詳細はCH03/04/15で補強"
+    },
+    {
+      "id": "CH02",
+      "title": "Macnab & Koshland (1972), The Gradient-Sensing Mechanism in Bacterial Chemotaxis",
+      "doi": "10.1073/pnas.69.9.2509",
+      "url": "https://doi.org/10.1073/pnas.69.9.2509",
+      "evidenceKind": [
+        "behavioral",
+        "intervention"
+      ],
+      "finding": "一様濃度を時間的に変える古典実験。",
+      "limit": "主対象はSalmonella typhimurium。E. coliの直接証拠へ流用しない。",
+      "access": "公開要旨と対象種を確認"
+    },
+    {
+      "id": "CH03",
+      "title": "Block, Segall & Berg (1982), Impulse responses in bacterial chemotaxis",
+      "doi": "10.1016/0092-8674(82)90421-4",
+      "url": "https://doi.org/10.1016/0092-8674(82)90421-4",
+      "evidenceKind": [
+        "behavioral",
+        "intervention"
+      ],
+      "finding": "刺激パルスに対するE. coli運動応答。",
+      "limit": "二相性応答は過去値の明示表象を証明しない。",
+      "access": "原著要旨を確認"
+    },
+    {
+      "id": "CH04",
+      "title": "Segall, Block & Berg (1986), Temporal comparisons in bacterial chemotaxis",
+      "doi": "10.1073/pnas.83.23.8987",
+      "url": "https://doi.org/10.1073/pnas.83.23.8987",
+      "evidenceKind": [
+        "behavioral",
+        "intervention"
+      ],
+      "finding": "野生型と適応欠損株の時間応答を比較。",
+      "limit": "約4秒の重みづけは当該条件の結果であり、全条件の定数ではない。",
+      "access": "原著公開要旨を確認"
+    },
+    {
+      "id": "CH05",
+      "title": "Toews, Goy, Springer & Adler (1979), Attractants and repellents control demethylation of methylated chemotaxis proteins in Escherichia coli",
+      "doi": "10.1073/pnas.76.11.5544",
+      "url": "https://doi.org/10.1073/pnas.76.11.5544",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "finding": "標識メチル基の消失・メタノール生成から脱メチル化の刺激依存性を検査。",
+      "limit": "修飾量は過去濃度の一意なコピーではない。",
+      "access": "PMC要旨・書誌を確認。旧版本文は画像形式"
+    },
+    {
+      "id": "CH06",
+      "title": "Barkai & Leibler (1997), Robustness in simple biochemical networks",
+      "doi": "10.1038/43199",
+      "url": "https://doi.org/10.1038/43199",
+      "evidenceKind": [
+        "dynamical_model"
+      ],
+      "finding": "頑健な適応を説明する反応網モデル。",
+      "limit": "モデル構造の結果を全実験条件の完全適応と同一視しない。",
+      "access": "出版社・PubMed要旨を確認"
+    },
+    {
+      "id": "CH07",
+      "title": "Alon, Surette, Barkai & Leibler (1999), Robustness in bacterial chemotaxis",
+      "doi": "10.1038/16483",
+      "url": "https://doi.org/10.1038/16483",
+      "evidenceKind": [
+        "intervention",
+        "behavioral"
+      ],
+      "finding": "タンパク質量の摂動と適応の頑健性を実験検査。",
+      "limit": "適応時間・基礎バイアスまで不変とは限らない。",
+      "access": "原著書誌・公開要旨を確認"
+    },
+    {
+      "id": "CH08",
+      "title": "Yi, Huang, Simon & Doyle (2000), Robust perfect adaptation in bacterial chemotaxis through integral feedback control",
+      "doi": "10.1073/pnas.97.9.4649",
+      "url": "https://doi.org/10.1073/pnas.97.9.4649",
+      "evidenceKind": [
+        "dynamical_model"
+      ],
+      "finding": "条件付きの積分負帰還による適応説明。",
+      "limit": "安定性・反応仮定・動作範囲を要する。内部の明示比較器の発見ではない。",
+      "access": "公開本文を確認"
+    },
+    {
+      "id": "CH09",
+      "title": "Sourjik & Berg (2002), Receptor sensitivity in bacterial chemotaxis",
+      "doi": "10.1073/pnas.011589998",
+      "url": "https://doi.org/10.1073/pnas.011589998",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "finding": "CheY–CheZ FRETによる受容体経路応答、修飾状態による感度変化。",
+      "limit": "FRETは相互作用を介したキナーゼ出力の代理測定。占有率・CheY-P絶対量と同じではない。",
+      "access": "公開本文・要旨を確認"
+    },
+    {
+      "id": "CH10",
+      "title": "Cluzel, Surette & Leibler (2000), An ultrasensitive bacterial motor revealed by monitoring signaling proteins in single cells",
+      "doi": "10.1126/science.287.5458.1652",
+      "url": "https://doi.org/10.1126/science.287.5458.1652",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "finding": "単細胞CheY-GFP量とモーターCWバイアスの応答関係。",
+      "limit": "ΔcheY ΔcheB ΔcheZ背景とリン酸化割合の仮定を伴う。完全な独立do(CheY-P)ではない。",
+      "access": "著者公開PDF本文を確認"
+    },
+    {
+      "id": "CH11",
+      "title": "Tu, Shimizu & Berg (2008), Modeling the chemotactic response of Escherichia coli to time-varying stimuli",
+      "doi": "10.1073/pnas.0807569105",
+      "url": "https://doi.org/10.1073/pnas.0807569105",
+      "evidenceKind": [
+        "dynamical_model"
+      ],
+      "finding": "時間変動刺激・適応の定量的記述。",
+      "limit": "対数微分的応答は指定濃度域・モデル近似に依存。",
+      "access": "公開要旨を確認"
+    },
+    {
+      "id": "CH12",
+      "title": "Shimizu, Tu & Berg (2010), A modular gradient-sensing network for chemotaxis in Escherichia coli revealed by responses to time-varying stimuli",
+      "doi": "10.1038/msb.2010.37",
+      "url": "https://doi.org/10.1038/msb.2010.37",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention",
+        "dynamical_model"
+      ],
+      "finding": "時間変動刺激とFRETから応答・適応モジュールを検査。",
+      "limit": "実測とモデルによる再構成を区別する。",
+      "access": "出版社公開本文・PubMed内容を確認"
+    },
+    {
+      "id": "CH13",
+      "title": "Yuan, Branch, Hosu & Berg (2012), Adaptation at the output of the chemotaxis signalling pathway",
+      "doi": "10.1038/nature10964",
+      "url": "https://doi.org/10.1038/nature10964",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "finding": "モーターFliM構成変化を伴う出力側の適応。",
+      "limit": "target remodellingは作用器の再構成。目標基準変更C3cとは別。",
+      "access": "原著公開要旨を確認"
+    },
+    {
+      "id": "CH14",
+      "title": "Bi, Jin & Sourjik (2018), Inverted signaling by bacterial chemotaxis receptors",
+      "doi": "10.1038/s41467-018-05335-w",
+      "url": "https://doi.org/10.1038/s41467-018-05335-w",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention",
+        "behavioral"
+      ],
+      "finding": "Tar膜貫通部の挿入変異でMeAsp応答が反転。FRETと勾配中行動で検査。",
+      "limit": "感度・協同性等も変化。通常野生型のコード性や表象を示すものではない。",
+      "access": "PMC本文・図1および表1を確認"
+    },
+    {
+      "id": "CH15",
+      "title": "Mattingly, Kamino, Machta & Emonet (2021), Escherichia coli chemotaxis is information limited",
+      "doi": "10.1038/s41567-021-01380-3",
+      "url": "https://doi.org/10.1038/s41567-021-01380-3",
+      "evidenceKind": [
+        "information_theoretic",
+        "behavioral",
+        "mechanistic",
+        "dynamical_model"
+      ],
+      "finding": "単細胞信号測定・運動と、情報率に基づく走化性性能の制限。",
+      "limit": "弱い勾配等の仮定を伴う。相互情報量とM3は別。",
+      "access": "著者公開PDFを確認"
+    },
+    {
+      "id": "CH16",
+      "title": "Mattingly et al. (2026), E. coli chemosensing accuracy is not limited by stochastic molecule arrivals",
+      "doi": "10.1038/s41567-025-03111-4",
+      "url": "https://doi.org/10.1038/s41567-025-03111-4",
+      "evidenceKind": [
+        "information_theoretic",
+        "mechanistic",
+        "dynamical_model"
+      ],
+      "finding": "指定条件の単細胞信号の情報率は分子到来限界より低く、内部雑音が制限する。",
+      "limit": "全環境の上限ではない。2024年プレプリントではなく2026年刊行版を採用。",
+      "access": "出版社本文を確認、2026年1月8日刊行"
+    },
+    {
+      "id": "CH17",
+      "title": "Ni, Colin, Link, Endres & Sourjik (2020), Growth-rate dependent resource investment in bacterial motile behavior quantitatively follows potential benefit of chemotaxis",
+      "doi": "10.1073/pnas.1910849117",
+      "url": "https://doi.org/10.1073/pnas.1910849117",
+      "evidenceKind": [
+        "intervention",
+        "behavioral",
+        "dynamical_model"
+      ],
+      "finding": "栄養勾配条件で野生型と非走化性株の競争優位・資源配分を検査。",
+      "limit": "環境依存の増殖上の利益であり、全状況の生存必須性や過去の選択史ではない。",
+      "access": "公開原著の要旨・結果の検索索引を確認"
+    },
+    {
+      "id": "CH18",
+      "title": "Montévil & Mossio (2015), Biological organisation as closure of constraints",
+      "doi": "10.1016/j.jtbi.2015.02.029",
+      "url": "https://doi.org/10.1016/j.jtbi.2015.02.029",
+      "evidenceKind": [
+        "organizational_theory"
+      ],
+      "finding": "時間尺度を区別した制約の相互依存というFoの理論根拠。",
+      "limit": "E. coli走化性回路の制約閉包を実験的に確定する論文ではない。",
+      "access": "著者公開概要・論文URLを確認"
+    },
+    {
+      "id": "CH19",
+      "title": "Kolchinsky & Wolpert (2018), Semantic information, autonomous agency and non-equilibrium statistical physics",
+      "doi": "10.1098/rsfs.2018.0041",
+      "url": "https://doi.org/10.1098/rsfs.2018.0041",
+      "evidenceKind": [
+        "information_theoretic",
+        "dynamical_model"
+      ],
+      "finding": "系―環境の依存を介入で変更し、存続指標への寄与を定義。",
+      "limit": "本件の走化性を用いた実験的算出ではない。主なviability関数は負のShannonエントロピー。",
+      "access": "公開本文を確認"
+    },
+    {
+      "id": "CH20",
+      "title": "Mowbray & Koshland (1990), Mutations in the aspartate receptor of Escherichia coli which affect aspartate binding",
+      "doi": "10.1016/S0021-9258(18)55445-4",
+      "url": "https://doi.org/10.1016/S0021-9258(18)55445-4",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "finding": "精製膜中の結合測定とTar変異を用いて、結合低下と下流信号不全を区別。",
+      "limit": "膜中の受容体の実験。完全に環境から切り離した裸の分子ではない。",
+      "access": "出版社・PubMedの原著要旨を確認"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CH-C01",
+      "sigmaId": "S1",
+      "relation": "R0",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic"
+      ],
+      "claim": "受容体と指定リガンドが相互作用する",
+      "basis": "精製膜中のTar–aspartate結合を測定",
+      "references": [
+        "CH20"
+      ],
+      "caveats": "単離系で下流信号まで実測したという意味ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "D": "リガンド種・濃度、受容体変異を対照",
+        "M": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "Q": "結合・構造応答",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "結合応答時間。数値は未指定"
+      }
+    },
+    {
+      "id": "CH-C02",
+      "sigmaId": "S1",
+      "relation": "R1",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "リガンドと受容体の特異的関係",
+      "basis": "Tar結合部位変異でaspartate結合と下流応答を区別",
+      "references": [
+        "CH20"
+      ],
+      "caveats": "MCP一般、全リガンドに一括しない。間接感受経路もある",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "D": "リガンド種・濃度、受容体変異を対照",
+        "M": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "Q": "結合・構造応答",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "結合応答時間。数値は未指定"
+      }
+    },
+    {
+      "id": "CH-C03",
+      "sigmaId": "S1",
+      "relation": "R2",
+      "status": "candidate",
+      "evidenceKind": [
+        "mechanistic"
+      ],
+      "claim": "結合差から構造状態差への変換候補",
+      "basis": "内部の構造出力を定義すれば検査可能",
+      "references": [
+        "CH14"
+      ],
+      "caveats": "単離受容体の指定出力をこのデータ案で独立測定していない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "D": "リガンド種・濃度、受容体変異を対照",
+        "M": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "Q": "結合・構造応答",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "結合応答時間。数値は未指定"
+      }
+    },
+    {
+      "id": "CH-C04",
+      "sigmaId": "S2",
+      "relation": "R2",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "刺激差がキナーゼ出力へ変換される",
+      "basis": "FRET応答と経路・修飾背景の介入",
+      "references": [
+        "CH09",
+        "CH12"
+      ],
+      "caveats": "c・occupancy・活動a・CheY-Pは別変数",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "D": "濃度ステップ、修飾背景・受容体変異の対照",
+        "M": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い応答域。実験依存、数値未指定"
+      }
+    },
+    {
+      "id": "CH-C05",
+      "sigmaId": "S2",
+      "relation": "R3_gain_only",
+      "status": "weak",
+      "evidenceKind": [
+        "intervention"
+      ],
+      "claim": "通常の感度・利得変化だけをR3とする帰属",
+      "basis": "CheR/CheBや修飾量で感度は変わる",
+      "references": [
+        "CH09"
+      ],
+      "caveats": "入出力対応の代替規則を示したとは限らない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "D": "濃度ステップ、修飾背景・受容体変異の対照",
+        "M": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い応答域。実験依存、数値未指定"
+      }
+    },
+    {
+      "id": "CH-C06",
+      "sigmaId": "S2",
+      "relation": "R3_local_remapping",
+      "status": "strong",
+      "evidenceKind": [
+        "intervention",
+        "behavioral"
+      ],
+      "claim": "外部MeAsp入力に対する活動応答の符号をTar改変で反転できる",
+      "basis": "TarTM2+2I等の挿入変異、FRET・勾配中行動",
+      "references": [
+        "CH14"
+      ],
+      "caveats": "実証された局所再対応。R3全条件を満たすかとは別フィールド",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "D": "濃度ステップ、修飾背景・受容体変異の対照",
+        "M": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い応答域。実験依存、数値未指定"
+      }
+    },
+    {
+      "id": "CH-C07",
+      "sigmaId": "S2",
+      "relation": "R3",
+      "status": "candidate",
+      "evidenceKind": [
+        "intervention"
+      ],
+      "claim": "厳密な規則担体の介入上の分離",
+      "basis": "外部刺激型と活動増減型を固定すれば再対応の有力例",
+      "references": [
+        "CH14"
+      ],
+      "caveats": "受容体占有率を入力にする場合は未統制。感度・協同性等も変化。Tar構造と入出力「状態」を区別",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "D": "濃度ステップ、修飾背景・受容体変異の対照",
+        "M": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い応答域。実験依存、数値未指定"
+      }
+    },
+    {
+      "id": "CH-C08",
+      "sigmaId": "S2",
+      "relation": "R4",
+      "status": "weak",
+      "evidenceKind": [
+        "intervention"
+      ],
+      "claim": "走化性系全体を体系的コードとする帰属",
+      "basis": "局所符号反転はあるが、体系的な多数対応の再割当を未確認",
+      "references": [
+        "CH14"
+      ],
+      "caveats": "R3が候補であるだけでR4を否定も肯定もしない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "D": "濃度ステップ、修飾背景・受容体変異の対照",
+        "M": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い応答域。実験依存、数値未指定"
+      }
+    },
+    {
+      "id": "CH-C09",
+      "sigmaId": "S3",
+      "relation": "C0",
+      "status": "weak",
+      "evidenceKind": [
+        "mechanistic"
+      ],
+      "claim": "走化性適応を受動緩和だけで説明すること",
+      "basis": "酵素反応・リン酸化・修飾が寄与",
+      "references": [
+        "CH05",
+        "CH09"
+      ],
+      "caveats": "個々の結合緩和を否定する意味ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C10",
+      "sigmaId": "S3",
+      "relation": "C1",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "受容体活動を補償する負帰還",
+      "basis": "CheR/CheBと修飾状態を介する活動の回復",
+      "references": [
+        "CH05",
+        "CH09",
+        "CH12"
+      ],
+      "caveats": "完全適応の精度・範囲は別検査",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C11",
+      "sigmaId": "S3",
+      "relation": "C1_integral_model",
+      "status": "strong",
+      "evidenceKind": [
+        "dynamical_model"
+      ],
+      "claim": "条件付き積分帰還モデルによる頑健適応の説明",
+      "basis": "モデル内の定常条件とフィードバック構造",
+      "references": [
+        "CH06",
+        "CH08"
+      ],
+      "caveats": "strongは当該数理結果。全生理条件に外挿しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C12",
+      "sigmaId": "S3",
+      "relation": "C2",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "感受と下流過程の変調を区別できる",
+      "basis": "刺激・キナーゼ・適応因子の介入を分ける",
+      "references": [
+        "CH09",
+        "CH12"
+      ],
+      "caveats": "解剖学的な独立器官は要求しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C13",
+      "sigmaId": "S3",
+      "relation": "C3a",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "同じ現在刺激への応答が内部修飾状態に依存",
+      "basis": "異なる修飾背景の受容体応答",
+      "references": [
+        "CH09"
+      ],
+      "caveats": "現在状態依存と履歴に由来する更新は別命題",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C14",
+      "sigmaId": "S3",
+      "relation": "C3b",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention",
+        "behavioral"
+      ],
+      "claim": "過去刺激が修飾・後続応答を変える",
+      "basis": "刺激履歴・適応欠損・メチル化の証拠を統合",
+      "references": [
+        "CH04",
+        "CH05",
+        "CH12"
+      ],
+      "caveats": "経験的学習・記号的記憶内容を含意しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C15",
+      "sigmaId": "S3",
+      "relation": "C3c",
+      "status": "weak",
+      "evidenceKind": [
+        "dynamical_model",
+        "mechanistic"
+      ],
+      "claim": "通常のMeAsp適応を目標基準の変更とする帰属",
+      "basis": "典型モデルでは修飾量が変わり活動の作動点を回復する",
+      "references": [
+        "CH08",
+        "CH12"
+      ],
+      "caveats": "他の環境・発現変化で目標が変わる可能性を否定しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C16",
+      "sigmaId": "S3",
+      "relation": "W0",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "現在の修飾状態が過去刺激に依存",
+      "basis": "刺激によるメチル化・脱メチル化変化",
+      "references": [
+        "CH05"
+      ],
+      "caveats": "痕跡は履歴全体の復元可能性を意味しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C17",
+      "sigmaId": "S3",
+      "relation": "W1",
+      "status": "candidate",
+      "evidenceKind": [
+        "mechanistic",
+        "dynamical_model"
+      ],
+      "claim": "指定した前処理条件の痕跡型としての記録",
+      "basis": "修飾状態と適応背景の対応を条件付きで検査可能",
+      "references": [
+        "CH05",
+        "CH12"
+      ],
+      "caveats": "記録対象は限定プロトコルの適応背景。絶対濃度・平均刺激・活動履歴は同義でない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C18",
+      "sigmaId": "S3",
+      "relation": "W1_absolute_past",
+      "status": "weak",
+      "evidenceKind": [
+        "dynamical_model"
+      ],
+      "claim": "修飾状態を過去絶対濃度の一意な記録とすること",
+      "basis": "複数の履歴・酵素量・混合刺激が同じ状態を与えうる",
+      "references": [
+        "CH11",
+        "CH12"
+      ],
+      "caveats": "入力履歴への逆問題は一般に一意でない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C19",
+      "sigmaId": "S3",
+      "relation": "W2",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "修飾の書込と後続応答への因果的利用",
+      "basis": "履歴依存修飾と修飾状態依存応答を接続",
+      "references": [
+        "CH05",
+        "CH09",
+        "CH12"
+      ],
+      "caveats": "本図の広い物理メモリ定義。特定過去内容の記憶は未確定。R3的「読取」と呼ばない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C20",
+      "sigmaId": "S3",
+      "relation": "W3",
+      "status": "weak",
+      "evidenceKind": [
+        "mechanistic"
+      ],
+      "claim": "適応痕跡を符号化記録とすること",
+      "basis": "書込・後続利用だけで説明できる",
+      "references": [
+        "CH05",
+        "CH12"
+      ],
+      "caveats": "Tar再対応例はメチル化記録の符号体系を示さない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "D": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "M": "Σ2＋CheR/CheB・受容体メチル化",
+        "Q": "活動回復・履歴による応答変化",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "応答窓と適応窓を別指定。値は刺激・背景依存"
+      }
+    },
+    {
+      "id": "CH-C21",
+      "sigmaId": "S4",
+      "relation": "R2",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "CheY-P関連状態がモーター出力差に接続する",
+      "basis": "単細胞信号量とCWバイアスの測定",
+      "references": [
+        "CH10"
+      ],
+      "caveats": "CheY-Pはスイッチ制御。回転エネルギーはPMF。CWバイアスとtumble確率を分ける",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "D": "信号量、モーター負荷、FliM構成等の対照",
+        "M": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い出力応答と遅い構成更新を分離"
+      }
+    },
+    {
+      "id": "CH-C22",
+      "sigmaId": "S4",
+      "relation": "C2",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "感受経路と運動作用経路を介入的に区別できる",
+      "basis": "上流信号とモーター出力の操作・測定",
+      "references": [
+        "CH09",
+        "CH10"
+      ],
+      "caveats": "作用経路があるだけでは環境を介する閉ループではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "D": "信号量、モーター負荷、FliM構成等の対照",
+        "M": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い出力応答と遅い構成更新を分離"
+      }
+    },
+    {
+      "id": "CH-C23",
+      "sigmaId": "S4",
+      "relation": "C3b_motor",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "モーターにも履歴依存の構成更新がある",
+      "basis": "FliM数の変化を伴う出力適応",
+      "references": [
+        "CH13"
+      ],
+      "caveats": "受容体メチル化とは別の時間・機構。C3cとはしない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "D": "信号量、モーター負荷、FliM構成等の対照",
+        "M": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い出力応答と遅い構成更新を分離"
+      }
+    },
+    {
+      "id": "CH-C24",
+      "sigmaId": "S4",
+      "relation": "Fc",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "intervention"
+      ],
+      "claim": "経路が運動スイッチ調節に寄与する",
+      "basis": "信号量に対するモーター応答",
+      "references": [
+        "CH10"
+      ],
+      "caveats": "維持への寄与とは別Q",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "D": "信号量、モーター負荷、FliM構成等の対照",
+        "M": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い出力応答と遅い構成更新を分離"
+      }
+    },
+    {
+      "id": "CH-C25",
+      "sigmaId": "S4",
+      "relation": "UI",
+      "status": "weak",
+      "evidenceKind": [
+        "mechanistic"
+      ],
+      "claim": "信号＋モーターだけに閉じたUI帰属",
+      "basis": "環境との再帰接続をまだ境界に含めない",
+      "references": [
+        "CH10"
+      ],
+      "caveats": "弱いのは境界に関する帰属。生体機構の性能の順位ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "D": "信号量、モーター負荷、FliM構成等の対照",
+        "M": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "速い出力応答と遅い構成更新を分離"
+      }
+    },
+    {
+      "id": "CH-C26",
+      "sigmaId": "S5",
+      "relation": "UI",
+      "status": "strong",
+      "evidenceKind": [
+        "behavioral",
+        "mechanistic"
+      ],
+      "claim": "移動が次に受ける化学入力を変える再帰結合",
+      "basis": "軌跡・刺激応答・勾配中行動を結ぶ",
+      "references": [
+        "CH01",
+        "CH03",
+        "CH15"
+      ],
+      "caveats": "本図のUI候補定義を支える根拠が強い。意識・Fo・M3は含意しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C27",
+      "sigmaId": "S5",
+      "relation": "M1",
+      "status": "strong",
+      "evidenceKind": [
+        "behavioral",
+        "intervention"
+      ],
+      "claim": "刺激差がQ＝移動統計へ違いを生む",
+      "basis": "刺激・勾配への介入と行動測定",
+      "references": [
+        "CH03",
+        "CH14",
+        "CH15"
+      ],
+      "caveats": "relevantはbeneficialではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C28",
+      "sigmaId": "S5",
+      "relation": "M2-c",
+      "status": "strong",
+      "evidenceKind": [
+        "mechanistic",
+        "behavioral"
+      ],
+      "claim": "信号差が走化性運動という過程へ組み込まれる",
+      "basis": "Fcを採る機能的意味",
+      "references": [
+        "CH03",
+        "CH10",
+        "CH15"
+      ],
+      "caveats": "表象内容の追加は要しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C29",
+      "sigmaId": "S5",
+      "relation": "N2",
+      "status": "strong",
+      "evidenceKind": [
+        "behavioral"
+      ],
+      "claim": "指定勾配でドリフト・到達基準を満たすか評価できる",
+      "basis": "Qと時間窓を先に固定した行動評価",
+      "references": [
+        "CH14",
+        "CH15"
+      ],
+      "caveats": "課題上の成否。個々のtumbleや内部の成敗判断ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C30",
+      "sigmaId": "S5",
+      "relation": "N2_internal_evaluation",
+      "status": "uncertain",
+      "evidenceKind": [
+        "content_attribution"
+      ],
+      "claim": "細胞自身が行為の成功判定を保持・評価する",
+      "basis": "受容体適応から独立した評価器の証拠は本監査で未同定",
+      "references": [],
+      "caveats": "外部の成功指標と内部調節偏差を分ける",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C31",
+      "sigmaId": "S5",
+      "relation": "N3",
+      "status": "uncertain",
+      "evidenceKind": [
+        "content_attribution"
+      ],
+      "claim": "信号に表象的正誤を帰属する",
+      "basis": "候補内容・正誤条件・消費者の理論的同定が必要",
+      "references": [],
+      "caveats": "不利な行動・非栄養性誘引への移動だけでは誤表象でない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C32",
+      "sigmaId": "S5",
+      "relation": "M3",
+      "status": "candidate",
+      "evidenceKind": [
+        "content_attribution"
+      ],
+      "claim": "時間変化等についての内容帰属候補",
+      "basis": "内容候補を介入で比較できるが、相関・利用からは確定しない",
+      "references": [
+        "CH12",
+        "CH14",
+        "CH15"
+      ],
+      "caveats": "記載文献は機構的制約を与える。表象理論の実証ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "遊泳細胞と指定した空間・時間勾配",
+        "D": "自由遊泳／固定・刺激再生、勾配反転等",
+        "M": "遊泳細胞と指定した空間・時間勾配",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "軌跡を評価する時間窓。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C33",
+      "sigmaId": "S6",
+      "relation": "Fc",
+      "status": "strong",
+      "evidenceKind": [
+        "intervention",
+        "behavioral"
+      ],
+      "claim": "指定栄養勾配で走化性が増殖上の利益に寄与する",
+      "basis": "野生型と非走化性株等の競争比較",
+      "references": [
+        "CH17"
+      ],
+      "caveats": "利益とコストは環境依存。高資源への接近一般を生存必須としない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C34",
+      "sigmaId": "S6",
+      "relation": "N1",
+      "status": "strong",
+      "evidenceKind": [
+        "intervention",
+        "behavioral"
+      ],
+      "claim": "指定条件の増殖可能性に差がある",
+      "basis": "増殖・競争帰結への介入対照",
+      "references": [
+        "CH17"
+      ],
+      "caveats": "実証対象は主に増殖上の非対称性。全条件の死亡率ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C35",
+      "sigmaId": "S6",
+      "relation": "Fo",
+      "status": "candidate",
+      "evidenceKind": [
+        "organizational_theory",
+        "mechanistic"
+      ],
+      "claim": "走化性制約が細胞の相互維持へ参加する候補",
+      "basis": "資源獲得と装置合成・膜／代謝の依存を別経路で監査",
+      "references": [
+        "CH17",
+        "CH18"
+      ],
+      "caveats": "制約集合C・双方向の維持介入・τact/τmaintainが未完",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C36",
+      "sigmaId": "S6",
+      "relation": "M2-o",
+      "status": "candidate",
+      "evidenceKind": [
+        "organizational_theory"
+      ],
+      "claim": "Foを採る機能的意味の候補",
+      "basis": "Foが成立する同じ限定条件を引き継ぐ",
+      "references": [
+        "CH18"
+      ],
+      "caveats": "M2-cや細胞全体の生存から自動成立しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C37",
+      "sigmaId": "S6",
+      "relation": "M1",
+      "status": "strong",
+      "evidenceKind": [
+        "intervention",
+        "behavioral"
+      ],
+      "claim": "環境・行動差が指定増殖帰結に関連する",
+      "basis": "Qを増殖として評価した比較",
+      "references": [
+        "CH17"
+      ],
+      "caveats": "運動をQにするΣ5のM1とは別命題",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    },
+    {
+      "id": "CH-C38",
+      "sigmaId": "S7",
+      "relation": "Fs",
+      "status": "uncertain",
+      "evidenceKind": [
+        "evolutionary_inference"
+      ],
+      "claim": "特定走化性効果による歴史的保持",
+      "basis": "対象系統・効果・選択履歴をこの監査では特定していない",
+      "references": [],
+      "caveats": "現在の競争利益は候補仮説を支えるが、実際の選択史ではない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "特定集団・環境履歴・系統比較を指定",
+        "D": "選択／漂移・連鎖・環境差を対照",
+        "M": "特定集団・環境履歴・系統比較を指定",
+        "Q": "効果による歴史的な保持",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "世代・系統履歴。対象データ未指定"
+      }
+    },
+    {
+      "id": "CH-C39",
+      "sigmaId": "S7",
+      "relation": "M2-s",
+      "status": "uncertain",
+      "evidenceKind": [
+        "evolutionary_inference"
+      ],
+      "claim": "選択効果に基づく機能的意味",
+      "basis": "Fsに必要な履歴を未指定",
+      "references": [],
+      "caveats": "有用性から選択効果を逆算しない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "特定集団・環境履歴・系統比較を指定",
+        "D": "選択／漂移・連鎖・環境差を対照",
+        "M": "特定集団・環境履歴・系統比較を指定",
+        "Q": "効果による歴史的な保持",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "世代・系統履歴。対象データ未指定"
+      }
+    },
+    {
+      "id": "CH-C40",
+      "sigmaId": "S8",
+      "relation": "Shannon",
+      "status": "strong",
+      "evidenceKind": [
+        "information_theoretic",
+        "mechanistic"
+      ],
+      "claim": "指定確率モデルで信号・行動の情報率を評価できる",
+      "basis": "単細胞計測と情報理論モデル",
+      "references": [
+        "CH15",
+        "CH16"
+      ],
+      "caveats": "座標外解析。Iが大きいだけで因果的M1・M3は出ない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "研究者・装置・測定モデル・確率モデル",
+        "D": "サンプリング・binning・雑音・モデル比較",
+        "M": "研究者・装置・測定モデル・確率モデル",
+        "Q": "推定量・予測精度・再現性",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "標本化間隔・推定窓・定常性を指定"
+      }
+    },
+    {
+      "id": "CH-C41",
+      "sigmaId": "S6",
+      "relation": "KW_application",
+      "status": "candidate",
+      "evidenceKind": [
+        "information_theoretic"
+      ],
+      "claim": "存続への因果寄与を問うK&W型解析候補",
+      "basis": "viabilityと依存関係を壊す介入の設計が必要",
+      "references": [
+        "CH19"
+      ],
+      "caveats": "本件の数値計算・E. coli実験検証は未実施。M3の証拠にしない",
+      "attribution": "本監査の作業定義への対応づけ。論文自身のR/C/W等の判定ではない",
+      "indices": {
+        "Sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "D": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "M": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau_response": null,
+        "tau_update": null,
+        "timeNotes": "τactとτmaintainを別指定。数値未指定"
+      }
+    }
+  ],
+  "sigmaModes": {
+    "S1": {
+      "id": "S1",
+      "label": "Σ1 受容体単体",
+      "sigma": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+      "contrastSet": "リガンド種・濃度、受容体変異を対照",
+      "Q": "結合・構造応答",
+      "tau": "結合応答時間。数値は未指定",
+      "caveats": "回路・運動・適応酵素を含めない",
+      "claims": [
+        "CH-C01",
+        "CH-C02",
+        "CH-C03"
+      ],
+      "relations": [
+        {
+          "relation": "R0",
+          "status": "strong",
+          "claimId": "CH-C01"
+        },
+        {
+          "relation": "R1",
+          "status": "strong",
+          "claimId": "CH-C02"
+        },
+        {
+          "relation": "R2",
+          "status": "candidate",
+          "claimId": "CH-C03"
+        }
+      ]
+    },
+    "S2": {
+      "id": "S2",
+      "label": "Σ2 初期シグナル伝達",
+      "sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+      "contrastSet": "濃度ステップ、修飾背景・受容体変異の対照",
+      "Q": "キナーゼ活動・CheY-P関連信号",
+      "tau": "速い応答域。実験依存、数値未指定",
+      "caveats": "キナーゼ代理測定を占有率や運動と混ぜない",
+      "claims": [
+        "CH-C04",
+        "CH-C05",
+        "CH-C06",
+        "CH-C07",
+        "CH-C08"
+      ],
+      "relations": [
+        {
+          "relation": "R2",
+          "status": "strong",
+          "claimId": "CH-C04"
+        },
+        {
+          "relation": "R3_gain_only",
+          "status": "weak",
+          "claimId": "CH-C05"
+        },
+        {
+          "relation": "R3_local_remapping",
+          "status": "strong",
+          "claimId": "CH-C06"
+        },
+        {
+          "relation": "R3",
+          "status": "candidate",
+          "claimId": "CH-C07"
+        },
+        {
+          "relation": "R4",
+          "status": "weak",
+          "claimId": "CH-C08"
+        }
+      ]
+    },
+    "S3": {
+      "id": "S3",
+      "label": "Σ3 適応回路を含む信号系",
+      "sigma": "Σ2＋CheR/CheB・受容体メチル化",
+      "contrastSet": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+      "Q": "活動回復・履歴による応答変化",
+      "tau": "応答窓と適応窓を別指定。値は刺激・背景依存",
+      "caveats": "再較正は目標更新ではない",
+      "claims": [
+        "CH-C09",
+        "CH-C10",
+        "CH-C11",
+        "CH-C12",
+        "CH-C13",
+        "CH-C14",
+        "CH-C15",
+        "CH-C16",
+        "CH-C17",
+        "CH-C18",
+        "CH-C19",
+        "CH-C20"
+      ],
+      "relations": [
+        {
+          "relation": "C0",
+          "status": "weak",
+          "claimId": "CH-C09"
+        },
+        {
+          "relation": "C1",
+          "status": "strong",
+          "claimId": "CH-C10"
+        },
+        {
+          "relation": "C1_integral_model",
+          "status": "strong",
+          "claimId": "CH-C11"
+        },
+        {
+          "relation": "C2",
+          "status": "strong",
+          "claimId": "CH-C12"
+        },
+        {
+          "relation": "C3a",
+          "status": "strong",
+          "claimId": "CH-C13"
+        },
+        {
+          "relation": "C3b",
+          "status": "strong",
+          "claimId": "CH-C14"
+        },
+        {
+          "relation": "C3c",
+          "status": "weak",
+          "claimId": "CH-C15"
+        },
+        {
+          "relation": "W0",
+          "status": "strong",
+          "claimId": "CH-C16"
+        },
+        {
+          "relation": "W1",
+          "status": "candidate",
+          "claimId": "CH-C17"
+        },
+        {
+          "relation": "W1_absolute_past",
+          "status": "weak",
+          "claimId": "CH-C18"
+        },
+        {
+          "relation": "W2",
+          "status": "strong",
+          "claimId": "CH-C19"
+        },
+        {
+          "relation": "W3",
+          "status": "weak",
+          "claimId": "CH-C20"
+        }
+      ]
+    },
+    "S4": {
+      "id": "S4",
+      "label": "Σ4 信号系＋鞭毛運動系",
+      "sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+      "contrastSet": "信号量、モーター負荷、FliM構成等の対照",
+      "Q": "CWバイアス・run/tumble統計",
+      "tau": "速い出力応答と遅い構成更新を分離",
+      "caveats": "作用接続であり、環境を含む閉ループはΣ5",
+      "claims": [
+        "CH-C21",
+        "CH-C22",
+        "CH-C23",
+        "CH-C24",
+        "CH-C25"
+      ],
+      "relations": [
+        {
+          "relation": "R2",
+          "status": "strong",
+          "claimId": "CH-C21"
+        },
+        {
+          "relation": "C2",
+          "status": "strong",
+          "claimId": "CH-C22"
+        },
+        {
+          "relation": "C3b_motor",
+          "status": "strong",
+          "claimId": "CH-C23"
+        },
+        {
+          "relation": "Fc",
+          "status": "strong",
+          "claimId": "CH-C24"
+        },
+        {
+          "relation": "UI",
+          "status": "weak",
+          "claimId": "CH-C25"
+        }
+      ]
+    },
+    "S5": {
+      "id": "S5",
+      "label": "Σ5 個体＋局所環境",
+      "sigma": "遊泳細胞と指定した空間・時間勾配",
+      "contrastSet": "自由遊泳／固定・刺激再生、勾配反転等",
+      "Q": "位置分布・ドリフト・到達率",
+      "tau": "軌跡を評価する時間窓。数値未指定",
+      "caveats": "UI候補の中心境界。Fo・表象の自動帰属なし",
+      "claims": [
+        "CH-C26",
+        "CH-C27",
+        "CH-C28",
+        "CH-C29",
+        "CH-C30",
+        "CH-C31",
+        "CH-C32"
+      ],
+      "relations": [
+        {
+          "relation": "UI",
+          "status": "strong",
+          "claimId": "CH-C26"
+        },
+        {
+          "relation": "M1",
+          "status": "strong",
+          "claimId": "CH-C27"
+        },
+        {
+          "relation": "M2-c",
+          "status": "strong",
+          "claimId": "CH-C28"
+        },
+        {
+          "relation": "N2",
+          "status": "strong",
+          "claimId": "CH-C29"
+        },
+        {
+          "relation": "N2_internal_evaluation",
+          "status": "uncertain",
+          "claimId": "CH-C30"
+        },
+        {
+          "relation": "N3",
+          "status": "uncertain",
+          "claimId": "CH-C31"
+        },
+        {
+          "relation": "M3",
+          "status": "candidate",
+          "claimId": "CH-C32"
+        }
+      ]
+    },
+    "S6": {
+      "id": "S6",
+      "label": "Σ6 維持を含む細胞全体",
+      "sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+      "contrastSet": "資源勾配、同質遺伝背景、外部資源の救済等",
+      "Q": "増殖・生存・装置維持を別測定",
+      "tau": "τactとτmaintainを別指定。数値未指定",
+      "caveats": "走化性がなくても維持可能な環境がある",
+      "claims": [
+        "CH-C33",
+        "CH-C34",
+        "CH-C35",
+        "CH-C36",
+        "CH-C37",
+        "CH-C41"
+      ],
+      "relations": [
+        {
+          "relation": "Fc",
+          "status": "strong",
+          "claimId": "CH-C33"
+        },
+        {
+          "relation": "N1",
+          "status": "strong",
+          "claimId": "CH-C34"
+        },
+        {
+          "relation": "Fo",
+          "status": "candidate",
+          "claimId": "CH-C35"
+        },
+        {
+          "relation": "M2-o",
+          "status": "candidate",
+          "claimId": "CH-C36"
+        },
+        {
+          "relation": "M1",
+          "status": "strong",
+          "claimId": "CH-C37"
+        },
+        {
+          "relation": "KW_application",
+          "status": "candidate",
+          "claimId": "CH-C41"
+        }
+      ]
+    },
+    "S7": {
+      "id": "S7",
+      "label": "Σ7 集団・進化系統",
+      "sigma": "特定集団・環境履歴・系統比較を指定",
+      "contrastSet": "選択／漂移・連鎖・環境差を対照",
+      "Q": "効果による歴史的な保持",
+      "tau": "世代・系統履歴。対象データ未指定",
+      "caveats": "現在の競争利益から過去の選択理由を断定しない",
+      "claims": [
+        "CH-C38",
+        "CH-C39"
+      ],
+      "relations": [
+        {
+          "relation": "Fs",
+          "status": "uncertain",
+          "claimId": "CH-C38"
+        },
+        {
+          "relation": "M2-s",
+          "status": "uncertain",
+          "claimId": "CH-C39"
+        }
+      ]
+    },
+    "S8": {
+      "id": "S8",
+      "label": "Σ8 実験・解析実践",
+      "sigma": "研究者・装置・測定モデル・確率モデル",
+      "contrastSet": "サンプリング・binning・雑音・モデル比較",
+      "Q": "推定量・予測精度・再現性",
+      "tau": "標本化間隔・推定窓・定常性を指定",
+      "caveats": "測定・解析上の内容を細菌自身に戻さない",
+      "claims": [
+        "CH-C40"
+      ],
+      "relations": [
+        {
+          "relation": "Shannon",
+          "status": "strong",
+          "claimId": "CH-C40"
+        }
+      ]
+    }
+  },
+  "forbiddenInferences": [
+    "temporal comparison → explicit representation としない",
+    "adaptation → learning としない",
+    "methylation state → memory content としない",
+    "C3b → C3c を自動導出しない",
+    "chemotactic success → N3 correctness としない",
+    "UI候補 → M3 としない",
+    "beneficial behavior → Fo としない",
+    "current usefulness → Fs としない",
+    "Shannon mutual information → semantic content としない",
+    "attractant response → nutrient representation としない",
+    "局所応答反転 → R4コード一般 としない",
+    "Σ6の維持関係 → 受容体単体のFo としない",
+    "CheY-Pのモーター制御 → 回転エネルギー供給 としない",
+    "CWバイアス → tumble確率 を同一変数としない",
+    "数理モデルの完全適応 → 全条件での完全適応 としない",
+    "Salmonellaの実験 → E. coliの直接実験証拠 としない"
+  ],
+  "auditQuestions": [
+    "対象はどのE. coli株・受容体・リガンドか。単一受容体か混合集団か",
+    "入力はc(t)、占有率、活動a(t)のどれか。出力はCheY-P、CWバイアス、行動のどれか",
+    "CheZとCheB-Pの役割、モーター負荷、PMFを統制したか",
+    "現在刺激を一致させ、過去履歴だけを変えたか",
+    "修飾状態への書込と後続利用をそれぞれ遮断・救済できるか",
+    "再対応は符号・割当の変更か、単なる閾値・感度変化か",
+    "R3介入で占有率・発現量・クラスター形成等も変わっていないか",
+    "基準が変わったのか、同じ作動点へ戻る再較正か",
+    "Q＝到達・成長・維持のどれか。評価時域は何か",
+    "Foの制約集合と各維持矢印に介入証拠はあるか",
+    "現存する利益と選択・保持の歴史を分離したか",
+    "M3候補の何が誤ったと数えられるか。誰が利用するか",
+    "測定代理変数・母集団平均と単細胞の違いを記録したか",
+    "Σ変更後も以前のstatusを無条件に継承していないか"
+  ],
+  "constraintTypes": [
+    "physical",
+    "historical",
+    "contextual"
+  ],
+  "conditionalConstraintTypes": {
+    "organizational": "Σ6/Fo候補に限る",
+    "referential": "M3候補の検査項目。確定タグにしない",
+    "normative": "N1/N2/N3を区別して各claimに付与"
+  },
+  "formationHistory": [
+    "physical_chemical"
+  ],
+  "formationHistoryCandidates": {
+    "development": "細胞内装置形成・合成の具体過程を要指定",
+    "evolution": "自然史的形成一般と、特定効果のFsは別",
+    "individual_learning": "通常の適応からは登録しない"
+  },
+  "contentCandidates": [
+    {
+      "content": "局所ligand濃度",
+      "status": "candidate",
+      "test": "受容体の結合状態・応答を濃度と対照",
+      "caveat": "適応背景や混合刺激で同じ活動が異なる濃度に対応。活動＝濃度表象としない"
+    },
+    {
+      "content": "濃度の時間変化",
+      "status": "candidate",
+      "test": "時間波形と応答核、履歴状態を操作",
+      "caveat": "微分的応答という計算記述と内容帰属を分離"
+    },
+    {
+      "content": "勾配の空間方向",
+      "status": "weak",
+      "test": "同じ位置の瞬間濃度で勾配・遊泳方向を反転",
+      "caveat": "沿った軌跡の時間変化からバイアスが出る。内部の方向ベクトルは未同定"
+    },
+    {
+      "content": "期待栄養価",
+      "status": "weak",
+      "test": "非代謝性MeAspと実際の炭素・窒素供給を分離",
+      "caveat": "誘引と栄養利益の解離。栄養価の過誤と呼ぶには内容根拠が必要"
+    },
+    {
+      "content": "runを続ける／tumbleする",
+      "status": "candidate",
+      "test": "CheY-Pとスイッチの消費者関係を検査",
+      "caveat": "命令的・指令的内容という理論候補。運動制御だけでも説明可能"
+    },
+    {
+      "content": "環境が有利／不利",
+      "status": "uncertain",
+      "test": "維持指標と信号の関係を環境横断で検査",
+      "caveat": "有利のQ・時間幅・利用機構が未指定。N1/N2からは導けない"
+    },
+    {
+      "content": "過去の絶対濃度",
+      "status": "weak",
+      "test": "同一修飾状態へ至る複数履歴を作り、識別能力を試す",
+      "caveat": "W0/W2は強くても、明示的過去内容は必要ない"
+    }
+  ],
+  "interventionTests": [
+    {
+      "id": "A",
+      "question": "同じ受容体活動で外部濃度を変える",
+      "intervention": "異なる適応背景や受容体修飾条件で活動をマッチ",
+      "controls": "c・占有率・aを別測定。FRETだけで占有率一致としない",
+      "references": [
+        "CH09",
+        "CH12"
+      ],
+      "evidenceScope": "既存知見で実施可能性を支持。厳密マッチ実験は提案",
+      "interpretation": "活動＝絶対濃度の単純同一視を弱める。単独でM3を決めない"
+    },
+    {
+      "id": "B",
+      "question": "同じ現在濃度でメチル化状態を変える",
+      "intervention": "履歴前処理、cheR/cheB背景、修飾部位介入",
+      "controls": "同一c・受容体量・培地でキナーゼ応答を比較",
+      "references": [
+        "CH05",
+        "CH09"
+      ],
+      "evidenceScope": "対応する介入系は既報",
+      "interpretation": "C3a/C3b・W2を支える。過去値の内容は別"
+    },
+    {
+      "id": "C",
+      "question": "CheY-P関連状態を変え運動出力を測る",
+      "intervention": "誘導発現CheY-GFPと単細胞モーター測定を参照",
+      "controls": "リン酸化割合・CheZ・負荷・PMF・FliM構成を統制",
+      "references": [
+        "CH10",
+        "CH13"
+      ],
+      "evidenceScope": "既報。完全な独立操作ではなく条件付き",
+      "interpretation": "出力制御の因果性。環境についての内容は特定しない"
+    },
+    {
+      "id": "D",
+      "question": "誘引性と栄養価を分離",
+      "intervention": "MeAsp刺激と利用可能資源の供給を直交させる",
+      "controls": "運動と増殖を別測定。毒性・浸透圧も統制",
+      "references": [
+        "CH14",
+        "CH17"
+      ],
+      "evidenceScope": "非代謝性誘引物質の利用は既報。二因子設計は提案",
+      "interpretation": "N2上の失敗からN3誤表象を逆算しない"
+    },
+    {
+      "id": "E",
+      "question": "勾配方向と瞬間濃度を分離",
+      "intervention": "同一濃度位置から逆向き勾配、時間波形再生",
+      "controls": "遊泳方向・軌跡・dc/dtと位置分布を測定",
+      "references": [
+        "CH03",
+        "CH04",
+        "CH15"
+      ],
+      "evidenceScope": "既報の時間刺激・軌跡測定に基づく提案",
+      "interpretation": "時間比較と空間方向表象を分ける"
+    },
+    {
+      "id": "F",
+      "question": "R3局所再対応を検査",
+      "intervention": "野生型TarとTarTM2+2IのMeAsp応答を比較",
+      "controls": "同じ刺激型・活動増減型。感度・協同性・発現等の共変化を記録",
+      "references": [
+        "CH14"
+      ],
+      "evidenceScope": "応答反転は既報。完全マッチ対照は追加提案",
+      "interpretation": "単なる利得変化以上の証拠。ただし体系的コード・M3を含意しない"
+    },
+    {
+      "id": "G",
+      "question": "UIの環境帰還を切り離す",
+      "intervention": "自由遊泳と、運動に依存しない刺激再生を比較",
+      "controls": "受容体応答だけでなく運動が次の入力を変えるか測定",
+      "references": [
+        "CH03",
+        "CH15"
+      ],
+      "evidenceScope": "比較プロトコルは監査提案",
+      "interpretation": "Σ4の作用接続とΣ5の閉ループを分離"
+    },
+    {
+      "id": "H",
+      "question": "Foの維持経路を分離",
+      "intervention": "走化性阻害と外部栄養救済、装置合成・修復抑制を別操作",
+      "controls": "成長・膜機能・装置量・回復を異なる時間幅で測定",
+      "references": [
+        "CH17",
+        "CH18"
+      ],
+      "evidenceScope": "制約閉包を調べる追加提案。実施済みとはしない",
+      "interpretation": "栄養利益だけでは装置を含む閉包の証拠にならない"
+    }
+  ],
+  "decompressedPropositions": [
+    "指定した受容体は、指定したリガンドの違いに特異的に応答する（Σ1／R1）。",
+    "刺激差はキナーゼ活動・CheY-P関連状態の差へ変換される（Σ2／R2）。",
+    "過去の刺激は受容体修飾を通じ、現在の応答を変える（Σ3／C3b・W0・物理的W2）。",
+    "信号状態は鞭毛モーターの回転バイアスを変える（Σ4／R2・Fc）。",
+    "遊泳による位置変化が、次の化学入力を変える（Σ5／UI候補）。",
+    "特定の資源分布では、その行動が増殖上の利益に寄与する（Σ6／N1・Fc）。",
+    "その回路が細胞の制約閉包に参加するというFo帰属には、維持の相互依存を別途示す必要がある（Σ6／候補）。",
+    "指定した確率モデルでは、刺激と信号・行動の統計的依存や情報率を評価できる（Σ8／横断解析）。",
+    "内部状態が環境について内容を持つというM3帰属は、以上と別の理論的・実証的課題である（候補、N3は未確定）。"
+  ],
+  "analysisPanels": {
+    "Shannon": {
+      "outsideCoordinates": true,
+      "variables": [
+        "c(t):局所濃度",
+        "occupancy:占有状態",
+        "a(t):キナーゼ活動",
+        "Y(t):CheY-P状態",
+        "A(t):モーター／行動（区別）"
+      ],
+      "quantities": [
+        "I(X;R)",
+        "I(R;Y)",
+        "I(X;A)",
+        "必要なら遅れ付き相互情報量・条件付き情報量・伝達エントロピー率"
+      ],
+      "required": [
+        "分布・同時分布",
+        "対照集合",
+        "binning・粒度",
+        "時間窓・標本化間隔",
+        "雑音モデル",
+        "定常性",
+        "単細胞／集団平均",
+        "行動から刺激への帰還"
+      ],
+      "caveat": "相互情報量は因果性も意味内容も保証しない。閉ループに単純なマルコフ鎖の不等式を無条件適用しない。"
+    },
+    "KW": {
+      "outsideCoordinates": true,
+      "status": "candidate",
+      "viability": "増殖・生存率・膜／代謝状態などを事前指定。負のエントロピーを自動的に健康としない。",
+      "intervention": "系―環境の依存のscrambling/decouplingを、信号・資源・運動負荷・周辺分布を統制して設計する。",
+      "controls": "sham・救済・外部刺激統計・エネルギー負荷・ストレスを別測定。実験提案であり算出済みではない。",
+      "timescale": null,
+      "connections": [
+        "M1",
+        "M2-c"
+      ],
+      "notEstablished": [
+        "Fo",
+        "M3",
+        "N3"
+      ]
+    }
+  },
+  "explorerExample": {
+    "id": "ecoli_chemotaxis_audited",
+    "label": "E. coli型走化性〔Σ別監査〕",
+    "type": "example",
+    "group": "biological",
+    "position": null,
+    "positionNotes": "既存の配置を統合時に引き継ぐ。根拠から座標を生成しない。",
+    "description": "原著に基づく機構の監査と図2作業定義への限定的対応づけ。3D本番データは未更新。",
+    "relations": [],
+    "mainRelations": [
+      "R1",
+      "R2",
+      "C1",
+      "C2",
+      "C3a",
+      "C3b",
+      "W0",
+      "W2",
+      "UI",
+      "Fc",
+      "M1",
+      "M2-c"
+    ],
+    "sigmaModes": {
+      "S1": {
+        "id": "S1",
+        "label": "Σ1 受容体単体",
+        "sigma": "Tarとaspartateなど、膜環境とリガンドを指定した受容体相互作用",
+        "contrastSet": "リガンド種・濃度、受容体変異を対照",
+        "Q": "結合・構造応答",
+        "tau": "結合応答時間。数値は未指定",
+        "caveats": "回路・運動・適応酵素を含めない",
+        "claims": [
+          "CH-C01",
+          "CH-C02",
+          "CH-C03"
+        ],
+        "relations": [
+          {
+            "relation": "R0",
+            "status": "strong",
+            "claimId": "CH-C01"
+          },
+          {
+            "relation": "R1",
+            "status": "strong",
+            "claimId": "CH-C02"
+          },
+          {
+            "relation": "R2",
+            "status": "candidate",
+            "claimId": "CH-C03"
+          }
+        ]
+      },
+      "S2": {
+        "id": "S2",
+        "label": "Σ2 初期シグナル伝達",
+        "sigma": "MCP–CheW–CheA–CheY（CheZによる脱リン酸化も明記）",
+        "contrastSet": "濃度ステップ、修飾背景・受容体変異の対照",
+        "Q": "キナーゼ活動・CheY-P関連信号",
+        "tau": "速い応答域。実験依存、数値未指定",
+        "caveats": "キナーゼ代理測定を占有率や運動と混ぜない",
+        "claims": [
+          "CH-C04",
+          "CH-C05",
+          "CH-C06",
+          "CH-C07",
+          "CH-C08"
+        ],
+        "relations": [
+          {
+            "relation": "R2",
+            "status": "strong",
+            "claimId": "CH-C04"
+          },
+          {
+            "relation": "R3_gain_only",
+            "status": "weak",
+            "claimId": "CH-C05"
+          },
+          {
+            "relation": "R3_local_remapping",
+            "status": "strong",
+            "claimId": "CH-C06"
+          },
+          {
+            "relation": "R3",
+            "status": "candidate",
+            "claimId": "CH-C07"
+          },
+          {
+            "relation": "R4",
+            "status": "weak",
+            "claimId": "CH-C08"
+          }
+        ]
+      },
+      "S3": {
+        "id": "S3",
+        "label": "Σ3 適応回路を含む信号系",
+        "sigma": "Σ2＋CheR/CheB・受容体メチル化",
+        "contrastSet": "同一現在刺激／異なる前処理、cheR/cheB欠損・修復対照",
+        "Q": "活動回復・履歴による応答変化",
+        "tau": "応答窓と適応窓を別指定。値は刺激・背景依存",
+        "caveats": "再較正は目標更新ではない",
+        "claims": [
+          "CH-C09",
+          "CH-C10",
+          "CH-C11",
+          "CH-C12",
+          "CH-C13",
+          "CH-C14",
+          "CH-C15",
+          "CH-C16",
+          "CH-C17",
+          "CH-C18",
+          "CH-C19",
+          "CH-C20"
+        ],
+        "relations": [
+          {
+            "relation": "C0",
+            "status": "weak",
+            "claimId": "CH-C09"
+          },
+          {
+            "relation": "C1",
+            "status": "strong",
+            "claimId": "CH-C10"
+          },
+          {
+            "relation": "C1_integral_model",
+            "status": "strong",
+            "claimId": "CH-C11"
+          },
+          {
+            "relation": "C2",
+            "status": "strong",
+            "claimId": "CH-C12"
+          },
+          {
+            "relation": "C3a",
+            "status": "strong",
+            "claimId": "CH-C13"
+          },
+          {
+            "relation": "C3b",
+            "status": "strong",
+            "claimId": "CH-C14"
+          },
+          {
+            "relation": "C3c",
+            "status": "weak",
+            "claimId": "CH-C15"
+          },
+          {
+            "relation": "W0",
+            "status": "strong",
+            "claimId": "CH-C16"
+          },
+          {
+            "relation": "W1",
+            "status": "candidate",
+            "claimId": "CH-C17"
+          },
+          {
+            "relation": "W1_absolute_past",
+            "status": "weak",
+            "claimId": "CH-C18"
+          },
+          {
+            "relation": "W2",
+            "status": "strong",
+            "claimId": "CH-C19"
+          },
+          {
+            "relation": "W3",
+            "status": "weak",
+            "claimId": "CH-C20"
+          }
+        ]
+      },
+      "S4": {
+        "id": "S4",
+        "label": "Σ4 信号系＋鞭毛運動系",
+        "sigma": "CheY-P・モータースイッチ・鞭毛束・PMF駆動",
+        "contrastSet": "信号量、モーター負荷、FliM構成等の対照",
+        "Q": "CWバイアス・run/tumble統計",
+        "tau": "速い出力応答と遅い構成更新を分離",
+        "caveats": "作用接続であり、環境を含む閉ループはΣ5",
+        "claims": [
+          "CH-C21",
+          "CH-C22",
+          "CH-C23",
+          "CH-C24",
+          "CH-C25"
+        ],
+        "relations": [
+          {
+            "relation": "R2",
+            "status": "strong",
+            "claimId": "CH-C21"
+          },
+          {
+            "relation": "C2",
+            "status": "strong",
+            "claimId": "CH-C22"
+          },
+          {
+            "relation": "C3b_motor",
+            "status": "strong",
+            "claimId": "CH-C23"
+          },
+          {
+            "relation": "Fc",
+            "status": "strong",
+            "claimId": "CH-C24"
+          },
+          {
+            "relation": "UI",
+            "status": "weak",
+            "claimId": "CH-C25"
+          }
+        ]
+      },
+      "S5": {
+        "id": "S5",
+        "label": "Σ5 個体＋局所環境",
+        "sigma": "遊泳細胞と指定した空間・時間勾配",
+        "contrastSet": "自由遊泳／固定・刺激再生、勾配反転等",
+        "Q": "位置分布・ドリフト・到達率",
+        "tau": "軌跡を評価する時間窓。数値未指定",
+        "caveats": "UI候補の中心境界。Fo・表象の自動帰属なし",
+        "claims": [
+          "CH-C26",
+          "CH-C27",
+          "CH-C28",
+          "CH-C29",
+          "CH-C30",
+          "CH-C31",
+          "CH-C32"
+        ],
+        "relations": [
+          {
+            "relation": "UI",
+            "status": "strong",
+            "claimId": "CH-C26"
+          },
+          {
+            "relation": "M1",
+            "status": "strong",
+            "claimId": "CH-C27"
+          },
+          {
+            "relation": "M2-c",
+            "status": "strong",
+            "claimId": "CH-C28"
+          },
+          {
+            "relation": "N2",
+            "status": "strong",
+            "claimId": "CH-C29"
+          },
+          {
+            "relation": "N2_internal_evaluation",
+            "status": "uncertain",
+            "claimId": "CH-C30"
+          },
+          {
+            "relation": "N3",
+            "status": "uncertain",
+            "claimId": "CH-C31"
+          },
+          {
+            "relation": "M3",
+            "status": "candidate",
+            "claimId": "CH-C32"
+          }
+        ]
+      },
+      "S6": {
+        "id": "S6",
+        "label": "Σ6 維持を含む細胞全体",
+        "sigma": "代謝・膜・発現・合成・修復を含む細胞（環境は境界条件）",
+        "contrastSet": "資源勾配、同質遺伝背景、外部資源の救済等",
+        "Q": "増殖・生存・装置維持を別測定",
+        "tau": "τactとτmaintainを別指定。数値未指定",
+        "caveats": "走化性がなくても維持可能な環境がある",
+        "claims": [
+          "CH-C33",
+          "CH-C34",
+          "CH-C35",
+          "CH-C36",
+          "CH-C37",
+          "CH-C41"
+        ],
+        "relations": [
+          {
+            "relation": "Fc",
+            "status": "strong",
+            "claimId": "CH-C33"
+          },
+          {
+            "relation": "N1",
+            "status": "strong",
+            "claimId": "CH-C34"
+          },
+          {
+            "relation": "Fo",
+            "status": "candidate",
+            "claimId": "CH-C35"
+          },
+          {
+            "relation": "M2-o",
+            "status": "candidate",
+            "claimId": "CH-C36"
+          },
+          {
+            "relation": "M1",
+            "status": "strong",
+            "claimId": "CH-C37"
+          },
+          {
+            "relation": "KW_application",
+            "status": "candidate",
+            "claimId": "CH-C41"
+          }
+        ]
+      },
+      "S7": {
+        "id": "S7",
+        "label": "Σ7 集団・進化系統",
+        "sigma": "特定集団・環境履歴・系統比較を指定",
+        "contrastSet": "選択／漂移・連鎖・環境差を対照",
+        "Q": "効果による歴史的な保持",
+        "tau": "世代・系統履歴。対象データ未指定",
+        "caveats": "現在の競争利益から過去の選択理由を断定しない",
+        "claims": [
+          "CH-C38",
+          "CH-C39"
+        ],
+        "relations": [
+          {
+            "relation": "Fs",
+            "status": "uncertain",
+            "claimId": "CH-C38"
+          },
+          {
+            "relation": "M2-s",
+            "status": "uncertain",
+            "claimId": "CH-C39"
+          }
+        ]
+      },
+      "S8": {
+        "id": "S8",
+        "label": "Σ8 実験・解析実践",
+        "sigma": "研究者・装置・測定モデル・確率モデル",
+        "contrastSet": "サンプリング・binning・雑音・モデル比較",
+        "Q": "推定量・予測精度・再現性",
+        "tau": "標本化間隔・推定窓・定常性を指定",
+        "caveats": "測定・解析上の内容を細菌自身に戻さない",
+        "claims": [
+          "CH-C40"
+        ],
+        "relations": [
+          {
+            "relation": "Shannon",
+            "status": "strong",
+            "claimId": "CH-C40"
+          }
+        ]
+      }
+    },
+    "forbiddenInferences": [
+      "temporal comparison → explicit representation としない",
+      "adaptation → learning としない",
+      "methylation state → memory content としない",
+      "C3b → C3c を自動導出しない",
+      "chemotactic success → N3 correctness としない",
+      "UI候補 → M3 としない",
+      "beneficial behavior → Fo としない",
+      "current usefulness → Fs としない",
+      "Shannon mutual information → semantic content としない",
+      "attractant response → nutrient representation としない",
+      "局所応答反転 → R4コード一般 としない",
+      "Σ6の維持関係 → 受容体単体のFo としない",
+      "CheY-Pのモーター制御 → 回転エネルギー供給 としない",
+      "CWバイアス → tumble確率 を同一変数としない",
+      "数理モデルの完全適応 → 全条件での完全適応 としない",
+      "Salmonellaの実験 → E. coliの直接実験証拠 としない"
+    ],
+    "auditQuestions": [
+      "対象はどのE. coli株・受容体・リガンドか。単一受容体か混合集団か",
+      "入力はc(t)、占有率、活動a(t)のどれか。出力はCheY-P、CWバイアス、行動のどれか",
+      "CheZとCheB-Pの役割、モーター負荷、PMFを統制したか",
+      "現在刺激を一致させ、過去履歴だけを変えたか",
+      "修飾状態への書込と後続利用をそれぞれ遮断・救済できるか",
+      "再対応は符号・割当の変更か、単なる閾値・感度変化か",
+      "R3介入で占有率・発現量・クラスター形成等も変わっていないか",
+      "基準が変わったのか、同じ作動点へ戻る再較正か",
+      "Q＝到達・成長・維持のどれか。評価時域は何か",
+      "Foの制約集合と各維持矢印に介入証拠はあるか",
+      "現存する利益と選択・保持の歴史を分離したか",
+      "M3候補の何が誤ったと数えられるか。誰が利用するか",
+      "測定代理変数・母集団平均と単細胞の違いを記録したか",
+      "Σ変更後も以前のstatusを無条件に継承していないか"
+    ],
+    "constraintTypes": [
+      "physical",
+      "historical",
+      "contextual"
+    ],
+    "formationHistory": [
+      "physical_chemical"
+    ],
+    "references": [
+      "CH01",
+      "CH02",
+      "CH03",
+      "CH04",
+      "CH05",
+      "CH06",
+      "CH07",
+      "CH08",
+      "CH09",
+      "CH10",
+      "CH11",
+      "CH12",
+      "CH13",
+      "CH14",
+      "CH15",
+      "CH16",
+      "CH17",
+      "CH18",
+      "CH19",
+      "CH20"
+    ],
+    "visibleByDefault": true,
+    "notes": "mainRelationsは非排他的な索引。statusは必ずΣ別claimを参照。R3_local_remappingは追加ノードではない。",
+    "caveats": [
+      "Fo/UI/M3を独立判定",
+      "Σ拡大で下位要素へ帰属を戻さない",
+      "現在の3Dデータへの適用は未実施"
+    ]
+  }
+}

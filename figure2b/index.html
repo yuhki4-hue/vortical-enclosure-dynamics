@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>図2B v4｜情報関係の3D探索</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="mobile.css"><script defer src="vendor/three.min.js"></script><script defer src="data.js"></script><script defer src="app.js"></script><script defer src="mobile.js"></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>図2B v4｜情報関係の3D探索</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="mobile.css"><script defer src="vendor/three.min.js"></script><script defer src="data.js"></script><script defer src="app.js"></script><script defer src="mobile.js"></script><link rel="stylesheet" href="../assets/information-map/series.css">
+</head>
 <body>
+<div class="series-nav" role="navigation" aria-label="研究シリーズ"><div class="series-links"><a href="../information-map/">情報概念マップ</a><a href="../figure1/">図1｜概念境界</a><a href="../figure2a/">図2A｜成立条件</a><a href="../figure2b/" aria-current="page">図2B｜生成・循環</a><a href="../figure3/">図3｜個体境界</a></div></div>
+<div class="series-context"><p><strong>図2B：その関係は実際の系でどう生成・循環するか</strong></p><p><a href="audit/">2D canonical audit map（最新版SVG）を読む</a> · このページは <strong>3D exploratory viewer</strong> です。位置・距離・近接は理論上の距離や階層ではありません。</p><p><a href="../audits/information-map/figure-2-v4-audit.html">DNA＋走化性の統合監査</a> · <a href="../audits/information-map/chemotaxis-case-audit.html">走化性監査 HTML</a> / <a href="../audits/information-map/chemotaxis-case-audit.json">JSON</a></p></div>
 <header><div><p class="eyebrow">FIGURE 2B · V4 / RELATIONAL EXPLORER</p><h1>情報関係の<span>3D探索</span></h1><p class="subtitle">同じ対象に重なる関係を、機構・境界・時間から読む。</p></div><div class="badge">境界監査 <b>03</b></div></header>
 <nav aria-label="ビュー操作"><button data-view="reset">Reset view</button><button data-view="overview" class="active">全体俯瞰</button><button data-view="control">調節ビュー</button><button data-view="dna">DNAビュー</button><button data-view="meaning">意味ビュー</button><button data-view="ai">AI比較ビュー</button><div class="mobile-tools"><button id="toggle-layers" aria-expanded="false">レイヤー</button><button id="toggle-detail" aria-expanded="false">説明</button></div></nav>
 <section class="focus-toolbar" aria-label="局所断面の操作"><label><input type="checkbox" id="focus-mode" checked> Focus Mode</label><button id="clear-focus">選択解除</button><button id="fit-focus">局所断面を画面に収める</button><button id="compare-toggle" aria-pressed="false">2事例を比較</button><span id="focus-summary">対象を選ぶと、関連要素を強調します。</span></section><p id="view-description" aria-live="polite"></p><p class="boundary-thesis">関係はマダラに成立し、概念はその上に輪郭を作る。輪郭は次の観察を導く。</p><main>
@@ -11,4 +14,5 @@
 </main>
 <footer><strong>位置・距離・体積は測定値ではない</strong><span>領域の重なりは同一性や因果の証明ではない</span><span>この図は自然史の順序や唯一の進化経路を表さない</span><span>“情報”という実体を可視化する図ではない</span></footer>
 <noscript>JavaScriptを有効にしてください。このページは静的なthree.js可視化です。</noscript>
+<div class="series-pager" role="navigation" aria-label="前後の図"><a href="../figure2a/">← 図2A｜成立条件</a><a href="../figure3/">図3｜個体境界 →</a><small>読む順序の案内です。発達・進化・高度化の段階を意味しません。</small></div>
 </body></html>

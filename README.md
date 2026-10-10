@@ -349,3 +349,15 @@ given to the author. See [LICENSE](LICENSE).
 The repository is presented as an evolving research framework, not as a claim of
 final closure. A short contribution note is included here, and a fuller version
 is available in [Author Position](docs/author_position.md).
+
+## Information / Individual UI figure series
+
+Four complementary questions about concept boundaries, attribution conditions, causal generation and individual boundaries. This generative/information-concept audit series can connect to VED but is independently readable; it is not presented as identical to VED's main theory. Reading order is not a developmental or evolutionary ladder.
+
+- [Series overview](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/information-map/)
+- [Figure 1 — Concept boundary formation and stabilization](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/figure1/#view=overview)
+- [Figure 2A — Conditions and evidence for relation attribution](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/figure2a/)
+- [Figure 2B — Causal generation and circulation (2D canonical map)](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/figure2b/audit/) / [existing 3D exploratory viewer](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/figure2b/)
+- [Figure 3 — Overlapping individual boundaries](https://yuhki4-hue.github.io/vortical-enclosure-dynamics/figure3/#view=overview)
+
+[Provenance, artifact roles and pre-publication checks (Japanese)](docs/information-map.md). New routes become public only after this change is deployed.

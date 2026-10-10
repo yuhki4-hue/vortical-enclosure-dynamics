@@ -1,0 +1,2848 @@
+{
+  "schemaVersion": "dna-case-audit-1.0",
+  "auditedAt": "2026-10-05",
+  "targetId": "ex-dna",
+  "proposalOnly": true,
+  "sourceArtifact": {
+    "libraryFileId": "libfile_7f04519651a481918a54fcabc4f0262b",
+    "name": "figure2b-v4-threejs(2).zip",
+    "sha256": "d14fc63a3732171e21e6dc9d8b67461fd3ee471834d0193a5794b0d622e9dc5d"
+  },
+  "statusDefinitions": {
+    "strong": "指定Σ・機構に直接実験、介入または標準的機構論的証拠",
+    "candidate": "理論・作業定義上有力だが今回の厳密な介入同定が不十分",
+    "weak": "より単純な関係で説明でき追加帰属の根拠が弱い。不存在の断言ではない",
+    "uncertain": "内容・Σ・機構・文献の特定が不足"
+  },
+  "evidencePolicy": {
+    "scopeSpecific": true,
+    "noUpwardInheritance": true,
+    "noMaxAggregation": true,
+    "notInstantiatedField": "applicability",
+    "empiricalVsInterpretive": "evidenceKind",
+    "sequenceSpecificClaimsRequired": true
+  },
+  "elementPatch": {
+    "description": "DNAを入口に、配列差・複製・転写・翻訳・細胞維持・系統・科学的記述を別のΣで監査する。",
+    "defaultSigma": "local",
+    "sigma": "Σ1〜Σ7、および科学的記述Σ8。CRISPRは限定補助ケース。",
+    "mainRelations": [
+      "D",
+      "W0",
+      "W1",
+      "R1",
+      "R2",
+      "M1",
+      "M3",
+      "Ku",
+      "W2",
+      "M2",
+      "Fc",
+      "R3",
+      "R4",
+      "W3",
+      "Fo",
+      "Fs",
+      "M4"
+    ],
+    "relations": [],
+    "evidence": {},
+    "sigmaModes": {
+      "local": {
+        "label": "Σ1｜単離DNA分子",
+        "description": "由来が特定された単離DNA。複製・転写・翻訳装置を含めない。",
+        "relations": [
+          "D",
+          "W0",
+          "W1",
+          "R1",
+          "R2",
+          "M1",
+          "M3"
+        ],
+        "evidence": {
+          "D": {
+            "status": "strong",
+            "basis": "D: 塩基配列の物理的区別を対象とする。 留保: 測定文字列と分子を区別。単離された一本の分子に確率分布が内在するとは言わない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-D"
+            ]
+          },
+          "Fo": {
+            "status": "weak",
+            "basis": "Fo: 当該関係を成立させる対応担体または組織は境界内に指定されていない。 留保: 境界外の関係を分子自身へ戻さない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              }
+            ],
+            "claimIds": [
+              "Σ1-Fo"
+            ]
+          },
+          "Ku": {
+            "status": "weak",
+            "basis": "分子単独で鋳型複製が進行するとは言えない。 留保: 能力を調べるため装置を加えた時点でΣ2になる。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-Ku"
+            ]
+          },
+          "M1": {
+            "status": "uncertain",
+            "basis": "M1: どの帰結Qへ差を生むか未指定。 留保: 配列差Dのみから関連性を確定しない。",
+            "references": [],
+            "claimIds": [
+              "Σ1-M1"
+            ]
+          },
+          "M3": {
+            "status": "uncertain",
+            "basis": "M3: 内容・利用機構・正誤条件が未指定。 留保: 設計図比喩は実験証拠ではない。",
+            "references": [
+              {
+                "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-M3"
+            ]
+          },
+          "R1": {
+            "status": "candidate",
+            "basis": "R1: 二本鎖なら塩基対形成等の特異性を検査できる。 留保: 鎖状態、配列、温度・溶媒、対照を指定。試料未指定につき一律strongとしない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-R1"
+            ]
+          },
+          "R2": {
+            "status": "uncertain",
+            "basis": "R2: 下流の出力集合と利用経路が未指定。 留保: 単離分子に下流の変換系を勝手に補わない。",
+            "references": [],
+            "claimIds": [
+              "Σ1-R2"
+            ]
+          },
+          "R3": {
+            "status": "weak",
+            "basis": "R3: 当該関係を成立させる対応担体または組織は境界内に指定されていない。 留保: 境界外の関係を分子自身へ戻さない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              }
+            ],
+            "claimIds": [
+              "Σ1-R3"
+            ]
+          },
+          "R4": {
+            "status": "weak",
+            "basis": "R4: 当該関係を成立させる対応担体または組織は境界内に指定されていない。 留保: 境界外の関係を分子自身へ戻さない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              }
+            ],
+            "claimIds": [
+              "Σ1-R4"
+            ]
+          },
+          "W0": {
+            "status": "strong",
+            "basis": "W0: 既知由来の分子は過去の合成・複製・損傷過程に依存する。 留保: 由来不明の試料について具体的履歴まで確定しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Modrich (1991), Mechanisms and biological effects of mismatch repair. Annual Review of Genetics 25:229–253.",
+                "url": "https://doi.org/10.1146/annurev.ge.25.120191.001305"
+              }
+            ],
+            "claimIds": [
+              "Σ1-W0"
+            ]
+          },
+          "W1": {
+            "status": "uncertain",
+            "basis": "W1: 記録される過去事象型と保存条件・時域が未指定。 留保: 配列の存在や系統推定の可否だけではW1を確定しない。",
+            "references": [
+              {
+                "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-W1"
+            ]
+          },
+          "W2": {
+            "status": "weak",
+            "basis": "W2: この境界には書込と後続利用の機構がない。 留保: 保存可能性をメモリ作動と同一視しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-W2"
+            ]
+          },
+          "W3": {
+            "status": "weak",
+            "basis": "W3: 規則担体と記録の結合は境界外。 留保: 符号化された記録の担体としての可能性と、成立中の関係を分ける。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ1-W3"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ1：由来が特定された単離DNA。複製・転写・翻訳装置を含めない。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "由来が特定された単離DNA。複製・転写・翻訳装置を含めない。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "weak：Fo: 当該関係を成立させる対応担体または組織は境界内に指定されていない。 留保: 境界外の関係を分子自身へ戻さない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣで単離DNA分子を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "replication": {
+        "label": "Σ2｜DNA＋複製機構",
+        "description": "鋳型DNA、DNAポリメラーゼ、プライマー、基質、必要な補助因子・供給条件。修復因子を含むかは追加指定。",
+        "relations": [
+          "D",
+          "R1",
+          "R2",
+          "Ku",
+          "W1",
+          "W2",
+          "M1",
+          "M2"
+        ],
+        "evidence": {
+          "Fo": {
+            "status": "weak",
+            "basis": "Fo: 試験管内の装置は複製に寄与しても自身の再生産閉包を示さない。 留保: 生細胞から精製された由来と現在の組織的維持を分ける。",
+            "references": [
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              }
+            ],
+            "claimIds": [
+              "Σ2-Fo"
+            ]
+          },
+          "Kf": {
+            "status": "weak",
+            "basis": "Kf: 少数の固定された変異型だけを継承する分類は核酸配列型複製の説明として不適切。 留保: 有限長だからKf、という区分ではない。",
+            "references": [
+              {
+                "label": "Szathmáry & Maynard Smith (1997), From replicators to reproducers: the first major transitions leading to life. J Theor Biol 187:555–571.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/9299299/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-Kf"
+            ]
+          },
+          "Ku": {
+            "status": "strong",
+            "basis": "同じ機構が多数の配列変異を鋳型依存に複製できるという操作的意味。 留保: 無限長・全配列の無誤り複製の実証ではない。固定長Lでは4^Lで有限。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Szathmáry & Maynard Smith (1997), From replicators to reproducers: the first major transitions leading to life. J Theor Biol 187:555–571.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/9299299/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-Ku"
+            ]
+          },
+          "M1": {
+            "status": "strong",
+            "basis": "M1: 鋳型差がQ＝複製産物の塩基配列を変える。 留保: 有益性・表象内容は主張しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-M1"
+            ]
+          },
+          "M2": {
+            "status": "strong",
+            "basis": "M2-c: DNAはQ＝相補鎖合成への鋳型として因果役割を果たす。 留保: FoやFsは別。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-M2-c"
+            ]
+          },
+          "R1": {
+            "status": "strong",
+            "basis": "R1: 鋳型・基質の選択と相補的塩基対形成が複製機構に組み込まれる。 留保: 誤挿入・選択精度はポリメラーゼと条件に依存。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-R1"
+            ]
+          },
+          "R2": {
+            "status": "strong",
+            "basis": "R2: 鋳型の塩基差が新生鎖の塩基差へ系統的に写る。 留保: 鋳型と新生鎖は相補。鎖方向・相補変換を固定する。",
+            "references": [
+              {
+                "label": "Meselson & Stahl (1958), The replication of DNA in Escherichia coli. PNAS 44:671–682.",
+                "url": "https://doi.org/10.1073/pnas.44.7.671"
+              },
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-R2"
+            ]
+          },
+          "R3": {
+            "status": "weak",
+            "basis": "R3: 相補複製・校正をR1/R2で説明でき、対応置換を示す証拠としては不十分。 留保: ポリメラーゼ変異の誤り率変化や停止は規則の置換ではない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-R3"
+            ]
+          },
+          "W1": {
+            "status": "strong",
+            "basis": "W1: 過去の鋳型配列型と後続のコピー配列型の再現的対応。 留保: 限定的な事象型＝直前の鋳型状態。全進化史の記録ではない。反事実的安定は指定誤り率・条件範囲内。",
+            "references": [
+              {
+                "label": "Meselson & Stahl (1958), The replication of DNA in Escherichia coli. PNAS 44:671–682.",
+                "url": "https://doi.org/10.1073/pnas.44.7.671"
+              },
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-W1"
+            ]
+          },
+          "W2": {
+            "status": "candidate",
+            "basis": "W2: 作られたコピーが後続ラウンドの鋳型になる構成なら書込と後続利用が揃う。 留保: 単一の複製反応だけでは後続利用未確認。今回特定した再利用実験レコードは不足。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              }
+            ],
+            "claimIds": [
+              "Σ2-W2"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ2：鋳型DNA、DNAポリメラーゼ、プライマー、基質、必要な補助因子・供給条件。修復因子を含むかは追加指定。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "鋳型DNA、DNAポリメラーゼ、プライマー、基質、必要な補助因子・供給条件。修復因子を含むかは追加指定。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "weak：Fo: 試験管内の装置は複製に寄与しても自身の再生産閉包を示さない。 留保: 生細胞から精製された由来と現在の組織的維持を分ける。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "historical"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣでDNA＋複製機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "historical": "このΣでDNA＋複製機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "transcription": {
+        "label": "Σ3｜DNA＋転写機構",
+        "description": "DNA、RNAポリメラーゼ、必要な転写因子、NTP等。翻訳装置とDNA書込機構は含めない。",
+        "relations": [
+          "D",
+          "R1",
+          "R2",
+          "Fc",
+          "M1",
+          "M2"
+        ],
+        "evidence": {
+          "Fc": {
+            "status": "strong",
+            "basis": "Fc: 指定した鋳型・調節配列はRNA産生へ因果的に寄与する。 留保: 特定の配列効果は条件と介入を添える。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-Fc"
+            ]
+          },
+          "M1": {
+            "status": "strong",
+            "basis": "M1: 配列差がQ＝RNA配列または条件指定した産生量へ影響する。 留保: Qを混ぜない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-M1"
+            ]
+          },
+          "M2": {
+            "status": "strong",
+            "basis": "M2-c: RNA合成・調節への組込みを因果役割として記述できる。 留保: 意味という呼称は本図の作業的ラベル。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-M2-c"
+            ]
+          },
+          "R1": {
+            "status": "strong",
+            "basis": "R1: DNAと転写装置の特異的相互作用がある。 留保: プロモーター認識と伸長時の塩基選択を区別する。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-R1"
+            ]
+          },
+          "R2": {
+            "status": "strong",
+            "basis": "R2: 鋳型DNAに対応するRNAが合成される。 留保: DNAのコード鎖表記と実際の鋳型鎖を区別。RNA加工があれば別機構。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-R2"
+            ]
+          },
+          "R3": {
+            "status": "weak",
+            "basis": "R3: 通常の転写の相補合成は、そのまま別対応規則の介入実証にはならない。 留保: プロモーター選好・発現量変化のみでR3としない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-R3"
+            ]
+          },
+          "R4": {
+            "status": "weak",
+            "basis": "R4: 塩基の相補的対応だけで本図のR3を伴うコード条件を満たしたとしない。 留保: これは転写に対応がないという主張ではなく、コードの操作的定義による限定。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-R4"
+            ]
+          },
+          "W2": {
+            "status": "weak",
+            "basis": "W2: DNAは利用されるが、このΣにはDNAを書き込む機構を含めていない。 留保: RNA生成をDNAへの書込と数えない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              }
+            ],
+            "claimIds": [
+              "Σ3-W2"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ3：DNA、RNAポリメラーゼ、必要な転写因子、NTP等。翻訳装置とDNA書込機構は含めない。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "DNA、RNAポリメラーゼ、必要な転写因子、NTP等。翻訳装置とDNA書込機構は含めない。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "未指定：この境界では別途監査。包含だけでは成立しない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣでDNA＋転写機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣでDNA＋転写機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "translation": {
+        "label": "Σ4｜DNA/RNA＋翻訳機構",
+        "description": "mRNA、tRNA、aaRS、リボソーム、翻訳因子、アミノ酸・供給条件。DNA起点では転写系も明示して含める。",
+        "relations": [
+          "D",
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "W3",
+          "Fc",
+          "M1",
+          "M2",
+          "M3"
+        ],
+        "evidence": {
+          "Fc": {
+            "status": "strong",
+            "basis": "Fc: RNAと翻訳装置が指定産物の合成へ因果的に寄与。 留保: DNA自身がアミノ酸を読み取る、とはしない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Wang et al. (2001), Expanding the genetic code of Escherichia coli. Science 292:498–500.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/11313494/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-Fc"
+            ]
+          },
+          "Fo": {
+            "status": "weak",
+            "basis": "Fo: 外部供給の翻訳反応だけでは装置自身の組織的再生産を示さない。 留保: 生細胞へ境界を広げるならΣ5の別命題。",
+            "references": [
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              },
+              {
+                "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+                "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D"
+              },
+              {
+                "label": "Montévil & Mossio (2015), Biological organisation as closure of constraints. J Theor Biol 372:179–191.",
+                "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-Fo"
+            ]
+          },
+          "M1": {
+            "status": "strong",
+            "basis": "M1: Q＝挿入残基・ポリペプチド配列に対する差を介入で検査できる。 留保: 機能的に有利な産物とは限らない。",
+            "references": [
+              {
+                "label": "Chapeville et al. (1962), On the role of soluble ribonucleic acid in coding for amino acids. PNAS 48:1086–1092.",
+                "url": "https://doi.org/10.1073/pnas.48.6.1086"
+              },
+              {
+                "label": "Lajoie et al. (2013), Genomically Recoded Organisms Expand Biological Functions. Science 342:357–360.",
+                "url": "https://arep.med.harvard.edu/pdf/Lajoie_Science_2013.pdf"
+              }
+            ],
+            "claimIds": [
+              "Σ4-M1"
+            ]
+          },
+          "M2": {
+            "status": "strong",
+            "basis": "M2-c: タンパク質合成への因果役割として限定した機能的意味。 留保: M3を含意しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-M2-c"
+            ]
+          },
+          "M3": {
+            "status": "uncertain",
+            "basis": "M3.aa-sequence: アミノ酸列を産出する指令的内容として解釈する候補。 留保: 機構的配列指定は実証されても、内容理論・消費者・充足条件の追加が必要。 / M3.protein-product: 成熟タンパク質を内容とする帰属は未確定。 留保: 折畳み・修飾・切断・複合体化と配列指定を分ける。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Crick (1970), Central Dogma of Molecular Biology. Nature 227:561–563.",
+                "url": "https://doi.org/10.1038/227561a0"
+              },
+              {
+                "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+              },
+              {
+                "label": "Maynard Smith (2000), The Concept of Information in Biology. Philosophy of Science 67:177–194.",
+                "url": "https://doi.org/10.1086/392768"
+              }
+            ],
+            "claimIds": [
+              "Σ4-M3.aa-sequence",
+              "Σ4-M3.protein-product"
+            ]
+          },
+          "R1": {
+            "status": "strong",
+            "basis": "R1: tRNAの認識・アミノアシル化・コドン認識等の特異的相互作用。 留保: コドンとアミノ酸の直接的親和性に還元しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-R1"
+            ]
+          },
+          "R2": {
+            "status": "strong",
+            "basis": "R2: mRNA配列差が条件付きでポリペプチド配列差へ変換される。 留保: 入力はmRNA。DNA差からの経路は転写を別に含む。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-R2"
+            ]
+          },
+          "R3": {
+            "status": "strong",
+            "basis": "R3: ミスアシル化tRNAの介入等で、アダプター側を変えてRNAに対する挿入残基を変えられる。 留保: 入力RNA型と出力残基型を事前固定。一つの実験が全対応の自由な置換を示すわけではない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              },
+              {
+                "label": "Chapeville et al. (1962), On the role of soluble ribonucleic acid in coding for amino acids. PNAS 48:1086–1092.",
+                "url": "https://doi.org/10.1073/pnas.48.6.1086"
+              },
+              {
+                "label": "Wang et al. (2001), Expanding the genetic code of Escherichia coli. Science 292:498–500.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/11313494/"
+              },
+              {
+                "label": "Wang & Schultz (2002), Expanding the genetic code. Chemical Communications:1–11.",
+                "url": "https://doi.org/10.1039/B108185N"
+              }
+            ],
+            "claimIds": [
+              "Σ4-R3"
+            ]
+          },
+          "R4": {
+            "status": "strong",
+            "basis": "R4: 分散した翻訳装置が多数のコドンへ繰返し対応を適用する。再割当系も具体的条件で実装される。 留保: 標準暗号も文脈・生物種の例外を持つ。全64対応の任意置換の主張ではない。",
+            "references": [
+              {
+                "label": "Wang et al. (2001), Expanding the genetic code of Escherichia coli. Science 292:498–500.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/11313494/"
+              },
+              {
+                "label": "Lajoie et al. (2013), Genomically Recoded Organisms Expand Biological Functions. Science 342:357–360.",
+                "url": "https://arep.med.harvard.edu/pdf/Lajoie_Science_2013.pdf"
+              },
+              {
+                "label": "Nirenberg & Leder (1964), RNA codewords and protein synthesis. The effect of trinucleotides upon the binding of sRNA to ribosomes.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/14172630/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-R4"
+            ]
+          },
+          "W3": {
+            "status": "candidate",
+            "basis": "W3: 記録／メモリと翻訳規則の結合は構成可能。 留保: 供給された配列が何の記録か、書込履歴・後続利用を別に確定する必要。翻訳だけでW3にしない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ4-W3"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ4：mRNA、tRNA、aaRS、リボソーム、翻訳因子、アミノ酸・供給条件。DNA起点では転写系も明示して含める。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "mRNA、tRNA、aaRS、リボソーム、翻訳因子、アミノ酸・供給条件。DNA起点では転写系も明示して含める。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "weak：Fo: 外部供給の翻訳反応だけでは装置自身の組織的再生産を示さない。 留保: 生細胞へ境界を広げるならΣ5の別命題。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣでDNA/RNA＋翻訳機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣでDNA/RNA＋翻訳機構を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "body": {
+        "label": "Σ5｜生きた細胞全体",
+        "description": "具体的な細胞の膜・代謝・複製・修復・発現の組織。全配列に同じ機能を帰属しない。",
+        "relations": [
+          "D",
+          "W2",
+          "W3",
+          "Fo",
+          "M2",
+          "M3"
+        ],
+        "evidence": {
+          "Fo": {
+            "status": "candidate",
+            "basis": "Fo: 発現が維持機構を供給し、代謝・膜・修復等がDNAと装置の成立を支える。 留保: 組織説による帰属。特定細胞の制約集合C、作用時域・維持時域と介入閉包の監査は未完。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Modrich (1991), Mechanisms and biological effects of mismatch repair. Annual Review of Genetics 25:229–253.",
+                "url": "https://doi.org/10.1146/annurev.ge.25.120191.001305"
+              },
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              },
+              {
+                "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+                "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D"
+              }
+            ],
+            "claimIds": [
+              "Σ5-Fo"
+            ]
+          },
+          "M2": {
+            "status": "candidate",
+            "basis": "M2-o: Foを採用した組織的機能の意味に限る。 留保: DNA全域に同じ寄与は帰属しない。",
+            "references": [
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              },
+              {
+                "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+                "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D"
+              },
+              {
+                "label": "Montévil & Mossio (2015), Biological organisation as closure of constraints. J Theor Biol 372:179–191.",
+                "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-M2-o"
+            ]
+          },
+          "M3": {
+            "status": "uncertain",
+            "basis": "M3.expression-condition: 配列が発現条件を表す、という内容帰属は未確定。 留保: 結合閾値・調節効果はR1/R2/Fcで説明可能。 / M3.future: 未来の個体像の記述を仮定せずに機構を説明できる。 留保: 比喩を排除する趣旨で、将来の帰結への因果的寄与を否定しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              },
+              {
+                "label": "Crick (1970), Central Dogma of Molecular Biology. Nature 227:561–563.",
+                "url": "https://doi.org/10.1038/227561a0"
+              },
+              {
+                "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-M3.expression-condition",
+              "Σ5-M3.future"
+            ]
+          },
+          "W2": {
+            "status": "strong",
+            "basis": "W2: 細胞・細胞系統内で複製された配列を後続の発現等に利用する。 留保: 書込＝生合成、利用＝後続発現という操作的メモリ。過去としての表象は要求しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Alberts et al. (2002), From DNA to RNA.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+              },
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-W2"
+            ]
+          },
+          "W3": {
+            "status": "candidate",
+            "basis": "W3: 複製由来の保持配列と翻訳規則を同じ細胞内で接続できる。 留保: どの事象型の記録であるかを特定してからstrongを検討。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Alberts et al. (2002), From RNA to Protein.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-W3"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ5：具体的な細胞の膜・代謝・複製・修復・発現の組織。全配列に同じ機能を帰属しない。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "具体的な細胞の膜・代謝・複製・修復・発現の組織。全配列に同じ機能を帰属しない。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "candidate：Fo: 発現が維持機構を供給し、代謝・膜・修復等がDNAと装置の成立を支える。 留保: 組織説による帰属。特定細胞の制約集合C、作用時域・維持時域と介入閉包の監査は未完。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "organizational",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣで生きた細胞全体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "organizational": "このΣで生きた細胞全体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣで生きた細胞全体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "development": {
+        "label": "Σ6｜発生中の多細胞個体",
+        "description": "具体例はトゲウオPitx1エンハンサーと発現・骨盤形成。細胞間相互作用と発生環境を含む。",
+        "relations": [
+          "D",
+          "Fc",
+          "M1",
+          "M2",
+          "Fo",
+          "M3"
+        ],
+        "evidence": {
+          "Fc": {
+            "status": "strong",
+            "basis": "Fc: Pitx1調節配列の変化が組織特異的発現と骨盤形成に関与する具体例。 留保: 全形質、全遺伝子へ一般化しない。",
+            "references": [
+              {
+                "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+              }
+            ],
+            "claimIds": [
+              "Σ6-Fc"
+            ]
+          },
+          "Fo": {
+            "status": "candidate",
+            "basis": "Fo: 発生中の組織全体について制約の再形成を問う。 留保: 発生への寄与だけで自己維持閉包を確定しない。",
+            "references": [
+              {
+                "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+                "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+              },
+              {
+                "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+                "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D"
+              },
+              {
+                "label": "Montévil & Mossio (2015), Biological organisation as closure of constraints. J Theor Biol 372:179–191.",
+                "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/"
+              }
+            ],
+            "claimIds": [
+              "Σ6-Fo"
+            ]
+          },
+          "M1": {
+            "status": "strong",
+            "basis": "M1: Q＝指定個体・段階における発現／骨盤形態に差がある。 留保: 生物学的価値の評価とは別。",
+            "references": [
+              {
+                "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+              }
+            ],
+            "claimIds": [
+              "Σ6-M1"
+            ]
+          },
+          "M2": {
+            "status": "strong",
+            "basis": "M2-c: 指定した発生過程への因果役割を実験で検査できる。 留保: 個体全体の設計指令という帰属は不要。",
+            "references": [
+              {
+                "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+              }
+            ],
+            "claimIds": [
+              "Σ6-M2-c"
+            ]
+          },
+          "M3": {
+            "status": "uncertain",
+            "basis": "M3.trait: 形質の変化は示されても、形質を内容とする関係は未特定。 留保: DNAの効果と形質の記述を分離。",
+            "references": [
+              {
+                "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+              },
+              {
+                "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+              }
+            ],
+            "claimIds": [
+              "Σ6-M3.trait"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ6：具体例はトゲウオPitx1エンハンサーと発現・骨盤形成。細胞間相互作用と発生環境を含む。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "具体例はトゲウオPitx1エンハンサーと発現・骨盤形成。細胞間相互作用と発生環境を含む。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "candidate：Fo: 発生中の組織全体について制約の再形成を問う。 留保: 発生への寄与だけで自己維持閉包を確定しない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "organizational",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical",
+          "development"
+        ],
+        "constraintBasis": {
+          "physical": "このΣで発生中の多細胞個体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "organizational": "このΣで発生中の多細胞個体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣで発生中の多細胞個体を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。",
+          "development": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "lineage": {
+        "label": "Σ7｜世代をまたぐ集団・系統",
+        "description": "具体的な配列、集団、環境、遺伝・変異・選択・漂動・組換えの過程。",
+        "relations": [
+          "D",
+          "W0",
+          "W1",
+          "Fs",
+          "M2",
+          "M3"
+        ],
+        "evidence": {
+          "Fs": {
+            "status": "uncertain",
+            "basis": "Fs: 配列・効果・保持理由が未特定のDNA一般には選択効果を確定できない。 留保: 特定エンハンサーの適応証拠があっても、漂動・連鎖・変異バイアスを別検査。",
+            "references": [
+              {
+                "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+              },
+              {
+                "label": "Xie et al. (2019), DNA fragility in the parallel evolution of pelvic reduction in stickleback fish.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/30606845/"
+              }
+            ],
+            "claimIds": [
+              "Σ7-Fs"
+            ]
+          },
+          "M2": {
+            "status": "uncertain",
+            "basis": "M2-s: Fsの対象・効果・選択史が指定されるまで保留。 留保: 現在の有用性から過去の選択理由を逆算しない。",
+            "references": [
+              {
+                "label": "Maynard Smith (2000), The Concept of Information in Biology. Philosophy of Science 67:177–194.",
+                "url": "https://doi.org/10.1086/392768"
+              }
+            ],
+            "claimIds": [
+              "Σ7-M2-s"
+            ]
+          },
+          "M3": {
+            "status": "uncertain",
+            "basis": "M3: 系統推定者の内容と生物自身の内容を混同しない。 留保: 集団に境界を広げるだけで表象主体を仮定しない。",
+            "references": [
+              {
+                "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/"
+              },
+              {
+                "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+              }
+            ],
+            "claimIds": [
+              "Σ7-M3"
+            ]
+          },
+          "W0": {
+            "status": "strong",
+            "basis": "W0: 現在の配列は複製・変異・組換え等の履歴に依存する。 留保: 残る痕跡は選択的で、履歴の全内容を保持しない。",
+            "references": [
+              {
+                "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+              },
+              {
+                "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/"
+              }
+            ],
+            "claimIds": [
+              "Σ7-W0"
+            ]
+          },
+          "W1": {
+            "status": "candidate",
+            "basis": "W1: 過去の事象型を限定すれば、配列型との安定対応を検査できる。 留保: 系統推定Bはモデル依存の推論。Aの履歴依存だけでは全史のW1にならない。",
+            "references": [
+              {
+                "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/"
+              }
+            ],
+            "claimIds": [
+              "Σ7-W1"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ7：具体的な配列、集団、環境、遺伝・変異・選択・漂動・組換えの過程。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "具体的な配列、集団、環境、遺伝・変異・選択・漂動・組換えの過程。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "未指定：この境界では別途監査。包含だけでは成立しない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "historical",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical",
+          "evolution"
+        ],
+        "constraintBasis": {
+          "physical": "このΣで世代をまたぐ集団・系統を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "historical": "このΣで世代をまたぐ集団・系統を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣで世代をまたぐ集団・系統を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。",
+          "evolution": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "social": {
+        "label": "Σ8｜DNAについての科学的記述",
+        "description": "DNA分子とは別に、配列文字列、注釈、研究者、データベース、命名・訂正規則を対象とする。",
+        "relations": [
+          "D",
+          "W3",
+          "M4"
+        ],
+        "evidence": {
+          "M4": {
+            "status": "strong",
+            "basis": "M4-f: feature key、座標、qualifier等の構文と用語規則が明示される。 留保: 形式上の妥当性は生物学的注釈の真実を保証しない。 / M4-s: 共同データベース・注釈・改訂の制度的使用がある。 留保: DNA分子自身の社会的意味ではない。",
+            "references": [
+              {
+                "label": "DDBJ/ENA/GenBank Feature Table Definition, Version 11.4, April 2026.",
+                "url": "https://www.ddbj.nig.ac.jp/ddbj/feature-table.html"
+              }
+            ],
+            "claimIds": [
+              "Σ8-M4-f",
+              "Σ8-M4-s"
+            ]
+          },
+          "W3": {
+            "status": "strong",
+            "basis": "W3: 配列文字列と注釈を規約・記録装置を通じて保存・利用する。 留保: 対象は記号記録と科学的実践。分子単体ではない。",
+            "references": [
+              {
+                "label": "DDBJ/ENA/GenBank Feature Table Definition, Version 11.4, April 2026.",
+                "url": "https://www.ddbj.nig.ac.jp/ddbj/feature-table.html"
+              }
+            ],
+            "claimIds": [
+              "Σ8-W3"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ8：DNA分子とは別に、配列文字列、注釈、研究者、データベース、命名・訂正規則を対象とする。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "DNA分子とは別に、配列文字列、注釈、研究者、データベース、命名・訂正規則を対象とする。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "未指定：この境界では別途監査。包含だけでは成立しない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "formal",
+          "social",
+          "contextual"
+        ],
+        "formationHistory": [
+          "design",
+          "institution",
+          "socialLearning"
+        ],
+        "constraintBasis": {
+          "formal": "このΣでDNAについての科学的記述を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "social": "このΣでDNAについての科学的記述を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣでDNAについての科学的記述を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "design": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。",
+          "institution": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。",
+          "socialLearning": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      },
+      "crispr": {
+        "label": "Σ5-C｜CRISPR獲得免疫の限定事例",
+        "description": "獲得段階はS. thermophilusのファージ・スペーサー実験、後続利用は別途E. coliのcrRNA/Cascade実験。種・機構を混同しない。",
+        "relations": [
+          "D",
+          "W0",
+          "W1",
+          "W2",
+          "M1",
+          "M2",
+          "M3"
+        ],
+        "evidence": {
+          "M1": {
+            "status": "strong",
+            "basis": "M1: スペーサー追加・除去がQ＝特定ファージ抵抗性を変える。 留保: 有益性は標的と環境に依存。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-M1"
+            ]
+          },
+          "M2": {
+            "status": "strong",
+            "basis": "M2-c: 獲得配列が防御過程で利用される。 留保: 自伝的記憶や意識を導かない。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              },
+              {
+                "label": "Brouns et al. (2008), Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes. Science 321:960–964.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/18703739/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-M2-c"
+            ]
+          },
+          "M3": {
+            "status": "candidate",
+            "basis": "M3: 標的配列についての指示／認識内容という解釈候補。 留保: 配列特異性と利用の実証だけで正誤内容を確定しない。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              },
+              {
+                "label": "Brouns et al. (2008), Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes. Science 321:960–964.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/18703739/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-M3"
+            ]
+          },
+          "W0": {
+            "status": "strong",
+            "basis": "W0: ファージ曝露後のスペーサー獲得という履歴依存。 留保: この限定系の実験。DNA一般の性質ではない。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-W0"
+            ]
+          },
+          "W1": {
+            "status": "strong",
+            "basis": "W1: 特定ファージ由来配列と獲得スペーサーの対応を検査できる。 留保: 全感染履歴の完全記録でも、必ず防御に有効な記録でもない。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-W1"
+            ]
+          },
+          "W2": {
+            "status": "strong",
+            "basis": "W2: 配列の獲得と後続の配列特異的防御を機構的に結べる。 留保: 獲得実験と後続利用機構の実験は種・構成を分けて記載。過去そのものを表象する証拠ではない。",
+            "references": [
+              {
+                "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+              },
+              {
+                "label": "Brouns et al. (2008), Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes. Science 321:960–964.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/18703739/"
+              }
+            ],
+            "claimIds": [
+              "Σ5-C-W2"
+            ]
+          }
+        },
+        "causalPaths": [],
+        "analytics": [
+          "analysis-Shannon"
+        ],
+        "auditContext": {
+          "sigma": "Σ5-C：獲得段階はS. thermophilusのファージ・スペーサー実験、後続利用は別途E. coliのcrRNA/Cascade実験。種・機構を混同しない。",
+          "contrasts": "各claimの対照条件を参照。実験レコードの完全転記は未指定",
+          "mechanism": "獲得段階はS. thermophilusのファージ・スペーサー実験、後続利用は別途E. coliのcrRNA/Cascade実験。種・機構を混同しない。",
+          "q": "各claimで指定。未指定の帰結は評価しない",
+          "tauResponse": "未指定",
+          "tauUpdate": "未指定"
+        },
+        "foAssessment": "未指定：この境界では別途監査。包含だけでは成立しない。",
+        "uiAssessment": "未指定：DNA・複製・発現への参加だけから感受‐作用UIを帰属しない。",
+        "externalConnections": [],
+        "constraintTypes": [
+          "physical",
+          "historical",
+          "organizational",
+          "contextual"
+        ],
+        "formationHistory": [
+          "physicochemical"
+        ],
+        "constraintBasis": {
+          "physical": "このΣでCRISPR獲得免疫の限定事例を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "historical": "このΣでCRISPR獲得免疫の限定事例を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "organizational": "このΣでCRISPR獲得免疫の限定事例を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。",
+          "contextual": "このΣでCRISPR獲得免疫の限定事例を記述する拘束型。強度を示さず、理論的帰属はclaimを参照。"
+        },
+        "formationBasis": {
+          "physicochemical": "このΣで指定した形成過程。特定試料の個別履歴や時点は未指定。"
+        }
+      }
+    },
+    "forbiddenInferences": [
+      "DNA＝Shannon情報としない",
+      "複製＝意味としない",
+      "R4＝M3としない",
+      "コドン対応＝形質記述としない",
+      "因果効果＝表象内容としない",
+      "生体内にある＝生物に利用されるとしない",
+      "系統推定に使える＝生物自身の記録利用としない",
+      "Σを細胞へ拡大したFoをDNA分子自身へ帰属しない",
+      "DNA＝生物の未来の記述としない",
+      "DNA→RNAの転写とmRNA→ポリペプチドの翻訳を一つの読取へ潰さない",
+      "校正・修復の誤りを表象的な誤りN3と同一視しない",
+      "有限長・有限資源を理由にKuをKfへ分類し直さない",
+      "CRISPRの獲得記録利用を全DNAへ一般化しない",
+      "集合として広げた出力語彙と、実験中の利用可能な出力集合の固定を混同しない"
+    ],
+    "auditQuestions": [
+      "Σに含めるDNA・RNA・酵素・供給系・細胞・利用者は何か",
+      "入力は鋳型DNA、コード鎖表記、mRNAコドンのどれか",
+      "𝒟は実際に比較できる配列・機構・条件の集合か",
+      "Qは塩基列、残基列、発現量、形質、存続、繁殖のどれか",
+      "R3介入でMだけを変え、入力型・出力型・背景供給をどこまで固定したか",
+      "対応置換と感度・速度・精度・故障の変化を分けたか",
+      "記録する過去事象型、痕跡型、誤り許容、保存時域は何か",
+      "書込後に同じ系／系統が何を利用し、過去としての内容まで要するか",
+      "Fc・Fo・Fsのどの機能を主張しているか",
+      "Foの制約C、作用時域、維持時域と相互維持経路を同定したか",
+      "Fsについて選択と漂動・連鎖・変異バイアスを識別する証拠はあるか",
+      "M3の内容・消費者・参照／充足条件・誤表象可能性を何で固定するか",
+      "DNAの物理状態と配列注釈・遺伝子名を分離したか",
+      "文献が直接示す機構と本図への概念帰属を別欄にしたか"
+    ],
+    "constraintTypes": [
+      "physical"
+    ],
+    "formationHistory": [],
+    "formationBasis": {},
+    "analytics": [
+      "analysis-Shannon"
+    ],
+    "references": [
+      {
+        "label": "Meselson & Stahl (1958), The replication of DNA in Escherichia coli. PNAS 44:671–682.",
+        "url": "https://doi.org/10.1073/pnas.44.7.671"
+      },
+      {
+        "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/"
+      },
+      {
+        "label": "Alberts et al. (2002), From DNA to RNA.",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/"
+      },
+      {
+        "label": "Alberts et al. (2002), From RNA to Protein.",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/"
+      },
+      {
+        "label": "Chapeville et al. (1962), On the role of soluble ribonucleic acid in coding for amino acids. PNAS 48:1086–1092.",
+        "url": "https://doi.org/10.1073/pnas.48.6.1086"
+      },
+      {
+        "label": "Wang et al. (2001), Expanding the genetic code of Escherichia coli. Science 292:498–500.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11313494/"
+      },
+      {
+        "label": "Lajoie et al. (2013), Genomically Recoded Organisms Expand Biological Functions. Science 342:357–360.",
+        "url": "https://arep.med.harvard.edu/pdf/Lajoie_Science_2013.pdf"
+      },
+      {
+        "label": "Wang & Schultz (2002), Expanding the genetic code. Chemical Communications:1–11.",
+        "url": "https://doi.org/10.1039/B108185N"
+      },
+      {
+        "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/"
+      },
+      {
+        "label": "Brouns et al. (2008), Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes. Science 321:960–964.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18703739/"
+      },
+      {
+        "label": "Modrich (1991), Mechanisms and biological effects of mismatch repair. Annual Review of Genetics 25:229–253.",
+        "url": "https://doi.org/10.1146/annurev.ge.25.120191.001305"
+      },
+      {
+        "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/"
+      },
+      {
+        "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/"
+      },
+      {
+        "label": "Szathmáry & Maynard Smith (1997), From replicators to reproducers: the first major transitions leading to life. J Theor Biol 187:555–571.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9299299/"
+      },
+      {
+        "label": "Shannon (1948), A Mathematical Theory of Communication. Bell Syst Tech J 27:379–423, 623–656.",
+        "url": "https://www.princeton.edu/~wbialek/rome/refs/shannon_48.pdf"
+      },
+      {
+        "label": "Schneider et al. (1986), Information content of binding sites on nucleotide sequences. J Mol Biol 188:415–431.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3525846/"
+      },
+      {
+        "label": "Crick (1970), Central Dogma of Molecular Biology. Nature 227:561–563.",
+        "url": "https://doi.org/10.1038/227561a0"
+      },
+      {
+        "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/"
+      },
+      {
+        "label": "Maynard Smith (2000), The Concept of Information in Biology. Philosophy of Science 67:177–194.",
+        "url": "https://doi.org/10.1086/392768"
+      },
+      {
+        "label": "Godfrey-Smith (2000), Information, Arbitrariness, and Selection: Comments on Maynard Smith. Philosophy of Science 67:202–207.",
+        "url": "https://www.cambridge.org/core/journals/philosophy-of-science/article/abs/information-arbitrariness-and-selection-comments-on-maynard-smith/11D979B4E36C8EE31E0F38B01DD8C636"
+      },
+      {
+        "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+        "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en"
+      },
+      {
+        "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+        "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D"
+      },
+      {
+        "label": "DDBJ/ENA/GenBank Feature Table Definition, Version 11.4, April 2026.",
+        "url": "https://www.ddbj.nig.ac.jp/ddbj/feature-table.html"
+      },
+      {
+        "label": "Xie et al. (2019), DNA fragility in the parallel evolution of pelvic reduction in stickleback fish.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30606845/"
+      },
+      {
+        "label": "Nirenberg & Leder (1964), RNA codewords and protein synthesis. The effect of trinucleotides upon the binding of sRNA to ribosomes.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/14172630/"
+      },
+      {
+        "label": "Kinney et al. (2010), Using deep sequencing to characterize the biophysical mechanism of a transcriptional regulatory sequence.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20439748/"
+      },
+      {
+        "label": "Montévil & Mossio (2015), Biological organisation as closure of constraints. J Theor Biol 372:179–191.",
+        "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/"
+      }
+    ]
+  },
+  "claims": [
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "D",
+      "claimId": "Σ1-D",
+      "status": "strong",
+      "basis": "塩基配列の物理的区別を対象とする。",
+      "sourceIds": [
+        "S02",
+        "S03"
+      ],
+      "caveat": "測定文字列と分子を区別。単離された一本の分子に確率分布が内在するとは言わない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "W0",
+      "claimId": "Σ1-W0",
+      "status": "strong",
+      "basis": "既知由来の分子は過去の合成・複製・損傷過程に依存する。",
+      "sourceIds": [
+        "S02",
+        "S11"
+      ],
+      "caveat": "由来不明の試料について具体的履歴まで確定しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "W1",
+      "claimId": "Σ1-W1",
+      "status": "uncertain",
+      "basis": "記録される過去事象型と保存条件・時域が未指定。",
+      "sourceIds": [
+        "S13"
+      ],
+      "caveat": "配列の存在や系統推定の可否だけではW1を確定しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "W2",
+      "claimId": "Σ1-W2",
+      "status": "weak",
+      "basis": "この境界には書込と後続利用の機構がない。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "保存可能性をメモリ作動と同一視しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "W3",
+      "claimId": "Σ1-W3",
+      "status": "weak",
+      "basis": "規則担体と記録の結合は境界外。",
+      "sourceIds": [
+        "S04"
+      ],
+      "caveat": "符号化された記録の担体としての可能性と、成立中の関係を分ける。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "Ku",
+      "claimId": "Σ1-Ku",
+      "status": "weak",
+      "basis": "分子単独で鋳型複製が進行するとは言えない。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "能力を調べるため装置を加えた時点でΣ2になる。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "R1",
+      "claimId": "Σ1-R1",
+      "status": "candidate",
+      "basis": "二本鎖なら塩基対形成等の特異性を検査できる。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "鎖状態、配列、温度・溶媒、対照を指定。試料未指定につき一律strongとしない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "R2",
+      "claimId": "Σ1-R2",
+      "status": "uncertain",
+      "basis": "下流の出力集合と利用経路が未指定。",
+      "sourceIds": [],
+      "caveat": "単離分子に下流の変換系を勝手に補わない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "R3",
+      "claimId": "Σ1-R3",
+      "status": "weak",
+      "basis": "当該関係を成立させる対応担体または組織は境界内に指定されていない。",
+      "sourceIds": [
+        "S04",
+        "S21"
+      ],
+      "caveat": "境界外の関係を分子自身へ戻さない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "R4",
+      "claimId": "Σ1-R4",
+      "status": "weak",
+      "basis": "当該関係を成立させる対応担体または組織は境界内に指定されていない。",
+      "sourceIds": [
+        "S04",
+        "S21"
+      ],
+      "caveat": "境界外の関係を分子自身へ戻さない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "Fo",
+      "claimId": "Σ1-Fo",
+      "status": "weak",
+      "basis": "当該関係を成立させる対応担体または組織は境界内に指定されていない。",
+      "sourceIds": [
+        "S04",
+        "S21"
+      ],
+      "caveat": "境界外の関係を分子自身へ戻さない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "M1",
+      "claimId": "Σ1-M1",
+      "status": "uncertain",
+      "basis": "どの帰結Qへ差を生むか未指定。",
+      "sourceIds": [],
+      "caveat": "配列差Dのみから関連性を確定しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "local",
+      "sigma": "Σ1",
+      "relation": "M3",
+      "claimId": "Σ1-M3",
+      "status": "uncertain",
+      "basis": "内容・利用機構・正誤条件が未指定。",
+      "sourceIds": [
+        "S18"
+      ],
+      "caveat": "設計図比喩は実験証拠ではない。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "R1",
+      "claimId": "Σ2-R1",
+      "status": "strong",
+      "basis": "鋳型・基質の選択と相補的塩基対形成が複製機構に組み込まれる。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "誤挿入・選択精度はポリメラーゼと条件に依存。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "R2",
+      "claimId": "Σ2-R2",
+      "status": "strong",
+      "basis": "鋳型の塩基差が新生鎖の塩基差へ系統的に写る。",
+      "sourceIds": [
+        "S01",
+        "S02"
+      ],
+      "caveat": "鋳型と新生鎖は相補。鎖方向・相補変換を固定する。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "Ku",
+      "claimId": "Σ2-Ku",
+      "status": "strong",
+      "basis": "同じ機構が多数の配列変異を鋳型依存に複製できるという操作的意味。",
+      "sourceIds": [
+        "S02",
+        "S14"
+      ],
+      "caveat": "無限長・全配列の無誤り複製の実証ではない。固定長Lでは4^Lで有限。",
+      "evidenceKind": "mechanism_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "Kf",
+      "claimId": "Σ2-Kf",
+      "status": "weak",
+      "basis": "少数の固定された変異型だけを継承する分類は核酸配列型複製の説明として不適切。",
+      "sourceIds": [
+        "S14"
+      ],
+      "caveat": "有限長だからKf、という区分ではない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "K.error",
+      "claimId": "Σ2-K.error",
+      "status": "strong",
+      "basis": "誤挿入等が生じ、校正・ミスマッチ修復が誤り率へ影響する。",
+      "sourceIds": [
+        "S02",
+        "S11"
+      ],
+      "caveat": "複製時校正と複製後修復を分ける。欠損系にも同一精度を仮定しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "K.repair",
+      "claimId": "Σ2-K.repair",
+      "status": "strong",
+      "basis": "修復因子を含めた指定系では不一致認識・鎖切除・再合成等が成立する。",
+      "sourceIds": [
+        "S11"
+      ],
+      "caveat": "全修復が元配列を完全復元するわけではない。因子を含めないΣ2には帰属しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "W1",
+      "claimId": "Σ2-W1",
+      "status": "strong",
+      "basis": "過去の鋳型配列型と後続のコピー配列型の再現的対応。",
+      "sourceIds": [
+        "S01",
+        "S02"
+      ],
+      "caveat": "限定的な事象型＝直前の鋳型状態。全進化史の記録ではない。反事実的安定は指定誤り率・条件範囲内。",
+      "evidenceKind": "mechanism_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "W2",
+      "claimId": "Σ2-W2",
+      "status": "candidate",
+      "basis": "作られたコピーが後続ラウンドの鋳型になる構成なら書込と後続利用が揃う。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "単一の複製反応だけでは後続利用未確認。今回特定した再利用実験レコードは不足。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "R3",
+      "claimId": "Σ2-R3",
+      "status": "weak",
+      "basis": "相補複製・校正をR1/R2で説明でき、対応置換を示す証拠としては不十分。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "ポリメラーゼ変異の誤り率変化や停止は規則の置換ではない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "Fo",
+      "claimId": "Σ2-Fo",
+      "status": "weak",
+      "basis": "試験管内の装置は複製に寄与しても自身の再生産閉包を示さない。",
+      "sourceIds": [
+        "S21"
+      ],
+      "caveat": "生細胞から精製された由来と現在の組織的維持を分ける。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "M1",
+      "claimId": "Σ2-M1",
+      "status": "strong",
+      "basis": "鋳型差がQ＝複製産物の塩基配列を変える。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "有益性・表象内容は主張しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "replication",
+      "sigma": "Σ2",
+      "relation": "M2-c",
+      "claimId": "Σ2-M2-c",
+      "status": "strong",
+      "basis": "DNAはQ＝相補鎖合成への鋳型として因果役割を果たす。",
+      "sourceIds": [
+        "S02"
+      ],
+      "caveat": "FoやFsは別。",
+      "evidenceKind": "mechanism_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "R1",
+      "claimId": "Σ3-R1",
+      "status": "strong",
+      "basis": "DNAと転写装置の特異的相互作用がある。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "プロモーター認識と伸長時の塩基選択を区別する。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "R2",
+      "claimId": "Σ3-R2",
+      "status": "strong",
+      "basis": "鋳型DNAに対応するRNAが合成される。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "DNAのコード鎖表記と実際の鋳型鎖を区別。RNA加工があれば別機構。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "R3",
+      "claimId": "Σ3-R3",
+      "status": "weak",
+      "basis": "通常の転写の相補合成は、そのまま別対応規則の介入実証にはならない。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "プロモーター選好・発現量変化のみでR3としない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "R4",
+      "claimId": "Σ3-R4",
+      "status": "weak",
+      "basis": "塩基の相補的対応だけで本図のR3を伴うコード条件を満たしたとしない。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "これは転写に対応がないという主張ではなく、コードの操作的定義による限定。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "Fc",
+      "claimId": "Σ3-Fc",
+      "status": "strong",
+      "basis": "指定した鋳型・調節配列はRNA産生へ因果的に寄与する。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "特定の配列効果は条件と介入を添える。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "M1",
+      "claimId": "Σ3-M1",
+      "status": "strong",
+      "basis": "配列差がQ＝RNA配列または条件指定した産生量へ影響する。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "Qを混ぜない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "M2-c",
+      "claimId": "Σ3-M2-c",
+      "status": "strong",
+      "basis": "RNA合成・調節への組込みを因果役割として記述できる。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "意味という呼称は本図の作業的ラベル。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "transcription",
+      "sigma": "Σ3",
+      "relation": "W2",
+      "claimId": "Σ3-W2",
+      "status": "weak",
+      "basis": "DNAは利用されるが、このΣにはDNAを書き込む機構を含めていない。",
+      "sourceIds": [
+        "S03"
+      ],
+      "caveat": "RNA生成をDNAへの書込と数えない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "not_instantiated_in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "R1",
+      "claimId": "Σ4-R1",
+      "status": "strong",
+      "basis": "tRNAの認識・アミノアシル化・コドン認識等の特異的相互作用。",
+      "sourceIds": [
+        "S04"
+      ],
+      "caveat": "コドンとアミノ酸の直接的親和性に還元しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "R2",
+      "claimId": "Σ4-R2",
+      "status": "strong",
+      "basis": "mRNA配列差が条件付きでポリペプチド配列差へ変換される。",
+      "sourceIds": [
+        "S04"
+      ],
+      "caveat": "入力はmRNA。DNA差からの経路は転写を別に含む。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "R3",
+      "claimId": "Σ4-R3",
+      "status": "strong",
+      "basis": "ミスアシル化tRNAの介入等で、アダプター側を変えてRNAに対する挿入残基を変えられる。",
+      "sourceIds": [
+        "S05",
+        "S04",
+        "S06",
+        "S08"
+      ],
+      "caveat": "入力RNA型と出力残基型を事前固定。一つの実験が全対応の自由な置換を示すわけではない。",
+      "evidenceKind": "intervention_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "R4",
+      "claimId": "Σ4-R4",
+      "status": "strong",
+      "basis": "分散した翻訳装置が多数のコドンへ繰返し対応を適用する。再割当系も具体的条件で実装される。",
+      "sourceIds": [
+        "S25",
+        "S06",
+        "S07"
+      ],
+      "caveat": "標準暗号も文脈・生物種の例外を持つ。全64対応の任意置換の主張ではない。",
+      "evidenceKind": "mechanism_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "W3",
+      "claimId": "Σ4-W3",
+      "status": "candidate",
+      "basis": "記録／メモリと翻訳規則の結合は構成可能。",
+      "sourceIds": [
+        "S02",
+        "S04"
+      ],
+      "caveat": "供給された配列が何の記録か、書込履歴・後続利用を別に確定する必要。翻訳だけでW3にしない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "Fc",
+      "claimId": "Σ4-Fc",
+      "status": "strong",
+      "basis": "RNAと翻訳装置が指定産物の合成へ因果的に寄与。",
+      "sourceIds": [
+        "S04",
+        "S06"
+      ],
+      "caveat": "DNA自身がアミノ酸を読み取る、とはしない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "M1",
+      "claimId": "Σ4-M1",
+      "status": "strong",
+      "basis": "Q＝挿入残基・ポリペプチド配列に対する差を介入で検査できる。",
+      "sourceIds": [
+        "S05",
+        "S07"
+      ],
+      "caveat": "機能的に有利な産物とは限らない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "M2-c",
+      "claimId": "Σ4-M2-c",
+      "status": "strong",
+      "basis": "タンパク質合成への因果役割として限定した機能的意味。",
+      "sourceIds": [
+        "S04"
+      ],
+      "caveat": "M3を含意しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "Fo",
+      "claimId": "Σ4-Fo",
+      "status": "weak",
+      "basis": "外部供給の翻訳反応だけでは装置自身の組織的再生産を示さない。",
+      "sourceIds": [
+        "S21",
+        "S22",
+        "S27"
+      ],
+      "caveat": "生細胞へ境界を広げるならΣ5の別命題。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "M3.aa-sequence",
+      "claimId": "Σ4-M3.aa-sequence",
+      "status": "candidate",
+      "basis": "アミノ酸列を産出する指令的内容として解釈する候補。",
+      "sourceIds": [
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "caveat": "機構的配列指定は実証されても、内容理論・消費者・充足条件の追加が必要。",
+      "evidenceKind": "philosophical_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "translation",
+      "sigma": "Σ4",
+      "relation": "M3.protein-product",
+      "claimId": "Σ4-M3.protein-product",
+      "status": "uncertain",
+      "basis": "成熟タンパク質を内容とする帰属は未確定。",
+      "sourceIds": [
+        "S04",
+        "S18"
+      ],
+      "caveat": "折畳み・修飾・切断・複合体化と配列指定を分ける。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "W2",
+      "claimId": "Σ5-W2",
+      "status": "strong",
+      "basis": "細胞・細胞系統内で複製された配列を後続の発現等に利用する。",
+      "sourceIds": [
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "caveat": "書込＝生合成、利用＝後続発現という操作的メモリ。過去としての表象は要求しない。",
+      "evidenceKind": "mechanism_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "W3",
+      "claimId": "Σ5-W3",
+      "status": "candidate",
+      "basis": "複製由来の保持配列と翻訳規則を同じ細胞内で接続できる。",
+      "sourceIds": [
+        "S02",
+        "S04"
+      ],
+      "caveat": "どの事象型の記録であるかを特定してからstrongを検討。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "Fo",
+      "claimId": "Σ5-Fo",
+      "status": "candidate",
+      "basis": "発現が維持機構を供給し、代謝・膜・修復等がDNAと装置の成立を支える。",
+      "sourceIds": [
+        "S02",
+        "S11",
+        "S21",
+        "S22"
+      ],
+      "caveat": "組織説による帰属。特定細胞の制約集合C、作用時域・維持時域と介入閉包の監査は未完。",
+      "evidenceKind": "organizational_theory",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "M2-o",
+      "claimId": "Σ5-M2-o",
+      "status": "candidate",
+      "basis": "Foを採用した組織的機能の意味に限る。",
+      "sourceIds": [
+        "S21",
+        "S22",
+        "S27"
+      ],
+      "caveat": "DNA全域に同じ寄与は帰属しない。",
+      "evidenceKind": "organizational_theory",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "M3.expression-condition",
+      "claimId": "Σ5-M3.expression-condition",
+      "status": "uncertain",
+      "basis": "配列が発現条件を表す、という内容帰属は未確定。",
+      "sourceIds": [
+        "S03",
+        "S18"
+      ],
+      "caveat": "結合閾値・調節効果はR1/R2/Fcで説明可能。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "body",
+      "sigma": "Σ5",
+      "relation": "M3.future",
+      "claimId": "Σ5-M3.future",
+      "status": "weak",
+      "basis": "未来の個体像の記述を仮定せずに機構を説明できる。",
+      "sourceIds": [
+        "S17",
+        "S18"
+      ],
+      "caveat": "比喩を排除する趣旨で、将来の帰結への因果的寄与を否定しない。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "development",
+      "sigma": "Σ6",
+      "relation": "Fc",
+      "claimId": "Σ6-Fc",
+      "status": "strong",
+      "basis": "Pitx1調節配列の変化が組織特異的発現と骨盤形成に関与する具体例。",
+      "sourceIds": [
+        "S12"
+      ],
+      "caveat": "全形質、全遺伝子へ一般化しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "development",
+      "sigma": "Σ6",
+      "relation": "M1",
+      "claimId": "Σ6-M1",
+      "status": "strong",
+      "basis": "Q＝指定個体・段階における発現／骨盤形態に差がある。",
+      "sourceIds": [
+        "S12"
+      ],
+      "caveat": "生物学的価値の評価とは別。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "development",
+      "sigma": "Σ6",
+      "relation": "M2-c",
+      "claimId": "Σ6-M2-c",
+      "status": "strong",
+      "basis": "指定した発生過程への因果役割を実験で検査できる。",
+      "sourceIds": [
+        "S12"
+      ],
+      "caveat": "個体全体の設計指令という帰属は不要。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "development",
+      "sigma": "Σ6",
+      "relation": "Fo",
+      "claimId": "Σ6-Fo",
+      "status": "candidate",
+      "basis": "発生中の組織全体について制約の再形成を問う。",
+      "sourceIds": [
+        "S21",
+        "S22",
+        "S27"
+      ],
+      "caveat": "発生への寄与だけで自己維持閉包を確定しない。",
+      "evidenceKind": "organizational_theory",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "development",
+      "sigma": "Σ6",
+      "relation": "M3.trait",
+      "claimId": "Σ6-M3.trait",
+      "status": "uncertain",
+      "basis": "形質の変化は示されても、形質を内容とする関係は未特定。",
+      "sourceIds": [
+        "S12",
+        "S18"
+      ],
+      "caveat": "DNAの効果と形質の記述を分離。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "lineage",
+      "sigma": "Σ7",
+      "relation": "W0",
+      "claimId": "Σ7-W0",
+      "status": "strong",
+      "basis": "現在の配列は複製・変異・組換え等の履歴に依存する。",
+      "sourceIds": [
+        "S02",
+        "S13"
+      ],
+      "caveat": "残る痕跡は選択的で、履歴の全内容を保持しない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "lineage",
+      "sigma": "Σ7",
+      "relation": "W1",
+      "claimId": "Σ7-W1",
+      "status": "candidate",
+      "basis": "過去の事象型を限定すれば、配列型との安定対応を検査できる。",
+      "sourceIds": [
+        "S13"
+      ],
+      "caveat": "系統推定Bはモデル依存の推論。Aの履歴依存だけでは全史のW1にならない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "lineage",
+      "sigma": "Σ7",
+      "relation": "Fs",
+      "claimId": "Σ7-Fs",
+      "status": "uncertain",
+      "basis": "配列・効果・保持理由が未特定のDNA一般には選択効果を確定できない。",
+      "sourceIds": [
+        "S12",
+        "S24"
+      ],
+      "caveat": "特定エンハンサーの適応証拠があっても、漂動・連鎖・変異バイアスを別検査。",
+      "evidenceKind": "historical_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "lineage",
+      "sigma": "Σ7",
+      "relation": "M2-s",
+      "claimId": "Σ7-M2-s",
+      "status": "uncertain",
+      "basis": "Fsの対象・効果・選択史が指定されるまで保留。",
+      "sourceIds": [
+        "S19"
+      ],
+      "caveat": "現在の有用性から過去の選択理由を逆算しない。",
+      "evidenceKind": "historical_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "lineage",
+      "sigma": "Σ7",
+      "relation": "M3",
+      "claimId": "Σ7-M3",
+      "status": "uncertain",
+      "basis": "系統推定者の内容と生物自身の内容を混同しない。",
+      "sourceIds": [
+        "S13",
+        "S18"
+      ],
+      "caveat": "集団に境界を広げるだけで表象主体を仮定しない。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "social",
+      "sigma": "Σ8",
+      "relation": "W3",
+      "claimId": "Σ8-W3",
+      "status": "strong",
+      "basis": "配列文字列と注釈を規約・記録装置を通じて保存・利用する。",
+      "sourceIds": [
+        "S23"
+      ],
+      "caveat": "対象は記号記録と科学的実践。分子単体ではない。",
+      "evidenceKind": "official_usage",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "social",
+      "sigma": "Σ8",
+      "relation": "M4-f",
+      "claimId": "Σ8-M4-f",
+      "status": "strong",
+      "basis": "feature key、座標、qualifier等の構文と用語規則が明示される。",
+      "sourceIds": [
+        "S23"
+      ],
+      "caveat": "形式上の妥当性は生物学的注釈の真実を保証しない。",
+      "evidenceKind": "official_usage",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "social",
+      "sigma": "Σ8",
+      "relation": "M4-s",
+      "claimId": "Σ8-M4-s",
+      "status": "strong",
+      "basis": "共同データベース・注釈・改訂の制度的使用がある。",
+      "sourceIds": [
+        "S23"
+      ],
+      "caveat": "DNA分子自身の社会的意味ではない。",
+      "evidenceKind": "official_usage",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "W0",
+      "claimId": "Σ5-C-W0",
+      "status": "strong",
+      "basis": "ファージ曝露後のスペーサー獲得という履歴依存。",
+      "sourceIds": [
+        "S09"
+      ],
+      "caveat": "この限定系の実験。DNA一般の性質ではない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "W1",
+      "claimId": "Σ5-C-W1",
+      "status": "strong",
+      "basis": "特定ファージ由来配列と獲得スペーサーの対応を検査できる。",
+      "sourceIds": [
+        "S09"
+      ],
+      "caveat": "全感染履歴の完全記録でも、必ず防御に有効な記録でもない。",
+      "evidenceKind": "intervention_plus_operational_definition",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "W2",
+      "claimId": "Σ5-C-W2",
+      "status": "strong",
+      "basis": "配列の獲得と後続の配列特異的防御を機構的に結べる。",
+      "sourceIds": [
+        "S09",
+        "S10"
+      ],
+      "caveat": "獲得実験と後続利用機構の実験は種・構成を分けて記載。過去そのものを表象する証拠ではない。",
+      "evidenceKind": "mechanistic_synthesis",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "M1",
+      "claimId": "Σ5-C-M1",
+      "status": "strong",
+      "basis": "スペーサー追加・除去がQ＝特定ファージ抵抗性を変える。",
+      "sourceIds": [
+        "S09"
+      ],
+      "caveat": "有益性は標的と環境に依存。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "M2-c",
+      "claimId": "Σ5-C-M2-c",
+      "status": "strong",
+      "basis": "獲得配列が防御過程で利用される。",
+      "sourceIds": [
+        "S09",
+        "S10"
+      ],
+      "caveat": "自伝的記憶や意識を導かない。",
+      "evidenceKind": "mechanistic",
+      "applicability": "in_scope"
+    },
+    {
+      "scope": "crispr",
+      "sigma": "Σ5-C",
+      "relation": "M3",
+      "claimId": "Σ5-C-M3",
+      "status": "candidate",
+      "basis": "標的配列についての指示／認識内容という解釈候補。",
+      "sourceIds": [
+        "S09",
+        "S10"
+      ],
+      "caveat": "配列特異性と利用の実証だけで正誤内容を確定しない。",
+      "evidenceKind": "content_attribution",
+      "applicability": "in_scope"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "label": "Meselson & Stahl (1958), The replication of DNA in Escherichia coli. PNAS 44:671–682.",
+      "url": "https://doi.org/10.1073/pnas.44.7.671",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S02",
+      "label": "Alberts et al. (2002), Molecular Biology of the Cell, 4th ed., DNA Replication Mechanisms.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+      "kind": "textbook",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S03",
+      "label": "Alberts et al. (2002), From DNA to RNA.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+      "kind": "textbook",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S04",
+      "label": "Alberts et al. (2002), From RNA to Protein.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26829/",
+      "kind": "textbook",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S05",
+      "label": "Chapeville et al. (1962), On the role of soluble ribonucleic acid in coding for amino acids. PNAS 48:1086–1092.",
+      "url": "https://doi.org/10.1073/pnas.48.6.1086",
+      "kind": "original_experiment",
+      "access": "原著書誌・公開検索本文とS04の実験説明を照合。原著PDFは取得できず"
+    },
+    {
+      "id": "S06",
+      "label": "Wang et al. (2001), Expanding the genetic code of Escherichia coli. Science 292:498–500.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11313494/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S07",
+      "label": "Lajoie et al. (2013), Genomically Recoded Organisms Expand Biological Functions. Science 342:357–360.",
+      "url": "https://arep.med.harvard.edu/pdf/Lajoie_Science_2013.pdf",
+      "kind": "original_experiment",
+      "access": "著者機関PDF本文・Fig.1–3の記述を確認"
+    },
+    {
+      "id": "S08",
+      "label": "Wang & Schultz (2002), Expanding the genetic code. Chemical Communications:1–11.",
+      "url": "https://doi.org/10.1039/B108185N",
+      "kind": "review",
+      "access": "出版社公開本文を確認"
+    },
+    {
+      "id": "S09",
+      "label": "Barrangou et al. (2007), CRISPR provides acquired resistance against viruses in prokaryotes. Science 315:1709–1712.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17379808/",
+      "kind": "original_experiment",
+      "access": "PubMed要旨を確認"
+    },
+    {
+      "id": "S10",
+      "label": "Brouns et al. (2008), Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes. Science 321:960–964.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18703739/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S11",
+      "label": "Modrich (1991), Mechanisms and biological effects of mismatch repair. Annual Review of Genetics 25:229–253.",
+      "url": "https://doi.org/10.1146/annurev.ge.25.120191.001305",
+      "kind": "review",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S12",
+      "label": "Chan et al. (2010), Adaptive evolution of pelvic reduction in sticklebacks by recurrent deletion of a Pitx1 enhancer. Science 327:302–305.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3109066/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S13",
+      "label": "Felsenstein (1981), Evolutionary trees from DNA sequences: a maximum likelihood approach. J Mol Evol 17:368–376.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7288891/",
+      "kind": "method",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S14",
+      "label": "Szathmáry & Maynard Smith (1997), From replicators to reproducers: the first major transitions leading to life. J Theor Biol 187:555–571.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9299299/",
+      "kind": "theory",
+      "access": "PubMed要旨を確認"
+    },
+    {
+      "id": "S15",
+      "label": "Shannon (1948), A Mathematical Theory of Communication. Bell Syst Tech J 27:379–423, 623–656.",
+      "url": "https://www.princeton.edu/~wbialek/rome/refs/shannon_48.pdf",
+      "kind": "mathematical_theory",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S16",
+      "label": "Schneider et al. (1986), Information content of binding sites on nucleotide sequences. J Mol Biol 188:415–431.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3525846/",
+      "kind": "quantitative_analysis",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S17",
+      "label": "Crick (1970), Central Dogma of Molecular Biology. Nature 227:561–563.",
+      "url": "https://doi.org/10.1038/227561a0",
+      "kind": "conceptual_molecular_biology",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S18",
+      "label": "Griffiths (2017), Genetic, epigenetic and exogenetic information in development and evolution. Interface Focus 7:20160152.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5566810/",
+      "kind": "philosophical_theory",
+      "access": "公開本文を確認"
+    },
+    {
+      "id": "S19",
+      "label": "Maynard Smith (2000), The Concept of Information in Biology. Philosophy of Science 67:177–194.",
+      "url": "https://doi.org/10.1086/392768",
+      "kind": "philosophical_theory",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S20",
+      "label": "Godfrey-Smith (2000), Information, Arbitrariness, and Selection: Comments on Maynard Smith. Philosophy of Science 67:202–207.",
+      "url": "https://www.cambridge.org/core/journals/philosophy-of-science/article/abs/information-arbitrariness-and-selection-comments-on-maynard-smith/11D979B4E36C8EE31E0F38B01DD8C636",
+      "kind": "philosophical_theory",
+      "access": "書誌確認。詳細議論の判定根拠には用いない"
+    },
+    {
+      "id": "S21",
+      "label": "Mossio, Saborido & Moreno (2009), An Organizational Account of Biological Functions. Br J Phil Sci 60:813–841.",
+      "url": "https://portalcientifico.uned.es/documentos/5ef241632999526d9672041e?lang=en",
+      "kind": "philosophical_theory",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S22",
+      "label": "Biological Organization, Cambridge Elements（組織的機能・制約閉包の解説）.",
+      "url": "https://www.cambridge.org/core/elements/biological-organization/8F618A9F6912A03B3A2AC8D6D754D53D",
+      "kind": "theoretical_synthesis",
+      "access": "公開本文の制約閉包・機能の節を確認"
+    },
+    {
+      "id": "S23",
+      "label": "DDBJ/ENA/GenBank Feature Table Definition, Version 11.4, April 2026.",
+      "url": "https://www.ddbj.nig.ac.jp/ddbj/feature-table.html",
+      "kind": "official_standard",
+      "access": "仕様本文を確認"
+    },
+    {
+      "id": "S24",
+      "label": "Xie et al. (2019), DNA fragility in the parallel evolution of pelvic reduction in stickleback fish.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30606845/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S25",
+      "label": "Nirenberg & Leder (1964), RNA codewords and protein synthesis. The effect of trinucleotides upon the binding of sRNA to ribosomes.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14172630/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S26",
+      "label": "Kinney et al. (2010), Using deep sequencing to characterize the biophysical mechanism of a transcriptional regulatory sequence.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20439748/",
+      "kind": "original_experiment",
+      "access": "要旨・書誌または公開検索本文を確認"
+    },
+    {
+      "id": "S27",
+      "label": "Montévil & Mossio (2015), Biological organisation as closure of constraints. J Theor Biol 372:179–191.",
+      "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/",
+      "kind": "theoretical_model",
+      "access": "要旨・書誌または公開検索本文を確認"
+    }
+  ],
+  "integration": {
+    "sigmaLabelsPatch": {
+      "local": "Σ1｜単離DNA分子",
+      "replication": "Σ2｜DNA＋複製機構",
+      "transcription": "Σ3｜DNA＋転写機構",
+      "translation": "Σ4｜DNA/RNA＋翻訳機構",
+      "body": "Σ5｜生きた細胞全体",
+      "development": "Σ6｜発生中の多細胞個体",
+      "lineage": "Σ7｜世代をまたぐ集団・系統",
+      "social": "Σ8｜DNAについての科学的記述",
+      "crispr": "Σ5-C｜CRISPR獲得免疫の限定事例"
+    },
+    "legacyModeMigration": {
+      "local": "local",
+      "loop": null,
+      "body": null,
+      "maintenance": null,
+      "social": "social"
+    },
+    "requiredUiChanges": [
+      "DNAのΣ選択肢ではelement.sigmaModes自身のlabelを使う。他事例用global sigmaLabelsを上書きしない。",
+      "DNAビューのハードコードloopをlocalまたは明示選択translationへ変更する。",
+      "旧loop/body/maintenanceは一対一移行不可。利用者に新Σを選ばせる。",
+      "詳細ではclaimsをrelation別に表示し、M2-c/o/s・M3内容候補・M4-f/sを潰さない。",
+      "causalPathsは今回未対応のため空。既存抽象経路を実証済み分子機構として流用しない。",
+      "単体HTMLへ適用する場合、埋込data.jsとapp.jsを同じ版から再生成する。"
+    ]
+  },
+  "definitionVariants": {
+    "R3": {
+      "localInterface": {
+        "status": "strong",
+        "scope": "translation",
+        "claim": "入力をmRNA型、出力を挿入残基型、Mをアダプターのアミノアシル化状態と対応装置として扱う局所的再対応。"
+      },
+      "strictMatchedBackground": {
+        "status": "candidate",
+        "scope": "translation",
+        "claim": "同一レポーター・同一資源集合・同一全背景でMのみを変更する。今回、全原著の対照条件を完全照合していない。"
+      }
+    },
+    "R4": {
+      "systematicTranslation": {
+        "status": "strong",
+        "scope": "translation",
+        "claim": "指定翻訳系の複数コドンへの体系的対応。全対応の任意置換ではない。"
+      },
+      "requiresStrictR3": {
+        "status": "candidate",
+        "scope": "translation",
+        "claim": "厳密固定背景版R3を必須にする場合はR4も候補に留める。"
+      }
+    }
+  }
+}
