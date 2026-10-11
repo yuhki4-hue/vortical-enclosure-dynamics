@@ -32,9 +32,18 @@ for item in provenance['imports']:
         path = ROOT / item['destination']
         check(hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256'], 'Import drift: ' + str(path))
     for member, expected in item.get('members', {}).items():
-        if member in ('figure1/index.html', 'figure2b/index.html', 'figure3/index.html', 'figure2b/data.js'):
+        if member in ('figure1/index.html', 'figure2b/index.html', 'figure3/index.html', 'figure2b/data.js', 'figure2b/README.md', 'figure2b/AUDIT.md'):
             continue
         check(hashlib.sha256((ROOT / member).read_bytes()).hexdigest() == expected, 'Explorer source drift: ' + member)
+
+historic_header_separator = '\n---\n\n'
+for member in ('figure2b/README.md', 'figure2b/AUDIT.md'):
+    expected = next(item['members'][member] for item in provenance['imports'] if member in item.get('members', {}))
+    current = (ROOT / member).read_text()
+    check(historic_header_separator in current, 'Missing current-integration header: ' + member)
+    historic_body = current.split(historic_header_separator, 1)[1] if historic_header_separator in current else ''
+    check(hashlib.sha256(historic_body.encode()).hexdigest() == expected, 'Historic body drift: ' + member)
+    check('../docs/information-map.md' in current.split(historic_header_separator, 1)[0], 'Missing current integration link: ' + member)
 
 audit = (ROOT / 'audits/information-map/figure-2-v4-audit.html').read_text()
 embedded = re.findall(r'<svg\b[\s\S]*?</svg>', audit)
@@ -48,6 +57,20 @@ raw_data = (ROOT / 'figure2b/data.js').read_text()
 data = json.loads(raw_data.removeprefix('window.FIGURE_DATA = ').strip().removesuffix(';'))
 chem = json.loads((ROOT / 'audits/information-map/chemotaxis-case-audit.json').read_text())
 check(data['auditSources']['chemotaxis'] == chem, '3D chemotaxis audit differs from source')
+integration_text = (ROOT / 'figure2b/integration-metadata.js').read_text()
+integration_match = re.search(r'window\.FIGURE2B_INTEGRATION_METADATA = (\{[\s\S]*?\});', integration_text)
+integration = json.loads(integration_match.group(1)) if integration_match else {}
+chem_integration = integration.get('chemotaxis', {})
+provenance_scope = chem_integration.get('provenance', {}).get('scope')
+current_integration = chem_integration.get('currentIntegration', {})
+check(provenance_scope == chem['scope'], 'Historical chemotaxis scope not preserved under provenance')
+check(current_integration.get('status') == 'embedded', 'Current chemotaxis integration status')
+check(current_integration.get('embeddedClaimCount') == len(chem['claims']) == 41, 'Current embedded chemotaxis claim count')
+check(current_integration.get('sourceClaimCount') == len(chem['claims']), 'Current source chemotaxis claim count')
+check(current_integration.get('checker') == 'scripts/check_information_map.py', 'Current integration checker locator')
+check(current_integration.get('theoryValidation') is False, 'Current integration must not claim theory validation')
+check(current_integration.get('browserValidation') is False, 'Current integration must not claim browser validation')
+check('delete chemotaxis.scope;' in integration_text, 'Historical scope must not remain a current runtime integration field')
 dna = json.loads((ROOT / 'audits/information-map/dna-case-audit.json').read_text())
 check(data['auditSources']['dna'] == dna, 'Derived DNA audit differs from embedded source')
 claims = next(x for x in data['elements'] if x['id'] == 'ex-bacteria')['auditClaims']
@@ -80,7 +103,7 @@ for css in [ROOT / 'assets/information-map/series.css', ROOT / 'figure2b/style.c
     for ref in re.findall(r'url\(["\']?([^\)"\']+)', css.read_text()):
         if not urlsplit(ref).scheme:
             check((css.parent / ref).is_file(), 'Missing CSS resource: ' + ref)
-print(f'Checked {len(pages)} HTML pages, {local_count} local references, source hashes, embedded SVGs and 41 chemotaxis claims.')
+print(f'Checked {len(pages)} HTML pages, {local_count} local references, source hashes, embedded SVGs, integration metadata and 41 chemotaxis claims.')
 if errors:
     print('\n'.join(errors))
     sys.exit(1)

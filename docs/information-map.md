@@ -17,7 +17,7 @@ GitHub Pages base path: `https://yuhki4-hue.github.io/vortical-enclosure-dynamic
 | `/figure2b/audit/` | 具体的な因果・生成・循環・維持を読む2Bの2D正本 |
 | `/figure3/#view=overview` | 身体・維持・感受・作用・履歴・UI・社会制度の境界の重なり |
 
-同じシリーズの各ページに相互ナビと前後移動を設けています。2Aの矢印は成立条件・追加条件・監査関係、2Bの矢印は具体的な因果・生成・維持・更新です。3Dの座標・距離・体積・近接は理論上の距離・階層・含意ではありません。
+同じシリーズの各ページに相互ナビと前後移動を設けています。2Aの実線矢印は `前提＋追加条件⇒関係概念` のみで、時間順序・因果的産出ではありません。参照タグ・参照表は矢印ではありません。2Bの矢印は具体的な因果・生成・維持・更新です。3Dの座標・距離・体積・近接は理論上の距離・階層・含意ではありません。
 
 ## 変更前の構造 / Pages
 
@@ -35,8 +35,8 @@ GitHub Pages base path: `https://yuhki4-hue.github.io/vortical-enclosure-dynamic
 | 著者の統合監査 | `audits/information-map/figure-2-v4-audit.html` | 最新 `figure-2-v4-audit-2.html` をbyte-exact保存。DNA＋走化性を含む独立監査本文 |
 | 著者の走化性監査 | 同ディレクトリの `chemotaxis-case-audit.html/json` | byte-exact保存。統合HTMLからの既存relative linksも維持 |
 | DNA監査の抽出JSON | 同ディレクトリの `dna-case-audit.json` | 最新3D `data.js` の `auditSources.dna` からの構造保持抽出。新規監査・新規承認ではなく、元のproposalOnly等も保持 |
-| 著者提供の図1・図3完成HTML | `figure1/index.html`, `figure3/index.html` | ZIPの完成図・文章・操作スクリプトを維持し、共通CSS・シリーズナビだけ追加 |
-| 3Dのデータ・実装 | `figure2b/data.js`, `app.js`, `mobile.*`, `style.css`, `vendor/` | 最新ZIP。`data.js`は`twoDConditionsUrl`を`../figure2a/`に接続する変更だけ。app/mobile/科学的データは不変 |
+| 著者提供の図1・図3完成HTML | `figure1/index.html`, `figure3/index.html` | historical baselineでの記録：ZIPの完成図・文章・操作スクリプトを維持し、共通CSS・シリーズナビだけ追加。Track A後のinline script変更は後述のcurrent verificationを参照 |
+| 3Dのデータ・実装 | `figure2b/data.js`, `integration-metadata.js`, `app.js`, `mobile.*`, `style.css`, `vendor/` | 最新ZIPのsource payloadを保持。`integration-metadata.js`は履歴scopeをprovenanceへ分離し、現在の埋込み・checker契約を別fieldで付加。app/mobile/科学的claimは不変 |
 | ローカル管理する表示コード | `information-map/`, `figure2a/`, `figure2b/audit/`, `assets/information-map/series.css`, `svg-viewer.js` | シリーズ入口・表示用wrapper。科学的図を生成・書き換えるコードではない |
 | 取り込み元台帳 | `sources/information-map/imports.json` | ZIP・各member・提供単独ファイルのSHA-256。編集可能な科学的生成元コードを装わない |
 
@@ -51,22 +51,26 @@ GitHub Pages base path: `https://yuhki4-hue.github.io/vortical-enclosure-dynamic
 - 2A：2400×5860、SHA-256 `3226e6e74047f4784d8c119469f63ba3a704d19ef559aaa046d6361f667ee26c`
 - 2B：2400×6940、SHA-256 `53b9c67eda41c7790b0dc8fbccc5577c436c3597ba0efe3afc114d323a23af26`
 - 統合監査HTML内の2図は、`chemA-` / `chemB-` のID衝突防止接頭辞を正規化したXML treeが単独SVGと一致。公開ファイル自体の正規化・再保存はしていません。
-- 3D `auditSources.chemotaxis` は提供JSONと構造的に完全一致。表示用41 claimsのrelation/status/evidenceKind/Σ/留保も一致します。これはデータ整合性確認であり、理論内容を独立に再監査したという意味ではありません。
+- 3Dの提供source payload `auditSources.chemotaxis` は提供JSONと構造的に完全一致。runtimeでは歴史的な `scope` 文を `provenance.scope` に保存し、別の `currentIntegration` fieldへ41 claims埋込みとchecker契約を記録します。表示用41 claimsのrelation/status/evidenceKind/Σ/留保の整合確認は、理論内容の独立再監査でもbrowser表示passでもありません。
 - R/W/K/F/C/N/Mを梯子にせず、Shannon/K&Wは横断解析、M3/N3/Fo/Fsは独立監査。UIは感受―作用―環境帰還の関係構造であり、境界は単一スイッチではないという注意を入口・図2の案内に追加しました。
 
 ## ローカル確認と再確認手順
 
-リポジトリrootで `python3 scripts/check_information_map.py` を実行すると、追加HTMLのlocal links/anchors、byte-exact import、既存Explorerコード、SVGの内容一致、監査JSONの整合をネットワークなしで確認できます。
+リポジトリrootで `python3 scripts/check_information_map.py` を実行すると、追加HTMLのlocal links/anchors、byte-exact import、既存Explorerコード、SVGの内容一致、監査JSONと履歴／現在integration metadataの整合をネットワークなしで確認できます。
 
 ブラウザ確認はプロジェクトのbase pathを含めて行います。例：リポジトリの親で `python3 -m http.server 8765 --bind 127.0.0.1` を起動し、`http://127.0.0.1:8765/vortical-enclosure-dynamics/information-map/` を開く。検証後はそのサーバーを終了してください。
 
-今回のローカル検証結果：
+### Historical baseline evidence — 旧統合作業の検証・変更範囲
 
-- `check_information_map.py`：8 HTML、285 local references、原本SHA、SVG一致、走化性41 claimsを確認してPASS。
+以下の既存記録は履歴証拠として保持します。headless Chromeの検証、提供ZIPとのinline script一致、README 2本とroot `index.html`だけという変更範囲は、Track A前の旧統合作業に対する記述です。これらをTrack A修正後の検証結果として引き継ぎません。この一覧には後から現行checker件数・integration metadataの記述も混在していたため、現行版に対応する検証結果は次のcurrent verificationへ明示します。
+
+旧記録（本文保持）：
+
+- `check_information_map.py`：8 HTML、286 local references、原本SHA、SVG一致、履歴／現在integration metadata、走化性41 claimsを確認してPASS。
 - 独立一時プロファイルのheadless Chrome：6経路 × 320/390/1440px、計18表示。ページ全体の横はみ出しなし、JavaScript例外なし、当該ページのHTTP resource errorsなし。
 - 図1/3：`#view=overview`の初期表示、局所断面への切替、共通ナビ。元のinline SVG/script/styleはすべて提供ZIPと一致。
 - 図2A/2B正本：SVG load、拡大で枠内horizontal scroll、幅合わせへの復帰。図2Bの3D：canvas描画、DNA preset、図2Aへの説明リンク。
-- 3Dの`app.js`、`mobile.js/css`、元`style.css`、vendorは提供ZIPとSHA一致。科学的`data.js`変更はなし、`twoDConditionsUrl`接続のみ。
+- 3Dの`app.js`、`mobile.js/css`、元`style.css`、vendorは提供ZIPとSHA一致。科学的claim payloadは変更せず、`integration-metadata.js`で履歴provenanceと現在integrationを分離。
 - 作業前の全ファイルSHAとの比較：既存ファイルの変更はREADME 2本とroot `index.html`の追記のみ。削除・移動なし。既存の原稿・図・監査記録は不変。
 - `git diff --check`：PASS。スクリーンショットと実行ログはrepo外の一時検証ディレクトリへ保存し、公開物には混ぜていない。
 
@@ -74,7 +78,19 @@ GitHub Pages base path: `https://yuhki4-hue.github.io/vortical-enclosure-dynamic
 
 日本語は各提供図の埋め込みフォント／同梱フォントを維持し、新しいwrapperにはsystem-ui、Hiragino、Yu Gothic、Meiryo、sans-serifのfallbackを用います。ローカルChromeのモバイル幅テストは実機iOS/Safari・ATの保証ではありません。
 
-## commit / 公開前の確認
+### Current verification — Track A / RV-01 記録 v0.2（2026-10-11）
+
+本節はRV-01の限定修正を記録する新しいversionです。既存review結果および `information_figures_revision_implementation_v0.1.md` は上書きせず、その実施報告と今回のchecker再実行を区別して記録します。今回のRV-01編集対象は本書 `docs/information-map.md` のみです。
+
+- Track A全体の差分は `baseline-repo` 比で既存10ファイル変更＋新規2ファイルです。新規は `figure2b/integration-metadata.js` と `information_figures_revision_implementation_v0.1.md` です。上記の旧変更範囲は現行差分を表しません。
+- Figure 1/3のinline scriptはTrack Aで変更されています。Figure 1の `Step` → `View` と読解断面ガード、Figure 3のB6/E. coli文言置換と `UI・INT・CON比較` presetが対象です。旧記録の「元のinline SVG/script/styleはすべて提供ZIPと一致」を現行inline scriptへ適用しません。
+- `python3 scripts/check_information_map.py` をRV-01修正後に再実行し、exit 0 / PASS。8 HTML、286 local references、source hashes、embedded SVGs、integration metadata、41 chemotaxis claimsを確認しました。この静的PASSは現行版に対応します。
+- desktop SafariについてはTrack Aの実施報告のみがあります。画像は保存されておらず、保存画像による独立画素確認はありません。報告内のcapture hashを独立した画素検証の代わりにはしません。
+- real iOS、mobile全state、WebGL全操作、deploymentは未検証です。過去のChrome結果や現行checkerの静的PASSから、これらの検証完了を導きません。
+
+## Historical baseline — commit / 公開前の確認
+
+以下も旧統合作業の確認項目として保持します。root README/indexの部分選択に関する記述は当時の変更範囲に対応し、Track A / RV-01の変更指示ではありません。
 
 1. 大量の既存未コミット変更を今回の変更に混ぜないこと。root README/indexは今回の追記だけを部分選択すること。
 2. リモートとローカルの履歴差分を確認し、既存公開図の別更新を上書きしないこと。自動pull/rebaseはしていません。
