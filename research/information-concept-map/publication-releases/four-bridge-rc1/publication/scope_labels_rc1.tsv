@@ -1,0 +1,9 @@
+stable_id	target_id	source_id	scope	display_label	canonical_display_field	resolution_rule
+R0-COUPLING	EN-ICM-0054	R0	publication	Interaction	draft.publication_label	display name = display_label of (stable_id, scope); working_label never used for display
+R0-COUPLING	EN-ICM-0054	R0	reconstruction	causal coupling	draft.reconstruction_label	display name = display_label of (stable_id, scope); working_label never used for display
+FC-CAUSAL	EN-ICM-0019	FC	publication	Causal-role function	draft.publication_label	display name = display_label of (stable_id, scope); working_label never used for display
+FC-CAUSAL	EN-ICM-0019	FC	reconstruction	causal contribution to a specified capacity	draft.reconstruction_label	display name = display_label of (stable_id, scope); working_label never used for display
+QREL	EN-ICM-0053	M1	publication	Q-relative difference-making	draft.publication_label	display name = display_label of (stable_id, scope); working_label never used for display
+QREL	EN-ICM-0053	M1	reconstruction	Q-relative difference-making	draft.reconstruction_label	display name = display_label of (stable_id, scope); working_label never used for display
+C0-STABILIZATION	EN-ICM-0007	C0	publication	Passive stabilization	draft.publication_label	display name = display_label of (stable_id, scope); working_label never used for display
+C0-STABILIZATION	EN-ICM-0007	C0	reconstruction	passive stabilization	draft.reconstruction_label	display name = display_label of (stable_id, scope); working_label never used for display

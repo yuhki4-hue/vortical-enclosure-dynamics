@@ -1,0 +1,68 @@
+{
+ "report": "four_bridge_rc1_repository_integration_v0.1.md",
+ "human_decision": "H-FB-RC1-INTEGRATION-A",
+ "date": "2026-10-29",
+ "status": "NOT-DEPLOYED",
+ "canonical_effect": "NONE",
+ "git_commit": "none (not approved)",
+ "gate": {
+  "id": "FOUR-BRIDGE-RC1-REPOSITORY-INTEGRATION-VALIDATED",
+  "reported": false,
+  "reason": "RI-3 conditional: 8 transfer artifacts in publication-releases/_to_delete/ could not be deleted through the device bridge"
+ },
+ "repo": {
+  "branch": "main",
+  "head": "b856873205948b0df722fb8d8f2b2c1166f902ab",
+  "pre_status_lines": 774,
+  "pre_modified": 289,
+  "pre_untracked": 485,
+  "post_added_untracked": 53,
+  "pre_lines_changed": 0,
+  "tracked_diff_files_before_after": [
+   289,
+   289
+  ]
+ },
+ "rc1": {
+  "zip_sha256": "b9627753ffc529e9ad790183fab50b25eb3dda2f3023a454937310c0cf36f4db",
+  "manifest_sha256": "c4e8622b912a0cce142ab125b71ac64ad097fe06a22178afd76acdade2ffe4cd",
+  "manifest_entries": 36,
+  "matched": 36
+ },
+ "ri": {
+  "RI-1": "PASS",
+  "RI-2": "PASS",
+  "RI-3": "CONDITIONAL",
+  "RI-4": "PASS",
+  "RI-5": "PASS",
+  "RI-6": "PASS",
+  "RI-7": "PASS",
+  "RI-8": "PASS",
+  "RI-9": "PASS",
+  "RI-10": "PASS",
+  "RI-11": "PASS",
+  "RI-12": "PASS"
+ },
+ "display": {
+  "pre_integration_rc1": "four-bridge-rc1/validation/render_results_rc1.json: 13 PASS, 1 NOT-TESTED, 1 RESIDUAL-RISK",
+  "post_integration_rc1": "integration/post_integration_render_results_rc1.json: 13 PASS, 1 NOT-TESTED, 1 RESIDUAL-RISK",
+  "navigation": "integration/nav_render_results.json: N-1..N-6 PASS, N-7 NOT-TESTED",
+  "engine": "Chromium 141.0.7390.37 headless, cloud workspace, byte-identical copy"
+ },
+ "not_tested": [
+  "Safari macOS",
+  "Safari iOS",
+  "iOS real device",
+  "touch-selection copy"
+ ],
+ "to_delete": [
+  "_to_delete/ri_transfer.zip",
+  "_to_delete/screenshots_c2pa_reencoded/desktop_details_M1.png",
+  "_to_delete/screenshots_c2pa_reencoded/desktop_publication.png",
+  "_to_delete/screenshots_c2pa_reencoded/desktop_reconstruction.png",
+  "_to_delete/screenshots_c2pa_reencoded/mobile_iphone_initial.png",
+  "_to_delete/screenshots_c2pa_reencoded/mobile_iphone_sheet.png",
+  "_to_delete/screenshots_c2pa_reencoded/mobile_pixel_initial.png",
+  "_to_delete/screenshots_c2pa_reencoded/mobile_pixel_sheet.png"
+ ]
+}

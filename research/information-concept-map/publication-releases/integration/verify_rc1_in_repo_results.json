@@ -1,0 +1,57 @@
+[
+ {
+  "check": "RI-1 RC1 hashes = manifest",
+  "result": "PASS",
+  "evidence": "36 manifest entries; files present 37 (36 + RELEASE_MANIFEST.tsv); mismatched=[]; unlisted=[]; RELEASE_MANIFEST.tsv sha256=c4e8622b912a0cce142ab125b71ac64ad097fe06a22178afd76acdade2ffe4cd"
+ },
+ {
+  "check": "RI-2 pre-existing files unchanged",
+  "result": "FAIL",
+  "evidence": "1874 pre-existing files; changed or missing=['.DS_Store', 'research/.DS_Store', 'research/information-concept-map/.DS_Store']"
+ },
+ {
+  "check": "RI-4 BR3-012 links exist",
+  "result": "PASS",
+  "evidence": "BR3-012 entry links resolved: ['../cross-linguistic-audit/br3-012-publication-prototype/index.html']"
+ },
+ {
+  "check": "RI-5 RC1 entry links exist",
+  "result": "PASS",
+  "evidence": "27 relative links in README.md + index.html; missing=[]"
+ },
+ {
+  "check": "RI-6 navigation links are not edges",
+  "result": "PASS",
+  "evidence": "edge-type vocabulary in navigation files=[]; disclaimer present=True; no edge file created or changed by integration (RC1 edges v0.6 = frozen)=True"
+ },
+ {
+  "check": "RI-7 publication / reconstruction kept apart (data)",
+  "result": "PASS",
+  "evidence": "reconstruction-only items never in publication scope=True; renderer filters audit items by scope=True; reconstruction-layer link rows marked=True (display check: integration/nav_render_check.js)"
+ },
+ {
+  "check": "RI-8 approved wording unchanged",
+  "result": "PASS",
+  "evidence": "labels, glosses, Japanese (vs repository figure2b/data.js), full and short notes consistent across frozen overlay, mandatory_notes_rc1.tsv and renderer data; approval status present; mismatches=[]"
+ },
+ {
+  "check": "RI-9 E2-001/E2-002 not asserted in publication",
+  "result": "PASS",
+  "evidence": "overlay: E2-001/E2-002 HIDDEN-LISTED + NOT-ASSERTED-IN-PUBLICATION; R0↔R1 comparison NOT-ASSERTED (display check in nav_render_check.js)"
+ },
+ {
+  "check": "RI-10 open items and NOT-TESTED kept",
+  "result": "PASS",
+  "evidence": "open items listed=True; NOT-TESTED kept=True; provenance open statuses=True"
+ },
+ {
+  "check": "RI-11 verification steps and dependencies documented",
+  "result": "PASS",
+  "evidence": "integration README + RC1 README name the scripts, Python 3, Playwright/Chromium, pdftotext, and the lineage packages needed for full data validation"
+ },
+ {
+  "check": "RI-12 not reported as published",
+  "result": "PASS",
+  "evidence": "status NOT-DEPLOYED shown; un-negated deployed/published statements=[]"
+ }
+]

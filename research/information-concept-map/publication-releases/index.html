@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publication Releases</title>
+<style>
+:root { --bg: #fbfaf7; --surface: #fff; --ink: #1d1f22; --muted: #5d636b; --line: #d9d6cf; --accent: #2f5d8a; --warn: #8a3b2f; --warn-bg: #f8ebe8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #15171a; --surface: #1d2024; --ink: #e8e6e1; --muted: #a3a8ae; --line: #3a3e44; --accent: #8db6dd; --warn: #e7a093; --warn-bg: #33211e; } }
+:root[data-theme="dark"] { --bg: #15171a; --surface: #1d2024; --ink: #e8e6e1; --muted: #a3a8ae; --line: #3a3e44; --accent: #8db6dd; --warn: #e7a093; --warn-bg: #33211e; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 "Inter", "Helvetica Neue", Arial, "Noto Sans CJK JP", sans-serif; }
+main { max-width: 960px; margin: 0 auto; padding: 28px 16px 48px; }
+h1 { font-size: 26px; margin: 0 0 6px; } h2 { font-size: 19px; margin: 28px 0 10px; }
+.status { display: inline-block; border: 1px solid var(--warn); color: var(--warn); background: var(--warn-bg); border-radius: 999px; padding: 2px 12px; font-size: 14px; font-weight: 600; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+a { color: var(--accent); }
+a.enter { display: inline-block; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 8px; text-decoration: none; min-height: 40px; }
+ul { padding-left: 18px; } li { margin: 4px 0; }
+.note { border-left: 3px solid var(--line); padding: 6px 12px; color: var(--muted); font-size: 14px; }
+@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } h1 { font-size: 22px; } }
+</style>
+</head>
+<body>
+<main>
+  <p class="status" data-testid="deploy-status">NOT-DEPLOYED</p>
+  <h1>Information Concept Map — publication releases</h1>
+  <p>Repository copies of English-presentation release candidates for review. Not published. Separate from the research canon in <code>../english-reconstruction/</code> and <code>../cross-linguistic-audit/</code>, which this directory does not change.</p>
+
+  <h2>Entry points</h2>
+  <div class="cards">
+    <section class="card" data-entry="rc1">
+      <h3>Four-Bridge RC1</h3>
+      <p>R0 / Interaction, Fc / Causal-role function, M1 / Q-relative difference-making, C0 / Passive stabilization, the shared intervention note, and the BR3-012 units (text only, unchanged). Publication and reconstruction layers are switchable. Frozen release candidate.</p>
+      <a class="enter" data-nav-link="rc1" href="four-bridge-rc1/renderer/index.html">Open Four-Bridge RC1</a>
+      <p style="margin-top:8px"><a data-nav-link="rc1-readme" href="four-bridge-rc1/README.md">README</a> · <a data-nav-link="rc1-limits" href="four-bridge-rc1/KNOWN_LIMITATIONS.md">Known limitations</a> · <a data-nav-link="rc1-manifest" href="four-bridge-rc1/RELEASE_MANIFEST.tsv">Release manifest</a></p>
+    </section>
+    <section class="card" data-entry="br3-012">
+      <h3>BR3-012 prototype (existing)</h3>
+      <p>R4, R4-SYS, R4-COMB and the BR3-012 graph (E2-005, E2-060; E2-004 hidden-listed). Prototype v0.1, unchanged. RC1 shows the BR3-012 units but does not redraw this graph.</p>
+      <a class="enter" data-nav-link="br3-012" href="../cross-linguistic-audit/br3-012-publication-prototype/index.html">Open BR3-012 prototype</a>
+      <p style="margin-top:8px"><a data-nav-link="br3-012-readme" href="../cross-linguistic-audit/br3-012-publication-prototype/README.md">README</a> · <a data-nav-link="br3-012-report" href="../cross-linguistic-audit/br3-012-publication-prototype/render_validation_report_v0.1.md">Render validation report</a></p>
+    </section>
+  </div>
+
+  <h2>Audit records and decision history</h2>
+  <ul>
+    <li><a data-nav-link="decisions-v014" href="four-bridge-rc1/frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv">Four-bridge decision log v0.14 (frozen copy)</a></li>
+    <li><a data-nav-link="decision-refs" href="four-bridge-rc1/publication/decision_refs_rc1.tsv">Decision IDs used by RC1</a></li>
+    <li><a data-nav-link="provenance" href="four-bridge-rc1/frozen-inputs/four_bridge_condition_provenance_v0.5.tsv">Condition provenance v0.5 (frozen copy)</a></li>
+    <li><a data-nav-link="pub-log-repo" href="../cross-linguistic-audit/publication_decision_log_v0.2.tsv">Publication decision log v0.2 (repository lineage, incl. BR3-012)</a></li>
+    <li><a data-nav-link="ledger" href="../cross-linguistic-audit/cross_linguistic_reconstruction_ledger_v0.3.tsv">Cross-linguistic reconstruction ledger v0.3 (repository lineage)</a></li>
+  </ul>
+
+  <h2>Open items and untested environments</h2>
+  <p><a data-nav-link="limits" href="four-bridge-rc1/KNOWN_LIMITATIONS.md">Known limitations</a>. Theoretical items remain open. Safari (macOS, iOS) and iOS real devices: <strong>NOT-TESTED</strong>.</p>
+
+  <p class="note" data-testid="nav-disclaimer">Links on this page are file navigation only. They do not add, change or imply any conceptual edge, prerequisite, identity or derivation between the items they connect.</p>
+  <p class="note"><a data-nav-link="report" href="integration/four_bridge_rc1_repository_integration_v0.1.md">Integration report</a> · <a data-nav-link="readme" href="README.md">README</a></p>
+</main>
+</body>
+</html>

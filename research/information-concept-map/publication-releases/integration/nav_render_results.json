@@ -1,0 +1,56 @@
+[
+ {
+  "id": "ENV",
+  "channel": "browser",
+  "result": "INFO",
+  "evidence": "Chromium 141.0.7390.37 headless; pages opened from the repository copy via file://"
+ },
+ {
+  "id": "N-1 local HTML: navigation page",
+  "channel": "Desktop Chromium (file://)",
+  "result": "PASS",
+  "evidence": "status=NOT-DEPLOYED; 15 navigation links, missing targets=[]; disclaimer shown"
+ },
+ {
+  "id": "N-2 links and browser back",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "RC1 link → “Four-Bridge Publication RC1”, back → navigation=true; BR3-012 link → “BR3-012 Publication Prototype”, back=true, forward=true"
+ },
+ {
+  "id": "N-3 document links open",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "rc1-readme:true (opened) rc1-limits:true (opened) br3-012-readme:true (opened) decisions-v014:true (download (Chromium treats .tsv as a file download)) ledger:true (download (Chromium treats .tsv as a file download)) report:true (opened)"
+ },
+ {
+  "id": "N-4 page errors (navigation)",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "none"
+ },
+ {
+  "id": "N-5 layout by screen width",
+  "channel": "Desktop Chromium viewport 1366/1024/761/760/600/375",
+  "result": "PASS",
+  "evidence": "1366px: nav cols=2, units cols=2, graph shown, overflow=0; 1024px: nav cols=2, units cols=2, graph shown, overflow=0; 761px: nav cols=2, units cols=2, graph shown, overflow=0; 760px: nav cols=1, units cols=1, graph behind toggle, overflow=0; 600px: nav cols=1, units cols=1, graph behind toggle, overflow=0; 375px: nav cols=1, units cols=1, graph behind toggle, overflow=0"
+ },
+ {
+  "id": "N-6 mobile: navigation → RC1 → back",
+  "channel": "Mobile Chromium emulation: Pixel 7",
+  "result": "PASS",
+  "evidence": "nav overflow=0px; RC1 short notes inline and exact=true; graph → bottom sheet full note exact=true; back to navigation=true"
+ },
+ {
+  "id": "N-6 mobile: navigation → RC1 → back",
+  "channel": "Mobile Chromium emulation: iPhone 13 profile (Chromium engine, not Safari)",
+  "result": "PASS",
+  "evidence": "nav overflow=0px; RC1 short notes inline and exact=true; graph → bottom sheet full note exact=true; back to navigation=true"
+ },
+ {
+  "id": "N-7 Safari / iOS real device",
+  "channel": "Safari (macOS/iOS), iOS device",
+  "result": "NOT-TESTED",
+  "evidence": "not available in this environment"
+ }
+]
