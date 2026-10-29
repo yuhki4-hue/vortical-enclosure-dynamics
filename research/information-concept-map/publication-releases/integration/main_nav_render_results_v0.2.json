@@ -1,0 +1,56 @@
+[
+ {
+  "id": "ENV",
+  "channel": "browser",
+  "result": "INFO",
+  "evidence": "Chromium 141.0.7390.37 headless; checkout of the PR branch via file://"
+ },
+ {
+  "id": "MV-1 navigation v0.2 page",
+  "channel": "Desktop Chromium (file://)",
+  "result": "PASS",
+  "evidence": "status=NOT-DEPLOYED; 12 links, missing=[]; links into cross-linguistic-audit=0; local-only items=br3-012,pub-log-repo,ledger,br3-012-report"
+ },
+ {
+  "id": "MV-2 links and browser back",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "RC1 → “Four-Bridge Publication RC1”, back=true, forward=true; v0.1 navigation opens=true"
+ },
+ {
+  "id": "MV-3 document links open",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "rc1-readme:true rc1-limits:true rc1-manifest:true decisions-v014:true decision-refs:true provenance:true limits:true report:true main-nav-record:true readme:true (.tsv opens as a download)"
+ },
+ {
+  "id": "MV-4 page errors",
+  "channel": "Desktop Chromium",
+  "result": "PASS",
+  "evidence": "none"
+ },
+ {
+  "id": "MV-5 layout by screen width",
+  "channel": "Desktop Chromium viewport 1366/1024/761/760/600/375",
+  "result": "PASS",
+  "evidence": "1366px: cols=2, overflow=0; 1024px: cols=2, overflow=0; 761px: cols=2, overflow=0; 760px: cols=1, overflow=0; 600px: cols=1, overflow=0; 375px: cols=1, overflow=0"
+ },
+ {
+  "id": "MV-6 mobile: navigation v0.2 → RC1 → back",
+  "channel": "Mobile Chromium emulation: Pixel 7",
+  "result": "PASS",
+  "evidence": "nav overflow=0px; short notes exact=true; bottom sheet M1 full note exact=true; back=true"
+ },
+ {
+  "id": "MV-6 mobile: navigation v0.2 → RC1 → back",
+  "channel": "Mobile Chromium emulation: iPhone 13 profile (Chromium engine, not Safari)",
+  "result": "PASS",
+  "evidence": "nav overflow=0px; short notes exact=true; bottom sheet M1 full note exact=true; back=true"
+ },
+ {
+  "id": "MV-7 Safari / iOS real device",
+  "channel": "Safari (macOS/iOS), iOS device",
+  "result": "NOT-TESTED",
+  "evidence": "not available in this environment"
+ }
+]
