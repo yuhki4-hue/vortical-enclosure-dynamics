@@ -1,0 +1,74 @@
+[
+ {
+  "check": "SF-1 Japanese original",
+  "string_check": "PASS",
+  "semantic_check": "N/A (exact identity suffices)",
+  "basis": "4 units: description and label = figure2b/data.js in overlay v0.7, publication data and renderer data; BR3-012: R4 text = data.js R4; R4-SYS/R4-COMB = R4 text + the existing provenance suffix; mismatches=[]"
+ },
+ {
+  "check": "SF-2 approved labels and glosses",
+  "string_check": "PASS",
+  "semantic_check": "N/A",
+  "basis": "compared with the decision-log texts (label/gloss decisions; BR3-012 wording A); mismatches=[]"
+ },
+ {
+  "check": "SF-3 V4B-12 approved notes",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (each note’s content checked against its approving decision in V4B-12 records v0.10–v0.14; no new reading)",
+  "basis": "5 units × (overlay v0.7, mandatory_notes_rc1.tsv, renderer data) = approved texts (R0: overlay v0.4; Fc: v0.5; M1: v0.4 full + log short; C0 and shared: v0.6 = text quoted in the log); mismatches=[]"
+ },
+ {
+  "check": "SF-4 M1 coordinates and formula",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (coordinates remain constraints of the relation: “a change in any of these is a different claim”)",
+  "basis": "formula in overlay, Japanese text and renderer; coordinates in full/short notes and in publication constitutive conditions: [True, True, True, True, True, True]; same render unit verified by the render check: True"
+ },
+ {
+  "check": "SF-5 no back-projection of intervention",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (intervention kept as source-map audit question / assessment route; D-H4 and conditional proposals reconstruction-only)",
+  "basis": "CC free of intervention=True; R0 note=True; Fc note=True; M1 short=True; shared note scope=True; reconstruction items scoped=True"
+ },
+ {
+  "check": "SF-6 C0 pathway conditions not required",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (absence, inseparability and non-identification are each excluded as requirements; O-027-3 open)",
+  "basis": "CC=True; note=True; AC-C0-11 not effective=True; AC-C0-02..04 audit questions=True"
+ },
+ {
+  "check": "SF-7 R0↔R1 not asserted in publication",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT",
+  "basis": "E2-001/002 hidden + not asserted=True; R0↔R1 link not asserted=True; R0 note neither establishes nor denies=True; render: not drawn in publication layer=True"
+ },
+ {
+  "check": "SF-8 separation of reconstruction / audit / publication conditions",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT",
+  "basis": "no TARGET-origin item in publication scope; no audit question promoted; reconstruction_condition_refs all RECONSTRUCTION-ONLY; constitutive and reconstruction columns unchanged v0.7→v0.8; violations=[]"
+ },
+ {
+  "check": "SF-9 provenance = display state",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (AC-R0-06 current reconstruction label; AC-FC-06 componenthood not required — both match the notes)",
+  "basis": "draft v0.8 audit_conditions item texts = provenance v0.5; renderer items = provenance v0.5; overlay approval statuses = V4B-12-AUTHOR-APPROVED for all 5 notes: True; mismatches=[]"
+ },
+ {
+  "check": "RC1-01 E2-001 display name",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT (display only; HR-IMPL-5-B/6-B)",
+  "basis": "only E2-001 changed=True; logic fields = v0.5 = v0.4=True; display = reconstruction label=True; resolved via stable ID=True; history kept=True; all rows kept=True"
+ },
+ {
+  "check": "RC1-02 draft audit snapshot",
+  "string_check": "PASS",
+  "semantic_check": "ANALYST-CONSISTENT",
+  "basis": "only audit_conditions of EN-ICM-0054/0019=True; old cells kept as history=True; no promotion (CC/reconstruction unchanged)=True"
+ },
+ {
+  "check": "SF-10 existing decisions, canonical files and earlier versions unchanged",
+  "string_check": "PASS",
+  "semantic_check": "N/A",
+  "basis": "{'frozen copies byte-identical': [], 'four_bridge_hr_impl_v0.8': [], 'four_bridge_hr_impl_v0.10': [], 'four_bridge_hr_impl_v0.11': [], 'four_bridge_hr_impl_v0.12': [], 'four_bridge_hr_impl_v0.13': [], 'four_bridge_hr_impl_v0.14': [], 'v0.7 package': [], 'staged repo copies = Mac SHA-256': [], 'BR3-012 overlay rows = repo overlay v0.1': [], 'BR3-012 decisions = repo log v0.1': []}; v0.10 working-copy PNGs excluded (pixel-identical re-encoding, reported in v0.11 N-3); Mac repository was not written in RC1"
+ }
+]

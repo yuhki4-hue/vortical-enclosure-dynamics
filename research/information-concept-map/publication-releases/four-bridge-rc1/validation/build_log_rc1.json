@@ -1,0 +1,92 @@
+{
+ "edges_display_changes": [
+  [
+   "E2-001",
+   "target"
+  ]
+ ],
+ "draft_audit_snapshot_changes": [
+  [
+   "EN-ICM-0019",
+   "AC-FC-06"
+  ],
+  [
+   "EN-ICM-0054",
+   "AC-R0-06"
+  ]
+ ],
+ "inputs": {
+  "overlay": {
+   "path": "/mnt/user-data/outputs/four_bridge_hr_impl_v0.14/english_publication_overlay_v0.7.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14 (container outputs)",
+   "version": "overlay v0.7",
+   "sha256": "c9acfb9c9d0f583f2f3658d2c45b6a3fe69fe122398e2f524a67533ea19e5683"
+  },
+  "provenance": {
+   "path": "/mnt/user-data/outputs/four_bridge_hr_impl_v0.14/four_bridge_condition_provenance_v0.5.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14",
+   "version": "provenance v0.5",
+   "sha256": "1775fba0d64eefc49f0450b270f94d8d1ce07db04fb95deec7e203b0fc0aa4ca"
+  },
+  "decisions": {
+   "path": "/mnt/user-data/outputs/four_bridge_hr_impl_v0.14/four_bridge_hr_impl_v0.14_decisions.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14",
+   "version": "decision log v0.14",
+   "sha256": "77a856488ab957efb22ddec89f96b438648233cb931b4d54edf36cc6a6183d46"
+  },
+  "draft": {
+   "path": "/tmp/claude-0/-home-claude/80178cff-6b68-5cbc-bfd3-a8b935af46fb/scratchpad/v07/english_data_draft_v0.7.tsv",
+   "origin": "ZIP four_bridge_hr_impl_v0.7.zip (user-supplied)",
+   "version": "draft v0.7",
+   "sha256": "645188f1956f97216ccf53c502e6df9536e05efb778ca5f85be7aae45a25be13"
+  },
+  "edges": {
+   "path": "/tmp/claude-0/-home-claude/80178cff-6b68-5cbc-bfd3-a8b935af46fb/scratchpad/v07/english_data_edges_v0.5.tsv",
+   "origin": "ZIP four_bridge_hr_impl_v0.7.zip (user-supplied)",
+   "version": "edges v0.5",
+   "sha256": "d6868f7a90cb85bf93427c4aef2c26df964e46dbb2b331d48f34652414efbd2d"
+  },
+  "scope_labels": {
+   "path": "/mnt/user-data/outputs/four_bridge_hr_impl_v0.8/four_bridge_scope_labels_v0.3.tsv",
+   "origin": "package four_bridge_hr_impl_v0.8",
+   "version": "scope labels v0.3",
+   "sha256": "e868e404929e7b29e5db8ef4355d2068875e1916832c880d8e19cf1e9aaa483b"
+  },
+  "label_schema_note": {
+   "path": "/mnt/user-data/outputs/four_bridge_hr_impl_v0.8/four_bridge_label_schema_note_v0.1.md",
+   "origin": "package four_bridge_hr_impl_v0.8",
+   "version": "label schema note v0.1",
+   "sha256": "4ecebf53de81fd1a0535b599c74b0ca7558426c8856aeb16e72546d2a723e022"
+  },
+  "figure2b": {
+   "path": "/mnt/user-data/uploads/isolated-repo/figure2b/data.js",
+   "origin": "Mac repository figure2b/data.js (staged copy)",
+   "version": "data.js 4.2-patchy-boundaries",
+   "sha256": "734d15119fa1c7f4f1e46d776d57e29f7fccfdd9a2b77a8ede2f1323d45d34a7"
+  },
+  "br3_012_overlay_repo": {
+   "path": "/mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/english_publication_overlay_v0.1.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "overlay v0.1 (BR3-012 publication rows)",
+   "sha256": "97d751047fdf9f6498c6948e25fa99fdce1c33eae666169d0306f48d87b37f90"
+  },
+  "edges_v04_repo": {
+   "path": "/mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/english_data_edges_v0.4.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "edges v0.4",
+   "sha256": "ae2f25eb568334da1c340c8eaee172e9bb8b31122fb030365b480749601503f6"
+  },
+  "registry_repo": {
+   "path": "/mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/edge_type_registry_v0.2.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "edge type registry v0.2",
+   "sha256": "883c5b60753cbc269ea7a4c965eb83d3aaa4a28099ef2a4c9cf791d0dfab2b50"
+  },
+  "pub_decision_log_repo": {
+   "path": "/mnt/user-data/uploads/isolated-repo/research/information-concept-map/cross-linguistic-audit/publication_decision_log_v0.1.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "publication decision log v0.1 (BR3-012 decisions)",
+   "sha256": "b8a1fb428fc600a0682ddc065cbfc75b82634b279b1fa3228347c67d504149f1"
+  }
+ }
+}

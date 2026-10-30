@@ -1,0 +1,42 @@
+[
+ {
+  "check": "M-1 all relative links in navigation v0.2 resolve on main",
+  "result": "PASS",
+  "evidence": "24 links; missing=[]"
+ },
+ {
+  "check": "M-2 RC1 entry link",
+  "result": "PASS",
+  "evidence": "four-bridge-rc1/renderer/index.html"
+ },
+ {
+  "check": "M-3 BR3-012 named as local-only, not linked",
+  "result": "PASS",
+  "evidence": "local path stated=True; no link into cross-linguistic-audit=True"
+ },
+ {
+  "check": "M-4 navigation is not an edge",
+  "result": "PASS",
+  "evidence": "edge-type terms found=[]; disclaimer in both files=True"
+ },
+ {
+  "check": "M-5 NOT-DEPLOYED, not reported as published",
+  "result": "PASS",
+  "evidence": "un-negated statements=[]"
+ },
+ {
+  "check": "M-6 RC1 = frozen manifest",
+  "result": "PASS",
+  "evidence": "36 entries; mismatched=[]"
+ },
+ {
+  "check": "M-7 source authority figure2b/data.js present and as recorded",
+  "result": "PASS",
+  "evidence": "sha256=734d15119fa1c7f4f1e46d776d57e29f7fccfdd9a2b77a8ede2f1323d45d34a7"
+ },
+ {
+  "check": "M-8 navigation v0.1 kept and pointed to, not altered",
+  "result": "PASS",
+  "evidence": "v0.2 links to v0.1: ['README.md', 'index.html'] (v0.1 file content is checked by git diff: no M lines)"
+ }
+]

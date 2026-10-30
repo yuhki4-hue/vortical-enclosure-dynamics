@@ -1,0 +1,78 @@
+{
+ "record": "four_bridge_rc1_ri3_final_verification_v0.2.md",
+ "follows": [
+  "four_bridge_rc1_repository_integration_v0.1.md",
+  "four_bridge_rc1_ri3_final_verification_v0.1.md"
+ ],
+ "human_decision": "H-FB-RC1-INTEGRATION-A",
+ "date": "2026-10-29",
+ "status": "NOT-DEPLOYED",
+ "canonical_effect": "NONE",
+ "git_commit": "none",
+ "checks": {
+  "to_delete_absent": "PASS",
+  "pre_existing_changes_kept": "PASS",
+  "new_files_in_scope": "PASS",
+  "rc1_manifest_36": "PASS",
+  "nav_links": "PASS",
+  "RI-3": "PASS"
+ },
+ "status_lines": {
+  "pre": 774,
+  "now": 822,
+  "pre_lines_removed": 0,
+  "added": 48,
+  "added_out_of_scope": 0
+ },
+ "head": "b856873205948b0df722fb8d8f2b2c1166f902ab",
+ "ri2": {
+  "unscoped": "FAIL: .DS_Store, research/.DS_Store, research/information-concept-map/.DS_Store (Finder, 21:00 JST, gitignored)",
+  "scoped": "PASS: 1871/1871 non-.DS_Store unchanged",
+  "scoping_basis": "user statement 2026-10-29: 外しても問題なさそうだが気にはなるね",
+  "new_finder_file": "publication-releases/.DS_Store (gitignored)"
+ },
+ "ri": {
+  "RI-1": "PASS",
+  "RI-2": "PASS (scoped)",
+  "RI-3": "PASS",
+  "RI-4": "PASS",
+  "RI-5": "PASS",
+  "RI-6": "PASS",
+  "RI-7": "PASS",
+  "RI-8": "PASS",
+  "RI-9": "PASS",
+  "RI-10": "PASS",
+  "RI-11": "PASS",
+  "RI-12": "PASS"
+ },
+ "gate": {
+  "id": "FOUR-BRIDGE-RC1-REPOSITORY-INTEGRATION-VALIDATED",
+  "reported": true,
+  "not": [
+   "git commit",
+   "deployment",
+   "canon version",
+   "theoretical settlement"
+  ]
+ },
+ "not_tested": [
+  "Safari macOS",
+  "Safari iOS",
+  "iOS real device",
+  "touch-selection copy"
+ ],
+ "history": [
+  {
+   "record": "four_bridge_rc1_repository_integration_v0.1.md",
+   "RI-3": "CONDITIONAL"
+  },
+  {
+   "record": "four_bridge_rc1_ri3_final_verification_v0.1.md",
+   "RI-3": "FAIL"
+  },
+  {
+   "record": "four_bridge_rc1_ri3_final_verification_v0.2.md",
+   "RI-3": "PASS"
+  }
+ ]
+}

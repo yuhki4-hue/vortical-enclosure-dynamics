@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four-Bridge Publication RC1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="page-head">
+  <p class="eyebrow">Information Concept Map · English presentation · release candidate RC1</p>
+  <h1>R0, Fc, M1 and C0 — source-faithful publication units</h1>
+  <p class="subtitle">Scope: BR3-008 (R0), BR3-023 (Fc), BR3-044 (M1), BR3-027 (C0) and the shared intervention note, with the existing BR3-012 units unchanged. Release candidate for review; not deployed. Each English rendering is shown with its Japanese original and its mandatory note.</p>
+  <div class="mode-switch" role="group" aria-label="Graph scope">
+    <button type="button" class="mode-btn" data-mode="publication" aria-pressed="true">Publication layer</button>
+    <button type="button" class="mode-btn" data-mode="reconstruction" aria-pressed="false">Reconstruction layer</button>
+  </div>
+  <section id="scope-banner" class="scope-banner" aria-live="polite" data-testid="scope-banner"></section>
+</header>
+<noscript><p class="block">This page renders from data.js and needs JavaScript. No English rendering is shown without its Japanese original and note.</p></noscript>
+<main>
+  <section class="block" aria-labelledby="h-units">
+    <h2 id="h-units">Publication units</h2>
+    <div id="units" class="units"></div>
+  </section>
+  <section class="block" aria-labelledby="h-br">
+    <h2 id="h-br">BR3-012 units (existing publication, unchanged)</h2>
+    <p class="hint">R4 and its English-side axes, as published under the BR3-012 decisions. The BR3-012 graph is specified in the BR3-012 prototype and is not redrawn here.</p>
+    <div id="br-units" class="units"></div>
+  </section>
+  <section class="block" aria-labelledby="h-graph">
+    <h2 id="h-graph"><span id="graph-title">Publication graph</span></h2>
+    <button type="button" id="graph-toggle" class="btn graph-toggle" aria-expanded="false" aria-controls="graph-area">Show graph</button>
+    <div id="graph-area" class="graph-area">
+      <div class="graph-scroll" tabindex="0" aria-label="Graph">
+        <svg id="graph" viewBox="0 0 770 380" role="img" aria-labelledby="graph-desc"><desc id="graph-desc">R0, R1, R2, Fc, M1, C0, C1 and C2 in the current scope.</desc></svg>
+      </div>
+      <aside id="legend" class="legend" aria-label="Legend"></aside>
+    </div>
+    <p class="hint">Select a node to open its unit. Grouping boxes are navigation only and imply nothing.</p>
+  </section>
+  <section class="block" aria-labelledby="h-appendix">
+    <h2 id="h-appendix">Appendix — English-reconstruction items not shown as Japanese source conditions</h2>
+    <div id="appendix"></div>
+  </section>
+</main>
+<div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
+<aside id="details" class="details" role="dialog" aria-modal="false" aria-labelledby="details-title" hidden>
+  <div class="details-head"><h2 id="details-title">Details</h2><button type="button" id="details-close" class="icon-btn" aria-label="Close details">×</button></div>
+  <div id="details-body"></div>
+</aside>
+<footer class="page-foot"><div id="provenance"></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

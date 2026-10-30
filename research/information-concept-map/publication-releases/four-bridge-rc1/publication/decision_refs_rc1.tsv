@@ -1,0 +1,35 @@
+decision_id	role_in_rc1	log_file	log_row	status	finality
+H-SOURCE-FAITHFUL-PUBLICATION	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	2	HUMAN-DECIDED	PUBLICATION-POLICY
+H-P-SRC-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	3	HUMAN-DECIDED	WORKING-SCHEMA
+H-BR3-012-SOURCE-FAITHFUL	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	4	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-012-O3-CONDITIONAL	BR3-012 E2-004/E2-060 (unchanged)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	5	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-012-HD-C1-REVISED	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	6	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-012-HR-PUBLICATION	BR3-012 wording A (unchanged)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	7	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-027-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	8	HUMAN-DECIDED	PUBLICATION-DECISION (not theoretical settlement)
+H-BR3-044-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	9	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-008-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	10	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-023-B-REVISED	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	11	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-023-D-H4-LIMIT	D-H4 scope limit	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	12	HUMAN-DECIDED	SCOPE-LIMITATION of D-H4
+H-O-008-2-B	E2-001 / R0↔R1 publication scope	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	13	HUMAN-DECIDED	PUBLICATION-DECISION
+H-O-044-2-B-REVISED	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	14	HUMAN-DECIDED	PUBLICATION-DECISION
+H-I-A-SCHEMA-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	15	HUMAN-DECIDED	WORKING-SCHEMA
+H-BR3-008-PUB-LABEL-GLOSS-A	R0 label + gloss	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	16	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-023-PUB-LABEL-GLOSS-A	Fc label + gloss	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	17	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-044-PUB-LABEL-GLOSS-B	M1 label + gloss	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	18	HUMAN-DECIDED	PUBLICATION-DECISION
+H-BR3-027-PUB-LABEL-GLOSS-B	C0 label + gloss	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	19	HUMAN-DECIDED	PUBLICATION-DECISION
+HR-IMPL-1-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	20	ADOPTED	SCOPE-LIMITED
+HR-IMPL-2-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	21	ADOPTED	SCOPE-LIMITED
+HR-IMPL-3-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	22	ADOPTED	SCOPE-LIMITED
+HR-IMPL-4-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	23	ADOPTED	SCOPE-LIMITED
+HR-IMPL-5-B	scope-specific labels	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	24	ADOPTED	SCOPE-LIMITED
+HR-IMPL-6-B	edge display names (RC1-01)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	25	ADOPTED	SCOPE-LIMITED
+HR-IMPL-8-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	26	ADOPTED	SCOPE-LIMITED
+HR-IMPL-10-B	kept (governing or historical)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	27	ADOPTED	SCOPE-LIMITED
+H-V4B-12-CONDITIONAL	history: conditional approval (corrections ①②③)	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	28	ADOPTED	SCOPE-LIMITED
+H-V4B-12-M1-B-REVISED	R0 note M-1 correction; AC-R0-05/06	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	29	HUMAN-DECIDED	M-1 CORRECTION POLICY; not final verbatim approval of the full note (V4B-12 stays AUTHOR-APPROVAL-PENDING)
+H-V4B-12-R0-B	history: partial R0 approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	30	HUMAN-DECIDED	PARTIAL APPROVAL (M-1 wording + R0 short note); OV-N-R0 FULL-NOTE-APPROVAL-PENDING; V4B-12 gate not complete
+H-V4B-12-FC-B	Fc notes approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	31	HUMAN-DECIDED	APPROVED-WITH-REVISIONS (Fc full and short notes); shared intervention note approval separate and pending; V4B-12 gate not complete
+H-V4B-12-M1-B	M1 notes approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	32	HUMAN-DECIDED	APPROVED-WITH-REVISION (M1 short note); full note approved unchanged; shared intervention note approval separate and pending; V4B-12 gate not complete
+H-V4B-12-C0-A	C0 notes approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	33	HUMAN-DECIDED	FULL-NOTE-APPROVED / SHORT-NOTE-APPROVED (C0); V4B-12 gate not complete
+H-V4B-12-INTERVENTION-A	shared intervention note approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	34	HUMAN-DECIDED	FULL-NOTE-APPROVED / SHORT-NOTE-APPROVED (shared intervention note)
+H-V4B-12-R0-FINAL-A	R0 notes final approval	frozen-inputs/four_bridge_hr_impl_v0.14_decisions.tsv	35	HUMAN-DECIDED	FULL-NOTE-APPROVED / SHORT-NOTE-APPROVED (R0); completes the author approval of V4B-12 notes together with H-V4B-12-FC-B, H-V4B-12-M1-B, H-V4B-12-C0-A, H-V4B-12-INTERVENTION-A

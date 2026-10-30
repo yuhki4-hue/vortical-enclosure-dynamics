@@ -1,0 +1,936 @@
+{
+ "release": "Four-Bridge Publication RC1",
+ "units": {
+  "R0": {
+   "id": "R0",
+   "group": "four-bridge",
+   "bridge": "BR3-008",
+   "target": "EN-ICM-0054",
+   "stable_label_id": "R0-COUPLING",
+   "ja_label": "相互作用",
+   "ja": "物理的結合があり、状態・過程に影響する。",
+   "label": "Interaction",
+   "gloss": "There is a physical coupling, and it affects a state or process.",
+   "formula": null,
+   "note_full": "Note. 影響する is kept as 'affects'. It is a causal relation: the Japanese map warns against accepting a causal coupling from correlation alone. The map's test asks whether intervening on the coupling changes the partner's state or process. That test is not written into the definition, so intervention-sensitivity is not presented as a condition every R0 instance must meet. The English reconstruction uses the label 'causal coupling' and retains intervention-sensitivity as a conditional reconstruction-layer proposal. The label and the proposal are not part of the Japanese R0 definition. 状態・過程 is rendered 'a state or process'; the source does not say whether one or both are meant. The link from R0 to R1 is a comparison in the Japanese map; it neither establishes nor denies that R1 requires R0.",
+   "note_short": "Causal, not mere correlation. Intervention is the map's test, not part of the definition. See note.",
+   "shared": true,
+   "cc": "Physical coupling; causal influence on a state or process",
+   "evidence_class": "physical coupling, influence: SOURCE-PRESERVED; causal not correlational: SOURCE-PRESERVED; partner: EXPLICITNESS-SUPPORTED; intervention as test: SOURCE-PRESERVED; intervention as necessary condition: INDETERMINATE (not asserted); 状態・過程 either/both: INDETERMINATE",
+   "overlay_id": "OV-N-R0",
+   "note_approval": "H-V4B-12-R0-B;H-V4B-12-R0-FINAL-A",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-008-PUB-LABEL-GLOSS-A)",
+   "items": [
+    {
+     "item_id": "CC-R0-01",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Physical coupling",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-R0-02",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Causal influence on a state or process",
+     "origin": "SOURCE-DEFINITION;SOURCE-CONFUSION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-01",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: a causal coupling is not established from correlation alone",
+     "origin": "SOURCE-CONFUSION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-02",
+     "item_kind": "AUDIT",
+     "item_text": "Audit question: does intervention on the coupling change the partner's state or process?",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "ASSESSMENT-ROUTE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-03",
+     "item_kind": "AUDIT",
+     "item_text": "Separation: obtaining of influence / interventional decidability / interventional demonstration are recorded separately",
+     "origin": "HUMAN-DECISION",
+     "role": "SEPARATION-RULE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-04",
+     "item_kind": "AUDIT",
+     "item_text": "Evidence basis is declared per claim: mechanism definition / prior research / present intervention",
+     "origin": "SOURCE-EXAMPLE-RULE",
+     "role": "EVIDENCE-FIELD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-05",
+     "item_kind": "AUDIT",
+     "item_text": "Legacy v0.4 condition: physical coupling such that intervention on the coupling changes another state or process",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "TARGET-SIDE-PROPOSAL",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "CONDITIONAL"
+    },
+    {
+     "item_id": "AC-R0-06",
+     "item_kind": "AUDIT",
+     "item_text": "Current English reconstruction label: causal coupling (reconstruction scope; the publication label is Interaction)",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "RECONSTRUCTION-LABEL",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-07",
+     "item_kind": "AUDIT",
+     "item_text": "Publication link R0↔R1 is a source comparison: neither the holding nor the failure of a prerequisite is settled",
+     "origin": "SOURCE-MAP-RELATION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-R0-08",
+     "item_kind": "AUDIT",
+     "item_text": "Reconstruction edges E2-001 (R1→R0) and E2-002 (R2→R1) and the conditions they propagate are tracked in LDG-0011@v0.2",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "INHERITANCE-TRACKING",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "OPEN-UNRESOLVED"
+    },
+    {
+     "item_id": "AC-R0-09",
+     "item_kind": "AUDIT",
+     "item_text": "Open: whether 状態・過程 means either or both",
+     "origin": "SOURCE-DEFINITION",
+     "role": "OPEN-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "OPEN-UNRESOLVED"
+    }
+   ]
+  },
+  "Fc": {
+   "id": "Fc",
+   "group": "four-bridge",
+   "bridge": "BR3-023",
+   "target": "EN-ICM-0019",
+   "stable_label_id": "FC-CAUSAL",
+   "ja_label": "因果役割的機能",
+   "ja": "指定した能力・過程への寄与。",
+   "label": "Causal-role function",
+   "gloss": "Contribution to a specified capacity or process.",
+   "formula": null,
+   "note_full": "Note. 寄与 is read here as substantive causal involvement in the specified capacity or process: more than correlation, co-occurrence or loose association. It does not require that a single intervention shows a difference, that the whole causal path is traced, that the contributor is indispensable, or that the contributor must be a component of Q. Intervening on the bearer is an important way of assessing a contribution. The depth of a contribution claim is distinguished from the strength of evidence supporting it. Whether 寄与 also suggests a constitutive or foundational role is left as an audit question, not part of the definition. Current contribution is distinct from organizational closure (Fo) and selection history (Fs). The English reconstruction keeps an intervention requirement (decision D-H4) as its own theoretical choice; it is not a condition of the Japanese Fc.",
+   "note_short": "More than correlation; no uniform single-intervention, full-path, indispensability or component requirement. Intervention is an important assessment route. See note.",
+   "shared": true,
+   "cc": "Specified capacity or process Q; substantive causal contribution to Q",
+   "evidence_class": "specified Q, contribution, causal: SOURCE-PRESERVED; substantive involvement: EXPLICITNESS-SUPPORTED; intervention on bearer as route: SOURCE-PRESERVED; intervention as universal condition: INDETERMINATE (not asserted); constitutive nuance: audit item",
+   "overlay_id": "OV-N-Fc",
+   "note_approval": "H-V4B-12-FC-B",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-023-PUB-LABEL-GLOSS-A)",
+   "items": [
+    {
+     "item_id": "CC-FC-01",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Specified capacity or process Q",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-FC-02",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Substantive causal contribution to Q",
+     "origin": "SOURCE-DEFINITION;SOURCE-LABEL;HUMAN-DECISION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-01",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: not weakened to correlation, co-occurrence or vague association",
+     "origin": "SOURCE-LABEL;HUMAN-DECISION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-02",
+     "item_kind": "AUDIT",
+     "item_text": "Audit question: was the capacity or process Q specified?",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-03",
+     "item_kind": "AUDIT",
+     "item_text": "Assessment route: does intervention on the bearer change Q? (important route; not a universal condition)",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "ASSESSMENT-ROUTE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-04",
+     "item_kind": "AUDIT",
+     "item_text": "Not uniformly required: an observed difference under a single intervention",
+     "origin": "HUMAN-DECISION",
+     "role": "NON-REQUIREMENT",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-05",
+     "item_kind": "AUDIT",
+     "item_text": "Not uniformly required: indispensability",
+     "origin": "HUMAN-DECISION;SOURCE-CASE-USAGE",
+     "role": "NON-REQUIREMENT",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-06",
+     "item_kind": "AUDIT",
+     "item_text": "Not a general necessary condition of Fc: being a component of Q (componenthood itself), not only proof of being a component; individual cases with constitutive involvement are not excluded",
+     "origin": "HUMAN-DECISION",
+     "role": "NON-REQUIREMENT",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-07",
+     "item_kind": "AUDIT",
+     "item_text": "Not uniformly required: complete identification of the causal path",
+     "origin": "HUMAN-DECISION",
+     "role": "NON-REQUIREMENT",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-08",
+     "item_kind": "AUDIT",
+     "item_text": "Separation: claim depth is recorded separately from evidence strength",
+     "origin": "HUMAN-DECISION;SOURCE-CASE-USAGE",
+     "role": "SEPARATION-RULE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-09",
+     "item_kind": "AUDIT",
+     "item_text": "Audit item: constitutive or foundational involvement suggested by 寄与 (not a universal constitutive condition)",
+     "origin": "HUMAN-DECISION",
+     "role": "AUDIT-ITEM",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "OPEN-UNRESOLVED"
+    },
+    {
+     "item_id": "AC-FC-10",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: Fc is distinct from organizational closure (Fo) and selection history (Fs)",
+     "origin": "SOURCE-CONFUSION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-11",
+     "item_kind": "AUDIT",
+     "item_text": "D-H4 reconstruction choice: a component or process makes an intervention-sensitive difference to a specified capacity or process",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "RECONSTRUCTION-CONSTITUTIVE",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-FC-12",
+     "item_kind": "AUDIT",
+     "item_text": "Method declaration: q_type = Q_cap",
+     "origin": "TARGET-METHOD-DECLARATION",
+     "role": "METHOD-DECLARATION",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    }
+   ]
+  },
+  "M1": {
+   "id": "M1",
+   "group": "four-bridge",
+   "bridge": "BR3-044",
+   "target": "EN-ICM-0053",
+   "stable_label_id": "QREL",
+   "ja_label": "関連性",
+   "ja": "差が指定Qへの帰結を変える。Rel(d;Q|Σ,𝒟,M,τ)。",
+   "label": "Q-relative difference-making",
+   "gloss": "A difference changes the consequences for a specified Q.",
+   "formula": "Rel(d;Q|Σ,𝒟,M,τ)",
+   "note_full": "Note. The relation holds relative to a specified Q and to the declared boundary Σ, comparison set 𝒟, mechanism M and time scale τ; a change in any of these is a different claim. The M in the formula is the mechanism, not the M group of the map. 関連性 here is not usefulness or benefit and does not by itself imply meaning or representation. Being comparable within 𝒟 is not the same as an intervention being definable. Intervening on the difference d is different from intervening on Q directly; the map's test asks whether intervening on d changes the consequence for Q. What is intervened on, the path of action and what is evaluated are audited separately. Observation, comparison and intervention are different routes of assessment, and they are not treated as giving equal evidence. Neither a complete intervention nor full identification of the causal path is required for the relation to hold. The English reconstruction's typed Q and intervention_basis are English-side method settings, and its placement of this relation outside the M group does not change where the Japanese map places M1.",
+   "note_short": "Relative to a specified Q and to Σ, 𝒟, M, τ (M = mechanism). Not benefit. Intervention on d is an assessment route, not part of the Japanese definition. See note.",
+   "shared": true,
+   "cc": "A difference d; a specified Q; d changes the consequences for Q; relative to declared Σ (boundary), 𝒟 (comparison set), M (mechanism) and τ (time scale)",
+   "evidence_class": "d, specified Q, consequence change, Σ/𝒟/M/τ: SOURCE-PRESERVED; intervention on d as test: SOURCE-PRESERVED; intervention as constitutive: INDETERMINATE (not asserted); typed Q, intervention_basis: TARGET-SIDE-PROPOSAL (method)",
+   "overlay_id": "OV-N-M1",
+   "note_approval": "H-V4B-12-M1-B",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-044-PUB-LABEL-GLOSS-B)",
+   "items": [
+    {
+     "item_id": "CC-M1-01",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "A difference d",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-M1-02",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "A specified Q",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-M1-03",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "d changes the consequences for Q",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-M1-04",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Relative to declared Σ (boundary), 𝒟 (comparison set), M (mechanism) and τ (time scale)",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-01",
+     "item_kind": "AUDIT",
+     "item_text": "Audit question: relevance to what Q?",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-02",
+     "item_kind": "AUDIT",
+     "item_text": "Audit question: does intervention on the difference d change the consequence for Q? (intervention target: d; evaluated: Q)",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "ASSESSMENT-ROUTE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-03",
+     "item_kind": "AUDIT",
+     "item_text": "Separation: intervention on d is distinguished from direct intervention on Q; a direct manipulation of Q does not test whether d makes a difference",
+     "origin": "HUMAN-DECISION",
+     "role": "SEPARATION-RULE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-04",
+     "item_kind": "AUDIT",
+     "item_text": "Audit: intervention target, path of action and evaluated consequence are each declared and audited",
+     "origin": "HUMAN-DECISION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-05",
+     "item_kind": "AUDIT",
+     "item_text": "Separation: comparability within 𝒟 is not identified with definability of an intervention",
+     "origin": "HUMAN-DECISION",
+     "role": "SEPARATION-RULE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-06",
+     "item_kind": "AUDIT",
+     "item_text": "Separation: difference-making relation / intervenability / mechanism-path identifiability / actual intervention or tracing / evidential acceptance",
+     "origin": "HUMAN-DECISION",
+     "role": "SEPARATION-RULE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-07",
+     "item_kind": "AUDIT",
+     "item_text": "Evaluation routes: observation, comparison and intervention are distinct routes; no evidential equivalence is asserted",
+     "origin": "HUMAN-DECISION;SOURCE-CASE-USAGE",
+     "role": "EVIDENCE-FIELD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-08",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: relevant is not beneficial; no semantic content or representation follows from M1 alone",
+     "origin": "SOURCE-CONFUSION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-09",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: a change of Q or of any coordinate is a different claim",
+     "origin": "SOURCE-CASE-USAGE",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-10",
+     "item_kind": "AUDIT",
+     "item_text": "Notation guard: M in the formula is the mechanism coordinate, not the M group",
+     "origin": "SOURCE-DEFINITION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-11",
+     "item_kind": "AUDIT",
+     "item_text": "Method declaration: typed Q (q_type)",
+     "origin": "TARGET-METHOD-DECLARATION",
+     "role": "METHOD-DECLARATION",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-12",
+     "item_kind": "AUDIT",
+     "item_text": "Method declaration: intervention_basis (within-sigma-intervention | cross-sigma-comparison | observational | model-constituted | open)",
+     "origin": "TARGET-METHOD-DECLARATION",
+     "role": "METHOD-DECLARATION",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-13",
+     "item_kind": "AUDIT",
+     "item_text": "Reconstruction placement: QREL outside M (H11-S1); not projected back onto the Japanese placement of M1 in group M",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "RECONSTRUCTION-PLACEMENT",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-M1-14",
+     "item_kind": "AUDIT",
+     "item_text": "Legacy v0.4 condition: intervention on a difference changes consequences for typed Q under declared coordinates",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "TARGET-SIDE-PROPOSAL",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "PROFILE-CONDITIONAL"
+    }
+   ]
+  },
+  "C0": {
+   "id": "C0",
+   "group": "four-bridge",
+   "bridge": "BR3-027",
+   "target": "EN-ICM-0007",
+   "stable_label_id": "C0-STABILIZATION",
+   "ja_label": "受動的安定化",
+   "ja": "物理化学的な応答によって変化が減衰する。",
+   "label": "Passive stabilization",
+   "gloss": "Change decays through physicochemical responses.",
+   "formula": null,
+   "note_full": "Note. 'Passive' does not require that the system has no sensing or action pathways, that such pathways cannot be told apart, or that they have not been identified; whether they exist, can be distinguished and have been identified are separate questions. C0 is not exclusive with C1 (negative feedback) or C2 (specific regulation): they can be attributed in the same system, for example where binding relaxations occur alongside feedback-based adaptation. A stable state should not be read back as a set point or goal, passive relaxation should not be equated with sensing, and whole-system stability is not inferred. What mechanistic restriction 'passive' places on an individual decay route is left open.",
+   "note_short": "'Passive' ≠ 'no pathways' or 'pathways unidentified'. Not exclusive with C1/C2. See note.",
+   "shared": false,
+   "cc": "A change; decay of the change; through physicochemical responses",
+   "evidence_class": "change, decay, physicochemical response: SOURCE-PRESERVED; guards (set point, sensing, feedback/control/regulation): EXPLICITNESS-SUPPORTED; pathway clauses: not asserted; 受動的 route restriction: INDETERMINATE",
+   "overlay_id": "OV-N-C0",
+   "note_approval": "H-V4B-12-C0-A",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-027-PUB-LABEL-GLOSS-B)",
+   "items": [
+    {
+     "item_id": "CC-C0-01",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "A change",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-C0-02",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Decay of the change",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "CC-C0-03",
+     "item_kind": "CONSTITUTIVE",
+     "item_text": "Through physicochemical responses",
+     "origin": "SOURCE-DEFINITION",
+     "role": "PUBLICATION-CONSTITUTIVE",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-01",
+     "item_kind": "AUDIT",
+     "item_text": "Audit question: under what conditions and in what time window does the perturbation decay?",
+     "origin": "SOURCE-AUDIT-QUESTION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-02",
+     "item_kind": "AUDIT",
+     "item_text": "Audit (a): do sensing and action pathways exist for this decay? (absence not required)",
+     "origin": "HUMAN-DECISION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-03",
+     "item_kind": "AUDIT",
+     "item_text": "Audit (b): can such pathways be distinguished independently? (indistinguishability not required)",
+     "origin": "HUMAN-DECISION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-04",
+     "item_kind": "AUDIT",
+     "item_text": "Audit (c): have such pathways actually been identified? (non-identification not required)",
+     "origin": "HUMAN-DECISION",
+     "role": "AUDIT-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-05",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: no exclusivity of C0 with C1 or C2 is asserted",
+     "origin": "HUMAN-DECISION;SOURCE-CASE-USAGE",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-06",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: no inference to a set point or goal",
+     "origin": "SOURCE-CONFUSION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-07",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: passive relaxation is not equated with sensing",
+     "origin": "SOURCE-EXAMPLE-RULE",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-08",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: no inference from C0 to feedback, control or regulation",
+     "origin": "SOURCE-REGION-RULE",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-09",
+     "item_kind": "AUDIT",
+     "item_text": "Guard: no automatic inference to whole-system stability",
+     "origin": "SOURCE-CONFUSION",
+     "role": "GUARD",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "ACTIVE"
+    },
+    {
+     "item_id": "AC-C0-10",
+     "item_kind": "AUDIT",
+     "item_text": "Open (O-027-3): what mechanistic restriction 受動的 places on an individual decay route",
+     "origin": "SOURCE-LABEL",
+     "role": "OPEN-QUESTION",
+     "scope": "PUBLICATION-AND-RECONSTRUCTION",
+     "status": "OPEN-UNRESOLVED"
+    },
+    {
+     "item_id": "AC-C0-11",
+     "item_kind": "AUDIT",
+     "item_text": "Legacy v0.4 condition: no separately identified sensing and action pathways",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "TARGET-SIDE-PROPOSAL",
+     "scope": "LEGACY-RECORD-ONLY",
+     "status": "NOT-EFFECTIVE"
+    },
+    {
+     "item_id": "AC-C0-12",
+     "item_kind": "AUDIT",
+     "item_text": "Legacy v0.4 role: recovery (decay/recovery)",
+     "origin": "TARGET-RECONSTRUCTION",
+     "role": "TARGET-SIDE-PROPOSAL",
+     "scope": "RECONSTRUCTION-ONLY",
+     "status": "ROLE-TRACKED"
+    }
+   ]
+  }
+ },
+ "br3_012_units": {
+  "OV-N-R4": {
+   "id": "R4",
+   "group": "br3-012",
+   "overlay_id": "OV-N-R4",
+   "ja_label": "コード／体系的対応",
+   "ja": "R3的規則が多数の入力に体系的・組合せ的に適用される。",
+   "label": "",
+   "gloss": "An R3-like rule is applied to many inputs systematically and combinatorially.",
+   "formula": null,
+   "note_full": "Note on the translation. The Japanese original reads 「体系的・組合せ的」. The source leaves open whether every case must be both systematic and combinatorial, or whether the phrase simply lists the two; the English \"and\" is not meant to settle that question. This rendering is the author's current choice, made after comparing alternatives, and has not yet been reviewed by native English speakers. Other readings and translations are welcome, especially from native speakers and researchers in related fields. Any revision will keep the original text and the decision history.",
+   "note_short": "Source: 体系的・組合せ的. Both required, or simply listed? Left open in the source; \"and\" here does not decide it. Author's provisional translation; comments welcome.",
+   "shared": false,
+   "cc": "",
+   "items": [],
+   "evidence_class": "text: SOURCE-PRESERVED; conjunction vs enumeration of 体系的・組合せ的: INDETERMINATE",
+   "note_approval": "H-BR3-012-HR-PUBLICATION;H-BR3-012-HD-C1-REVISED;H-BR3-012-O3-CONDITIONAL",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-012-HR-PUBLICATION; wording A)"
+  },
+  "OV-N-R4-SYS": {
+   "id": "R4-SYS (EN-ICM-0059)",
+   "group": "br3-012",
+   "overlay_id": "OV-N-R4-SYS",
+   "ja_label": "",
+   "ja": "R3的規則が多数の入力に体系的・組合せ的に適用される。 (source of BR3-012)",
+   "label": "",
+   "gloss": "An R3-like correspondence rule is applied systematically across multiple inputs. Whether the rule satisfies every R3-BASE condition is not asserted.",
+   "formula": null,
+   "note_full": "Axis note. This English-side axis carries the systematic aspect (体系的) of the Japanese R4. The Japanese R4 also names a combinatorial aspect (組合せ的; see R4-COMB). The source does not settle whether both are required together; showing them as two axes is not a ruling on that question.",
+   "note_short": "Systematic axis of R4 (体系的); relation to the combinatorial aspect (組合せ的) is undecided in the source.",
+   "shared": false,
+   "cc": "",
+   "items": [],
+   "evidence_class": "R3-like rule, systematic, multiple inputs: SOURCE-PRESERVED; R3-BASE satisfaction: not asserted (INDETERMINATE; target-side proposal E2-004)",
+   "note_approval": "H-BR3-012-O3-CONDITIONAL;H-BR3-012-HD-C1-REVISED;H-BR3-012-HR-PUBLICATION",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-012-HR-PUBLICATION)"
+  },
+  "OV-N-R4-COMB": {
+   "id": "R4-COMB (EN-ICM-0057)",
+   "group": "br3-012",
+   "overlay_id": "OV-N-R4-COMB",
+   "ja_label": "",
+   "ja": "R3的規則が多数の入力に体系的・組合せ的に適用される。 (source of BR3-013)",
+   "label": "",
+   "gloss": "A correspondence is organized over recombinable elements or structures such that combinations participate in the mapping.",
+   "formula": null,
+   "note_full": "Axis note. This English-side axis carries the combinatorial aspect (組合せ的) of the Japanese R4. As a target-side scope choice it does not carry the R3-like rule (BR3-013). The source does not settle whether the combinatorial and systematic aspects are required together.",
+   "note_short": "Combinatorial axis of R4 (組合せ的); without the R3-like rule (target-side); relation to 体系的 undecided.",
+   "shared": false,
+   "cc": "",
+   "items": [],
+   "evidence_class": "combinatorial aspect: SOURCE-PRESERVED; omission of R3-like rule: TARGET-SIDE (recorded drop, BR3-013); conjunction: INDETERMINATE",
+   "note_approval": "H-BR3-012-O3-CONDITIONAL;H-BR3-012-HD-C1-REVISED;H-BR3-012-HR-PUBLICATION",
+   "label_gloss_approval": "PUBLICATION-SELECTED (H-BR3-012-HR-PUBLICATION)"
+  }
+ },
+ "shared_note": {
+  "full": "Intervention. In the source-faithful publication layer, intervention is treated as an assessment route, not automatically as a constitutive condition of R0, Fc or M1. It can test a relation under a declared intervention design and comparison conditions. A relation is not generally absent merely because no intervention was performed or because its causal path was not fully traced. A null result from a single intervention does not, by itself, establish the general absence of the relation; its evidential significance depends on the intervention design and declared comparison conditions. Being open to intervention is distinct from having been established by a particular intervention. The English reconstruction may retain layer-specific intervention requirements, including D-H4 for Fc.",
+  "short": "In the source-faithful publication layer, intervention is an assessment route, not automatically a constitutive condition; a single null result is scope-dependent.",
+  "approval": "H-V4B-12-INTERVENTION-A"
+ },
+ "links": {
+  "OV-E-E2-004": {
+   "overlay_id": "OV-E-E2-004",
+   "object_type": "edge",
+   "object_id": "E2-004",
+   "selected_english_gloss_candidate": "R4-SYS requires R3-type carrier architecture (target-side proposal, D-H5)",
+   "mandatory_ambiguity_note_short": "Target-side proposal (reconstruction layer); not a source claim.",
+   "mandatory_ambiguity_note_full": "Appendix note. This requirement was adopted in the English reconstruction layer (D-H5) to prevent R4-SYS from collapsing into R2. It is not asserted by the Japanese source and is not shown as a relation in the publication graph.",
+   "evidence_class": "TARGET-SIDE-PROPOSAL",
+   "publication_state": "NOT-SELECTED-FOR-DISPLAY",
+   "publication_assertion": "NOT-ASSERTED",
+   "publication_display": "HIDDEN-LISTED",
+   "management_scope": "reconstruction-layer (edges row unchanged: ACTIVE-WORKING; ASSERTED; requires-condition)"
+  },
+  "OV-E-E2-060": {
+   "overlay_id": "OV-E-E2-060",
+   "object_type": "edge",
+   "object_id": "E2-060",
+   "selected_english_gloss_candidate": "R4-SYS — R3-like rule aligned with R3-BASE (no satisfaction asserted)",
+   "mandatory_ambiguity_note_short": "Non-entailing alignment; not a source claim.",
+   "mandatory_ambiguity_note_full": "Edge note. Non-entailing alignment: the Japanese source names an R3-like rule but does not name R3-BASE or assert this link.",
+   "evidence_class": "NON-ENTAILING-ALIGNMENT",
+   "publication_state": "PUBLICATION-SELECTED (H-BR3-012-O3-CONDITIONAL; implemented with H-BR3-012-HR-PUBLICATION)",
+   "publication_assertion": "ASSERTED-AS-NON-ENTAILING",
+   "publication_display": "SHOWN",
+   "management_scope": "publication-and-reconstruction"
+  },
+  "OV-E-E2-005": {
+   "overlay_id": "OV-E-E2-005",
+   "object_type": "edge",
+   "object_id": "E2-005",
+   "selected_english_gloss_candidate": "R4-COMB ∥ R4-SYS (English-side axes; neither entails the other)",
+   "mandatory_ambiguity_note_short": "Non-entailing parallel axes.",
+   "mandatory_ambiguity_note_full": "Edge note. The two axes are an English-side analysis of the Japanese R4; the source does not settle whether both are required together.",
+   "evidence_class": "TARGET-SIDE-PROPOSAL (axis split, H4/D-H5) — non-entailing",
+   "publication_state": "PUBLICATION-SELECTED (H-BR3-012-O3-CONDITIONAL; implemented with H-BR3-012-HR-PUBLICATION)",
+   "publication_assertion": "ASSERTED-AS-NON-ENTAILING",
+   "publication_display": "SHOWN",
+   "management_scope": "publication-and-reconstruction"
+  },
+  "OV-L-R0-R1": {
+   "overlay_id": "OV-L-R0-R1",
+   "object_type": "source-relation",
+   "object_id": "R0↔R1 (figure2b audit-candidate)",
+   "selected_english_gloss_candidate": "R0 — R1: comparison in the Japanese map (no prerequisite asserted or denied)",
+   "mandatory_ambiguity_note_short": "Source comparison; prerequisite neither asserted nor denied.",
+   "mandatory_ambiguity_note_full": "Link note. In the Japanese map R0 and R1 are linked as candidates for comparison; the map says this asserts no prerequisite, identity or causal production. The English reconstruction treats R1 as requiring R0 (edge E2-001); that is a reconstruction-layer choice and is not shown here as a necessary condition, nor is it denied.",
+   "evidence_class": "SOURCE-PRESERVED (as non-assertion)",
+   "publication_state": "PUBLICATION-SELECTED (H-O-008-2-B)",
+   "publication_assertion": "NOT-ASSERTED (comparison only)",
+   "publication_display": "SHOWN",
+   "management_scope": "publication"
+  },
+  "OV-E-E2-001": {
+   "overlay_id": "OV-E-E2-001",
+   "object_type": "edge",
+   "object_id": "E2-001",
+   "selected_english_gloss_candidate": "R1 requires R0 (English reconstruction layer)",
+   "mandatory_ambiguity_note_short": "Reconstruction layer only; not a source claim.",
+   "mandatory_ambiguity_note_full": "Edge note. E2-001 (R1 requires-condition R0, entailment necessary) is part of the English reconstruction R condition order. Its source support is not adjudicated (LDG-0011@v0.2). In the publication layer it is neither shown as a necessary condition nor denied.",
+   "evidence_class": "NOT-ASSESSED (source support unadjudicated; tracked in LDG-0011@v0.2)",
+   "publication_state": "NOT-SELECTED-FOR-DISPLAY",
+   "publication_assertion": "NOT-ASSERTED-IN-PUBLICATION",
+   "publication_display": "HIDDEN-LISTED",
+   "management_scope": "reconstruction-layer (edges row unchanged: ACTIVE-WORKING; ASSERTED; requires-condition)"
+  },
+  "OV-E-E2-002": {
+   "overlay_id": "OV-E-E2-002",
+   "object_type": "edge",
+   "object_id": "E2-002",
+   "selected_english_gloss_candidate": "R2 requires R1 (English reconstruction layer)",
+   "mandatory_ambiguity_note_short": "Reconstruction layer only; not a source claim.",
+   "mandatory_ambiguity_note_full": "Edge note. E2-002 (R2 requires-condition R1, necessary) carries the R condition order further; through E2-001 it carries R0 conditions to R2 and beyond (E2-003, E2-008, E2-010, and E2-004 in reconstruction). Tracked in LDG-0011@v0.2.",
+   "evidence_class": "NOT-ASSESSED (tracked in LDG-0011@v0.2)",
+   "publication_state": "NOT-SELECTED-FOR-DISPLAY",
+   "publication_assertion": "NOT-ASSERTED-IN-PUBLICATION",
+   "publication_display": "HIDDEN-LISTED",
+   "management_scope": "reconstruction-layer (edges row unchanged)"
+  },
+  "OV-E-E2-017": {
+   "overlay_id": "OV-E-E2-017",
+   "object_type": "edge",
+   "object_id": "E2-017",
+   "selected_english_gloss_candidate": "Fc in the F family (navigation)",
+   "mandatory_ambiguity_note_short": "Family navigation; no entailment.",
+   "mandatory_ambiguity_note_full": "Edge note. Family membership is navigation in the English presentation; it corresponds to the source group F and implies nothing further.",
+   "evidence_class": "NON-ENTAILING-ALIGNMENT (source group F, EV4B-039)",
+   "publication_state": "PUBLICATION-SELECTED (H-BR3-023-PUB-LABEL-GLOSS-A)",
+   "publication_assertion": "ASSERTED-AS-NON-ENTAILING",
+   "publication_display": "SHOWN",
+   "management_scope": "publication-and-reconstruction"
+  },
+  "OV-E-E2-020": {
+   "overlay_id": "OV-E-E2-020",
+   "object_type": "edge",
+   "object_id": "E2-020",
+   "selected_english_gloss_candidate": "C0 in the C family (navigation)",
+   "mandatory_ambiguity_note_short": "Family navigation; no entailment; not exclusive.",
+   "mandatory_ambiguity_note_full": "Edge note. In the Japanese map C0 takes part in the regulation comparison region; the map says this is audit participation, not implication. Membership here does not make C0 a form of feedback or regulation, and does not exclude C1 or C2.",
+   "evidence_class": "NON-ENTAILING-ALIGNMENT (reg-control membership, EV4B-038)",
+   "publication_state": "PUBLICATION-SELECTED (H-BR3-027-PUB-LABEL-GLOSS-B)",
+   "publication_assertion": "ASSERTED-AS-NON-ENTAILING",
+   "publication_display": "SHOWN",
+   "management_scope": "publication-and-reconstruction"
+  },
+  "OV-L-Fc-M2": {
+   "overlay_id": "OV-L-Fc-M2",
+   "object_type": "source-relation",
+   "object_id": "Fc↔M2 (figure2b audit-candidate)",
+   "selected_english_gloss_candidate": "Fc — M2: comparison in the Japanese map",
+   "mandatory_ambiguity_note_short": "Source comparison; no entailment.",
+   "mandatory_ambiguity_note_full": "Link note. Comparison candidate in the Japanese map; no prerequisite, identity or causal production asserted.",
+   "evidence_class": "SOURCE-PRESERVED (as non-assertion)",
+   "publication_state": "PUBLICATION-SELECTED (H-BR3-023-PUB-LABEL-GLOSS-A)",
+   "publication_assertion": "NOT-ASSERTED (comparison only)",
+   "publication_display": "SHOWN-IF-M2-IN-SCOPE",
+   "management_scope": "publication"
+  },
+  "OV-A-QREL-PLACEMENT": {
+   "overlay_id": "OV-A-QREL-PLACEMENT",
+   "object_type": "architecture-note",
+   "object_id": "QREL (EN-ICM-0053) address",
+   "selected_english_gloss_candidate": "QREL is placed outside the M family in the English reconstruction (H11-S1)",
+   "mandatory_ambiguity_note_short": "English-side placement; not projected onto the source.",
+   "mandatory_ambiguity_note_full": "Architecture note. The English reconstruction places Q-relative difference-making outside the M family. This does not change where the Japanese map places M1 (group M).",
+   "evidence_class": "TARGET-SIDE-PROPOSAL (H11-S1)",
+   "publication_state": "NOT-SELECTED-FOR-DISPLAY",
+   "publication_assertion": "NOT-ASSERTED-IN-PUBLICATION",
+   "publication_display": "HIDDEN-LISTED",
+   "management_scope": "reconstruction-layer"
+  }
+ },
+ "scope_labels": [
+  {
+   "stable_id": "R0-COUPLING",
+   "target_id": "EN-ICM-0054",
+   "source_id": "R0",
+   "scope": "publication",
+   "display_label": "Interaction",
+   "canonical_display_field": "draft.publication_label"
+  },
+  {
+   "stable_id": "R0-COUPLING",
+   "target_id": "EN-ICM-0054",
+   "source_id": "R0",
+   "scope": "reconstruction",
+   "display_label": "causal coupling",
+   "canonical_display_field": "draft.reconstruction_label"
+  },
+  {
+   "stable_id": "FC-CAUSAL",
+   "target_id": "EN-ICM-0019",
+   "source_id": "FC",
+   "scope": "publication",
+   "display_label": "Causal-role function",
+   "canonical_display_field": "draft.publication_label"
+  },
+  {
+   "stable_id": "FC-CAUSAL",
+   "target_id": "EN-ICM-0019",
+   "source_id": "FC",
+   "scope": "reconstruction",
+   "display_label": "causal contribution to a specified capacity",
+   "canonical_display_field": "draft.reconstruction_label"
+  },
+  {
+   "stable_id": "QREL",
+   "target_id": "EN-ICM-0053",
+   "source_id": "M1",
+   "scope": "publication",
+   "display_label": "Q-relative difference-making",
+   "canonical_display_field": "draft.publication_label"
+  },
+  {
+   "stable_id": "QREL",
+   "target_id": "EN-ICM-0053",
+   "source_id": "M1",
+   "scope": "reconstruction",
+   "display_label": "Q-relative difference-making",
+   "canonical_display_field": "draft.reconstruction_label"
+  },
+  {
+   "stable_id": "C0-STABILIZATION",
+   "target_id": "EN-ICM-0007",
+   "source_id": "C0",
+   "scope": "publication",
+   "display_label": "Passive stabilization",
+   "canonical_display_field": "draft.publication_label"
+  },
+  {
+   "stable_id": "C0-STABILIZATION",
+   "target_id": "EN-ICM-0007",
+   "source_id": "C0",
+   "scope": "reconstruction",
+   "display_label": "passive stabilization",
+   "canonical_display_field": "draft.reconstruction_label"
+  }
+ ],
+ "sources": {
+  "overlay": {
+   "path": "mnt/user-data/outputs/four_bridge_hr_impl_v0.14/english_publication_overlay_v0.7.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14 (container outputs)",
+   "version": "overlay v0.7"
+  },
+  "provenance": {
+   "path": "mnt/user-data/outputs/four_bridge_hr_impl_v0.14/four_bridge_condition_provenance_v0.5.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14",
+   "version": "provenance v0.5"
+  },
+  "decisions": {
+   "path": "mnt/user-data/outputs/four_bridge_hr_impl_v0.14/four_bridge_hr_impl_v0.14_decisions.tsv",
+   "origin": "package four_bridge_hr_impl_v0.14",
+   "version": "decision log v0.14"
+  },
+  "draft": {
+   "path": "tmp/claude-0/-home-claude/80178cff-6b68-5cbc-bfd3-a8b935af46fb/scratchpad/v07/english_data_draft_v0.7.tsv",
+   "origin": "ZIP four_bridge_hr_impl_v0.7.zip (user-supplied)",
+   "version": "draft v0.7"
+  },
+  "edges": {
+   "path": "tmp/claude-0/-home-claude/80178cff-6b68-5cbc-bfd3-a8b935af46fb/scratchpad/v07/english_data_edges_v0.5.tsv",
+   "origin": "ZIP four_bridge_hr_impl_v0.7.zip (user-supplied)",
+   "version": "edges v0.5"
+  },
+  "scope_labels": {
+   "path": "mnt/user-data/outputs/four_bridge_hr_impl_v0.8/four_bridge_scope_labels_v0.3.tsv",
+   "origin": "package four_bridge_hr_impl_v0.8",
+   "version": "scope labels v0.3"
+  },
+  "label_schema_note": {
+   "path": "mnt/user-data/outputs/four_bridge_hr_impl_v0.8/four_bridge_label_schema_note_v0.1.md",
+   "origin": "package four_bridge_hr_impl_v0.8",
+   "version": "label schema note v0.1"
+  },
+  "figure2b": {
+   "path": "mnt/user-data/uploads/isolated-repo/figure2b/data.js",
+   "origin": "Mac repository figure2b/data.js (staged copy)",
+   "version": "data.js 4.2-patchy-boundaries"
+  },
+  "br3_012_overlay_repo": {
+   "path": "mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/english_publication_overlay_v0.1.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "overlay v0.1 (BR3-012 publication rows)"
+  },
+  "edges_v04_repo": {
+   "path": "mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/english_data_edges_v0.4.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "edges v0.4"
+  },
+  "registry_repo": {
+   "path": "mnt/user-data/uploads/isolated-repo/research/information-concept-map/english-reconstruction/edge_type_registry_v0.2.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "edge type registry v0.2"
+  },
+  "pub_decision_log_repo": {
+   "path": "mnt/user-data/uploads/isolated-repo/research/information-concept-map/cross-linguistic-audit/publication_decision_log_v0.1.tsv",
+   "origin": "Mac repository (staged copy)",
+   "version": "publication decision log v0.1 (BR3-012 decisions)"
+  }
+ }
+}

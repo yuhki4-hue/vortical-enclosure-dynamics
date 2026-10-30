@@ -1,0 +1,16 @@
+ENV | browser | INFO | Chromium 141.0.7390.37 headless (Playwright)
+C-DESKTOP four-bridge units | Desktop Chromium 1366px | PASS | R0:exact Fc:exact M1:exact C0:exact (Japanese, label, gloss, short note visible, full note, shared note)
+C-BR3-012 units | Desktop Chromium | PASS | OV-N-R4:exact OV-N-R4-SYS:exact OV-N-R4-COMB:exact (unchanged BR3-012 texts)
+C-M1-FORMULA | Desktop Chromium | PASS | Rel(d;Q|Σ,𝒟,M,τ) is in the same paragraph as the M1 gloss
+C-DESKTOP gloss never without source and note | Desktop Chromium | PASS | 7 gloss occurrences, all inside a unit with Japanese and note
+C-GRAPH publication | Desktop Chromium | PASS | nodes=R0,R1,R2,Fc,M1,C0,C1,C2; edges=OV-L-R0-R1; R0–R1 entailment=none, arrowhead=null; text outside viewBox=[]
+C-LEGEND | Desktop Chromium | PASS | legend shows each unit’s Japanese label, approved label and approved short note, plus the non-asserting comparison key
+C-DETAILS | Desktop Chromium | PASS | R0:true Fc:true M1:true C0:true (graph node → sheet with Japanese, gloss, full note expanded)
+C-COPY | Desktop Chromium in-page copy | PASS | R0: sel=true btn=true formula=true; Fc: sel=true btn=true formula=true; M1: sel=true btn=true formula=true; C0: sel=true btn=true formula=true; OV-N-R4: sel=true btn=true formula=true; OV-N-R4-SYS: sel=true btn=true formula=true; OV-N-R4-COMB: sel=true btn=true formula=true
+C-LAYER publication ↔ reconstruction | Desktop Chromium | PASS | publication: E2-001 drawn=false, reconstruction items shown=0; reconstruction: E2-001 caption “E2-001 requires(English reconstruction)”, E2-002 drawn=true, R0 node “recon.: causal coupling”, 11 reconstruction items flagged=true; switching back hides E2-001=true
+C-DESKTOP page errors | Desktop Chromium | PASS | none
+C-PRINT | Chromium print-to-PDF (A4) | PASS | R0:true Fc:true M1:true C0:true OV-N-R4:true OV-N-R4-SYS:true OV-N-R4-COMB:true + shared note + M1 formula (whitespace/hyphen-insensitive for pdftotext wraps)
+C-MOBILE | Mobile Chromium emulation: Pixel 7 | PASS | 7 units exact with short notes inline=true; horizontal overflow=0px; graph hidden by default=true, opens=true; bottom sheet with full note=true
+C-MOBILE | Mobile Chromium emulation: iPhone 13 profile (Chromium engine, not Safari) | PASS | 7 units exact with short notes inline=true; horizontal overflow=0px; graph hidden by default=true, opens=true; bottom sheet with full note=true
+C-SAFARI-IOS | Safari (macOS/iOS), iOS real device, touch-selection copy | NOT-TESTED | not available in this environment
+C-RESIDUAL | screenshots, share sheets, reader mode, external excerpts, screen-reader extraction | RESIDUAL-RISK | outside page control; mitigations: inline short notes, formula in gloss paragraph, C0 inline qualifier, aria-describedby, copy interception
