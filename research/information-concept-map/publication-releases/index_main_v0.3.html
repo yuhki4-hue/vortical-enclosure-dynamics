@@ -28,10 +28,12 @@ code { overflow-wrap: anywhere; }
 </head>
 <body>
 <main>
-  <p class="status" data-testid="deploy-status">NOT-DEPLOYED</p>
+  <p class="status" data-testid="deploy-status">FROZEN RELEASE CANDIDATE</p>
   <h1>Information Concept Map — publication releases</h1>
-  <p>Navigation v0.3 for the <strong>main branch</strong> of this repository. Release candidates for review, not published. Use this page on GitHub or a checkout of <code>main</code>; <a data-nav-link="nav-v01" href="index.html">navigation v0.1</a> is for the full local research tree. v0.3 adds only the TSV display note below to <a data-nav-link="nav-v02" href="index_main_v0.2.html">v0.2</a>.</p>
+  <p>Navigation v0.3 for the <strong>main branch</strong> of this repository. Frozen release candidates for review. Use this page on GitHub or a checkout of <code>main</code>; <a data-nav-link="nav-v01" href="index.html">navigation v0.1</a> is for the full local research tree. v0.3 adds the TSV display note and publication-status clarifications to <a data-nav-link="nav-v02" href="index_main_v0.2.html">v0.2</a>.</p>
   <p class="note" data-testid="main-context">The <code>main</code> branch has no copy of the research tree (<code>research/information-concept-map/english-reconstruction/</code>, <code>…/cross-linguistic-audit/</code>). Items kept only there are named below as plain text, not links. Nothing in that tree is changed here.</p>
+
+  <p class="note" data-testid="frozen-status-note">RC1 preserves its freeze-time status, including “NOT-DEPLOYED”, as a historical record. That status may differ from the current delivery state of this navigation page or the RC1 files. Viewing a page at a public URL confirms delivery of that page; it does not settle the open theoretical questions. Merge and publication require a separate human decision.</p>
 
   <h2>Entry points</h2>
   <div class="cards">
@@ -42,9 +44,9 @@ code { overflow-wrap: anywhere; }
       <p style="margin-top:8px"><a data-nav-link="rc1-readme" href="four-bridge-rc1/README.md">README</a> · <a data-nav-link="rc1-limits" href="four-bridge-rc1/KNOWN_LIMITATIONS.md">Known limitations</a> · <a data-nav-link="rc1-manifest" href="four-bridge-rc1/RELEASE_MANIFEST.tsv">Release manifest (TSV)</a></p>
     </section>
     <section class="card" data-entry="br3-012">
-      <h3>BR3-012 prototype (existing)</h3>
+      <h3>BR3-012 prototype (not publicly available here)</h3>
       <p>R4, R4-SYS, R4-COMB and the BR3-012 graph (E2-005, E2-060; E2-004 hidden-listed). Prototype v0.1, unchanged. RC1 shows the BR3-012 units but does not redraw this graph.</p>
-      <p class="local" data-local-only="br3-012">Not in <code>main</code>. Kept in the local research tree at <code>research/information-concept-map/cross-linguistic-audit/br3-012-publication-prototype/</code>.</p>
+      <p class="local" data-local-only="br3-012">No verified public URL is available for this prototype. It is absent from <code>main</code> and this PR; the corresponding Pages path returns 404. Any future publication is a separate proposed addition requiring review and approval, with no publication date committed. Kept in the local research tree at <code>research/information-concept-map/cross-linguistic-audit/br3-012-publication-prototype/</code>.</p>
     </section>
   </div>
 
@@ -60,7 +62,7 @@ code { overflow-wrap: anywhere; }
   <p class="note" data-testid="tsv-encoding-note">TSV files are opened as plain text. The files are UTF-8, but the server sends them without a character set, so some browsers (for example Safari) may show Japanese text and symbols as garbled characters. In Safari on a Mac, choose View → Text Encoding → Unicode (UTF-8). On iPhone or iPad, open the same file in the repository view on GitHub, or download it and open it in another app. The file contents are unchanged.</p>
 
   <h2>Open items and untested environments</h2>
-  <p><a data-nav-link="limits" href="four-bridge-rc1/KNOWN_LIMITATIONS.md">Known limitations</a>. Theoretical items remain open. Safari (macOS, iOS) and iOS real devices: <strong>NOT-TESTED</strong>.</p>
+  <p><a data-nav-link="limits" href="four-bridge-rc1/KNOWN_LIMITATIONS.md">Known limitations</a>. Theoretical items remain open. Navigation v0.3 and RC1: <strong>iPhone Safari real-device check PASS (user-reported, 2026-10-30)</strong> for display, navigation/back, formula and notes, layers, copy and dark mode. This check preceded the final wording corrections on this page; the corrected wording has not been rechecked on the device. Linked README/TSV documents and the post-publication URL remain NOT-TESTED. See the <a data-nav-link="final-review" href="integration/pre_merge_final_corrections_v0.1.md">final correction and verification record</a>.</p>
 
   <p class="note" data-testid="nav-disclaimer">Links on this page are file navigation only. They do not add, change or imply any conceptual edge, prerequisite, identity or derivation between the items they connect.</p>
   <p class="note"><a data-nav-link="report" href="integration/four_bridge_rc1_repository_integration_v0.1.md">Integration report</a> · <a data-nav-link="main-nav-record" href="integration/main_context_navigation_v0.3.md">Main-branch navigation record v0.3</a> · <a data-nav-link="readme" href="README_main_v0.3.md">README (main, v0.3)</a></p>
