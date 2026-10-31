@@ -16,3 +16,6 @@ the paper were revised.
 資料です。
 
 完結済みの theorem / proof anatomy 実験系列は、[closed research record archive](./theorem_proof_anatomy_experiment/README.md) として整理しています。
+
+- [知性論の粗視化された停止・滞留についての著者明確化](intelligence_audit/residence_coarse_graining_author_clarification_2026-10-31_ja.md) — v2.5.0以降の読解。
+- [FIG009 改訂図の組込と表示監査](intelligence_audit/fig009_residence_continuation_2026-10-31_ja.md) — 静的描画、著者目視、支援技術の未検証を分けた記録。

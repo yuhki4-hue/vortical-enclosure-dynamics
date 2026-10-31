@@ -1,5 +1,8 @@
 # Intelligence Part II
 
+Current reading: "stopping" is a coarse-grained name for local retention or residence in a declared object, scale, and time window, with background change and reopening left possible. LR, the temporary LE-prime regime, and LE are scoped roles; retention, access, actual reuse, and stopping effects are assessed separately. This does not import the historical fixed-point model as a general account of cognitive stopping.
+
+
 ## Non-Closure of Inference, Externalization of Stopping, and Emergent Stopping Layers
 
 This repository directory contains the scaffold for Intelligence Part II, a Japanese TeX manuscript and an English TeX draft in the VED/IFGT application series.

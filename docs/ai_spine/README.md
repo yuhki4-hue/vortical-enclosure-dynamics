@@ -90,6 +90,8 @@ documented within its source-specific formal or navigation account. It does
 axiom. The schema and validator now record this as
 `status_semantics=source_local_documentary_role_only`.
 
+The intelligence application uses "stopping" as a coarse-grained, local residence description for a declared object, scale, and window; its support can continue changing. Environmental traces and internal retention may be compared by role without a shared mechanism or a typed VED-to-intelligence derivation.
+
 This core navigation ranking also does **not** entail an application-layer
 sequence from inferential non-closure to retained traces, log rereference
 (`LR`), emergent stopping-layer roles (`LE`), and stopping effects. Intelligence

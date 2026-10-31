@@ -1,5 +1,8 @@
 # Intelligence Part I
 
+In the current reading, a "stopping structure" is a locally retained, re-referenceable form at a declared object, descriptive scale, and time window. Its carrier may keep changing. Physical persistence, access, actual reuse, and cognitive effect require separate evidence; the cross-domain comparisons do not establish a shared mechanism.
+
+
 This directory contains the LaTeX source for *Structural Constraints on Intelligence as a Dynamical Phenomenon*, the first paper in the intelligence layer of the VED / IFGT application series.
 
 The Japanese working manuscript is retained in `draft_ja.md`; the current distributed build authority is `main_ja.tex` together with the modular files under `sections_ja/`. Cross-domain Bio-IFGT wording in the working manuscript is historical context, while the current TeX/PDF uses the scoped proposed-comparison wording.

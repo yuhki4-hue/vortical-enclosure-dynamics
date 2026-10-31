@@ -2,6 +2,8 @@
 
 > **Source status:** 本ファイルはworking/historical Markdownであり、current build authorityは`sections/`のTeXである。Bio-IFGTへの「same dynamics」「第二アトラクターのidentity」「個体間維持を示した」という旧帰属はcanonical TeXでscope済みであり、いずれもtyped translationやBio-local専用結果として確立されていない。
 
+> **2026-10-31 読解注記:** 本working原稿の「停止」「静止」「必然」は現行TeXの粗視化・局所保持の読解と同一視しない。現行のactive定義と根拠statusは日英TeX本文および監査ノートを参照。
+
 **The Non-Closure of Inference, Externalized Stopping, and the Emergent Stopping Layer: A VED-Theoretic Derivation**
 
 *Intelligence, Volume II — The Three-Layer Architecture of Sapient Cognition*

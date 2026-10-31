@@ -4,6 +4,9 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+- Added the FIG009 status-r2 role-view supplement to Intelligence Part II in Japanese and English while retaining the legacy three-layer Fig. 4 and its numbering. The accepted SVG pair is unchanged; a whole-view key and two overlapping A4 print panels improve paper readability. Static SVG/PDF checks passed, and the author compared the displayed figures with the PDFs and found no clipping, overlap, overflow, or truncated arrows or labels. Automated browser and assistive-technology checks remain open. The figure does not prove formation, feedback, or stopping effects.
+
+- Integrated the author's clarified, coarse-grained reading of "stopping" into Intelligence Parts I and II in Japanese and English: local residence of a referenceable form at a declared object, scale, and time window, with material/background change and reopening still possible. Distinguished retained support, access, actual reuse, and cognitive effect; treated environmental logs and slime-mold/individual retention as role comparisons rather than a shared mechanism or new empirical result. Preserved the historical strict-J fixed-point model and its limited scope. Updated the two audit notes and AI Spine guidance; no new VED-to-intelligence derivation or LE existence proof is claimed.
 - Archived the closed theorem/proof anatomy experimental series under
   `notes/theorem_proof_anatomy_experiment/`, with a reader-facing archive
   README, final experimental record, source architecture, source map, and

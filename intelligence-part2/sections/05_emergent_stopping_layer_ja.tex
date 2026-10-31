@@ -7,7 +7,7 @@
 
 三profileの具体例は保持するが、自律的創発や内発的移動性を独立に検証しない。Transformer自身の停止層とwhole-systemの外部停止との区別は未解決であり、図で決定しない。projectionは意識編との役割比較であり、同じ演算子の移送ではない。安定性は真理でなく、回復・改訂との関係も機能的提案であって保証ではない。
 
-ここでのactiveなarchitecture記述では、保持を担う追跡対象（記述上の呼称RetentionSupport）と、その役割評価、regime、利用のprocessを区別する。特定の記憶storeや新種の実体を措定するものではない。LR・LEおよび後述の一時的scaffold regimeは、宣言された分析scopeと時間窓に相対的な役割記述である。各評価ではsupportの同一性・連続性、system側とenvironment側、feedbackのrecipient、再参照・変形の経路、criterionと根拠を明示し、未確認事項はUnknownとする。同じ内容や名称だけではsupportの同一性は得られない。宣言model内での支持、仮定付きの割当て、特定criterion下の非支持、Unknownは別であり、欠測や競合を不存在・偽・不可アクセス・not-LEへ変換しない。
+ここでのactiveなarchitecture記述では、保持を担う追跡対象（記述上の呼称RetentionSupport）と、その役割評価、regime、利用のprocessを区別する。特定の記憶storeや新種の実体を措定するものではない。LR・LEおよび後述の一時的scaffold regimeは、宣言された分析scopeと時間窓に相対的な役割記述である。各評価ではsupportの同一性・連続性、system側とenvironment側、feedbackのrecipient、再参照・変形の経路、criterionと根拠を明示し、未確認事項はUnknownとする。同じ内容や名称だけではsupportの同一性は得られない。ここで「停止」は、指定された対象・記述尺度・時間窓においてforegroundの更新が減衰し、参照可能な形が局所的に滞留することをいう粗視化表現である。担い手の物質的変化、背景の更新、侵食、再開を排除しない。石が静止して見えても内部の変化を失わないという比喩と同様、見かけの停止を全域的な不動点と同一視しない。LEの保持役割を、この停止効果の観測から逆算して認定しない。宣言model内での支持、仮定付きの割当て、特定criterion下の非支持、Unknownは別であり、欠測や競合を不存在・偽・不可アクセス・not-LEへ変換しない。
 
 ownnessは、帰還方向と持続、recipient、再参照の制御、reuse、現在状態・浮上した履歴表現・更新条件・外部構造への効果を分ける記述bundleに留める。score、binary owner、法的所有、主体、自律性の判定ではなく、分析上の内外も存在論的な主体境界を固定しない。保存された図、停止の観測、旧noFP議論は役割認証の根拠にならない。以下のactive LR・LE説明が現在の記述契約を担い、局所的に囲う旧定義・機構は構成案として保存する。論文全体を歴史資料化したり、他の解釈を否定したりする区分ではない。
 
@@ -38,6 +38,27 @@ ownnessは、帰還方向と持続、recipient、再参照の制御、reuse、�
 \label{fig:part2-three-layer}
 \figurenote{$L_F$ の条件付き不動点議論と、痕跡を $L_R$ として保持する構成案は別である。$L_R$ の再帰運動が外部相互拘束 $H_{ij}$ の下で $L_E$ の創発に関わるという仮説であり、独立検出は未解決である。}{本図は \S{}3 の「閉じない」と \S{}5 の「それでも停止する」を接続する。条件付き停止議論だけでは、上位層 $L_R$ と $L_E$ の生成条件を確立しない。自前の層とwhole-systemの区別も保留する。}
 \end{figure}
+\noindent\textbf{FIG009 改訂役割図の補助表示。} 次の補助図は、上の旧三層構成図を歴史的に保存したまま、現在の LR（保持痕跡の役割）、LE'（同じsupportの一時的regime）、LE（準安定な保持役割）をscope付きで対照する。ここでの「停止」は指定対象・尺度・時間窓での粗視化された滞留であり、全内部更新の消失ではない。図中の実線・破線は形成・帰還・停止効果の実証ではない。著者は表示図をPDFと照合し、欠け・重なり・はみ出し・矢印やlabelの見切れがないと確認した。これは著者の目視証拠であり、ブラウザ自動検証や支援技術の認証ではない。原寸での読解には同名のstatus-r2日本語SVGを用いる。
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{fig4_support_role_regime_architecture_p360_status_r2_ja_preview.pdf}
+\caption*{FIG009 改訂役割図の全体図。続く上下2枚の印刷用パネルは重複範囲を設けて文字を拡大する。原寸SVGが主たるassetであり、ブラウザ自動検証・支援技術の確認は未完。}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,trim=0 145.7mm 0 0,clip]{fig4_support_role_regime_architecture_p360_status_r2_ja_preview.pdf}
+\caption*{FIG009印刷用派生図・上段（1/2）。受入済みSVGの描画を切り出したもので、役割の再定義ではない。上下は20 mm重複し、接続関係を追える。}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,trim=0 0 0 150mm,clip]{fig4_support_role_regime_architecture_p360_status_r2_ja_preview.pdf}
+\caption*{FIG009印刷用派生図・下段（2/2）。前の全体図・上段と併読する。矢印とlabelは条件付きの構成例であり、形成・効果の証明ではない。}
+\end{figure}
+\clearpage
+
 
 \bigskip
 

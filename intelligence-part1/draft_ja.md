@@ -2,6 +2,8 @@
 
 > **Source status:** 本ファイルはworking manuscriptである。current distributed buildは`main_ja.tex`と`sections_ja/`をauthorityとし、Bio-IFGTを含む四層比較はそこでproposed structural comparisonへscope済みである。以下に残る旧「同一構造」表現は、common carrier、mechanism、identity、typed cross-domain translationを確立したという意味ではない。
 
+> **2026-10-31 読解注記:** 本working原稿の「停止」「静止」「必然」は現行TeXの粗視化・局所保持の読解と同一視しない。現行のactive定義と根拠statusは日英TeX本文および監査ノートを参照。
+
 **Author:** Yuhki Endoh
 **Affiliation:** Independent Researcher
 **Series:** Intelligence Section, Part I
