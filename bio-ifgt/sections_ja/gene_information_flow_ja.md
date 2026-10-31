@@ -1,5 +1,7 @@
 # 5. Gene × Information Flow
 
+> **作業版scope:** DNA--\(\theta\)、gene event--\(J\)、gene source--\(\sigma\)、\(\Phi\)--restoring tendencyは抽象model representationまたは提案的biological interpretationである。具体的genotype-to-parameter map、event-to-current aggregation、measured source map、生化学mechanismは与えない。
+
 本節では、DNAと生物学的過程を、情報密度とその流れによって記述する枠組みを与える。
 
 ここでの目的は、DNAから発生・形態・細胞運命が立ち上がる過程を、
@@ -16,6 +18,8 @@ s \in \{A, T, G, C\}^N
 \]
 
 で表される。
+
+> **作業版注記:** ここで \(N\) はsequence lengthであり、toy modelのneural field \(N\) とは別である。
 
 ここで重要なのは、DNAが意味や目的を持たない点である。
 
@@ -44,13 +48,13 @@ DNAが与えるのは、
 として表現される。
 
 これらのイベントは離散的であるが、
-その総和として連続的な情報流 \(J(r, t)\) が形成される。
+その総和は連続的な情報流 \(J(r, t)\) を用いてmodel化しうる。explicit event-to-current mapは与えない。
 
 したがって、遺伝子ネットワークは、
 
-> 情報流を生成する関係構造
+> 情報流のcandidate sourceとして解釈される関係構造
 
-として理解される。
+として提案的に理解される。gene networkと \(J\) のoperational identityは主張しない。
 
 ---
 
@@ -91,9 +95,9 @@ F = -\nabla \Phi
 
 重要なのは、ここで導入されているのが特別な力ではなく、
 
-> 安定な状態ほど維持されやすく、周囲の状態を引き込む
+> 指定されたアトラクタ型モデルでは、選ばれた領域へ向かう復元バイアスとして表現しうる
 
-という一般的な性質の記述である点である。
+という条件付き記述である点である。安定basinの存在や一般的returnは、この形式関係だけからは得られない。
 
 ---
 
@@ -115,7 +119,9 @@ F_k(I, J, r, t) > \theta_k
 
 のような条件で反応が切り替わる。
 
-ここで \(\theta_k\) はDNAにより誘導されるパラメータである。
+> **版差注記:** このworking Markdownは \(F_k\) の引数から \(\theta\) を省略している。canonical EN / JA manuscriptは \(F_k(I,J,\mathbf r,t;\theta)\) を用いる。省略をsilent identityや修正済みsignatureとは扱わず、versioned variantとして保存する。また \(F_k\) はvector bias \(\mathbf F\) およびstate-space field \(F(x;\theta)\) とは別objectである。
+
+ここで \(\theta_k\) は抽象model layerでDNA-conditioned parameter setと関連づけられるが、具体的なsequence-to-threshold mapは実装されない。
 
 ---
 
@@ -131,13 +137,13 @@ F_k(I, J, r, t) > \theta_k
 
 その結果として、
 
-> 安定した状態（アトラクタ）が形成される
+> 結果の配置には、アトラクタに基づく解釈を与えうる
 
-この安定状態が、細胞運命や形態として観測される。
+細胞運命や観測形態との同定は、この系列だけから導かれる結果ではなく、別の生物学的対応である。
 
 ---
 
-## 5.7 スケール不変性
+## 5.7 提案的なスケール間再利用
 
 この記述は、
 
@@ -145,15 +151,17 @@ F_k(I, J, r, t) > \theta_k
 - 細胞スケール
 - 組織スケール
 
-に対して同じ形式で適用できる。
+に対して同じ記述語彙を再利用することが提案される。
 
-違いは粗視化のレベルのみであり、
+ただし違いは粗視化levelだけとは限らず、source-local objectも変わる。
 
 \[
 I, J, \Phi, \text{閾値}, \text{安定解}
 \]
 
-という構造は変わらない。
+という表示はrole analogyの候補であって、typed scale map、coarse-graining operator、保存invariant、universalityを確立しない。
+
+ここで表示中の「安定解」はworking sourceの圧縮された解釈ラベルであり、具体系の定常解、安定basin、またはscaleをまたぐ同一解を確立したという意味ではない。
 
 ---
 
@@ -162,6 +170,6 @@ I, J, \Phi, \text{閾値}, \text{安定解}
 本節の内容は次のようにまとめられる。
 
 > DNAは意味を持たない条件集合であり、  
-> 生物学的構造は、情報密度とその流れによって形成される安定解として現れる。
+> 情報密度とその流れは候補となる持続配置を記述し、生物学的構造という読みは解釈として区別される。
 
 この枠組みは、次節以降で扱う発生および形態形成の具体例の基盤となる。

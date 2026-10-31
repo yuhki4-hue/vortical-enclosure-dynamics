@@ -1,4 +1,4 @@
-# VED Vol.3 — 重力・時空統一篇
+# VED Vol.3 — 重力・宇宙論の構造比較
 ## Vortical Enclosure Dynamics：閉包密度から重力・宇宙論へ
 ### 独立研究ドラフト — 2026
 
@@ -6,12 +6,16 @@
 
 ## まえがき
 
-Vol.1では「差がある」という一点から出発し、時間 $\tau$ と空間 $d_{ij}$ の生成を記述した。
-Vol.2では同じ $C_{ij}$ から標準模型の構造——粒子・ゲージ群・電荷・質量・世代——が閉包幾何の帰結として現れることを示した。
+Vol.1では $C_{ij}$ からtime-like accumulationとnetwork distanceを構成し、physical
+interpretationを候補として残した。Vol.2では閉包幾何と標準模型の構造とのstructural
+correspondenceを提案した。
+
+このVol.3 guideの $C_{ij}$ はVol.1のcausal-log identityを継承する。navigation recordsで同じ
+glyphを使うclosure-degree carrierとは、ここでは同一視しない。
 
 Vol.3では重力を扱う。核心的主張は一つ：
 
-$$\boxed{\text{重力は新しい力ではない。距離の定義が変わっただけである。}}$$
+$$\boxed{\text{modified distanceをgravity-like descriptionの候補として用いる}}$$
 
 本理論は現時点で定量的予測能力を持たない。構造的整理が目的である。
 
@@ -23,6 +27,9 @@ $$\boxed{\text{重力は新しい力ではない。距離の定義が変わっ�
 
 $$d_{ij} = -\log \tilde{S}_{ij}, \qquad \tilde{S}_{ij} = \max_{\gamma: i\to j} \prod_{(ab)\in\gamma} S_{ab}$$
 
+これはadmissible pathsと積・logが定義できるedge strengthsを持つweighted network上の
+path constructionであり、physical-space interpretationとは別のequation roleである。
+
 $$\boxed{\text{この距離は、}C_{ij}\text{の構造だけで決まる}}$$
 
 $$\boxed{\text{この定義からは、重力が出てこない}}$$
@@ -31,7 +38,7 @@ $$\boxed{\text{この定義からは、重力が出てこない}}$$
 
 ### 1.2 重力とは何か
 
-$$\boxed{\text{重力とは、閉包密度が距離構造を歪める現象である}}$$
+$$\boxed{\text{閉包密度をdistance distortionの候補sourceとして用いる}}$$
 
 従来：新しい力を導入する。
 VED：距離の定義を修正する。
@@ -48,13 +55,16 @@ $$w_{ab} = -\log S_{ab} + \epsilon L_{ab}$$
 
 $$\boxed{d_{ij} = \min_{\gamma: i\to j} \sum_{(ab)\in\gamma} w_{ab}}$$
 
+これは表示されたedge costを入力とするformal min-path constructionであり、continuum fieldや
+OPENなcarrier bridgeの導出ではない。
+
 ### 1.4 重力の本質
 
 $$\boxed{\text{重力は「別の力」ではなく、経路選択そのものを変える}}$$
 
 Einsteinが「力→曲率」と置き換えたように、VEDでは「曲率→経路コスト」と置き換える。
 
-$$\boxed{\text{重力は新しい力ではない。距離の定義の修正として現れる。}}$$
+$$\boxed{\text{距離の修正はgravity-like behaviorへのcandidate routeを与える}}$$
 
 ---
 
@@ -66,9 +76,16 @@ $$\boxed{L_{ab} = \sum_k \phi_{abk}}$$
 
 $$\boxed{\text{閉包密度 = 構造の密度}}$$
 
+**Carrier note.** $L_{ab}$ はpath costに使うedge quantityである。以下の $L_{\mu\nu}$ は
+proposed tensorial coarse quantity、Vol.1の $L\sim|\omega|$ はscalarである。同じ文字を共有しても
+同一objectではなく、このguideは完全なcross-carrier bridgeを与えない。
+
 ### 2.2 テンソル化
 
 $$L_{\mu\nu}(x) = \left\langle L_{ab},\, \hat{e}^{(ab)}_\mu \hat{e}^{(ab)}_\nu \right\rangle_U$$
+
+このdisplayed averageはproposed **PARTIAL / OPEN bridge** である。sampling、normalization、
+scaling / limit、tensorizationのuniqueness、およびscalar $L$ とのrelationは未構築である。
 
 $$\boxed{L_{\mu\nu} = \text{閉包テンソル}}$$
 
@@ -76,19 +93,26 @@ $$\boxed{L_{\mu\nu} = \text{閉包テンソル}}$$
 
 $$g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu}$$
 
-$$\boxed{\text{計量は閉包密度によって決まる}}$$
+この式はproposed continuum description内部のrelationである。network distance $d_{ij}$ から
+$g^{(0)}_{\mu\nu}$ へのbridgeは **PARTIAL / OPEN** であり、reconstruction、convergence、
+normalization、uniquenessは与えられない。
+
+$$\boxed{\text{閉包密度はproposed effective metricへ寄与する}}$$
 
 ### 2.4 有効結合としての G
 
 $$\boxed{G_{\text{eff}} \sim \alpha_G}$$
 
-重要：$G$ は基本定数ではなく、構造から出る有効結合。
+ここでは $G$ をcoarse-grained closure structureに対応するeffective couplingの候補として扱う。
 
-$$\boxed{\text{Gの普遍性は動的に生まれる}}$$
+$$\boxed{\text{Gの普遍性はOPENなcoarse-graining targetである}}$$
 
-$$\boxed{\text{重力 = 閉包密度}}$$
+$$\boxed{\text{閉包密度はgravity-like behaviorのcandidate sourceである}}$$
 
-$$\boxed{\text{時空は閉包の粗視化として現れる}}$$
+$$\boxed{\text{粗視化された閉包幾何はspacetime descriptionの候補である}}$$
+
+ここでのdistance-to-metric connectionはeffective endpointを示す **PARTIAL / OPEN bridge** であり、
+reconstruction、convergence、uniqueness、physical interpretationを確立しない。
 
 ---
 
@@ -100,9 +124,16 @@ $$C_{ij} = 1 - \exp(-\lambda \rho_i H_{ij}), \qquad \rho_i = \sum_j C_{ij}$$
 
 $$\boxed{\text{自己参照的な固定点方程式}}$$
 
-### 3.2 連続極限と渦
+### 3.2 連続表現と渦
+
+ここで用いるcontinuum $J$ とdiscrete $J_{ij}$ の関係は **INFORMAL / OPEN bridge** である。
+averaging、scaling、orientation、vector-field mapは表示されない。
 
 $$\omega = \nabla \times J, \qquad L \sim |\omega|$$
+
+このcontinuum vector-field representationでは、$\omega$ はrepresented flowのcurlによる定義である。
+$L\sim|\omega|$ はeffectiveなscalar比例関係であり、magnitude conventionとnormalizationは固定されず、
+普遍的identityまたはstability theoremではない。
 
 $$\boxed{\text{閉包密度は流れの渦として現れる}}$$
 
@@ -112,13 +143,20 @@ $$g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu}[g]$$
 
 $$\boxed{\text{計量は自分自身で決まる（固定点問題）}}$$
 
+これはeffective continuum representation内のproposed self-consistency targetであり、解の存在・
+一意性・iterationの収束・安定性は確立しない。$L_{\mu\nu}[g]$ のconstructionもbridge-dependent
+のままである。
+
 ### 3.4 線形化と方程式の形
 
 弱重力極限で：
 
 $$\boxed{G_{\mu\nu} = 8\pi G_{\text{eff}} L_{\mu\nu}}$$
 
-$$\boxed{\text{Einstein方程式と同型}}$$
+$$\boxed{\text{Einstein方程式とのstructural analogy}}$$
+
+これはintended weak-field targetであり、係数を含む完全なlinearization、nonlinear recovery、
+observational equivalenceを確立しない。
 
 ### 3.5 重要な転換
 
@@ -126,9 +164,9 @@ $$\boxed{\text{Einstein方程式と同型}}$$
 
 VED：
 
-$$\boxed{\text{固定点構造の線形近似（有効理論）}}$$
+$$\boxed{\text{固定点構造のintended weak-field comparison}}$$
 
-古典相でのみ成立し、他の相では破れる。
+比較は古典相にscopeされる。物理的重力のemergenceまたはexact recoveryは確立しない。
 
 $$\boxed{\text{GRは間違っていない}}$$
 
@@ -152,17 +190,19 @@ $$\boxed{\text{Newtonポテンシャル}}$$
 
 $$\boxed{ds^2 \approx -\left(1-\frac{2GM}{r}\right)dt^2 + \left(1+\frac{2GM}{r}\right)dr^2 + r^2 d\Omega^2}$$
 
-$$\boxed{\text{Schwarzschild解と一致（一次近似）}}$$
+$$\boxed{\text{Schwarzschild型外部解との一次近似比較}}$$
 
 ### 4.3 地平線のVED的読み替え
 
-地平線 $r_s = 2GM$ では $g_{tt} \to 0$。VEDでは：
+地平線 $r_s = 2GM$ では $g_{tt} \to 0$。以下は、この比較対象に対するVEDの候補解釈であり、成立済みの物理的説明ではない：
 
 $$\boxed{\text{地平線 = 経路構造の臨界点}}$$
 
-方程式が壊れているのではなく、相が変わる境界。
+経路コストの発散、伝播の凍結、臨界的閉包密度による相境界という読み替えは提案にとどまる。動的実現、安定性、物理的同定はOPENである。
 
-$$\boxed{\text{GRの外部解はVEDの極限として現れる}}$$
+$$\boxed{\text{GRの外部解はVEDのintended comparison targetである}}$$
+
+完全なnonlinear recovery、係数matching、observational equivalenceはOPENである。
 
 ---
 
@@ -170,27 +210,29 @@ $$\boxed{\text{GRの外部解はVEDの極限として現れる}}$$
 
 ### 5.1 地平線 = 相の境界
 
-$$\boxed{\text{地平線 = 相の境界}}$$
+$$\boxed{\text{地平線をcandidate phase boundaryとしてmodel化する}}$$
 
 外部では古典相が成立：
 
 $$\sigma \approx 0, \quad \nabla \cdot J \approx 0, \quad \text{固定点構造が成立}$$
 
-地平線を越えるとこの条件が崩れる。
+地平線を越えるとこの記述条件が変わる、というmodel interpretationを提案する。
 
 ### 5.2 内部のダイナミクス
 
 $$\boxed{\sigma > 0}$$
 
-ログ生成が再び活性化し、保存則が破れる。
+本modelではpositive-source regimeとし、source-free balance conditionが成立しない。
 
-$$\boxed{\text{時間が再び生成され始める}}$$
+$$\boxed{\text{time-like accumulationが再びactiveになるmodel regime}}$$
+
+これはphysical-time generationまたはthermodynamic irreversibilityを確立しない。
 
 ### 5.3 特異点を閉包極限として読む
 
 $$B(L) = -\kappa_B \log\!\left(1 - \frac{L}{L_{\max}}\right) \to \infty \qquad (L \to L_{\max})$$
 
-$$\boxed{\text{中心は通常の特異点対象ではなく、閉包の漸近的極限である}}$$
+$$\boxed{\text{中心を閉包の漸近的極限として読むcandidate interpretation}}$$
 
 ### 5.4 重要な転換
 
@@ -198,11 +240,11 @@ $$\boxed{\text{中心は通常の特異点対象ではなく、閉包の漸近�
 
 VED：
 
-$$\boxed{\text{ブラックホール = 新しい相の入口}}$$
+$$\boxed{\text{ブラックホールを新しい相の入口として読む候補}}$$
 
-$$\boxed{\text{ブラックホール内部は特異点ではない}}$$
+$$\boxed{\text{non-singular interiorはproposed physical interpretationである}}$$
 
-$$\boxed{\text{非平衡閉包相である}}$$
+$$\boxed{\text{内部を非平衡閉包相としてmodel化する}}$$
 
 ---
 
@@ -212,13 +254,19 @@ $$\boxed{\text{非平衡閉包相である}}$$
 
 連続式 $\partial_t \rho + \nabla \cdot J = \sigma$ において均一・等方近似を用いると：
 
+ここでの $t$ と $\sigma$ はVol.1のderivative parameter / continuum sourceとしての
+source-local identityを継承する。IFGTのeffective external $t$ および別途構成される
+generation term $\sigma$ とは同一視しない。
+
 $$\boxed{\dot{\rho} + 3H\rho = \sigma}$$
 
 ### 6.2 τ時間での方程式
 
 $$\boxed{\frac{d\rho}{d\tau} + 3\gamma \rho^2 = \sigma(\rho)}$$
 
-$$H^2 \propto \rho \quad \Longleftrightarrow \quad \text{Friedmann方程式と同型}$$
+ここでは $H_\tau\sim\rho$ をadditional effective ansatzとして用いる。
+
+$$H^2 \propto \rho \quad \text{（Friedmann方程式とのstructural analogy）}$$
 
 ### 6.3 σの形
 
@@ -234,7 +282,9 @@ $$a(\tau) \sim e^{H_*\tau} \quad \Rightarrow \quad \boxed{\text{de Sitter型加�
 
 $$\Lambda_{\text{eff}} \sim H_*^2 = \gamma^2\rho_*^2$$
 
-$$\boxed{\text{宇宙定数はパラメータではなく、閉包構造から決まる}}$$
+$$\boxed{\text{effective }\Lambda\text{を固定点closure scaleと対応づける}}$$
+
+observed cosmological constantとのidentityはOPENである。
 
 ### 6.6 重要な転換
 
@@ -242,19 +292,24 @@ $$\boxed{\text{宇宙定数はパラメータではなく、閉包構造から�
 
 VED：
 
-$$\boxed{\text{宇宙膨張 = 相の選択}}$$
+$$\boxed{\text{宇宙膨張を相の選択としてmodel化する}}$$
 
-$$\boxed{\text{初期宇宙とBH内部は同じ相の異なるスケールである}}$$
+$$\boxed{\text{初期宇宙とBH内部を類似する}\sigma>0\text{ regimeとして提案する}}$$
 
-$$\boxed{\text{宇宙は生成され続けている}}$$
+$$\boxed{\text{continuous structural generationはcosmological model proposalである}}$$
 
-$$\boxed{\text{膨張はその結果である}}$$
+$$\boxed{\sigma>0\text{はcandidate expansion regimeを示す}}$$
+
+$\sigma>0$ とphysical expansionの必要十分関係は確立しない。
 
 ---
 
 ## 第7章　総括 — 構造としての世界
 
-### 7.1 全体構造
+### 7.1 role-separated全体構造
+
+次のdisplayはtopic orderを圧縮したhistorical mnemonicであり、各arrowが同じlogical relationを
+表すわけではない。
 
 $$\boxed{\text{差} \rightarrow C_{ij} \rightarrow J \rightarrow \omega \rightarrow L \rightarrow g \rightarrow \text{Einstein方程式} \rightarrow \text{宇宙}}$$
 
@@ -268,25 +323,39 @@ $$\boxed{\text{差} \rightarrow C_{ij} \rightarrow J \rightarrow \omega \rightar
 | Einstein方程式 | 固定点近似 |
 | 宇宙 | $\sigma>0$の全体相 |
 
+| 局所関係 | navigation role | status |
+|---|---|---|
+| causal-log $C_{ij}\to J_{ij}$ | discrete definition | formal construction |
+| $J_{ij}\to\mathbf J(x)$ | discrete / continuum correspondence | INFORMAL / OPEN bridge |
+| $\mathbf J(x)\to\omega$ | curl definition | formal construction |
+| $\omega\to L$ | effective proportional relation | phenomenological；enclosure mechanismはcandidate |
+| $L,L_{ab}\to L_{\mu\nu}$ | carrier / coarse correspondence | PARTIAL / OPEN bridge |
+| network / closure quantities $\to g_{\mu\nu}$ | effective metric target | PARTIAL / OPEN bridge |
+| $g_{\mu\nu}\to$ Einstein方程式 | weak-field structural comparison | exact recoveryはDOWNGRADED / OPEN |
+| Einstein comparison $\to$ 宇宙 | physical / cosmological interpretation | proposed；observational mapはOPEN |
+
 $$\boxed{\text{すべては一つの連鎖である}}$$
+
+ここで「一つの連鎖」は一つのresearch programに属するという意味に限定する。formal
+construction、bridge、effective relation、physical interpretationは上表のとおり分離し、
+[role-separated navigation record](navigation/generative_sequence.md)をrepository-wide authorityとする。
 
 ### 7.2 各Volの対応
 
-- **Vol.1（生成）**：$C_{ij}$ の定義、時間 $d\tau/dt=\rho$、空間 $d_{ij}=-\log\tilde{S}_{ij}$
-- **Vol.2（構造）**：三角閉包、SU(3)×SU(2)×U(1)、粒子・世代・電荷・質量
-- **Vol.3（ダイナミクス）**：閉包密度→重力、固定点→Einstein方程式、$\sigma>0$→宇宙膨張
+- **Vol.1（生成）**：$C_{ij}$ の定義、time-like accumulation、network distance
+- **Vol.2（構造）**：三角閉包とparticle / gauge / mass-like candidate comparisons
+- **Vol.3（ダイナミクス）**：gravity-like、Einstein weak-field、cosmologyのcandidate comparisons
 
-$$\boxed{\text{生成・構造・ダイナミクスが統一される}}$$
+$$\boxed{\text{生成・構造・ダイナミクスを一つのprogram内で比較する}}$$
 
 ### 7.3 最終的な転換
 
-$$\boxed{\text{すべては構造から導かれる}}$$
+$$\boxed{\text{各model constructionは構造を共通の入力として用いる}}$$
 
-- 時間は生成される
-- 空間は構造である
-- 粒子は閉包である
-- 力は流れである
-- 宇宙は相である
+- time-like orderingとnetwork distanceはformalに構成されるが、physical identityはOPENである
+- particle-like candidateはclosure minimumとして表される
+- gravity-like behaviorはeffective interpretationとして提案される
+- 宇宙論的phase identityはcandidate interpretationである
 
 ### 7.4 最後の一文
 
@@ -297,11 +366,11 @@ $$\boxed{\text{閉じきらないことで存在している}}$$
 これは本理論の出発点であり、結論でもある。
 
 $$\boxed{\begin{aligned}
-\text{時間} &= \text{ログの量} \\
-\text{空間} &= \text{ログの構造} \\
-\text{粒子} &= \text{閉包アトラクタ} \\
-\text{重力} &= \text{渦密度が作るポテンシャル} \\
-\text{宇宙} &= \text{生成が持続する相}
+\text{time-like quantity} &= \text{ログの量} \\
+\text{spatial candidate} &= \text{network log-distance} \\
+\text{particle-like candidate} &= \text{閉包minimum} \\
+\text{gravity-like candidate} &= \text{effective closure-density potential} \\
+\text{cosmological candidate} &= \text{positive-source phase model}
 \end{aligned}}$$
 
 $$\boxed{\text{すべてが}C_{ij}\text{という一本の根から出ている}}$$
@@ -319,7 +388,7 @@ $$\boxed{\text{すべてが}C_{ij}\text{という一本の根から出ている}
 | $L_{ab} = \sum_k\phi_{abk}$ | 局所閉包テンソル | Vol.2+Vol.3 |
 | $J_{ij} = C_{ij}-C_{ji}$ | ログ流（反対称） | Vol.3 |
 | $\omega = \nabla\times J$ | 渦度 | Vol.3 |
-| $\sigma$ | ログ生成率（時間の源） | Vol.3 |
+| $\sigma$ | Vol.1由来のcontinuum log-generation rate | Vol.1+Vol.3 |
 | $\Psi$ | 重力ポテンシャル | Vol.3 |
 | $\alpha_G$ | 重力結合定数（構造由来） | Vol.3 |
 | $G_{\text{eff}}$ | 有効重力定数 | Vol.3 |
@@ -330,4 +399,4 @@ $$\boxed{\text{すべてが}C_{ij}\text{という一本の根から出ている}
 
 ---
 
-*Vol.3 — 重力・時空統一篇：閉包密度から宇宙へ　2026*
+*Vol.3 — 重力・宇宙論の構造比較：閉包密度から宇宙へ　2026*

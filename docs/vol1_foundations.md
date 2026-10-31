@@ -35,26 +35,31 @@ In all such cases, structure is presupposed rather than derived.
 
 VED takes a different approach:
 
-$$\boxed{\text{Structure is not assumed. It is generated.}}$$
+$$\boxed{\text{The framework proposes constructions of structure from difference.}}$$
 
 This shift is not merely philosophical. It changes what counts as an explanation and what counts as a primitive.
 
 ## 1.3 From Difference to Dynamics
 
-Given the existence of difference, a necessary chain of consequences follows:
+In the local-field representation used here, the proposed chain is:
 
 $$\boxed{\text{difference} \rightarrow \text{gradient} \rightarrow \text{flow} \rightarrow \text{vortex} \rightarrow \text{closure}}$$
 
-- Difference implies spatial or structural non-uniformity, which implies a gradient.
-- A gradient drives a flow: $J \sim -\nabla\delta$.
-- A sustained flow generates circulation.
-- Circulation stabilizes into closed structures — *closures*.
+- In the stated local-field representation, a represented difference can have a gradient.
+- The ansatz $J \sim -\nabla\delta$ provides an effective directed-flow description.
+- Sustained flow can support circulation.
+- Circulation is proposed as a route to closed structures — *closures*.
 
-This chain is not imposed externally. It is the necessary consequence of the existence of asymmetry.
+Here $\nabla\delta$ is the gradient of a represented difference field on a
+domain where that operator is defined, and $J\sim-\nabla\delta$ is an
+effective proportional flow relation with no normalization fixed. The
+stronger necessity and pre-geometric readings are separate from these
+equation roles.
 
 ## 1.4 Scope of the Framework
 
-The goal of this framework is to derive, from this minimal starting point:
+The goal of this framework is to construct or propose candidate interpretations
+of the following from this minimal starting point:
 
 - time,
 - space,
@@ -63,20 +68,23 @@ The goal of this framework is to derive, from this minimal starting point:
 - gravity,
 - and cosmological expansion.
 
-No external structure is introduced at any stage. Each element emerges from the dynamics of causal logs on a discrete network, as developed in the following chapters.
+The following chapters test whether each element can be represented from causal
+logs on a discrete network. Operator domains and continuum representations
+used along the way are documented explicitly; physical emergence is not
+established by the compact chain alone.
 
 ## 1.5 On Method
 
 This work does not present a complete predictive theory. It is a structural framework:
 
-- identifying the minimal objects necessary to generate physical structure,
+- identifying candidate minimal objects for a model of physical structure,
 - defining their relations through a self-referential equation,
 - and tracing the consequences of that equation across scales.
 
 $$\boxed{\text{The aim is not closure, but coherence.}}$$
 
 A theory that closes completely — that admits no further extension — violates its own premise. If difference is the source of structure, then a closed theory is a dead theory.
-# Chapter 2 — Causal Logs and the Generation of Time
+# Chapter 2 — Causal Logs and Local Time-Like Accumulation
 
 ## 2.1 Two Layers: History and Structure
 
@@ -93,7 +101,9 @@ $$\boxed{\text{The world is not the sum of what happened, but what was retained.
 
 ## 2.2 Why Selection Is Necessary
 
-If all history were retained equally, no structure would emerge: every node would be equally connected, gradients would vanish, and dynamics would cease. Structure requires selection.
+Within the model, uniform retention removes the gradients used by its structural
+construction: every node becomes equally connected and the represented dynamics
+ceases. This motivates selective retention.
 
 The key question is therefore not *what happened*, but:
 
@@ -125,37 +135,53 @@ $$\boxed{\text{Structure generates its own selectivity.}}$$
 
 ## 2.4 Fixed Points and Physical Structure
 
-The self-referential equation admits stable fixed points $C^*_{ij}$ at which the structure no longer changes appreciably. At such fixed points:
+The proposed fixed-point interpretation considers candidate stable points
+$C^*_{ij}$ at which the structure would no longer change appreciably. At such
+candidate points:
 
 - $\rho_i$ stabilizes,
 - the causal log network becomes persistent,
-- effective laws emerge as stable attractors.
+- effective-law behavior is proposed as a candidate stable-attractor interpretation.
 
-$$\boxed{\text{Stable physical structure = fixed point of the selection dynamics.}}$$
+$$\boxed{\text{A fixed point is a candidate model of persistent structure.}}$$
 
-## 2.5 The Generation of Time
+At equation level, the causal-log and density relations specify a
+node-indexed constitutive / self-consistency target, not a complete update
+map. Their display alone establishes neither fixed-point existence nor
+uniqueness, iterative convergence, or stability.
 
-Time is not a background parameter in this framework. It is defined as the rate at which causal logs accumulate at a node:
+## 2.5 Local Time-Like Accumulation
+
+The node-local quantity $\tau_i$ is not introduced as a background clock. It is
+defined relative to the derivative / ordering parameter $t$ as follows:
 
 $$\boxed{\frac{d\tau_i}{dt} = \rho_i}$$
+
+**Role / domain:** this defines a node-local time-like accumulation quantity
+relative to the derivative / ordering parameter $t$. Conditional on
+$\rho_i\geq0$, it is non-decreasing with respect to $t$; the equation alone
+does not identify $\tau_i$ with a physical clock.
 
 Several consequences follow immediately:
 
 - Since $\rho_i \geq 0$ by construction, $\tau_i$ is monotonically non-decreasing.
-- Irreversibility is built into the definition; no separate thermodynamic argument is required.
-- Where $\rho_i = 0$, time does not advance.
+- Where $\rho_i = 0$, the defined quantity $\tau_i$ does not advance relative to $t$.
+- Monotonicity does not by itself establish non-reconstructibility, thermodynamic irreversibility, or a physical arrow of time.
 
-$$\boxed{\text{Time is the rate at which structure accumulates.}}$$
+$$\boxed{\tau_i\text{ is a node-local accumulation / ordering quantity.}}$$
 
-## 2.6 Irreversibility Is Structural
+## 2.6 Monotonicity and Irreversibility Claims
 
-In standard formulations, the arrow of time must be explained by appeal to initial conditions or entropy. Here, irreversibility is immediate:
+The source construction immediately supplies the following monotonicity inputs:
 
 - $H_{ij}$ accumulates without reversal,
 - $C_{ij}$ is a projection of $H_{ij}$ with $C_{ij} \in [0,1)$,
 - $\rho_i \geq 0$ by construction.
 
-$$\boxed{\text{Irreversibility is structural, not emergent from statistical assumptions.}}$$
+$$\boxed{\rho_i\geq0\Rightarrow\tau_i\text{ is non-decreasing with respect to }t.}$$
+
+This conditional result does not establish state non-reconstructibility,
+thermodynamic irreversibility, or a physical arrow of time.
 
 ## 2.7 Summary
 
@@ -168,7 +194,7 @@ From a single self-referential selection rule, we obtain a notion of structure, 
 ## 2.8 Transition to Space
 
 The next step is to extract spatial structure from $C_{ij}$. The causal log matrix is asymmetric: $C_{ij} \neq C_{ji}$ in general. Its symmetric component carries information about spatial proximity; its antisymmetric component carries causal directionality. Chapter 3 develops this decomposition into a definition of distance and effective geometry.
-# Chapter 3 — Distance and the Emergence of Space
+# Chapter 3 — Network Distance and an Effective Spatial Candidate
 
 ## 3.1 From Logs to Geometry
 
@@ -193,7 +219,9 @@ $$S_{ij} = \frac{1}{2}(C_{ij} + C_{ji}), \qquad A_{ij} = \frac{1}{2}(C_{ij} - C_
 
 $$\boxed{\text{Space is encoded in } S_{ij}; \quad \text{causal directionality in } A_{ij}.}$$
 
-This decomposition shows that time and space are not independently postulated; they arise as two aspects of the same underlying object $C_{ij}$.
+This decomposition supplies time-like / causal and spatial-candidate
+components of the same underlying object $C_{ij}$. It does not by itself
+identify them with physical time and space.
 
 ## 3.3 Defining Distance
 
@@ -211,29 +239,49 @@ $$d_{ij} = \min_{\gamma: i \to j} \sum_{(ab)\in\gamma} (-\log S_{ab})$$
 
 Distance is thus a **shortest-path problem** on a weighted network.
 
+Its domain is a graph with admissible paths and edge strengths for which the
+products and logarithms are defined. This is a network construction, separate
+from a physical-space interpretation.
+
 ## 3.4 Properties
 
-This definition satisfies:
+For reachable pairs with admissible strengths $0<S_{ab}\leq1$, this definition
+satisfies:
 
 - **Non-negativity**: $d_{ij} \geq 0$, with equality iff $\tilde{S}_{ij} = 1$.
 - **Triangle inequality**: $d_{ij} \leq d_{ik} + d_{kj}$, inherited from the path structure.
-- **Asymmetry in general**: $d_{ij} \neq d_{ji}$ when $S_{ij} \neq S_{ji}$, reflecting causal structure.
+- **Symmetry policy**: symmetric edge strengths with reverse paths admissible
+  give $d_{ij}=d_{ji}$; a directed or asymmetric path policy may instead
+  produce an asymmetric quantity.
+
+An asymmetric path quantity is not an ordinary metric. Full metric status
+also depends on symmetry, finite-valuedness, identity of indiscernibles, and
+the policy for disconnected pairs.
 
 $$\boxed{\text{Distance = resistance to influence propagation.}}$$
 
-Space is not a background arena. It is a measure of how difficult information finds it to propagate between nodes.
+The network distance measures how difficult influence propagation is in the
+stated path model. Physical-space interpretation remains proposed.
 
 ## 3.5 Coarse-Graining and the Metric Tensor
 
-The discrete distance $d_{ij}$ does not admit a smooth limit by default. A coarse-graining procedure — grouping nodes into blocks and averaging — produces a smooth effective distance:
+The discrete distance $d_{ij}$ does not admit a smooth limit by default. The source proposes a coarse-grained description—grouping nodes into blocks and averaging—with the following effective endpoint:
 
 $$d(x, y)^2 \approx g_{\mu\nu}(x)(x^\mu - y^\mu)(x^\nu - y^\nu)$$
 
-The metric tensor $g_{\mu\nu}$ is not a fundamental field. It is the coarse-grained approximation of the log-distance structure.
+The metric tensor $g_{\mu\nu}$ is not a fundamental field. It is proposed as an effective continuum description of the coarse-grained log-distance structure.
 
 $$\boxed{g_{\mu\nu} = \text{effective description of } d_{ij} \text{ under coarse-graining.}}$$
 
 No coordinate system is assumed; coordinates label the coarse-grained blocks, not fundamental entities.
+
+**Bridge status: PARTIAL / OPEN.** The endpoint expression is present, but an
+explicit reconstruction map, convergence and scaling rule, normalization,
+uniqueness result, and physical-distance identification are not supplied here.
+
+The endpoint expression is an effective local continuum approximation in the
+target representation, not a uniqueness or reconstruction theorem and not a
+physical-space emergence result.
 
 ## 3.6 Role of the Antisymmetric Component
 
@@ -241,23 +289,27 @@ The antisymmetric part $A_{ij}$ does not enter the distance definition directly.
 
 - the direction of causal flow ($J_{ij} = C_{ij} - C_{ji} = 2A_{ij}$),
 - temporal ordering between nodes,
-- the source of irreversibility established in Chapter 2.
+- the conditional monotonicity established in Chapter 2.
 
 $$\boxed{\text{Space and time originate from distinct aspects of the same object } C_{ij}.}$$
 
 ## 3.7 Summary
 
-From $C_{ij}$ alone, we have derived two foundational structures:
+From $C_{ij}$, the model constructs two quantities:
 
-$$\frac{d\tau_i}{dt} = \rho_i \quad \text{(time: from accumulation of logs)}$$
+$$\frac{d\tau_i}{dt} = \rho_i \quad \text{(time-like accumulation quantity)}$$
 
-$$d_{ij} = -\log \tilde{S}_{ij} \quad \text{(space: from structure of logs)}$$
+$$d_{ij} = -\log \tilde{S}_{ij} \quad \text{(network-distance construction)}$$
 
-$$\boxed{\text{Time = the quantity of logs. Space = the structure of logs.}}$$
+$$\boxed{\text{Log accumulation and connectivity supply time-like and spatial candidates.}}$$
 
 ## 3.8 Transition to Dynamics
 
-With time and space defined, the next question is how flows evolve on this geometry. The antisymmetric component $A_{ij}$ drives a flow $J_{ij}$; this flow generates vorticity; vorticity produces closure density. The following chapter develops this chain and shows how it connects to gravitational structure.
+With the time-like and network-distance quantities defined, the next question is
+how flows are represented. The antisymmetric component $A_{ij}$ defines
+$J_{ij}$, the continuum representation defines vorticity from curl, and
+$L\sim|\omega|$ supplies an effective closure-density relation. Enclosure and
+gravity remain candidate interpretations.
 # Chapter 4 — Flow, Vorticity, and the Onset of Structure
 
 ## 4.1 From Structure to Motion
@@ -279,17 +331,42 @@ $$\boxed{\text{Flow is the antisymmetric part of the causal log. Motion arises f
 
 ## 4.3 The Continuity Equation
 
-In the coarse-grained limit, $J_{ij}$ becomes a vector field $\mathbf{J}(x)$. The evolution of the log density $\rho$ satisfies:
+We use $\mathbf{J}(x)$ as a coarse-grained continuum representation of the
+discrete log-flow $J_{ij}$. The explicit averaging, scaling, orientation, and
+discrete-to-vector-field map are not supplied here. The evolution of continuum
+log density $\rho$ is written as:
 
 $$\boxed{\partial_t \rho + \nabla \cdot \mathbf{J} = \sigma}$$
 
+**Role / domain:** this is a balance / continuity relation in the continuum
+field representation. With a nonzero source term it is not an unconditional
+conservation law, and its balance form alone does not establish a physical
+time interpretation.
+
+**Bridge status: INFORMAL / OPEN.** No interpolation, volume normalization,
+unit map, or complete function signature relating $\rho_i$ to the continuum
+$\rho$ is supplied. The displayed continuum equation is retained in its own
+formal scope.
+
 where $\sigma \geq 0$ is the **log-generation rate** — the rate at which causal history is converted into causal structure through the self-referential selection equation of Chapter 2. $\sigma$ is not an external source term. It is the rate at which the system fails to remain closed: wherever structure is incomplete, new logs are generated.
+
+Here $t$ is the Vol.1 derivative / ordering parameter and $\sigma$ is the
+Vol.1 continuum log-generation rate. Neither glyph establishes an identity
+with IFGT's effective external $t$ or its separately constructed $\sigma$;
+the microscopic $\dot\rho_i$ relation is also not identified with this
+continuum source term without a projection.
 
 This is not a conservation law. Unlike standard continuity equations, $\sigma \neq 0$ in general:
 
-$$\boxed{\sigma > 0 \;\Longleftrightarrow\; \text{time is being generated.}}$$
+$$\boxed{\sigma > 0 \quad\text{(positive source regime)}}$$
 
-The conservation law $\nabla \cdot \mathbf{J} = 0$ holds only in the classical fixed-point regime where $\sigma \approx 0$. It is a property of a particular phase, not a fundamental principle.
+The association of this regime with physical-time generation is proposed; no
+necessary-and-sufficient criterion is established.
+
+Within this balance model, $\nabla \cdot \mathbf{J} \approx 0$ is associated
+with the classical fixed-point regime where $\sigma \approx 0$. This
+source-free regime does not by itself establish whether physical conservation
+laws are fundamental or emergent.
 
 ## 4.4 Helmholtz Decomposition
 
@@ -300,7 +377,7 @@ $$\mathbf{J} = \mathbf{J}_{\text{rot}} + \mathbf{J}_{\text{pot}}$$
 where $\nabla \cdot \mathbf{J}_{\text{rot}} = 0$ and $\nabla \times \mathbf{J}_{\text{pot}} = 0$.
 
 - $\mathbf{J}_{\text{pot}}$: the irrotational component, carrying the divergence. This component is responsible for the log-generation term $\sigma$.
-- $\mathbf{J}_{\text{rot}}$: the solenoidal component, carrying vorticity. This component is responsible for the formation of stable structure.
+- $\mathbf{J}_{\text{rot}}$: the solenoidal component, carrying vorticity and used in the candidate enclosure mechanism.
 
 ## 4.5 Vorticity and Closure
 
@@ -308,14 +385,19 @@ Define the **vorticity** of the log-flow:
 
 $$\boxed{\omega = \nabla \times \mathbf{J}}$$
 
+This is a definition / derived construction in a continuum vector-field
+domain supporting curl; nonzero vorticity alone is not a persistence theorem.
+
 Vorticity measures local circulation in the flow field.
 
 - When $\omega = 0$: flows are irrotational; no stable closed structures form.
 - When $\omega \neq 0$: circulation exists; flow lines can close on themselves.
 
-$$\boxed{\text{Rotation is the seed of persistent structure.}}$$
+$$\boxed{\text{Rotation supplies a candidate route to enclosure.}}$$
 
-Without rotation, flows dissipate. With rotation, closed trajectories form and stabilize. This is the mechanism by which structure becomes self-sustaining.
+Nonzero vorticity permits circulation in the represented flow. Formation,
+stability, and physical persistence require additional dynamics; the relation
+is a candidate mechanism rather than an established implication.
 
 ## 4.6 Closure Density
 
@@ -323,24 +405,36 @@ The local intensity of vortical structure defines the **closure density**:
 
 $$\boxed{L \sim |\omega|}$$
 
-This quantity measures how strongly the flow is organized into closed loops at a given point. High closure density means the local causal flow has formed stable circular patterns. As will be shown in subsequent volumes, $L$ is the source of both particle structure (Vol. 2) and gravitational effects (Vol. 3).
+This is an effective proportional scalar measure in the present
+representation. Its magnitude convention and normalization are not fixed,
+and it is not a derived universal identity.
 
-## 4.7 The Generative Chain
+This quantity measures how strongly the represented flow is organized into
+circulation at a point. Subsequent volumes use $L$ in candidate particle-like
+and gravity-like interpretations; those physical maps remain separate.
 
-The sequence derived so far establishes the core chain of VED:
+## 4.7 Staged Construction Summary
+
+The following compact sequence is a navigation mnemonic:
 
 $$\boxed{C_{ij} \;\to\; J \;\to\; \omega \;\to\; L}$$
 
-Each step is a consequence of the previous:
+Its edges have different roles:
 
-- $C_{ij}$: causal log (Chapter 2),
-- $J = C_{ij} - C_{ji}$: flow from asymmetry (this chapter),
-- $\omega = \nabla \times J$: vorticity from flow,
-- $L \sim |\omega|$: closure density from vorticity.
+| Local relation | Role | Status |
+|---|---|---|
+| causal-log $C_{ij}\to J_{ij}$ | discrete definition from antisymmetry | formal construction |
+| $J_{ij}\to\mathbf J(x)$ | discrete-to-continuum correspondence | informal / OPEN bridge |
+| $\mathbf J(x)\to\omega$ | curl definition | formal construction |
+| $\omega\to L$ | effective proportional relation | phenomenological; physical enclosure remains a candidate |
+
+Thus the displayed arrows do not all mean physical generation. See the
+[role-separated navigation record](navigation/generative_sequence.md) for the
+repository-wide relation inventory.
 
 ## 4.8 Summary
 
-From the single object $C_{ij}$, we have now derived:
+Using the causal-log $C_{ij}$ as an upstream formal object, we have introduced:
 
 | Quantity | Origin |
 |----------|--------|
@@ -354,18 +448,23 @@ $$\boxed{\text{Structure has become dynamical.}}$$
 
 ## 4.9 Transition to Chapter 5
 
-The question that follows is: what stable configurations emerge from vortical flows? The answer is *closure* — closed, self-sustaining loop structures in the causal flow network. Chapter 5 shows that these closures correspond to particles, and that their geometric properties reproduce the structure of the Standard Model.
+The question that follows is whether vortical flows support persistent
+configurations. Chapter 5 introduces *closure* as the candidate mechanism;
+Vol.2 then proposes comparisons with particle and Standard-Model structure.
 # Chapter 5 — Closure and the Minimal Structure of Persistence
 
 ## 5.1 From Flow to Persistence
 
-Chapter 4 established that asymmetry in $C_{ij}$ generates a flow $J$, and that the curl of this flow produces vorticity $\omega$. The question that follows is:
+Chapter 4 defined a discrete antisymmetric flow $J$ and, in a continuum
+representation, vorticity $\omega$ from its curl. The question that follows is:
 
 $$\boxed{\text{What structures can persist under this dynamics?}}$$
 
-Persistence requires that flow does not simply dissipate. It must loop back on itself. A flow pattern that returns to its origin after a finite cycle can be self-sustaining; one that does not will spread and dissolve.
+The candidate persistence mechanism asks whether non-dissipating circulation
+can form a loop and become self-sustaining. That dynamics and stability are not
+established by the definitions alone.
 
-$$\boxed{\text{Persistence requires closure.}}$$
+$$\boxed{\text{Closure is proposed as a route to persistence.}}$$
 
 ## 5.2 Closure Defined
 
@@ -387,17 +486,23 @@ The minimal loop that admits nontrivial closure must involve at least three node
 
 - **Four or more nodes**: any such cycle decomposes into triangular sub-loops. No new topological structure is introduced.
 
-$$\boxed{\text{The minimal closure is triangular: three nodes forming an oriented loop.}}$$
+$$\boxed{\text{The triangle is minimal in the stated finite closure class.}}$$
 
-This is a topological result, not an assumption. The triangle is the smallest unit that admits genuine two-dimensional phase structure.
+This is a model-local finite construction. It does not assert unrestricted
+minimality or uniqueness across every closure definition.
 
 ## 5.4 Closure as a Dynamical Attractor
 
-Closure is not externally enforced. It emerges as an attractor of the dynamics.
+Closure is proposed as a possible attractor of the dynamics; attractor existence
+and stability remain open.
 
 Define the **closure energy** of a configuration $A$:
 
 $$E(A) = \alpha\left|\sum_{i\in A}\vec{e}_i\right|^2 - \beta\,\Phi(A) + \gamma|A| + B(L(A))$$
+
+$E(A)$ is the model energy / scoring functional used to compare closure
+configurations. That mathematical role is separate from identifying a local
+minimum with an observed particle.
 
 where:
 - $\alpha|\sum\vec{e}_i|^2$: cost of residual imbalance (non-closure),
@@ -405,9 +510,9 @@ where:
 - $\gamma|A|$: size cost,
 - $B(L(A))$: effective non-closure barrier (see §5.5).
 
-A **particle** is a local minimum of $E(A)$.
+A model-defined **particle** is a local minimum of $E(A)$.
 
-$$\boxed{\text{Closure structures are dynamical attractors; particles are their local minima.}}$$
+$$\boxed{\text{Closure-energy minima are candidate particle-like structures.}}$$
 
 ## 5.5 The Non-Closure Constraint
 
@@ -418,6 +523,10 @@ $$\boxed{L < L_{\max} \quad \text{at all times.}}$$
 In this overview, the constraint is represented by an effective closure barrier:
 
 $$B(L) = -\kappa_B \log\!\left(1 - \frac{L}{L_{\max}}\right), \qquad L \to L_{\max} \;\Rightarrow\; B(L) \to \infty$$
+
+Here $L<L_{\max}$ is the modeled non-closure constraint, while $B(L)$ is
+its phenomenological / effective encoding rather than a microscopic
+derivation.
 
 The barrier should be read as a phenomenological encoding of the fact that complete symmetry would erase the differences required for dynamics. Vol.4 later reinterprets this kind of barrier parameter as an emergent or projected effective quantity, not as a fundamental external prohibition.
 
@@ -435,40 +544,54 @@ The curvature of $E$ at a minimum gives the effective mass:
 
 $$m_k \propto \left.\frac{d^2 E}{dL^2}\right|_{L_k} \sim \frac{\kappa_B}{\Delta_k^2}$$
 
-$$\boxed{\text{Heavy structures sit close to the complete-closure limit.}}$$
+The displayed mass scaling is retained within the phenomenological
+barrier-based model; it is not a calibrated microscopic mass derivation.
 
-## 5.7 Summary
+$$\boxed{\text{Larger phenomenological mass-like values occur nearer the closure limit.}}$$
 
-The chain from Chapter 1 through Chapter 5 is now complete:
+## 5.7 Model and Interpretation Summary
+
+The following historical sequence summarizes the chapter order:
 
 $$\boxed{\text{difference} \to \text{gradient} \to \text{flow} \to \text{vortex} \to \text{closure} \to \text{persistent structure}}$$
 
-| Quantity | Physical meaning |
-|----------|-----------------|
+It is not a uniformly typed derivation: the early steps use a represented-field
+construction and an effective flow relation, vorticity is defined in the
+continuum representation, and enclosure / persistence is a candidate physical
+mechanism. The [canonical navigation table](navigation/generative_sequence.md)
+records these roles separately.
+
+| Quantity | Model role / candidate interpretation |
+|----------|---------------------------------------|
 | $C_{ij}$ | Causal log (selected structure) |
-| $\rho_i$ | Log density (time generation rate) |
-| $\tau_i$ | Observational time |
+| $\rho_i$ | Log density |
+| $\tau_i$ | Time-like accumulation quantity; physical clock map open |
 | $S_{ij}$ | Spatial connectivity |
-| $d_{ij}$ | Distance |
+| $d_{ij}$ | Weighted-network distance; physical distance map open |
 | $J_{ij}$ | Log-flow |
 | $\omega$ | Vorticity |
-| $L$ | Closure density |
-| $\Delta_k$ | Closure distance (mass parameter) |
+| $L$ | Effective scalar closure-density measure |
+| $\Delta_k$ | Closure deficit in a phenomenological mass-like scaling |
 
 $$\boxed{\text{The world is made of incomplete closures.}}$$
 
 ## 5.8 Transition to Volume 2
 
-The classification of closure types — by the degree of degeneracy of the triangular configuration — leads directly to the structure of the Standard Model. Different closure geometries correspond to different particle types; the symmetry groups of those geometries are the gauge groups $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$. Volume 2 develops this correspondence.
+The classification of closure types by triangular degeneracy motivates a
+proposed structural comparison with Standard-Model organization. Volume 2
+develops that model correspondence without establishing observed-particle
+identity.
 # Chapter 6 — Phase Structure of the Causal Log Network
 
 ## 6.1 Why Phase Structure Matters
 
 The equations derived in Chapters 2–5 do not produce a single, uniform regime of behavior. Depending on the magnitude of the effective coupling, the causal log network operates in qualitatively different modes. This is the **phase structure** of VED.
 
-Understanding which phase the network is in is not a secondary concern. Physical laws — conservation, gauge symmetry, effective geometry — are properties of a specific phase, not universal principles valid across all parameter regimes.
+The model organizes conservation, gauge, and effective-geometry candidates by
+phase. Identifying those candidates with physical laws and establishing their
+universality remain separate questions.
 
-$$\boxed{\text{Physical laws are phase-dependent, not universal.}}$$
+$$\boxed{\text{Effective-law behavior is modeled as phase-dependent.}}$$
 
 ## 6.2 The Control Parameter
 
@@ -486,59 +609,69 @@ The network exhibits four qualitatively distinct regimes:
 
 | Phase | Condition | Character |
 |-------|-----------|-----------|
-| Subcritical | $\alpha < 1$ | $\rho \approx 0$; no time, no structure |
+| Subcritical | $\alpha < 1$ | $\rho \approx 0$; negligible time-like accumulation and no modeled structure |
 | Critical | $\alpha = 1$ | Maximum susceptibility; bifurcation point |
-| Classical-active | $\alpha \sim 1$ | Stable closures; effective laws emerge |
+| Classical-active | $\alpha \sim 1$ | Candidate stable closures and effective laws |
 | Saturated | $\alpha \gg 1$ | $C_{ij} \to 1$; differences vanish |
 
-**Subcritical**: Selection is too weak to sustain structure. The log density remains near zero; $\tau$ does not advance. This is the regime in which no world forms.
+**Subcritical**: Selection is too weak to sustain modeled structure. The log
+density remains near zero and $\tau$ does not advance appreciably.
 
 **Critical**: The system sits at the bifurcation between no-structure and structure. Susceptibility is maximal; perturbations propagate strongly. This corresponds to a phase transition.
 
-**Classical-active**: Stable closure structures form and persist. Log density $\rho_i$ is finite and self-sustaining. Effective conservation laws, gauge symmetries, and the Einstein equations emerge as stable attractors within this phase. This is the regime that corresponds to the observable universe.
+**Classical-active**: The model posits candidate persistent closures at finite
+$\rho_i$. Effective conservation, gauge, and Einstein-like behavior are proposed
+phase interpretations; correspondence with the observable universe remains open.
 
 **Saturated**: The log density approaches its maximum; $C_{ij} \to 1$ throughout. Differences between nodes diminish, gradients vanish, and the distinction that generates dynamics disappears. This is the regime approached near complete closure — for example, inside a black hole beyond the phase boundary.
 
-## 6.4 Emergence of Physical Laws
+## 6.4 Candidate Effective-Law Regime
 
-Within the classical-active phase, the following effective structures become stable:
+Within the proposed classical-active phase, the following are candidate
+effective features:
 
 - **Conservation laws**: $\sigma \approx 0$, so $\partial_t \rho + \nabla \cdot J \approx 0$.
 - **Gauge symmetries**: closure configurations stabilize with well-defined internal degrees of freedom (developed in Vol. 2).
-- **Effective geometry**: coarse-grained distance $d_{ij}$ becomes approximately smooth, admitting a metric tensor $g_{\mu\nu}$ (developed in Vol. 3).
+- **Effective geometry**: under the proposed partial coarse correspondence, $d_{ij}$ is represented approximately by a smooth metric tensor $g_{\mu\nu}$ (developed in Vol. 3); the reconstruction bridge remains open.
 
-$$\boxed{\text{Conservation, symmetry, and geometry are properties of the classical-active phase — not axioms.}}$$
+$$\boxed{\text{Conservation, symmetry, and geometry are modeled as phase features rather than axioms.}}$$
 
 ## 6.5 Phase Transitions and Extreme Physics
 
-The framework naturally accommodates extreme physical regimes as phase transitions rather than pathological exceptions:
+The framework proposes phase-transition interpretations of extreme regimes:
 
-- **Big Bang**: transition from subcritical to active phase. Structure does not begin from a singular point; it *bootstraps* from a region where $\alpha$ crosses the critical threshold.
-- **Black hole interiors**: transition from classical-active to saturated/non-equilibrium phase. The interior is not a geometric singularity; it is a regime where the fixed-point conditions break down and $\sigma > 0$ reignites.
+- **Big Bang candidate**: a proposed transition from subcritical to active phase as $\alpha$ crosses its critical threshold.
+- **Black-hole-interior candidate**: a proposed transition from classical-active to saturated / non-equilibrium behavior where the fixed-point description ceases to apply and $\sigma>0$ is used.
 
-$$\boxed{\text{Extreme regimes are phase transitions, not breakdowns of the theory.}}$$
+$$\boxed{\text{Extreme regimes admit candidate phase-transition interpretations.}}$$
 
 ## 6.6 The Classical-Active Phase Is a Window, Not a Point
 
 The classical-active phase occupies a finite region of parameter space, not a single value. Within this window:
 
-- different closure configurations produce different particle types (Vol. 2),
-- local variations in closure density produce gravitational effects (Vol. 3),
-- the log-generation rate $\sigma$ drives cosmological expansion (Vol. 3).
+- closure configurations motivate particle-like classes (Vol. 2),
+- local variations in closure density motivate gravity-like effects (Vol. 3),
+- a positive source regime motivates a cosmological expansion model (Vol. 3).
 
-The diversity of physical phenomena arises from the internal structure of this phase, not from additional assumptions.
+These are candidate physical interpretations of the model's internal phase
+structure, not established universal consequences.
 
 ## 6.7 Summary
 
 The phase structure of the causal log network can be summarized as follows:
 
-$$\boxed{\text{Existence itself is a phase property.}}$$
+$$\boxed{\text{Existence is given a candidate phase interpretation.}}$$
 
-The universe is not simply described by the equations of VED — it *is* the classical-active phase of those equations. The laws of physics are not written into the structure from outside; they emerge as the stable attractors of a particular dynamical regime.
+The observable universe is proposed for comparison with the classical-active
+phase. Physical-law identity and stable-attractor claims require additional
+dynamical and observational evidence.
 
 ## 6.8 Transition to Volume 2
 
-With the foundational structure established — time, space, flow, vorticity, closure, and phase — the next question is: what distinct types of closure exist, and what symmetry groups do they carry? Volume 2 shows that the classification of triangular closures by their degree of degeneracy reproduces the gauge group $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$ and the particle content of the Standard Model.
+With the formal constructions stated, the next question is what closure types
+exist and what symmetry groups they carry. Volume 2 proposes structural
+comparisons with the Standard Model; it does not establish observed-particle
+identity.
 # Chapter 7 — Summary: Structure Before Law
 
 ## 7.1 From a Single Statement
@@ -547,41 +680,50 @@ This volume began with a single, irreducible statement:
 
 $$\boxed{\text{There is difference.}}$$
 
-From this minimal condition — without assuming spacetime, fields, symmetry groups, or conservation laws — we have derived structure, time, space, motion, and persistence.
+From this minimal condition, the volume has introduced formal constructions and
+candidate interpretations for structure, time-like ordering, network distance,
+motion, and persistence.
 
 $$\boxed{\text{Nothing was assumed beyond the existence of difference.}}$$
 
-## 7.2 The Generative Chain
+## 7.2 Role-Separated Navigation Summary
 
-The entire construction is summarized by the following chain:
+The following compact sequence records topic order, not one repeated form of
+physical generation:
 
 $$\boxed{\text{difference} \;\to\; C_{ij} \;\to\; \rho \;\to\; \tau \;\to\; d_{ij} \;\to\; J \;\to\; \omega \;\to\; L}$$
 
-| Step | Object | Physical meaning |
-|------|--------|-----------------|
-| 1 | $C_{ij}$ | Causal log: selected history |
-| 2 | $\rho_i = \sum_j C_{ij}$ | Log density: accumulated structure |
-| 3 | $\tau_i$ via $d\tau/dt = \rho_i$ | Observational time |
-| 4 | $d_{ij} = -\log\tilde{S}_{ij}$ | Spatial distance |
-| 5 | $J_{ij} = C_{ij} - C_{ji}$ | Log-flow: directed motion |
-| 6 | $\omega = \nabla \times J$ | Vorticity: local rotation |
-| 7 | $L \sim |\omega|$ | Closure density: persistent structure |
+| Step | Object | Relation role | Status / ceiling |
+|------|--------|---------------|------------------|
+| 1 | $C_{ij}$ | causal-log constitutive / self-consistency relation | formal target; not an update or solution theorem |
+| 2 | $\rho_i = \sum_j C_{ij}$ | nodewise definition | formal construction |
+| 3 | $\tau_i$ via $d\tau/dt = \rho_i$ | accumulation definition relative to $t$ | time-like quantity; physical-clock interpretation OPEN |
+| 4 | $d_{ij} = -\log\tilde{S}_{ij}$ | weighted-network path construction | formal construction; physical-space interpretation OPEN |
+| 5 | $J_{ij} = C_{ij} - C_{ji}$ | discrete definition | continuum-flow bridge OPEN |
+| 6 | $\omega = \nabla \times J$ | continuum curl definition | persistence is not implied |
+| 7 | $L \sim \lvert\omega\rvert$ | effective proportional relation | phenomenological; enclosure mechanism remains a candidate |
 
-Each step follows from the previous by the internal logic of the framework. No external input enters after the minimal axiom.
+The sequence combines definitions, constructions, an OPEN representation
+bridge, and a candidate interpretation. See the
+[canonical relation-role table](navigation/generative_sequence.md); navigation
+order does not establish physical generation or exclude required domain input.
 
 ## 7.3 Time and Space from the Same Object
 
-Time and space are not independent primitives. They are two aspects of a single object:
+The model constructs time-like and spatial candidates from different aspects of
+a common causal-log object:
 
 $$\frac{d\tau_i}{dt} = \rho_i \quad \text{(time: quantity of logs)}$$
 
 $$d_{ij} = -\log \tilde{S}_{ij} \quad \text{(space: structure of logs)}$$
 
-$$\boxed{\text{Time measures accumulation; space measures connectivity. Both arise from } C_{ij}.}$$
+$$\boxed{\text{Time-like accumulation and network connectivity are constructed from } C_{ij}.}$$
 
 ## 7.4 Motion, Rotation, and Persistence
 
-Motion arises from asymmetry in $C_{ij}$ via the flow $J_{ij}$. Rotation arises from the curl of this flow via vorticity $\omega$. Persistence arises when the rotating flow closes on itself — forming a **closure**.
+The model defines $J_{ij}$ from asymmetry and $\omega$ from curl in its
+continuum representation. Closure is then proposed as a persistence mechanism;
+physical persistence does not follow from those definitions alone.
 
 $$\boxed{\text{Dynamics produces structure; structure stabilizes dynamics.}}$$
 
@@ -606,27 +748,32 @@ The causal log network operates in four qualitatively distinct phases, controlle
 - **Classical-active** ($\alpha \sim 1$): stable closures, effective laws.
 - **Saturated** ($\alpha \gg 1$): structure collapses toward uniformity.
 
-$$\boxed{\text{The observable universe exists in the classical-active phase.}}$$
+$$\boxed{\text{The observable universe is a proposed interpretation of the classical-active phase.}}$$
 
-Physical laws — conservation, gauge symmetry, effective geometry — are properties of this phase, not universal axioms. They emerge within it and break down outside it.
+Conservation, gauge symmetry, and effective geometry are modeled as phase
+features. Their physical identification and behavior outside the model regime
+remain open.
 
 ## 7.7 What Has Been Established
 
 Vol. 1 has established:
 
 1. A definition of causal structure that does not presuppose time or space.
-2. A self-referential selection equation that generates persistent structure.
-3. Definitions of time and space as emergent quantities from $C_{ij}$.
-4. A flow dynamics and vorticity structure leading to closure.
+2. A self-referential fixed-point target with a candidate persistence interpretation.
+3. A time-like accumulation quantity and a network-distance construction from $C_{ij}$.
+4. A flow and vorticity description used in a candidate enclosure mechanism.
 5. A phase classification of the resulting network.
 
 $$\boxed{\text{Structure precedes law.}}$$
 
-Laws are not written into the world from outside. They emerge as stable attractors within a specific dynamical phase.
+Effective laws are proposed as candidate stable features of a dynamical phase;
+their physical and universal status is not established here.
 
 ## 7.8 Transition to Volume 2
 
-The remaining question is: what distinct types of closure exist, and what do they correspond to physically? Vol. 2 shows that triangular closures — classified by their degree of degeneracy — correspond to the particles of the Standard Model, and that their symmetry groups are precisely $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$.
+The remaining question is what distinct closure types exist and whether an
+observational map can be supplied. Vol.2 proposes structural comparisons with
+particle-like classes and gauge symmetries; physical identity remains open.
 
 ## 7.9 Closing Statement
 

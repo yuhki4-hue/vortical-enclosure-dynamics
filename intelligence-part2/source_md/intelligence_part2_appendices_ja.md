@@ -1,5 +1,7 @@
 # 知性編 Part II — 補遺集
 
+> **Source status:** 本ファイルはworking/historical Markdownであり、current build authorityは`appendices/`のTeXである。Bio-IFGTとのshared glyph、第二アトラクター、個体間共有に関する旧文言は、identity / same dynamics / established Bio resultを意味しない。canonical TeXでは提案的類比とOPEN translationへscope済みである。
+
 **The Non-Closure of Inference, Externalized Stopping, and the Emergent Stopping Layer**
 *Appendices*
 
@@ -587,4 +589,3 @@ VED 的創発概念の理論ツリーにおける意義は三点ある。
 **第三**: 知性層における創発($L_E$)が Vol.2 の粒子創発と同一形式を持つことは、物理から知性まで同一の構造原理が貫通していることの、最も直接的な証拠のひとつである。VED が目指す「単一の原理からの多様な現象の統一的記述」が、創発という概念レベルで実現されている。
 
 ---
-

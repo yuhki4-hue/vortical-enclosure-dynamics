@@ -1,17 +1,43 @@
 % English draft based on sections/02_inference_operator_ja.tex
 \section{The Inference Operator $F$}
 
-This chapter defines the inference operator used throughout the paper. The operator $F$ is not tied to one implementation such as deduction, induction, Bayesian update, neural generation, or statistical prediction. It denotes the minimal operation by which a state of understanding is advanced into a more justified state.
+\noindent\textbf{Scope of the account.} The inference operator is source-local. Its cognitive reading and the Physarum/Transformer comparisons are proposed correspondences, not implementations of one shared operator. The active account now distinguishes a realized-record core and an optional local adapter from the preserved historical state-map and scalar-justification model. The English set-valued formulation remains historical, not an active successor type; its unresolved composition is not repaired by language priority. The old proof does not transfer to the new contract. The indexed constraint relation is distinct from a calibrated response threshold. Threshold mobility retains its local definition, while endogenous detection and the production of stopping sites remain unresolved. Biological and cognitive constraint changes are compared by role and timescale, not identified as the same law.
+
+
+This chapter separates the active realized-transition account from the historical inference model cited later. The next description records the old local-state model: The operator $F$ is not tied to one implementation such as deduction, induction, Bayesian update, neural generation, or statistical prediction. It denotes the minimal operation by which a state of understanding is advanced into a more justified state.
 
 \subsection{Definition}
 
-Let $\mathcal{X}$ be the state space of inferential states. An inference operator is a map
+\noindent\textbf{Active realized-transition interface.} In the active account, F names the description of an actually generated transition, not a total law of unrealized futures. For a declared Scope, accepted records carry canonical occurrence endpoints, context/rule-version references, and a stated basis for describing realization:
+% impl23 authorized addition: record endpoint ports
+\[
+\mathrm{before},\mathrm{after}:\mathrm{AcceptedRealizedRecord}\to\mathrm{Occurrence}.
+\]
+Occurrence is distinct from StateView. State views may depend on currently surfaced, compressed or reconstructed history without containing a complete archive. Equal surface views imply neither equal occurrences nor equal generative positions. Alias resolution follows the declared identity convention; endpoint inequality is not a record-acceptance requirement. Scope fixes the analytical sides, observation window/timescale, and identity conventions, not a permanent subject. A change of scope or evaluation convention requires a new version and an explicit correspondence before cross-scope composition.
+
+An optional local adapter is available only on a declared slice:
+% impl23 authorized addition: optional successor port
+\[
+\mathrm{realizedSuccessor}[\mathrm{slice}]:\mathrm{EligibleOccurrence}\rightharpoonup\mathrm{Occurrence}.
+\]
+Declare slice, window, context, rule-version metadata, identity convention, and eligibility fields independently of strictness or no-fixed-point outcomes. After records exist, check that at least one matching record exists, endpoint identities are unambiguous, and all records for the same canonical before-occurrence in that slice have the same after-occurrence. If distinct after-values remain, leave the adapter undefined and retain the records; introduce no selector and do not re-partition context or identity to obtain a desired conclusion. Further records may require an explicitly versioned reassessment. This structural check establishes neither global determinism nor a pre-existing completed future branch set. General record chaining is not a power of one map; adapter iteration requires defined intermediate inputs and the same declared slice/version and composition carrier. State, context, and rule changes remain distinct.
+
+\noindent\textbf{Active generative-position interface.} For a fixed Scope and EvaluationProfile, use a separate descriptive port:
+% impl23 authorized addition: position port
+\[
+\mathrm{position}:\mathrm{Occurrence}\rightharpoonup\mathrm{GenerativePosition}.
+\]
+GenerativePosition has its own declared identity carrier; it is not a real-valued measure, StateView, or an occurrence identifier. The port is partial and need not be injective. Before/after evaluation requires both ports to be defined under the same scope/profile, without an implicit cast from surface state or a switch of evaluation rules. Position represents generative placement, not accessible memory amount, retention hardness, visible distinction, effective constraint, justification, or truth. No strict-step predicate, automatic monotonicity, or theorem is asserted here. The scalar justification J retained below is a distinct historical local-model object; its proof is not transferred. Surface recurrence is allowed, and fresh occurrence IDs do not establish substantive nonclosure.
+
+\noindent\textbf{Preserved local-state model.} The following state-map and scalar-justification expressions remain visible in their original form. References to their premises, powers, or no-fixed-point conclusions later in the paper retain this historical scope, not the new interfaces above.
+
+In the preserved historical local-state formulation, let $\mathcal{X}$ be the state space of inferential states. An inference operator is a map
 \[
 x_{n+1}=F(x_n),
 \]
 where $x_n\in\mathcal{X}$ is a provisional state and $F(x_n)$ is the next state generated by inference.
 
-The defining property of $F$ is justification extension. There exists a justification measure
+In the historical scalar-justification model, the defining property of $F$ is justification extension. There exists a justification measure
 \[
 J:\mathcal{X}\to\mathbb{R}
 \]
@@ -23,26 +49,26 @@ This measure is not truth. It measures the advance of an inferential chain, not 
 
 \subsection{Relation to VED}
 
-In VED terms, inference follows a gradient of closure. It is a local realization of a flow driven by non-closure. A state that appears unresolved generates a direction of further movement. Thus $F$ may be read as the intelligence-layer realization of a closure-gradient flow.
+In VED terms, inference follows a gradient of closure. It is interpreted through an analogy with a flow driven by non-closure. A state that appears unresolved generates a direction of further movement. Thus $F$ may be read as a proposed intelligence-layer counterpart of closure-gradient flow, not the same typed dynamics.
 
-The important consequence is that inference is inherently dynamic. It is an operation for moving, not an operation for terminating movement. If termination is required, it must be supplied by something other than $F$ as such.
+In the historical local-state interpretation, the important consequence is that inference is inherently dynamic. It is an operation for moving, not an operation for terminating movement. External termination is proposed as distinct from $F$ as modeled here; universal necessity is not established.
 
-\subsection{Branching}
+\subsection{Historical Branching Formulation}
 
-Inference is not necessarily deterministic. In many cases,
+The earlier English candidate-set formulation expressed possible branching as follows:
 \[
 F(x_n)=\{x_{n+1}^{(1)},x_{n+1}^{(2)},\ldots\}
 \]
-is better understood as a branching set of possible continuations. This branching structure connects Part II to the branching explosion described in Part I. The more inference is refined, the more branches can be generated.
+This expression was proposed as a branching set of possible continuations. That historical interpretation connected Part II to the branching explosion in Part I and suggested that refinement could generate more branches. It is not the active successor type or a completed set of future states; the candidate set is not an input to the old scalar justification measure, and no selection or lifted evaluation is supplied here.
 
-For this reason, stronger inference does not automatically mean stronger stability. It may mean that the system has more ways to continue and therefore more ways not to stop.
+Within that historical interpretation, stronger inference does not automatically mean stronger stability. It may mean that the system has more ways to continue and therefore more ways not to stop.
 
 \subsection{Internal Stopping Predicate}
 
-One might attempt to define a stopping predicate inside inference itself:
+Within that historical stopping model, one might attempt to define a stopping predicate inside inference itself:
 \[
 S(x)=1 \quad \text{if inference should stop at } x.
 \]
-But if $S$ is justified by inference, then $S$ requires further inference to justify its own stopping authority. The attempt to define stopping from inside $F$ therefore risks infinite regress. This point is formalized in \S{}3.
+In that historical sketch, if $S$ is justified by inference, then $S$ requires further inference to justify its own stopping authority. The attempt to define stopping from inside $F$ therefore risks infinite regress. This point is formalized in \S{}3.
 
 \bigskip

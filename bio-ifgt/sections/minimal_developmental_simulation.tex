@@ -2,22 +2,23 @@
 
 \subsection{Purpose}
 
-This section introduces a minimal Bio-IFGT toy model. The purpose is to illustrate how a small set of DNA-like parameters, including sources, diffusion, decay, thresholds, and response rates, can generate stable biological-like structures without explicitly encoding their geometry.
+This section introduces a minimal Bio-IFGT toy model. The purpose is to illustrate how a small set of DNA-like parameters, including sources, diffusion, decay, thresholds, and response rates, can generate reproducible finite-horizon model patterns without encoding a completed output array. The prescribed source and positional window do, however, supply coarse spatial information.
 
 \subsection{Model Setup}
 
 We consider a two-dimensional domain representing an embryo-like field. The system evolves over discrete time steps and consists of four primary fields:
 \begin{itemize}
-  \item morphogen field \(M(x,y,t)\),
-  \item information density \(\I(x,y,t)\),
-  \item neural commitment \(N(x,y,t)\),
+  \item morphogen-like model field \(M(x,y,t)\),
+  \item model information density \(\I(x,y,t)\),
+  \item neural-like commitment \(N(x,y,t)\),
   \item eye-like commitment \(E(x,y,t)\).
 \end{itemize}
 
 An auxiliary boundary field is also introduced:
 \begin{itemize}
-  \item boundary stabilization \(B(x,y,t)\).
+  \item gradient-sensitive boundary-like accumulation \(B(x,y,t)\).
 \end{itemize}
+These symbols are source-local toy fields and become finite arrays in the executable implementation. The toy \(\I\) is a finite proxy for the Bio-IFGT field, not a carrier identity with it, and the code does not directly integrate independent \(\J\) or \(\PhiI\) arrays. The discrete loop step and its \texttt{DT} are runtime quantities, not the Bio internal variable \(\tau\) or a biological clock.
 
 \subsection{Dynamics}
 
@@ -50,8 +51,9 @@ The boundary field is derived from the gradient structure of information density
 \begin{equation}
   G = |\nabla \I|.
 \end{equation}
-The boundary field represents regions where spatial variation is locally maximized.
-It then stabilizes through a thresholded update:
+This displayed \(G\) is the paper's raw gradient magnitude. The current code normalizes that magnitude globally before using it as the input to the \(B\) update; the normalized input and the accumulated state \(B\) are distinct from raw \(G\). The nucleotide symbol \(G\) used in the DNA alphabet is also unrelated.
+The paper uses the boundary-field label for regions selected by strong local spatial variation. The code's (B) is an accumulated state rather than an instantaneous boundary detector. At the reported horizon it highlights boundary-like bands, while longer audit runs show the thresholded mask spreading across the grid; it should not be read as a permanent stable biological boundary.
+It is updated through the following thresholded rule:
 \begin{equation}
   B_{t+1}
   =
@@ -70,16 +72,20 @@ The thresholding function is
 \begin{equation}
   S(z) = \frac{1}{1 + e^{-kz}}.
 \end{equation}
+This \(S\) is a symbolic threshold family in the paper. The execution source implements separate general and eye-specific sigmoid functions with steepness constants \(8\) and \(20\), respectively, and clips their exponential arguments; these implementations are not one identical function instance.
+
+\paragraph{Paper form and finite execution.}
+The displayed \(M\) and \(\I\) relations are continuous model forms, while the current code represents them by explicit finite updates with a prescribed source profile. Within each loop, the code first updates \(M\), then updates \(\I\) using that newly updated \(M\). It next updates and clips \(N\), computes the globally normalized gradient input from the updated \(\I\), updates and clips \(B\), and finally updates and clips \(E\) using the current \(N\) and \(B\), the explicit positional window, and the eye-specific sigmoid. The code applies \texttt{DT} to the \(M\) and \(\I\) updates but not to the source-specific \(N\), \(B\), or \(E\) accumulation rules. This ordering is an execution property, not a new equation or a simultaneous-update claim.
 
 \subsection{Interpretation}
 
-The model encodes no explicit geometric description of neural or eye-like structures. Instead, it specifies localized sources \(\sigma_M\), diffusion and decay parameters, threshold conditions, and response rates. From these conditions, a hierarchical structure appears:
+The model does not encode a completed neural- or eye-like output array. It does specify localized sources \(\sigma_M\), diffusion and decay parameters, threshold conditions, response rates, and an explicit positional window for \(E\). Under those supplied constraints, a hierarchical model pattern appears:
 \begin{enumerate}
   \item a smooth morphogen gradient forms in \(M\),
   \item an information-density landscape develops in \(\I\),
-  \item a neural-plate-like region emerges through thresholding in \(N\),
-  \item boundary structure arises from gradients in \(B\),
-  \item eye-like localized structures appear through secondary thresholding in \(E\).
+  \item a neural-plate-like model region appears through thresholding in \(N\),
+  \item a boundary-like accumulated pattern is selected from gradient-sensitive input in \(B\),
+  \item an eye-like localized model pattern appears through secondary thresholding and the positional window in \(E\).
 \end{enumerate}
 
 \subsection{Key Observation}
@@ -88,6 +94,7 @@ The emergence proceeds through successive constraints:
 \begin{equation}
   M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E.
 \end{equation}
+This compact sequence is a staged navigation summary, not the exact dependency graph of the executable update. In the current code, the prescribed source updates \(M\); the newly updated \(M\) feeds \(\I\); \(\I\) feeds \(N\) and separately supplies the raw gradient that is normalized before updating \(B\); and the updated \(N\) and \(B\), together with the positional window, feed \(E\). In particular, \(N\) is not a direct input to the \(B\) update, so its position before \(B\) records staging rather than an \(N\)-to-\(B\) causal edge.
 Each stage introduces a higher-order structural condition:
 \begin{itemize}
   \item \(\I\): scalar field,
@@ -98,7 +105,7 @@ Each stage introduces a higher-order structural condition:
 
 \subsection{Conceptual Implication}
 
-The simulation illustrates that biological-like structure need not be encoded as a completed form. It can arise as a stable solution within a constrained information landscape.
+The simulation illustrates that the completed model pattern need not be encoded as an input array. At the reported finite horizon it appears reproducibly within a constrained landscape that includes prescribed source geometry and an explicit positional window; this is not geometry-free emergence, a stationary solution, or an asymptotically stable solution claim.
 
 In this sense, DNA-like parameters act as conditions that shape the geometry of possible states.
 
@@ -106,14 +113,15 @@ In this sense, DNA-like parameters act as conditions that shape the geometry of 
 
 Within the Bio-IFGT framework:
 \begin{itemize}
-  \item \(\I\) corresponds to information density,
+  \item \(\I\) serves as the toy proxy for Bio-IFGT information density,
   \item \(\PhiI \sim -\I\) defines an effective potential landscape,
   \item \(\J \sim -\nabla \PhiI\) induces flows toward stable regions.
 \end{itemize}
-The observed structures correspond to attractor-like configurations of this field.
+These \(\PhiI\) and \(\J\) statements are formal or interpretive correspondences; the finite code does not implement a literal one-to-one mapping to independently integrated \(\PhiI\) or \(\J\) arrays. None of the toy fields is operationally mapped here to a measured biological observable.
+The reported finite-horizon structures admit an attractor-like interpretation. The toy run does not establish a formal basin, invariant region, asymptotic convergence, or membership in \(\Omega_{\mathrm{life}}\).
 
-Each stage in the generation path \(M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E\) can be interpreted as a successive localization of quasi-closure: the morphogen field establishes a global information gradient, which drives local accumulation of \(\I\), which in turn crosses thresholds that stabilize sub-regions of the field. The eye-like commitment \(E\) represents a secondary quasi-closure, supported by but distinct from the neural-plate-like region \(N\). This hierarchical structure mirrors the attractor-within-attractor interpretation of differentiation developed in Section 7.7.
+Each stage in the generation path \(M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E\), read as the staged navigation summary above, can be interpreted as a successive localization of quasi-closure: the morphogen field establishes a global information gradient, which drives local accumulation of \(\I\), which in turn crosses thresholds that label persistent sub-regions at the reported horizon. The eye-like commitment \(E\) represents a secondary quasi-closure, supported by but distinct from the neural-plate-like region \(N\). This interpretation does not replace the distinct execution dependencies or supply a formal quasi-closure map. The hierarchical structure mirrors the attractor-within-attractor interpretation of differentiation developed in Section 7.7.
 
 \subsection{Limitations}
 
-This model is intentionally minimal and does not attempt to reproduce biological detail. It serves only to demonstrate the structural principle of emergence under constrained dynamics.
+This model is intentionally minimal and does not attempt to reproduce biological detail. It provides a finite model-local witness of organization and qualitative structural analogy under constrained dynamics. Longer audit runs continue to evolve, and the limited relaxation and recommitment observed under selected perturbations do not establish general return, biological robustness, or regeneration. No external biological dataset, calibration, or operational model-to-observable map is used here.

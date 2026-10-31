@@ -14,12 +14,12 @@ as geometric configurations.
 It is constructed on top of:
 
 - **Vortical Enclosure Dynamics (VED)**  
-  A generative framework describing how physical structures emerge from
-  difference, gradient, flow, and enclosure.
+  A related framework proposing formal constructions and physical
+  interpretations from difference, gradient, flow, and enclosure.
 
 IFGT does not replace physical theory.  
-Instead, it provides a **geometric reinterpretation of informational phenomena**
-emerging from VED.
+Instead, it proposes a **geometric reinterpretation of informational phenomena**
+and an OPEN formal correspondence with VED.
 
 ---
 
@@ -67,8 +67,11 @@ the repository for convenient reading.
 
 IFGT is intended as a companion framework to Vortical Enclosure Dynamics. VED
 addresses stabilized quasi-closure as generative physical structure; IFGT
-focuses on the residual side of the same process, where traces of difference
-persist as informational constraint and observation-like relations.
+focuses on what it proposes as the residual side of the related process, where
+traces of difference persist as informational constraint and observation-like
+relations. This is a proposed correspondence: the repository does not supply
+explicit translations for the $C$, time, or source-term variables across VED
+and IFGT.
 In this sense, IFGT treats information not as a separate substance, but as the
 residual geometry left by incomplete closure.
 

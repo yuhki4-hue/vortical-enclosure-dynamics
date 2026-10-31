@@ -30,11 +30,11 @@ Independent Researcher
 \maketitle
 
 \begin{abstract}
-本論文では、生物系を情報密度 \(\I\)、情報流 \(\J\)、および誘導ポテンシャル \(\PhiI\) によって記述する、最小かつ統一的な枠組みを提示する。この枠組みでは、DNA は完成形を符号化するものではなく、系のダイナミクスを制約するパラメータ集合 \(\theta\) として扱われる。
+本論文では、生物系を情報密度 \(\I\)、情報流 \(\J\)、および誘導ポテンシャル \(\PhiI\) によって記述する最小の共通枠組みを提示する。これらはsource-localな形式量またはmodel量であり、提案的な生物学的読みを持つが、操作的に同定された観測量ではない。この枠組みでは、DNA は完成形を符号化するものではなく、系のダイナミクスを制約するパラメータ集合 \(\theta\) を通じて抽象的に表現される。具体的なgenotype-to-parameter mapは与えない。
 
-この立場により、発生は安定配置への収束として、形態はアトラクタ構造として、生命は動的に維持される非平衡状態として解釈される。生命誕生確率も、特定の分子構造への命中確率ではなく、状態空間における安定領域へ到達する確率として再定式化される。
+この立場により、発生と形態には提案的なアトラクタ解釈を与え、生命は候補となる非平衡持続領域として記述する。そのような領域の存在、安定性、生物学的な操作的同定は別の課題である。生命誕生確率も、特定の分子構造への命中ではなく、領域到達を対象とする問いへ再定式化するが、数値確率は計算しない。
 
-知性は、生命の単なる延長ではなく、生命アトラクタの上に成立する第二のアトラクタとして位置づけられる。本論文は新しい生物学的機構を提案するものではない。最小限の動的量を用いて、生物現象に対する統一的な構造記述を与えることを目的とする。
+知性は、生命の単なる延長ではなく、提案された生命アトラクタ記述の上に置く第二のアトラクタという将来向けの概念構造として位置づける。本論文は新しい生物学的機構を提案するものではない。最小限の動的量による共通の構造記述を目的とし、現在のsimulationは定性的なmodel-local witnessであって、外部生物dataに対する検証ではない。
 \end{abstract}
 
 \setcounter{tocdepth}{1}
@@ -45,17 +45,17 @@ Independent Researcher
 
 生物学における多くの現象は、発生、形態形成、分化、進化として観測される。これらはしばしば、設計、プログラム、遺伝的指令といった言葉で説明される。しかし、そのような表現と実際の物理的・化学的過程との対応は必ずしも明確ではない。
 
-DNA 配列は分子生成や反応経路を制約するが、完成された構造、目的、意図を直接に指定するものではない。同一の DNA を持つ細胞が異なる状態へ分化しうることは、この点を示している。したがって本論文では、DNA を系のダイナミクスを制約するパラメータ集合 \(\theta\) として扱う。
+DNA 配列は分子生成や反応経路を制約するが、完成された構造、目的、意図を直接に指定するものではない。同一の DNA を持つ細胞が異なる状態へ分化しうることは、この点を示している。したがって本論文では、DNA を系のダイナミクスを制約するパラメータ集合 \(\theta\) を通じて抽象的に表現する。具体的なgenotype-to-parameter mapとparameter provenanceは与えない。
 
-本論文では、生物系を状態変化と持続構造の過程として記述する。用いる量は、情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) である。これらは、発生と形態形成を共通に記述するための量である。
+本論文では、生物系を状態変化と持続構造の過程として記述する。用いるsource-localな形式量は、情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) である。これらは発生と形態形成を共通のmodel記述へ置くが、生物学的観測量との操作的同定は別課題である。
 
-この枠組みの特徴は、設計や目的を説明の出発点としない点にある。形態や機能は、状態変化が安定構造へ収束した結果として現れる。
+この枠組みの特徴は、設計や目的を説明の出発点としない点にある。形態や機能は、アトラクタに基づく解釈のもとで、状態変化から生じうる結果として記述する。具体的生物系での収束と安定性は一般式だけからは確立されない。
 
 本論文の目的は、既存の現象を一貫した形式で記述することである。そのために、最小限の変数、連続方程式、安定構造としての解釈を組み合わせる。
 
 Section 2 では直観的な見取り図を示す。Section 3 では形式的な対応関係を定義する。Section 4 では基本方程式を導入する。Section 5 以降では、生物学的現象への適用とシミュレーション例を扱う。
 
-本論文は、Information-Field-Geometry-Theory（IFGT）に基づいている。IFGT は、系が閉包へ向かう運動と、準閉包構造の持続を定式化する。IFGT において、閉包度 \(C\) は、系が安定配置へどの程度進行したかを特徴づける。ただし、生物系で用いる \(\I\) は、IFGT 本体の \(I=f(1-C)\) と直接同一視される量ではない。ここでの \(\I\) は、生物学的観測窓において粗視化された制約密度場であり、局所的な構造制約、分化、保持された偏りを表す。この関係は変数の同一性ではなく、記述レイヤー間の対応である。生命系の持続的な非平衡構造は、IFGT の語彙では準閉包に対応する。すなわち、完全閉包境界の手前側に留まり、残差的な差異が更新に利用可能であることによって持続するレジームである。
+本論文は、Information-Field-Geometry-Theory（IFGT）に関係する生物学的記述を検討する。IFGT は、系が閉包へ向かう運動と、準閉包構造の持続を定式化する。IFGT において、閉包度 \(C\) は、系が安定配置へどの程度進行したかを特徴づける。ただし、生物系で用いる \(\I\) は、IFGT 本体の \(I=f(1-C)\) と直接同一視される量ではない。ここでの \(\I\) は、特定の生物学的観測窓で局所的な構造制約、分化、保持された偏りを記述するsource-localな粗視化場であり、操作的measurement mapは与えない。この関係は変数の同一性、導出、typed translationではなく、記述レイヤー間の提案的対応である。生命系の持続的な非平衡構造も、IFGT の準閉包語彙を用いた構造的解釈として提案するに留まり、生物学的mechanismまたは上流VED/IFGT bridgeの完成を意味しない。
 
 \section{Intuitive Picture}
 
@@ -65,7 +65,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 
 生物系は固定された構造ではなく、状態が変化し続ける過程として捉えられる。分子は生成され、分解され、移動し、細胞状態は時間とともに変化する。
 
-重要なのは、変化が止まらないにもかかわらず、全体としての構造が保たれる点である。生物学的安定性は、静止ではなく、更新の中で維持される組織化である。
+重要なのは、変化が止まらないにもかかわらず、全体としての構造が保たれうる点である。ここでの直観的用語では、生物学的安定性を静止ではなく更新中の組織化として読むが、この文だけでmaintenance mechanismまたはstability resultを確立しない。
 
 \subsection{偏りと流れ}
 
@@ -79,9 +79,11 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 
 このような領域は動力学的な意味で安定であり、近傍のずれを吸収し、認識可能な構造を維持する。
 
+これは条件付きの直観記述であり、具体的領域の存在と指定されたreturn propertyは独立に確立する必要がある。
+
 \subsection{形の出現}
 
-発生や形態形成は、あらかじめ指定された形の実現ではなく、継続的な状態変化を通じて安定配置が現れる過程として解釈される。細胞分布や器官配置は、このような安定配置として観測される。
+発生や形態形成は、あらかじめ指定された形の実現ではなく、継続的な状態変化のもとで候補となる持続配置を考える、直観的なアトラクタ解釈として記述する。これは収束または生物学的安定性の確立ではなく、細胞分布や器官配置との関係も解釈レベルに留まる。
 
 \subsection{設計仮定を使わない記述}
 
@@ -89,15 +91,19 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 
 \subsection{まとめ}
 
-生物系は、状態変化、流れ、安定構造の組み合わせとして理解できる。本論文では、この直観を情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって定式化する。
+生物系は、状態変化、流れ、安定構造の組み合わせとして理解できる。本論文では、この直観を情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって定式化する。ここでの「安定」と「return」は条件付きの直観語であり、不変basin、漸近収束、生物学的頑健性、再生を確立しない。
 
 \section{Formal Mapping}
 
 本節では、直観的な記述を形式的な量へ対応づける。目的は、直観と数式の対応を明確にすることであり、特定の生物系の完全な導出を与えることではない。
 
+この連続場表現では、場の表示は状態・domainの宣言、potentialとflowの式はconstitutive / effective relation、内部時間の式は \(t\) に対するaccumulation definitionとして扱う。これらのroleは、同じ量が有限toy codeで独立に積分されることを意味しない。
+
 \subsection{状態の記述}
 
 生物系は、空間と時間に依存する状態として表される。位置 \(\mathbf{r}\in\mathbb{R}^3\)、時間 \(t\in\mathbb{R}\) に対し、すべての微視的詳細ではなく、粗視化された場を扱う。
+
+本節の記号は Bio-IFGT の連続場記述に局所的なものである。特に \(\I\) と \(\J\) は、同じ字形だけを根拠として IFGT の一般場、VED の離散current \(J_{ij}\)、有限toy modelの配列と同一視しない。toy simulationは独立な \(\J\) または \(\PhiI\) 配列を直接積分しない。
 
 \subsection{情報密度}
 
@@ -105,7 +111,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 \begin{equation}
   \I(\mathbf{r},t)
 \end{equation}
-として表す。ここで情報とは意味内容ではない。局所的な構造、制約、分化、相互依存の程度を表す量である。
+として表す。ここで情報とは意味内容ではない。この表現内で局所的な構造、制約、分化、相互依存の程度を表すsource-localなmodel定義であり、操作的に較正された生物学的観測量ではない。
 
 \subsection{情報流}
 
@@ -113,7 +119,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 \begin{equation}
   \J(\mathbf{r},t)
 \end{equation}
-として表す。\(\J\) は反応、拡散、移動、相互作用からの寄与をまとめたものであり、粗視化された状態がどのように更新されるかを表す。
+として表す。\(\J\) は反応、拡散、移動、相互作用からの寄与をまとめる提案的なaggregate descriptionであり、粗視化された状態がどのように更新されるかを表す。event-to-current aggregationまたはmeasured-flux mapはここでは与えない。
 
 \subsection{誘導ポテンシャル}
 
@@ -121,11 +127,12 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 \begin{equation}
   \PhiI = \PhiI[\I]
 \end{equation}
-で表す。これは、\(\I\) の分布によって誘導される有効ポテンシャルである。対応する勾配駆動のバイアスは
+で表す。これは、\(\I\) の分布によって誘導される有効ポテンシャルであり、測定済みの生化学potentialまたは実証された分子復元mechanismとは同定しない。対応する勾配駆動のバイアスは
 \begin{equation}
   \mathbf{F}=-\nabla \PhiI
 \end{equation}
 と書かれる。
+ここで太字vector \(\mathbf{F}\) は、閾値条件のscalar response \(F_k\) および状態空間の発展場 \(F(x;\theta)\) とは別の対象である。
 
 \subsection{流れとの関係}
 
@@ -141,15 +148,17 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 \begin{equation}
   \frac{\dd \tau}{\dd t}=\rho(\I,\J)
 \end{equation}
-として導入できる。本論文では、運動方程式は \(t\) で記述し、\(\tau\) は解釈に用いる。
+として導入できる。ここで \(\rho\) は Bio-local な進行率であり、VED のnode densityや上流のcontinuum densityと同一ではない。本論文では、運動方程式は \(t\) で記述し、\(\tau\) は解釈に用いる。いずれも有限simulationのloop step / \texttt{DT}とは同一視せず、VED / IFGTの時間変数への写像もここでは与えない。
 
 \subsection{まとめ}
 
-対応関係は、偏りや制約が \(\I\)、状態更新が \(\J\)、更新の非対称性が \(\PhiI\) である。この対応により、直観的な見取り図は連続場の記述へ変換される。
+対応関係は、偏りや制約が \(\I\)、状態更新が \(\J\)、更新の非対称性が \(\PhiI\) である。この対応により、直観的な見取り図は連続場の記述へ変換されるが、生物学的な操作的同定とcross-scale translationは別のOPEN課題である。
 
 \section{Core Equations}
 
-本節では、本論文で用いる最小方程式系を導入する。これらの式は特定の生物系に依存せず、状態変化、流れ、安定構造を共通に扱うための一般形式である。
+本節では、本論文で用いる最小方程式系を導入する。これらの式は特定の生物系に依存せず、状態変化、流れ、候補となる持続構造を共通に扱うための一般形式である。
+
+形式上、\(\I\) と \(\J\) は指定されたcontinuum domain内のfield declaration、式 \eqref{eq:ja-continuity} はbalance relation、式 \eqref{eq:ja-flow}--\eqref{eq:ja-potential} はchosen \(\PhiI[\I]\) と微分可能な空間表現を前提とするconstitutive / effective relationである。この系はtoy simulationのfinite updateを一行ずつ指定するalgorithmではない。
 
 \subsection{基本変数}
 
@@ -161,7 +170,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 \begin{equation}
   \J(\mathbf{r},t)
 \end{equation}
-である。\(\I\) は局所的な構造や制約の密度を表し、\(\J\) は状態変化の方向と速度を表す。
+である。\(\I\) はmodel内の局所的な構造や制約の密度を表し、\(\J\) はmodel状態変化の方向と速度を表す。この定義だけで、両者を操作的に測定された生物学的observableまたはfluxとはしない。
 
 \subsection{連続方程式}
 
@@ -170,7 +179,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
   \frac{\partial \I}{\partial t}+\nabla\cdot\J=\sigma .
   \label{eq:ja-continuity}
 \end{equation}
-ここで \(\sigma(\mathbf{r},t)\) は局所的な生成率である。
+ここで \(\sigma(\mathbf{r},t)\) はこのbalance equationにおける Bio-IFGT local source slotである。これは VED / IFGT の \(\sigma\) またはtoy modelのmorphogen source \(\sigma_M\) とのidentityを意味せず、遺伝子関連の読みはこのslotに対するsource-local interpretationである。独立に較正されたgene-production mapは与えない。
 
 \subsection{情報流の構造}
 
@@ -193,7 +202,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
   \PhiI=\PhiI[\I]
   \label{eq:ja-potential}
 \end{equation}
-と書く。 \(\PhiI\) の具体的な形は系に依存し、本論文では指定しない。したがって、情報密度の偏りが状態変化に勾配駆動のバイアスを与える。符号規約は \(\PhiI[\I]\) を具体的に指定した後に定まる。例えば \(\PhiI\sim-\I\) と置けば、誘導成分 \(-\nabla\PhiI\) は制約密度が増大する方向を向く。別の生物学的観測量では、逆の符号規約や追加の応答項が必要になる場合がある。
+と書く。 \(\PhiI\) の具体的な形は系に依存し、本論文では指定しない。したがって、情報密度の偏りがmodel状態変化に勾配駆動のバイアスを与える。符号規約は \(\PhiI[\I]\) を具体的に指定した後に定まる。例えば \(\PhiI\sim-\I\) と置けば、誘導成分 \(-\nabla\PhiI\) は制約密度が増大する方向を向く。別の提案的な生物学的適用では、逆の符号規約や追加の応答項が必要になりうるが、現在の関係自体は操作的observable mapではない。
 
 \subsection{動力学的ループ}
 
@@ -209,7 +218,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
 
 \subsection{安定構造}
 
-この動力学のもとで、状態がある領域に留まり、摂動後にも戻る傾向を持つとき、その領域はアトラクタとして解釈される。
+本論文の用語では、状態がある領域に留まり、指定された種類の摂動後にも戻る傾向を持つとき、その領域を安定と呼び、アトラクタとして解釈しうる。これは条件付き定義であり、式だけから具体系での存在、不変basin、漸近収束、一般的な双方向returnが確立されるわけではない。
 
 \subsection{まとめ}
 
@@ -220,7 +229,7 @@ Section 2 では直観的な見取り図を示す。Section 3 では形式的な
   \mathbf{F}&=-\nabla\PhiI,\\
   \PhiI&=\PhiI[\I]
 \end{align}
-である。この系により、状態変化、流れの形成、安定構造の出現を共通形式で記述する。
+である。この系は、状態変化、流れの形成、候補となる持続構造を共通形式で記述するが、それ自体で安定性を証明しない。
 
 \section{Gene \texorpdfstring{\(\times\)}{x} Information Flow}
 
@@ -232,13 +241,13 @@ DNA 配列 \(s\) は
 \begin{equation}
   s\in\{A,T,G,C\}^{N}
 \end{equation}
-と書ける。本形式では、配列自体に意味や目的は仮定しない。DNA は分子生成の可能性、反応の起こりやすさ、閾値条件を制約する。
+と書ける。本形式では、配列自体に意味や目的は仮定しない。DNA は分子生成の可能性、反応の起こりやすさ、閾値条件を制約する。ここで \(N\) はsequence lengthであり、後のtoy simulationにおけるneural-commitment field \(N\) ではない。またnucleotide lettersはalphabet symbolsであり、後に同じglyphを再利用するstate labelやtoy fieldとは別である。
 
-したがって DNA は
+したがって DNA は、この抽象model layerで
 \begin{equation}
   \theta=\theta(s)
 \end{equation}
-として表されるパラメータ集合であり、完成した形態の直接指定ではない。
+として表されるパラメータ集合を通じて表現され、完成した形態の直接指定ではない。この関係は具体的なgenotype-to-parameter implementationまたはparameter provenanceを与えない。
 
 \subsection{遺伝子イベント}
 
@@ -246,14 +255,14 @@ DNA 配列 \(s\) は
 \begin{equation}
   \I(\mathbf{r},t)\mapsto \I(\mathbf{r},t)+\Delta\I
 \end{equation}
-と表せる。個々のイベントは離散的だが、その総和は連続的な情報流 \(\J(\mathbf{r},t)\) として表される。
+と表せる。個々のイベントは離散的だが、その総和は連続的な情報流 \(\J(\mathbf{r},t)\) を用いてmodel化しうる。これは提案的なaggregation / process interpretationであり、explicit event-to-current mapを与えない。
 
 \subsection{連続方程式との接続}
 
 \begin{equation}
   \frac{\partial \I}{\partial t}+\nabla\cdot\J=\sigma
 \end{equation}
-において、\(\sigma\) は遺伝子関連イベントに起因する情報生成率を表す。\(\J\) はそれらの効果が空間と時間を通じて蓄積した流れである。
+において、\(\sigma\) はformal source slotであり、遺伝子関連productionの読みを与えうる。\(\J\) もイベント効果のaggregate descriptionとして読みうるが、いずれも現在の論文ではoperational identityまたは測定されたbiological mapではない。
 
 \subsection{偏りと誘導ポテンシャル}
 
@@ -265,7 +274,7 @@ DNA 配列 \(s\) は
 \begin{equation}
   \mathbf{F}=-\nabla\PhiI
 \end{equation}
-に従ってバイアスを受ける。これは新しい根本力ではなく、安定状態が維持されやすく、近傍状態をその basin に引き込むという動力学的性質の記述である。
+に従ってバイアスを受ける。これは新しい根本力ではない。指定されたアトラクタ型モデルの中では、選ばれた領域へ向かう有効な復元バイアスとして表現しうるが、測定済みの生化学potentialまたは実証された分子mechanismとは同定しない。安定basinの存在や一般的returnもこの形式関係だけからは得られない。
 
 \subsection{if/then 条件としての閾値}
 
@@ -273,27 +282,27 @@ DNA による条件的効果は、連続場における閾値条件として表�
 \begin{equation}
   F_k(\I,\J,\mathbf{r},t;\theta)>\theta_k
 \end{equation}
-となるとき、反応が切り替わる。ここで \(\theta_k\) は DNA に由来するパラメータ集合 \(\theta\) によって与えられる。
+となるとき、反応が切り替わる。ここで \(\theta_k\) は、抽象model layerでDNA-conditioned parameter set \(\theta\) と関連づけられる。具体的なsequence-to-threshold mapは実装されていない。このresponse function \(F_k\) は、vector bias \(\mathbf{F}\) およびstate-space evolution field \(F(x;\theta)\) とは別の対象である。
 
 \subsection{形態の解釈}
 
-DNA はパラメータを与え、情報密度と情報流が形成され、\(\I\) の偏りが \(\PhiI\) を誘導し、流れが成形され、閾値が状態を分岐させる。その結果として安定配置がアトラクタとして現れる。細胞運命や形態は、そのような安定配置として観測される。
+DNA はパラメータを与え、情報密度と情報流が形成され、\(\I\) の偏りが \(\PhiI\) を誘導し、流れが成形され、閾値が状態を分岐させる。結果の配置にはアトラクタに基づく解釈を与えうる。細胞運命や観測形態との同定は、この系列だけから導かれる結果ではなく、別の生物学的対応である。
 
-\subsection{スケール不変性}
+\subsection{提案的なスケール間再利用}
 
-同じ形式は、分子、細胞、組織の各スケールに用いることができる。粗視化のレベルは変わるが、\(\I\)、\(\J\)、\(\PhiI\)、閾値、安定解の役割は保たれる。
+同じ記述語彙は、提案として分子、細胞、組織の各スケールで再利用しうる。ただし粗視化levelとsource-local objectは変わる。typed scale map、coarse-graining operator、保存invariant、role identity theoremは与えられず、cross-scale relationは確立済みのidentityまたはuniversalityではなくformal analogyである。
 
 \subsection{まとめ}
 
-DNA は条件を設定するパラメータ集合として扱われる。生物学的構造は、情報密度と情報流によって形成される安定解として現れる。この見方は、次節で扱う発生と形態形成の基盤となる。
+DNA は条件を設定するパラメータ集合として扱われる。本枠組みは情報密度と情報流を用いて候補となる持続配置を記述し、生物学的構造という読みは解釈として区別する。この見方は、次節で扱う発生と形態形成の基盤となる。
 
 \subsection{パラメータ集合の起源}
 
-この記述レイヤーでは、パラメータ集合 \(\theta\) は原始的なものとして扱われない。IFGT の語彙では、\(\theta\) は差異の先行するダイナミクスを通じて安定化した準閉包構造として読むことができる。すなわち、ある閉包パターンが他のパターンよりも持続した結果として保持された配置である。したがって DNA 配列は、持続的な非平衡ダイナミクスを支えたために残った、歴史的に安定化した制約パターンとして解釈される。ただしこれは、具体的な生物における \(\theta\) の起源を導出するものではない。\(\theta\) を枠組みの外部にある説明対象として置く必要がない、ということを述べるにとどまる。
+この記述レイヤーでは、パラメータ集合 \(\theta\) を概念上の原始として置かずに読むことができる。IFGT の語彙では、先行する差異のダイナミクスに保持された準閉包構造との提案的analogyを与えうる。DNA 配列も歴史的に安定化した制約patternとして解釈しうるが、この読みはparameter provenance、具体的なgenotype-to-\(\theta\) mechanism、typed IFGT/Bio translationを与えない。
 
 \section{Development and Morphogenesis}
 
-本節では、前節までの枠組みを発生と形態形成へ適用する。発生は設計の実行ではなく、状態変化が安定構造へ収束する過程として解釈される。
+本節では、前節までの枠組みを発生と形態形成へ適用する。発生は設計の実行ではなく、状態変化が持続配置へ近づきうる過程として提案的に解釈する。一般式だけで生物学的収束を確立するものではない。
 
 \subsection{初期状態と非対称性}
 
@@ -301,11 +310,11 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 
 \subsection{モルフォゲンとしての情報密度}
 
-発生過程では、モルフォゲンが空間的な濃度分布を形成する。本枠組みでは、それを
+発生過程では、モルフォゲンが空間的な濃度分布を形成する。本枠組みでは、そのprofileをsource-localな情報密度場
 \begin{equation}
   \I(\mathbf{r},t)
 \end{equation}
-として扱う。局所生成は \(\I\) の勾配を生み、拡散と分解がその分布を形づくる。
+を通じてmodel化しうる。そのmodel表現内で、局所生成は \(\I\) の勾配を生み、拡散と分解が分布を形づくる。これは提案的な定性対応であり、morphogenと \(\I\) のidentityまたは較正済みmeasurement mapではない。
 
 \subsection{ダイナミクス}
 
@@ -315,6 +324,7 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
   =D\nabla^2\I-\lambda\I+\sigma(\mathbf{r},t;\theta)
 \end{equation}
 を用いる。ここで \(D\) は拡散係数、\(\lambda\) は減衰率、\(\sigma\) はパラメータ集合 \(\theta\) に制約される局所生成項である。
+これは連続的なcoarse-grained evolution relationであり、後の有限toy codeがexact PDE solverまたは同一のdynamical objectであることを主張しない。
 
 \subsection{誘導ポテンシャルと勾配}
 
@@ -326,29 +336,30 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 \begin{equation}
   \mathbf{F}=-\nabla\PhiI
 \end{equation}
-によりバイアスされる。この偏りが構造形成に方向性を与える。
+によりバイアスされる。この有効関係はchosen model内の構造形成に方向性を与えるが、実証済みのbiochemical restoring mechanismではない。
 
 \subsection{閾値による分化}
 
-細胞運命は、\(\I\) に対する閾値によって分岐しうる。
+Model-state labelは \(\I\) に対する閾値によって分岐し、提案的なcell-fate analogyを与えうる。
 \begin{align}
   \I(\mathbf{r})<\theta_1 &\Rightarrow \text{state A},\\
   \theta_1\leq\I(\mathbf{r})<\theta_2 &\Rightarrow \text{state B},\\
   \I(\mathbf{r})\geq\theta_2 &\Rightarrow \text{state C}.
 \end{align}
-\(\I\) は連続量であり、観測される結果は離散的に現れる。分化は、連続的状態変化への閾値応答として理解される。
+\(\I\) は連続量であり、model output labelは離散的に現れる。生物学的分化は連続的状態変化への閾値応答として解釈しうるが、observed morphology mapは与えない。
+数学的には、上の含意はthreshold classification ruleであり、state labelと生物学的な読みは別のinterpretive layerである。
 
 \subsection{アトラクタとしての形態}
 
-ダイナミクスと閾値構造の組み合わせにより、分布が安定化し、分化パターンが固定される。この安定状態が、発生における形態として観測される。
+ダイナミクスと閾値構造の組み合わせは、指定条件のもとで持続的なmodel distributionと分化labelを生じうる。その配置を発生で観測される形態と読むことは別の生物学的解釈であり、表示式だけから定常アトラクタや経験的な形態収束が得られるわけではない。
 
 \subsection{頑健性}
 
-発生の再現性と頑健性は、複数の初期条件が同一の安定配置へ収束しうるというアトラクタ構造から説明できる。局所的なゆらぎは、ダイナミクスによって吸収される。
+発生はしばしば再現的かつ頑健と記述される。アトラクタ解釈では、複数の近傍初期条件が同じ領域へ収束するなら、その挙動は頑健性の候補説明になりうる。本形式関係と有限toy modelが示すのは、試験範囲内のmodel-localな持続、緩和、recommitmentに限られ、生物学的頑健性や任意摂動からのreturnではない。
 
 \section{Life as Attractor}
 
-本節では、生命を完成された物体ではなく、状態空間における持続的な安定構造として定式化する。この視点により、維持、発生、分化、再生を同一の動力学的枠組みで扱うことができる。
+本節では、生命を完成された物体ではなく、状態空間の有界領域内での持続運動として扱う、提案的な生命アトラクタ用語を導入する。この概念的視点は、維持、発生、分化、再生を同じ動力学的語彙に置くが、それらの生物学的機構を確立しない。
 
 \subsection{状態空間による記述}
 
@@ -356,11 +367,12 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 \begin{equation}
   x(t)=(x_1(t),x_2(t),\ldots,x_n(t))
 \end{equation}
-で表される。成分には、分子濃度、発現レベル、反応速度、局所環境などが含まれる。時間発展は
+で表される。成分には、分子濃度、発現レベル、反応速度、局所環境などのmodel表現が含まれうるが、この宣言自体は操作的measurementまたはcalibrationを与えない。時間発展は
 \begin{equation}
   \frac{\dd x}{\dd t}=F(x;\theta)
 \end{equation}
-で与えられる。ここで \(\theta\) は DNA に由来する制約を表すパラメータ集合である。
+で与えられる。ここで \(\theta\) はDNA-conditioned model termと関連づけられる抽象パラメータ集合であり、具体的なgenotype-to-parameter mapは与えない。ここで \(x\) はspatial coordinateではなくstate vectorであり、\(F(x;\theta)\) はそのevolution fieldである。この \(F\) はcontinuum bias vector \(\mathbf{F}\) およびthreshold response \(F_k\) と区別する。
+本subsectionの最初の表示はstate / domain declaration、次の表示はgeneric evolution ruleであり、発生toy codeのordered finite updateを指定するものではない。
 
 \subsection{内部時間}
 
@@ -368,11 +380,11 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 \begin{equation}
   \frac{\dd\tau}{\dd t}=\rho(x)
 \end{equation}
-として導入する。\(\tau\) は状態変化や情報更新の蓄積を表し、一般には \(t\) と一致しない。
+として導入する。\(\rho(x)\) は先の \(\rho(\I,\J)\) とprogression roleを共有するが、両functionalのexact identityは指定されず、いずれも上流density variableではない。\(\tau\) は状態変化や情報更新の蓄積を表し、一般には \(t\) と一致しない。
 
 \subsection{生命の定義}
 
-生命は単一の状態ではない。ある領域に留まりながら変化し続ける運動である。すなわち、静止せず、無制限に発散せず、一定の範囲に拘束される。このとき \(\tau\) は継続的に進行する。
+このmodel terminologyでは、生命を単一状態ではなく、ある有界領域に留まりながら変化し続ける運動として表現する。その運動は、静止せず、無制限に発散せず、一定範囲に拘束され、\(\tau\) が進行し続けるものとして置く。生物学的生命または対象系boundaryを独立に同定する操作的基準はここでは与えない。
 
 \subsection{生命アトラクタ}
 
@@ -380,15 +392,15 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 \begin{equation}
   \Omega_{\mathrm{life}}\subset\Omega
 \end{equation}
-があり、系がそこに入ると摂動後にも戻る傾向を持つとき、それを生命アトラクタと呼ぶ。この領域は外部から与えられるものではなく、相互作用を通じて形成される。
+があり、系がそこに入ると指定された種類の中程度摂動後にも戻る傾向を持つとき、この概念model内でそれを生命アトラクタと呼ぶ。これは条件付き領域定義であり、具体系での存在、到達可能性、不変性、または生物学的生命との操作的同一性を確立しない。有限発生toy modelが \(\Omega_{\mathrm{life}}\) を実装することもここでは示されない。意図されるのは、完成endpointではなくsystem / environment interactionから組織化が生じるという解釈である。ただし、state representation、variables、sources、parameters、boundaries、viability conditionsは供給されうるため、領域の内生的構成はOPENである。
 
 \subsection{非平衡持続構造}
 
-生命アトラクタは平衡状態ではない。物質は流入し、分子は入れ替わり、エネルギーは消費される。それにもかかわらず組織化は維持される。生命は、非平衡状態における持続構造である。
+提案される生命アトラクタは平衡状態の描像ではない。物質の流入、分子の入れ替わり、エネルギー消費のもとで組織化が持続するという非平衡maintenance interpretationである。現在の式は専用resource budgetを備えず、生物学的自己維持機構を実証しない。
 
 \subsection{分化とサブアトラクタ}
 
-生命アトラクタ内部には、より具体的な安定領域が存在しうる。細胞分化は、\(\Omega_{\mathrm{life}}\) 内のサブアトラクタへの遷移として解釈できる。
+提案される生命アトラクタ内部には、より具体的な条件付き安定領域が存在しうる。細胞分化は、\(\Omega_{\mathrm{life}}\) 内のサブアトラクタへの遷移として解釈できるが、これは概念記述であって、生物学的同定または安定性結果ではない。
 
 \section{Probability Revision}
 
@@ -400,41 +412,41 @@ DNA は条件を設定するパラメータ集合として扱われる。生物�
 
 \subsection{問題の所在}
 
-本論文では、生命を固定構造ではなく、状態空間における持続的な安定運動とみなす。このとき生命は一点ではなく、有限の広がりを持つ領域に対応する。生命誕生は、特定構造への命中ではなく、その領域へ到達し、そこに留まることとして捉え直される。
+Section 7 の提案的用語では、生命を固定構造ではなく、有界な状態空間領域内での持続運動として表現する。これはmodel targetであり、生物学的生命との操作的同定はOPENである。生命誕生は、特定構造への命中ではなく、その領域へ到達し、そこに留まる問いとして捉え直される。
 
 \subsection{領域としての確率}
 
-生命アトラクタの領域を
+この概念的再定式化のため、提案的な生命アトラクタ領域を
 \begin{equation}
   \Omega_{\mathrm{life}}\subset\Omega
 \end{equation}
-とする。生命誕生確率は、\(\Omega_{\mathrm{life}}\) に到達する確率である。これは一点への命中確率ではなく、領域への侵入確率である。
+とする。生命誕生の確率問題を、\(\Omega_{\mathrm{life}}\) に到達する領域侵入targetとして再定式化する。sample space、measure、projection、数値確率はここでは与えない。
 
 \subsection{試行の構造}
 
-分子反応や物質循環は、条件が続く限り繰り返される。持続しない状態は消え、持続する状態だけが残る。この意味で、生命はあらかじめ選ばれるのではなく、持続しうる状態として現れる。
+概略的なtrial pictureでは、分子反応や物質循環は条件が続く限り繰り返され、非持続状態は消え、持続状態が残る。この描像は領域侵入への再定式化を動機づけるが、生物学的maintenance mechanismまたは独立に測定されたselection processを実証しない。
 
 \subsection{次元の縮約}
 
-点を目標とする見方では、多数の自由度を同時に指定する必要がある。一方、本枠組みでは、生命成立条件は安定領域への到達を特徴づける少数の有効変数で表される。したがって、確率問題の構造そのものが変わる。
+点を目標とする見方では、多数の自由度を同時に指定する必要がある。一方、本枠組みは、候補領域への到達を特徴づける少数の有効変数による記述を提案する。projectionとprobability measureがないため、これは定量的な次元縮約の確立ではなく、問題対象の構造的再定式化である。
 
 \subsection{解釈}
 
 これは確率値の再評価ではなく、数えられる対象の構造的再定義である。生命は奇跡的な命中でも、自動的必然でもない。維持条件が存在するときに現れうる状態である。
 
-IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は、準閉包レジームへの到達とその内部での持続に対応する。準閉包レジームとは、閉包へ向かう駆動が維持されながら、完全閉包境界が通常の状態としては到達されない動力学的領域である。したがって生命の確率は、固定された分子配置を組み立てる確率ではなく、そのようなレジームへ到達し維持される確率として理解する方が適切である。生命が極端に低確率に見えることは、少なくとも部分的には、何を標的として同定したかに依存している可能性がある。
+IFGT の語彙では、この再定式化に提案的な構造解釈を与えうる。Bio-IFGTのlife-region targetを、準閉包レジームへの到達とその内部での持続になぞらえる読みである。これは記述roleのcorrespondenceであって、identity、typed translation、完成した生物学的mechanismではない。したがって確率問題を固定分子配置ではなくレジーム到達として概略的に置けるが、probability measure、empirical estimate、IFGT/Bio bridgeは与えない。
 
 \section{Intelligence as a Second Attractor}
 
-本節では、知性を生命の単なる延長ではなく、生命アトラクタの上に成立する第二の安定構造として扱う。
+本節では、知性を生命の単なる延長ではなく、提案的な生命アトラクタ記述に支えられる第二のアトラクタという将来向けの概念提案として扱う。
 
 \subsection{知性の位置づけ}
 
-生命はすでにアトラクタ構造として成立している。多くの生命系は、そのアトラクタ内で長期間持続するが、自動的に知性へ至るわけではない。したがって知性は生命アトラクタの単なる強化ではない。
+ここで提案する用語では、生命をアトラクタ領域によって記述する。多くの生命系は知性へ自動的に至らないため、知性をその領域の単なる強化としてはmodel化しない。
 
 \subsection{第二のアトラクタ}
 
-知性は、情報が流れるだけでなく、保持され、参照され、再利用される構造として現れる。過去状態が現在に影響し、現在状態が未来の軌道を調整する。このような再帰的ループは、生命だけに必要な条件とは異なる条件のもとで安定化する。
+知性は、情報が流れるだけでなく、保持され、参照され、再利用される候補構造として提案する。過去状態が現在に影響し、現在状態が未来の軌道を調整するという再帰的ループには、生命だけに考える条件とは異なる追加条件が必要になると想定する。
 
 \subsection{構造的独立性}
 
@@ -442,7 +454,7 @@ IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は
 \begin{equation}
   \Omega_{\mathrm{intel}}\subset\Omega_{\mathrm{life}}
 \end{equation}
-と書けるが、\(\Omega_{\mathrm{intel}}\) の内部構造は追加の制約によって決まる。状態履歴の持続的参照、時間的情報蓄積、複数要素間の情報共有などが必要となる。
+と書けるが、\(\Omega_{\mathrm{intel}}\) の内部構造は追加制約に依存すると提案する。候補条件には状態履歴の持続的参照、時間的情報蓄積、複数要素間の情報共有があるが、その十分性と生物／認知translationは現在のBio modelでは確立されない。
 
 \subsection{確率構造}
 
@@ -458,23 +470,25 @@ IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は
 
 \section{Relation to Note}
 
-本節では、本論文と対応する note 形式の本文との関係を整理する。目的は理論の要約ではなく、同じ構造が異なる記述レイヤーでどのように現れるかを明確にすることである。
+本節では、本論文と対応候補となる note 形式の本文との提案的関係を整理する。目的は理論の要約ではなく、異なる記述レイヤーのanalogous roleを比較することである。
 
-本論文は L3 の形式層であり、note 本文は L1 の直観層である。両者は同じ対象を扱うが、目的が異なる。本論文は定義、方程式、関係を固定し、note 本文は比喩や読みやすい表現によって直観的理解を助ける。重要なのは、文言の一致ではなく構造の対応である。
+本論文は L3 の形式層であり、note 本文は L1 の直観層である。両者は関連するtargetを扱うものとして提案されるが、目的が異なる。本論文は定義、方程式、関係を固定し、note 本文は比喩や読みやすい表現によって直観的理解を助ける。exact L1 source/version locatorはここでは固定されない。重要なのは、objectやdynamicsのidentityまたはexact translationではなく、提案的な構造対応である。
 
 本論文の \(\I\) は note では「かたまり」「偏り」「構造がある場所」として、\(\J\) は「流れ」「くり返し」「通りやすさ」として、\(\PhiI\) は「引き戻される感じ」「落ち着く場所」として現れる。アトラクタは「同じところに戻る」「かたちが保たれる」という表現に対応する。
 
-発生と形態形成は、note では「くり返すと変わる」「流れができる」「かたちになる」といった形で表現される。生命は「物ではなく状態である」として説明される。確率の再定義は「奇跡ではない」という表現に対応する。
+発生と形態形成は、note では「くり返すと変わる」「流れができる」「かたちになる」といった形で表現される。生命は「物ではなく状態である」として説明される。ここでの生命アトラクタは有界領域内の持続運動に基づく条件付きの提案用語であり、安定性結果または生物学的生命の操作的基準を与えない。確率の再定義は「奇跡ではない」という表現に対応する。
 
 \section{Minimal Developmental Simulation (Bio-IFGT Toy Model)}
 
 \subsection{目的}
 
-本節では、Bio-IFGT の最小玩具モデルを導入する。目的は、局所源、拡散、減衰、閾値、応答率からなる小さな DNA 的パラメータ集合が、幾何学を明示的に指定しなくても安定した生物様構造を生みうることを示すことである。
+本節では、Bio-IFGT の最小玩具モデルを導入する。目的は、局所源、拡散、減衰、閾値、応答率からなる小さな DNA 的パラメータ集合が、完成output arrayを入力せずに、有限horizonで再現可能なmodel patternを生じうることを示すことである。ただしsource profileとpositional windowは粗い空間情報を供給する。
 
 \subsection{モデル設定}
 
-胚様の二次元領域を考える。系は離散時間で発展し、主要な場として、モルフォゲン場 \(M(x,y,t)\)、情報密度 \(\I(x,y,t)\)、神経コミットメント \(N(x,y,t)\)、眼様コミットメント \(E(x,y,t)\) を持つ。また補助的に境界安定化場 \(B(x,y,t)\) を導入する。
+胚様の二次元領域を考える。系は離散時間で発展し、主要なmodel fieldとして、モルフォゲン様場 \(M(x,y,t)\)、model情報密度 \(\I(x,y,t)\)、神経様コミットメント \(N(x,y,t)\)、眼様コミットメント \(E(x,y,t)\) を持つ。また補助的にgradient-sensitiveなboundary-like accumulation \(B(x,y,t)\) を導入する。
+
+これらはsource-localなtoy fieldsであり、実行時にはfinite arraysとなる。toy \(\I\) はBio-IFGT fieldのfinite proxyであってcarrier identityではなく、codeは独立な \(\J\) または \(\PhiI\) arrayを直接積分しない。discrete loop step / \texttt{DT}も、Bio internal \(\tau\) またはbiological clockではない。
 
 \subsection{ダイナミクス}
 
@@ -496,7 +510,8 @@ IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は
 \begin{equation}
   G=|\nabla\I|
 \end{equation}
-として導かれる。境界場は、空間変化が局所的に最大化される領域を表す。その更新は
+ここで表示した \(G\) はpaper上のraw gradient magnitudeである。current codeはそのmagnitudeをglobal normalizationしてから \(B\) updateのinputに使うため、normalized input \(G_{\mathrm{norm}}\) とaccumulated state \(B\) はraw \(G\) とは別objectである。DNA alphabetのnucleotide \(G\) も無関係である。
+として導かれる。paperは空間変化が局所的に強い領域にboundary-field labelを用いるが、codeの \(B\) は瞬間的なboundary detectorではなくaccumulated stateである。報告horizonではboundary-like bandを強調する一方、長時間audit runではthresholded maskが全gridへ広がるため、恒久的に安定した生物学的boundaryとは読まない。その更新は
 \begin{equation}
   B_{t+1}=B_t+\eta_B S(G-\theta_B)(1-B_t)
 \end{equation}
@@ -511,10 +526,14 @@ IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は
   S(z)=\frac{1}{1+e^{-kz}}
 \end{equation}
 である。
+この \(S\) はpaper上のsymbolic threshold familyである。execution sourceはgeneral / eye-specificの別sigmoidを実装し、それぞれsteepness \(8\) / \(20\) を用い、exponential argumentをclipする。したがって両code functionを一つの同一function instanceとは扱わない。
+
+\paragraph{Paper formとfinite execution.}
+表示された \(M\) と \(\I\) の関係はcontinuous model formであり、current codeはprescribed source profileを用いるexplicit finite updateとして表現する。各loopでは、まず \(M\) を更新し、そのnew \(M\) を使って \(\I\) を更新する。次に \(N\) を更新・clipし、updated \(\I\) からglobally normalized gradient inputを計算して \(B\) を更新・clipし、最後にcurrent \(N\) / \(B\)、explicit positional window、eye-specific sigmoidを使って \(E\) を更新・clipする。codeの \texttt{DT} は \(M\) / \(\I\) updateに適用され、source-specificな \(N\) / \(B\) / \(E\) accumulation ruleには適用されない。この順序はexecution propertyであり、新しい式またはsimultaneous updateの主張ではない。
 
 \subsection{解釈}
 
-このモデルは神経構造や眼様構造の幾何学を明示的に符号化しない。局所源、拡散・減衰パラメータ、閾値条件、応答率だけを指定する。その結果、滑らかなモルフォゲン勾配、情報密度地形、神経板様領域、境界構造、眼様局在構造が階層的に現れる。
+このモデルは完成した神経様・眼様output arrayを符号化しない。一方で、局所源、拡散・減衰パラメータ、閾値条件、応答率に加え、\(E\) 用のexplicit positional windowを指定する。その制約下で、滑らかなモルフォゲン様勾配、model情報密度地形、神経板様model region、boundary-like accumulated pattern、眼様localized model patternが現れる。
 
 \subsection{主要な観察}
 
@@ -523,20 +542,22 @@ IFGT の語彙では、この再定式化は明確な解釈を持つ。生命は
   M\rightarrow \I\rightarrow N\rightarrow B\rightarrow E
 \end{equation}
 という逐次的制約として進む。各段階は、スカラー場、勾配構造、閾値による離散化、複合条件による局在化を導入する。
+このcompact sequenceはstaged navigation summaryであり、executable updateのexact dependency graphではない。current codeではprescribed sourceが \(M\) を更新し、new \(M\) が \(\I\) へ入り、\(\I\) が \(N\) と、別branchでraw gradientからnormalizeされる \(B\) inputへ入る。updated \(N\) / \(B\) とpositional windowが \(E\) へ入る。したがって \(N\) は \(B\) updateのdirect inputではなく、\(B\) より前に置かれることはstagingを示し、\(N\)-to-\(B\) causal edgeを示さない。
 
 \subsection{概念的含意}
 
-このシミュレーションは、生物様構造が完成形として符号化されていなくても、制約された情報地形の中の安定解として現れうることを示す。DNA 的パラメータは、可能な状態の幾何を形づくる条件として働く。
+このシミュレーションは、completed model patternをinput arrayとして符号化しなくても、prescribed source geometryとexplicit positional windowを含む制約地形の中に有限horizonで再現可能に現れうることを示す。これはgeometry-free emergence、定常解、漸近安定解の主張ではない。DNA 的パラメータは、可能なmodel状態の幾何を形づくる条件として働く。
 
 \subsection{Bio-IFGTとの関係}
 
-Bio-IFGT の枠組みでは、\(\I\) は情報密度、\(\PhiI\sim-\I\) は有効ポテンシャル地形、\(\J\sim-\nabla\PhiI\) は安定領域へ向かう流れに対応する。観測される構造は、この場のアトラクタ様配置に対応する。
+Bio-IFGT の枠組みでは、toy \(\I\) はBio-IFGT情報密度のfinite proxyであり、\(\PhiI\sim-\I\) は有効ポテンシャル地形、\(\J\sim-\nabla\PhiI\) は候補領域へ向かう流れというformal / interpretive readingを持つ。報告された有限horizonの構造にはアトラクタ様の解釈を与えうるが、formal basin、不変領域、漸近収束、または \(\Omega_{\mathrm{life}}\) membershipは確立されない。
+ここでの \(\PhiI\) / \(\J\) はformal / interpretive correspondenceであり、finite codeから独立に積分される \(\PhiI\) / \(\J\) arrayへのliteral one-to-one mappingではない。toy fieldから測定済みbiological observableへのoperational mapも与えない。
 
-生成経路 \(M\rightarrow \I\rightarrow N\rightarrow B\rightarrow E\) の各段階は、準閉包の逐次的な局在化として解釈できる。モルフォゲン場は大域的な情報勾配を形成し、それが \(\I\) の局所的蓄積を駆動する。\(\I\) は閾値を超えることで場の部分領域を安定化する。眼様コミットメント \(E\) は、神経板様領域 \(N\) に支えられつつ、それとは区別される二次的な準閉包を表す。この階層構造は、生命アトラクタ内のサブアトラクタとして分化を捉える解釈を反映している。
+生成経路 \(M\rightarrow \I\rightarrow N\rightarrow B\rightarrow E\) の各段階は、上記のstaged navigation summaryとして、準閉包の逐次的な局在化として解釈できる。モルフォゲン場は大域的な情報勾配を形成し、それが \(\I\) の局所的蓄積を駆動する。\(\I\) は閾値を超えることで報告horizonの持続的な部分領域をlabelする。眼様コミットメント \(E\) は、神経板様領域 \(N\) に支えられつつ、それとは区別される二次的な準閉包を表す。この解釈はdistinct execution dependenciesを置き換えず、formal quasi-closure mapを供給しない。この階層構造は、生命アトラクタ内のサブアトラクタとして分化を捉える解釈を反映している。
 
 \subsection{限界}
 
-このモデルは意図的に最小化された玩具モデルであり、生物学的詳細の再現を目的としない。制約されたダイナミクスのもとで構造が立ち上がるという構造原理を示すためのものである。
+このモデルは意図的に最小化された玩具モデルであり、生物学的詳細の再現を目的としない。制約されたダイナミクスのもとでの有限model-localな組織化と定性的な構造analogyを示す。長時間audit runでは変化が継続し、選択された摂動での限定的な緩和とrecommitmentは、一般return、生物学的頑健性、再生を確立しない。外部biological dataset、calibration、operational model-to-observable mapは使用しない。
 
 \section{Simulation Results and Visualization}
 
@@ -544,19 +565,22 @@ Bio-IFGT の枠組みでは、\(\I\) は情報密度、\(\PhiI\sim-\I\) は有�
 
 \subsection{初期状態}
 
-初期状態では、場はほぼ一様であり、組織化された構造は存在しない。モルフォゲン場 \(M\) は局所的な生成源のみを持ち、情報密度 \(\I\) は低く、小さな摂動以外に意味のある空間偏りを持たない。神経コミットメント \(N\) と眼様コミットメント \(E\) は未分化である。この状態では、完成した形に対応する情報は場のどこにも存在しない。
+初期状態では、場はほぼ一様であり、組織化された構造は存在しない。モルフォゲン様model field \(M\) は局所的な生成源のみを持ち、model情報密度 \(\I\) は低く、小さな摂動以外に意味のある空間偏りを持たない。神経様コミットメント \(N\) と眼様コミットメント \(E\) は未commitのmodel stateである。completed output arrayは供給されないが、source profileとpositional windowは後続updateに使う粗い空間情報をpreloadする。
 
 \subsection{時間発展}
 
-時間発展の中で、まずモルフォゲンが拡散し滑らかな勾配を形成する。次に情報密度 \(\I\) が蓄積して空間的偏りが強まる。閾値条件により中央に神経板様領域 \(N\) が現れ、\(|\nabla\I|\) によって境界場 \(B\) が定義される。最後に、神経コミットメント、境界安定化、位置窓が重なる場所に眼様コミットメント \(E\) が局所的に現れる。
+時間発展の中で、まずモルフォゲンが拡散し滑らかな勾配を形成する。次に情報密度 \(\I\) が蓄積して空間的偏りが強まる。閾値条件により中央に神経板様領域 \(N\) が現れ、\(|\nabla\I|\) から得たglobally normalized inputによりaccumulated boundary field \(B\) が更新される。最後に、神経コミットメント、境界安定化、位置窓が重なる場所に眼様コミットメント \(E\) が局所的に現れる。
+これはrunのstaged presentationである。actual loopではupdated \(M\) が \(\I\) へ入り、updated \(\I\) が \(N\) と \(B\) 用normalized gradient inputへ分岐し、updated \(N\) / \(B\) とpositional windowが \(E\) updateへ入る。direct \(N\)-to-\(B\) inputやsimultaneous updateを意味しない。
 
 \subsection{最終状態}
 
-最終状態では、中央に安定した神経板様領域が形成される。眼様構造は神経場の境界付近に局在して現れる。一方、中央部では関連する境界条件が弱いため、眼様場は形成されにくい。したがって、このダイナミクスは、構造が現れる場所だけでなく、現れない場所も同時に決めている。
+報告された800-step horizonでは、中央に再現可能な神経板様model regionと、相対的に明るい二つの眼様lobeが現れる。ただし中央の \(E\) 値はzeroではなく、auditされたdefault条件の \(E>0.5\) maskは一つのconnected componentであるため、独立した二眼構造の証拠ではない。局在はexplicit positional windowに依存し、eye pathwayを無効化すると \(E=0\) となる。これは有限horizonの記述であり、長時間audit runでは変化が継続するため、定常性または漸近安定性を意味しない。
+
+したがってmodel dynamicsと供給されたspatial constraintが共同で相対強度patternを形づくるのであり、geometry-free emergenceまたは生物学的eye-development mechanismではない。
 
 \subsection{図の説明}
 
-各図は、前節で述べた階層的生成の一段階に対応する。
+各図はpaper上のstaged presentationの一段階に対応する。この順序はnavigation summaryであり、complete execution-dependency graphではない。
 
 \begin{figure}[htbp]
   \centering
@@ -567,25 +591,25 @@ Bio-IFGT の枠組みでは、\(\I\) は情報密度、\(\PhiI\sim-\I\) は有�
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/information_density_final_v2.png}
-  \caption{最終情報密度 \(\I\)。モルフォゲン場に応じて蓄積し、中央ピークを形成する。}
+  \caption{最終model情報密度 \(\I\)。\(M\) に応じて蓄積し、中央ピークを形成するが、生物学的measurement mapを意味しない。}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/neural_commitment_final_v2.png}
-  \caption{最終神経コミットメント \(N\)。情報密度の閾値化により、中央に神経板様領域が形成される。}
+  \caption{最終神経様コミットメント \(N\)。model情報密度の閾値化により、中央に神経板様model regionが形成される。}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/boundary_field_final_v2.png}
-  \caption{最終境界安定化場 \(B\)。\(\I\) の勾配構造から導かれ、境界様領域を強調する。}
+  \caption{最終accumulated boundary stabilization field \(B\)。codeでは \(\I\) から得たnormalized gradient-sensitive inputにより更新され、report horizonで境界様領域を強調するが、この有限horizon patternは恒久的な生物学的boundaryではない。}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/eye_commitment_final_v2.png}
-  \caption{最終眼様コミットメント \(E\)。神経コミットメントと境界条件が位置窓内で重なる場所に局所構造が現れる。}
+  \caption{最終眼様コミットメント \(E\)。model commitmentがexplicit positional window内で重なる場所に相対的なbright regionが現れる。これは定性的model patternであって、生物学的眼の同定ではない。}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -597,31 +621,33 @@ Bio-IFGT の枠組みでは、\(\I\) は情報密度、\(\PhiI\sim-\I\) は有�
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/combined_fields_with_eye_v2.png}
-  \caption{統合可視化。モルフォゲン場、情報密度、神経コミットメント、眼様コミットメントの最終的な関係を示す。}
+  \caption{統合可視化。model field \(M\)、\(\I\)、\(N\)、\(E\) の最終的な関係を示す。}
 \end{figure}
+
+plotされたfieldはmodel stateである。mean / max / \(0.5\) 超のfractionはrun diagnostic、contourとRGB normalizationはvisualization transformである。これに対しnormalized gradient quantityは \(B\) updateへ直接入るmodel intermediateであり、display-onlyではない。これらのdiagnostic / display transformは、それ自体で独立に測定されたbiological observableではない。
 
 \subsection{時間発展の可視化}
 
-時間発展はアニメーション GIF としても出力されている。
+以前の本文は以下のアニメーションpathを参照していたが、このpathのartifactは現行配布には存在しない。
 \begin{center}
   \path{simulations/minimal_neural_field/outputs/development_v2_hierarchical.gif}
 \end{center}
-最小発生モデルの時間発展。単純な動力学的制約のもとで、構造が安定配置として現れる。
-このアニメーションは補足資料として提供される。そこでは、モルフォゲン形成、情報密度蓄積、神経板様安定化、境界抽出、二次的な眼様コミットメントの順序が示される。
+別名 \texttt{fig8\_development\_v2\_hierarchical.gif} の過去のlocal animation artifactは保存されているが、現在auditされたrunおよびtracked PNGとのlineageは未解決である。したがって、検証済みの現行補足出力とは扱わず、current-run GIFをここで提供するものではない。
 
-この順序は
+そのhistorical animationとは独立に、前節までの段階的なmodel記述を
 \begin{equation}
   M\rightarrow\I\rightarrow N\rightarrow B\rightarrow E
 \end{equation}
-という階層的生成経路と一致する。
+というsequenceで要約する。
+このsequenceはstaged reading orderに限る。executable dependencyは \(\I\) から \(N\) updateと、\(B\) を更新するnormalized gradient inputへ分岐し、その後 \(E\) が \(N\)、\(B\)、positional windowを使う。表示arrow sequenceはdirect \(N\)-to-\(B\) causal dependencyを主張しない。
 
 \subsection{観察のまとめ}
 
-このシミュレーションは、神経板様領域が情報密度の閾値化によって生じること、眼様場が境界構造と位置条件の組み合わせによって生じること、構造が段階的に現れること、最終形が事前に指定されていないことを示す。したがって、結果として得られる構造は、制約されたダイナミクスのもとでの安定解として解釈される。
+このシミュレーションは、神経板様model regionがmodel情報密度の閾値化によって生じること、眼様場がgradient-sensitive accumulationとexplicit positional conditionの組み合わせで局在すること、構造が段階的に現れること、completed output arrayが事前指定されていないことを示す。ただしsourceとwindowの粗いgeometryは供給される。結果として得られる構造は、制約されたダイナミクスのもとで再現可能な有限horizon patternとして解釈する。これは定常解、不変basin、または一般摂動returnを確立しない。
 
 \subsection{本節の役割}
 
-この結果は、特定の生物現象のモデルではない。本節の役割は、場に基づく動力学系において、最小条件から構造が立ち上がりうることを示す点にある。それは生物学的機構を実証するものではなく、構造的可能性を示すにとどまる。
+この結果は、特定の生物現象のモデルではない。本節の役割は、場に基づくtoy systemにおいて、指定条件下の有限空間組織化を示す点にある。Bio-IFGTの解釈と整合する定性的なstructural analogueであるが、生物学的機構またはempirical correspondenceを実証しない。外部biological datasetまたはoperational observable mapも使用しない。
 
 \clearpage
 
@@ -629,24 +655,24 @@ Bio-IFGT の枠組みでは、\(\I\) は情報密度、\(\PhiI\sim-\I\) は有�
 
 本節では、本論文で導入した枠組みの射程と限界を整理する。目的は新しい主張を追加することではなく、この枠組みが何を扱い、何を扱わないかを明確にすることである。
 
-本論文は、生物系を情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって記述した。この枠組みは、発生、形態形成、生命の持続、知性の成立条件を共通形式で扱うための最小言語である。ただし、個別現象の詳細な再現を目的とするものではない。
+本論文は、生物系をsource-localな情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって記述した。この枠組みは、発生、形態形成、生命の持続、知性の成立条件を共通形式で扱うための最小言語であるが、これらを操作的biological observableまたはscale間で同一のcarrierとはしない。個別現象の詳細な再現を目的とせず、アトラクタ、維持、頑健性の語は条件付きの解釈であり、存在、安定性、生命の操作的基準、生物学的再生はOPENである。
 
-本枠組みは、反応拡散系、遺伝子ネットワーク、神経ダイナミクスといった既存モデルを置き換えない。むしろ、それらを密度、流れ、誘導バイアス、安定性という共通構造として再記述するための形式である。
+本枠組みは、反応拡散系、遺伝子ネットワーク、神経ダイナミクスといった既存モデルを置き換えない。むしろ、それらを密度、流れ、誘導バイアス、安定性というanalogous roleで再記述する提案である。語彙の再利用は、same dynamicsまたはtyped cross-scale mapを確立しない。
 
 また、この枠組みは完全な平衡や固定閉包への収束を前提としない。流れは継続し、構造は更新され続ける。この意味で、生物系は非閉包的な持続構造として理解される。ただし、この性質は本論文では独立した理論として展開しない。
 
-この解釈は、IFGT において定式化される準閉包構造と整合する。生物系は、閉包が部分的で、動的に維持され、通常の完全閉包状態へ変換されないレジームに留まる。したがって、生物学的ダイナミクスの非閉包性は、この枠組みの限界ではなく、中心的な記述特徴である。
+この解釈は、IFGT において定式化される準閉包語彙とのstructural analogyとして提案される。生物系をpartial closureのregimeによって記述しうるが、これはidentity、derivation、typed IFGT/Bio translationではなく、上流VED/IFGT bridgeも完成しない。この記述自体は、生物学的maintenance mechanismまたは該当領域の存在を確立しない。
 
-限界も明確である。具体的な生物に対するパラメータ集合 \(\theta\) の導出は扱わない。\(\I\)、\(\J\)、\(\PhiI\) の明示形は系に依存する。数値的予測も与えない。本論文は統一的な記述基盤であり、個別生物系の精密モデルではない。
+限界も明確である。具体的な生物に対するパラメータ集合 \(\theta\) の導出は扱わない。\(\I\)、\(\J\)、\(\PhiI\) の明示形は系に依存し、操作的biological measurement mapも与えない。数値的予測や外部biological datasetとのtoy-output比較も行わず、引用文献はbackgroundであってpaired model--data evidenceではない。本論文は提案的な共通記述基盤であり、個別生物系の精密またはempirically calibrated modelではない。
 
 \section{Conclusion}
 
-本論文では、生物系を情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって記述する最小枠組みを示した。この枠組みにより、発生は安定構造への収束として、生命は動的に維持される安定運動として、知性は生命の上に成立する第二のアトラクタとして解釈される。
+本論文では、生物系を情報密度 \(\I\)、情報流 \(\J\)、誘導ポテンシャル \(\PhiI\) によって記述する最小枠組みを示した。この枠組みでは、発生、生命、知性を提案的なアトラクタ語彙によって整理する。具体的な収束、生物学的生命の同定、維持、安定性、再生、第二アトラクタの実現は、それぞれOPENな課題として残る。
 
-重要なのは、設計や目的を原始的な説明項として用いなくても、生物学的形態を記述できる点である。本論文はすべての生物学的機構を詳細に再現することを目的としない。生物現象を貫く共通構造を抽出することを目的とする。
+重要なのは、設計や目的を原始的な説明項として用いなくても、生物学的形態を記述できる点である。本論文はすべての生物学的機構を詳細に再現することを目的としない。生物現象に対する共通の記述形式を提案するが、carrier、dynamics、scaleのidentityは含意しない。
 
 本枠組みは、状態、流れ、誘導バイアス、安定性という少数の要素を用いる。これにより、発生、形態形成、生命維持、確率の再定義、知性の成立を一つの記述形式に置くことができる。
 
-残された課題として、具体的な系における \(\theta\) の特定、\(\I\)、\(\J\)、\(\PhiI\) の経験的同定、知性の実装に関する追加モデル化がある。本論文の結果は最終理論ではなく、記述形式である。その有効性は今後の適用と洗練によって評価される。
+残された課題として、具体的なgenotype-to-\(\theta\) mapとparameter provenance、\(\I\)、\(\J\)、\(\PhiI\) のoperational biological map、units、calibrationがある。現在のtoy simulationは外部biological datasetと比較されず、typed IFGT/Bio / cross-scale translationと知性の実装も追加課題である。本論文の結果は最終理論ではなく、記述形式である。その有効性は今後の適用と洗練によって評価される。
 
 \end{document}

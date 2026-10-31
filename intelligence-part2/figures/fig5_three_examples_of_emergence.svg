@@ -6,7 +6,7 @@
     Fig.5  Three Examples of VED-Defined Emergence
   </text>
   <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
-    Emergence is not mere complexity; it is the formation of an attractor from non-closure under external mutual constraint
+    A proposed formal-role comparison across three distinct domains
   </text>
 
   <defs>
@@ -39,7 +39,7 @@
   <g>
     <rect x="390" y="112" width="720" height="54" rx="10" fill="#FFFFFF" stroke="#DDDDDD"/>
     <text x="750" y="135" font-size="13" fill="#555555" text-anchor="middle">
-      VED usage: lower-layer motion + mutual constraint → emergent upper-layer attractor
+      Proposed reading: lower-layer motion + mutual constraint → upper-layer attractor
     </text>
     <text x="750" y="155" font-size="13" fill="#1E8449" text-anchor="middle" font-weight="600">
       U = Φ(L, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>)
@@ -113,7 +113,7 @@
       U = Φ(L, H<tspan font-size="0.62em" baseline-shift="-22%">ij</tspan>)
     </text>
     <text x="750" y="770" font-size="12.5" fill="#555555" text-anchor="middle">
-      lower-layer motion does not vanish; it is stabilized as an upper-layer attractor
+      schematic comparison, not a typed identity or shared-mechanism result
     </text>
   </g>
 
@@ -121,7 +121,7 @@
   <g>
     <rect x="325" y="842" width="850" height="36" rx="8" fill="#FFFFFF" stroke="#DDDDDD"/>
     <text x="750" y="865" font-size="12.5" fill="#555555" text-anchor="middle">
-      Not “complexity simply becomes something new,” but “non-closure plus constraint forms a sustainable attractor.”
+      The arrows compare formal roles; they do not derive one domain from another.
     </text>
   </g>
 

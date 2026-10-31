@@ -259,7 +259,6 @@ Attribution 4.0 International License（CC BY 4.0）の下で公開されてい�
 このリポジトリは、完成宣言ではなく、更新され続ける研究枠組みとして提示されています。
 短い注記はここに残し、より詳しい立場説明は [Author Position](docs/author_position.md) に
 分けています。
-
 ## Information / Individual UI figure series
 
 「情報」を概念境界・成立条件・生成過程・個体境界から分けて読む研究シリーズです。VEDと接続可能ですが、VEDの主理論と同一視せず、生成監査・情報概念監査として独立して読めます。図の順序は発達・進化の階段ではありません。

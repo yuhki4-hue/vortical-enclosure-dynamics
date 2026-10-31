@@ -17,8 +17,10 @@ where $J_{ij} \neq 0$, directed propagation occurs.
 
 \subsection{The Continuity Equation}
 
-In the coarse-grained limit, $J_{ij}$ becomes a vector field $\mathbf{J}(x)$.
-The evolution of log density $\rho$ satisfies:
+We use $\mathbf{J}(x)$ as a coarse-grained continuum representation of the
+discrete log-flow $J_{ij}$. This is an informal bridge: an explicit averaging,
+scaling, orientation, and discrete-to-vector-field map is not supplied here.
+The evolution of continuum log density $\rho$ is written as:
 
 \begin{keybox}
 \begin{equation}
@@ -27,24 +29,45 @@ The evolution of log density $\rho$ satisfies:
 \end{equation}
 \end{keybox}
 
-\noindent
-where $\sigma \geq 0$ is the \textbf{log-generation rate}.
+Equation~\eqref{eq:continuity} is a balance / continuity relation within this
+continuum field representation. Because the source term may be nonzero, the
+display is not an unconditional conservation law and does not, by its balance
+form alone, establish a physical-time interpretation.
+
+The continuum field $\rho$ is associated with the node quantity $\rho_i$, but
+no interpolation, volume normalization, unit map, or complete function
+signature relating them is supplied here. Both continuum bridges remain open.
+
+Here $\sigma \geq 0$ is the \textbf{log-generation rate}.
 $\sigma$ is not an external source term.
 It is the rate at which the system fails to remain closed:
 wherever structure is incomplete, new logs are generated.
 
-This is not a conservation law. The condition $\sigma = 0$
-holds only in the classical fixed-point regime (\cref{sec:phase}).
-Conservation is a property of a phase, not a fundamental principle.
+\begin{remark}[Source-local symbol]
+Here $\sigma$ denotes the Vol.~1 continuum log-generation rate. It is not
+identified by notation alone with the microscopic $\dot{\rho}_i$ expression
+or with IFGT's separately constructed generation term $\sigma$; those
+translations remain unspecified.
+\end{remark}
+
+This is a balance relation rather than an unconditional conservation law.
+Within the stated continuum model, $\sigma = 0$ marks the source-free regime
+associated with the classical fixed-point phase (\cref{sec:phase}).
+This formal regime distinction does not by itself establish whether physical
+conservation laws are fundamental or emergent.
 
 \begin{keybox}
 \begin{equation}
   \sigma > 0
-  \;\Longleftrightarrow\;
-  \text{time is being generated.}
+  \qquad\text{(positive source regime).}
   \label{eq:sigma_time}
 \end{equation}
 \end{keybox}
+
+Within this source-local continuum model, $\sigma>0$ denotes positive log
+generation and is proposed as an indicator of accumulation / temporal
+ordering.  Neither direction of an equivalence with physical-time generation
+is established by the balance equation.
 
 \subsection{Helmholtz Decomposition}
 
@@ -56,8 +79,9 @@ The flow field admits a Helmholtz decomposition:
 
 where $\nabla \cdot \mathbf{J}_{\text{rot}} = 0$
 and $\nabla \times \mathbf{J}_{\text{pot}} = 0$.
-The solenoidal component $\mathbf{J}_{\text{rot}}$ carries vorticity
-and is responsible for the formation of stable structure.
+The solenoidal component $\mathbf{J}_{\text{rot}}$ carries vorticity and is
+used in the proposed enclosure mechanism.  Persistence and stability require
+additional dynamical analysis.
 The irrotational component $\mathbf{J}_{\text{pot}}$ carries the divergence
 associated with the log-generation rate $\sigma$.
 
@@ -70,9 +94,16 @@ Define the \textbf{vorticity} of the log-flow:
   \label{eq:vorticity}
 \end{equation}
 
+This is a definition, and hence a derived construction, in a continuum
+vector-field setting in which the curl operator is meaningful. It defines the
+vorticity of the represented log-flow; nonzero $\omega$ alone is not a
+stability or persistence theorem.
+
 Vorticity measures local circulation.
-When $\omega = 0$, flows are irrotational and no stable structures form.
-When $\omega \neq 0$, circulation exists and flow lines can close on themselves.
+In the subsequent enclosure interpretation of the model, $\omega=0$ denotes
+an irrotational represented flow.  When $\omega\neq0$, circulation is present
+and flow lines may close; this is a candidate structural route to enclosure,
+not a theorem of persistence.
 
 The local intensity of vortical structure defines the \textbf{closure density}:
 
@@ -81,12 +112,26 @@ The local intensity of vortical structure defines the \textbf{closure density}:
   \label{eq:closure_density}
 \end{equation}
 
-$L$ is the source of both particle structure (Vol.~2) and
-gravitational effects (Vol.~3).
+This is an effective proportional identification of a scalar closure-intensity
+measure in the present representation. The magnitude convention and
+proportionality normalization are not fixed here, and the relation is not a
+derived universal identity.
 
-\subsection{The Generative Chain}
+\begin{remark}[Carrier]
+The $L$ in this section is a scalar local closure-density / vortical-intensity
+quantity. The edge quantity $L_{ab}$ and coarse tensor $L_{\mu\nu}$ introduced
+in Vol.~3 are distinct carrier-specific objects; shared lettering does not
+define a map among them.
+\end{remark}
 
-The complete chain from asymmetry to structure is:
+$L$ is used in Vols.~2--3 as part of candidate structural interpretations of
+particle-like and gravitational behavior; those physical identifications are
+separate from the definition above.
+
+\subsection{Role-Separated Construction Summary}
+
+The following historical compact sequence summarizes the route from asymmetry
+to the scalar closure measure:
 
 \[
   C_{ij}
@@ -94,3 +139,9 @@ The complete chain from asymmetry to structure is:
   \;\xrightarrow{\omega = \nabla\times J}\; \omega
   \;\xrightarrow{L \sim |\omega|}\; L.
 \]
+
+Its first edge is a discrete definition, followed by an OPEN
+discrete-to-continuum representation bridge before the curl definition; the
+last edge is an effective proportional relation.  The arrows therefore do not
+share one logical status, and the sequence alone does not establish persistent
+physical enclosure.

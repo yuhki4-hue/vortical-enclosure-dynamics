@@ -1,5 +1,7 @@
 # 知性編 Part II — 推論の非閉包性、停止の外部化、創発的停止層
 
+> **Source status:** 本ファイルはworking/historical Markdownであり、current build authorityは`sections/`のTeXである。Bio-IFGTへの「same dynamics」「第二アトラクターのidentity」「個体間維持を示した」という旧帰属はcanonical TeXでscope済みであり、いずれもtyped translationやBio-local専用結果として確立されていない。
+
 **The Non-Closure of Inference, Externalized Stopping, and the Emergent Stopping Layer: A VED-Theoretic Derivation**
 
 *Intelligence, Volume II — The Three-Layer Architecture of Sapient Cognition*
@@ -2409,4 +2411,3 @@ Part I §5 は Physarum と Transformer を知性の領域横断インスタン�
 理論はここで終わる。問いは終わらない。
 
 ---
-

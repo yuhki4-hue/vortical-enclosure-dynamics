@@ -1,5 +1,7 @@
 # 1. Introduction
 
+> **作業版scope:** Bio-IFGTの量はsource-localであり、biological observableとのoperational identityを意味しない。IFGTとの関係は提案的なformal analogy / correspondenceで、typed translationまたは上流bridgeの完成ではない。DNAは抽象parameter layerとして扱い、具体的genotype-to-parameter mapを与えない。
+
 生物学における多くの現象は、
 
 - 発生
@@ -69,9 +71,9 @@ DNA配列は、分子の生成や反応を制約するが、
 
 あらかじめ指定されたものではなく、
 
-> 状態の変化が安定構造に収束した結果
+> アトラクタに基づく解釈のもとで状態変化から生じうる結果
 
-として現れる。
+として記述される。具体的生物系での収束と安定性は一般式だけからは確立されない。
 
 ---
 

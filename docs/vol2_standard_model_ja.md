@@ -6,9 +6,10 @@
 
 ## まえがき
 
-Vol.1では「差がある」という一点から出発し、因果ログ $C_{ij}$ を基礎変数として時間 $\tau$ と空間 $d_{ij}$ の生成を記述した。
+Vol.1では因果ログ $C_{ij}$ からtime-like accumulationとnetwork distanceを構成し、
+physical time / spaceとの対応を候補解釈として残した。
 
-Vol.2では同じ $C_{ij}$ から出発して、標準模型の構造——粒子・ゲージ群・電荷・質量・世代・電弱統一・ヒッグス——が閉包幾何の帰結として現れることを示す。核心的主張は一つ：
+Vol.2では同じ $C_{ij}$ から出発し、閉包幾何と標準模型の構造——粒子・ゲージ群・電荷・質量・世代・電弱統一・ヒッグス——のstructural correspondenceを提案する。核心的な比較は次である：
 
 $$\boxed{\text{標準模型は、因果ログネットワーク上の閉包構造とその変換則の幾何学として再解釈できる}}$$
 
@@ -52,16 +53,19 @@ $$\boxed{\text{3点が揃って初めて「面積」が生まれる}}$$
 
 $$\boxed{E(A) = \alpha\left|\sum_{i\in A}\vec{e}_i\right|^2 - \beta\,\Phi(A) + \gamma|A| + B(L(A))}$$
 
+$E(A)$ のroleはclosure configurationを比較するmodel energy / scoring functionalであり、
+local minimumのphysical particle interpretationとは分ける。
+
 | 項 | 意味 |
 |---|---|
-| $\alpha|\sum\vec{e}_i|^2$ | 閉じていないコスト |
+| $\alpha\lvert\sum\vec{e}_i\rvert^2$ | 閉じていないコスト |
 | $-\beta\,\Phi(A)$ | 三角閉包の安定化 |
-| $\gamma|A|$ | 構造サイズのコスト |
+| $\gamma\lvert A\rvert$ | 構造サイズのコスト |
 | $B(L(A))$ | 完全閉包の禁止（Vol.1§2.5） |
 
-$$\boxed{\text{粒子とは、このエネルギーの極小である}}$$
+$$\boxed{\text{model-defined particleとは、このエネルギーの極小である}}$$
 
-$$\boxed{\text{粒子とは「存在」ではなく、閉じた構造の安定点である}}$$
+$$\boxed{\text{極小点はparticle-like structural candidateである}}$$
 
 ---
 
@@ -75,7 +79,10 @@ $$\boxed{\text{粒子とは「存在」ではなく、閉じた構造の安定�
 | 3 | 最小閉包 |
 | 4以上 | 三角の合成 |
 
-$$\boxed{\text{三角は唯一の最小閉包単位である}}$$
+$$\boxed{\text{三角は、記載した有限閉包classで最小の候補である}}$$
+
+このminimalityは当該finite simple-loop classに限る。あらゆるclosure definitionに対する
+unrestricted uniquenessは主張しない。
 
 ### 2.2 閉包のタイプ
 
@@ -83,7 +90,7 @@ $$\boxed{\text{三角は唯一の最小閉包単位である}}$$
 - **退化三角**：面積ほぼゼロ、2方向のみ
 - **極限退化**：1点に潰れる
 
-$$\boxed{\text{粒子の種類は、この退化度で決まる}}$$
+$$\boxed{\text{退化度はparticle-like classの候補分類を与える}}$$
 
 ---
 
@@ -133,23 +140,26 @@ $$\boxed{\text{粒子構造 → 対称性}}$$
 
 ### 4.1 退化度による分類
 
-$$\boxed{\text{バリオン = 非退化三角閉包}}$$
+$$\boxed{\text{非退化三角閉包} \leftrightarrow \text{baryon-like candidate}}$$
 
-$$\boxed{\text{レプトン = 退化三角閉包}}$$
+$$\boxed{\text{退化三角閉包} \leftrightarrow \text{lepton-like candidate}}$$
 
-$$\boxed{\text{ニュートリノ = 極限退化閉包}}$$
+$$\boxed{\text{極限退化閉包} \leftrightarrow \text{neutrino-like candidate}}$$
 
 ### 4.2 質量との関係
 
 $$m \propto \frac{1}{\Delta^2}$$
 
+これはclosure model内のphenomenologicalなbarrier-based scalingであり、この式だけでobserved
+particle massを導出または較正しない。
+
 - 非退化：$\Delta$ 小 → 質量大
 - 退化：$\Delta$ 中 → 質量中
 - 極限：$\Delta$ 大 → 質量小
 
-$$\boxed{\text{質量 = 閉包からの距離}}$$
+$$\boxed{\text{mass-like scale} \sim \text{closure-limit distance}}$$
 
-$$\boxed{\text{粒子は連続構造の離散安定点}}$$
+$$\boxed{\text{particle-like candidateは連続構造内の候補点として表される}}$$
 
 ---
 
@@ -163,7 +173,7 @@ $$\boxed{\text{粒子は連続構造の離散安定点}}$$
 | 2辺 | 第2世代 | 中間 |
 | 3辺 | 第3世代 | 重い |
 
-$$\boxed{\text{世代数 = 三角の辺数 = 3}}$$
+$$\boxed{\text{三角の3辺は3段階の世代modelを動機づける}}$$
 
 ### 5.2 完全対称の禁止
 
@@ -171,7 +181,7 @@ $$\boxed{\text{世代数 = 三角の辺数 = 3}}$$
 
 $$\boxed{\text{完全対称では何も起きない}}$$
 
-$$\boxed{\text{世代数 = 3 は仮定ではなく幾何学的必然である}}$$
+$$\boxed{\text{3世代との対応はmodel-level candidateであり、普遍的必然ではない}}$$
 
 ---
 
@@ -241,22 +251,31 @@ $a < 0$ のとき $\langle\varphi\rangle = v_\varphi \neq 0$ となり、対称�
 
 VEDでは：
 
-$$\boxed{\text{構造の固定 → 質量}}$$
+$$\boxed{\text{構造の固定 → phenomenological mass-like scale}}$$
 
 ### 8.4 Vol.2の結論
 
 $$\boxed{\begin{aligned}
-\text{粒子} &= \text{三角閉包} \\
+\text{particle-like candidate} &= \text{三角閉包} \\
 \text{対称性} &= \text{閉包の自由度} \\
 \text{世代} &= \text{辺のロック段階} \\
 \text{電荷} &= \text{位相の偏り} \\
 \text{弱相互作用} &= \text{退化構造の揺らぎ} \\
-\text{質量} &= \text{偏りの固定}
+\text{mass-like scale} &= \text{偏りの固定}
 \end{aligned}}$$
 
 $$\boxed{\text{差がある}\to C_{ij}\to\text{三角閉包}\to\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)\to\text{標準模型}}$$
 
-$$\boxed{\text{標準模型は仮定ではなく、構造の必然である}}$$
+この表示はprogram-level navigation mnemonicであり、同種のderivationを並べたものではない。
+
+| 局所関係 | navigation role | status |
+|---|---|---|
+| 差 $\to C_{ij}$ | upstream model organization | source-local proposal |
+| $C_{ij}\to$ 三角閉包 | finite closure construction | stated admissible class内のmodel-local result |
+| 三角閉包 $\to\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ | symmetry-structure comparison | proposed structural relation |
+| symmetry structure $\to$ 標準模型 | physical comparison target | OPEN physical identification；observed theoryのderivationではない |
+
+$$\boxed{\text{標準模型との関係はstructural correspondenceとして提案される}}$$
 
 ---
 
@@ -271,7 +290,7 @@ $$\boxed{\text{標準模型は仮定ではなく、構造の必然である}}$$
 | $\Delta(A)$ | 退化度（三角の面積要素） |
 | $\Delta_k$ | 質量バリア距離 $= L_{\max}-L_k$ |
 | $U(A)$ | 未閉度 $= 1/(1+\mathcal{R}(A))$ |
-| $\varphi$ | ヒッグス秩序変数 $= |\psi_L|^2 - |\psi_R|^2$ |
+| $\varphi$ | ヒッグス秩序変数 $= \lvert\psi_L\rvert^2 - \lvert\psi_R\rvert^2$ |
 | $v_\varphi$ | ヒッグスVEV |
 | $\theta_W$ | ワインバーグ角 |
 

@@ -8,13 +8,15 @@ a loop, the loop reinforces itself through the self-referential selection
 equation~\cref{eq:Cij}, and the resulting pattern is dynamically sustained.
 A closure is not a boundary, but a circulation that sustains itself.
 
-Without closure, flows dissipate.
-With closure, flow is trapped, gradients are maintained, and structure persists.
+Closure is proposed as a mechanism that can support flow trapping and
+maintained gradients rather than dissipation. The sustained behavior in the
+model definition above is a target, not a persistence guarantee from the
+self-consistency equation; its realization requires dynamical stability analysis.
 
 \subsection{The Minimal Closure Is Triangular}
 
-The minimal loop that admits nontrivial closure must involve at least
-three nodes:
+Within the finite simple-loop closure class considered here, the first
+candidate nontrivial enclosure involves three nodes:
 
 \begin{itemize}
   \item \textbf{Two nodes}: the only cycle $i \to j \to i$ is purely
@@ -23,13 +25,13 @@ three nodes:
   \item \textbf{Three nodes}: the cycle $i \to j \to k \to i$ admits an
     oriented loop with internal area. The three edges span a two-dimensional
     phase space, allowing stable phase relationships.
-  \item \textbf{Four or more}: any such cycle decomposes into triangular
-    sub-loops. No new topological structure is introduced.
+  \item \textbf{Four or more}: in the stated finite decomposition picture,
+    these cycles are treated as compositions of triangular sub-loops.
 \end{itemize}
 
 \begin{keybox}
-\textit{The minimal closure is triangular.
-This is a topological result, not an assumption.}
+\textit{Within the stated finite simple-loop closure class, the triangle is
+the minimal candidate enclosure.  Unrestricted uniqueness is not claimed.}
 \end{keybox}
 
 \subsection{Closure as a Dynamical Attractor}
@@ -48,10 +50,17 @@ Define the \textbf{closure energy} of a configuration $A$:
 where $\vec{e}_i$ are internal flux vectors derived from $C_{ij}$,
 $\Phi(A) = \sum_{i<j<k\in A}\phi_{ijk}$ is the non-degeneracy measure,
 and $B(L)$ is the effective non-closure barrier of \cref{eq:barrier}.
+Thus $E(A)$ is the model energy / scoring functional used to compare
+configurations in this closure model; the definition of the functional does
+not by itself identify one of its minima with an observed particle.
 
 \begin{definition}
 A \textbf{particle} is a local minimum of the closure energy $E(A)$.
 \end{definition}
+
+Here ``particle'' is model terminology for a closure-energy minimum.  Such a
+minimum is a particle-like structural candidate; identification with an
+observed particle requires a separate stability and observational map.
 
 \subsection{Closure Distance and Mass}
 
@@ -75,6 +84,10 @@ Within the phenomenological barrier approximation this yields:
 \end{equation}
 \end{keybox}
 
+The displayed scaling is retained only within that phenomenological
+barrier-based scope. It is not a microscopic derivation or an identification
+of $m_k$ with an observed mass without additional interpretation.
+
 Here $\kappa_B$ is an effective parameter of the projected closure-energy
 description.
 Vol.~4 gives a more dynamical interpretation in which the apparent barrier
@@ -82,7 +95,8 @@ can arise from rotational feedback and dissipation rather than from a
 fundamental external potential.
 
 \begin{keybox}
-\textit{Heavy structures sit close to the complete-closure limit.
+\textit{Within the phenomenological scaling, larger mass-like values occur
+close to the complete-closure limit.
 The world is made of incomplete closures.}
 \end{keybox}
 
@@ -93,9 +107,9 @@ This minimal structure is illustrated in Fig.~\ref{fig:triangular_closure}.
 \setcounter{figure}{2}
 \includegraphics[width=0.6\linewidth]{figures/fig3_triangular_closure.pdf}
 \caption{
-Triangular closure types and their correspondence to particle families.
+Triangular closure types and their proposed correspondence to particle-like families.
 The three configurations illustrate non-degenerate, degenerate, and extreme degenerate closures
-as the simplest persistent enclosures, forming the basis for higher-order symmetries explored in subsequent work.
+as candidate enclosures in the stated model, forming the basis for higher-order symmetries explored in subsequent work.
 }
 \label{fig:triangular_closure}
 \end{figure}

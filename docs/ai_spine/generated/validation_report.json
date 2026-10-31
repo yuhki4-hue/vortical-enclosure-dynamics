@@ -20,7 +20,7 @@
       "reason": "optional dependency 'jsonschema' not installed",
       "severity": "advisory",
       "remedy": "pip install -r docs/ai_spine/requirements.txt",
-      "note": "Does not affect layer_policy, layer0_paths, canonical_derivation_order, term_types, or non_generative_relations, which use independent validation logic."
+      "note": "Does not affect layer_policy, layer0_paths, canonical_navigation_order, term_types, relation-role inventory, or non_generative_relations, which use independent validation logic."
     },
     {
       "id": "layer_policy",
@@ -33,18 +33,23 @@
       "status": "pass"
     },
     {
-      "id": "canonical_derivation_order",
-      "description": "Ranks consecutive; begins with `difference`; `c_ij` rank 1 variable.",
+      "id": "canonical_navigation_order",
+      "description": "Ranks are consecutive presentation indices; the sequence rejects uniform proof or generation semantics.",
       "status": "pass"
     },
     {
       "id": "term_types",
-      "description": "Every backbone term carries a valid kind and derivation_role.",
+      "description": "Every backbone term carries a valid kind and source-local stage role.",
       "status": "pass"
     },
     {
       "id": "non_generative_relations",
-      "description": "validated_relations are non-generative and never occupy a rank.",
+      "description": "Source-local and proposed relations are non-generative and never occupy a rank.",
+      "status": "pass"
+    },
+    {
+      "id": "relation_role_inventory",
+      "description": "N01-N22 carry valid local role, bridge, and physical-status metadata.",
       "status": "pass"
     },
     {

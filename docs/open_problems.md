@@ -4,6 +4,12 @@ This document collects the principal unresolved problems for the current public 
 
 ## Vol.1 Foundations
 
+In this section, `C_ij` refers to the Vol.1 causal-log matrix. It is not the
+navigation-layer closure-degree carrier merely because the same glyph is used.
+Likewise, the carrier intended by a later reference to a closure quantity
+`L` must be stated before relating it to edge-level $L_{ab}$ or tensorial
+$L_{\mu\nu}$.
+
 ### Formal definition of causal log structure
 
 The notion that time is the accumulation of causal logs and space is the structure of causal logs requires a precise mathematical definition of log composition, ordering, coarse-graining, and equivalence.
@@ -82,8 +88,8 @@ A serious public theory needs stated failure modes. It should be possible to say
 
 The most urgent near-term tasks are:
 
-1. formalize the microscopic meaning of `C_ij`
-2. derive the transition from closure log `L` to geometry `g`
+1. formalize the microscopic meaning of the Vol.1 causal-log `C_ij`
+2. identify the carrier meant by closure `L` before deriving any transition to geometry `g`
 3. identify a candidate route to quantum emergence
 4. extract a quantitative gravity benchmark
 5. produce at least one observable prediction

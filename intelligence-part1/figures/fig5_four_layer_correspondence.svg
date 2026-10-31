@@ -8,7 +8,7 @@
     Fig.5  Four-Layer Correspondence of Differential Horizons
   </text>
   <text x="750" y="76" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
-    The same closure-evading dynamic recurs across physical, biological, conscious, and intelligence layers
+    A proposed structural comparison across physical, biological, conscious, and intelligence layers
   </text>
 
   <!-- ========== arrow & filter defs ========== -->
@@ -190,7 +190,7 @@
       </text>
     </g>
     <text x="690" y="63" font-size="10.5" fill="#5B2C72" text-anchor="middle" font-style="italic">
-      Not an accidental analogy — each layer manifests the same closure-evading dynamic at its own grain.
+      The diagram compares analogous roles; it does not establish one shared carrier, mechanism, or typed translation.
     </text>
   </g>
 
@@ -202,10 +202,10 @@
     </text>
     <line x1="40" y1="32" x2="1340" y2="32" stroke="#E5E5E5"/>
     <g font-size="11" fill="#555555">
-      <text x="100" y="54">●  The four layers are physically identical  (structural isomorphism ≠ physical identity)</text>
-      <text x="100" y="74">●  All four layers reduce to a single theory  (each layer retains its own descriptive grain)</text>
-      <text x="780" y="54">●  Inter-layer transition dynamics are treated here  (that is a separate problem)</text>
-      <text x="780" y="74">●  Consciousness and intelligence are the same phenomenon  (transitional but distinct scopes)</text>
+      <text x="100" y="54">●  Does not claim physical identity among the four layers</text>
+      <text x="100" y="74">●  Does not reduce all four layers to a single theory</text>
+      <text x="780" y="54">●  Does not supply inter-layer transition dynamics or typed maps</text>
+      <text x="780" y="74">●  Does not identify consciousness with intelligence</text>
     </g>
   </g>
 

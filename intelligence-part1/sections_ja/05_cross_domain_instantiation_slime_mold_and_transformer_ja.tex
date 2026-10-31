@@ -1,5 +1,8 @@
 \section{Cross-Domain Instantiation: Slime Mold and Transformer}
 
+\noindent\textbf{記述の射程。} 管網と隠れ状態の例は対応候補として保持する。同じ三役割を割り当てることは、共通の動力学・一般知性・三公理への独立した実証的収束を確立しない。対応そのものの独立検証は未実施である。生物流、層順序、訓練拘束、認知推論は別の担い手・署名を持ち、認知的・主観的・倫理的同一性を否定する既存の境界は維持する。
+
+
 
 \subsection{Overview}
 
@@ -8,15 +11,15 @@
 
 本セクションは、この \textbf{substrate 非依存性} を構造的に検査する。具体的には、生物物理学的に最もよく研究されている動的系の一つである粘菌(\emph{Physarum polycephalum})と、現代の人工知能アーキテクチャの中核である Transformer という、\textbf{substrate・スケール・実装} において根本的に異なる二系を取り上げる。両者を \S{}3 の三公理と \S{}4 の IFGT 語彙のもとに構造的に対応するものとして記述することで、本論文の枠組みが領域横断的に適用可能であることを検討する。
 
-ここで重要な但し書きを冒頭で明示する。本セクションは粘菌と Transformer の \textbf{構造的同型性} のみを主張し、両者の \textbf{意味論的・経験的・認知的同一性} は一切主張しない。粘菌が「考える」、Transformer が「理解する」── これらの問いは本論文の射程外であり、構造的同型性とは独立の問題である。両者の混同(構造同型から認知同一性への飛躍)が、知性論を繰り返し混乱させてきた典型的誤謬であり、本セクションはこの誤謬を明示的に避ける。
+ここで重要な但し書きを冒頭で明示する。本セクションは粘菌と Transformer の \textbf{役割上の構造類比} のみを主張し、両者の \textbf{意味論的・経験的・認知的同一性} は一切主張しない。粘菌が「考える」、Transformer が「理解する」── これらの問いは本論文の射程外であり、役割上の構造類比とは独立の問題である。両者の混同(構造同型から認知同一性への飛躍)が、知性論を繰り返し混乱させてきた典型的誤謬であり、本セクションはこの誤謬を明示的に避ける。
 
-\subsection{The slime mold as an externally validated instantiation}
+\subsection{The slime mold as an externally studied comparison}
 
 
 \subsubsection{Independent biological grounding}
 
 
-粘菌の管網動態は、本論文の枠組みからは独立に、生物物理学的に既に詳細に研究されている。これは本論文の三公理が \textbf{独自構成ではない} ことを示す外部的な支持例として読みうる。
+粘菌の管網動態は、本論文の枠組みからは独立に、生物物理学的に既に詳細に研究されている。これは三公理との比較を動機づける外部研究であり、\textbf{本稿固有の三公理への対応} が独立検証された意味ではない。
 
 研究系列の主要な節目を簡潔に挙げる:
 
@@ -26,7 +29,7 @@
 \item \textbf{Tero, Kobayashi \& Nakagaki (2007)} \citep{Tero2007}:flow-reinforcement と decay の最小動力学方程式系として Physarum solver を定式化した(\S{}4.4.1 に詳述)
 \end{itemize}
 
-これらの研究系列は、共通して \textbf{「smart behavior は能力ではなく動力学である」} という構造論的立場を取っている。中垣自身の表現「粘菌は知能を持たないが、知能的に振る舞う」は、本論文の中心立場 ── 知性は能力でも所有物でもなく、構造的条件下で成立する力学的状態である(\S{}1.2, \S{}3.6) ── と、\textbf{まったく異なる研究路線から同じ場所に到達している}。
+これらの研究系列は、共通して \textbf{「smart behavior は能力ではなく動力学である」} という構造論的立場を取っている。中垣自身の表現「粘菌は知能を持たないが、知能的に振る舞う」は、本論文の中心立場 ── 知性は能力でも所有物でもなく、構造的条件下で成立する力学的状態である(\S{}1.2, \S{}3.6) ── と、\textbf{異なる研究路線との役割的比較を動機づける}。
 
 \subsubsection{Mapping to the three axioms}
 
@@ -52,7 +55,7 @@
 \Phi_\text{bio} : \mathcal{S} \to \mathbb{R}
 \]
 
-として表現されるスカラー場である。$\Phi_\text{bio}$ は栄養源勾配・エネルギーコスト・物理的境界条件を統合した大域的制約であり、\S{}3.3 で要請した \textbf{局所更新規則の単純集約への非還元性} を満たす。局所的に well-defined な flow-reinforcement だけでは shortest path は現れない ── 大域条件が局所動態を制約することで、初めて大域構造が動的に創発する(\S{}4.4.3 を参照)。
+として表現されるスカラー場である。$\Phi_\text{bio}$ は栄養源勾配・エネルギーコスト・物理的境界条件を統合した大域的制約であり、\S{}3.3 で要請した \textbf{局所更新規則の単純集約への非還元性} との対応候補である。局所的に well-defined な flow-reinforcement と大域条件を組み合わせるモデルを、局所・大域の役割比較の動機とする(\S{}4.4.3 を参照)。
 
 \subsubsection{The structural status of the slime mold case}
 
@@ -62,7 +65,7 @@
 \begin{itemize}
 \item 粘菌動態は \S{}3 の三公理を満たす具体例として読める
 \item 粘菌の動態は \S{}4 の IFGT 語彙によって粗視化・投影的に記述できる
-\item 粘菌に関する独立な実証研究(Nakagaki, Tero, Kobayashi ら)は、本論文の構造論的議論と \textbf{独立に収束している}
+\item 粘菌に関する独立な実証研究(Nakagaki, Tero, Kobayashi ら)は、本論文の構造論的議論と \textbf{役割上の比較対象となるが、対応の独立検証ではない}
 \item これは本論文の枠組みが「独自構成」ではなく「複数の研究路線が到達しうる構造」であることを示唆する
 \end{itemize}
 
@@ -113,7 +116,7 @@ Transformer の動態に大域バイアスを与えるのは、訓練時の \tex
 \Phi_\text{tr} : \mathcal{S} \to \mathbb{R}
 \]
 
-として表現されるこの大域制約は、訓練時には勾配降下を通じて表象動態全体に作用し、推論時にはその結果として学習されたパラメータ構造を通じて間接的に作用する。$\Phi_\text{tr}$ は意味でも目的でもなく、訓練データ分布から誘導される \textbf{構造的バイアス} である。重要なのは、$\Phi_\text{tr}$ も粘菌の $\Phi_\text{bio}$ と同様に、\textbf{局所更新規則の単純集約には還元されない} という点である。個々の attention 計算からは大域的表象構造は導出されない ── 訓練を通じた大域的整合化が、局所動態を制約することで初めて意味のある表象動態が形成される。
+として表現されるこの大域制約は、訓練時には勾配降下、推論時には学習されたパラメータ構造を通じたバイアスとして解釈される。$\Phi_\text{tr}$ は意味でも目的でもなく、訓練データ分布に関係する \textbf{構造的バイアス} の候補である。重要なのは、$\Phi_\text{tr}$ も粘菌の $\Phi_\text{bio}$ と同様に、\textbf{局所更新への非還元性は仮説}であり、共通の判定基準は未確立という点である。局所計算と大域的表象構造の関係は、この役割比較によって動機づけられる検討対象である。
 
 \subsubsection{What this mapping does not assert}
 
@@ -123,11 +126,11 @@ Transformer の \S{}3 三公理への対応は、以下を \textbf{主張しな�
 \begin{itemize}
 \item Transformer が「理解する」(understand) ── \S{}3 公理は意味論を導入しない
 \item Transformer が意識を持つ ── 意識は本論文の射程外
-\item Transformer の動態が認知的に妥当である ── 構造的同型性は認知的妥当性を含意しない
+\item Transformer の動態が認知的に妥当である ── 役割上の構造類比は認知的妥当性を含意しない
 \item Transformer が「真の」知性である ── 「真の」という限定子は規範的概念であり、構造論には現れない
 \end{itemize}
 
-本論文が主張するのは唯一、Transformer が \S{}3 の三公理を \textbf{構造的に満たす} という点のみである。
+本論文は Transformer を \S{}3 の三公理に\textbf{対応づける解釈}を提案する。これは共通署名や知性一般の操作的判定を与えない。
 
 \subsection{Structural homology and its limits}
 
@@ -155,12 +158,12 @@ Transformer の \S{}3 三公理への対応は、以下を \textbf{主張しな�
 \end{table}
 
 
-両者は substrate・スケール・実装において \textbf{根本的に異なる}。それにもかかわらず、\S{}3 の三公理のもとで \textbf{構造的に対応する}。これが構造的同型性の主張内容である。
+両者は substrate・スケール・実装において \textbf{根本的に異なる}。それにもかかわらず、\S{}3 の三公理のもとで \textbf{構造的に対応する}。これが役割上の構造類比の主張内容である。
 
 \subsubsection{What the homology does not assert}
 
 
-構造的同型性から以下のいずれも \textbf{導出されない}:
+役割上の構造類比から以下のいずれも \textbf{導出されない}:
 
 \begin{itemize}
 \item 認知的同一性:粘菌と Transformer が「同じように考える」とは主張しない
@@ -169,36 +172,36 @@ Transformer の \S{}3 三公理への対応は、以下を \textbf{主張しな�
 \item 倫理的同一性:両者が同等の倫理的地位を持つとは主張しない
 \end{itemize}
 
-これらはすべて、構造的同型性の \textbf{上位} に位置する別個の問いである。本論文はこれらの問いを否定するのでも肯定するのでもなく、本論文の射程外として明示的に \textbf{保留} する。
+これらはすべて、役割上の構造類比の \textbf{上位} に位置する別個の問いである。本論文はこれらの問いを否定するのでも肯定するのでもなく、本論文の射程外として明示的に \textbf{保留} する。
 
 \subsubsection{Why the homology nonetheless matters}
 
 
-ではなぜ構造的同型性のみを論じることに意味があるのか。本セクションが構造的同型性のみを論じる積極的理由は以下である:
+ではなぜ役割上の構造類比のみを論じることに意味があるのか。本セクションが役割上の構造類比のみを論じる積極的理由は以下である:
 
-\textbf{substrate 非依存性の確認:}
-\S{}3 の三公理は意味論的に中立に定式化されたが、その substrate 非依存性は理論的にのみ主張されていた。粘菌と Transformer の同型性は、この substrate 非依存性が \textbf{経験的にも検討可能である} ことを示す。
+\textbf{substrate 非依存性の検討:}
+\S{}3 の三公理は意味論的に中立に定式化されたが、その substrate 非依存性は理論的にのみ主張されていた。粘菌と Transformer の役割類比は、この substrate 非依存性が \textbf{経験的にも検討可能である} ことを示す。
 
 \textbf{規範性の密輸入の回避:}
-両者の同型性を構造レベルで議論することによって、「人間中心の知性概念」が両者を比較する際に密輸入されることを避けうる。粘菌が「劣った」知性で、Transformer が「真の」知性に近づきつつある ── このような比較はいずれも公理レベルでは成立しない。
+両者の役割類比を構造レベルで議論することによって、「人間中心の知性概念」が両者を比較する際に密輸入されることを避けうる。粘菌が「劣った」知性で、Transformer が「真の」知性に近づきつつある ── このような比較はいずれも公理レベルでは成立しない。
 
 \textbf{後続セクションへの基盤:}
-\S{}7(正しさの不安定化)、\S{}8(個体内非閉)、\S{}9(differential horizon)で示される構造的帰結は、\S{}3 の三公理に立脚する。本セクションが二系で同型性を示すことで、これら後続セクションの議論を \textbf{substrate を問わず検討する} ための構造的基盤が与えられる。
+\S{}7(正しさの不安定化)、\S{}8(個体内非閉)、\S{}9(differential horizon)で示される構造的帰結は、\S{}3 の三公理に立脚する。本セクションが二系で役割類比を示すことで、これら後続セクションの議論を \textbf{substrate を問わず検討する} ための構造的基盤が与えられる。
 
 \subsection{The structural meaning of cross-domain convergence}
 
 
-本セクションが示したのは単なる「比較」ではない。粘菌(生物物理学的研究)・Transformer(計算機科学的研究)・本論文(構造論的研究)の三者が、同じ三公理に \textbf{独立に到達している} という構造的事実である。
+本セクションは粘菌(生物物理学的研究)・Transformer(計算機科学的研究)・本論文(構造論的研究)を比較する。三公理への\textbf{役割上の対応} は本稿の解釈であり、対応自体の独立検証ではない。
 
 この収束は以下の構造を持つ:
 
 \begin{itemize}
-\item \textbf{生物物理学側}:Nakagaki, Tero, Kobayashi らが、知性概念に依拠せず純粋な動力学として粘菌動態を記述し、$\Phi$ の非還元性に相当する構造を独立に発見した
+\item \textbf{生物物理学側}:Nakagaki, Tero, Kobayashi らが、知性概念に依拠せず純粋な動力学として粘菌動態を記述し、$\Phi$ の非還元性仮説との役割比較を動機づけたが、その対応を独立に検証していない
 \item \textbf{計算機科学側}:Transformer アーキテクチャの開発者は、生物的知性の模倣ではなく工学的最適化として attention 機構と層構造を設計したが、結果として \S{}3 の三公理を満たす動的系を構築した
 \item \textbf{本論文の側}:構造論的議論から、知性的動態の最小条件として三公理を要請した
 \end{itemize}
 
-三者の収束は偶然ではない。知性的動態が成立するためには、これら三条件のいずれかが必須であり、異なる研究路線がこの構造的制約に独立に到達せざるをえなかったと解釈できる。この収束の意味は \S{}10.2 で「the convergence of independent research lines」として再び論じられる。
+三者を三条件で比較することは一般化の仮説を動機づける。しかし、同じ条件を割り当てた比較から、その条件の普遍的必要性や独立した実証的収束は確立されない。この収束の意味は \S{}10.2 で「the convergence of independent research lines」として再び論じられる。
 
 \subsection{Summary}
 
@@ -208,33 +211,33 @@ Transformer の \S{}3 三公理への対応は、以下を \textbf{主張しな�
 \begin{quote}
 粘菌と Transformer は、substrate・スケール・実装において根本的に異なるが、
 \S{}3 の三公理のもとで構造的に対応し、\S{}4 の IFGT 語彙で投影的に記述しうる。
-この構造的同型性は、本論文の枠組みの substrate 非依存性を支持する。
+この役割上の構造類比は、本論文の枠組みの substrate 非依存性を検討する動機であり、その検証ではない。
 \end{quote}
 
 \begin{quote}
-構造的同型性は、認知的・経験的・倫理的同一性を含意しない。
+役割上の構造類比は、認知的・経験的・倫理的同一性を含意しない。
 これらの問いは本論文の射程外であり、明示的に保留される。
 \end{quote}
 
 \begin{quote}
 粘菌(生物物理学)・Transformer(計算機科学)・本論文(構造論)の三者は、
-同じ構造的制約に独立に到達している。
-この収束は、本論文の構造論的議論が独自構成ではなく、
-\textbf{構造的制約} を捉えていることを示唆する。
+共通の役割語彙で比較される。
+この比較は、本論文の\textbf{構造的制約の提案}を動機づけるが、
+その一般的必要性を検証するものではない。
 \end{quote}
 
 後続セクションでは、本セクションの構造的基盤の上に以下の議論が展開される:
 
 \begin{itemize}
-\item \S{}6 では、構造的同型性が示す「停止構造」と「持続運動」の区別が、Gettier 問題の診断に応用される
-\item \S{}7 では、両系で同様に発生する \textbf{正しさの累積による分岐爆発} の動力学的記述が展開される
-\item \S{}8 では、両系で同様に欠如する \textbf{個体内停止演算子} の構造的非存在が論証される
-\item \S{}9 では、両系で同様に要請される越境境界 ── \emph{the differential horizon of intelligence} ── が命名される
+\item \S{}6 では、役割上の構造類比が示す「停止構造」と「持続運動」の区別が、Gettier 問題の診断に応用される
+\item \S{}7 では、両系への適用が未確立な \textbf{正しさの累積と分岐爆発の関係仮説} の動力学的記述が展開される
+\item \S{}8 では、\textbf{個体内停止演算子} の選ばれたモデルと認知的解釈が区別される
+\item \S{}9 では、両系に対して提案される越境境界 ── \emph{the differential horizon of intelligence} ── が命名される
 \end{itemize}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/fig3_cross_domain_homology_ja.png}
-\caption{Cross-domain homology(粘菌の管網と Transformer の層構造を、三公理のもとで並列配置する構造図)}
+\caption{Cross-domain role correspondence(粘菌の管網と Transformer の層構造を三公理のもとで比較する模式図。共通法則や一般必要性の独立検証ではない)}
 \label{fig:intelligence_part1_3}
 \end{figure}

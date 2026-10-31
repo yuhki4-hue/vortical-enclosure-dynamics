@@ -1,6 +1,8 @@
 \section{Core Equations}
 
-This section introduces the minimal equation system used throughout the paper. The equations are not tied to a specific biological system. They provide a general form for describing state change, flow, and stable structure.
+This section introduces the minimal equation system used throughout the paper. The equations are not tied to a specific biological system. They provide a general form for describing state change, flow, and candidate persistent structure.
+
+Formally, \(\I\) and \(\J\) are field declarations in the stated continuum domain, Equation~\eqref{eq:continuity} is a balance relation, and Equations~\eqref{eq:flow}--\eqref{eq:potential} are constitutive or effective relations whose use is conditional on the chosen \(\PhiI[\I]\) and differentiable spatial representation. This system is not a line-by-line finite update algorithm for the toy simulation.
 
 \subsection{Basic Variables}
 
@@ -12,7 +14,7 @@ and the information flow
 \begin{equation}
   \J(\mathbf{r},t).
 \end{equation}
-The field \(\I\) represents local density of structure or constraint. The field \(\J\) represents the direction and rate of state change.
+The field \(\I\) represents local density of structure or constraint within the model. The field \(\J\) represents the direction and rate of model-state change. Neither field is, by this definition alone, an operationally measured biological observable or flux.
 
 \subsection{Continuity Equation}
 
@@ -21,7 +23,7 @@ Information density obeys the continuity equation
   \frac{\partial \I}{\partial t} + \nabla \cdot \J = \sigma,
   \label{eq:continuity}
 \end{equation}
-where \(\sigma(\mathbf{r},t)\) is a local generation rate. This equation records local production, outflow, and conservation-like transport of the coarse-grained quantity \(\I\).
+where \(\sigma(\mathbf{r},t)\) is a local generation rate. It is the Bio-IFGT source slot for this balance equation, not an identity with VED or IFGT uses of \(\sigma\), nor with the toy morphogen source \(\sigma_M\). A gene-related reading is a source-local interpretation of this slot; no independently calibrated gene-production map is supplied. This equation records local production, outflow, and conservation-like transport of the coarse-grained quantity \(\I\).
 
 \subsection{Structure of the Flow}
 
@@ -49,8 +51,8 @@ Thus, biases in information density induce a gradient-driven bias in state chang
 The sign convention is fixed only after \(\PhiI[\I]\) is specified.
 For example, choosing \(\PhiI\sim-\I\) makes the induced component
 \(-\nabla\PhiI\) point toward increasing constraint density.
-Other biological observables may require the opposite convention or additional
-response terms.
+Other proposed biological applications may require the opposite convention or additional
+response terms; the present relation is not itself an operational observable map.
 
 \subsection{Dynamical Loop}
 
@@ -66,7 +68,7 @@ where \(\rho(\I,\J)\) is a state-dependent progression rate. The variable \(t\) 
 
 \subsection{Stable Structures}
 
-Under these dynamics, a region of state space is stable if states within or near it tend to remain there or return after perturbation. Such a region is interpreted as an attractor.
+Under the terminology used here, a region of state space is called stable if states within or near it tend to remain there or return after a stated class of perturbations. Such a region may be interpreted as an attractor. This is a conditional definition: the equations alone do not establish existence, an invariant basin, asymptotic convergence, or general bidirectional return for a concrete system.
 
 \subsection{Summary}
 
@@ -77,4 +79,4 @@ The minimal equation system is
   \mathbf{F} &= -\nabla \PhiI,\\
   \PhiI &= \PhiI[\I].
 \end{align}
-This system describes state change, flow formation, and the emergence of stable structures in a common form.
+This system provides a common form in which state change, flow formation, and candidate persistent structures can be described. It does not by itself prove their stability.

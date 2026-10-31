@@ -20,9 +20,11 @@ The key parameter is:
 
 where $\lambda$ is the selection sensitivity and $h_i$ is the total
 incoming causal history at node $i$.
-At $\alpha_i = 1$, a bifurcation occurs: below this value no log density
-can be self-sustained; above it, $\rho_i$ rises and structure forms.
-The phase structure is shown in Fig.~\ref{fig:phase_structure}.
+The value $\alpha_i = 1$ marks the proposed threshold in this model's phase
+picture. Self-sustained log density and structure formation above it are
+candidate behaviors, not consequences established here: fixed-point existence,
+update semantics, and dynamical stability remain open.
+The proposed phase structure is shown in Fig.~\ref{fig:phase_structure}.
 
 \begin{figure}[t]
 \centering
@@ -31,7 +33,8 @@ The phase structure is shown in Fig.~\ref{fig:phase_structure}.
 \caption{
 Phase structure as a function of density $\rho$.
 The system transitions across subcritical, critical, classical-active,
-and saturated regimes. Physical laws emerge as properties of stable phases.
+    and saturated regimes. Effective-law behavior is a candidate phase
+    interpretation.
 }
 \label{fig:phase_structure}
 \end{figure}
@@ -46,7 +49,7 @@ Phase & Condition & Character \\
 \midrule
 Subcritical   & $\alpha < 1$     & $\rho \approx 0$; no time, no structure \\
 Critical      & $\alpha = 1$     & Maximum susceptibility; bifurcation point \\
-Classical-active & $\alpha \sim 1$ & Stable closures; effective laws emerge \\
+Classical-active & $\alpha \sim 1$ & Candidate stable closures and effective laws \\
 Saturated     & $\alpha \gg 1$   & $C_{ij} \to 1$; differences vanish \\
 \bottomrule
 \end{tabular}
@@ -54,35 +57,36 @@ Saturated     & $\alpha \gg 1$   & $C_{ij} \to 1$; differences vanish \\
 \label{tab:phases}
 \end{table}
 
-\subsection{Emergence of Physical Laws}
+\subsection{Candidate Phase Interpretation of Effective Laws}
 
-Within the classical-active phase, the following structures become stable:
+Within the proposed classical-active interpretation, the following structures
+are candidate stable features:
 
 \begin{itemize}
   \item \textbf{Conservation laws}: $\sigma \approx 0$, so
     $\partial_t\rho + \nabla\cdot\mathbf{J} \approx 0$.
   \item \textbf{Gauge symmetries}: closure configurations stabilize with
     well-defined internal degrees of freedom (Vol.~2).
-  \item \textbf{Effective geometry}: coarse-grained distance $d_{ij}$ becomes
-    approximately smooth, admitting a metric tensor $g_{\mu\nu}$ (Vol.~3).
+  \item \textbf{Effective geometry}: under the proposed partial coarse
+    correspondence, $d_{ij}$ is represented approximately by a smooth metric
+    tensor $g_{\mu\nu}$ (Vol.~3); reconstruction, convergence, and uniqueness
+    of this bridge remain open.
 \end{itemize}
 
 \begin{keybox}
-\textit{Conservation, symmetry, and geometry are properties of the
-classical-active phase --- not axioms.
-They emerge within it and break down outside it.}
+\textit{Conservation, symmetry, and geometry are modeled as properties of the
+classical-active phase rather than as axioms. Their physical phase
+identification remains open.}
 \end{keybox}
 
 \subsection{Extreme Regimes as Phase Transitions}
 
-The framework naturally accommodates extreme regimes:
+The framework proposes model interpretations of extreme regimes:
 
 \begin{itemize}
-  \item \textbf{Big Bang}: transition from subcritical to active phase.
-    Structure bootstraps from a region where $\alpha$ crosses the critical
-    threshold --- not from a geometric singularity.
-  \item \textbf{Black hole interiors}: transition from classical-active to
-    non-equilibrium phase. The interior is not a singularity;
-    it is a regime where fixed-point conditions break down
-    and $\sigma > 0$ reignites (Vol.~3).
+  \item \textbf{Big Bang candidate}: a proposed transition from subcritical to
+    active phase as $\alpha$ crosses the critical threshold.
+  \item \textbf{Black-hole-interior candidate}: a proposed transition from
+    classical-active to non-equilibrium behavior where fixed-point conditions
+    break down and $\sigma>0$ is used (Vol.~3).
 \end{itemize}

@@ -6,9 +6,13 @@
 
 ## Preface
 
-Vol.1 began from a single axiom — *there is difference* — and derived causal logs $C_{ij}$ as the foundational variable from which time $\tau$ and space $d_{ij}$ emerge.
+Vol.1 introduced causal logs $C_{ij}$, a time-like accumulation quantity
+$\tau$, and network distance $d_{ij}$. Physical time and space remain proposed
+interpretations.
 
-Vol.2 departs from the same $C_{ij}$ and shows that the structure of the Standard Model — particles, gauge groups, electric charge, mass, generations, electroweak unification, and the Higgs mechanism — can be interpreted as consequences of closure geometry.
+Vol.2 departs from the same $C_{ij}$ and proposes structural comparisons between
+closure geometry and the Standard Model's particles, gauge groups, electric
+charge, mass, generations, electroweak unification, and Higgs mechanism.
 
 The central claim is one:
 
@@ -24,7 +28,8 @@ No additional structures are introduced beyond the closure framework. Structure 
 
 ### 1.1 From Causal Logs to Structure
 
-Vol.1 established that the causal log $C_{ij}$ serves as the fundamental variable from which both time and space emerge:
+Vol.1 used the causal log $C_{ij}$ to define time-like and network-spatial
+constructions:
 
 $$\frac{d\tau_i}{dt} = \rho_i \qquad \text{(time)}$$
 
@@ -99,13 +104,17 @@ To determine which structures persist, define the closure energy:
 
 $$\boxed{E(A) = \alpha\left|\sum_{i\in A}\vec{e}_i\right|^2 - \beta\,\Phi(A) + \gamma|A| + B(L(A))}$$
 
+Here $E(A)$ is the model energy / scoring functional used to rank closure
+configurations. This mathematical role is separate from the subsequent
+physical interpretation of its local minima.
+
 Each term has a structural role:
 
 | Term | Interpretation |
 |---|---|
 | $\alpha\|\sum\vec{e}_i\|^2$ | penalty for incomplete closure |
 | $-\beta\,\Phi(A)$ | reward for triangular closure |
-| $\gamma|A|$ | structural cost |
+| $\gamma\lvert A\rvert$ | structural cost |
 | $B(L(A))$ | effective non-closure resistance near the complete-closure limit |
 
 The final term is a phenomenological encoding of the non-closure constraint
@@ -117,12 +126,13 @@ inherited from Vol.1.
 
 Structures evolve under this energy functional. Stable configurations correspond to local minima:
 
-$$\boxed{\text{A particle corresponds to a local minimum of } E(A).}$$
+$$\boxed{\text{A model-defined particle is a local minimum of } E(A).}$$
 
 This interpretation does not assume particles as fundamental entities.
-Rather, they appear as persistent configurations of the underlying structure.
+Rather, local minima are used as particle-like structural candidates;
+persistence and observed-particle identity require separate evidence.
 
-$$\boxed{\text{Particles are stable attractors of closure geometry.}}$$
+$$\boxed{\text{Closure-energy minima are candidate particle-like structures.}}$$
 
 ---
 
@@ -130,12 +140,12 @@ $$\boxed{\text{Particles are stable attractors of closure geometry.}}$$
 
 This chapter establishes:
 
-- Three nodes form the minimal closure unit
+- Three nodes form the minimal candidate in the stated finite closure class
 - Closure strength can be quantitatively defined
 - Structural persistence is governed by an energy functional
-- Particles emerge as stable configurations
+- Closure minima provide particle-like structural candidates
 
-$$\boxed{\text{Persistent structure = local stability of closure.}}$$
+$$\boxed{\text{Local closure minima are candidate persistent structures.}}$$
 
 The next question is immediate:
 
@@ -153,7 +163,8 @@ The central question now becomes:
 
 $$\boxed{\text{Why is the minimal closure unit triangular?}}$$
 
-This is not a geometric assumption, but a structural requirement that must follow from the properties of closure itself.
+The following argument is restricted to the stated finite simple-loop closure
+class; it does not establish unrestricted structural necessity.
 
 ---
 
@@ -193,13 +204,15 @@ $$\boxed{\text{Three nodes form the minimal self-referential enclosure.}}$$
 
 ### 2.4 Higher-Node Systems: Decomposition into Triangles
 
-For systems with $n \geq 4$, closure structures can always be decomposed into triangular components:
+For systems with $n \geq 4$, the configurations considered here are represented
+by triangular components:
 
 $$\text{closure}(n) \;\longrightarrow\; \sum \text{triangular closures}$$
 
-No fundamentally new minimal unit appears beyond three nodes. Larger structures are compositions of triangular closures.
+No additional minimal unit appears within this construction class. Larger
+structures are modeled as compositions of triangular closures.
 
-$$\boxed{\text{Triangles are the irreducible units of closure geometry.}}$$
+$$\boxed{\text{Triangles are minimal units in the stated closure class.}}$$
 
 ---
 
@@ -211,9 +224,10 @@ $$\boxed{\text{Triangles are the irreducible units of closure geometry.}}$$
 | 3 | Minimal closure |
 | 4+ | Composite of triangles |
 
-$$\boxed{\text{The triangle is the unique minimal closure unit.}}$$
+$$\boxed{\text{The triangle is minimal in the stated finite closure class.}}$$
 
-This uniqueness does not arise from geometric convenience, but from the minimal conditions required for internal consistency and self-reference.
+This model-local minimality follows from the listed admissible configurations;
+it does not assert uniqueness for every closure definition or equivalence.
 
 ---
 
@@ -231,7 +245,8 @@ $$\boxed{\text{Structural behavior depends on the degree of triangular degenerac
 
 ### 2.7 Toward Symmetry
 
-The triangle is established as the minimal closure unit, but it also carries internal degrees of freedom. The next step is to understand:
+Within the stated finite closure class, the triangle is the minimal candidate
+and carries internal degrees of freedom. The next step is to understand:
 
 $$\boxed{\text{What transformations preserve triangular closure?}}$$
 
@@ -349,11 +364,14 @@ $$\boxed{\text{How does triangular structure determine particle classification?}
 
 In conventional particle physics, particles are treated as fundamental entities belonging to distinct categories.
 
-Within the present framework, particles are not assumed as primitive objects. Instead, they are interpreted as stable configurations of closure structure.
+Within the present framework, closure configurations are proposed as
+particle-like structural candidates rather than identified with observed
+particles.
 
-$$\boxed{\text{What is observed as a particle corresponds to a class of stable closure configurations.}}$$
+$$\boxed{\text{Could observed particle classes admit a closure-structure map?}}$$
 
-The classification of particles is therefore reformulated as a classification of closure geometry.
+The model classification is organized by closure geometry; an observational
+identification is not supplied.
 
 ---
 
@@ -361,7 +379,7 @@ The classification of particles is therefore reformulated as a classification of
 
 Chapter 2 established that triangular closure admits different structural regimes depending on degeneracy. This provides a natural organizing principle:
 
-$$\boxed{\text{Particle type is determined by the degree of triangular degeneracy.}}$$
+$$\boxed{\text{Triangular degeneracy organizes the model's particle-like candidates.}}$$
 
 Degeneracy controls the number of effective degrees of freedom, the symmetry structure, and the stability characteristics of each configuration.
 
@@ -395,9 +413,10 @@ These three regimes map to familiar particle classes:
 | Degenerate triangle | lepton-like structures |
 | Extreme degeneracy | neutrino-like structures |
 
-$$\boxed{\text{Particle classes correspond to geometric regimes of closure.}}$$
+$$\boxed{\text{Closure regimes provide candidate particle-like classes.}}$$
 
-This correspondence is structural. It does not assert exact identification, but proposes a consistent mapping between closure geometry and observed particle types.
+This is a proposed structural comparison. It does not assert an observational
+identification or supply a validated mapping to particle species.
 
 ---
 
@@ -407,9 +426,10 @@ The three regimes form a continuous hierarchy:
 
 $$\text{non-degenerate} \;\rightarrow\; \text{degenerate} \;\rightarrow\; \text{extreme}$$
 
-$$\boxed{\text{Particles form a hierarchy along a degeneracy continuum.}}$$
+$$\boxed{\text{Particle-like candidates form a degeneracy hierarchy.}}$$
 
-Discrete particle types can be viewed as stable points along this continuous structure.
+Candidate discrete types can be represented as points along this continuous
+structure; stability and observational mapping remain open.
 
 ---
 
@@ -423,19 +443,24 @@ Mass scales as:
 
 $$m \propto \frac{1}{\Delta_k^2}$$
 
+This is a phenomenological barrier-based scaling within the closure model; it
+does not by itself derive or calibrate an observed particle mass.
+
 This implies: stronger closure → smaller $\Delta$ → larger mass; weaker closure → larger $\Delta$ → smaller mass.
 
-$$\boxed{\text{Mass can be interpreted as distance from complete closure.}}$$
+$$\boxed{\text{A mass-like scale is modeled by closure-limit distance.}}$$
 
 ---
 
 ### 4.7 Discrete Particles from Continuous Geometry
 
-Although closure geometry varies continuously, observed particles appear discrete. This suggests:
+The model asks how discrete particle-like candidates might be represented in a
+continuous closure geometry:
 
-$$\boxed{\text{Discrete particles correspond to stable points within a continuous geometric landscape.}}$$
+$$\boxed{\text{Particle-like candidates may be represented within a continuous landscape.}}$$
 
-Particle classification is not a taxonomy of independent entities, but a discretization of underlying structure.
+This is a proposed structural classification, not an established map to
+observed particle species.
 
 ---
 
@@ -530,7 +555,10 @@ As stabilization progresses, closure strength increases and the closure deficit 
 - early-stage structures → larger $\Delta$ → lower mass
 - later-stage structures → smaller $\Delta$ → higher mass
 
-$$\boxed{\text{Mass hierarchy can be interpreted as a consequence of sequential closure.}}$$
+$$\boxed{\text{Sequential closure motivates a phenomenological mass-like hierarchy.}}$$
+
+This is a model-local use of the scaling ansatz, not a derivation of observed
+particle masses or generations.
 
 ---
 
@@ -794,7 +822,7 @@ This process corresponds to what is conventionally described as spontaneous symm
 
 As asymmetry becomes fixed, closure becomes more stable and the closure deficit $\Delta$ decreases. Given $m \propto 1/\Delta^2$:
 
-$$\boxed{\text{Mass can be interpreted as a consequence of stabilized asymmetry.}}$$
+$$\boxed{\text{Stabilized asymmetry motivates a phenomenological mass-like scale.}}$$
 
 ---
 
@@ -842,9 +870,10 @@ $$\text{symmetry breaking} \;\rightarrow\; \text{mass}$$
 
 Within this framework:
 
-$$\boxed{\text{structural fixing} \;\rightarrow\; \text{mass}}$$
+$$\boxed{\text{structural fixing} \;\rightarrow\; \text{phenomenological mass-like scale}}$$
 
-Mass is not introduced through an external mechanism, but emerges from stabilization of internal structure.
+Within this phenomenological model, a mass-like scale is associated with
+stabilization of internal structure; observed mass is not derived here.
 
 ---
 
@@ -853,12 +882,12 @@ Mass is not introduced through an external mechanism, but emerges from stabiliza
 The structural correspondence developed across this volume:
 
 $$\boxed{\begin{aligned}
-\text{Particle} &= \text{triangular closure}\\
+\text{Particle-like candidate} &= \text{triangular closure}\\
 \text{Symmetry} &= \text{invariance of closure}\\
 \text{Generation} &= \text{sequential stabilization}\\
 \text{Charge} &= \text{phase asymmetry}\\
 \text{Weak interaction} &= \text{structural fluctuation}\\
-\text{Mass} &= \text{stabilized asymmetry}
+\text{Mass-like scale} &= \text{stabilized asymmetry}
 \end{aligned}}$$
 
 ---
@@ -887,9 +916,20 @@ This is addressed in Vol.3.
 
 $$\boxed{\text{Difference} \;\to\; C_{ij} \;\to\; \text{triangular closure} \;\to\; \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1) \;\to\; \text{Standard Model}}$$
 
-The skeleton of the Standard Model — gauge groups, particle spectrum, electric charge, mass, generations, electroweak unification, Higgs mechanism — can be interpreted as consequences of closure geometry originating from $C_{ij}$.
+This display is a program-level navigation mnemonic, not a sequence of
+identically typed derivations:
 
-$$\boxed{\text{The Standard Model can be interpreted as a structural consequence of closure geometry.}}$$
+| Local relation | Navigation role | Status |
+|---|---|---|
+| difference $\to C_{ij}$ | upstream model organization | source-local proposal |
+| $C_{ij}\to$ triangular closure | finite closure construction | model-local result within the stated admissible class |
+| triangular closure $\to\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ | symmetry-structure comparison | proposed structural relation |
+| symmetry structure $\to$ Standard Model | physical comparison target | OPEN physical identification; not a derivation of the observed theory |
+
+The Standard Model structures listed here are proposed for model-level
+comparison with closure geometry originating from $C_{ij}$.
+
+$$\boxed{\text{Closure geometry provides a proposed structural comparison with the Standard Model.}}$$
 
 ---
 

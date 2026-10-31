@@ -23,12 +23,15 @@
   </defs>
   
   <rect width="960" height="460" fill="#fafafa"/>
-  <text x="480.0" y="35" text-anchor="middle" class="title">図1. 同一の生成過程の二つの側面</text>
+  <text x="480.0" y="35" text-anchor="middle" class="title">図1. source固有の記述間に提案される対応</text>
   <rect x="95" y="85" width="625" height="195" class="ifgt-band" rx="8"/>
   <rect x="720" y="85" width="145" height="195" class="ved-band" rx="8"/>
   <line x1="217.0" y1="140" x2="287.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
   <line x1="427.0" y1="140" x2="487.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
   <line x1="627.0" y1="140" x2="717.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="253" y="108" text-anchor="middle" font-size="11" fill="#444">場で表す勾配</text>
+  <text x="457" y="108" text-anchor="middle" font-size="11" fill="#444">有効的流れ</text>
+  <text x="672" y="108" text-anchor="middle" font-size="11" fill="#444">閉包候補</text>
   <rect x="85.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
   <text x="150" y="145" class="node-text">差分</text>
   <rect x="295.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
@@ -37,17 +40,18 @@
   <text x="560" y="145" class="node-text">流れ</text>
   <rect x="725.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
   <text x="790" y="145" class="node-text">閉包</text>
-  <text x="407.5" y="250" class="region-label">IFGT 領域</text>
+  <text x="407.5" y="250" class="region-label">IFGT内の記述</text>
   <text x="407.5" y="276" class="region-sub">（準閉包 / 未閉包の持続）</text>
-  <text x="792.5" y="250" class="region-label">VED 領域</text>
-  <text x="792.5" y="276" class="region-sub">（閉包）</text>
+  <text x="792.5" y="250" class="region-label">VEDとの比較</text>
+  <text x="792.5" y="276" class="region-sub">（閉包候補）</text>
   <line x1="95" y1="320" x2="865" y2="320" stroke="#333" stroke-width="1.2" marker-end="url(#caxisarrow)"/>
   <text x="85" y="325" class="c-axis-label" text-anchor="end">C ≈ 0</text>
   <text x="881" y="325" class="c-axis-label" text-anchor="start">C → 1</text>
-  <text x="480.0" y="340" class="c-axis-label" text-anchor="middle"><tspan font-style="italic">C</tspan></text>
+  <text x="480.0" y="340" class="c-axis-label" text-anchor="middle"><tspan font-style="italic">C</tspan> — IFGT内の閉包度。Vol.1のcausal-log行列ではない。</text>
   <line x1="720" y1="315" x2="720" y2="325" stroke="#666" stroke-width="1.2"/>
   <text x="150" y="368" class="i-label">↑ <tspan font-style="italic">I 高</tspan></text>
   <text x="460.0" y="368" class="i-label"><tspan font-style="italic">I 減少</tspan></text>
   <text x="790" y="368" class="i-label">↓ <tspan font-style="italic">I 低</tspan></text>
-  <text x="480.0" y="435" class="note">IFGTは閉包へ向かう過程全体における「閉じきれなかった側」を記述する。</text>
+  <text x="480.0" y="435" class="note">行列から場への同一視・理論間translationはOPEN。</text>
+  <text x="480" y="204" class="note">模式的な読解順序。各矢印は一律の物理的生成機構を意味しない。</text>
 </svg>

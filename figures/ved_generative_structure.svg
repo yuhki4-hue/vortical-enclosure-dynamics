@@ -15,7 +15,7 @@
   <rect width="920" height="620" fill="#fafaf8"/>
 
   <!-- Title + axiom -->
-  <text x="460" y="34" text-anchor="middle" font-size="14.5" fill="#111" letter-spacing="2" font-style="italic">Vortical Enclosure Dynamics — Generative Chain</text>
+  <text x="460" y="34" text-anchor="middle" font-size="14.5" fill="#111" letter-spacing="2" font-style="italic">Vortical Enclosure Dynamics — Navigation Schematic</text>
   <text x="460" y="52" text-anchor="middle" font-size="9.5" fill="#999" font-style="italic">axiom: 差がある (there is difference)</text>
 
   <!-- ===== C box ===== -->
@@ -36,7 +36,7 @@
 
   <!-- C→J arrow: label BELOW the arrow, centered between boxes -->
   <line x1="142" y1="118" x2="166" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="154" y="134" text-anchor="middle" font-size="8" fill="#888">asym.</text>
+  <text x="154" y="134" text-anchor="middle" font-size="8" fill="#888">def.</text>
 
   <!-- ===== J box ===== -->
   <rect x="168" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
@@ -51,7 +51,7 @@
 
   <!-- J→ω arrow: label BELOW -->
   <line x1="282" y1="118" x2="306" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="294" y="134" text-anchor="middle" font-size="8" fill="#888">curl</text>
+  <text x="294" y="134" text-anchor="middle" font-size="8" fill="#888">OPEN*</text>
 
   <!-- ===== ω box ===== -->
   <rect x="308" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
@@ -62,7 +62,7 @@
 
   <!-- ω→L arrow: label BELOW -->
   <line x1="422" y1="118" x2="446" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="434" y="134" text-anchor="middle" font-size="8" fill="#888">density</text>
+  <text x="434" y="134" text-anchor="middle" font-size="8" fill="#888">eff.</text>
 
   <!-- ===== L box ===== -->
   <rect x="448" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
@@ -74,12 +74,12 @@
 
   <!-- L→g arrow: label BELOW -->
   <line x1="562" y1="118" x2="624" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="593" y="134" text-anchor="middle" font-size="8" fill="#888">coarse-grain</text>
+  <text x="593" y="134" text-anchor="middle" font-size="8" fill="#888">OPEN coarse</text>
 
   <!-- ===== g box ===== -->
   <rect x="626" y="72" width="112" height="92" rx="4" fill="#fafaf8" stroke="#222" stroke-width="1.4"/>
   <text x="682" y="99" text-anchor="middle" font-size="22" fill="#111" font-style="italic">g</text>
-  <text x="682" y="115" text-anchor="middle" font-size="9" fill="#555">metric / geometry</text>
+  <text x="682" y="115" text-anchor="middle" font-size="9" fill="#555">effective metric target</text>
   <path d="M643,132 Q682,127 721,132" fill="none" stroke="#888" stroke-width="1"/>
   <path d="M643,144 Q682,152 721,144" fill="none" stroke="#888" stroke-width="1"/>
   <path d="M643,156 Q682,166 721,156" fill="none" stroke="#888" stroke-width="1"/>
@@ -100,11 +100,11 @@
   <!-- L → Particles (diagonal) -->
   <line x1="504" y1="166" x2="504" y2="208" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3"/>
   <line x1="504" y1="208" x2="248" y2="256" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-gray)"/>
-  <text x="340" y="228" text-anchor="middle" font-size="8" fill="#aaa">closure → particle</text>
+  <text x="340" y="228" text-anchor="middle" font-size="8" fill="#aaa">model candidate</text>
 
   <!-- g → Gravity -->
   <line x1="682" y1="166" x2="682" y2="256" stroke="#777" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-gray)"/>
-  <text x="668" y="212" text-anchor="end" font-size="8" fill="#aaa">fixed-point eq.</text>
+  <text x="668" y="212" text-anchor="end" font-size="8" fill="#aaa">proposed metric</text>
 
   <!-- ===== PARTICLES box ===== -->
   <rect x="78" y="258" width="174" height="132" rx="4" fill="#fafaf8" stroke="#444" stroke-width="1.2"/>
@@ -151,5 +151,7 @@
   <circle cx="516" cy="536" r="2" fill="#bbb"/>
   <circle cx="554" cy="542" r="2" fill="#bbb"/>
   <text x="460" y="574" text-anchor="middle" font-size="8.5" fill="#aaa" font-style="italic">dρ/dτ + 3γρ² = σ(ρ)   ·   BH interior ↔ early universe</text>
+
+  <text x="460" y="610" text-anchor="middle" font-size="8.5" fill="#666" font-style="italic">* discrete-to-field bridge OPEN · schematic roles: formal · effective · OPEN · candidate</text>
 
 </svg>

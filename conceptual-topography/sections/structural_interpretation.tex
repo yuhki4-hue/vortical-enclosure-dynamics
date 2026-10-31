@@ -5,18 +5,19 @@
 \section{Structural Interpretation}
 \label{sec:structural}
 
-\subsection{Solution Classes of the Unified Equation}
+\subsection{Candidate Structural Classes}
 
-The unified VED$\times$IFGT equation admits several classes of
-solutions that correspond to distinct cognitive phenomena.
-We identify the principal classes here; detailed analysis is
-deferred to future work.
+The VED$\times$IFGT framework motivates the following candidate
+structural classes and cognitive interpretations.
+The table organizes a model-based classification, not a formal existence
+or classification theorem; detailed solution analysis and independent
+cognitive correspondences remain future work.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{p{0.29\textwidth}p{0.31\textwidth}p{0.30\textwidth}}
 \toprule
-\textbf{Solution class} & \textbf{Field structure} & \textbf{Cognitive interpretation} \\
+\textbf{Candidate class} & \textbf{Field structure} & \textbf{Cognitive interpretation} \\
 \midrule
 Smooth gradient region   & $\nabla\Phi$ slowly varying     & Background cognitive disposition \\
 Shallow metastable well  & $\nabla\Phi\approx 0$, small depth & Tentative or unstable concept \\
@@ -32,51 +33,55 @@ Ridge structure          & Local maximum of $\Phi$           & Conceptual bounda
 
 Three geometric parameters characterize a conceptual attractor:
 
-\textbf{Depth} ($-\min\Phi$ within the well) measures resistance to
-deformation by new input. Deep concepts are stable under perturbation;
-shallow concepts are easily displaced.
+\textbf{Depth} ($-\min\Phi$ within the well) is proposed to correspond
+to resistance to deformation by new input: deeper wells are compared with
+more resistant concepts, shallower wells with more easily displaced ones.
 
-\textbf{Width} (spatial extent of the sub-threshold region) measures
-contextual range. Broad concepts apply across many domains; narrow
-concepts are context-specific.
+\textbf{Width} (spatial extent of the sub-threshold region) is compared
+with contextual range: broad wells with wider applicability, narrow wells
+with more context-specific concepts.
 
-\textbf{Robustness} (curvature of $\Phi$ at the minimum) measures
-precision. High curvature produces sharp, well-defined concepts;
-low curvature produces fuzzy or polysemous ones.
+\textbf{Robustness} (curvature of $\Phi$ at the minimum) is proposed
+as a comparative indicator of precision: higher curvature is associated
+qualitatively with sharper concepts, lower curvature with fuzzy or
+polysemous ones. None of these semantic attributes is calibrated by
+the geometric description alone.
 
-These parameters are not fixed intrinsic properties; they evolve
-continuously with $\Phi$ under the dynamics of
+These geometric attributes are not treated as fixed intrinsic properties;
+they are modeled as evolving with $\Phi$ under the relations in
 Eqs.~\eqref{eq:I_evolution}--\eqref{eq:sigma_barrier}.
 
 \subsection{Conceptual Boundaries}
 
 Ridge structures in $\Phi$ --- regions of locally high potential
-separating neighboring wells --- correspond to conceptual boundaries:
-the distinctions between concepts.
+separating neighboring wells --- represent conceptual boundaries in this
+account: the distinctions between concepts.
 These boundaries are not sharp lines but extended regions of high
 traversal cost.
 
-A key consequence is that conceptual boundaries shift under repeated
-linguistic or experiential perturbation.
-Tokens that consistently couple to the gradient near a ridge will
-either reinforce it (deepening the distinction) or erode it (merging
-the adjacent concepts).
-This provides a mechanistic account of semantic drift and conceptual
-change.
+The qualitative hypothesis is that conceptual boundaries can shift under
+repeated linguistic or experiential perturbation.
+Tokens coupling near a ridge are proposed to reinforce it (deepening a
+distinction) or erode it (merging adjacent concepts).
+This is a candidate dynamical account of semantic drift and conceptual
+change, not an established cognitive mechanism or semantic mapping.
 
-\subsection{The Vocabulary as a Distribution}
+\subsection{Vocabulary Selection and Distributional Description}
 
-The full set of stabilized tokens $\{\ell_i\}$ constitutes a vocabulary.
-In this framework, vocabulary is not a list but a distribution over
-stability measures:
+The full set of stabilized tokens $\{\ell_i\}$ is called a vocabulary
+in this framework. The expression below selects a set by stability;
+the broader description of vocabulary as distributed across the field
+does not turn that set into a probability distribution:
 \begin{equation}
   \mathcal{V} = \bigl\{\ell_i \;\big|\; S(\ell_i) > \epsilon \bigr\},
   \label{eq:vocabulary}
 \end{equation}
-where $S(\ell_i)$ is a stability functional derived from reuse frequency,
-persistence time, and basin depth, and $\epsilon$ is a system-dependent
-threshold.
+where $S(\ell_i)$ is a stability functional intended to depend on reuse
+frequency, persistence time, and basin depth, and $\epsilon$ is a
+system-dependent threshold. The functional and threshold are not given
+an extraction or calibration rule here.
 
-Vocabulary is a field property, continuously reshaped by use.
-Token frequencies reflect basin accessibility, not semantic importance.
-Boundaries between tokens are fuzzy and context-sensitive.
+Vocabulary is interpreted as a field-related organization reshaped by use.
+Token frequency is proposed to relate to basin accessibility, not to serve
+as a measure of semantic importance. Fuzzy, context-sensitive distinctions
+are part of this interpretive picture, not an operational token criterion.

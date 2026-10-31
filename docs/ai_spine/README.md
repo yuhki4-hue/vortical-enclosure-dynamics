@@ -12,7 +12,7 @@ category of the theory.
 | Layer | Role | Status in this directory |
 |---|---|---|
 | 0 | Repository identity, entry paths, source availability | Machine-validated |
-| 1 | Canonical derivation order, term kind/role, non-generative boundary relations | Machine-validated |
+| 1 | Ranked navigation order, local term roles, relation-role metadata, non-generative proposed correspondences | Machine-validated |
 | 2 | Interpretive framing and theory-neighbor routing | Referenced as `advisory_links` only — **not enforced, not existence-checked** |
 | 3 | Evaluation, scoring, summary weighting, final interpretation | Absent |
 
@@ -57,29 +57,52 @@ appears in System-1-like form.
 
 ## What Layer 1 now carries (and why)
 
-The backbone is the same linear VED sequence, but each term now carries a
-`kind` and a `derivation_role` so that depth of reading cannot flatten the
-type distinctions:
+The ranked backbone is retained as legacy-compatible navigation metadata, not
+as a derivation or uniform generation chain. Each term carries a `kind` and a
+source-local `derivation_role`; the field name is retained for compatibility.
+The canonical meaning of each relation is recorded in
+[`../navigation/generative_sequence.md`](../navigation/generative_sequence.md).
 
 - `non_closure` stays at rank 6 but is typed `boundary_condition` /
   `constitutive_limit` — it is **not** a generated object like the stages
   above it.
-- `c_ij` is `variable` / `first_formal_carrier` — the rank-1 formal variable,
-  explicitly **not a second axiom**.
+- `c_ij` is `variable` / `source_local_first_carrier` — the rank-1
+  navigation variable, explicitly **not a second axiom** and not an automatic
+  identity with the Vol.1 causal-log matrix.
 
 Two terms are kept **off the backbone** in `boundary_terms`, connected only by
 non-generative `validated_relations`:
 
-- `causal_log` — the accumulated trace of `C_ij`; an `accumulation_structure`,
-  not a rank. (In navigation prose "causal log `C_ij`" is a convenient fusion;
-  the spine separates the scalar variable from its sediment.)
-- `information_field` (IFGT) — shares `C_ij` as basis via
-  `structural_extension_of`. IFGT is a structure layer on the shared variable,
-  **not** the next generative stage of VED core.
+- `causal_log` — the Vol.1 source-specific causal-log matrix; it is kept
+  distinct from the navigation closure-degree use of the same glyph.
+- `information_field` (IFGT) — a related-branch field connected only by a
+  `proposed_correspondence`; it is **not** the next generative stage of VED
+  core and is not identified with the Vol.1 matrix.
 
-The validator enforces the invariant that a non-generative relation can never
-target a ranked term — so neither the causal log nor IFGT can silently become
-"the next rank."
+The `relation_role_inventory` mirrors the 22 canonical navigation relations.
+It distinguishes formal constructions, effective relations, OPEN bridges, and
+candidate physical interpretations. The validator also preserves the exact
+OPEN bridge set `RC-005`–`RC-010`, `RC-040`, and `RC-041`.
+
+In this Layer 1 metadata, `confirmed` means that a term's stated role is
+documented within its source-specific formal or navigation account. It does
+**not** confirm a physical mechanism, a bridge, or generation from the sole
+axiom. The schema and validator now record this as
+`status_semantics=source_local_documentary_role_only`.
+
+This core navigation ranking also does **not** entail an application-layer
+sequence from inferential non-closure to retained traces, log rereference
+(`LR`), emergent stopping-layer roles (`LE`), and stopping effects. Intelligence
+Parts I and II treat these as scoped descriptions and hypotheses, with
+conditions, failing constructions, alternative routes, and unresolved
+criteria. The Layer 1 field `application_inference=not_implied` marks that
+boundary; it does not machine-validate the intelligence analysis. Read the
+[Part I](../../intelligence-part1/README.md) and
+[Part II](../../intelligence-part2/README.md) manuscripts alongside the
+[generation-boundary](../../notes/intelligence_audit/generation_boundary_continuation_2026-10-30_ja.md)
+and [generation-possibility](../../notes/intelligence_audit/generation_possibility_branch_audit_2026-10-30_ja.md)
+audits for that application-level question. These are reading references,
+not new Layer 0 calibration paths or enforced Layer 2 gates.
 
 ## Files
 
@@ -89,8 +112,8 @@ target a ranked term — so neither the causal log nor IFGT can silently become
 | `spine.schema.json` | Structural contract for the calibration data. |
 | `validate.py` | Validates Layer 0-1 and emits generated outputs. |
 | `requirements.txt` | Optional dependency for JSON Schema validation. |
-| `generated/canonical_derivation_order.md` | Human-readable generated order + types + relations. |
-| `generated/canonical_derivation_order.json` | Machine-readable generated order. |
+| `generated/canonical_derivation_order.md` | Human-readable generated navigation order + relation-role inventory. The legacy filename is retained for compatibility. |
+| `generated/canonical_derivation_order.json` | Machine-readable generated navigation metadata. The legacy key is retained alongside `canonical_navigation_order`. |
 | `generated/validation_report.json` | Machine-readable validation result. |
 
 ## Run
@@ -114,15 +137,20 @@ Layer 0-1 checks below still run through independent validation logic.
 
 - Declared Layer 0 entry paths exist, and no Layer 2 doc is among them.
 - Layer 0-1 are the only machine-validated layers; Layer 2 is advisory; Layer 3 absent.
-- The canonical order is consecutive and begins with the sole axiom `difference`.
-- `c_ij` is rank 1, kind `variable`, role `first_formal_carrier` — not a second axiom.
+- The ranked navigation order is consecutive and begins with the sole axiom `difference`; rank does not encode proof or physical generation.
+- `confirmed` is source-local documentary status, and the ranking implies no application-layer generation or stopping necessity.
+- `c_ij` is rank 1, kind `variable`, role `source_local_first_carrier` — not a second axiom or a cross-source identity.
 - Every backbone term carries a valid `kind` and `derivation_role`.
-- `validated_relations` are non-generative and never occupy a rank.
+- `validated_relations` are non-generative source-local or proposed correspondences and never occupy a rank.
+- `relation_role_inventory` contains unique `N01`–`N22` entries with valid local role, bridge, and physical-status metadata.
+- The eight audited bridge candidates remain OPEN.
 
 ## What Is Not Validated
 
 - Whether VED is the best interpretation of any empirical domain.
 - Whether a neighboring theory is equivalent to or reducible to VED.
+- Whether any OPEN bridge exists, is unique, or preserves a requested structure.
+- Whether a candidate physical interpretation is physically established.
 - Whether an AI summary is persuasive or complete.
 - Any Layer 2 framing claim from the navigation documents.
 - Any Layer 3 evaluation.

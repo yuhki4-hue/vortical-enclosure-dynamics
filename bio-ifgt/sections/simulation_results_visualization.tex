@@ -4,31 +4,32 @@ This section reports a numerical run of the minimal developmental model introduc
 
 \subsection{Initial State}
 
-At the initial time, the fields are nearly uniform and no organized structure is present. The morphogen field \(M\) has only a localized source term. The biological constraint-density field \(\I\) is low and has no meaningful spatial bias apart from a small perturbation. The neural commitment field \(N\) and the eye-like commitment field \(E\) are initially undifferentiated.
+At the initial time, the fields are nearly uniform and no organized structure is present. The morphogen-like model field \(M\) has only a localized source term. The model constraint-density field \(\I\) is low and has no meaningful spatial bias apart from a small perturbation. The neural-like commitment field \(N\) and the eye-like commitment field \(E\) are initially uncommitted model states.
 
-In this state, no information corresponding to a completed shape exists anywhere in the field.
+In this state, no completed output array is supplied. The source profile and positional window nevertheless preload coarse spatial information used by the later updates.
 
 \subsection{Time Evolution}
 
 As the system evolves, structure appears in the following order:
 \begin{enumerate}
   \item the morphogen field diffuses and forms a smooth gradient,
-  \item the biological constraint-density field \(\I\) accumulates and develops spatial bias,
+  \item the model constraint-density field \(\I\) accumulates and develops spatial bias,
   \item thresholding produces a central neural-plate-like region in \(N\),
-  \item the gradient magnitude \(|\nabla \I|\) defines a boundary field \(B\),
+  \item a globally normalized input derived from \(|\nabla \I|\) updates the accumulated boundary field \(B\),
   \item the overlap of neural commitment, boundary stabilization, and a positional window produces localized eye-like commitment in \(E\).
 \end{enumerate}
-This process is continuous. No stage contains an encoded final drawing of the resulting structures.
+This list reports the staged presentation of the run. The actual loop is ordered: updated \(M\) feeds \(\I\), updated \(\I\) feeds both \(N\) and the normalized gradient input to \(B\), and updated \(N\) and \(B\) combine with the positional window in the \(E\) update. It does not contain a direct \(N\)-to-\(B\) input or a simultaneous-update assumption.
+The manuscript describes the field process continuously, while the reported run is its source-specific finite-step implementation. No stage contains an encoded final drawing of the resulting structures.
 
 \subsection{Final State}
 
-In the final state, the simulation shows a stable central neural-plate-like region. Localized eye-like structures appear near boundary regions of the neural field. The central region itself does not produce the eye-like field, because the relevant boundary condition is weak there.
+At the reported 800-step horizon, the simulation shows a reproducible central neural-plate-like model region and two relatively bright eye-like lobes. The central \(E\) values are not zero, and the \(E>0.5\) mask forms one connected component in the audited default condition; this output is therefore not evidence for two independent eye structures. Localization is conditional on the explicit positional window, and disabling the eye pathway suppresses \(E\). This is a finite-horizon description: longer audit runs continue to evolve, and neither stationarity nor asymptotic stability is established.
 
-Thus, the dynamics determine both where a structure can appear and where it does not appear.
+Thus, the dynamics and supplied spatial constraints jointly shape the model's relative intensity pattern; the result is not geometry-free emergence or a biological eye-development mechanism.
 
 \subsection{Figure Descriptions}
 
-Each figure corresponds to a stage in the hierarchical emergence described in the previous section.
+Each figure corresponds to a stage in the paper's presentation order; that order is a navigation summary rather than a complete execution-dependency graph.
 
 \begin{figure}[htbp]
   \centering
@@ -40,28 +41,28 @@ Each figure corresponds to a stage in the hierarchical emergence described in th
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/information_density_final_v2.png}
-  \caption{Final biological constraint-density field \(\I\). The field accumulates in response to the morphogen field and forms a central peak.}
+  \caption{Final model constraint-density field \(\I\). The field accumulates in response to \(M\) and forms a central peak; no biological measurement map is implied.}
   \label{fig:sim-information-density}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/neural_commitment_final_v2.png}
-  \caption{Final neural commitment field \(N\). Thresholding of biological constraint density produces a central neural-plate-like region.}
+  \caption{Final neural-like commitment field \(N\). Thresholding of the model constraint density produces a central neural-plate-like model region.}
   \label{fig:sim-neural}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/boundary_field_final_v2.png}
-  \caption{Final boundary stabilization field \(B\). The field is derived from the gradient structure of \(\I\), highlighting boundary-like regions.}
+  \caption{Final accumulated boundary stabilization field \(B\). It is updated from the code's normalized gradient-sensitive input derived from \(\I\), highlighting boundary-like regions at the reported horizon; this finite-horizon pattern is not a permanent biological boundary.}
   \label{fig:sim-boundary}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/eye_commitment_final_v2.png}
-  \caption{Final eye-like commitment field \(E\). Localized structures appear where neural commitment and boundary conditions overlap within the positional window.}
+  \caption{Final eye-like commitment field \(E\). Relative bright regions appear where model commitments overlap within the explicit positional window; this is a qualitative model pattern, not a biological eye identification.}
   \label{fig:sim-eye}
 \end{figure}
 
@@ -75,41 +76,42 @@ Each figure corresponds to a stage in the hierarchical emergence described in th
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.70\linewidth]{simulations/minimal_neural_field/outputs/combined_fields_with_eye_v2.png}
-  \caption{Combined visualization with eye-like commitment. The image summarizes the final relationship among the morphogen field, biological constraint density, neural commitment, and eye-like commitment.}
+  \caption{Combined visualization with eye-like commitment. The image summarizes the final relationship among the model fields \(M\), \(\I\), \(N\), and \(E\).}
   \label{fig:sim-combined}
 \end{figure}
 
+The plotted fields are model states. Printed means, maxima, and fractions above \(0.5\) are run diagnostics; contours and RGB normalization are visualization transforms. The normalized gradient quantity is different: it is a model intermediate that directly feeds the \(B\) update and is not display-only. None of these diagnostics or display transforms is, by itself, an independently measured biological observable.
+
 \subsection{Time-Evolution Visualization}
 
-The time evolution was also rendered as an animated GIF:
+An earlier manuscript referenced the following animation path, which is absent from the current distribution:
 \begin{center}
   \path{simulations/minimal_neural_field/outputs/development_v2_hierarchical.gif}
 \end{center}
-Time evolution of the minimal developmental model. Structures appear as stable configurations under simple dynamical constraints.
-The animation is provided as supplementary material.
-The animation shows the sequence of morphogen formation, biological constraint-density accumulation, neural-plate-like stabilization, boundary extraction, and secondary eye-like commitment.
+A historical local animation, \path{fig8_development_v2_hierarchical.gif}, is retained. Its lineage relative to the currently audited run and tracked PNGs remains unresolved. It is not treated as a verified current supplementary output; no current-run GIF is supplied here.
 
-This ordering agrees with the hierarchical generation path
+Independently of that historical animation, the staged model description in the preceding sections is summarized by
 \begin{equation}
   M \rightarrow \I \rightarrow N \rightarrow B \rightarrow E.
 \end{equation}
+Here the sequence means staged reading order only. The executable dependencies branch from \(\I\): one branch updates \(N\), while another forms the normalized gradient input that updates \(B\); \(E\) then uses \(N\), \(B\), and the positional window. The displayed arrow sequence does not assert a direct \(N\)-to-\(B\) causal dependency.
 
 \subsection{Summary of Observations}
 
 The simulation illustrates the following points:
 \begin{itemize}
-  \item the neural-plate-like region arises through thresholding of biological constraint density,
-  \item the eye-like field arises through the combination of boundary structure and positional conditions,
+  \item the neural-plate-like model region arises through thresholding of model constraint density,
+  \item the eye-like field localizes through the combination of a gradient-sensitive accumulated state and explicit positional conditions,
   \item structure appears in stages,
-  \item the final shape is not specified in advance.
+  \item the completed output array is not specified in advance, although coarse source and window geometry is supplied.
 \end{itemize}
 
-The resulting structures are therefore interpreted as stable solutions under constrained dynamics.
+The resulting structures are therefore interpreted as reproducible finite-horizon patterns under constrained dynamics. The run does not establish a stationary solution, invariant basin, or general perturbation return.
 
 \subsection{Role of This Section}
 
-This result is not a model of a specific biological phenomenon. The role of the simulation is to show that structure can arise from minimal conditions in a field-based dynamical system. In this respect, the toy model is consistent with the Bio-IFGT interpretation developed in the preceding sections.
+This result is not a model of a specific biological phenomenon. The role of the simulation is to show finite spatial organization under the stated conditions in a field-based toy system. In this respect, the output is a qualitative structural analogue consistent with the Bio-IFGT interpretation developed in the preceding sections.
 
-It does not demonstrate biological mechanism, but only structural possibility.
+It does not demonstrate biological mechanism or empirical correspondence, but only model-local structural possibility. No external biological dataset or operational observable mapping is used.
 
 \clearpage

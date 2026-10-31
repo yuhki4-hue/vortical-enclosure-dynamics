@@ -1,5 +1,7 @@
 # 12. Conclusion
 
+> **作業版scope:** 共通記述はcarrier / dynamics / scaleのidentityを意味しない。現在のtoy simulationは外部biological datasetと比較されず、operational observable map、genotype-to-parameter map、typed IFGT/Bio・cross-scale translationはOPENである。
+
 本論文では、生物系を
 
 - 情報密度 \(I\)
@@ -8,13 +10,13 @@
 
 によって記述する最小枠組みを提示した。
 
-この枠組みにより、
+この枠組みでは、次の対象を提案的なアトラクタ語彙によって整理する。
 
-- 発生は安定構造への収束として
-- 生命は持続的な安定運動として
-- 知性は第二のアトラクタとして
+- 発生は候補となる持続配置への接近として
+- 生命は候補となる有界領域内の持続運動として
+- 知性は候補となる第二のアトラクタとして
 
-統一的に理解される。
+統一的に記述される。具体的な収束、生物学的生命の同定、maintenance、安定性、再生、第二アトラクタの実現は、それぞれOPENな課題として残る。
 
 ここで重要なのは、
 

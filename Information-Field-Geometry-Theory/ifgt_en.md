@@ -8,9 +8,12 @@
 
 This paper proposes Information Field Geometry Theory (IFGT). IFGT is a framework for describing information not as a substance or a description of states, but as a **quasi-closure**: a residual structure that persists when difference does not fully close in the process of approaching closure.
 
-The theory builds on Vortical Enclosure Dynamics (VED), which describes the generation of physical structure from difference, gradient, flow, and closure. Within the same generative process described by VED, IFGT treats the persisting unclosed structure as information. While VED describes physical persistence realized through the closure degree $C$, IFGT addresses the complementary side — what fails to fully close — as information. In this framing, information is not opposed to physical structure but is a complementary aspect of the same generative structure.
+The theory is motivated by Vortical Enclosure Dynamics (VED) and proposes a
+formal correspondence with its difference, flow, and closure vocabulary. IFGT
+treats persisting unclosed structure as information. This is a related-branch
+comparison, not an established identity or unification of the two theories.
 
-IFGT introduces five basic variables: information density $I$, information flow $J$, information potential $\Phi$, informational time $\tau$, and the generation term $\sigma$. The relation between $I$ and $C$ is given by $I = f(1 - C)$, and $\sigma$ is defined as the mismatch between the current difference chain and the existing trace structure. In the final chapter, these components are integrated into a unified VED×IFGT equation, yielding a single evolution equation for the closure-degree field $C(x,\tau)$.
+IFGT introduces five basic variables: information density $I$, information flow $J$, information potential $\Phi$, informational time $\tau$, and the generation term $\sigma$. The relation between $I$ and $C$ is given by $I = f(1 - C)$, and $\sigma$ is defined as the mismatch between the current difference chain and the existing trace structure. In the final chapter, these components are assembled into an IFGT evolution equation for the closure-degree field $C(x,\tau)$ and presented as a proposed VED×IFGT correspondence. The cross-theory maps for $C$, time, and $\sigma$ remain OPEN.
 
 Within this framework, information is not a static object of description but a dynamic process that participates in structural formation through the persistence of difference and the constraint of flow. IFGT thus provides a foundational theory for describing the general structure that may encompass informational behavior observed in biological and computational systems.
 
@@ -18,15 +21,23 @@ Within this framework, information is not a static object of description but a d
 
 ## 1. Introduction
 
-The Information Field Geometry Theory (IFGT) proposed in this paper is a framework for describing information not as a substance but as a geometric structure. IFGT is not an independent foundational theory; it is positioned as an upper-layer effective theory built upon Vortical Enclosure Dynamics (VED), which describes the generation of physical structure from difference, gradient, flow, and closure.
+The Information Field Geometry Theory (IFGT) proposed in this paper is a
+framework for describing information not as a substance but as a geometric
+structure. It is positioned as an upper-layer effective model motivated by VED;
+the cross-theory connection is a proposed correspondence.
 
 Information has traditionally been understood primarily as a description of states. When modern physics claims that "matter is also information," this information typically functions as a label attached to the state of a system. The information treated in this paper differs from this usage. Here, information refers to a **structural constraint** arising as a trace left behind when difference does not fully dissipate. Such information has no independent substance; it acts by constraining the paths and distributions of difference chains.
 
 Information is not difference itself. Information appears when difference persists in a distinguishable form and becomes referable in relation to other differences. In this sense, information is a trace produced by the persistence of difference and functions as a scaffold for subsequent difference chains. Information is, therefore, the structure that makes the chaining of differences possible.
 
-This structure is not fully closed; rather, it appears as a fluctuation of difference that cannot be eliminated in the process of approaching closure. In this theory, we call such a structure a **quasi-closure**. A quasi-closure retains differences, produces gradients, and induces flows, thereby forming structure. At the same time, this structure is not separated from physical persistence but interacts with it within the same generative process.
+This structure is modeled as a fluctuation of difference that remains while
+approaching closure and is called a **quasi-closure**. The relation of this
+IFGT construction to VED physical persistence is proposed, not identified.
 
-This interaction is not unidirectional but circular. The informational structure as a quasi-closure constrains difference chains, biases their flow, and thereby participates in the formation of new structure. The resulting structure manifests as physical persistence and generates further differences. When these differences in turn remain as quasi-closures, information and matter are generated cyclically, transforming into one another.
+The IFGT model represents this interaction as circular: quasi-closure
+constrains difference chains and biases flow, while subsequent differences may
+remain as quasi-closures. Interpreting this model cycle as physical conversion
+between information and matter is not established.
 
 Information does not exist statically; it becomes manifest at boundaries where structural change occurs. Such a boundary functions as a front of change and affects the direction and intensity of difference chains. This boundary structure is especially prominent in biological and computational systems, where the interference of past traces with present change is observed as fluctuations of behavior or state.
 
@@ -59,18 +70,30 @@ The information treated in IFGT is not Shannon information, nor a physical state
 
 ### 2.1 Division of roles
 
-IFGT is not an independent foundational theory but an upper-layer effective theory that describes the **unclosed side** of the generative structure described by Vortical Enclosure Dynamics (VED).
+IFGT is presented as an upper-layer effective theory and proposes a comparison
+with the **unclosed side** of the structure described by VED.
 
 The division of roles between VED and IFGT is organized as follows.
 
-- **VED**: Describes the *generation* of physical structure from difference, gradient, flow, and closure. It treats stable structures, particles, fields, and spacetime that are realized through the closure degree $C$.
-- **IFGT**: Within the same generative structure, treats the informational structure that persists as a **quasi-closure** in the region where $C$ does not reach unity.
+- **VED**: Proposes physical interpretations of difference, gradient, flow, and closure constructions.
+- **IFGT**: Uses its source-local scalar / field closure-degree variable to describe informational structure as a **quasi-closure**.
 
-VED addresses the side where closure succeeds; IFGT addresses the side where closure remains incomplete. The two are not opposing theories but complementary descriptions of the same generative structure viewed from different aspects.
+VED and IFGT are not treated as opposing theories; they are proposed as
+complementary descriptions. No common-state-space identity, translation, or
+equivalence is established.
 
 ### 2.2 The asymmetry between $I$ and $C$
 
 The central quantity of VED is the closure degree $C \in [0,1]$. The central quantity of IFGT, the information density $I$, is related to $C$ by
+
+**Source-identity note.** The $C$ and $C(x,\tau)$ used in this paper are the
+scalar / field closure-degree quantities of IFGT. Shared lettering does not
+identify them automatically with the causal-log matrix $C_{ij}$ defined in
+Vol.1, and this paper supplies no identity map between those source-specific
+objects.
+
+**Bridge status: OPEN.** No matrix-to-field carrier map, interpolation,
+normalization, or preserved-structure statement is supplied.
 
 $$
 I = f(1 - C),
@@ -92,7 +115,14 @@ Three notions of time appear in this paper; we organize them here.
 
 $\tau_{\mathrm{VED}}$ and $\tau$ **differ in origin**. The former advances as closure proceeds; the latter advances as traces are updated.
 
-Nevertheless, the two are **dynamically isomorphic**. Both are not externally given parameters but quantities generated endogenously from the internal difference dynamics of the system, and both are irreversible. Accordingly, this theory treats IFGT's $\tau$ as a quantity embeddable on the same temporal axis as VED's $\tau_{\mathrm{VED}}$. It should be noted, however, that the two quantities measure different aspects of the same phenomenon and cannot be fully identified.
+The effective external $t$ used here is an IFGT source-local parameter. This
+paper fixes no map identifying it with the derivative parameter $t$ used in
+Vol.1.
+
+This paper proposes a **dynamical correspondence** between the two and intends
+IFGT's $\tau$ to be comparable with $\tau_{\mathrm{VED}}$. An isomorphism or
+embedding is not established: no map, preserved structure, inverse, or common
+axis construction is supplied. The bridge remains OPEN.
 
 ### 2.4 The circular relation
 
@@ -121,8 +151,8 @@ The division of roles described in the previous chapter is now organized in term
 | gradient $\nabla C$ | information gradient $\nabla I$ | opposite direction via $I=f(1-C)$ |
 | closure flow $J_C$ | information flow $J$ | different aspects of the same flow |
 | closure potential | information potential $\Phi$ | $\Phi = -\alpha C + \Phi_0$ |
-| generative time $\tau_{\mathrm{VED}}$ | informational time $\tau$ | different origin, dynamically isomorphic |
-| — | generation term $\sigma$ | corresponds to VED's difference generation |
+| generative time $\tau_{\mathrm{VED}}$ | informational time $\tau$ | proposed correspondence; map OPEN |
+| — | generation term $\sigma$ | proposed correspondence to VED difference generation; translation OPEN |
 
 ### 3.2 Difference $\Delta$ and information difference $\delta I$
 
@@ -138,7 +168,9 @@ where $\Delta_{\to C}$ is the component of difference that contributes to closur
 
 ### 3.3 Structural correspondence
 
-In VED, difference produces gradient, gradient produces flow, and flow forms closure, giving rise to structure as physical persistence.
+In the proposed VED field representation, difference, gradient, flow, and
+closure are connected by formal and effective relations. This comparison does
+not establish universal necessity or physical persistence across every step.
 
 In IFGT, when difference does not fully close, it persists as a quasi-closure. This quasi-closure accumulates as a trace, constituting the information density $I$. The non-uniformity of traces produces the information gradient $\nabla I$, which drives the information flow $J$. Furthermore, the accumulation of quasi-closures constrains the flow, which is described as the information potential $\Phi$.
 
@@ -156,7 +188,10 @@ Closure is a stable structure tending toward rest, whereas a quasi-closure forms
 
 The generation term $\sigma$ in IFGT represents the mismatch between the current difference chain and the existing quasi-closure structure. This mismatch corresponds to the generation of new differences in VED and induces the update of structure.
 
-Thus the generation of difference in VED and the generation through $\sigma$ in IFGT are different descriptions of the same process.
+Thus this paper places a **proposed correspondence** between difference
+generation in VED and generation through $\sigma$ in IFGT. It does not establish
+that the two quantities are identical descriptions of one process, and no
+explicit translation is fixed here.
 
 ---
 
@@ -178,10 +213,17 @@ The information flow $J$ is a vector quantity representing the direction and man
 The information potential $\Phi$ is a scalar quantity representing the strength with which the information flow is constrained and biased toward specific paths. It acts as interference with fluctuations and restricts the degrees of freedom of difference chains. The relation between $\Phi$ and $C$ is given by $\Phi = -\alpha C + \Phi_0$, where $\alpha$ is the constraint coupling constant and $\Phi_0$ is an arbitrary constant (which vanishes under the gradient and thus does not contribute to the dynamics).
 
 **Informational time $\tau$.**
-The informational time $\tau$ is defined as the progression accumulating through the mutual interference between difference and physical structure. It is not an externally given parameter but is generated endogenously from the interaction between difference chains and structural constraints (see §2.3).
+The informational parameter $\tau$ is defined as an ordering / accumulation
+quantity associated within IFGT with interaction between difference chains and
+structural constraints (see §2.3). This is an internal model interpretation,
+not an established emergence of physical time.
 
 **Generation term $\sigma$.**
 The generation term $\sigma$ is the quantity representing the mismatch between the current difference chain and the existing informational trace structure. Such mismatch arises when the compatibility between structure and flow breaks down, inducing the generation of new differences and changes in the information density. The concrete construction of $\sigma$ is developed in Chapter 5.
+
+This $\sigma$ is a source-specific IFGT quantity. This paper does not identify
+it with the Vol.1 continuum log-generation rate $\sigma$ or with microscopic
+$\dot\rho_i$.
 
 ### 4.2 Basic equation
 
@@ -191,6 +233,11 @@ $$
 \frac{\partial I}{\partial \tau} + \nabla \cdot J = \sigma.
 \qquad (4.1)
 $$
+
+This is a balance / evolution relation within the related-branch IFGT
+continuum field model. Its equation role is internal to IFGT's field
+assumptions and does not identify its fields with VED Vol.1 quantities across
+the OPEN bridges.
 
 The first term on the left represents the time change of information density, and the second term represents the transport effect due to the divergence of the information flow. The right-hand side $\sigma$ represents the difference generation due to mismatch.
 
@@ -226,7 +273,7 @@ This circulation strengthens local constraints and draws in surrounding flow. As
 
 ## 5. The Unified VED×IFGT Equation
 
-The evolution equation (4.1) of the information field introduced in the previous chapter does not specify the concrete construction of $\sigma$. In this chapter, we expand $\sigma$ as the mismatch between the difference chain and the existing trace structure, and ultimately unify the formulation into a single equation for VED's closure-degree field $C(x,\tau)$.
+The evolution equation (4.1) of the information field introduced in the previous chapter does not specify the concrete construction of $\sigma$. In this chapter, we expand $\sigma$ as the mismatch between the difference chain and the existing trace structure and assemble a single equation for the IFGT closure-degree field $C(x,\tau)$ used in the proposed VED–IFGT correspondence. The internal equation is retained; the matrix-to-field and cross-theory bridges remain OPEN.
 
 ### 5.1 Expansion of the generation term $\sigma$
 
@@ -288,6 +335,11 @@ This equation is understood on the effective domain
 $0 \le C < C_{\max}$. Near both boundaries, additional regularization terms
 may be required in a microscopic model.
 
+For equation-role purposes, (5.2) is an IFGT-internal evolution equation
+under the stated linear and phenomenological assumptions. The word “unified”
+does not establish an identity, translation, or derivation across the OPEN
+VED–IFGT bridges.
+
 $$
 J_C = -D \nabla C - \mu \alpha \, C \nabla C.
 \qquad (5.3)
@@ -298,7 +350,10 @@ Here $C_*$ denotes the effective saturation scale of quasi-closure, while
 $C_{\max}=1$ denotes the ideal complete-closure boundary. In general,
 $C_* < C_{\max}$ in informational regimes.
 
-**On the temporal argument.** The time derivative in (5.2) is taken with respect to the informational time $\tau$ (§2.3), which is not an external parameter defined on a background spacetime. $\tau$ is generated endogenously from the update process of the closure-degree field $C$ itself; in this sense, (5.2) is an equation that internalizes the generative process of time.
+**On the temporal argument.** The time derivative in (5.2) is taken with
+respect to IFGT's informational parameter $\tau$ (§2.3). The model interprets
+$\tau$ as tied to closure-field updating. This supplies an internal ordering
+interpretation, not an established emergence of physical time.
 
 However, in the approximate regime in which $C$ is sufficiently mature and the background spacetime may be regarded as nearly fixed, $\tau$ can be replaced by an external time $t$:
 
@@ -320,7 +375,10 @@ Equation (5.2) could, in principle, generate an extremely broad class of structu
 - **Life-like structure** — potentially corresponding to limit-cycle-type circulatory solutions
 - **Intelligence-like structure** — potentially corresponding to nontrivial global solutions involving closure reconfiguration
 
-These may all be positioned as distinct solution classes of (5.2), but their individual identification and derivation lie beyond the scope of this paper. Under the division of roles in which VED handles generation, IFGT handles structure, and the unified equation (5.2) bridges the two through dynamics, these concrete correspondences will be developed in separate works.
+These may be investigated as candidate solution classes of (5.2), but their
+existence and physical identification lie beyond this paper. The historical
+label “unified” refers to the internal assembly of IFGT terms; equation (5.2)
+does not supply the open VED–IFGT translation maps.
 
 ### 5.4 The minimal foundation and effective tendency
 
@@ -332,8 +390,9 @@ dynamical tendency:
 
 From the foundational axiom, the driving and effective barrier terms are
 motivated; from the effective tendency, the dissipation term and the
-construction of the information flow are introduced. The unified VED×IFGT
-system is therefore built without adding a second foundational axiom to VED.
+construction of the information flow are introduced. The IFGT equation does
+not add a second VED axiom, but neither does it establish a unified
+cross-theory system without the open translation maps.
 
 ---
 
@@ -341,11 +400,18 @@ system is therefore built without adding a second foundational axiom to VED.
 
 This paper has proposed Information Field Geometry Theory (IFGT) and redefined information as the structure of a quasi-closure that persists as a trace of difference. Under this framing, information is understood not as a description of states or an independent substance, but as a geometric structure that constrains the paths and distributions of difference chains.
 
-IFGT is positioned as an upper-layer theory built upon the generative structure described by Vortical Enclosure Dynamics (VED), and it clarifies the correspondence between physical persistence through closure and informational structure through quasi-closure. The two are not opposing theories but complementary frameworks describing the same generative structure from different aspects. In particular, by formulating the relation between information density $I$ and closure degree $C$ as $I = f(1 - C)$, the division of roles between the two theories is made explicit at the level of variables.
+IFGT is positioned as an upper-layer theory motivated by VED and proposes a
+correspondence between physical-persistence and quasi-closure vocabularies. The
+two are potentially complementary frameworks, not established descriptions of
+one identical structure. The relation $I=f(1-C)$ is internal to IFGT's
+source-local closure-degree field and does not close the VED bridge.
 
-The theory introduces the information density $I$, the information flow $J$, the information potential $\Phi$, the informational time $\tau$, and the generation term $\sigma$ to describe motion within a quasi-closure. In Chapter 5, $\sigma$ is expanded into three contributions — driving, dissipation, and barrier — and a single evolution equation for the closure-degree field $C(x,\tau)$ is obtained as the unified VED×IFGT equation. This equation is built from the foundational VED axiom "*there is difference*" together with the IFGT-layer effective tendency that difference forms partial closure.
+The theory introduces the information density $I$, the information flow $J$, the information potential $\Phi$, the informational time $\tau$, and the generation term $\sigma$ to describe motion within a quasi-closure. In Chapter 5, $\sigma$ is expanded into three contributions — driving, dissipation, and barrier — and a single IFGT evolution equation for the closure-degree field $C(x,\tau)$ is presented as a proposed VED×IFGT correspondence. The cross-theory maps remain OPEN. This equation is built from the foundational VED axiom "*there is difference*" together with the IFGT-layer effective tendency that difference forms partial closure.
 
-Within this framework, information appears not as a static object of description, but as a dynamic process that participates in structural formation through the persistence of difference and the constraint of flow. Physical structure and informational structure are not separated entities; they are understood as being generated cyclically through mutual influence.
+Within this framework, information is modeled as a dynamic process involved in
+structural formation through persistent difference and constrained flow. A
+cyclic relation to physical structure is proposed; cross-theory physical
+identity is not established.
 
 This paper has not addressed the concrete implementations in biological or computational systems, but the structure described by IFGT is suggested to appear prominently in such systems. The theory aims at a general description of structure that does not depend on any particular domain.
 

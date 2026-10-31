@@ -1,11 +1,13 @@
 # 4. Core Equations
 
+> **作業版scope:** \(I,J\) はmodel/formal quantitiesであり、独立に測定されたbiological observable / fluxではない。\(\sigma\) のgene-source readingと\(\Phi\) のrestoring readingも提案的解釈で、operational mapまたはdemonstrated biological mechanismを与えない。
+
 本節では、本論文の基礎となる最小方程式系を導入する。
 
 ここで提示する式は、特定の生物系に依存しない
 一般的な記述形式であり、
 
-> 状態の変化・流れ・安定構造
+> 状態の変化・流れ・候補となる持続構造
 
 を統一的に扱うことを目的とする。
 
@@ -14,6 +16,10 @@
 ## 4.1 基本変数
 
 本論文では、以下の場を基本変数とする。
+
+> **作業版注記:** 本節の \(I,J,\sigma,\rho,t,\tau\) は Bio-IFGT のsource-local quantitiesである。同じglyphを持つ VED / IFGT の量やfinite toy codeの配列とのidentityを意味しない。canonical build authorityは `main.tex` / `main_ja.tex` である。
+>
+> 形式上、\(I,J\) はcontinuum field declaration、continuity equationはbalance relation、flow / potential expressionsはchosen \(\Phi[I]\) と微分可能な空間表現に依存するconstitutive / effective relationである。summary equation setはfinite toy simulationのline-by-line algorithmではない。
 
 情報密度：
 \[
@@ -145,18 +151,18 @@ F = -\nabla \Phi
 
 ## 4.7 安定構造
 
-このダイナミクスのもとで、
+本論文の条件付き用語では、
 
-- 状態が特定の領域に収束し
-- 外乱に対して維持される
+- 状態が特定の領域に留まり
+- 指定された種類の外乱後にも戻る傾向を持つ
 
-とき、その領域は安定構造となる。
+とき、その領域を安定構造と呼ぶ。
 
 これが、後に扱う
 
 > アトラクタ
 
-に対応する。
+として解釈しうる。ただし、式だけから具体系での存在、不変basin、漸近収束、一般的な双方向returnが確立されるわけではない。
 
 ---
 
@@ -186,6 +192,6 @@ F = -\nabla \Phi
 
 - 状態の変化
 - 流れの形成
-- 安定構造の出現
+- 候補となる持続構造の記述
 
-が統一的に記述される。
+が統一的に記述されるが、この式系自体は安定性を証明しない。

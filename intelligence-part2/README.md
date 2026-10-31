@@ -18,7 +18,9 @@ Within the broader tree:
 - IFGT supplies the field vocabulary of density, flow, potential, and projection.
 - Consciousness treats intra-individual temporal non-closure.
 - Intelligence Part I treats intelligence as a dynamical phenomenon with local horizon-form.
-- Intelligence Part II treats inference and stopping as non-closed structures that require externalized or emergent stopping layers.
+- Intelligence Part II examines externalized or emergent stopping-layer roles
+  as scoped proposals for non-closed inference. Their formation, necessity,
+  and stopping effects remain open; other stopping routes are not excluded.
 
 ## Build
 

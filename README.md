@@ -349,7 +349,6 @@ given to the author. See [LICENSE](LICENSE).
 The repository is presented as an evolving research framework, not as a claim of
 final closure. A short contribution note is included here, and a fuller version
 is available in [Author Position](docs/author_position.md).
-
 ## Information / Individual UI figure series
 
 Four complementary questions about concept boundaries, attribution conditions, causal generation and individual boundaries. This generative/information-concept audit series can connect to VED but is independently readable; it is not presented as identical to VED's main theory. Reading order is not a developmental or evolutionary ladder.

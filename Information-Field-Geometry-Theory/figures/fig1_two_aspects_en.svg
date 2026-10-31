@@ -23,12 +23,15 @@
   </defs>
   
   <rect width="960" height="460" fill="#fafafa"/>
-  <text x="480.0" y="35" text-anchor="middle" class="title">Fig. 1. Two aspects of the same generative process</text>
+  <text x="480.0" y="35" text-anchor="middle" class="title">Fig. 1. Proposed correspondence between source-local descriptions</text>
   <rect x="95" y="85" width="625" height="195" class="ifgt-band" rx="8"/>
   <rect x="720" y="85" width="145" height="195" class="ved-band" rx="8"/>
   <line x1="217.0" y1="140" x2="287.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
   <line x1="427.0" y1="140" x2="487.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
   <line x1="627.0" y1="140" x2="717.0" y2="140" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="253" y="108" text-anchor="middle" font-size="11" fill="#444">represented gradient</text>
+  <text x="457" y="108" text-anchor="middle" font-size="11" fill="#444">effective flow</text>
+  <text x="672" y="108" text-anchor="middle" font-size="11" fill="#444">enclosure candidate</text>
   <rect x="85.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
   <text x="150" y="145" class="node-text">difference</text>
   <rect x="295.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
@@ -37,17 +40,18 @@
   <text x="560" y="145" class="node-text">flow</text>
   <rect x="725.0" y="117.0" width="130" height="46" class="node-box" rx="8"/>
   <text x="790" y="145" class="node-text">closure</text>
-  <text x="407.5" y="250" class="region-label">IFGT domain</text>
+  <text x="407.5" y="250" class="region-label">IFGT-local description</text>
   <text x="407.5" y="276" class="region-sub">(quasi-closure / unclosed persistence)</text>
-  <text x="792.5" y="250" class="region-label">VED domain</text>
-  <text x="792.5" y="276" class="region-sub">(closure)</text>
+  <text x="792.5" y="250" class="region-label">VED comparison</text>
+  <text x="792.5" y="276" class="region-sub">(candidate closure)</text>
   <line x1="95" y1="320" x2="865" y2="320" stroke="#333" stroke-width="1.2" marker-end="url(#caxisarrow)"/>
   <text x="85" y="325" class="c-axis-label" text-anchor="end">C ≈ 0</text>
   <text x="881" y="325" class="c-axis-label" text-anchor="start">C → 1</text>
-  <text x="480.0" y="340" class="c-axis-label" text-anchor="middle"><tspan font-style="italic">C</tspan></text>
+  <text x="480.0" y="340" class="c-axis-label" text-anchor="middle"><tspan font-style="italic">C</tspan> — IFGT-local closure degree; not the Vol.1 causal-log matrix</text>
   <line x1="720" y1="315" x2="720" y2="325" stroke="#666" stroke-width="1.2"/>
   <text x="150" y="368" class="i-label">↑ <tspan font-style="italic">I high</tspan></text>
   <text x="460.0" y="368" class="i-label"><tspan font-style="italic">I decreasing</tspan></text>
   <text x="790" y="368" class="i-label">↓ <tspan font-style="italic">I low</tspan></text>
-  <text x="480.0" y="435" class="note">IFGT describes the unclosed aspect throughout the process of approaching closure.</text>
+  <text x="480.0" y="435" class="note">Matrix-to-field identity and cross-theory translation remain OPEN.</text>
+  <text x="480" y="204" class="note">Schematic reading sequence; arrows are not one physical generation mechanism.</text>
 </svg>

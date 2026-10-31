@@ -2,9 +2,13 @@
 
 This section maps the intuitive picture onto formal quantities. The goal is to make the correspondence between intuition and equations explicit, not to derive a complete model for any particular organism.
 
+Within this continuum representation, the field expressions below declare states and domains; the potential and flow formulas are constitutive or effective relations; and the internal-time formula is an accumulation definition relative to \(t\). These roles do not make the same quantities independently integrated variables of the finite toy code.
+
 \subsection{State Description}
 
 A biological system is represented as a spatially and temporally varying state. For position \(\mathbf{r} \in \mathbb{R}^3\) and time \(t \in \mathbb{R}\), we consider coarse-grained fields rather than all microscopic molecular details.
+
+The notation in this section is source-local to the Bio-IFGT continuum description. In particular, \(\I\) and \(\J\) are not identified by their glyphs with the general IFGT field, the discrete VED current \(J_{ij}\), or the finite toy-model arrays. The toy simulation does not directly integrate independent \(\J\) or \(\PhiI\) arrays.
 
 \subsection{Information Density}
 
@@ -12,7 +16,7 @@ The bias or constraint present in a local state is represented by the informatio
 \begin{equation}
   \I(\mathbf{r},t).
 \end{equation}
-Here, information does not mean semantic content. It denotes the degree of local structure, constraint, differentiation, or interdependence.
+Here, information does not mean semantic content. Within this representation it denotes the degree of local structure, constraint, differentiation, or interdependence. This is a source-local model definition and proposed biological descriptor, not an operationally calibrated biological observable.
 
 \subsection{Information Flow}
 
@@ -20,7 +24,7 @@ The direction and rate of state update are represented by the information flow
 \begin{equation}
   \J(\mathbf{r},t).
 \end{equation}
-The flow combines contributions from reactions, diffusion, transport, and interactions. It describes how the coarse-grained state is updated.
+The flow is used as a proposed aggregate description of contributions from reactions, diffusion, transport, and interactions. It describes how the coarse-grained state is updated; no event-to-current aggregation or measured-flux map is supplied here.
 
 \subsection{Induced Potential}
 
@@ -28,11 +32,12 @@ When information density is spatially biased, state change becomes asymmetric. T
 \begin{equation}
   \PhiI = \PhiI[\I].
 \end{equation}
-This represents an effective potential induced by the distribution of \(\I\).
+This represents an effective potential induced by the distribution of \(\I\). It is not identified here with a measured biochemical potential or a demonstrated molecular restoring mechanism.
 The corresponding gradient-driven bias is written as
 \begin{equation}
   \mathbf{F} = -\nabla \PhiI.
 \end{equation}
+Here the bold vector \(\mathbf{F}\) is distinct from the scalar response function \(F_k\) used for threshold conditions and the state-space evolution field \(F(x;\theta)\).
 
 \subsection{Relation to Flow}
 
@@ -48,7 +53,7 @@ The equations are written using an external time parameter \(t\). This is the ti
 \begin{equation}
   \frac{\dd \tau}{\dd t} = \rho(\I,\J),
 \end{equation}
-where \(\rho\) is a state-dependent progression rate. In this paper, equations of motion are written in \(t\), while \(\tau\) is used interpretively.
+where \(\rho\) is a state-dependent progression rate. This Bio-local progression functional is not the VED node-density quantity or an upstream continuum density. In this paper, equations of motion are written in \(t\), while \(\tau\) is used interpretively. Neither variable is identified with the finite simulation loop step or its \texttt{DT}; no map to VED or IFGT time variables is supplied here.
 
 \subsection{Summary}
 
@@ -58,4 +63,4 @@ The mapping is
   \text{state update} &\mapsto \J,\\
   \text{asymmetry in update} &\mapsto \PhiI.
 \end{align}
-With these quantities, the intuitive picture becomes a continuous-field description.
+With these quantities, the intuitive picture becomes a continuous-field description. The mapping is formal within the stated representation; operational biological identification and cross-scale translation remain separate open tasks.

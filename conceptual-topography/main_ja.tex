@@ -1,0 +1,132 @@
+% ============================================================
+%  Conceptual Topography
+%  A Field-Theoretic Account of Conceptual Landscapes
+%
+%  Author : Yuhki Endoh (Independent Researcher)
+%  Repo   : conceptual-topography/
+%  Series : VED × IFGT Application Layer 1
+%  Date   : 2026
+% ============================================================
+
+\documentclass[11pt, a4paper]{ltjsarticle}
+
+% ---- packages ----
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{cleveref}
+% LuaTeX-ja handles Japanese spacing; avoid incompatible microtype font-size presets.
+\usepackage{natbib}
+\renewcommand{\abstractname}{要旨}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\figurename}{図}
+
+\geometry{
+  top=25mm, bottom=25mm,
+  left=25mm, right=25mm
+}
+
+% ---- fonts ----
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+
+% ---- colors ----
+\definecolor{vedblue}{RGB}{30,100,180}
+\definecolor{ifgtorange}{RGB}{180,80,20}
+\definecolor{clgreen}{RGB}{40,140,80}
+
+% ---- theorem environments ----
+\newtheorem{definition}{定義}[section]
+\newtheorem{proposition}{命題}[section]
+\newtheorem{remark}{注意}[section]
+
+% ---- notation macros (Master Table v2.1) ----
+\newcommand{\JI}{J_{\!I}}
+\newcommand{\JC}{J_{\!C}}
+\newcommand{\Cmax}{C_{\max}}
+\newcommand{\Phistar}{\Phi^{*}}
+\newcommand{\seddto}{\xrightarrow{\;\mathrm{sed.}\;}}
+
+% ---- hyperref setup ----
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = vedblue,
+  citecolor  = clgreen,
+  urlcolor   = ifgtorange,
+  pdftitle   = {Conceptual Topography 日本語版},
+  pdfauthor  = {Yuhki Endoh},
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ---- title ----
+\title{%
+  \textbf{Conceptual Topography}\\[6pt]
+  {\large 概念地形の場理論的記述}\\[4pt]
+  {\normalsize VED $\times$ IFGT 応用層1}
+}
+\author{%
+  Yuhki Endoh\\
+  {\small 独立研究者}
+}
+\date{2026}
+\maketitle
+
+\begin{quote}
+\small
+本日本語版は現行canonical EN sourceに対応する翻訳版である。数式・主張範囲・未解決境界は英語版に従う。既存の日本語working draftは翻訳表現の参照資料であり、本版の内容上のauthorityではない。
+\end{quote}
+
+% ---- scope declaration (Master Table v2.1) ----
+\begin{quote}
+\small\itshape
+本論文は、\cite{VED_vol1,VED_vol2,VED_vol3,VED_vol4,IFGT}に記述されたVED$\times$IFGT枠組みを形式的語彙の出典として用いる。
+その記法はMaster Variable Table v2.1に帰属されていたが、その帰属の根拠となる正確な成果物と版は未解決である。
+本論文は$C$、$I$、$\Phi$、$\JI$、$\JC$、$\sigma$、$\tau$を再定義しない。
+上流理論から型を明示して導出したとは主張せず、この語彙の認知的使用を提案する。
+主要な定義$\Phi = K*I$を全体を通じて用い、線形近似$\Phi \approx -\alpha C + \Phi_0$は明示した箇所でのみ使用する。
+これらの量についての意味的、心理的、志向的解釈は、明示しない限り仮定しない。
+厳密な不等式$C < \Cmax$はモデル制約として保持する。
+概念領域での$I$、$C$、$\Phi$の使用は、認知的観測窓内での投影的または粗視化された解釈の提案である。
+共通の記法は共通量や型を明示した翻訳を確立しない。
+力の関係の範囲、正値性の保存、トークン結合のシグネチャ、長時間極限を含む形式的条件は、指定されていない箇所では未解決のままである。
+
+以下の定義は局所的なモデル語彙を定める。
+意味的・認知的な読みは解釈であり、現象的な読みは対応の提案であって、主観的経験の説明ではない。
+本論文は操作的な対応写像も、モデルに結びついた経験的検証も与えない。
+既存の図とキャプションは概念的な模式図として位置づけ、測定された軌道、実行されたダイナミクス、提案する解釈の証拠とはしない。
+\end{quote}
+
+\vspace{4pt}
+
+% ---- sections ----
+\input{sections_ja/abstract_ja}
+\newpage
+\tableofcontents
+\newpage
+
+\input{sections_ja/introduction_ja}
+\input{sections_ja/intuitive_picture_ja}
+\input{sections_ja/formal_mapping_ja}
+\input{sections_ja/core_equations_ja}
+\input{sections_ja/structural_interpretation_ja}
+\input{sections_ja/dynamics_ja}
+\input{sections_ja/multiscale_ja}
+\input{sections_ja/pathologies_ja}
+\input{sections_ja/relation_to_note_ja}
+\input{sections_ja/discussion_ja}
+\input{sections_ja/conclusion_ja}
+
+% ---- bibliography ----
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

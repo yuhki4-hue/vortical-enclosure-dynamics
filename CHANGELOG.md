@@ -179,6 +179,40 @@ All notable changes to this repository will be documented in this file.
 - Flattened Intelligence Part II figure PDFs against a white background for more
   stable rendering in GitHub's PDF preview.
 
+## v2.5.0 — 2026-10-31 — Generative audit integration
+
+- Integrated the VED equation and generation audit across Vols. 1–4, the
+  navigation layer, the AI Spine, IFGT, Bio-IFGT, Conceptual Topography,
+  consciousness, and Intelligence Parts I–II. The revisions distinguish
+  definitions, model-level constructions, effective relations, open bridges,
+  and proposed physical interpretations. They do not establish a new
+  generative equation or a complete derivation from difference.
+- Recorded the VED equation-audit closure and implementation history while
+  keeping all eight audited representation bridges open. Preserved the
+  branch-specific claim and evidence ceilings rather than treating structural
+  comparisons as demonstrated cross-domain identities.
+- Added the Intelligence generation-boundary and possibility-branch audits.
+  For flow progression, trace registration, log rereference, role assessment,
+  and stopping effects, these compare enabling and failing constructions,
+  alternative routes, and prospective distinguishing observations. Constructed
+  examples are not empirical generation proofs; prior author decision records
+  remain unchanged.
+- Reviewed AI Spine 0.4.0 against the revised core and intelligence branch.
+  Its `confirmed` status now explicitly means a source-local documented role,
+  and its navigation rank does not imply application-layer generation or
+  necessary LR, LE, or stopping effects. Regenerated its outputs and corrected
+  stale reader guidance without expanding Layer 0–1 into an interpretation gate.
+- Rebuilt the 15 principal English and Japanese manuscript PDFs from the
+  audited TeX and corresponding figure assets, and synchronized the VED
+  Vols. 1–4 and IFGT arXiv copies. Reflowed ten long boxed statements in
+  VED Vol. 2 without changing their wording or mathematical content.
+- Repaired publication links to files outside this release by labeling them
+  as unbundled historical references, and normalized machine-local paths in
+  the public audit copies while retaining the original records locally.
+- Kept the separate information-map and Four-Bridge publication work out of
+  this audit update. The Intelligence FIG009 publication/Q1 records and assets
+  remain outside this release; their HOLD status is not a publication approval.
+
 ## 2026-05-11 — Vol.4 Reorganization and Framework Synchronization
 
 ### Added

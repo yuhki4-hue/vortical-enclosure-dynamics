@@ -5,29 +5,32 @@
 \section{Formal Mapping}
 \label{sec:formal}
 
-This section establishes the correspondence between VED$\times$IFGT
-variables and conceptual phenomena.
-All variables follow the Master Variable Table v2.1.
+This section records proposed correspondences between VED$\times$IFGT
+variables and conceptual phenomena. The table separates formal roles from
+model-local interpretations; it does not supply operational mappings.
+The attribution to the Master Variable Table v2.1 remains subject to the
+source-provenance limitation stated at the beginning of the paper.
 
 \subsection{The Background Field}
 
-The information density field $I(x,\tau) = f(1-C(x,\tau))$ provides
-the continuous substrate on which conceptual structure forms.
-In this paper, $I$ is not a new cognitive primitive but a projected
-realization of the IFGT information-density variable in a cognitive
-observation window.
-In the cognitive domain, $I$ represents the density of unresolved
-informational tension at position $x$ and time $\tau$: regions where
-difference chains persist as quasi-closures, neither fully stabilized
-nor fully dissipated.
+The information density field $I(x,\tau) = f(1-C(x,\tau))$ is used as
+the continuous field in the model of conceptual structure.
+In this paper, $I$ is not a new cognitive primitive but a proposed
+cognitive-window interpretation of the IFGT information-density vocabulary,
+not an established typed identity.
+In this local interpretation, $I$ represents the density of unresolved
+informational tension at position $x$ and evolution parameter $\tau$:
+regions described as quasi-closed, neither fully stabilized nor fully
+dissipated.
 
-High $I$ corresponds to conceptually active regions; low $I$ corresponds
-to regions where structure has largely closed.
-The strict positivity $I(x,\tau)>0$ excludes complete closure as an
-ordinary state of the conceptual landscape.
-It does not by itself guarantee a nonzero local gradient at every point;
-gradients arise from residual asymmetry, nonuniform history, and boundary
-structure within the generated field.
+High $I$ is proposed to correspond to conceptually active regions; low $I$
+to regions where structure has largely closed. This is not a calibrated
+activity measure.
+Within this account, the strict positivity $I(x,\tau)>0$ is interpreted
+as excluding complete closure as an ordinary conceptual state.
+It does not by itself guarantee a nonzero local gradient or flow.
+The role of residual asymmetry, nonuniform history, and boundary structure
+in gradient formation remains a model-level hypothesis.
 
 The information potential
 \begin{equation}
@@ -35,9 +38,11 @@ The information potential
   \label{eq:Phi_primary}
 \end{equation}
 is the primary geometric object.
-It encodes the accumulated bias produced by prior information flow,
-expressed as a scalar field whose gradient determines the direction
-of least resistance for subsequent trajectories.
+Its landscape reading is a model-level interpretation of accumulated bias.
+The potential gradient contributes an effective directional bias; it does
+not alone determine a complete trajectory, since the flow relation also
+contains a diffusion term. The field-to-trajectory-to-thought correspondence
+is not supplied as a typed or operational map.
 
 \subsection{Variable Correspondence Table}
 
@@ -56,14 +61,14 @@ $I(x,\tau) = f(1-C)$ &
 Density of unresolved conceptual tension &
 Central field; $I > 0$ always \\
 $\Phi = K*I$ &
-The conceptual landscape itself &
+Model-local conceptual landscape &
 Potential geometry \\
 $\nabla\Phi$ &
-Direction of least cognitive resistance &
+Proposed bias toward lower cognitive resistance &
 Constraint force on $\JI$ \\
 $\JI = -D\nabla I + \mu F_I$ &
-Thought as flow &
-Trajectory field \\
+Proposed representation of thought &
+Formal flow field \\
 $\sigma = \sigma_d - \sigma_p - \sigma_b$ &
 Rate of landscape deformation &
 Source term \\
@@ -74,13 +79,13 @@ $\delta I$ &
 Unresolved conceptual residue &
 Trace that constitutes $I$ \\
 $\tau$ &
-Experiential time of conceptual development &
-Irreversible ordering \\
+Proposed experiential-time correspondence &
+Formal evolution / ordering parameter \\
 $\ell_i = \mathcal{Q}[I,\Phi,C;\cdot]$ &
 Reusable linguistic token (natural language word, symbol, emblem,
 gesture, diagram, formula, or any discrete unit capable of acting on the
 field as a localized perturbation) &
-Discrete operator on $\Phi$ \\
+Proposed action on $\Phi$; signature unresolved \\
 $\Phistar$ &
 Mature, sedimented conceptual landscape &
 Long-time attractor of $\Phi$ \\
@@ -91,27 +96,33 @@ Boundary representation, not an ordinary state \\
 \end{tabular}
 \end{center}
 
+The temporal parameter orders formal evolution; its experiential reading
+is a separate proposal, not a clock calibration. Likewise, the sedimented
+landscape and long-time-attractor labels retain the unresolved limit and
+history-dependent interpretation discussed in Section~\ref{sec:core}.
+
 \begin{remark}[Notational remark]
 The operator $\mathcal{Q}$ is called a quantization operator because its
 action --- extracting discrete, re-addressable units from a continuous
-field configuration --- is structurally isomorphic to quantization in
-the physical sense: mapping continuous variables to a discrete set of
-stable values.
+field configuration --- is compared structurally with the passage from
+continuous variables to discrete values. This is an informal analogy,
+not a mathematical isomorphism or a shared physical operation.
 The term ``quantum'' is not used as a theoretical claim within CT, but
 the analogy is preserved in the name of this operator.
 \end{remark}
 
 \subsection{What the Mapping Does Not Claim}
 
-The mapping established above does not introduce semantic content,
+The proposed correspondences above do not introduce semantic content,
 intentionality, or psychological states into the formalism.
 In particular:
 \begin{itemize}
   \item $\Phi$ is not a meaning field. It is a dynamical constraint
-        geometry that determines which transitions are cheap and which
-        are costly.
-  \item $\JI$ is not thought content. It is a flow direction; the
-        content that appears in experience is a downstream phenomenon.
+        geometry used to describe relative transition costs within the model.
+  \item $\JI$ is not thought content. It is the formal flow field; a trajectory
+        description and its interpretation as thought are distinct uses.
+        Content appearing in experience is treated as a downstream topic,
+        not a consequence established by identifying these uses.
   \item $\ell_i$ is not a meaning unit. It is a discrete re-addressable
         unit that couples locally to $\nabla\Phi$.
 \end{itemize}

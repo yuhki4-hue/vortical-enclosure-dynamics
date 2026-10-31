@@ -1,18 +1,19 @@
 {
   "$schema": "./spine.schema.json",
-  "spine_version": "0.2.0",
-  "purpose": "AI-readable calibration layer for VED/IFGT repository entry. This file calibrates Layer 0-1 only. It fixes starting coordinates and term types; it does not interpret, score, or route.",
+  "spine_version": "0.4.0",
+  "purpose": "AI-readable calibration layer for VED/IFGT repository entry. This file calibrates Layer 0-1 only. It fixes starting coordinates, term types, navigation semantics, and audited relation-role metadata; it does not prove generation, interpret physical ontology, score, or route.",
   "layer_policy": {
     "machine_validated": [0, 1],
     "not_enforced": [2],
     "absent": [3],
     "notes": [
       "Layer 2 interpretive framing belongs to docs/navigation and is referenced as advisory_links only; it is never existence-checked or enforced by validate.py.",
-      "Layer 1 now carries term kind and derivation_role as calibration metadata, plus non-generative boundary relations. These constrain type, not interpretation.",
+      "Layer 1 carries term kind and a legacy-compatible derivation_role field, plus sequence_semantics, relation-role metadata, and non-generative proposed correspondences. Rank is a presentation index, not proof order, formal dependency, or physical generation.",
       "Layer 3 evaluation, scoring, summary weighting, and final interpretation are absent from docs/ai_spine."
     ]
   },
   "advisory_links": [
+    { "path": "docs/navigation/generative_sequence.md", "role": "canonical human-readable relation-role table (Layer 2, advisory)" },
     { "path": "docs/navigation/name_misreadings.md", "role": "entry-layer terminology guard (Layer 2, advisory)" },
     { "path": "docs/navigation/common_misreadings.md", "role": "common interpretation guard (Layer 2, advisory)" },
     { "path": "docs/navigation/conceptual_neighbors.md", "role": "neighbor-theory routing (Layer 2, advisory)" }
@@ -33,24 +34,58 @@
     ]
   },
   "layer1": {
+    "sequence_semantics": {
+      "legacy_field_name": "canonical_derivation_order",
+      "interpreted_as": "navigation_order",
+      "uniform_arrow_semantics": false,
+      "status_semantics": "source_local_documentary_role_only",
+      "application_inference": "not_implied",
+      "canonical_role_table": "docs/navigation/generative_sequence.md",
+      "not_equivalent_to": ["proof_order", "formal_dependency", "physical_generation"],
+      "open_bridge_candidates": ["RC-005", "RC-006", "RC-007", "RC-008", "RC-009", "RC-010", "RC-040", "RC-041"]
+    },
     "canonical_derivation_order": [
       { "rank": 0, "id": "difference",  "label": "Difference",          "kind": "axiom",             "derivation_role": "origin",                  "status": "confirmed" },
-      { "rank": 1, "id": "c_ij",        "label": "Closure degree C_ij", "kind": "variable",          "derivation_role": "first_formal_carrier",    "status": "confirmed" },
-      { "rank": 2, "id": "gradient",    "label": "Gradient",            "kind": "relation",          "derivation_role": "generated_stage",         "status": "confirmed" },
-      { "rank": 3, "id": "flow",        "label": "Flow",                "kind": "process",           "derivation_role": "generated_stage",         "status": "confirmed" },
-      { "rank": 4, "id": "vortex",      "label": "Vortex",              "kind": "recursive_process", "derivation_role": "generated_stage",         "status": "confirmed" },
-      { "rank": 5, "id": "enclosure",   "label": "Enclosure",           "kind": "regime",            "derivation_role": "effective_local_closure", "status": "confirmed" },
-      { "rank": 6, "id": "non_closure", "label": "Non-closure",         "kind": "boundary_condition","derivation_role": "constitutive_limit",      "status": "confirmed" }
+      { "rank": 1, "id": "c_ij",        "label": "Navigation closure degree C_ij", "kind": "variable", "derivation_role": "source_local_first_carrier", "status": "confirmed" },
+      { "rank": 2, "id": "gradient",    "label": "Represented gradient", "kind": "relation",          "derivation_role": "represented_field_stage", "status": "confirmed" },
+      { "rank": 3, "id": "flow",        "label": "Effective flow",       "kind": "process",           "derivation_role": "effective_relation_stage", "status": "proposed" },
+      { "rank": 4, "id": "vortex",      "label": "Defined vorticity",    "kind": "recursive_process", "derivation_role": "derived_construction_stage", "status": "confirmed" },
+      { "rank": 5, "id": "enclosure",   "label": "Candidate enclosure",  "kind": "regime",            "derivation_role": "candidate_mechanism_stage", "status": "proposed" },
+      { "rank": 6, "id": "non_closure", "label": "Non-closure",          "kind": "boundary_condition","derivation_role": "constitutive_limit", "status": "confirmed" }
     ],
     "boundary_terms": [
-      { "id": "causal_log",        "label": "Causal log (accumulated causal trace)", "kind": "structure", "status": "confirmed" },
-      { "id": "information_field", "label": "Information field (IFGT)",               "kind": "field",     "status": "confirmed" }
+      { "id": "causal_log",        "label": "Vol.1 causal-log matrix (source-specific C_ij)", "kind": "structure", "status": "confirmed" },
+      { "id": "information_field", "label": "Information field (IFGT related branch)",       "kind": "field",     "status": "confirmed" }
     ],
     "validated_relations": [
-      { "from": "c_ij", "to": "causal_log",        "relation": "accumulation_structure",  "generative": false, "status": "confirmed",
-        "note": "C_ij is the scalar closure-degree variable; the causal log is the accumulated trace of it. Off-backbone: it does not occupy a rank." },
-      { "from": "c_ij", "to": "information_field", "relation": "structural_extension_of", "generative": false, "status": "confirmed",
-        "note": "IFGT shares C_ij as basis and stretches field/transport structure on top. It is NOT the next generative stage of VED core." }
+      { "from": "c_ij", "to": "causal_log", "relation": "proposed_correspondence", "generative": false, "status": "proposed",
+        "note": "Navigation closure-degree C_ij and Vol.1 causal-log C_ij are source-specific objects. Shared lettering supplies no identity or accumulation map." },
+      { "from": "c_ij", "to": "information_field", "relation": "proposed_correspondence", "generative": false, "status": "proposed",
+        "note": "The VED-to-IFGT relation is a proposed formal correspondence. The matrix-to-field, temporal, and source-term bridges remain OPEN." }
+    ],
+    "relation_role_inventory": [
+      { "id": "N01", "from": "difference", "to": "navigation closure-degree C_ij", "role_classes": ["source_local_navigation"], "bridge_status": "not_applicable", "physical_status": "not_established", "note": "First formal position in the navigation account; not an identity with the Vol.1 causal log." },
+      { "id": "N02", "from": "represented difference field", "to": "gradient", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Represented-field construction in a domain supporting the gradient operator." },
+      { "id": "N03", "from": "gradient", "to": "effective flow", "role_classes": ["effective_relation"], "bridge_status": "not_applicable", "physical_status": "candidate", "note": "Effective proportional relation; universal necessity is not established." },
+      { "id": "N04", "from": "H_ij and rho_i", "to": "Vol.1 causal-log C_ij", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Constitutive self-consistency target, not an update or solution theorem." },
+      { "id": "N05", "from": "Vol.1 causal-log C_ij", "to": "rho_i", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Nodewise definition." },
+      { "id": "N06", "from": "rho_i", "to": "tau_i", "role_classes": ["formal_construction", "candidate_physical_interpretation"], "bridge_status": "not_applicable", "physical_status": "open", "note": "Accumulation definition relative to t; physical-clock interpretation remains OPEN." },
+      { "id": "N07", "from": "Vol.1 causal-log C_ij", "to": "S_ij and A_ij", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Algebraic decomposition." },
+      { "id": "N08", "from": "C_ij and C_ji", "to": "J_ij", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Discrete flow definition." },
+      { "id": "N09", "from": "J_ij", "to": "continuum J(x)", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "No averaging, embedding, orientation, scaling, or continuum-limit map is supplied." },
+      { "id": "N10", "from": "continuum J(x)", "to": "omega", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Continuum curl definition." },
+      { "id": "N11", "from": "omega", "to": "scalar L", "role_classes": ["effective_relation", "candidate_physical_interpretation"], "bridge_status": "not_applicable", "physical_status": "candidate", "note": "Effective proportional relation; persistent enclosure is not established." },
+      { "id": "N12", "from": "S_ij", "to": "network distance d_ij", "role_classes": ["formal_construction"], "bridge_status": "not_applicable", "physical_status": "not_implied", "note": "Weighted-network path construction under stated assumptions." },
+      { "id": "N13", "from": "network distance d_ij", "to": "effective metric g_mn", "role_classes": ["open_bridge", "candidate_physical_interpretation"], "bridge_status": "partial_open", "physical_status": "open", "note": "Coarse endpoint only; reconstruction, convergence, uniqueness, and physical-space interpretation remain OPEN." },
+      { "id": "N14", "from": "scalar L and edge L_ab", "to": "tensor L_mn", "role_classes": ["open_bridge"], "bridge_status": "partial_open", "physical_status": "open", "note": "No tensorization or carrier-identity map is supplied." },
+      { "id": "N15", "from": "L_ab and network path cost", "to": "gravity-like distance bias", "role_classes": ["formal_construction", "candidate_physical_interpretation"], "bridge_status": "not_applicable", "physical_status": "candidate", "note": "Formal path modification plus candidate gravity-like interpretation." },
+      { "id": "N16", "from": "closure quantity or tensor target", "to": "weak-field and metric fixed-point relations", "role_classes": ["formal_construction", "effective_relation", "open_bridge", "candidate_physical_interpretation"], "bridge_status": "partial_open", "physical_status": "open", "note": "Formal target and structural analogy; exact Einstein recovery is not established." },
+      { "id": "N17", "from": "local minimum of E(A)", "to": "particle-like and mass-like candidates", "role_classes": ["formal_construction", "effective_relation", "candidate_physical_interpretation"], "bridge_status": "not_applicable", "physical_status": "open", "note": "Model definition and phenomenological scaling; observed particle and mass identities remain OPEN." },
+      { "id": "N18", "from": "source-local C_ij", "to": "IFGT C(x,tau)", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "Proposed formal correspondence; no matrix-to-field identity or unification map." },
+      { "id": "N19", "from": "IFGT tau", "to": "tau_VED", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "Proposed temporal correspondence; embedding and isomorphism remain OPEN." },
+      { "id": "N20", "from": "VED sigma", "to": "IFGT sigma", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "Proposed source-term correspondence; translation and identity remain OPEN." },
+      { "id": "N21", "from": "rho_i", "to": "rho(x,t)", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "Interpolation, averaging, volume normalization, units, and identity of t are absent." },
+      { "id": "N22", "from": "dot rho_i", "to": "Vol.1 continuum sigma", "role_classes": ["open_bridge"], "bridge_status": "open", "physical_status": "open", "note": "Projection, averaging, and unit map are absent." }
     ]
   }
 }

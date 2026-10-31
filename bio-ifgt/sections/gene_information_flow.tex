@@ -9,12 +9,13 @@ A DNA sequence \(s\) is written as
   s \in \{A,T,G,C\}^{N}.
 \end{equation}
 The sequence has no intrinsic meaning or purpose in the present formalism. It constrains molecular possibilities, reaction propensities, and threshold conditions.
+Here \(N\) denotes sequence length; it is not the neural-commitment field \(N\) of the later toy simulation. Likewise the nucleotide letters are alphabet symbols, not the later state labels or toy fields that reuse a glyph.
 
-Thus DNA is treated as a parameter set
+Thus DNA is represented at this abstract model layer through a parameter set
 \begin{equation}
   \theta = \theta(s),
 \end{equation}
-which constrains system dynamics. It is not treated as a direct specification of a completed form.
+which constrains system dynamics. It is not treated as a direct specification of a completed form, and the displayed relation does not supply a concrete genotype-to-parameter implementation or parameter provenance.
 
 \subsection{Gene Events as State Changes}
 
@@ -22,7 +23,7 @@ Transcription, translation, binding, and modification are represented as local o
 \begin{equation}
   \I(\mathbf{r},t) \mapsto \I(\mathbf{r},t) + \Delta \I.
 \end{equation}
-Although these events are discrete, their aggregate effect can be represented as a continuous information flow \(\J(\mathbf{r},t)\). A gene network is therefore interpreted as a relational structure that generates information flow.
+Although these events are discrete, their aggregate effect may be modeled through a continuous information flow \(\J(\mathbf{r},t)\). This is a proposed aggregation and process interpretation: no explicit event-to-current map is supplied. A gene network may accordingly be read as a candidate source of such flow, rather than being identified with \(\J\).
 
 \subsection{Connection to the Continuity Equation}
 
@@ -30,7 +31,7 @@ In the continuity equation
 \begin{equation}
   \frac{\partial \I}{\partial t} + \nabla \cdot \J = \sigma,
 \end{equation}
-the source term \(\sigma\) represents information generation due to gene-related events. The flow \(\J\) represents the accumulated effect of such events across space and time.
+the source term \(\sigma\) is the formal source slot and may be given a gene-related production interpretation. The flow \(\J\) may similarly describe the aggregate effect of such events across space and time. Neither reading is an operational identity or a measured biological map in the present paper.
 
 \subsection{Bias and Induced Potential}
 
@@ -42,7 +43,7 @@ State change is then biased according to
 \begin{equation}
   \mathbf{F} = -\nabla \PhiI.
 \end{equation}
-This is not a new fundamental force. It describes the ordinary dynamical fact that stable states are more easily maintained and can draw nearby states into their basin.
+This is not a new fundamental force. Within a specified attractor-based model, it can represent an effective restoring bias toward a selected region. It is not identified with a measured biochemical potential or demonstrated molecular mechanism, and the existence of a stable basin or general return is not supplied by this formal relation alone.
 
 \subsection{If--Then Conditions as Thresholds}
 
@@ -50,20 +51,21 @@ The conditional effects associated with DNA are implemented as threshold conditi
 \begin{equation}
   F_k(\I,\J,\mathbf{r},t;\theta) > \theta_k.
 \end{equation}
-Here \(\theta_k\) is a parameter induced by the DNA-dependent parameter set \(\theta\). The condition is not a symbolic rule in isolation. It is a threshold in the dynamics.
+Here \(\theta_k\) is a parameter associated, at the abstract model layer, with the DNA-conditioned parameter set \(\theta\). The condition is not a symbolic rule in isolation. It is a threshold in the dynamics; a concrete sequence-to-threshold map is not implemented here.
+The response function \(F_k\) is not the vector bias \(\mathbf{F}\) and is not the state-space evolution field \(F(x;\theta)\).
 
 \subsection{Interpretation of Form}
 
-The resulting picture is as follows. DNA supplies parameters. Information density and information flow are formed. Biases in \(\I\) induce \(\PhiI\). Flow is shaped by the induced potential. Thresholds branch the state. Stable configurations then appear as attractors. Cell fate and morphology are observed as such stable configurations.
+The resulting picture is as follows. DNA supplies parameters. Information density and information flow are formed. Biases in \(\I\) induce \(\PhiI\). Flow is shaped by the induced potential. Thresholds branch the state. Resulting configurations may then be read through an attractor-based interpretation. Their identification with observed cell fate or morphology is a separate biological correspondence, not a consequence established by this sequence alone.
 
-\subsection{Scale Invariance}
+\subsection{Proposed Cross-Scale Reuse}
 
-The same formal structure can be used at molecular, cellular, and tissue scales. The level of coarse-graining changes, but the variables \(\I\), \(\J\), \(\PhiI\), thresholds, and stable solutions retain the same roles.
+The same descriptive vocabulary may be reused, by proposal, at molecular, cellular, and tissue scales. The level of coarse-graining and the source-local objects change. No typed scale map, coarse-graining operator, preserved invariant, or theorem of role identity is supplied here; the cross-scale relation is a formal analogy rather than an established identity or universality result.
 
 \subsection{Summary}
 
-DNA is treated as a condition-setting parameter set. Biological structure appears as a stable solution formed by information density and information flow. This provides the basis for the treatment of development and morphogenesis in the next section.
+DNA is treated as a condition-setting parameter set. The framework uses information density and information flow to describe candidate persistent configurations; a biological structure reading is interpretive. This provides the basis for the treatment of development and morphogenesis in the next section.
 
 \subsection{Origin of the Parameter Set}
 
-At this descriptive layer, the parameter set \(\theta\) is not treated as a primitive. In IFGT terms, \(\theta\) may be read as a quasi-closure structure stabilized through prior dynamics of difference: a configuration retained by the persistence of certain closure patterns over others. DNA sequences are therefore interpreted here as historically stabilized constraint patterns that persisted because they supported sustained non-equilibrium dynamics. This does not derive the concrete origin of \(\theta\) for a given organism. It only states that \(\theta\) need not be placed outside the framework as an explanatory object.
+At this descriptive layer, the parameter set \(\theta\) need not be treated as a conceptual primitive. In IFGT terms, it may be read, by proposed analogy, as a quasi-closure structure retained through prior dynamics of difference. DNA sequences may accordingly be interpreted as historically stabilized constraint patterns. This reading supplies neither parameter provenance nor a concrete genotype-to-\(\theta\) mechanism for a given organism, and it is not a typed IFGT/Bio translation.

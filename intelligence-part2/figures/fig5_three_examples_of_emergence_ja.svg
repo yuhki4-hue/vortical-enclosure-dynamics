@@ -6,7 +6,7 @@
     Fig.5  VEDで定義される創発の三例
   </text>
   <text x="750" y="82" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">
-    創発は単なる複雑化ではない。非閉包が外部相互拘束の下でアトラクターを形成することである
+    三つの異なる領域をformal roleの提案的類比として比較する
   </text>
 
   <defs>
@@ -39,7 +39,7 @@
   <g>
     <rect x="390" y="112" width="720" height="54" rx="10" fill="#FFFFFF" stroke="#DDDDDD"/>
     <text x="750" y="135" font-size="13" fill="#555555" text-anchor="middle">
-      VEDでの用法: 下位層の運動 + 相互拘束 → 創発する上位層アトラクター
+      提案的reading: 下位層の運動 + 相互拘束 → 上位層アトラクター
     </text>
     <text x="750" y="155" font-size="13" fill="#1E8449" text-anchor="middle" font-weight="600">
       U = Φ(L, H<tspan font-size="0.72em" baseline-shift="-22%">ij</tspan>)
@@ -113,7 +113,7 @@
       U = Φ(L, H<tspan font-size="0.62em" baseline-shift="-22%">ij</tspan>)
     </text>
     <text x="750" y="770" font-size="12.5" fill="#555555" text-anchor="middle">
-      下位層の運動は消えず、上位層アトラクターとして安定化される
+      schematic comparisonであり、typed identityや共通mechanismの結果ではない
     </text>
   </g>
 
@@ -121,7 +121,7 @@
   <g>
     <rect x="325" y="842" width="850" height="36" rx="8" fill="#FFFFFF" stroke="#DDDDDD"/>
     <text x="750" y="865" font-size="12.5" fill="#555555" text-anchor="middle">
-      「複雑性が何か新しいものになる」ではなく、「非閉包 + 拘束が持続可能なアトラクターを作る」。
+      矢印はformal roleを比較するが、一領域を他領域から導出しない。
     </text>
   </g>
 

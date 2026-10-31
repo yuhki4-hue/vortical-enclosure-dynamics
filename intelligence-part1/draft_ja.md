@@ -1,5 +1,7 @@
 # Structural Constraints on Intelligence as a Dynamical Phenomenon
 
+> **Source status:** 本ファイルはworking manuscriptである。current distributed buildは`main_ja.tex`と`sections_ja/`をauthorityとし、Bio-IFGTを含む四層比較はそこでproposed structural comparisonへscope済みである。以下に残る旧「同一構造」表現は、common carrier、mechanism、identity、typed cross-domain translationを確立したという意味ではない。
+
 **Author:** Yuhki Endoh
 **Affiliation:** Independent Researcher
 **Series:** Intelligence Section, Part I

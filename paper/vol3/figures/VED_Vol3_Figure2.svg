@@ -25,13 +25,13 @@
   </g>
 
   <!-- Panel title -->
-  <text x="155" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Classical Phase</text>
+  <text x="155" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Classical-phase candidate</text>
   <text x="155" y="61" text-anchor="middle" font-size="10" fill="#777">Exterior&#x2002;(r &gt; r&#x209B;)</text>
 
   <!-- Properties -->
   <text x="155" y="288" text-anchor="middle" font-size="10.5" fill="#444" font-style="italic">&#x3C3; &#x2248; 0</text>
-  <text x="155" y="304" text-anchor="middle" font-size="10"   fill="#666">metric stable</text>
-  <text x="155" y="318" text-anchor="middle" font-size="10"   fill="#555">Einstein equation valid</text>
+  <text x="155" y="304" text-anchor="middle" font-size="10"   fill="#666">metric stability OPEN</text>
+  <text x="155" y="318" text-anchor="middle" font-size="10"   fill="#555">Einstein-like weak-field target</text>
 
   <!-- ═══════════════════════════════════════════════════
        ARROW 1→2
@@ -72,13 +72,13 @@
   <line x1="560" y1="40" x2="560" y2="312" stroke="#a06020" stroke-width="1.2" stroke-dasharray="5,3"/>
 
   <!-- Panel title -->
-  <text x="450" y="46" text-anchor="middle" font-size="12" fill="#7a4a10" font-weight="bold">Gravity Condensation Phase</text>
+  <text x="450" y="46" text-anchor="middle" font-size="12" fill="#7a4a10" font-weight="bold">Candidate Transition Region</text>
   <text x="450" y="61" text-anchor="middle" font-size="10" fill="#a06020">r &#x2192; r&#x209B;</text>
 
   <!-- Properties -->
   <text x="450" y="288" text-anchor="middle" font-size="10.5" fill="#a06020" font-style="italic">&#x3C3; rising</text>
   <text x="450" y="304" text-anchor="middle" font-size="10"   fill="#7a4a10">closure condensing</text>
-  <text x="450" y="318" text-anchor="middle" font-size="10"   fill="#7a4a10">path cost diverges</text>
+  <text x="450" y="318" text-anchor="middle" font-size="10"   fill="#7a4a10">divergent-cost interpretation</text>
 
   <!-- ═══════════════════════════════════════════════════
        ARROW 2→3
@@ -115,24 +115,24 @@
   <text x="745" y="170" text-anchor="middle" font-size="9" fill="#666" font-style="italic">&#x3C3; &gt; 0</text>
 
   <!-- Panel title -->
-  <text x="745" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Non-Equilibrium Phase</text>
+  <text x="745" y="46" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Interior-phase candidate</text>
   <text x="745" y="61" text-anchor="middle" font-size="10" fill="#777">Interior&#x2002;(r &lt; r&#x209B;)</text>
 
   <!-- Properties -->
   <text x="745" y="288" text-anchor="middle" font-size="10.5" fill="#555" font-style="italic">&#x3C3; &gt; 0</text>
-  <text x="745" y="304" text-anchor="middle" font-size="10"   fill="#666">generation active</text>
-  <text x="745" y="318" text-anchor="middle" font-size="10"   fill="#555">no singularity</text>
+  <text x="745" y="304" text-anchor="middle" font-size="10"   fill="#666">positive-source regime</text>
+  <text x="745" y="318" text-anchor="middle" font-size="10"   fill="#555">nonsingular interpretation OPEN</text>
 
   <!-- ═══════════════════════════════════════════════════
        BOTTOM NOTE — cosmology connection
        ═══════════════════════════════════════════════════ -->
-  <text x="745" y="336" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">same phase as early universe</text>
+  <text x="745" y="336" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">proposed early-universe analogy</text>
 
   <!-- ═══════════════════════════════════════════════════
        FIGURE LABEL
        ═══════════════════════════════════════════════════ -->
   <line x1="40" y1="348" x2="860" y2="348" stroke="#e0e0e0" stroke-width="0.7"/>
-  <text x="450" y="360" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Figure 2. Phase transition across the horizon.</text>
-  <text x="450" y="375" text-anchor="middle" font-size="10" fill="#888" font-style="italic">The classical closure phase (&#x3C3;&#x2248;0) becomes unstable near the horizon, leading to a non-equilibrium phase (&#x3C3;&gt;0) inside.</text>
+  <text x="450" y="360" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Figure 2. Proposed horizon phase picture; arrows indicate a candidate interpretation.</text>
+  <text x="450" y="375" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Stability, physical identification, and exact Einstein recovery remain OPEN.</text>
 
 </svg>

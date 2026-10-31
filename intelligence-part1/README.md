@@ -2,7 +2,7 @@
 
 This directory contains the LaTeX source for *Structural Constraints on Intelligence as a Dynamical Phenomenon*, the first paper in the intelligence layer of the VED / IFGT application series.
 
-The Japanese source is generated from the working manuscript `draft_ja.md` and organized into modular TeX sections under `sections/`, with `_ja` suffixes reserved for Japanese files.
+The Japanese working manuscript is retained in `draft_ja.md`; the current distributed build authority is `main_ja.tex` together with the modular files under `sections_ja/`. Cross-domain Bio-IFGT wording in the working manuscript is historical context, while the current TeX/PDF uses the scoped proposed-comparison wording.
 
 Figures 1--5 are included under `figures/`. The LaTeX manuscript uses the PNG versions for compilation, while the SVG files are preserved as editable source figures.
 

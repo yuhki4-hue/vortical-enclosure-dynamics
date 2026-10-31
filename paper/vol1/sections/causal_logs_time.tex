@@ -1,4 +1,4 @@
-\section{Causal Logs and the Generation of Time}
+\section{Causal Logs and Local Time-Like Accumulation}
 \label{sec:time}
 
 \subsection{History and Structure}
@@ -13,6 +13,13 @@ We distinguish two directed relations between nodes $i$ and $j$:
     $C_{ij}$ represents the strength of retained influence:
     not what happened, but what continues to matter.
 \end{itemize}
+
+\begin{remark}[Source-local terminology]
+Throughout Vol.~1, $C_{ij}$ denotes the causal-log matrix defined above.
+Some repository navigation records use the same glyph for a closure-degree
+or first-formal-carrier variable and describe the causal log separately.
+No identity map between those source-specific uses is asserted in this volume.
+\end{remark}
 
 The fundamental distinction is:
 \begin{equation}
@@ -52,20 +59,36 @@ fixed-point equation in $\rho_i$:
   \rho_i = \sum_j \left[1 - \exp(-\lambda\,\rho_i\,H_{ij})\right].
 \]
 
-The stable fixed points $\rho_i^*$ of this equation correspond to
-persistent physical structure.
+Candidate stable fixed points $\rho_i^*$, if separately established, may be
+used as model candidates for persistent structure.  A physical identification
+requires a separate stability and observation map.
+
+For equation-role purposes, the displayed equations form a constitutive
+self-consistency relation and a proposed fixed-point target on node-indexed
+quantities. They are not, by themselves, a specified update map. Their display
+does not establish existence, uniqueness, convergence of an iteration, or
+stability of a solution; those properties require separate conditions.
 
 \begin{remark}
 The self-referential structure is not circular.
-It is a fixed-point iteration: existing structure ($\rho_i$) governs
-how new history ($H_{ij}$) is selected into new structure ($C_{ij}$).
+It admits an iterative interpretation in which existing structure ($\rho_i$)
+governs how new history ($H_{ij}$) is selected into new structure ($C_{ij}$).
+No particular update schedule or convergence result is specified by that
+interpretation.
 Structure generates its own selectivity.
 \end{remark}
 
-\subsection{The Generation of Time}
+\subsection{Local Time-Like Accumulation}
 
-Time is not a background parameter. It is defined as the rate at which
-causal logs accumulate at a node:
+The node-local quantity $\tau_i$ is not introduced as a background clock. It is
+defined relative to the derivative / ordering parameter $t$ as follows:
+
+\begin{remark}[Derivative parameter]
+In this Vol.~1 formulation, $t$ denotes the ordering / derivative parameter
+used to write the following relation and the dot derivatives below. This
+notation does not identify $t$ with $\tau_i$, with physical clock time, or
+with the effective external $t$ used in IFGT.
+\end{remark}
 
 \begin{keybox}
 \begin{equation}
@@ -74,19 +97,29 @@ causal logs accumulate at a node:
 \end{equation}
 \end{keybox}
 
+This equation is the source-defined node-local time-like accumulation
+relation relative to the derivative parameter $t$. Conditional on
+$\rho_i\geq0$, it makes $\tau_i$ non-decreasing with respect to that
+parameter. The equation alone does not identify $\tau_i$ with a physical
+clock reading or establish physical-time emergence.
+
 \noindent
-Several consequences follow immediately:
+The following mathematical consequences and interpretation limits are kept
+separate:
 
 \begin{itemize}
   \item Since $\rho_i \geq 0$ by construction, $\tau_i$ is monotonically
-    non-decreasing. Irreversibility is built into the definition.
-  \item Where $\rho_i = 0$, time does not advance.
-  \item No separate thermodynamic argument for the arrow of time is required.
+    non-decreasing with respect to $t$.
+  \item Where $\rho_i = 0$, the defined quantity $\tau_i$ does not advance
+    with respect to $t$.
+  \item This monotonicity does not by itself establish state
+    non-reconstructibility, thermodynamic irreversibility, or a physical arrow
+    of time.
 \end{itemize}
 
 \begin{keybox}
-\textit{Time is the rate at which structure accumulates.
-Irreversibility is structural, not statistical.}
+\textit{$\tau_i$ is a node-local accumulation / ordering quantity.
+Its interpretation as physical time remains proposed rather than established.}
 \end{keybox}
 
 \subsection{The Log-Generation Rate}
@@ -102,5 +135,6 @@ where $A_i = \sum_j e^{-\lambda\rho_i H_{ij}} H_{ij}$
 and $B_i = \sum_j e^{-\lambda\rho_i H_{ij}} \dot{H}_{ij}$.
 The numerator $\lambda\rho_i B_i$ measures the rate of new history injection;
 the denominator $1 - \lambda A_i$ captures saturation by existing structure.
-This microscopic expression underlies the log-generation rate $\sigma$
-appearing in \cref{sec:flow}.
+This microscopic expression is proposed as an antecedent of the Vol.~1
+continuum log-generation rate $\sigma$ appearing in \cref{sec:flow}.
+No microscopic-to-continuum projection or identity equation is fixed here.

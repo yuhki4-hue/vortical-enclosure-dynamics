@@ -102,20 +102,20 @@ The figure also separates intelligence in general from sapiens-like intelligence
 
 ### (i) One-sentence summary
 
-Emergence is not mere complexity; it is the formation of an upper attractor from lower non-closed motion under external mutual constraint, schematically `U = Φ(L, H_ij)`.
+Fig.5 proposes a cross-domain comparison in which lower non-closed motion and mutual constraint are arranged around the schematic `U = Φ(L, H_ij)`.
 
 ### (ii) How to read the elements
 
 - **Top reading card**: The operational definition of VED emergence: lower motion plus mutual constraint gives rise to an upper attractor.
 - **Physics column**: Lower causal logs and internal vectors under closure conditions give rise to particle-like attractors.
-- **Life column**: Information flow and state development under DNA-derived constraints and non-equilibrium exchange give rise to the life attractor `Ω_life`.
+- **Life column**: Bio-IFGT's proposed life-attractor interpretation places information flow and state development under DNA-like constraints and non-equilibrium exchange.
 - **Intelligence column**: Recursive log layer `L_R` and inference traces under observer-environment constraint give rise to the emergent stopping layer `L_E`.
-- **Converging arrows**: All three cases converge into the same emergence kernel.
+- **Converging arrows**: The three cases are placed into a proposed common reading frame; the arrows do not supply a typed translation.
 - **Central lower ellipse**: The VED-defined emergence formula `U = Φ(L, H_ij)`.
 
 ### (iii) Theoretical implication
 
-Fig.5 places Intelligence Part II inside the broader VED series. The point is not that physics, life, and intelligence are the same object. Rather, the same emergence grammar repeats across layers.
+Fig.5 places Intelligence Part II inside the broader VED series as a formal-role comparison. It does not establish that physics, life, and intelligence share the same object, carrier, dynamics, or mechanism.
 
 The figure also separates VED emergence from vague complexity talk. Emergence requires two components: lower non-closed motion and external mutual constraint. Without motion, nothing is generated; without constraint, no attractor stabilizes. The emergent stopping layer `L_E` is therefore one instance of a larger VED pattern.
 
@@ -201,12 +201,12 @@ The figure's warning is descriptive, not normative. A single-node, high-speed, h
 
 ### (i) One-sentence summary
 
-The same pattern, incomplete closure → emergent attractor → sustainable dynamics, appears across physics, life, consciousness, intelligence, and society.
+Fig.9 proposes an analogy organized around incomplete closure, attractor language, and sustained dynamics across physics, life, consciousness, intelligence, and society.
 
 ### (ii) How to read the elements
 
-- **Central homology kernel**: The shared pattern of incomplete closure, emergent attractor, and sustainable dynamics.
-- **Concentric dashed field**: The field in which the five layers share the same kernel.
+- **Central homology kernel**: The comparison pattern of incomplete closure, attractor language, and sustained dynamics.
+- **Concentric dashed field**: A visual grouping of five distinct layers, not a shared carrier or typed map.
 - **Physics / VED card**: Difference, gradients, flow, vortices, quasi-closure, and particle-like attractors.
 - **Life / Bio-IFGT card**: Information flow, state development, and the life attractor `Ω_life`.
 - **Consciousness card**: Speed-scale difference, log-reference window, SSO/TCA non-closure, and consciousness as state rather than generated object.
@@ -218,6 +218,6 @@ The same pattern, incomplete closure → emergent attractor → sustainable dyna
 
 Fig.9 closes Intelligence Part II by connecting it to the whole VED theory tree. Fig.5 gave three examples of emergence; Fig.9 extends the map to five layers by adding consciousness and society.
 
-The key word is homology, not identity. Particles, organisms, conscious states, intelligence, and society are not the same. They differ in implementation, scale, and dynamics. Yet they repeat the same generative grammar: non-closure gives rise to motion; constrained motion forms attractors; attractors make sustained dynamics possible. This is the non-reductionist unity of the VED framework.
+Here “homology” names a proposed structural comparison, not an established identity or translation. Particles, organisms, conscious states, intelligence, and society differ in implementation, scale, and dynamics; the figure does not use Bio-IFGT as independent evidence that one mechanism recurs across them.
 
 -----

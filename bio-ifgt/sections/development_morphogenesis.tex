@@ -1,6 +1,6 @@
 \section{Development and Morphogenesis}
 
-This section applies the preceding framework to development and morphogenesis. Development is interpreted not as execution of a design, but as a process in which state changes converge toward stable structures.
+This section applies the preceding framework to development and morphogenesis. Development is proposed to be read not as execution of a design, but through state changes that may approach persistent configurations. The generic relations do not by themselves establish biological convergence.
 
 \subsection{Initial State and Asymmetry}
 
@@ -10,11 +10,11 @@ Small asymmetries nevertheless exist through initial conditions and environmenta
 
 \subsection{Morphogens as Information Density}
 
-During development, morphogens form spatial concentration profiles. In the present framework, such profiles are represented as information density:
+During development, morphogens form spatial concentration profiles. In the present framework, such profiles may be represented through the source-local information-density field:
 \begin{equation}
   \I(\mathbf{r},t).
 \end{equation}
-Local production creates gradients in \(\I\). Diffusion and degradation then shape the resulting distribution.
+Within that model representation, local production creates gradients in \(\I\), and diffusion and degradation shape the resulting distribution. This is a proposed qualitative biological correspondence, not an identity or calibrated measurement map between a morphogen and \(\I\).
 
 \subsection{Dynamics}
 
@@ -25,7 +25,7 @@ A standard coarse-grained form for this process is
 \end{equation}
 where \(D\) is a diffusion coefficient, \(\lambda\) is a decay rate, and \(\sigma\) is a local source constrained by the parameter set \(\theta\).
 
-This equation is not special to this framework. It is a standard reaction--diffusion form used here as a component of the information-flow description.
+This equation is not special to this framework. It is a standard reaction--diffusion form used here as a component of the information-flow description. It is a continuous coarse-grained evolution relation, not an assertion that the later finite toy code is an exact PDE solver or an identical dynamical object.
 
 \subsection{Induced Potential and Gradient}
 
@@ -37,11 +37,11 @@ State change is biased by
 \begin{equation}
   \mathbf{F} = -\nabla \PhiI.
 \end{equation}
-As a result, states become biased toward regions or gradients associated with \(\I\). This bias gives directionality to structure formation.
+As a result, model states become biased toward regions or gradients associated with \(\I\). This effective relation gives directionality within the chosen model; it is not a demonstrated biochemical restoring mechanism.
 
 \subsection{Differentiation by Thresholds}
 
-Cell fate can branch according to thresholds in \(\I\). For example,
+Model-state labels can branch according to thresholds in \(\I\), providing a proposed cell-fate analogy. For example,
 \begin{align}
   \I(\mathbf{r}) < \theta_1
   &\quad \Rightarrow \quad \text{state A},\\
@@ -50,16 +50,17 @@ Cell fate can branch according to thresholds in \(\I\). For example,
   \I(\mathbf{r}) \geq \theta_2
   &\quad \Rightarrow \quad \text{state C}.
 \end{align}
-The variable \(\I\) is continuous, while the observed outcome may be discrete. Differentiation is therefore interpreted as a threshold response to continuous state change.
+The variable \(\I\) is continuous, while the model output labels are discrete. Biological differentiation may therefore be interpreted through a threshold response to continuous state change, but an observed-morphology map is not supplied.
+Mathematically, the displayed implications are threshold classification rules; their state labels and biological reading are a separate interpretive layer.
 
 \subsection{Morphology as Attractor}
 
-The combination of dynamics and thresholds stabilizes distributions and fixes differentiation patterns. The stable state is the morphology observed in development. Morphology is thus not an independently specified object. It is the result of dynamical convergence.
+The combination of dynamics and thresholds can yield persistent model distributions and differentiation labels under specified conditions. Reading such a configuration as observed developmental morphology is a separate biological interpretation. Neither a stationary attractor nor empirical morphological convergence follows from the displayed relations alone.
 
 \subsection{Robustness}
 
-Development is often reproducible and robust. In this framework, robustness follows from attractor structure: multiple nearby initial states can converge to the same stable configuration. Local fluctuations are absorbed by the dynamics.
+Development is often described as reproducible and robust. In an attractor-based interpretation, convergence of multiple nearby initial states to the same region would provide a candidate account of robustness. The present formal relations and finite toy model establish neither biological robustness nor arbitrary-perturbation return; they show only limited model-local persistence, relaxation, and recommitment over tested intervals.
 
 \subsection{Summary}
 
-Development and morphogenesis are described through small initial asymmetries, distributions of information density, gradient-driven bias, threshold branching, and convergence to attractors. No design or purpose is required as an additional explanatory primitive.
+Development and morphogenesis are described through small initial asymmetries, distributions of information density, gradient-driven bias, threshold branching, and a proposed attractor-based interpretation. The finite construction supports model-local spatial organization and qualitative analogy; biological mechanism and operational morphology correspondence remain separate. No design or purpose is required as an additional explanatory primitive.

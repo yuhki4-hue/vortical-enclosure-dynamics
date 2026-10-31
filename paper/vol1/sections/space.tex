@@ -1,4 +1,4 @@
-\section{Distance and the Emergence of Space}
+\section{Network Distance and an Effective Spatial Candidate}
 \label{sec:space}
 
 \subsection{Decomposition of $C_{ij}$}
@@ -13,10 +13,10 @@ We decompose it into symmetric and antisymmetric parts:
   \label{eq:decomp}
 \end{equation}
 
-$S_{ij}$ encodes mutual connectivity (the spatial component);
+$S_{ij}$ encodes mutual connectivity (the candidate spatial component);
 $A_{ij}$ encodes directed flow (the temporal and causal component).
-Time and space are not independently postulated;
-they arise as two aspects of the same object $C_{ij}$.
+These provide formal candidates for spatial and temporal / causal description
+from the same object $C_{ij}$; physical identification remains separate.
 
 \subsection{Spatial Distance}
 
@@ -43,21 +43,30 @@ This is a shortest-path problem on a weighted network.
 The logarithm converts products to sums and ensures that distance accumulates
 additively along paths.
 
+The construction is defined on a graph / network with an admissible path
+class and edge strengths for which the products and logarithms are defined.
+It is a weighted-path construction; physical-space interpretation is not part
+of the definition.
+
 \begin{proposition}
-$d_{ij}$ satisfies non-negativity and the triangle inequality,
-inherited from the path structure of the network.
+For reachable pairs with admissible strengths $0<S_{ab}\leq1$, $d_{ij}$ is
+nonnegative and satisfies the triangle inequality inherited from path
+concatenation. Ordinary metric status additionally requires the applicable
+symmetry, finite-valuedness, and identity-of-indiscernibles conditions; a
+directed or disconnected network can instead yield an asymmetric or extended
+distance-like quantity, depending on the declared policy.
 \end{proposition}
 
 \begin{keybox}
-\textit{Distance is resistance to influence propagation.
-Space is not a background arena; it is a measure of how difficult
-information finds it to propagate between nodes.}
+\textit{The network distance measures resistance to influence propagation.
+It provides a formal candidate for effective spatial description, not a
+physical-space emergence theorem.}
 \end{keybox}
 
 \subsection{Coarse-Graining and the Metric Tensor}
 
-In a coarse-grained limit, grouping nodes into spatial blocks and averaging
-produces a smooth effective distance:
+The source proposes a coarse-grained description in which nodes are grouped
+into spatial blocks and a smooth effective distance is represented by:
 
 \[
   d(x, y)^2 \approx g_{\mu\nu}(x)\,(x^\mu - y^\mu)(x^\nu - y^\nu).
@@ -73,24 +82,31 @@ produces a smooth effective distance:
 
 \noindent
 The metric tensor $g_{\mu\nu}$ is not a fundamental field.
-It is the coarse-grained approximation of the log-distance structure.
+It is proposed as an effective continuum description of the coarse-grained
+log-distance structure. The displayed endpoint relation is a partial bridge:
+an explicit reconstruction map, convergence argument, normalization,
+uniqueness result, and physical-distance identification are not supplied here.
 No coordinate system is assumed; coordinates label coarse-grained blocks.
+The displayed expression is an effective local continuum approximation in
+that target representation, not a uniqueness or reconstruction theorem and
+not a physical-space emergence result.
 
-\subsection{Time and Space Unified}
+\subsection{Time-Like and Spatial Constructions}
 
-The two emergent structures can be summarized as:
+The two formal constructions can be summarized as:
 
 \begin{keybox}
 \begin{align}
   \frac{d\tau_i}{dt} &= \rho_i
-  \quad &&\text{(time: quantity of logs)}
+  \quad &&\text{(time-like accumulation quantity)}
   \label{eq:time_summary}\\[4pt]
   d_{ij} &= -\log\,\tilde{S}_{ij}
-  \quad &&\text{(space: structure of logs)}
+  \quad &&\text{(network spatial candidate)}
   \label{eq:space_summary}
 \end{align}
 \end{keybox}
 
 \noindent
-Time and space originate from different aspects of the same
-underlying object $C_{ij}$.
+The two formal constructions use different aspects of the same underlying
+object $C_{ij}$.  Their identification with physical time and physical space
+is not established by these equations alone.

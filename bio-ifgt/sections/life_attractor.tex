@@ -1,6 +1,6 @@
 \section{Life as Attractor}
 
-This section formulates life not as a completed object, but as a sustained stable structure in state space. This view allows maintenance, development, differentiation, and regeneration to be described within one dynamical framework.
+This section introduces a proposed life-attractor terminology: life is considered not as a completed object, but through sustained motion in a bounded state-space region. This conceptual view places maintenance, development, differentiation, and regeneration in one dynamical vocabulary without establishing their biological mechanisms.
 
 \subsection{State-Space Description}
 
@@ -8,13 +8,15 @@ A biological system is represented by a state vector
 \begin{equation}
   x(t) = (x_1(t),x_2(t),\ldots,x_n(t)),
 \end{equation}
-where the components may include molecular concentrations, expression levels, reaction rates, and local environmental variables.
+where the components may include model representations of molecular concentrations, expression levels, reaction rates, and local environmental variables. Their operational measurement and calibration are not specified by this declaration.
 
 The system evolves as
 \begin{equation}
   \frac{\dd x}{\dd t} = F(x;\theta),
 \end{equation}
-where \(\theta\) is the parameter set associated with DNA-dependent constraints such as reaction propensities and thresholds.
+where \(\theta\) is the abstract parameter set associated with DNA-conditioned model terms such as reaction propensities and thresholds; a concrete genotype-to-parameter map is not supplied.
+Here \(x\) is a state vector rather than a spatial coordinate, and \(F(x;\theta)\) is its evolution field; this \(F\) is distinct from both the continuum bias vector \(\mathbf{F}\) and the threshold response \(F_k\).
+The first display in this subsection is a state/domain declaration and the second is a generic evolution rule. Neither specifies the ordered finite updates of the developmental toy code.
 
 \subsection{Internal Time}
 
@@ -22,11 +24,11 @@ In addition to external time \(t\), we introduce an internal time \(\tau\) that 
 \begin{equation}
   \frac{\dd \tau}{\dd t} = \rho(x).
 \end{equation}
-The function \(\rho(x)\) is a state-dependent progression rate. The variable \(\tau\) represents accumulated state change or information update, and need not coincide with \(t\). Equations of motion are written in \(t\); \(\tau\) is used to interpret their internal progression.
+The function \(\rho(x)\) is a state-dependent progression rate. It shares a progression role with the earlier \(\rho(\I,\J)\), but no exact identity between the two functionals is specified; neither is an upstream density variable. The variable \(\tau\) represents accumulated state change or information update, and need not coincide with \(t\). Equations of motion are written in \(t\); \(\tau\) is used to interpret their internal progression.
 
 \subsection{Definition of Life}
 
-Life is not a single state. It is motion that continues while remaining within a bounded region of state space. Such motion is not static, does not diverge arbitrarily, and remains constrained within a viable range. In this regime, \(\tau\) continues to increase.
+Within this model terminology, life is represented not by a single state but by motion that continues while remaining within a bounded region of state space. Such motion is stipulated to be non-static, non-divergent, and constrained within a viable range, while \(\tau\) continues to increase. An operational criterion that independently identifies biological life or the relevant system boundary is not supplied here.
 
 \subsection{Life as Attractor}
 
@@ -34,26 +36,26 @@ Let \(\Omega\) be the state space and let
 \begin{equation}
   \Omega_{\mathrm{life}} \subset \Omega
 \end{equation}
-be a region such that, once the system enters it, the dynamics tend to return to it after moderate perturbation. We call \(\Omega_{\mathrm{life}}\) the life attractor.
+be a region such that, once the system enters it, the dynamics tend to return to it after a stated class of moderate perturbations. We call \(\Omega_{\mathrm{life}}\) the life attractor within this conceptual model. This names a conditional region definition; it does not establish that such a region exists, is reachable or invariant in a concrete system, or is operationally identical to biological life. The finite developmental toy model is not demonstrated here to instantiate \(\Omega_{\mathrm{life}}\).
 
-This region is not externally imposed. It is formed through interactions within the system and its environment.
+The intended interpretation is that organization of this region would arise through interactions within the system and its environment rather than from a prescribed final endpoint. The state representation, variables, sources, parameters, boundaries, and viability conditions may nevertheless be supplied; endogenous construction of the region remains open.
 
 \subsection{Non-Equilibrium Sustained Structure}
 
-The life attractor is not an equilibrium state. Matter enters and leaves, molecules are replaced, and energy is consumed. Nevertheless, the organization persists. Life is therefore interpreted as a sustained structure in a non-equilibrium state.
+The proposed life attractor is not an equilibrium-state picture: matter may enter and leave, molecules may be replaced, and energy may be consumed while organization persists. This is a non-equilibrium maintenance interpretation. The present equations do not supply a dedicated resource budget or demonstrate a biological self-maintenance mechanism.
 
 \subsection{Relation to Development}
 
-The developmental process described in Section 6 can be interpreted as convergence from an initial state toward the life attractor. Reproducibility and robustness arise when multiple initial conditions converge to the same attractor region.
+The developmental process described in Section 6 may be interpreted as approach from an initial state toward a proposed life-attractor region. If multiple initial conditions returned to the same region under specified perturbations, that behavior could provide a model account of reproducibility and robustness; neither the general return property nor biological robustness is established here.
 
 \subsection{Differentiation and Sub-Attractors}
 
-Within the life attractor, more specific stable regions may exist. These are sub-attractors. Cell differentiation is interpreted as transition into such sub-attractors within \(\Omega_{\mathrm{life}}\). This structure can describe discreteness, plasticity, and partial reversibility without treating differentiated states as externally specified endpoints.
+Within the proposed life-attractor region, more specific conditionally stable regions may exist. These are termed sub-attractors. Cell differentiation may be interpreted as transition into such sub-attractors within \(\Omega_{\mathrm{life}}\). This is a conceptual description of discreteness, plasticity, and partial reversibility, not an established biological identification or stability result.
 
 \subsection{Robustness and Regeneration}
 
-Robustness follows from the attractor property. When perturbations displace the system, the dynamics can return it toward the stable region. Regeneration is interpreted as a case in which attractor structure is reconstructed after a larger disturbance.
+In an attractor-based interpretation, return after a specified perturbation would provide a candidate mechanism for robustness. The finite toy evidence distinguishes limited relaxation and monotonic recommitment from general bidirectional return. Regeneration remains a proposed reconstruction interpretation for larger disturbance; no dedicated reconstruction model, independent recovery criterion, or biological regeneration result is supplied here.
 
 \subsection{Summary}
 
-Life is not merely a collection of matter or a static structure. It is dynamically sustained stable motion in state space. This motion is described through dynamics involving information density \(\I\), information flow \(\J\), and induced potential \(\PhiI\). The next section uses this view to revise the formulation of emergence probability.
+The proposed view treats life not merely as a collection of matter or a static structure, but as sustained motion in a bounded region of state space. Dynamics involving information density \(\I\), information flow \(\J\), and induced potential \(\PhiI\) provide the descriptive language. Biological identification, stability, and maintenance remain distinct open requirements. The next section uses this view to revise the target of the emergence-probability question.

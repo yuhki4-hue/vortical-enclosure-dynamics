@@ -13,12 +13,14 @@ boundary unmistakable.
 ## The one-line distinction
 
 > Complex-systems and dissipative-structure theories **study how organization
-> arises** in interacting, far-from-equilibrium systems. VED **derives** space,
-> time, matter, gravity, and cognition from a single axiom — difference — and
-> reads complex-systems behavior as *one layer* within that derivation.
+> arises** in interacting, far-from-equilibrium systems. VED begins from the
+> single axiom of difference and asks how formal constructions and candidate
+> interpretations of space, time, matter, gravity, and cognition can be placed
+> in one role-separated navigation architecture. It reads complex-systems
+> behavior as *one layer* within that research program.
 
-A study-of relationship is not a derivation-from relationship. That is the whole
-difference.
+A study-of relationship is not the same as a proposed construction or physical
+interpretation. That is the relevant boundary here.
 
 ## What VED shares with this family
 
@@ -36,8 +38,8 @@ This is exactly why the well is deep. The vocabulary genuinely overlaps.
 
 | Complex systems / dissipative structures / autopoiesis | VED |
 |---|---|
-| A field for studying interacting systems and emergent behavior. | A generative derivation from one axiom. |
-| Takes physical substrate (matter, energy, space, time) as given. | Attempts to *derive* space, time, and matter as generated structure. |
+| A field for studying interacting systems and emergent behavior. | A structural research program organized from one axiom. |
+| Takes physical substrate (matter, energy, space, time) as given. | Investigates candidate formal routes and physical interpretations for space, time, and matter; emergence remains open. |
 | Self-organization is the explanatory target. | Self-organization is one realization of enclosure under non-closure. |
 | Typically scoped to physical/biological domains. | One sequence spans physical → biological → cognitive → consciousness → intelligence → social. |
 | Dissipation explains maintained structure. | Dissipation matters, but does not exhaust enclosure, log referencing, or stopping structures. |
@@ -64,9 +66,9 @@ Observed in AI wind-tunnel summaries that fell into this well:
 
 > Complex-systems, dissipative-structure, and autopoietic accounts can be read
 > as describing *how a particular layer of enclosure stabilizes and maintains
-> itself.* VED re-situates that layer inside a single differential-development
-> sequence that also has to account for space, time, matter, consciousness, and
-> intelligence — from the same axiom.
+> itself.* VED re-situates that layer inside a role-separated
+> differential-development sequence that asks how space, time, matter,
+> consciousness, and intelligence might be organized from the same axiom.
 
 This is a positioning statement for navigation, not a completed comparative
 paper.

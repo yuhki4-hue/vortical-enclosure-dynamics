@@ -1,5 +1,7 @@
 # 3. Formal Mapping
 
+> **作業版scope:** \(I\) はsource-localなmodel descriptor、\(J\) は提案的aggregate description、\(\Phi\) はeffective potentialである。operational biological observable / measured flux / biochemical mechanismへのmap、およびcross-scale typed translationはOPENである。
+
 本節では、前節で示した直観的な記述を、
 形式的な量へ対応づける。
 
@@ -14,6 +16,10 @@
 ## 3.1 状態の記述
 
 生物系は、空間と時間に依存する状態として記述される。
+
+> **作業版注記:** 本節の \(I,J,\Phi,F,\rho,t,\tau\) は Bio-IFGT のsource-local notationである。同じglyphを持つ VED / IFGT の量、finite toy codeの配列、simulation stepとのidentityを意味しない。canonical build authorityは `main.tex` / `main_ja.tex` である。
+>
+> このworking sourceでは、field expressionをstate/domain declaration、\(\Phi[I]\)、\(F=-\nabla\Phi\)、\(J=-D\nabla I+\mu F\)をconstitutive / effective relation、\(d\tau/dt\)を\(t\)に対するaccumulation definitionとして読む。これらはfinite toy codeのordered update specificationではない。
 
 位置 \(r \in \mathbb{R}^3\)、時間 \(t \in \mathbb{R}\) に対して、
 

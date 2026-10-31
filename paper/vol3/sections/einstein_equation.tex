@@ -6,6 +6,10 @@
 So far: distance is derived from $C_{ij}$;
 gravity appears as closure density $L$;
 the metric takes the form $g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu}$.
+Here $L$ names the scalar Vol.~1 closure-density / intensity quantity, while
+$L_{\mu\nu}$ is the tensorial Vol.~3 quantity. They are not identical by
+notation alone; the cross-carrier bridge remains separate from the equations
+used in this section.
 The next question is therefore unavoidable:
 \begin{equation}
   \boxed{\text{What equation does this structure obey?}}
@@ -17,7 +21,8 @@ Within VED, the situation is reversed.
 \begin{equation}
   \boxed{\text{The gravitational equation is not assumed.}}
 \end{equation}
-Instead, it must emerge from the same self-consistent closure structure.
+Instead, the volume asks whether it can be recovered as an effective target of
+the self-consistent closure structure.
 
 \subsection{Starting Point: The Fixed-Point Equation}
 
@@ -33,20 +38,27 @@ This defines a nonlinear fixed-point problem.
 \end{equation}
 Geometry, density, and flow are all determined simultaneously
 by this self-consistency condition.
-This self-referential nature is the key to the emergence of gravitational
-field equations.
+This self-referential structure motivates the proposed comparison with
+gravitational field equations.
 
 \subsection{Continuum Limit and Vorticity}
 
-Upon coarse-graining, define the flow $J_{ij} = C_{ij} - C_{ji}$.
-In the continuum limit:
+The discrete flow remains $J_{ij}=C_{ij}-C_{ji}$. At the continuum level this
+section uses a field denoted by $J$; its connection to $J_{ij}$ is an informal,
+open bridge because no averaging, scaling, orientation, or vector-field map is
+supplied. Within that target representation:
 \begin{equation}
   \omega = \nabla \times J, \qquad L \sim |\omega|.
 \end{equation}
+Within this continuum vector-field representation, the first relation defines
+vorticity and the second is an effective proportional scalar measure. Its
+magnitude convention and normalization are not fixed, and neither relation is
+by itself a stability theorem.
 \begin{equation}
   \boxed{\text{Closure density appears as vorticity of the flow.}}
 \end{equation}
-This connects the microscopic closure structure to macroscopic geometric distortion.
+This is an intended connection from microscopic closure structure to
+macroscopic geometric distortion; the bridge remains open.
 
 \subsection{Fixed-Point Condition}
 
@@ -58,8 +70,9 @@ These conditions correspond to approximate conservation.
 \begin{equation}
   \boxed{\text{Conservation laws are properties of the phase.}}
 \end{equation}
-Under these conditions, closure structure stabilizes and the metric becomes
-time-independent. This is the regime in which gravitational geometry emerges.
+Under the model interpretation, these conditions identify a candidate stable
+regime for an effective metric.  Stability and physical gravitational geometry
+are not established by the displayed conditions alone.
 
 \subsection{Self-Consistency Condition for the Metric}
 
@@ -73,12 +86,17 @@ Therefore $L_{\mu\nu} = L_{\mu\nu}[g]$, and the metric must satisfy:
   \boxed{g_{\mu\nu} = g^{(0)}_{\mu\nu} + \alpha_G L_{\mu\nu}[g].}
 \end{equation}
 This defines a fixed-point problem for the metric.
+It is a proposed self-consistency target in the effective continuum
+representation. The display does not establish a solution, existence,
+uniqueness, convergence of an iteration, or stability; the construction of
+$L_{\mu\nu}[g]$ also remains bridge-dependent.
 
 \subsection{Linearization and the Form of the Equation}
 
 In the weak-gravity limit $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$
 ($|h_{\mu\nu}| \ll 1$),
-expanding equation~\eqref{eq:fixed_point_metric} to first order yields:
+the following is an intended comparison target for a first-order treatment of
+equation~\eqref{eq:fixed_point_metric}, not a derived expansion here:
 \begin{equation}
   \label{eq:einstein_analog}
   \boxed{G_{\mu\nu} = 8\pi G_{\text{eff}} L_{\mu\nu}.}
@@ -86,8 +104,9 @@ expanding equation~\eqref{eq:fixed_point_metric} to first order yields:
 \begin{equation}
   \boxed{\text{Structurally analogous to the Einstein equation.}}
 \end{equation}
-Thus the Einstein equation appears as the linear approximation
-of the self-consistent closure structure.
+The displayed equation is structurally analogous to the Einstein equation and
+serves as an intended weak-field target.  Precise coefficients, a complete
+linearization derivation, and nonlinear recovery are not supplied here.
 
 \subsection{The Inversion}
 
@@ -96,22 +115,23 @@ Conventional understanding: the Einstein equation = a fundamental law.
 VED:
 \begin{equation}
   \boxed{
-    \text{The Einstein equation is a linear approximation of a fixed-point structure.}
+    \text{The Einstein equation is an intended weak-field target of the fixed-point structure.}
   }
 \end{equation}
-It holds in the classical phase where closure is stable,
-but need not hold outside this regime.
-Gravity is therefore not fundamental but emergent.
+The proposed comparison is scoped to the classical phase.  This does not
+establish that physical gravity emerges or that the Einstein equation is
+recovered outside the stated approximation.
 
 \subsection{Why General Relativity Works}
 
-This interpretation explains the empirical success of GR.
+This interpretation is intended to be compatible with the weak-field success
+of GR; it does not itself explain or reproduce the full empirical record.
 \begin{equation}
   \boxed{\text{GR is not incorrect.}}
 \end{equation}
 \begin{equation}
   \boxed{\text{It is an effective theory of the classical closure phase.}}
 \end{equation}
-In this phase, closure density varies slowly, conservation approximately holds,
-and the metric is stable.
-Under these conditions, the Einstein equation provides an accurate description.
+In this proposed phase description, closure density varies slowly and
+conservation is treated approximately.  A quantitative comparison showing
+when the effective metric reproduces Einstein dynamics remains open.

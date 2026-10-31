@@ -1,6 +1,11 @@
 % Source: source_md/intelligence_part2_appendices_ja.md
 \section{変数表 Master Table v2.2}
 
+\noindent\textbf{記述の射程。} 文書的status。本表は原稿の変数inventoryを保存するものであり、特定されたMaster Table v2.1からの検証済み継承ではない。正確な来歴、当時の署名、採用範囲は未解決である。保存する表中の確立・実装・同一・同型等の語はsourceの強い定式化を記録するもので、その積極的な形式statusは保留される。表の項目から独立証明・操作的map・新たな仮定を与えない。
+
+\noindent\textbf{旧推論模型のinventory境界。} 本補遺末尾までの推論F・scalar正当化J・noFP参照は旧局所状態模型に属し、active record/position portの定義ではない。後段の比較・要約も同じ帰属で読む。外部停止のrowと反復からの非所属表示は、周囲の説明を含め保存する旧notationであり、active optional adapterを旧反復へ代入しない。Eの型は未解決で、非導出性・大きい反復数からのE成立を認定しない。他のfield-flow objectの署名と、未同定v2.1 artifactに関する文書的制約は変更しない。
+
+
 
 本補遺は、知性編 Part II で新規導入された変数を Master Table v2.2 として整理する。VED 基本変数(Master Table v2.1 収録済み)との区別を明示する。
 
@@ -43,6 +48,8 @@ $\tau$ & 内的時間 & 観測時間とは独立な内的順序パラメータ &
 
 \subsubsection{推論演算子と三層動力学}
 
+以下の表と後続の式・summaryにあるarchitecture entriesでは、LR・LEの層・運動・関数という語を旧inventoryとして、Eの供給・network・発達量との接続を未確立の構成案として保持する。activeなsupport-role解釈は第5節に置き、entry自体をその認証や新signatureの定義にしない。他の流れ場・Bioの対象や、記録された来歴gapを変更する帰属ではない。
+
 
 \begin{longtable}{@{}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
 \toprule
@@ -53,9 +60,9 @@ $\tau$ & 内的時間 & 観測時間とは独立な内的順序パラメータ &
 記号 & 名称 & 導入章 & 定義・役割 \\
 \midrule
 \endhead
-$F$ & 推論演算子 & \S{}2.1 & 正当化拡張作用素。$x_{n+1} = F(x_n)$。VED 流れ場 $J_C = -\xi \nabla C$ の知性層実現。Bio-IFGT の状態発展演算子 $F(x;\theta)$ の知性層特殊形 \\
-$J$ & 正当化測度 & \S{}3.1 & $F$ の作用による正当化の進行を測る測度。$J(F(x)) > J(x)$ が成立(前提 P2) \\
-$L_F$ & 推論層 & \S{}2.3 & $F$ の作用域全体。推論軌道を含む。内部停止条件を持たない(定理 3.1) \\
+$F$ & 推論演算子 & \S{}2.1 & 旧局所状態模型の正当化拡張作用素。$x_{n+1} = F(x_n)$。VED/Bio-IFGT の流れ・状態発展演算子と類似した形式的役割を持つが、source-localでありsame dynamicsやtyped identityを意味しない \\
+$J$ & 旧模型のscalar正当化測度 & \S{}3.1 & $F$ の作用による正当化の進行を測る測度。$J(F(x)) > J(x)$ が成立(前提 P2) \\
+$L_F$ & 推論層 & \S{}2.3 & $F$ の作用域全体。推論軌道を含む（旧局所状態模型）。内部停止条件を持たない(定理 3.1) \\
 $L_R$ & ログ層 & \S{}5.2 & $L_F$ の運動の痕跡(ログ)への再帰参照運動の層。$L_E$ 創発の基盤。所在は系によって異なる(個体内・環境外部化・凍結) \\
 $L_E$ & 創発停止層 & \S{}5.3 & $L_R$ の再帰運動と外部相互拘束 $H_{ij}$ の関数として創発する停止層。$L_E = \Phi(L_R, H_{ij})$。個体内にありながら外部依存的 \\
 \bottomrule
@@ -201,6 +208,6 @@ I = f(1-C), \quad F_I = \alpha \nabla C, \quad C_{ij} = 1 - \exp(-\lambda \rho_i
 \end{longtable}
 
 
-同一の $\theta$-可変性原理が、超長期(進化)・受動的(環境従属)・短期能動(認知)という三つの時定数で現れる。これは VED が一貫して行ってきた「同一原理の異なる領域への再配置」の、拘束パラメータにおける現れである。
+$\theta$-可変性を、超長期(進化)・受動的(環境従属)・短期能動(認知)という役割で比較する。同一量・同一原理の採用ではなく、Master provenance の保留とも区別する。
 
 \bigskip

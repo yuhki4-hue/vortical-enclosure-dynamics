@@ -8,9 +8,11 @@
 
 本論文では、Information Field Geometry Theory（IFGT）を提案する。IFGTは、情報を実体や状態の記述としてではなく、差分が閉包へと向かう過程において閉じきらずに持続する残渣、すなわち**準閉包**として記述するための理論である。
 
-本理論は、差・勾配・流れ・閉包から物理的構造の生成を記述する Vortical Enclosure Dynamics（VED）に基づき、その生成過程において持続する未閉包構造を情報として扱う。VEDが閉包度 $C$ によって成立する物理的持続を記述するのに対し、IFGTは $C$ の不完全さの側、すなわち「閉じきれなかった残り」を情報として扱う。これにより、情報は物理構造と対立するものではなく、同一の生成構造における相補的な側面として位置づけられる。
+本理論はVortical Enclosure Dynamics（VED）のdifference / flow / closure vocabularyから
+動機づけられ、未閉包構造を情報として扱うformal correspondenceを提案する。これはrelated-branch
+comparisonであり、両理論のidentity、translation、unificationを確立するものではない。
 
-IFGTでは、情報密度 $I$、情報流 $J$、情報ポテンシャル $\Phi$、情報的時間 $\tau$、および生成項 $\sigma$ を導入し、準閉包内における運動を記述する。$I$ と $C$ は $I = f(1 - C)$ なる関係を通じて結ばれ、$\sigma$ は差分連鎖と既存痕跡構造との不整合として定義される。最終章ではこれらを統合し、VED×IFGT統一方程式として閉包度場 $C(x,\tau)$ の単一発展方程式に接続する。
+IFGTでは、情報密度 $I$、情報流 $J$、情報ポテンシャル $\Phi$、情報的時間 $\tau$、および生成項 $\sigma$ を導入し、準閉包内における運動を記述する。$I$ と $C$ は $I = f(1 - C)$ なる関係を通じて結ばれ、$\sigma$ は差分連鎖と既存痕跡構造との不整合として定義される。最終章ではこれらをIFGT closure-degree field $C(x,\tau)$ の発展方程式へまとめ、proposed VED×IFGT correspondenceとして提示する。$C$、time、$\sigma$ のcross-theory mapは **OPEN** である。
 
 この枠組みにより、情報は静的な記述対象ではなく、差分の持続と流れの拘束を通じて構造形成に関与する動的過程として理解される。IFGTは、生物系や計算系において観測される情報的振る舞いを含みうる一般的な構造を記述するための基礎理論を提供する。
 
@@ -18,15 +20,21 @@ IFGTでは、情報密度 $I$、情報流 $J$、情報ポテンシャル $\Phi$�
 
 ## 1. Introduction
 
-本論文で提案する Information Field Geometry Theory（IFGT）は、情報を実体としてではなく、幾何構造として記述するための理論である。IFGTは独立した基底理論ではなく、差・勾配・流れ・閉包から物理的構造の生成を記述する Vortical Enclosure Dynamics（VED）に基づく上位レイヤーの有効理論として位置づけられる。
+本論文で提案するInformation Field Geometry Theory（IFGT）は、情報を実体としてではなく、
+幾何構造として記述するためのmodelである。IFGTはVEDから動機づけられた上位レイヤーの
+effective modelとして位置づけられるが、cross-theory connectionはproposed correspondenceである。
 
 従来、情報は主として状態の記述として理解されてきた。現代物理において「物質も情報である」とされる場合、この情報は系の状態に付随するラベルとしての意味を持つ。しかし本理論で扱う情報はこれとは異なり、差分が消えきらずに残した痕跡としての**構造的拘束**を指す。この情報は独立した実体を持たず、差分連鎖の経路や分布を拘束する形で作用する。
 
 情報とは単なる差分そのものではない。差分が識別可能な形で持続し、他の差分との関係において参照可能となったとき、そこに情報が現れる。この意味において情報は、差分の持続によって生じる痕跡であり、後続の差分連鎖の足場として機能する。すなわち情報とは、差分の連鎖を可能にする構造である。
 
-この構造は完全に閉じたものではなく、むしろ閉包へ向かう過程においてなお消えきらない差分の揺らぎとして現れる。本理論ではこれを**準閉包**と呼ぶ。準閉包は差分を保持し、勾配を生み、流れを誘導することで構造を形成する。一方で、この構造は物理的持続と分離したものではなく、同一の生成構造内において相互に影響し合う。
+この構造は完全に閉じたものではなく、閉包へ向かう過程で残る差分の揺らぎとしてmodel化される。
+本理論ではこれを**準閉包**と呼び、差分・勾配・流れの関係を記述する。VEDのphysical
+persistenceとの関係はproposed correspondenceであり、同一processとしては確立していない。
 
-この相互作用は一方向的ではなく循環的である。準閉包としての情報的構造は、差分連鎖を拘束し、その流れを偏らせることで新たな構造形成に関与する。これにより形成された構造は物理的持続として現れ、さらに新たな差分を生み出す。この差分が再び準閉包として残存することで、情報と物質は相互に変換されながら循環的に生成される。
+この相互作用はmodel内で循環的に記述される。準閉包としての情報的構造は差分連鎖を拘束し、
+その流れを偏らせ、後続の差分が再び準閉包として残存する。これをphysical persistenceや
+情報と物質の相互変換へ対応づけることはcandidate interpretationであり、ここでは確立しない。
 
 また、情報は静的に存在するものではなく、構造変化が生じる境界において顕在化する。この境界は変化の前線として機能し、差分連鎖の方向や強度に影響を与える。特に生物や計算系においては、このような境界構造が顕著に現れ、過去の痕跡が現在の変化に干渉することで、行動や状態の揺らぎとして観測される。
 
@@ -64,18 +72,27 @@ IFGTが扱う情報はシャノン情報でも物理的状態ラベルでもな�
 
 ### 2.1 役割分担
 
-IFGTは独立した基底理論ではなく、Vortical Enclosure Dynamics（VED）によって記述される生成構造のうち、**閉じきれなかった側**を記述する上位レイヤーの有効理論である。
+IFGTはVEDが扱うstructureの**閉じきれなかった側**との比較を提案する上位レイヤーの
+effective modelである。cross-theory relationはOPENである。
 
 VEDとIFGTの役割分担は次のように整理される。
 
-- **VED**：差・勾配・流れ・閉包から物理的構造の**生成**を記述する。閉包度 $C$ によって成立する安定構造・粒子・場・時空を扱う。
-- **IFGT**：同一の生成構造において、$C$ が $1$ に達しなかった部分、すなわち**準閉包**として持続する情報的構造を扱う。
+- **VED**：difference / gradient / flow / closure constructionにphysical interpretationを提案する。
+- **IFGT**：source-localなscalar / field closure degreeを用い、情報構造を**準閉包**として記述する。
 
-VEDが閉包の成立する側を扱うのに対し、IFGTは閉包の不完全さの側を扱う。両者は対立する理論ではなく、同一の生成構造を異なる相から捉えた補完的記述である。
+両者は対立する理論としてではなく、potentially complementaryな記述として比較される。
+common state space、translation、equivalenceは確立していない。
 
 ### 2.2 $I$ と $C$ の非対称性
 
 VEDの中心量である閉包度 $C \in [0, 1]$ に対し、IFGTの中心量である情報密度 $I$ は次の関係を持つ。
+
+**Source identity note.** 本稿の $C$ および $C(x,\tau)$ は、IFGTで用いるscalar / field
+closure-degree quantityである。Vol.1がcausal-log matrixとして定義する $C_{ij}$ とは、同じ文字を
+共有しても自動的に同一ではない。本稿は両者のidentity mapを与えない。
+
+**Bridge status: OPEN.** matrix-to-field carrier map、interpolation、normalization、
+preserved-structure statementは本稿に表示されない。
 
 $$
 I = f(1 - C)
@@ -97,7 +114,10 @@ $$
 
 $\tau_{\mathrm{VED}}$ と $\tau$ は**起源を異にする**。前者は閉包が進むほど進み、後者は痕跡が更新されるほど進む。
 
-しかし両者は**力学的に同型**である。いずれも外部から与えられたパラメータではなく、系内の差分動態から内生的に生成される進行量であり、いずれも不可逆である。したがって本理論では、IFGTの $\tau$ を VEDの $\tau_{\mathrm{VED}}$ と同一の時間軸上に埋め込み可能な量として扱う。ただし両者は同じ現象の異なる側面を測る量であり、完全に同一視できるものではない点に注意を要する。
+ここでのeffective external $t$ はIFGT source-localなparameter identityであり、Vol.1の
+derivative parameter $t$ と同一視するmapは本稿では固定しない。
+
+本稿は両者の**力学的対応を提案**し、IFGTの $\tau$ をVEDの $\tau_{\mathrm{VED}}$ と比較可能な量として意図する。ただしisomorphism / embeddingは確立されていない。map、preserved structure、inverse、common-axis constructionは表示されず、bridgeは **OPEN** である。
 
 ### 2.4 循環的関係
 
@@ -126,8 +146,8 @@ $$
 | 勾配 $\nabla C$ | 情報勾配 $\nabla I$ | $I=f(1-C)$ により逆向き |
 | 閉包流 $J_C$ | 情報流 $J$ | 同一の流れの異相記述 |
 | 閉包ポテンシャル | 情報ポテンシャル $\Phi$ | $\Phi = -\alpha C + \Phi_0$ |
-| 生成時間 $\tau_{\mathrm{VED}}$ | 情報的時間 $\tau$ | 起源は異なるが力学的に同型 |
-| — | 生成項 $\sigma$ | VEDの差分生成に対応 |
+| 生成時間 $\tau_{\mathrm{VED}}$ | 情報的時間 $\tau$ | proposed correspondence; map OPEN |
+| — | 生成項 $\sigma$ | VED差分生成とのproposed correspondence; translation OPEN |
 
 ### 3.2 差分 $\Delta$ と情報差 $\delta I$
 
@@ -143,7 +163,9 @@ $$
 
 ### 3.3 構造的対応
 
-VEDでは、差分が勾配を生み、勾配が流れを生み、流れが閉包を形成し、物理的持続としての構造が生成される。
+VEDのproposed field representationでは、difference、gradient、flow、closureがformal /
+effective relationで接続される。この比較は、各stepのuniversal necessityまたはphysical
+persistenceを確立しない。
 
 IFGTでは、差分が完全に閉包しきらずに残存することで準閉包が形成される。この準閉包は痕跡として蓄積され、情報密度 $I$ を構成する。痕跡の不均一性は情報勾配 $\nabla I$ を生み、これが情報流 $J$ を駆動する。さらに準閉包の集積は流れを拘束し、情報ポテンシャル $\Phi$ として記述される。
 
@@ -161,13 +183,15 @@ IFGTでは、差分が完全に閉包しきらずに残存することで準閉�
 
 IFGTにおける生成項 $\sigma$ は、現在の差分連鎖と既存の準閉包構造との不整合を表す。この不整合はVEDにおける新たな差分生成に対応し、構造の更新を引き起こす。
 
-したがって、VEDの差分生成とIFGTの $\sigma$ による生成は、同一過程の異なる記述である。
+したがって本稿は、VEDの差分生成とIFGTの $\sigma$ による生成の間に**提案された対応**を置く。
+これは両quantityが同一過程を表すという確立済みidentityではなく、明示的translationは未固定である。
 
 ---
 
 ## 4. Fundamental Dynamics
 
-IFGTは、完全に閉包していない差分の揺らぎとして現れる準閉包内における運動を記述する理論である。準閉包は物理的構造と分離した存在ではなく、同一の生成構造内において相互に影響し合う。この相互干渉により、情報的諸量は時間発展する。
+IFGTは、完全に閉包していない差分の揺らぎとしてmodel化される準閉包内の運動を記述する。
+物理構造との相互作用はcandidate correspondenceであり、cross-theory identityはOPENである。
 
 本章では、情報場を記述する基本変数を定義し、その発展方程式を導入する。
 
@@ -187,11 +211,16 @@ IFGTは、完全に閉包していない差分の揺らぎとして現れる準�
 
 **情報的時間 $\tau$**
 
-情報的時間 $\tau$ は、差分と物理的構造との相互干渉が蓄積されていく進行量として定義される。外部から与えられるパラメータではなく、差分連鎖と構造拘束の相互作用によって内生的に生成される（§2.3参照）。
+informational parameter $\tau$ は、差分連鎖と構造拘束の相互作用に関連するIFGT内部の
+ordering / accumulation quantityとして定義される（§2.3参照）。これはinternal model
+interpretationであり、physical timeのemergenceを確立しない。
 
 **生成項 $\sigma$**
 
 生成項 $\sigma$ は、現在の差分連鎖と既存の情報的痕跡構造との不整合を表す量である。この不整合は、構造と流れの適合が崩れたときに生じ、新たな差分の生成および情報密度の変化を引き起こす。$\sigma$ の具体的構成は第5章で展開する。
+
+この $\sigma$ はIFGT内で定義されるsource-specific quantityである。Vol.1のcontinuum
+log-generation rate $\sigma$ またはmicroscopic $\dot\rho_i$ とのidentityは、本稿では仮定しない。
 
 ### 4.2 基本方程式
 
@@ -201,6 +230,9 @@ $$
 \frac{\partial I}{\partial \tau} + \nabla \cdot J = \sigma
 \qquad (4.1)
 $$
+
+これはRELATED-BRANCH IFGT FIELD MODEL内のbalance / evolution relationである。そのroleは
+IFGTのfield assumptions内部にあり、OPEN bridgeを越えてVol.1の量とのidentityを与えない。
 
 左辺第1項は情報密度の時間変化、第2項は情報流の発散による輸送効果を表す。右辺の $\sigma$ は不整合に起因する差分生成を表す。
 
@@ -236,7 +268,7 @@ $$
 
 ## 5. The Unified VED×IFGT Equation
 
-前章までに導入した情報場の発展方程式(4.1)は、$\sigma$ の具体的構成を与えていない。本章では、$\sigma$ を差分連鎖と既存痕跡構造との不整合として展開し、最終的にVEDの閉包度場 $C(x,\tau)$ に関する単一方程式に統一する。
+前章までに導入した情報場の発展方程式(4.1)は、$\sigma$ の具体的構成を与えていない。本章では、$\sigma$ を差分連鎖と既存痕跡構造との不整合として展開し、proposed VED–IFGT correspondenceで用いるIFGT closure-degree field $C(x,\tau)$ の単一方程式へまとめる。internal equationは保持するが、matrix-to-fieldおよびcross-theory bridgeは **OPEN** である。
 
 ### 5.1 生成項 $\sigma$ の展開
 
@@ -298,6 +330,10 @@ $$
 両端の境界近傍では、微視的モデルにおいて追加の正則化項が
 必要になる可能性がある。
 
+式のroleとして、(5.2)は明示されたlinear / phenomenological assumptions下のIFGT内部の
+evolution equationである。「統一」という語は、OPENなVED–IFGT bridgeをidentity、translation、
+derivationへ昇格させない。
+
 $$
 J_C = -D \nabla C - \mu \alpha \, C \nabla C
 \qquad (5.3)
@@ -308,7 +344,9 @@ $$
 $C_{\max}=1$ は理想的な完全閉包境界を表す。一般に、
 情報的領域では $C_* < C_{\max}$ である。
 
-**時間引数について。** 方程式(5.2)の時間微分は情報的時間 $\tau$（§2.3）によるものであり、背景時空上で定義された外部パラメータではない。$\tau$ は閉包度場 $C$ そのものの更新過程から内生的に生成される量であり、この意味で(5.2)は時間の生成過程を内包する方程式である。
+**時間引数について。** 方程式(5.2)の時間微分はIFGTのinformational parameter $\tau$
+（§2.3）による。modelは $\tau$ をclosure-field updateに結びつくorderingとして解釈するが、
+これはphysical timeのemergenceを確立しない。
 
 ただし、$C$ が十分に成熟し背景時空がほぼ固定されたと見なせる近似領域では、$\tau$ を外部時間 $t$ で置き換えた形
 
@@ -330,7 +368,9 @@ $$
 - **生命的構造** — リミットサイクル的な循環解として対応づけられる可能性を持つ
 - **知性的構造** — 閉包再構成を伴う非自明な大域解として対応づけられる可能性を持つ
 
-これらはいずれも(5.2)の異なる解のクラスとして位置づけられる可能性を持つが、個別の同定および導出は本論文の範囲を超える。VEDが生成を、IFGTが構造を、統一方程式(5.2)が両者を繋ぐ動力学を担うという役割分担の下で、これらの具体的対応は別稿において展開される。
+これらは(5.2)のcandidate solution classとして検討できるが、存在とphysical identificationは
+本論文の範囲を超える。「統一」はIFGT内部のterm assemblyに付されたhistorical labelであり、
+式(5.2)はOPENなVED–IFGT translation mapを与えない。
 
 ### 5.4 最小基礎と有効傾向
 
@@ -340,7 +380,8 @@ $$
 2. **差は部分的閉包を形成する傾向を持つ**（IFGT層で用いる有効な動的傾向）
 
 基底公理から駆動項と有効障壁項が動機づけられ、有効傾向から散逸項と情報流の構成が導入される。
-したがってVED×IFGT統合体系は、VEDに第二の基底公理を追加することなく構成される。
+IFGT equationはVEDに第二の基底公理を追加しないが、OPENなtranslation mapなしに
+cross-theory unified systemを確立するものでもない。
 
 ---
 
@@ -348,11 +389,15 @@ $$
 
 本論文では、Information Field Geometry Theory（IFGT）を提案し、情報を差分の痕跡として持続する準閉包の構造として再定義した。これにより、情報は状態の記述や独立した実体ではなく、差分連鎖の経路や分布を拘束する幾何的構造として理解される。
 
-IFGTは、Vortical Enclosure Dynamics（VED）に基づく生成構造の上位レイヤーとして位置づけられ、閉包による物理的持続と、準閉包による情報的構造との対応関係を明確にした。両者は対立するものではなく、同一の生成構造を異なる観点から記述する補完的な枠組みである。特に、情報密度 $I$ と閉包度 $C$ の関係を $I = f(1 - C)$ として定式化することで、両理論の役割分担を変数レベルで明示した。
+IFGTはVEDから動機づけられた上位レイヤーとして、physical-persistence vocabularyと
+quasi-closure vocabularyのcorrespondenceを提案した。両者はpotentially complementaryだが、
+一つの同一structureを記述することは確立していない。$I=f(1-C)$ はIFGT source-local field内部の
+relationであり、VED bridgeを閉じない。
 
-本理論では、情報密度 $I$、情報流 $J$、情報ポテンシャル $\Phi$、情報的時間 $\tau$、および生成項 $\sigma$ を導入し、準閉包内における運動を記述した。第5章では $\sigma$ を駆動・散逸・障壁の三項に展開し、VED×IFGT統一方程式として単一の閉包度場 $C(x,\tau)$ に関する発展方程式を得た。この方程式は、VEDの基底公理「差がある」と、差が部分的閉包を形成するというIFGT層の有効な動的傾向から構成される。
+本理論では、情報密度 $I$、情報流 $J$、情報ポテンシャル $\Phi$、情報的時間 $\tau$、および生成項 $\sigma$ を導入し、準閉包内における運動を記述した。第5章では $\sigma$ を駆動・散逸・障壁の三項に展開し、単一のIFGT closure-degree field $C(x,\tau)$ に関する発展方程式をproposed VED×IFGT correspondenceとして提示した。cross-theory mapは **OPEN** である。この方程式は、VEDの基底公理「差がある」と、差が部分的閉包を形成するというIFGT層の有効な動的傾向から構成される。
 
-この枠組みにおいて、情報は静的な記述対象ではなく、差分の持続と流れの拘束を通じて構造形成に関与する動的過程として現れる。物理構造と情報構造は分離されたものではなく、相互に影響し合いながら循環的に生成されるものとして理解される。
+この枠組みは、情報構造と物理構造のcyclic mutual influenceをcandidate modelとして表す。
+cross-theory physical identityは確立しない。
 
 本論文では、生物系や計算系における具体的実装には立ち入らなかったが、IFGTで記述される構造は、それらの系において顕著に現れることが示唆される。本理論は、そうした個別領域に依存しない一般的な構造の記述を目的とするものである。
 
